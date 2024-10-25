@@ -25,7 +25,7 @@ namespace hh::fnd
 
 		Messenger(csl::fnd::IAllocator* pAllocator);
 
-		virtual void* GetRuntimeTypeInfo();
+		virtual void* GetRuntimeTypeInfo() const;
 		virtual bool ProcessMessage(Message& message);
 		virtual bool fUnk3() { return false; }
 		virtual bool ReceiveMessage(Message& message);

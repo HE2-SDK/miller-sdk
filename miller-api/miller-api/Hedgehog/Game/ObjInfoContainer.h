@@ -11,7 +11,7 @@ namespace hh::game {
         csl::ut::StringMap<ObjInfo*> objInfosByName;
         csl::ut::MoveArray<ObjInfo*> objInfos;
 
-        virtual void* GetRuntimeTypeInfo() override;
+        virtual void* GetRuntimeTypeInfo() const override;
 
         ObjInfo* GetInfo(const char* name);
         void Initialize();

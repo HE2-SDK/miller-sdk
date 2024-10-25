@@ -178,7 +178,7 @@ struct SLIST_HEADER_SHIM {
 // #include "Hedgehog/Reflection/hhRflSerializeUtil.h"
 #include "Hedgehog/Reflection/DeepCopier.h"
 
-// #include "Heuristics/Reflection.h"
+#include "Heuristics/Reflection.h"
 
 #include "Hedgehog/Needle/Utility/Binhash.h"
 #include "Hedgehog/Needle/Utility/MathUt.h"
@@ -287,7 +287,7 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/Needle/WorldRenderingPipeline.h"
 #include "Hedgehog/Needle/WorldRenderingPipelineExecContext.h"
 #include "Hedgehog/Needle/RenderTexturePipeline.h"
-#include "Hedgehog/Needle/RenderingPipelineRangers.h"
+#include "Hedgehog/Needle/RenderingPipelineMiller.h"
 #include "Hedgehog/Needle/RenderUnit.h"
 #include "Hedgehog/Needle/RenderTexture.h"
 #include "Hedgehog/Needle/SceneContexts/SCAtmosphere.h"
@@ -463,8 +463,8 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/Graphics/Components/CaptureComponent.h"
 #include "Hedgehog/Graphics/Components/ScreenShotComponent.h"
 #include "Hedgehog/Graphics/RenderingEngine.h"
-// #include "Hedgehog/Graphics/RenderingEngineNeedle.h"
-// #include "Hedgehog/Graphics/RenderingEngineRangers.h"
+#include "Hedgehog/Graphics/RenderingEngineNeedle.h"
+#include "Hedgehog/Graphics/RenderingEngineMiller.h"
 // #include "Hedgehog/Graphics/DynamicResolutionController.h"
 // #include "Hedgehog/Graphics/DefaultDynamicResolutionController.h"
 #include "Hedgehog/Graphics/RenderManager.h"
@@ -772,7 +772,7 @@ struct SLIST_HEADER_SHIM {
 // #include "Application/Physics/GOCColliderQuery.h"
 // #include "Application/Physics/GOCMoveSphereColliderQuery.h"
 
-// #include "Application/Graphics/ResFxColFile2.h"
+#include "Application/Graphics/ResFxColFile2.h"
 // #include "Application/Graphics/SceneParameters.h"
 // #include "Application/Graphics/FxParamManager.h"
 // #include "Application/Graphics/FxParamTimeProgressExtension.h"

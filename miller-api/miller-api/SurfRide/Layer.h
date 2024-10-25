@@ -28,24 +28,23 @@ namespace SurfRide
 	class SliceCast;
 	class Scene;
 
-	// class CastInstanceBuffer : public Base {
-	// public:
-	// 	union CastInstance {
-	// 		Cast cast;
-	// 		ImageCast imageCast;
-	// 		ReferenceCast referenceCast;
-	// 		SliceCast sliceCast;
-	// 	};
+	class CastInstanceBuffer : public Base {
+	public:
+		union CastInstance {
+			Cast cast;
+			ImageCast imageCast;
+			ReferenceCast referenceCast;
+			SliceCast sliceCast;
+		};
 
-	// 	csl::fnd::IAllocator* allocator;
-	// 	CastInstance* buffer;
+		size_t size;
+		CastInstance* buffer;
 
-	// 	CastInstanceBuffer(csl::fnd::IAllocator* allocator);
+		CastInstanceBuffer(size_t size);
 
-	// 	CastInstance* GetCastInstance(unsigned int idx);
-	// };
+		CastInstance* GetCastInstance(unsigned int idx);
+	};
 
-	class Project;
 	class Layer : public ReferencedObject
 	{
 	public:
@@ -53,18 +52,17 @@ namespace SurfRide
 			IS_3D,
 		};
 
+		csl::ut::MoveArray<void*> unk1;
 		SRS_LAYER* layerData;
-		uint32_t unk1;
-		const char* name;
+		csl::ut::VariableString name;
 		Scene* scene;
 		ReferenceCast* referenceCast;
-		Cast** casts;
-		uint32_t castCount;
-		Transform* transforms;
-		uint32_t transformCount;
-		CellList* cells;
-		Cast* firstCast;
-		Cast* lastCast;
+		csl::ut::MoveArray<Cast*> casts;
+		csl::ut::MoveArray<Cast*> topLevelCasts;
+		csl::ut::MoveArray<Cast*> animatingCasts;
+		csl::ut::MoveArray<Transform> transforms;
+		csl::ut::MoveArray<void*> unk8;
+		csl::ut::StringMap<Cast*> castsByName;
 		uint32_t currentAnimationIndex;
 		float currentFrame;
 		float currentFrame2;
@@ -74,7 +72,6 @@ namespace SurfRide
 		float currentFrame3;
 		uint32_t unk13;
 		csl::ut::Bitset<Flag> flags;
-		uint16_t unk14;
 		bool atAnimationStart;
 		bool unk14b;
 		bool isLooping;
@@ -82,7 +79,11 @@ namespace SurfRide
 		bool atAnimationEnd;
 		bool playInReverse;
 		bool unk16;
-		Project* project;
+		uint32_t unk17;
+		uint32_t unk18;
+		uint32_t unk19;
+		Transform rootTransform;
+		CastInstanceBuffer castInstanceBuffer;
 
 		Layer(const SRS_LAYER& layerData, Scene* scene);
 
@@ -99,14 +100,12 @@ namespace SurfRide
 		void SetAnimationFrame(float frame);
 		bool Is3D();
 
-#ifndef EXPORTING_TYPES
-		inline NullTerminatedCollection<Cast, &Cast::NextCast> GetCasts() const {
-			return { firstCast };
-		}
-#endif
+        inline csl::ut::MoveArray<SurfRide::Cast*> GetCasts() const {
+            return topLevelCasts;
+        }
 
 	private:
-		Cast* CopyCastsRecursively(SRS_CASTNODE* casts, SRS_TRS3D* transforms, int idx, Cast* parentCast, unsigned int* totalTransforms);
+		void CreateCast(int index, Cast* parentCast);
 		void StartCurrentAnimation();
 		void InitializeAnimation(SRS_ANIMATION* animation);
 		void UpdateAnimation(float timestep);

@@ -5,7 +5,7 @@ namespace hh::physics {
     public:
         csl::math::Vector3 dimensions;
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
         virtual void GetShape(ColliShape& shape) const override;
 
         void Setup(const SetupInfo& setupInfo);

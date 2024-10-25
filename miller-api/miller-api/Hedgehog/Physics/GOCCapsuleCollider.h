@@ -6,7 +6,7 @@ namespace hh::physics {
         float radius;
         float halfHeight;
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
         virtual void GetShape(ColliShape& shape) const override;
 
         void Setup(const SetupInfo& setupInfo);

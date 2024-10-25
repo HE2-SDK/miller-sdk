@@ -133,7 +133,7 @@ namespace hh::eff {
         Resolver resolver;
         csl::ut::MoveArray<void*> unk2;
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnAddedToGame() override;
 		virtual void OnRemovedFromGame() override;
 		virtual void PreStepCallback(game::GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;

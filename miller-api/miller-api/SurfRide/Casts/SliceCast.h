@@ -34,6 +34,14 @@ namespace SurfRide {
         void* effectData;
         SRS_SLICE slices[1];
 
+        inline SRE_EFFECT_TYPE GetEffectType() const {
+            return static_cast<SRE_EFFECT_TYPE>(effectType & 0xF);
+        }
+
+        inline void SetEffectType(SRE_EFFECT_TYPE type) {
+            effectType = (effectType & ~0xF) | static_cast<unsigned int>(type & 0xF);
+        }
+
         inline EPivotType GetPivotType() const {
             return static_cast<EPivotType>((flags >> 19) & 0xF);
         }
@@ -84,46 +92,31 @@ namespace SurfRide {
         Slice(SRS_SLICE* sliceData);
     };
 
-    class SliceCast : public Cast3D {
+    class SliceCast : public Cast {
     public:
         SRS_SLICECAST* sliceCastData;
-        SRS_SLICE* slices;
+        uint32_t type; // (data.flags >> 19) & 0xF
+        uint64_t qwordE0;
         Vector2 size;
+        Color vertexColorTopLeft;
+        Color vertexColorBottomLeft;
+        Color vertexColorTopRight;
+        Color vertexColorBottomRight;
         bool bool100;
+        csl::ut::MoveArray<Slice> slices;
 
-        SliceCast(SRS_CASTNODE* castData, SRS_TRS3D* transform, Cast* parentCast, Layer* layer);
+        SliceCast(SRS_CASTNODE* castData, Cast* parentCast, Layer* layer);
 
         static Vector2 CalcPivot(float width, float height, const SRS_SLICECAST& sliceCastData);
 
         virtual void* GetRuntimeTypeInfo() const override;
+        virtual bool UnkFunc2() override;
+        virtual void UnkFunc3() override;
         virtual void CalcTrackTypeWidth(float time, const SRS_TRACK* track) override;
         virtual void CalcTrackTypeHeight(float time, const SRS_TRACK* track) override;
-        virtual Vector2 GetWorldSize() = 0;
-        virtual Vector2 GetLocalSize() const = 0;
-        virtual void SetLocalSize(const Vector2& size) = 0;
-        virtual void SetSliceWidth(unsigned int index, float width) = 0;
-        virtual void SetSliceHeight(unsigned int index, float height) = 0;
-        virtual void SetPatternIndex(int index) = 0;
-    };
-
-    class SliceCast3D : public SliceCast {
-    public:
-        int unk301;
-        void* unk302;
-        SliceCast3D(SRS_CASTNODE* castData, SRS_TRS3D* transform, Cast* parentCast, Layer* layer);
-        virtual void MakeCellData(bool, Transform* transformLayerBuffer, void* cellLayerBuffer) override;
-        virtual void Draw(DrawInterface* drawInterface, Transform* transformLayerBuffer, void* cellLayerBuffer) override;
-        virtual void CalcTrackTypeWidth(float time, const SRS_TRACK* track) override;
-        virtual void CalcTrackTypeHeight(float time, const SRS_TRACK* track) override;
+        virtual void* GetCellProbably() const override;
+        virtual void SetCellProbably(void* cell) override;
         virtual unsigned int GetCellCount() const override;
-        virtual void InitializeCellFromLayerBuffer(void* layerBuffer, unsigned int index) override;
-        virtual void CopyCellToLayerBuffer(void* data, void* layerBuffer, unsigned int index) override;
-        virtual SRS_CELL3D* GetCell() const override;
-        virtual Vector2 GetWorldSize() override;
-        virtual Vector2 GetLocalSize() const override;
-        virtual void SetLocalSize(const Vector2& size) override;
-        virtual void SetSliceWidth(unsigned int index, float width) override;
-        virtual void SetSliceHeight(unsigned int index, float height) override;
-        virtual void SetPatternIndex(int index) override;
+        virtual uint64_t UnkFunc12() override;
     };
 }

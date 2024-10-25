@@ -11,6 +11,7 @@ namespace hh::game {
         char unk9;
         char unk10;
         char gocTransformFlags;
+        bool unk11;
         uint32_t unk12;
 
         enum class Flag : unsigned char {
@@ -18,15 +19,21 @@ namespace hh::game {
             TRANSFORM_ROTATION = 2,
         };
 
-        struct alignas(8) Config {
+        struct SetupInfo {
+            csl::math::Vector3 position;
+            csl::math::Quaternion rotation;
+            GOCTransform* parent;
+            uint8_t unk1;
+
+            SetupInfo();
         };
 
         GOCTransform(csl::fnd::IAllocator* pAllocator);
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 
-        void Initialize(const Config& config);
+        void Setup(const SetupInfo& setupInfo);
         void SetInheritedFlags(Flag flags);
         void SetLocalTransform(const csl::math::Transform& transform);
         void SetLocalTranslation(const csl::math::Vector3& position);

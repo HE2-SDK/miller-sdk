@@ -15,22 +15,26 @@ namespace hh::game
 	class alignas(8) GameServiceClass
 	{
 	public:
-		const char* pName;
-		GameService* (*instantiator)(csl::fnd::IAllocator* pAllocator);
-		void* pUnk2{};
+		typedef GameService* CreateFunction(csl::fnd::IAllocator* allocator);
+
+		const char* name;
+		CreateFunction* instantiator;
+		void* unk2{};
+
+		GameServiceClass(const char* name, CreateFunction* instantiator, void* unk2) : name{ name }, instantiator{ instantiator }, unk2{ unk2 } {}
 	};
 	
 	class alignas(8) GameService : public hh::fnd::Messenger
 	{
 	public:
-		GameManager* pGameManager;
-		GameServiceClass* pStaticClass;
+		GameManager* gameManager;
+		GameServiceClass* staticClass;
 		uint32_t unk20;
 		csl::fnd::Mutex mutex;
 
 		GameService(csl::fnd::IAllocator* allocator);
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnAddedToGame() {}
 		virtual void OnRemovedFromGame() {}
 	};

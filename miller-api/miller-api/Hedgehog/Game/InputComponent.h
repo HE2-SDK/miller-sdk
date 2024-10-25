@@ -76,6 +76,7 @@ namespace hh::game {
 
         void SetListening(bool value);
         void SetActionEnabled(int actionMonitorId, bool value);
+        void SetAxisEnabled(int actionMonitorId, bool value);
 
         void MonitorActionMapping(const char* actionMappingName, int actionMonitorId, int unused);
         void MonitorAxisMapping(const char* axisMappingName, int axisMonitorId);

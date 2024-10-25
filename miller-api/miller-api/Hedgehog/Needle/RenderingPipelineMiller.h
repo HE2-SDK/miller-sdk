@@ -2,7 +2,7 @@
 
 namespace hh::needle {
     class PBRModelInstanceRenderer;
-    class RenderingPipelineRangers : public WorldRenderingPipeline {
+    class RenderingPipelineMiller : public WorldRenderingPipeline {
     public:
         const char* name;
         uint64_t qword118;
@@ -23,7 +23,7 @@ namespace hh::needle {
         uint64_t qword1A8;
         uint64_t qword1B0;
 
-        RenderingPipelineRangers(csl::fnd::IAllocator* allocator, PBRModelInstanceRenderer* renderer);
+        RenderingPipelineMiller(csl::fnd::IAllocator* allocator, PBRModelInstanceRenderer* renderer);
 
         virtual uint64_t UnkFunc1() override;
         virtual void UnkFunc3(PipelineInfo* pipelineInfo) override;

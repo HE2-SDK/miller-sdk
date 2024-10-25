@@ -13,7 +13,7 @@ namespace hh::fnd {
     struct ResourceTypeInfo {
         const char *pName;
         const char *pScopedName;
-        uint32_t objectSize;
+        size_t objectSize;
         bool isInBinaContainer;
         ManagedResource* (*instantiator)(csl::fnd::IAllocator* pAllocator);
     };
@@ -22,22 +22,20 @@ namespace hh::fnd {
     class StaticResourceContainer;
     class ManagedResource : public ReferencedObject, private csl::ut::NonCopyable {
     public:
-        uint64_t unk1;
-        uint64_t unk2;
+        csl::ut::VariableString name;
         uint32_t unk3;
         uint8_t unk4;
         csl::ut::VariableString unk5;
         csl::ut::MoveArray<void*> unk6;
-        csl::ut::VariableString name;
+        csl::ut::VariableString name2;
         csl::ut::VariableString unkStrPrefix; // before hyphen
         csl::ut::VariableString unkStrPostfix; // after hyphen
         // in rangers there were 6 members here, now there are only 5, don't know which one is missing
         const ResourceTypeInfo* resourceTypeInfo;
-        csl::fnd::IAllocator* resourceAllocator;
-        void* originalBinaryData;
         void* unpackedBinaryData;
         size_t size;
-        // File* structContainingFileData;
+        File* file;
+        csl::fnd::IAllocator* resourceAllocator;
         uint16_t unk7;
         uint8_t unk8;
 
@@ -49,9 +47,8 @@ namespace hh::fnd {
             return *resourceTypeInfo;
         }
 
-        inline size_t GetSize() const {
-            return size;
-        }
+        void* GetData() const;
+        size_t GetSize() const;
 
         inline csl::fnd::IAllocator* GetResourceAllocator() {
             return resourceAllocator;

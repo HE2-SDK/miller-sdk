@@ -12,13 +12,7 @@ namespace hh::game {
         bool IsNonNull() const;
         void Print(csl::ut::VariableString& str) const;
         void PrintGUID(csl::ut::VariableString& str) const;
-
-        inline bool operator==(const ObjectId& other) const {
-            return objectId == other.objectId && groupId == other.groupId;
-        }
-
-        inline bool operator!=(const ObjectId& other) const {
-            return !operator==(other);
-        }
+        bool operator==(const ObjectId& other) const;
+        bool operator!=(const ObjectId& other) const;
     };
 }

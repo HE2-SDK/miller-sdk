@@ -56,11 +56,11 @@ namespace hh::game {
 
         ObjectWorldChunkLayer* GetLayerByName(const char* name) const;
 
-        void AddWorldObjectStatus(ObjectData* objectData, bool enabled, int spawnPriority);
+        void AddWorldObjectStatus(ObjectWorldChunkLayer* layer, ObjectData* objectData, bool enabled, int spawnPriority);
         void RemoveWorldObjectStatus(ObjectData* objectData);
         
-        inline void AddWorldObjectStatus(ObjectData* objectData, bool enabled) {
-            AddWorldObjectStatus(objectData, enabled, 0);
+        inline void AddWorldObjectStatus(ObjectWorldChunkLayer* layer, ObjectData* objectData, bool enabled) {
+            AddWorldObjectStatus(layer, objectData, enabled, 0);
         }
 
         void AddListener(ObjectWorldChunkListener* listener);
@@ -74,6 +74,7 @@ namespace hh::game {
         GameObject* SpawnByObjectId(ObjectId id, ObjectAttribute filter);
         GameObject* SpawnByIndex(int index, ObjectAttribute filter);
         GameObject* SpawnByAttribute(ObjectAttribute filter);
+        GameObject* Respawn(const ObjectData* objectData);
         GameObject* RespawnByObjectId(ObjectId id);
         GameObject* RespawnByObjectId(ObjectId id, ObjectAttribute filter);
 

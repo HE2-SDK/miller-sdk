@@ -1,6 +1,7 @@
 #pragma once
 
 namespace hh::game {
+    class ObjectWorldChunkLayer;
     class WorldObjectStatus {
     public:
         // This is all very speculative
@@ -15,6 +16,9 @@ namespace hh::game {
         csl::ut::Bitset<Flag> flags;
         uint32_t state;
         int spawnPriority;
+        ObjectWorldChunkLayer* layer;
+
+        WorldObjectStatus();
         virtual ~WorldObjectStatus() = default;
 
         inline void Shutdown() {
@@ -32,6 +36,8 @@ namespace hh::game {
         inline void Restart() {
             flags.reset(Flag::SHUTDOWN);
         }
+
+        bool HasObjectData() const;
 
         uint16_t GetObjectState(unsigned int stateId);
         void SetObjectState(unsigned int stateId, uint16_t state);

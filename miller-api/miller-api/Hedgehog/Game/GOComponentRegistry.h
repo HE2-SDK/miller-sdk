@@ -18,7 +18,11 @@ namespace hh::game
     public:
         GOComponentRegistry(csl::fnd::IAllocator* pAllocator);
         void LoadComponents(GOComponentRegistryItem** components);
-        const GOComponentRegistryItem* GetComponentInformationByName(const char* name);
+
+        inline const GOComponentRegistryItem* GetComponentInformationByName(const char* name) {
+            return componentsByName.GetValueOrFallback(name, nullptr);
+        }
+
         inline const csl::ut::MoveArray<GOComponentRegistryItem*>& GetComponents() {
             return components;
         }

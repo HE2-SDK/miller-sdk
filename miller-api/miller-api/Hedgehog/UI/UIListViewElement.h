@@ -52,7 +52,7 @@ namespace hh::ui {
         UIListViewItemBase(csl::fnd::IAllocator* pAllocator);
         void SetListViewElement(hh::ui::UIListViewElement* listViewElement);
         void SetDimensions(const Dimensions& dimensions);
-        virtual void* GetRuntimeTypeInfo();
+        virtual void* GetRuntimeTypeInfo() const;
         virtual void Update();
         virtual void UnkFunc3() {}
         virtual void UnkFunc4() {}
@@ -145,7 +145,7 @@ namespace hh::ui {
         void ClearTextElement();
         void ClearNamedTextElement(const char* name);
 
-        virtual void* GetRuntimeTypeInfo();
+        virtual void* GetRuntimeTypeInfo() const;
         virtual void UnkFunc3();
         virtual void UnkFunc4();
     };

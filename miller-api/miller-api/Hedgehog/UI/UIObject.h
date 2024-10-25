@@ -5,7 +5,7 @@ namespace hh::ui {
         Position position;
         Dimensions dimensions;
     public:
-        virtual void* GetRuntimeTypeInfo();
+        virtual void* GetRuntimeTypeInfo() const;
         virtual void UnkFunc1() {}
         virtual void Update() {}
     };

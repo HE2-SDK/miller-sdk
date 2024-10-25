@@ -41,7 +41,7 @@ namespace hh::game {
 
         CREATE_FUNC(BucketedGameUpdater, const SetupInfo& setupInfo);
 
-        virtual void* GetRuntimeTypeInfo() override;
+        virtual void* GetRuntimeTypeInfo() const override;
         virtual void* DoStep(const GameStepInfo& stepInfo) override;
 		virtual void ObjectAddedToLayerCallback(GameObject* gameObject, int layer) override;
 		virtual void ObjectRemovedFromLayerCallback(GameObject* gameObject, int layer) override;

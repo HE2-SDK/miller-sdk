@@ -6,7 +6,7 @@ namespace hh::gfx {
         csl::ut::MoveArray<game::GameObject*> visibleObjects;
         void* testFunction;
 
-        virtual void* GetRuntimeTypeInfo() override;
+        virtual void* GetRuntimeTypeInfo() const override;
 
         GAMESERVICE_CLASS_DECLARATION(VisibilityManager)
     };

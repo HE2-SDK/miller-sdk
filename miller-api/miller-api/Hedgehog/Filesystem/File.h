@@ -11,7 +11,7 @@ namespace hh::fnd {
         size_t fileSize;
         void* data;
         uint64_t unk2;
-        uint64_t unk3;
+        size_t headerSize;
 
 
         File(csl::fnd::IAllocator* allocator);

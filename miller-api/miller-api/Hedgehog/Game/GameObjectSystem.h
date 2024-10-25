@@ -10,7 +10,7 @@ namespace hh::game {
 
     public:
         csl::fnd::IAllocator* pObjectAllocator;
-        fnd::ThreadSafeTlsfHeapAllocator objectAllocator;
+        csl::fnd::TlsfHeapTemplate<csl::fnd::Mutex>* heap;
         GameObjectRegistry* gameObjectRegistry;
         GOComponentRegistry* goComponentRegistry;
 

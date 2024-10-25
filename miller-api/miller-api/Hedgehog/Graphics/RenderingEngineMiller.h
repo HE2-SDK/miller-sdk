@@ -1,14 +1,14 @@
 #pragma once
 
 namespace hh::gfx {
-    class RenderingEngineRangers : public RenderingEngineNeedle {
+    class RenderingEngineMiller : public RenderingEngineNeedle {
     public:
         needle::SupportFXAll supportFX;
         needle::intrusive_ptr<needle::RenderUnit> mainRenderUnit;
-        needle::intrusive_ptr<needle::RenderingPipelineRangers> mainRenderingPipeline;
-        uint64_t unk203;
+        needle::intrusive_ptr<needle::RenderingPipelineMiller> mainRenderingPipeline;
+        uint64_t unk201;
 
-        RenderingEngineRangers(csl::fnd::IAllocator* allocator);
+        RenderingEngineMiller(csl::fnd::IAllocator* allocator);
         
         virtual uint64_t Startup() override;
         virtual void SetFXParameter(hh::needle::NeedleFxParameter* parameter, needle::CNameIDObject* renderUnitName) override;

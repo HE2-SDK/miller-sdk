@@ -88,7 +88,7 @@ namespace hh::game
 		GOComponent(csl::fnd::IAllocator* pAllocator);
 		virtual ~GOComponent();
 
-		virtual void* GetRuntimeTypeInfo();
+		virtual void* GetRuntimeTypeInfo() const;
 		virtual void Update(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo) {}
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam);
 		virtual bool ProcessMessage(fnd::Message& msg) { return false; }

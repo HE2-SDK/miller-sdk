@@ -95,23 +95,24 @@ namespace hh::fnd
 		volatile long RefCount{};
 		
 	public:
+		struct Unk1 {
+			bool unk1;
+			int refCount;
+		};
+
 		ReferencedObject(csl::fnd::IAllocator* pAllocator, bool isRefCounted) : BaseObject{ pAllocator }, isRefCounted{ isRefCounted } {}
 
-		virtual void ReferencedObject_UnkFunc1() {}
+		virtual void ReferencedObject_UnkFunc1(const Unk1& unkParam);
 
 		inline void Acquire() {
 			if (isRefCounted) {
-				InterlockedExchangeAdd(&RefCount, 1);
+				int prev = InterlockedExchangeAdd(&RefCount, 1);
+
+				if (unkRefdObjMember)
+					ReferencedObject_UnkFunc1({ false, prev });
 			}
 		}
 
-		inline void Free() {
-			if (isRefCounted) {
-				long result = InterlockedExchangeAdd(&RefCount, -1);
-
-				if (result == 1)
-					delete this;
-			}
-		}
+		inline void Free();
 	};
 }

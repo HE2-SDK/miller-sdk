@@ -20,7 +20,7 @@ namespace hh::path {
         csl::ut::StringMap<PathComponent*> pathComponentsByName;
         fnd::Reference<PathCollisionHandler> pathCollisionHandler;
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnAddedToGame() override;
 		virtual void OnRemovedFromGame() override;
 		virtual void UpdateCallback(game::GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;

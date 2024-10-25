@@ -16,28 +16,15 @@ namespace SurfRide
 		uint64_t unk2{};
 	};
 
-    struct SrCamera {
-		SRS_CAMERA cameraData;
-
-		SrCamera(const SRS_CAMERA& cameraData);
-    };
-
-    struct SrScreenResolution {
-        unsigned int width;
-        unsigned int height;
-    };
-
 	class Camera
 	{
 	public:
-		SrCamera camera;
-		csl::math::Matrix34 viewMatrix;
+		SRS_CAMERA camera;
+		csl::math::Matrix44 viewMatrix;
+		csl::math::Matrix44 projectionMatrix;
 
-		Camera(const SrCamera& camera);
-		void SetCamera(const SrCamera& camera);
+		Camera(const SRS_CAMERA& camera, float resolutionX, float resolutionY);
 
-		inline SRS_CAMERA& GetCameraData() { return camera.cameraData; }
+		inline SRS_CAMERA& GetCameraData() { return camera; }
 	};
-
-	SrScreenResolution GetScreenResolution();
 }

@@ -16,7 +16,7 @@ namespace hh::game {
         fnd::Packfile* packFile;
         uint8_t flags; // 0 = LEVEL_STARTED, 1 = EDITOR_STARTED
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnAddedToGame() override;
 		virtual void OnRemovedFromGame() override;
 		virtual void UpdateCallback(GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;
@@ -30,10 +30,11 @@ namespace hh::game {
         void AddWorldExtension(ObjectWorldExtension* chunk);
         void RemoveWorldExtension(ObjectWorldExtension* chunk);
         void RemoveWorldExtensionAll();
-        void GetObjectDataByObjectId(ObjectId objectId) const;
+        ObjectDataAccessor GetObjectDataByObjectId(ObjectId objectId) const;
         fnd::Handle<Messenger> GetGameObjectHandleByObjectId(ObjectId objectId) const;
         // void SendObjectMessageImm(ObjectId objectId, fnd::Message& msg, const GameObjectHandleBase& handle, bool unkParam);
         void SpawnObjectBySetObjectID(ObjectId objectId) const;
+        WorldObjectStatus GetWorldObjectStatusByObjectId(ObjectId objectId) const;
         void LevelStarted();
         void LevelEnded();
         void EditorStarted();

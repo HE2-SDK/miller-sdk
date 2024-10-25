@@ -1,5 +1,10 @@
 #pragma once
 
+namespace hh::needle {
+    struct NeedleFxParameter;
+    struct NeedleFxSceneConfig;
+}
+
 namespace hh::gfx {
     class RenderingEngineNeedle : public RenderingEngine {
         class Impl : public fnd::ReferencedObject {
@@ -53,7 +58,6 @@ namespace hh::gfx {
         virtual uint64_t CreateRenderTextureHandle(const needle::RenderTextureCreateArgs& createArgs, csl::fnd::IAllocator* allocator);
         virtual uint64_t DestroyRenderTextureHandle(needle::RenderTextureHandle* handle);
         virtual void AddRenderableToRenderTextureHandle(needle::RenderTextureHandle* handle, gfnd::Renderable* renderable) {}
-        virtual unsigned int UnkFunc18() { return 0; }
         virtual void SetDebugViewType(unsigned int debugViewType) {}
         virtual void* GetWorld() const;
         virtual void UnkFunc21() {}

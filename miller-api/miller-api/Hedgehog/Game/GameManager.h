@@ -35,8 +35,8 @@ namespace hh::game
 	{
 	public:
 		virtual ~ObjectUpdateListener() = default;
-		virtual void PreObjectUpdateCallback(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo) {}
-		virtual void PostObjectUpdateCallback(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo) {}
+		virtual void PreObjectUpdateCallback(GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) {}
+		virtual void PostObjectUpdateCallback(GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) {}
 	};
 
 	class alignas(8) ComponentListener
@@ -64,7 +64,7 @@ namespace hh::game
 	class EditorStepListener {
 	public:
 		virtual ~EditorStepListener() = default;
-		virtual void ESL_UnkFunc1() {}
+		virtual void EditorStepCallback(GameManager* gameManager, const game::GameStepInfo& gameStepInfo) {}
 	};
 
 	class GameManager;
@@ -99,6 +99,8 @@ namespace hh::game
 		static void FirePostShutdownObject(GameManager* gameManager);
 		static void FireGameObjectAdded(GameManager* gameManager, GameObject* gameObject);
 		static void FireGameObjectRemoved(GameManager* gameManager, GameObject* gameObject);
+		static void FireGameServiceAdded(GameManager* gameManager, GameService* gameService);
+		static void FireGameServiceRemoved(GameManager* gameManager, GameService* gameService);
 		static void FireComponentAdded(GameManager* gameManager, GOComponent* component);
 		static void FireComponentRemoved(GameManager* gameManager, GOComponent* component);
 		static void FireObjectLayerSet(GameManager* gameManager, GameObject* gameObject);
@@ -107,10 +109,11 @@ namespace hh::game
 		static void FireMessageProcessed(GameManager* gameManager, const fnd::Message& message);
         static void FirePreGameUpdate(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo);
         static void FirePostGameUpdate(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo);
-		static void FirePreObjectUpdate(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo);
-		static void FirePostObjectUpdate(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo);
+		static void FirePreObjectUpdate(GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo);
+		static void FirePostObjectUpdate(GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo);
 		static void FirePreStep(GameManager* gameManager, const game::GameStepInfo& gameStepInfo);
 		static void FirePostStep(GameManager* gameManager, const game::GameStepInfo& gameStepInfo);
+		static void FireEditorStep(GameManager* gameManager, const game::GameStepInfo& gameStepInfo);
 		static void FireUpdate(GameManager* gameManager, const game::GameStepInfo& gameStepInfo);
 	};
 
@@ -210,6 +213,13 @@ namespace hh::game
 			return static_cast<T*>(GetService(T::GetClass()));
 		}
 
+		static GameService* GetMainGameManagerService(const GameServiceClass* gameServiceClass);
+
+		template<typename T>
+		static T* GetMainGameManagerService() {
+			return static_cast<T*>(GetMainGameManagerService(T::GetClass()));
+		}
+
 		GameObject* GetGameObject(const char* in_pObjectName)
 		{
 			for (auto* pObject : objects)
@@ -251,8 +261,14 @@ namespace hh::game
 		void UnregisterGamePauseListener(GamePauseListener& listener);
 		void AddListener(GameManagerListener* listener);
 		void RemoveListener(GameManagerListener* listener);
+		void AddComponentListener(ComponentListener* listener);
+		void RemoveComponentListener(ComponentListener* listener);
+		void AddGameUpdateListener(GameUpdateListener* listener);
+		void RemoveGameUpdateListener(GameUpdateListener* listener);
 		void AddGameObjectListener(GameObjectListener* listener);
 		void RemoveGameObjectListener(GameObjectListener* listener);
+		void AddObjectUpdateListener(ObjectUpdateListener* listener);
+		void RemoveObjectUpdateListener(ObjectUpdateListener* listener);
 		void AddEditorStepListener(EditorStepListener* listener);
 		void RemoveEditorStepListener(EditorStepListener* listener);
 		void ReloadInputSettings(bool unkParam1);

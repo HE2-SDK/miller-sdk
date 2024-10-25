@@ -16,7 +16,7 @@ namespace hh::gfx {
         csl::ut::Bitset<Flag> visualFlags;
         uint8_t unk102;
         GOCVisual(csl::fnd::IAllocator* allocator);
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
         virtual void OnGOCVisualEvent(GOCVisualEvent event, unsigned int unkParam2, void* unkParam3) = 0;
         void SetVisible(bool visible);
         inline bool IsVisible() const {

@@ -34,15 +34,24 @@ namespace hh::physics {
         csl::ut::MoveArray<void*> unk107;
         csl::ut::MoveArray<void*> unk108;
         csl::ut::MoveArray<void*> unk108b;
+        csl::ut::MoveArray<void*> unk109a;
+        csl::ut::MoveArray<void*> unk110a;
+        csl::ut::MoveArray<void*> unk111a;
+        csl::ut::MoveArray<void*> unk112a;
+        csl::ut::MoveArray<void*> unk113a;
+        csl::ut::MoveArray<void*> unk114a;
+        csl::ut::MoveArray<void*> unk115a;
+        csl::ut::MoveArray<void*> unk116a;
         EventQueue* eventQueue;
         uint32_t unk109;
         uint16_t unk110;
         bool unk111;
-        uint64_t unk112;
-        uint64_t unk113;
+        float unk112;
+        uint32_t unk113;
+        uint32_t unk114;
     public:
         PhysicsWorld(csl::fnd::IAllocator* allocator);
-        virtual void* GetRuntimeTypeInfo() override;
+        virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnAddedToGame() override;
 		virtual void OnRemovedFromGame() override;
         virtual uint64_t UnkFunc1() = 0;

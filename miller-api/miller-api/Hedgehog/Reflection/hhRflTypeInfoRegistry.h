@@ -12,10 +12,7 @@ namespace hh::fnd
 		{
 		}
 
-		const RflTypeInfo* GetByName(const char* pName) const
-		{
-			return items.GetValueOrFallback(pName, nullptr);
-		}
+		const RflTypeInfo* GetByName(const char* pName) const;
 		
 		void Register(const RflTypeInfo* pInfo)
 		{

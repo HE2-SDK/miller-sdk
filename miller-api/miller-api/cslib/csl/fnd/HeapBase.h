@@ -30,12 +30,15 @@ namespace csl::fnd {
     };
 
     class alignas(8) HeapBase {
+        uint64_t unk0a;
+        uint64_t unk0b;
         void* unk0;
+        csl::ut::LinkList<HeapBase> children;
+        
         bool unk1;
         char name[10];
         uint64_t unk2;
         HeapBase* parent;
-        csl::ut::LinkList<HeapBase> children;
         uint64_t unk8;
         uint64_t unk9;
         bool initialized;
@@ -57,7 +60,6 @@ namespace csl::fnd {
         virtual const char* GetHeapTypeName() const = 0;
         virtual bool IsIn(void* ptr) const = 0;
         virtual size_t GetBlockSize(void* ptr) const = 0;
-        virtual void CollectHeapInformation(HeapInformation& heapInformation) const {}
         virtual void GetStatistics(HeapStatistics& statistics) const = 0;
         virtual size_t GetBufferTop() const = 0;
         virtual size_t GetBufferEnd() const = 0;

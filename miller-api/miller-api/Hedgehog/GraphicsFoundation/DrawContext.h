@@ -20,7 +20,7 @@ namespace hh::gfnd {
         csl::fnd::IAllocator* allocator;
     public:
         struct Unk2 {
-            char unk1[416];
+            char unk1[72];
             needle::CScratchMemoryContext* debugDrawMemCtx;
             Unk2(needle::CScratchMemoryContext* memCtx) : debugDrawMemCtx{ memCtx } {}
         };
@@ -57,6 +57,8 @@ namespace hh::gfnd {
         virtual int64_t SetZTestEnable(bool enabled) = 0;
         virtual int64_t SetZWriteEnable(bool enabled) = 0;
         virtual int64_t SetCullingMode(unsigned int idx) = 0;
+        virtual int64_t UnkFuncA() = 0;
+        virtual int64_t UnkFuncB() = 0;
         virtual int64_t SetUnk2(int a2, int a3, unsigned int* a4) = 0;
     };
 }

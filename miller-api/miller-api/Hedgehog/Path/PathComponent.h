@@ -21,7 +21,7 @@ namespace hh::path {
 
         PathComponent(csl::fnd::IAllocator* allocator);
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual bool fUnk5() override { return true; }
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;
         virtual void HFrameUpdatedCallback(const fnd::HFrame* frame, bool unkParam) override;

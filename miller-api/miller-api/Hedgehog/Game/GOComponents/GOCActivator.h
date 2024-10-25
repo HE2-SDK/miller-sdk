@@ -21,7 +21,7 @@ namespace hh::game {
         };
 
         GOCActivator(csl::fnd::IAllocator* allocator);
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void LoadReflection(const LoadReflectionInfo& loadReflectionInfo) override;
 		virtual void OnGOCEvent(GOCEvent event, GameObject& ownerGameObject, void* data) override;
         virtual void HFrameUpdatedCallback(const fnd::HFrame* frame, bool unkParam) override;

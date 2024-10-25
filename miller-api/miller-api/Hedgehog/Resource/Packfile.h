@@ -8,6 +8,8 @@ namespace hh::fnd {
         csl::ut::MoveArray<void*> unk4;
         csl::ut::VariableString unk5;
         csl::ut::MoveArray<void*> unk6;
+        uint8_t unk8;
+        volatile int spinLock;
 
         Packfile(csl::fnd::IAllocator* pAllocator);
         static ManagedResource* Create(csl::fnd::IAllocator* pAllocator);

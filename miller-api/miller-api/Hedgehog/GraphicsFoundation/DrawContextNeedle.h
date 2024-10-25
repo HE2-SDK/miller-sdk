@@ -46,6 +46,8 @@ namespace hh::gfnd {
         virtual int64_t SetZTestEnable(bool enabled) override;
         virtual int64_t SetZWriteEnable(bool enabled) override;
         virtual int64_t SetCullingMode(unsigned int idx) override;
+        virtual int64_t UnkFuncA() override;
+        virtual int64_t UnkFuncB() override;
         virtual int64_t SetUnk2(int a2, int a3, unsigned int* a4) override;
         void DrawOval(const csl::math::Matrix34& transform, float r1, float r2, const csl::ut::Color8& color);
         void NeedleDrawPrimitive(const csl::math::Matrix34& transform, const csl::ut::Color8& color, int primitiveType);

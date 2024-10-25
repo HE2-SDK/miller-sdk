@@ -41,7 +41,7 @@ namespace hh::anim {
         };
 
         GOCAnimationSingle(csl::fnd::IAllocator* allocator);
-        virtual void* GetRuntimeTypeInfo() override;
+        virtual void* GetRuntimeTypeInfo() const override;
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;
         void Setup(const SetupInfo& setupInfo);

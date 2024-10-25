@@ -103,7 +103,7 @@ namespace hh::gfx {
         GOCVisualModelImpl implementation;
         uint64_t unk332;
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
 		virtual void LoadReflection(const LoadReflectionInfo& loadReflectionInfo) override;
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;

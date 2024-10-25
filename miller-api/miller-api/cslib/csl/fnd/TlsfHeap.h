@@ -32,7 +32,6 @@ namespace csl::fnd {
         virtual const char* GetHeapTypeName() const override;
         virtual bool IsIn(void* ptr) const override;
         virtual size_t GetBlockSize(void* ptr) const override;
-        virtual void CollectHeapInformation(HeapInformation& heapInformation) const override;
         virtual void GetStatistics(HeapStatistics& statistics) const override;
         virtual size_t GetBufferTop() const override;
         virtual size_t GetBufferEnd() const override;
@@ -54,7 +53,6 @@ namespace csl::fnd {
 		virtual void* Alloc(size_t in_size, size_t in_alignment) override;
 		virtual void* AllocBottom(size_t in_size, size_t in_alignment) override;
 		virtual void Free(void* in_pMemory) override;
-        virtual void CollectHeapInformation(HeapInformation& heapInformation) const override;
         virtual int64_t UnkFunc13() override;
         virtual void Lock() override;
         virtual void Unlock() override;

@@ -4,7 +4,7 @@ namespace hh::ui {
     class UIManagerExtension : public fnd::ReferencedObject {
     public:
         UIManagerExtension(csl::fnd::IAllocator* allocator);
-        virtual void* GetRuntimeTypeInfo();
+        virtual void* GetRuntimeTypeInfo() const;
         virtual void* AddedToUIManager() {}
         virtual void* RemovedFromUIManager() {}
     };
@@ -65,7 +65,7 @@ namespace hh::ui {
     public:
         void Initialize(const Config& config);
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnAddedToGame() override;
 		virtual void OnRemovedFromGame() override;
 		virtual void PreStepCallback(game::GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;

@@ -1,35 +1,31 @@
 #pragma once
 
 namespace hh::fw {
-    class WindowD3D11UnkListener {
-    public:
-        virtual ~WindowD3D11UnkListener() = default;
-        virtual void WD3D11UL_UnkFunc1() {}
-    };
-
     class FrameworkWin32;
-    class WindowD3D11 : public Window, public WindowD3D11UnkListener {
+    class WindowD3D11 : public Window {
+        csl::ut::MoveArray<void*> unk100a;
+        csl::ut::MoveArray<void*> unk100b;
+        csl::ut::MoveArray<void*> unk100c;
+        csl::ut::MoveArray<void*> unk101a;
         csl::ut::MoveArray<void*> unk101;
         csl::ut::MoveArray<void*> unk102;
-        uint8_t unk103;
-        uint64_t unk104;
+        uint32_t unk103;
+        uint32_t unk103a;
+        uint16_t unk104;
         FrameworkWin32* framework;
         size_t hModule;
-        uint32_t unk107;
-        uint32_t unk108;
-        uint32_t unk108b;
-        uint8_t unk109;
-        uint32_t unk110;
-        uint64_t unk111;
-        uint64_t unk111b;
         uint32_t width;
         uint32_t height;
-        uint8_t unk112;
-        int unk113;
-        uint32_t unk114;
-        uint64_t unk115;
-        uint8_t unk116;
+        int unk110;
+        uint32_t unk110a;
+        uint64_t unk111;
+        uint32_t unk111a;
+        uint32_t unk111b;
+        uint32_t unk111c;
+
     public:
+        static WindowD3D11* Create(csl::fnd::IAllocator* allocator);
+
         WindowD3D11(csl::fnd::IAllocator* allocator);
         virtual uint64_t UnkFunc1() override;
         virtual void UnkFunc2() override {}

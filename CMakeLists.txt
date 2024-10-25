@@ -11,8 +11,8 @@ set(CMAKE_ASM_MASM_CREATE_STATIC_LIBRARY "<CMAKE_AR> /OUT:<TARGET> <LINK_FLAGS> 
 add_library(miller-sdk STATIC)
 target_compile_features(miller-sdk PUBLIC cxx_std_17)
 
-if(DEFINED miller_SDK_CUSTOM_EIGEN_TARGET)
-    target_link_libraries(miller-sdk PUBLIC ${miller_SDK_CUSTOM_EIGEN_TARGET})
+if(DEFINED MILLER_SDK_CUSTOM_EIGEN_TARGET)
+    target_link_libraries(miller-sdk PUBLIC ${MILLER_SDK_CUSTOM_EIGEN_TARGET})
 else()
     target_link_libraries(miller-sdk PUBLIC eigen)
 endif()

@@ -25,6 +25,16 @@ namespace hh::fnd
 			uint32_t declaredEnumsNum,
 			const RflClassMember* pDeclaredMembers,
 			uint32_t declaredMembersNum,
+			const RflCustomAttributes* pAttributes) : RflClass{ pName, pParent, objectSizeInBytes, pDeclaredEnums, declaredEnumsNum, pDeclaredMembers, declaredMembersNum, pAttributes, HashString(pName) }
+		{}
+
+		RflClass(const char* pName, 
+			const RflClass* pParent,
+			uint32_t objectSizeInBytes,
+			const RflClassEnum* pDeclaredEnums,
+			uint32_t declaredEnumsNum,
+			const RflClassMember* pDeclaredMembers,
+			uint32_t declaredMembersNum,
 			const RflCustomAttributes* pAttributes,
 			unsigned int nameHash) : m_pName{ pName }, m_pEnums{ pDeclaredEnums, declaredEnumsNum }, m_pMembers{ pDeclaredMembers, declaredMembersNum }, nameHash{ nameHash }
 		{

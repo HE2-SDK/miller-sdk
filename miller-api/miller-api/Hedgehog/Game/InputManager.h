@@ -31,7 +31,7 @@ namespace hh::game {
         void UnregisterInputComponent(InputComponent& inputComponent);
         void CreateInputMaps(hid::InputMapSettings* settings);
 
-        virtual void* GetRuntimeTypeInfo() override;
+        virtual void* GetRuntimeTypeInfo() const override;
         virtual void OnAddedToGame() override;
         virtual void OnRemovedFromGame() override;
         virtual void GPL_UnkFunc2() override;
