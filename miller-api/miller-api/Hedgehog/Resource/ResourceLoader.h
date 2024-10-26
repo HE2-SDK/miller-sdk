@@ -6,6 +6,8 @@ namespace hh::fnd {
         struct Locale {
             uint32_t localeId{ 1 };
             const char* localeName{ "" };
+            uint64_t unk1{};
+            uint8_t unk2{};
         };
 
         struct Unk1 {

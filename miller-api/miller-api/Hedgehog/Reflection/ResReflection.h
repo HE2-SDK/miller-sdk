@@ -10,9 +10,7 @@ namespace hh::fnd {
         virtual void Load(void* data, size_t size) override;
         virtual void Unload() override;
 
-        inline void* GetData() {
-            return reflectionData;
-        }
+        void* GetData();
 
         MANAGED_RESOURCE_CLASS_DECLARATION(ResReflection)
     };

@@ -6,7 +6,7 @@ namespace hh::fnd {
         void* unk2;
         csl::ut::MoveArray<ManagedResource*> resources;
     public:
-        StaticResourceContainer(csl::fnd::IAllocator* allocator);
+        StaticResourceContainer(csl::fnd::IAllocator* allocator, const ResourceTypeInfo* typeInfo, void* unk2);
         const ResourceTypeInfo* GetTypeInfo() {
             return typeInfo;
         }
@@ -14,7 +14,7 @@ namespace hh::fnd {
         virtual void* GetRuntimeTypeInfo() const override;
         virtual ManagedResource* GetResourceByName(const char* name) const override;
         virtual int GetNumResources() const override;
-        virtual void LoadResource(csl::fnd::IAllocator* resourceAllocator, const char* name) override;
         virtual ManagedResource* GetResourceByIndex(int index) const override;
+        virtual uint64_t UnkFunc5() override;
     };
 }

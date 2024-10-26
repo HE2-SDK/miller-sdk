@@ -11,12 +11,14 @@ namespace hh::hid {
             UNK4,
         };
 
-        uint16_t absoluteX;
-        uint16_t absoluteY;
+        uint32_t absoluteX;
+        uint32_t absoluteY;
         uint16_t deltaX;
+        uint16_t unk103;
         uint16_t deltaY;
-        uint16_t prevX;
-        uint16_t prevY;
+        uint16_t unk104;
+        uint32_t prevX;
+        uint32_t prevY;
         csl::ut::Bitset<MouseState::ButtonStateFlag> buttonState;
         uint16_t xPos;
         uint16_t unk105a;
@@ -36,11 +38,10 @@ namespace hh::hid {
         static MouseWin32* CreateDevice(unsigned int deviceIndex, csl::fnd::IAllocator* pAllocator);
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void Update(float unkParam) override;
-        virtual void UpdateMouseState(MouseState& state) const override;
+        virtual void CalculateNewState(MouseState& state) const override;
         virtual void SetCursorPosition(unsigned int x, unsigned int y) override;
         virtual bool GetCursorPosition(unsigned int* x, unsigned int* y) const override;
         virtual bool GetCursorPositionDelta(unsigned int* x, unsigned int* y) const override;
-        virtual void SetFlag0(bool unkParam) override;
         virtual void SetLockCursor(bool locked) override;
         virtual bool IsCursorLocked() const override;
         virtual bool IsFlag4() const override;

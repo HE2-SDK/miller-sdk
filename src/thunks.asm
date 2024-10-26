@@ -15,6 +15,11 @@ PUBLIC ?Create@ContentManagerWin32@content@app@@CAPEAV123@PEAVIAllocator@fnd@csl
     mov rax, 0140063630h
     jmp rax
 
+PUBLIC ?copyFrom@String@ut@csl@@QEAAXPEBD_K11@Z
+?copyFrom@String@ut@csl@@QEAAXPEBD_K11@Z:
+    mov rax, 0140063690h
+    jmp rax
+
 PUBLIC ??_DBaseObject@fnd@hh@@QEAAXXZ
 ??_DBaseObject@fnd@hh@@QEAAXXZ:
     mov rax, 0140063ef0h
@@ -2380,6 +2385,11 @@ PUBLIC ?GetClass@PlayerCameraSetParameters@rfl@heur@@SAPEBVRflClass@fnd@hh@@XZ
     mov rax, 01400a8f00h
     jmp rax
 
+PUBLIC ?GetClass@PlayerCameraSetParameters@player@app@@SAPEBVRflClass@fnd@hh@@XZ
+?GetClass@PlayerCameraSetParameters@player@app@@SAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01400a8f00h
+    jmp rax
+
 PUBLIC ?GetClass@PlayerParamAttack@rfl@heur@@SAPEBVRflClass@fnd@hh@@XZ
 ?GetClass@PlayerParamAttack@rfl@heur@@SAPEBVRflClass@fnd@hh@@XZ:
     mov rax, 01400a8f10h
@@ -4435,6 +4445,11 @@ PUBLIC ?Construct@PlayerCameraParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@
     mov rax, 01400b9a70h
     jmp rax
 
+PUBLIC ?Construct@PlayerCameraParameter@player@app@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
+?Construct@PlayerCameraParameter@player@app@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01400b9a70h
+    jmp rax
+
 PUBLIC ?Construct@WeatherBlockParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
 ?Construct@WeatherBlockParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01400b9aa0h
@@ -5967,6 +5982,11 @@ PUBLIC ?Clean@PlayStatsData@save@app@@CAXPEAU123@@Z
 
 PUBLIC ?Clean@PlayerCameraSetParameters@rfl@heur@@CAXPEAU123@@Z
 ?Clean@PlayerCameraSetParameters@rfl@heur@@CAXPEAU123@@Z:
+    mov rax, 01400bd690h
+    jmp rax
+
+PUBLIC ?Clean@PlayerCameraSetParameters@player@app@@CAXPEAU123@@Z
+?Clean@PlayerCameraSetParameters@player@app@@CAXPEAU123@@Z:
     mov rax, 01400bd690h
     jmp rax
 
@@ -9965,8 +9985,18 @@ PUBLIC ?Construct@PlayerCameraSetParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@f
     mov rax, 01400cb460h
     jmp rax
 
+PUBLIC ?Construct@PlayerCameraSetParameter@player@app@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
+?Construct@PlayerCameraSetParameter@player@app@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01400cb460h
+    jmp rax
+
 PUBLIC ?Construct@PlayerCameraSetParameters@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
 ?Construct@PlayerCameraSetParameters@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01400cb4b0h
+    jmp rax
+
+PUBLIC ?Construct@PlayerCameraSetParameters@player@app@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
+?Construct@PlayerCameraSetParameters@player@app@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01400cb4b0h
     jmp rax
 
@@ -21085,11 +21115,6 @@ PUBLIC ??0EnemyCoreMachoInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0140486c40h
     jmp rax
 
-PUBLIC ?GetTarget2@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z
-?GetTarget2@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z:
-    mov rax, 014048c4e0h
-    jmp rax
-
 PUBLIC ?Create@EnemyCoreMachoProjectile@app@@CAPEAV12@PEAVIAllocator@fnd@csl@@@Z
 ?Create@EnemyCoreMachoProjectile@app@@CAPEAV12@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014048c620h
@@ -25430,9 +25455,74 @@ PUBLIC ??0Unk1@GOCPlayerKinematicParams@player@app@@QEAA@XZ
     mov rax, 0140610ef0h
     jmp rax
 
+PUBLIC ?GetAirBoostParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamAirBoost@23@XZ
+?GetAirBoostParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamAirBoost@23@XZ:
+    mov rax, 0140613c20h
+    jmp rax
+
+PUBLIC ?GetBoostParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamBoost@23@XZ
+?GetBoostParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamBoost@23@XZ:
+    mov rax, 0140613c30h
+    jmp rax
+
+PUBLIC ?GetCommonParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamCommon@23@XZ
+?GetCommonParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamCommon@23@XZ:
+    mov rax, 0140613c40h
+    jmp rax
+
+PUBLIC ?GetDoubleJumpParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamDoubleJump@23@XZ
+?GetDoubleJumpParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamDoubleJump@23@XZ:
+    mov rax, 0140613c50h
+    jmp rax
+
+PUBLIC ?GetJumpParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamJump@23@XZ
+?GetJumpParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamJump@23@XZ:
+    mov rax, 0140613c60h
+    jmp rax
+
+PUBLIC ?GetJumpSpeedParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamJumpSpeed@23@XZ
+?GetJumpSpeedParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamJumpSpeed@23@XZ:
+    mov rax, 0140613c70h
+    jmp rax
+
+PUBLIC ?GetSpeedParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamSpeed@23@XZ
+?GetSpeedParameters@GOCPlayerParameter@player@app@@QEBAAEAUPlayerParamSpeed@23@XZ:
+    mov rax, 0140613c80h
+    jmp rax
+
+PUBLIC ??_DGOCPlayerParameter@player@app@@QEAAXXZ
+??_DGOCPlayerParameter@player@app@@QEAAXXZ:
+    mov rax, 0140613c90h
+    jmp rax
+
+PUBLIC ?SetMode@GOCPlayerParameter@player@app@@QEAAXW4Mode@123@@Z
+?SetMode@GOCPlayerParameter@player@app@@QEAAXW4Mode@123@@Z:
+    mov rax, 0140613d20h
+    jmp rax
+
 PUBLIC ?Create@GOCPlayerParameter@player@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCPlayerParameter@player@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140613d30h
+    jmp rax
+
+PUBLIC ?Create@GOCPlayerParameter@player@app@@CAPEAVGOComponent@game@hh@@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCPlayerParameter@player@app@@CAPEAVGOComponent@game@hh@@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140613d30h
+    jmp rax
+
+PUBLIC ?GetPlayerParameter@GOCPlayerParameter@player@app@@AEAAPEAXAEBVRflClass@fnd@hh@@@Z
+?GetPlayerParameter@GOCPlayerParameter@player@app@@AEAAPEAXAEBVRflClass@fnd@hh@@@Z:
+    mov rax, 0140613e20h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCPlayerParameter@player@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCPlayerParameter@player@app@@UEBAPEAXXZ:
+    mov rax, 0140614050h
+    jmp rax
+
+PUBLIC ?GetClass@GOCPlayerParameter@player@app@@SAPEBVGOComponentClass@game@hh@@XZ
+?GetClass@GOCPlayerParameter@player@app@@SAPEBVGOComponentClass@game@hh@@XZ:
+    mov rax, 01406143b0h
     jmp rax
 
 PUBLIC ?Create@GOCPlayerPath@player@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -28285,6 +28375,11 @@ PUBLIC ??1Uri@fnd@hh@@UEAA@XZ
     mov rax, 01407df820h
     jmp rax
 
+PUBLIC ?UnkFunc7@Keyboard@hid@hh@@UEBA_NXZ
+?UnkFunc7@Keyboard@hid@hh@@UEBA_NXZ:
+    mov rax, 01407e4810h
+    jmp rax
+
 PUBLIC ?RefreshInstanceParameter@MaterialResource@needle@hh@@QEAAXXZ
 ?RefreshInstanceParameter@MaterialResource@needle@hh@@QEAAXXZ:
     mov rax, 01407e4b40h
@@ -28305,9 +28400,44 @@ PUBLIC ?GetMainRenderingPipeline@RenderingEngineNeedle@gfx@hh@@UEBAPEAVRendering
     mov rax, 01407e9b10h
     jmp rax
 
+PUBLIC ?GetDeviceId@InputDevice@hid@hh@@UEBAIXZ
+?GetDeviceId@InputDevice@hid@hh@@UEBAIXZ:
+    mov rax, 01407e9b10h
+    jmp rax
+
+PUBLIC ?UnkFunc10@Keyboard@hid@hh@@UEAAIXZ
+?UnkFunc10@Keyboard@hid@hh@@UEAAIXZ:
+    mov rax, 01407e9b10h
+    jmp rax
+
+PUBLIC ?UnkFunc9@Vibration@hid@hh@@UEAAIXZ
+?UnkFunc9@Vibration@hid@hh@@UEAAIXZ:
+    mov rax, 01407e9b10h
+    jmp rax
+
+PUBLIC ?UnkFunc10@Vibration@hid@hh@@UEAAIXZ
+?UnkFunc10@Vibration@hid@hh@@UEAAIXZ:
+    mov rax, 01407e9b10h
+    jmp rax
+
 PUBLIC ?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ
 ?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ:
     mov rax, 01407e9b10h
+    jmp rax
+
+PUBLIC ?GetInputValue@InputDevice@hid@hh@@UEBAMI@Z
+?GetInputValue@InputDevice@hid@hh@@UEBAMI@Z:
+    mov rax, 0140801290h
+    jmp rax
+
+PUBLIC ?GetDeviceId@Mouse@hid@hh@@UEBAIXZ
+?GetDeviceId@Mouse@hid@hh@@UEBAIXZ:
+    mov rax, 01408019c0h
+    jmp rax
+
+PUBLIC ?GetDeviceId@Vibration@hid@hh@@UEBAIXZ
+?GetDeviceId@Vibration@hid@hh@@UEBAIXZ:
+    mov rax, 0140801a00h
     jmp rax
 
 PUBLIC ?GetClass@GOCTinyFsm2@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
@@ -28505,11 +28635,6 @@ PUBLIC ?PreStepCallback@UIManager@ui@hh@@UEAAXPEAVGameManager@game@3@AEBUGameSte
     mov rax, 0140816110h
     jmp rax
 
-PUBLIC ??_DFilePathResolver@fnd@hh@@QEAAXXZ
-??_DFilePathResolver@fnd@hh@@QEAAXXZ:
-    mov rax, 014081b6a0h
-    jmp rax
-
 PUBLIC ?UnkFunc1@ResModelNeedle@gfx@hh@@UEAA_KXZ
 ?UnkFunc1@ResModelNeedle@gfx@hh@@UEAA_KXZ:
     mov rax, 014081baa0h
@@ -28640,6 +28765,11 @@ PUBLIC ?Create@SurfRideViewerObject@gameobjects@heur@@CAPEAV123@PEAVIAllocator@f
     mov rax, 0140850bb0h
     jmp rax
 
+PUBLIC ?UnkFunc5@StaticResourceContainer@fnd@hh@@UEAA_KXZ
+?UnkFunc5@StaticResourceContainer@fnd@hh@@UEAA_KXZ:
+    mov rax, 0140852610h
+    jmp rax
+
 PUBLIC ??0AnimationControl@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0AnimationControl@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140853ad0h
@@ -28663,6 +28793,11 @@ PUBLIC ?PlayBgm@SoundDirector@snd@app@@QEAAXAEBUPlayBgmInfo@123@@Z
 PUBLIC ?FCL_UnkFunc1@TextAppModule@text@hh@@EEAAX_K00@Z
 ?FCL_UnkFunc1@TextAppModule@text@hh@@EEAAX_K00@Z:
     mov rax, 014085e910h
+    jmp rax
+
+PUBLIC ?Load@ResObjectWorld@game@hh@@UEAAXPEAX_K@Z
+?Load@ResObjectWorld@game@hh@@UEAAXPEAX_K@Z:
+    mov rax, 01408606f0h
     jmp rax
 
 PUBLIC ?Unload@ResBitmapFont@font@hh@@UEAAXXZ
@@ -28765,6 +28900,16 @@ PUBLIC ?GetClass@GOCSound@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
     mov rax, 0140869570h
     jmp rax
 
+PUBLIC ?GetTarget1@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z
+?GetTarget1@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z:
+    mov rax, 014086c000h
+    jmp rax
+
+PUBLIC ?GetTarget1@Mouse@hid@hh@@UEBA?AVVector4@math@csl@@I@Z
+?GetTarget1@Mouse@hid@hh@@UEBA?AVVector4@math@csl@@I@Z:
+    mov rax, 014086c000h
+    jmp rax
+
 PUBLIC ?GetName@ManagedResource@fnd@hh@@QEBAPEBDXZ
 ?GetName@ManagedResource@fnd@hh@@QEBAPEBDXZ:
     mov rax, 014086c070h
@@ -28788,6 +28933,11 @@ PUBLIC ??_DObjectViewerContext@game@hh@@QEAAXXZ
 PUBLIC ?Create@ResScene@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@ResScene@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01408785e0h
+    jmp rax
+
+PUBLIC ?RNR_UnkFunc1@FilePathResolver@fnd@hh@@UEAAPEBDPEBD@Z
+?RNR_UnkFunc1@FilePathResolver@fnd@hh@@UEAAPEBDPEBD@Z:
+    mov rax, 0140878af0h
     jmp rax
 
 PUBLIC ??_DSliceCast@SurfRide@@QEAAXXZ
@@ -28815,9 +28965,14 @@ PUBLIC ?GetRuntimeTypeInfo@PhysicsWorld@physics@hh@@UEBAPEAXXZ
     mov rax, 0140885c20h
     jmp rax
 
+PUBLIC ?RayCastAllHits@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAEAV?$MoveArray@UPhysicsQueryResult@physics@hh@@@ut@6@@Z
+?RayCastAllHits@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAEAV?$MoveArray@UPhysicsQueryResult@physics@hh@@@ut@6@@Z:
+    mov rax, 01408863b0h
+    jmp rax
+
 PUBLIC ?RayCastClosest@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAEAUPhysicsQueryResult@23@@Z
 ?RayCastClosest@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAEAUPhysicsQueryResult@23@@Z:
-    mov rax, 01408868c0h
+    mov rax, 0140886430h
     jmp rax
 
 PUBLIC ?GetClass@PhysicsWorldBullet@physics@hh@@SAPEBVGameServiceClass@game@3@XZ
@@ -28883,6 +29038,11 @@ PUBLIC ?UnkFunc3@PhysicsWorldBullet@physics@hh@@UEAA_KXZ
 PUBLIC ?UnkFunc11@PhysicsWorldBullet@physics@hh@@UEAA_KXZ
 ?UnkFunc11@PhysicsWorldBullet@physics@hh@@UEAA_KXZ:
     mov rax, 014088d770h
+    jmp rax
+
+PUBLIC ?GetDeviceId@Keyboard@hid@hh@@UEBAIXZ
+?GetDeviceId@Keyboard@hid@hh@@UEBAIXZ:
+    mov rax, 014088e330h
     jmp rax
 
 PUBLIC ?OnLifeCycleChange@PhysicsPickedObjectViewer@physics@hh@@UEAAH_N@Z
@@ -29130,6 +29290,11 @@ PUBLIC ?GetTypeInfo@ResPathObject@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@
     mov rax, 014098e540h
     jmp rax
 
+PUBLIC ?GetNumResources@StaticResourceContainer@fnd@hh@@UEBAHXZ
+?GetNumResources@StaticResourceContainer@fnd@hh@@UEBAHXZ:
+    mov rax, 0140995630h
+    jmp rax
+
 PUBLIC ?Clean@StatsDataContainer@rfl@heur@@CAXPEAU123@@Z
 ?Clean@StatsDataContainer@rfl@heur@@CAXPEAU123@@Z:
     mov rax, 0140997a80h
@@ -29343,11 +29508,6 @@ PUBLIC ?AddRenderableToRenderTextureHandle@RenderingEngineRangers@gfx@hh@@UEAAXP
 PUBLIC ?AddRenderableToRenderTextureHandle@RenderingEngineMiller@gfx@hh@@UEAAXPEAVRenderTextureHandle@needle@3@PEAVRenderable@gfnd@3@@Z
 ?AddRenderableToRenderTextureHandle@RenderingEngineMiller@gfx@hh@@UEAAXPEAVRenderTextureHandle@needle@3@PEAVRenderable@gfnd@3@@Z:
     mov rax, 01409abdb0h
-    jmp rax
-
-PUBLIC ?RayCastAllHits@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAEAV?$MoveArray@UPhysicsQueryResult@physics@hh@@@ut@6@@Z
-?RayCastAllHits@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAEAV?$MoveArray@UPhysicsQueryResult@physics@hh@@@ut@6@@Z:
-    mov rax, 01409abe10h
     jmp rax
 
 PUBLIC ?SetupMainRenderUnit@RenderingEngineMiller@gfx@hh@@UEAAXXZ
@@ -31010,6 +31170,16 @@ PUBLIC ?GetTypeInfo@ResMirageLight@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
     mov rax, 01409b37d0h
     jmp rax
 
+PUBLIC ?LoadFromStaticResourceContainer@ManagedResource@fnd@hh@@UEAAXPEAX_KPEAVStaticResourceContainer@23@@Z
+?LoadFromStaticResourceContainer@ManagedResource@fnd@hh@@UEAAXPEAX_KPEAVStaticResourceContainer@23@@Z:
+    mov rax, 01409b37e0h
+    jmp rax
+
+PUBLIC ?Load@ResMirageLight@gfx@hh@@UEAAXPEAX_K@Z
+?Load@ResMirageLight@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 01409b37e0h
+    jmp rax
+
 PUBLIC ?GetTypeInfo@ResAnimCameraContainer@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 ?GetTypeInfo@ResAnimCameraContainer@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ:
     mov rax, 01409b8ba0h
@@ -31073,6 +31243,16 @@ PUBLIC ?GetTypeInfo@ResModel@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 PUBLIC ?GetTypeInfo@ResModel@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
 ?GetTypeInfo@ResModel@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
     mov rax, 01409bb520h
+    jmp rax
+
+PUBLIC ?Load@ResModelNeedle@gfx@hh@@UEAAXPEAX_K@Z
+?Load@ResModelNeedle@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 01409bb530h
+    jmp rax
+
+PUBLIC ?Load@ResTerrainModel@gfx@hh@@UEAAXPEAX_K@Z
+?Load@ResTerrainModel@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 01409bb530h
     jmp rax
 
 PUBLIC ?GetTypeInfo@ResModelInstanceInfo@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
@@ -31225,6 +31405,11 @@ PUBLIC ?GetClass@GOCVisualUserModel@gocs@heur@@SAPEBVGOComponentClass@game@hh@@X
     mov rax, 01409c2b10h
     jmp rax
 
+PUBLIC ?GetClass@GOCPointLight@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
+?GetClass@GOCPointLight@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ:
+    mov rax, 01409c4410h
+    jmp rax
+
 PUBLIC ??_DGOCVisualDebugDraw@gfx@hh@@QEAAXXZ
 ??_DGOCVisualDebugDraw@gfx@hh@@QEAAXXZ:
     mov rax, 01409c4920h
@@ -31283,16 +31468,6 @@ PUBLIC ?UnkFunc2@ResModelNeedle@gfx@hh@@UEAA_KXZ
 PUBLIC ?UnkFunc4@ResModelNeedle@gfx@hh@@UEAA_KXZ
 ?UnkFunc4@ResModelNeedle@gfx@hh@@UEAA_KXZ:
     mov rax, 01409c6790h
-    jmp rax
-
-PUBLIC ?Load@ResModelNeedle@gfx@hh@@UEAAXPEAX_K@Z
-?Load@ResModelNeedle@gfx@hh@@UEAAXPEAX_K@Z:
-    mov rax, 01409c6830h
-    jmp rax
-
-PUBLIC ?Load@ResTerrainModel@gfx@hh@@UEAAXPEAX_K@Z
-?Load@ResTerrainModel@gfx@hh@@UEAAXPEAX_K@Z:
-    mov rax, 01409c6830h
     jmp rax
 
 PUBLIC ?Resolve@ResModelNeedle@gfx@hh@@UEAAXAEAVResourceResolver@fnd@3@@Z
@@ -32105,6 +32280,11 @@ PUBLIC ?GetAttributeValue@GameObjectClass@game@hh@@QEBAPEBXPEBD@Z
     mov rax, 0140a195f0h
     jmp rax
 
+PUBLIC ?LoadResource@StaticResourceContainer@fnd@hh@@UEAAXPEAVIAllocator@2csl@@PEBD@Z
+?LoadResource@StaticResourceContainer@fnd@hh@@UEAAXPEAVIAllocator@2csl@@PEBD@Z:
+    mov rax, 0140a19f00h
+    jmp rax
+
 PUBLIC ?GetResourceByIndex@StaticResourceContainer@fnd@hh@@UEBAPEAVManagedResource@23@H@Z
 ?GetResourceByIndex@StaticResourceContainer@fnd@hh@@UEBAPEAVManagedResource@23@H@Z:
     mov rax, 0140a19f00h
@@ -32795,6 +32975,11 @@ PUBLIC ?GetTypeInfo@Packfile@fnd@hh@@SAPEBUResourceTypeInfo@23@XZ
     mov rax, 0140bc2e50h
     jmp rax
 
+PUBLIC ?Load@Packfile@fnd@hh@@UEAAXPEAX_K@Z
+?Load@Packfile@fnd@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140bc36e0h
+    jmp rax
+
 PUBLIC ?Resolve@ManagedResource@fnd@hh@@UEAAXAEAVResourceResolver@23@@Z
 ?Resolve@ManagedResource@fnd@hh@@UEAAXAEAVResourceResolver@23@@Z:
     mov rax, 0140bc4050h
@@ -32823,6 +33008,11 @@ PUBLIC ?GetTypeInfo@ResLuaData@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 PUBLIC ??0ResReflection@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
 ??0ResReflection@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z:
     mov rax, 0140bc4cb0h
+    jmp rax
+
+PUBLIC ?GetData@ResReflection@fnd@hh@@QEAAPEAXXZ
+?GetData@ResReflection@fnd@hh@@QEAAPEAXXZ:
+    mov rax, 0140bc4d50h
     jmp rax
 
 PUBLIC ?GetTypeInfo@ResReflection@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
@@ -32870,6 +33060,11 @@ PUBLIC ?GetTypeInfo@ResBitmapFont@font@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
     mov rax, 0140bc58b0h
     jmp rax
 
+PUBLIC ?Load@ResBitmapFont@font@hh@@UEAAXPEAX_K@Z
+?Load@ResBitmapFont@font@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140bc58c0h
+    jmp rax
+
 PUBLIC ?Resolve@ResBitmapFont@font@hh@@UEAAXAEAVResourceResolver@fnd@3@@Z
 ?Resolve@ResBitmapFont@font@hh@@UEAAXAEAVResourceResolver@fnd@3@@Z:
     mov rax, 0140bc58e0h
@@ -32888,6 +33083,11 @@ PUBLIC ?GetTypeInfo@ResScalableFontSet@resources@heur@@SAPEBUResourceTypeInfo@fn
 PUBLIC ?GetTypeInfo@ResScalableFontSet@font@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
 ?GetTypeInfo@ResScalableFontSet@font@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
     mov rax, 0140bc5b60h
+    jmp rax
+
+PUBLIC ?Load@ResScalableFontSet@font@hh@@UEAAXPEAX_K@Z
+?Load@ResScalableFontSet@font@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140bc5b70h
     jmp rax
 
 PUBLIC ?Unload@ResScalableFontSet@font@hh@@UEAAXXZ
@@ -32920,6 +33120,11 @@ PUBLIC ?GetTypeInfo@ResFragmentShader@gfnd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
     mov rax, 0140bc5eb0h
     jmp rax
 
+PUBLIC ?Load@ResFragmentShader@gfnd@hh@@UEAAXPEAX_K@Z
+?Load@ResFragmentShader@gfnd@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140bc5ec0h
+    jmp rax
+
 PUBLIC ??0ResTexture@resources@heur@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0ResTexture@resources@heur@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140bc5fa0h
@@ -32938,6 +33143,11 @@ PUBLIC ?GetTypeInfo@ResTexture@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 PUBLIC ?GetTypeInfo@ResTexture@gfnd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
 ?GetTypeInfo@ResTexture@gfnd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
     mov rax, 0140bc63c0h
+    jmp rax
+
+PUBLIC ?Load@ResTexture@gfnd@hh@@UEAAXPEAX_K@Z
+?Load@ResTexture@gfnd@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140bc6410h
     jmp rax
 
 PUBLIC ?Unload@ResTexture@gfnd@hh@@UEAAXXZ
@@ -32965,6 +33175,11 @@ PUBLIC ?GetTypeInfo@ResVertexShader@gfnd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
     mov rax, 0140bc73c0h
     jmp rax
 
+PUBLIC ?Load@ResVertexShader@gfnd@hh@@UEAAXPEAX_K@Z
+?Load@ResVertexShader@gfnd@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140bc73d0h
+    jmp rax
+
 PUBLIC ?GetTypeInfo@ResComputeShader@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 ?GetTypeInfo@ResComputeShader@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ:
     mov rax, 0140bc7530h
@@ -32973,6 +33188,11 @@ PUBLIC ?GetTypeInfo@ResComputeShader@resources@heur@@SAPEBUResourceTypeInfo@fnd@
 PUBLIC ?GetTypeInfo@ResComputeShader@gfnd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
 ?GetTypeInfo@ResComputeShader@gfnd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
     mov rax, 0140bc7530h
+    jmp rax
+
+PUBLIC ?Load@ResComputeShader@gfnd@hh@@UEAAXPEAX_K@Z
+?Load@ResComputeShader@gfnd@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140bc7540h
     jmp rax
 
 PUBLIC ??0ManagedResource@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
@@ -32990,58 +33210,8 @@ PUBLIC ?GetSize@ManagedResource@fnd@hh@@QEBA_KXZ
     mov rax, 0140bc81d0h
     jmp rax
 
-PUBLIC ?Load@ManagedResource@fnd@hh@@UEAAXPEAX_K@Z
-?Load@ManagedResource@fnd@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@Packfile@fnd@hh@@UEAAXPEAX_K@Z
-?Load@Packfile@fnd@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
 PUBLIC ?Load@ResReflection@fnd@hh@@UEAAXPEAX_K@Z
 ?Load@ResReflection@fnd@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@ResTexture@gfnd@hh@@UEAAXPEAX_K@Z
-?Load@ResTexture@gfnd@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@ResVertexShader@gfnd@hh@@UEAAXPEAX_K@Z
-?Load@ResVertexShader@gfnd@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@ResFragmentShader@gfnd@hh@@UEAAXPEAX_K@Z
-?Load@ResFragmentShader@gfnd@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@ResComputeShader@gfnd@hh@@UEAAXPEAX_K@Z
-?Load@ResComputeShader@gfnd@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@ResBitmapFont@font@hh@@UEAAXPEAX_K@Z
-?Load@ResBitmapFont@font@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@ResScalableFontSet@font@hh@@UEAAXPEAX_K@Z
-?Load@ResScalableFontSet@font@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@ResMaterial@gfx@hh@@UEAAXPEAX_K@Z
-?Load@ResMaterial@gfx@hh@@UEAAXPEAX_K@Z:
-    mov rax, 0140bc8220h
-    jmp rax
-
-PUBLIC ?Load@ResMirageLight@gfx@hh@@UEAAXPEAX_K@Z
-?Load@ResMirageLight@gfx@hh@@UEAAXPEAX_K@Z:
     mov rax, 0140bc8220h
     jmp rax
 
@@ -33052,6 +33222,11 @@ PUBLIC ?Load@ResAtomConfig@snd@hh@@UEAAXPEAX_K@Z
 
 PUBLIC ?Load@ResAtomCueSheet@snd@hh@@UEAAXPEAX_K@Z
 ?Load@ResAtomCueSheet@snd@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140bc8220h
+    jmp rax
+
+PUBLIC ?LoadRef2@ManagedResource@fnd@hh@@UEAAXPEAX_K@Z
+?LoadRef2@ManagedResource@fnd@hh@@UEAAXPEAX_K@Z:
     mov rax, 0140bc8220h
     jmp rax
 
@@ -33205,9 +33380,29 @@ PUBLIC ?LoadResource@ResourceLoader@fnd@hh@@QEAAXAEBVUri@23@PEBUResourceTypeInfo
     mov rax, 0140bcfa10h
     jmp rax
 
+PUBLIC ??_DResourceNameResolver@fnd@hh@@QEAAXXZ
+??_DResourceNameResolver@fnd@hh@@QEAAXXZ:
+    mov rax, 0140bd9f0ch
+    jmp rax
+
+PUBLIC ??_DTagResourceContainerListener@fnd@hh@@QEAAXXZ
+??_DTagResourceContainerListener@fnd@hh@@QEAAXXZ:
+    mov rax, 0140bd9f18h
+    jmp rax
+
 PUBLIC ?GetResource@ResourceManager@fnd@hh@@QEAAPEAVManagedResource@23@PEBDPEBUResourceTypeInfo@23@@Z
 ?GetResource@ResourceManager@fnd@hh@@QEAAPEAVManagedResource@23@PEBDPEBUResourceTypeInfo@23@@Z:
     mov rax, 0140bda380h
+    jmp rax
+
+PUBLIC ?GetResourceEx@ResourceManager@fnd@hh@@QEAAPEAVManagedResource@23@PEBDPEBUResourceTypeInfo@23@AEBUGetResourceExInfo@123@@Z
+?GetResourceEx@ResourceManager@fnd@hh@@QEAAPEAVManagedResource@23@PEBDPEBUResourceTypeInfo@23@AEBUGetResourceExInfo@123@@Z:
+    mov rax, 0140bda3a0h
+    jmp rax
+
+PUBLIC ?GetResourcesByTypeInfo@ResourceManager@fnd@hh@@QEAAAEBV?$MoveArray@PEAVManagedResource@fnd@hh@@@ut@csl@@PEBUResourceTypeInfo@23@@Z
+?GetResourcesByTypeInfo@ResourceManager@fnd@hh@@QEAAAEBV?$MoveArray@PEAVManagedResource@fnd@hh@@@ut@csl@@PEBUResourceTypeInfo@23@@Z:
+    mov rax, 0140bda5d0h
     jmp rax
 
 PUBLIC ?GetPerspectiveProjectionParameters@ViewportData@gfnd@hh@@QEAAXPEAM000@Z
@@ -33415,6 +33610,81 @@ PUBLIC ?AddDevice@Config@InputMap@hid@hh@@QEAAXPEAVInputDevice@34@@Z
     mov rax, 0140c01ff0h
     jmp rax
 
+PUBLIC ?GetCursorPositionDelta@MouseWin32@hid@hh@@UEBA_NPEAI0@Z
+?GetCursorPositionDelta@MouseWin32@hid@hh@@UEBA_NPEAI0@Z:
+    mov rax, 0140c0b630h
+    jmp rax
+
+PUBLIC ?GetCursorPosition@MouseWin32@hid@hh@@UEBA_NPEAI0@Z
+?GetCursorPosition@MouseWin32@hid@hh@@UEBA_NPEAI0@Z:
+    mov rax, 0140c0b6c0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@MouseWin32@hid@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@MouseWin32@hid@hh@@UEBAPEAXXZ:
+    mov rax, 0140c0b720h
+    jmp rax
+
+PUBLIC ?UnkFunc17@MouseWin32@hid@hh@@UEBA_NXZ
+?UnkFunc17@MouseWin32@hid@hh@@UEBA_NXZ:
+    mov rax, 0140c0b730h
+    jmp rax
+
+PUBLIC ?UnkFunc9@MouseWin32@hid@hh@@UEAA_KXZ
+?UnkFunc9@MouseWin32@hid@hh@@UEAA_KXZ:
+    mov rax, 0140c0b750h
+    jmp rax
+
+PUBLIC ?CalculateNewState@MouseWin32@hid@hh@@UEBAXAEAUMouseState@Mouse@23@@Z
+?CalculateNewState@MouseWin32@hid@hh@@UEBAXAEAUMouseState@Mouse@23@@Z:
+    mov rax, 0140c0b750h
+    jmp rax
+
+PUBLIC ?IsCursorLocked@MouseWin32@hid@hh@@UEBA_NXZ
+?IsCursorLocked@MouseWin32@hid@hh@@UEBA_NXZ:
+    mov rax, 0140c0b7e0h
+    jmp rax
+
+PUBLIC ?MEH_Unk2@MouseWin32@hid@hh@@UEAA_NXZ
+?MEH_Unk2@MouseWin32@hid@hh@@UEAA_NXZ:
+    mov rax, 0140c0ba00h
+    jmp rax
+
+PUBLIC ?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ
+?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ:
+    mov rax, 0140c0ba50h
+    jmp rax
+
+PUBLIC ?MEH_Unk3@MouseWin32@hid@hh@@UEAA_NXZ
+?MEH_Unk3@MouseWin32@hid@hh@@UEAA_NXZ:
+    mov rax, 0140c0ba60h
+    jmp rax
+
+PUBLIC ?MEH_Unk4@MouseWin32@hid@hh@@UEAA_NXZ
+?MEH_Unk4@MouseWin32@hid@hh@@UEAA_NXZ:
+    mov rax, 0140c0bab0h
+    jmp rax
+
+PUBLIC ?Update@MouseWin32@hid@hh@@UEAAXM@Z
+?Update@MouseWin32@hid@hh@@UEAAXM@Z:
+    mov rax, 0140c0bad0h
+    jmp rax
+
+PUBLIC ?SetLockCursor@MouseWin32@hid@hh@@UEAAX_N@Z
+?SetLockCursor@MouseWin32@hid@hh@@UEAAX_N@Z:
+    mov rax, 0140c0bff0h
+    jmp rax
+
+PUBLIC ?SetCursorPosition@MouseWin32@hid@hh@@UEAAXII@Z
+?SetCursorPosition@MouseWin32@hid@hh@@UEAAXII@Z:
+    mov rax, 0140c0c050h
+    jmp rax
+
+PUBLIC ?UnkFunc18@MouseWin32@hid@hh@@UEAAXII@Z
+?UnkFunc18@MouseWin32@hid@hh@@UEAAXII@Z:
+    mov rax, 0140c0c1f0h
+    jmp rax
+
 PUBLIC ?Resolve@ResourceManagerResolver@fnd@hh@@UEAAPEAVManagedResource@23@PEAVIAllocator@2csl@@PEBDPEBUResourceTypeInfo@23@@Z
 ?Resolve@ResourceManagerResolver@fnd@hh@@UEAAPEAVManagedResource@23@PEAVIAllocator@2csl@@PEBDPEBUResourceTypeInfo@23@@Z:
     mov rax, 0140c0d8b0h
@@ -33435,9 +33705,34 @@ PUBLIC ?GetInputValue@Keyboard@hid@hh@@UEBAMI@Z
     mov rax, 0140c1c340h
     jmp rax
 
+PUBLIC ?UnkFunc9@Keyboard@hid@hh@@UEBAPEBDXZ
+?UnkFunc9@Keyboard@hid@hh@@UEBAPEBDXZ:
+    mov rax, 0140c1c360h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@Keyboard@hid@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@Keyboard@hid@hh@@UEBAPEAXXZ:
+    mov rax, 0140c1c370h
+    jmp rax
+
 PUBLIC ?Update@Keyboard@hid@hh@@UEAAXM@Z
 ?Update@Keyboard@hid@hh@@UEAAXM@Z:
     mov rax, 0140c1c390h
+    jmp rax
+
+PUBLIC ?UnkFunc9@KeyboardWin32@hid@hh@@UEBAPEBDXZ
+?UnkFunc9@KeyboardWin32@hid@hh@@UEBAPEBDXZ:
+    mov rax, 0140c1c920h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@KeyboardWin32@hid@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@KeyboardWin32@hid@hh@@UEBAPEAXXZ:
+    mov rax, 0140c1c960h
+    jmp rax
+
+PUBLIC ?UnkFunc8@KeyboardWin32@hid@hh@@UEAA_KXZ
+?UnkFunc8@KeyboardWin32@hid@hh@@UEAA_KXZ:
+    mov rax, 0140c1c970h
     jmp rax
 
 PUBLIC ??_DMouse@hid@hh@@QEAAXXZ
@@ -33445,9 +33740,109 @@ PUBLIC ??_DMouse@hid@hh@@QEAAXXZ
     mov rax, 0140c1cef0h
     jmp rax
 
+PUBLIC ?UpdateMouseState@Mouse@hid@hh@@UEBAXAEAUMouseState@123@@Z
+?UpdateMouseState@Mouse@hid@hh@@UEBAXAEAUMouseState@123@@Z:
+    mov rax, 0140c1cf90h
+    jmp rax
+
+PUBLIC ?UpdateMouseState@MouseWin32@hid@hh@@UEBAXAEAUMouseState@Mouse@23@@Z
+?UpdateMouseState@MouseWin32@hid@hh@@UEBAXAEAUMouseState@Mouse@23@@Z:
+    mov rax, 0140c1cf90h
+    jmp rax
+
+PUBLIC ?GetInputValue@Mouse@hid@hh@@UEBAMI@Z
+?GetInputValue@Mouse@hid@hh@@UEBAMI@Z:
+    mov rax, 0140c1cfa0h
+    jmp rax
+
+PUBLIC ?GetCursorPositionDelta@Mouse@hid@hh@@UEBA_NPEAI0@Z
+?GetCursorPositionDelta@Mouse@hid@hh@@UEBA_NPEAI0@Z:
+    mov rax, 0140c1d130h
+    jmp rax
+
+PUBLIC ?GetCursorPosition@Mouse@hid@hh@@UEBA_NPEAI0@Z
+?GetCursorPosition@Mouse@hid@hh@@UEBA_NPEAI0@Z:
+    mov rax, 0140c1d130h
+    jmp rax
+
+PUBLIC ?SetFlag0@Mouse@hid@hh@@UEAAX_N@Z
+?SetFlag0@Mouse@hid@hh@@UEAAX_N@Z:
+    mov rax, 0140c1d130h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@Mouse@hid@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@Mouse@hid@hh@@UEBAPEAXXZ:
+    mov rax, 0140c1d150h
+    jmp rax
+
+PUBLIC ?UnkFunc7@Mouse@hid@hh@@UEBA_NXZ
+?UnkFunc7@Mouse@hid@hh@@UEBA_NXZ:
+    mov rax, 0140c1d170h
+    jmp rax
+
+PUBLIC ?Update@Mouse@hid@hh@@UEAAXM@Z
+?Update@Mouse@hid@hh@@UEAAXM@Z:
+    mov rax, 0140c1d190h
+    jmp rax
+
+PUBLIC ??0Vibration@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0Vibration@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140c1d2d0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@Vibration@hid@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@Vibration@hid@hh@@UEBAPEAXXZ:
+    mov rax, 0140c1d340h
+    jmp rax
+
 PUBLIC ??0VibrationWin32@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0VibrationWin32@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140c1d360h
+    jmp rax
+
+PUBLIC ??_DVibrationWin32@hid@hh@@QEAAXXZ
+??_DVibrationWin32@hid@hh@@QEAAXXZ:
+    mov rax, 0140c1d390h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@VibrationWin32@hid@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@VibrationWin32@hid@hh@@UEBAPEAXXZ:
+    mov rax, 0140c1d3f0h
+    jmp rax
+
+PUBLIC ?UnkFunc12@VibrationWin32@hid@hh@@UEAAXXZ
+?UnkFunc12@VibrationWin32@hid@hh@@UEAAXXZ:
+    mov rax, 0140c1d400h
+    jmp rax
+
+PUBLIC ?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ
+?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ:
+    mov rax, 0140c1d480h
+    jmp rax
+
+PUBLIC ?GetResourceByName@StaticResourceContainer@fnd@hh@@UEBAPEAVManagedResource@23@PEBD@Z
+?GetResourceByName@StaticResourceContainer@fnd@hh@@UEBAPEAVManagedResource@23@PEBD@Z:
+    mov rax, 0140c23280h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@StaticResourceContainer@fnd@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@StaticResourceContainer@fnd@hh@@UEBAPEAXXZ:
+    mov rax, 0140c23300h
+    jmp rax
+
+PUBLIC ??0InputDevice@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0InputDevice@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140c23470h
+    jmp rax
+
+PUBLIC ?GetTarget2@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z
+?GetTarget2@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z:
+    mov rax, 0140c234a0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@InputDevice@hid@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@InputDevice@hid@hh@@UEBAPEAXXZ:
+    mov rax, 0140c234b0h
     jmp rax
 
 PUBLIC ?GetClassNameRegistry@BuiltinTypeRegistry@fnd@hh@@SAPEAVRflClassNameRegistry@23@XZ
@@ -33523,6 +33918,11 @@ PUBLIC ??0UnpackedResourceContainer@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
 PUBLIC ??_DUnpackedResourceContainer@fnd@hh@@QEAAXXZ
 ??_DUnpackedResourceContainer@fnd@hh@@QEAAXXZ:
     mov rax, 0140c239d0h
+    jmp rax
+
+PUBLIC ?GetResourcesByTypeInfo@UnpackedResourceContainer@fnd@hh@@QEAAAEBV?$MoveArray@PEAVManagedResource@fnd@hh@@@ut@csl@@PEBUResourceTypeInfo@23@@Z
+?GetResourcesByTypeInfo@UnpackedResourceContainer@fnd@hh@@QEAAAEBV?$MoveArray@PEAVManagedResource@fnd@hh@@@ut@csl@@PEBUResourceTypeInfo@23@@Z:
+    mov rax, 0140c23dd0h
     jmp rax
 
 PUBLIC ??_DLockItem@ResourceCriticalSection@fnd@hh@@QEAAXXZ
@@ -33675,6 +34075,16 @@ PUBLIC ?SetZWriteEnable@DrawContextNeedle@gfnd@hh@@UEAA_J_N@Z
     mov rax, 0140c3af40h
     jmp rax
 
+PUBLIC ??_DGraphicsGeometryNeedle@gfnd@hh@@QEAAXXZ
+??_DGraphicsGeometryNeedle@gfnd@hh@@QEAAXXZ:
+    mov rax, 0140c3af60h
+    jmp rax
+
+PUBLIC ?Initialize@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContext@23@AEBUGeometry@fnd@3@@Z
+?Initialize@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContext@23@AEBUGeometry@fnd@3@@Z:
+    mov rax, 0140c3b070h
+    jmp rax
+
 PUBLIC ?InitializeByCopying@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContext@23@PEBVGraphicsGeometry@23@@Z
 ?InitializeByCopying@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContext@23@PEBVGraphicsGeometry@23@@Z:
     mov rax, 0140c3b2c0h
@@ -33683,6 +34093,11 @@ PUBLIC ?InitializeByCopying@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContex
 PUBLIC ?InitializeEdge@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContext@23@AEBUGeometry@fnd@3@@Z
 ?InitializeEdge@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContext@23@AEBUGeometry@fnd@3@@Z:
     mov rax, 0140c3b360h
+    jmp rax
+
+PUBLIC ?InitializeWire@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContext@23@AEBUWireGeometry@fnd@3@@Z
+?InitializeWire@GraphicsGeometryNeedle@gfnd@hh@@UEAA_NPEAVDrawContext@23@AEBUWireGeometry@fnd@3@@Z:
+    mov rax, 0140c3b4a0h
     jmp rax
 
 PUBLIC ?MyCreate@GraphicsGeometryNeedle@gfnd@hh@@CAPEAV123@PEAXPEAVIAllocator@fnd@csl@@@Z
@@ -34870,6 +35285,11 @@ PUBLIC ??1VariableString@ut@csl@@QEAA@XZ
     mov rax, 0140f1fef0h
     jmp rax
 
+PUBLIC ?Clean@PlayerCameraSetParameter@player@app@@CAXPEAU123@@Z
+?Clean@PlayerCameraSetParameter@player@app@@CAXPEAU123@@Z:
+    mov rax, 0140f1fef0h
+    jmp rax
+
 PUBLIC ??4VariableString@ut@csl@@QEAAAEAV012@$$QEAV012@@Z
 ??4VariableString@ut@csl@@QEAAAEAV012@$$QEAV012@@Z:
     mov rax, 0140f1ff20h
@@ -35222,6 +35642,31 @@ PUBLIC ?UnkFunc12@PhysicsWorld@physics@hh@@UEAA_KXZ
 
 PUBLIC ?UnkFunc13@PhysicsWorld@physics@hh@@UEAA_KXZ
 ?UnkFunc13@PhysicsWorld@physics@hh@@UEAA_KXZ:
+    mov rax, 0140f6ac6ch
+    jmp rax
+
+PUBLIC ?UnkFunc8@Keyboard@hid@hh@@UEAA_KXZ
+?UnkFunc8@Keyboard@hid@hh@@UEAA_KXZ:
+    mov rax, 0140f6ac6ch
+    jmp rax
+
+PUBLIC ?SetCursorPosition@Mouse@hid@hh@@UEAAXII@Z
+?SetCursorPosition@Mouse@hid@hh@@UEAAXII@Z:
+    mov rax, 0140f6ac6ch
+    jmp rax
+
+PUBLIC ?UnkFunc9@Mouse@hid@hh@@UEAA_KXZ
+?UnkFunc9@Mouse@hid@hh@@UEAA_KXZ:
+    mov rax, 0140f6ac6ch
+    jmp rax
+
+PUBLIC ?CalculateNewState@Mouse@hid@hh@@UEBAXAEAUMouseState@123@@Z
+?CalculateNewState@Mouse@hid@hh@@UEBAXAEAUMouseState@123@@Z:
+    mov rax, 0140f6ac6ch
+    jmp rax
+
+PUBLIC ?Load@ManagedResource@fnd@hh@@UEAAXPEAX_K@Z
+?Load@ManagedResource@fnd@hh@@UEAAXPEAX_K@Z:
     mov rax, 0140f6ac6ch
     jmp rax
 
@@ -36685,8 +37130,8 @@ PUBLIC ?rflClassMembers@ObjBossStageVortexSpawner@rfl@heur@@0QBVRflClassMember@f
     mov rax, 014105c470h
     jmp rax
 
-PUBLIC ?rflClassEnums@PlayerCameraParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
-?rflClassEnums@PlayerCameraParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
+PUBLIC ?rflClassEnums@PlayerCameraParameter@player@app@@0QBVRflClassEnum@fnd@hh@@B
+?rflClassEnums@PlayerCameraParameter@player@app@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 014105c748h
     jmp rax
 
@@ -36760,8 +37205,8 @@ PUBLIC ?rflClassMembers@ExplosionParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@
     mov rax, 014105ec40h
     jmp rax
 
-PUBLIC ?rflClassMembers@PlayerCameraSetParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
-?rflClassMembers@PlayerCameraSetParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+PUBLIC ?rflClassMembers@PlayerCameraSetParameter@player@app@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@PlayerCameraSetParameter@player@app@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 014105ee30h
     jmp rax
 
@@ -36775,8 +37220,8 @@ PUBLIC ?rflClassMembers@BossMephilesPhase1Param@rfl@heur@@0QBVRflClassMember@fnd
     mov rax, 014105f390h
     jmp rax
 
-PUBLIC ?rflClassMembers@PlayerCameraSetParameters@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
-?rflClassMembers@PlayerCameraSetParameters@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+PUBLIC ?rflClassMembers@PlayerCameraSetParameters@player@app@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@PlayerCameraSetParameters@player@app@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 014105f600h
     jmp rax
 
@@ -40610,9 +41055,44 @@ PUBLIC ?gameObjectClassMembers@ObjDeathEggRobotRubble@app@@0QBVValue@RflClassMem
     mov rax, 014114f5a0h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjDeathEggRobotFar@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDeathEggRobotFar@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f5d0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGeyser@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGeyser@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f600h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjSewagePipe@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSewagePipe@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f630h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjAirWall@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjAirWall@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 014114f660h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjAmoebaPipe@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjAmoebaPipe@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f690h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjAppearGimmickMessanger@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjAppearGimmickMessanger@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f6c0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjBioMetalBox@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBioMetalBox@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f6d8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCrushingWall@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCrushingWall@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f708h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjCrushingWallFrame@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40620,14 +41100,59 @@ PUBLIC ?gameObjectClassMembers@ObjCrushingWallFrame@app@@0QBVValue@RflClassMembe
     mov rax, 014114f738h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjGrating@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGrating@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f768h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjRollingRockGenerater@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRollingRockGenerater@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f798h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjUpDownGondola@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjUpDownGondola@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f7c8h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjJumpBoardW6@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjJumpBoardW6@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 014114f7f8h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjLargePole@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjLargePole@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f828h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjRocketRadi@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRocketRadi@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f858h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjSignBoard@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSignBoard@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f888h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjUpReelRadi@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjUpReelRadi@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 014114f8b8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjColliderTest@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjColliderTest@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f8e8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDSurfSpinTest@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDSurfSpinTest@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f900h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjEventPlayTest@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjEventPlayTest@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f930h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjMock@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40640,6 +41165,26 @@ PUBLIC ?gameObjectClassMembers@ObjBossModelPreview@app@@0QBVValue@RflClassMember
     mov rax, 014114f960h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjCharacterModelPreview@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCharacterModelPreview@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f990h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjSampleShape@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSampleShape@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f9c0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceTalkTest@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWhiteSpaceTalkTest@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114f9d8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceSectorTest@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWhiteSpaceSectorTest@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fa08h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjAppearGimmickVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjAppearGimmickVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 014114fa38h
@@ -40650,9 +41195,44 @@ PUBLIC ?gameObjectClassMembers@ObjBolt@app@@0QBVValue@RflClassMember@fnd@hh@@B
     mov rax, 014114fa50h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjBossGate@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBossGate@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fa80h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjBossGateKey@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBossGateKey@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fab0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCaveVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCaveVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fae0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjChallengeGateMissionNotes@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjChallengeGateMissionNotes@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114faf8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjChallengeGate@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjChallengeGate@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fb28h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjChallengeGateEclipse@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjChallengeGateEclipse@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 014114fb58h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceClock@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWhiteSpaceClock@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fb90h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCollectionBalloonVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCollectionBalloonVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fbd8h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjCollectionBike@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40660,9 +41240,44 @@ PUBLIC ?gameObjectClassMembers@ObjCollectionBike@app@@0QBVValue@RflClassMember@f
     mov rax, 014114fbf0h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjCollectionFlicky@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCollectionFlicky@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fc20h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCollectionRoomLocator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCollectionRoomLocator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fc50h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCollectionItemBox@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCollectionItemBox@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fc68h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDGear@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDGear@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fc98h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjDoomZoneSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjDoomZoneSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 014114fcc8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDPowerSealedStand@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDPowerSealedStand@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fcf8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjEventFinishCameraApplier@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjEventFinishCameraApplier@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fd28h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjLargeCrest@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjLargeCrest@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fd58h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceNavigationPillar@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40670,9 +41285,39 @@ PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceNavigationPillar@app@@0QBVValue@RflC
     mov rax, 014114fd88h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjStageGate@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjStageGate@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fdb8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjSwitchSetLayer@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSwitchSetLayer@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fde8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@BossBiolizard@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@BossBiolizard@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fe18h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjTerrainParts@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjTerrainParts@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 014114fe48h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@BossBiolizardEngine@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@BossBiolizardEngine@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fe78h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjAmoebaPassBox@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjAmoebaPassBox@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fea8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@BossBiolizardIkura@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@BossBiolizardIkura@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fed8h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceDestructibleWall@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40680,14 +41325,79 @@ PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceDestructibleWall@app@@0QBVValue@RflC
     mov rax, 014114ff08h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@BossMephiles@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@BossMephiles@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114ff38h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceGeraldNote@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWhiteSpaceGeraldNote@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114ff68h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMPLBombPillar@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMPLBombPillar@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114ff98h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceGrating@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjWhiteSpaceGrating@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 014114ffc8h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceSpearSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWhiteSpaceSpearSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 014114fff8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMPLFakerGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMPLFakerGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150028h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceSpring@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWhiteSpaceSpring@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150040h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMPLStage@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMPLStage@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150070h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceSwitchUsual@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjWhiteSpaceSwitchUsual@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 01411500a0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMPLStageWall@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMPLStageWall@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411500d0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWingTutorialFailedVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWingTutorialFailedVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150100h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@BossMetaloverload@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@BossMetaloverload@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150118h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWingTutorialGoalVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWingTutorialGoalVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150148h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjBossStageVortex@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBossStageVortex@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150160h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjBossStageWave@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBossStageWave@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150190h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjMOLAttackChanceRing@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40710,6 +41420,21 @@ PUBLIC ?gameObjectClassMembers@ObjMOLEnemy@app@@0QBVValue@RflClassMember@fnd@hh@
     mov rax, 01411501f0h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjMOLMine@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMOLMine@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150220h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMOLMotionPlayVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMOLMotionPlayVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150250h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMOLPhotonDashRing@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMOLPhotonDashRing@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150268h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjMOLSwitchLayerVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjMOLSwitchLayerVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150280h
@@ -40725,6 +41450,21 @@ PUBLIC ?gameObjectClassMembers@BossPerfectblackdoom@app@@0QBVValue@RflClassMembe
     mov rax, 01411502b0h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@BossPerfectblackdoomFinal@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@BossPerfectblackdoomFinal@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411502e0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDAttackChanceRing@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDAttackChanceRing@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150310h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDAutoRunVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDAutoRunVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150328h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjPBDBoostChangeDistanceVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjPBDBoostChangeDistanceVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150340h
@@ -40735,9 +41475,29 @@ PUBLIC ?gameObjectClassMembers@ObjPBDDebris@app@@0QBVValue@RflClassMember@fnd@hh
     mov rax, 0141150358h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjPBDFChangeWeakPointVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDFChangeWeakPointVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150388h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDFDebris@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDFDebris@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411503a0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDFDoomsEyeFloor@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDFDoomsEyeFloor@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411503d0h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjPBDFDoomsEyeFloorGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjPBDFDoomsEyeFloorGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150400h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDFDoomsEyeRoad@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDFDoomsEyeRoad@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150430h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjPBDFireBeamTarget@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40753,6 +41513,36 @@ PUBLIC ?gameObjectClassMembers@ObjPBDFireBombTarget@app@@0QBVValue@RflClassMembe
 PUBLIC ?gameObjectClassMembers@ObjPBDFloorBlock@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjPBDFloorBlock@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150588h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDFPointGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDFPointGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411505b8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDFSetWingChaseCameraVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDFSetWingChaseCameraVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411505d0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDFWarpVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDFWarpVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411505e8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDMeteoBeamPlace@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDMeteoBeamPlace@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150600h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDMeteoriteHockeyWall@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDMeteoriteHockeyWall@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150630h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPBDMotionPlayVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPBDMotionPlayVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150648h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjPBDPhase2ActionVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40798,6 +41588,26 @@ PUBLIC ?gameObjectClassMembers@ObjPBDWarpVolume@app@@0QBVValue@RflClassMember@fn
 PUBLIC ?gameObjectClassMembers@BossDebugPBDObjectGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@BossDebugPBDObjectGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150720h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPlayerAbilityVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPlayerAbilityVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150750h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjBossCameraRailForwardView@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBossCameraRailForwardView@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150768h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCamera3D@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCamera3D@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150780h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCameraClassic@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCameraClassic@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150798h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjCameraCyberStandard@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40910,9 +41720,44 @@ PUBLIC ?gameObjectClassMembers@ObjDefaultCameraSetting@app@@0QBVValue@RflClassMe
     mov rax, 0141150a50h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjFarChangeVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjFarChangeVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150a80h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMotionCamera@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMotionCamera@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150a98h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjTimeRecover@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjTimeRecover@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150ab0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjAlert@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjAlert@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150ae0h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjAmoebaBlockGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjAmoebaBlockGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150b10h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjAmoebaSwamp@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjAmoebaSwamp@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150b40h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjAmoebaTarget@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjAmoebaTarget@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150b70h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjAmoebaTargetGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjAmoebaTargetGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150ba0h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjAmoebaVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40940,6 +41785,21 @@ PUBLIC ?gameObjectClassMembers@ObjBlowAwayRecommendedLocator@app@@0QBVValue@RflC
     mov rax, 0141150c90h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjBomb@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBomb@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150cc0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCameraActivator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCameraActivator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150cf0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCautionVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCautionVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150d08h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjDamageSetVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjDamageSetVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150d68h
@@ -40948,6 +41808,11 @@ PUBLIC ?gameObjectClassMembers@ObjDamageSetVolume@app@@0QBVValue@RflClassMember@
 PUBLIC ?gameObjectClassMembers@ObjDamageTubeVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjDamageTubeVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150d80h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDamageVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDamageVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150db0h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjDashPanel@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -40970,6 +41835,41 @@ PUBLIC ?gameObjectClassMembers@ObjDiEventStarter@app@@0QBVValue@RflClassMember@f
     mov rax, 0141150e88h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjDimensionTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDimensionTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150eb8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDimensionVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDimensionVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150ed0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDisableSpeedLineVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDisableSpeedLineVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150ee8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDistSpaceValidationVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDistSpaceValidationVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150f00h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDivingVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDivingVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150f30h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDoor@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDoor@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150f48h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDoorSV@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDoorSV@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150f78h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjDSurfSetMoveRateVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjDSurfSetMoveRateVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141150fa8h
@@ -40980,9 +41880,44 @@ PUBLIC ?gameObjectClassMembers@ObjDSurfSpinBreak@app@@0QBVValue@RflClassMember@f
     mov rax, 0141150fc0h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjDWingBanVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDWingBanVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141150ff0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDWingGlidingVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDWingGlidingVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151008h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjEagle@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjEagle@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151020h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjEffectPhotonDashPath@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjEffectPhotonDashPath@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151050h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjEnterDistSpaceVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjEnterDistSpaceVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141151080h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjEvent@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjEvent@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411510b0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjEventForcedEndVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjEventForcedEndVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411510c8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjEventOrderHub@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjEventOrderHub@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411510f8h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjEventSetter@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41015,14 +41950,49 @@ PUBLIC ?gameObjectClassMembers@ObjFan@app@@0QBVValue@RflClassMember@fnd@hh@@B
     mov rax, 0141151188h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjFlaggedSwitchVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjFlaggedSwitchVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411511b8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjForcedSlidingVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjForcedSlidingVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411511d0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGameEndVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGameEndVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411511e8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGimmickInfo@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGimmickInfo@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151200h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjGoalRing@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjGoalRing@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141151248h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjGravityCylinder@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGravityCylinder@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151278h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGravityCylinderWall@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGravityCylinderWall@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411512a8h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjGrindBooster@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjGrindBooster@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141151308h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGrindVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGrindVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151338h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjHoldPlayerVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41035,6 +42005,21 @@ PUBLIC ?gameObjectClassMembers@ObjIronBox@app@@0QBVValue@RflClassMember@fnd@hh@@
     mov rax, 01411513b0h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjItemBox@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjItemBox@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411513e0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjJumpBoardPath@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjJumpBoardPath@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151410h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjJumpBoardSurf@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjJumpBoardSurf@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151440h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjLimitEdgeJumpCollision@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjLimitEdgeJumpCollision@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141151470h
@@ -41045,9 +42030,39 @@ PUBLIC ?gameObjectClassMembers@ObjLocator@app@@0QBVValue@RflClassMember@fnd@hh@@
     mov rax, 0141151488h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjLoopAreaVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjLoopAreaVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411514b8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjLRInputSwapVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjLRInputSwapVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411514d0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMagneticVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMagneticVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151500h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjMissionCollection@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjMissionCollection@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141151530h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMissionCollectionItemGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMissionCollectionItemGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151560h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMissionClock@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMissionClock@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411515a8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMissionRing@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMissionRing@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411515d8h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjNoEntryCollider@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41080,6 +42095,26 @@ PUBLIC ?gameObjectClassMembers@ObjParticleVolume@app@@0QBVValue@RflClassMember@f
     mov rax, 01411516f8h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjPhotonDashRing@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPhotonDashRing@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151728h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPipeMoveTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPipeMoveTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151740h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPlayerInputVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPlayerInputVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151758h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPlayerNavigateInfo@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPlayerNavigateInfo@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151770h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjPointLight@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjPointLight@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141151788h
@@ -41100,9 +42135,44 @@ PUBLIC ?gameObjectClassMembers@ObjPropellerSpring@app@@0QBVValue@RflClassMember@
     mov rax, 0141151830h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjPulley@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPulley@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151860h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjPulleyColumn@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjPulleyColumn@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151890h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjQuickStepTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjQuickStepTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411518c0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjQuickStepVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjQuickStepVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411518d8h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjRailSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjRailSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 01411518f0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjRailSwitchPathController@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRailSwitchPathController@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151920h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjRailSwitchSign@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRailSwitchSign@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151950h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjRainVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRainVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151980h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjResultPosition@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41145,6 +42215,16 @@ PUBLIC ?gameObjectClassMembers@ObjSpearSwitch@app@@0QBVValue@RflClassMember@fnd@
     mov rax, 0141151d38h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjSpearTarget@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSpearTarget@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151d68h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjSpring@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSpring@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151d98h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjSpringPole@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjSpringPole@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141151df8h
@@ -41183,6 +42263,31 @@ PUBLIC ?gameObjectClassMembers@ObjTerrainPathCylinder@app@@0QBVValue@RflClassMem
 PUBLIC ?gameObjectClassMembers@ObjThorn@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjThorn@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141151f30h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjThornBall@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjThornBall@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151f60h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjThornCylinder@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjThornCylinder@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151f90h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjTimeStopBanVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjTimeStopBanVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151fc0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjTrapSpring@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjTrapSpring@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141151fd8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjVATParameterVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjVATParameterVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152008h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjVibrationVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41225,14 +42330,59 @@ PUBLIC ?gameObjectClassMembers@ObjBalloon@app@@0QBVValue@RflClassMember@fnd@hh@@
     mov rax, 01411520f8h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjCannon@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCannon@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152128h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjChangeSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjChangeSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152158h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDestructibleWall@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDestructibleWall@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152188h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjDownReel@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjDownReel@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 01411521b8h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjDriftEndVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDriftEndVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411521e8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGoalTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGoalTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152200h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGrindThorn@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGrindThorn@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152218h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGuideLaserFence@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGuideLaserFence@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152248h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjHangglider@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjHangglider@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152278h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjJumpSelector@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjJumpSelector@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411522a8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjLaserFence@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjLaserFence@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411522d8h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjOperationGuideVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41245,6 +42395,21 @@ PUBLIC ?gameObjectClassMembers@ObjPole@app@@0QBVValue@RflClassMember@fnd@hh@@B
     mov rax, 0141152470h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjRingGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRingGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411524a0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjRotateThornBall@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRotateThornBall@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411524d0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjSideReel@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSideReel@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152500h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjSideViewPathVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjSideViewPathVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152530h
@@ -41255,9 +42420,44 @@ PUBLIC ?gameObjectClassMembers@ObjSpringBoard@app@@0QBVValue@RflClassMember@fnd@
     mov rax, 0141152548h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjSwingReel@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSwingReel@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152578h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjSwitchUsual@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSwitchUsual@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411525a8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjTimeStartVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjTimeStartVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411525d8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjTimeStopWatchVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjTimeStopWatchVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411525f0h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjUpReel@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjUpReel@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152608h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWhiteSpaceUpReel@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWhiteSpaceUpReel@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152638h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWallJumpBlock@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWallJumpBlock@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152668h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyBeesGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyBeesGenerator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152698h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@EnemyBeetle@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41265,9 +42465,39 @@ PUBLIC ?gameObjectClassMembers@EnemyBeetle@app@@0QBVValue@RflClassMember@fnd@hh@
     mov rax, 01411526c8h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@EnemyBeetonFC@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyBeetonFC@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411526f8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyChaosfly@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyChaosfly@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152728h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyChaosflycell@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyChaosflycell@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152758h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@EnemyChaospillar@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@EnemyChaospillar@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152788h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyComet@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyComet@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411527b8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyCoreMacho@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyCoreMacho@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411527e8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyCoreMachoTornado@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyCoreMachoTornado@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152818h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@EnemyCoreMachoTornadoVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41285,9 +42515,54 @@ PUBLIC ?gameObjectClassMembers@EnemyDoomsEye@app@@0QBVValue@RflClassMember@fnd@h
     mov rax, 0141152878h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@EnemyDoomsEyeFloor@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyDoomsEyeFloor@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411528a8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyDoomsEyeFloorEffectObject@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyDoomsEyeFloorEffectObject@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411528d8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyDoomsEyeRoad@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyDoomsEyeRoad@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411528f0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyDoomsEyeVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyDoomsEyeVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152920h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyEggFlapper@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyEggFlapper@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152938h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyEggFlyer@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyEggFlyer@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152968h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@EnemyEggGuardian@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@EnemyEggGuardian@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152998h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyEggGunner@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyEggGunner@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411529c8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyEggPawn@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyEggPawn@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411529f8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyEggpawnFc@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyEggpawnFc@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152a28h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@EnemyEggTank@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41295,9 +42570,39 @@ PUBLIC ?gameObjectClassMembers@EnemyEggTank@app@@0QBVValue@RflClassMember@fnd@hh
     mov rax, 0141152a58h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@EnemyFlash@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyFlash@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152a88h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyFlashCloneLocator@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyFlashCloneLocator@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152ab8h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@EnemyMan@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@EnemyMan@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152b18h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyMotora@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyMotora@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152b48h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjRhinolinerActionTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRhinolinerActionTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152b78h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemyRhinoliner@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyRhinoliner@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152b90h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@EnemySalvo@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemySalvo@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152bc0h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@EnemySalvoVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41310,9 +42615,44 @@ PUBLIC ?gameObjectClassMembers@EnemySoldier@app@@0QBVValue@RflClassMember@fnd@hh
     mov rax, 0141152c08h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@EnemyTwister@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@EnemyTwister@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152c38h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjTerritory@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjTerritory@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152c68h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGFieldBox@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGFieldBox@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152c80h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGFieldConcaveBox@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGFieldConcaveBox@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152cb0h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjGFieldConstant@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjGFieldConstant@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152ce0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGFieldFaceSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGFieldFaceSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152d10h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGFieldHemisphere@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGFieldHemisphere@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152d40h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGFieldInsideCylinderSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGFieldInsideCylinderSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152d70h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjGFieldInsidePrismSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41320,14 +42660,64 @@ PUBLIC ?gameObjectClassMembers@ObjGFieldInsidePrismSpline@app@@0QBVValue@RflClas
     mov rax, 0141152da0h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjGFieldOutsideCylinderSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGFieldOutsideCylinderSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152dd0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGFieldOutsidePrismSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGFieldOutsidePrismSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152e00h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGFieldSphere@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGFieldSphere@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152e30h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjGFieldSvSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjGFieldSvSpline@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152e60h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjBig@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBig@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152e90h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjGerald@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjGerald@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152ec0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjMaria@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMaria@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152ef0h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjOmega@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjOmega@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141152f20h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjOrbotCubot@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjOrbotCubot@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152f50h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjRouge@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjRouge@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152f80h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjAmbSoundVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjAmbSoundVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152fb0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjChangeBGMAisacVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjChangeBGMAisacVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141152fc8h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjChangeBGMTrigger@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41385,9 +42775,39 @@ PUBLIC ?gameObjectClassMembers@ObjBigCannon@app@@0QBVValue@RflClassMember@fnd@hh
     mov rax, 01411531a8h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjBigDoor@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBigDoor@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411531d8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDestructibleBridge@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDestructibleBridge@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153208h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDestructibleFloorWithPiller@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDestructibleFloorWithPiller@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153238h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjGrindFloor@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjGrindFloor@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141153268h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjJumpRope@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjJumpRope@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153298h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjJumpRopePole@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjJumpRopePole@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411532c8h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjOgreTrain@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjOgreTrain@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411532f8h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjOgreTrainGoal@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -41395,14 +42815,59 @@ PUBLIC ?gameObjectClassMembers@ObjOgreTrainGoal@app@@0QBVValue@RflClassMember@fn
     mov rax, 0141153328h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjOgreTrainVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjOgreTrainVolume@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153358h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjSmallDoor@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjSmallDoor@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153370h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjCircuitBreaker@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjCircuitBreaker@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411533a0h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjKdvPillar@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjKdvPillar@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 01411533d0h
     jmp rax
 
+PUBLIC ?gameObjectClassMembers@ObjMovingPillar@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjMovingPillar@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153400h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjOldCastleDoor@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjOldCastleDoor@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153430h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjStainedGlass@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjStainedGlass@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153460h
+    jmp rax
+
 PUBLIC ?gameObjectClassMembers@ObjWindRoad@app@@0QBVValue@RflClassMember@fnd@hh@@B
 ?gameObjectClassMembers@ObjWindRoad@app@@0QBVValue@RflClassMember@fnd@hh@@B:
     mov rax, 0141153490h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjWindRoadSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjWindRoadSwitch@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411534c0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjBombEvent@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjBombEvent@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 01411534f0h
+    jmp rax
+
+PUBLIC ?gameObjectClassMembers@ObjDeathEggRobot@app@@0QBVValue@RflClassMember@fnd@hh@@B
+?gameObjectClassMembers@ObjDeathEggRobot@app@@0QBVValue@RflClassMember@fnd@hh@@B:
+    mov rax, 0141153520h
     jmp rax
 
 PUBLIC ?gameObjectClassMembers@ObjDeathEggRobotFloor@app@@0QBVValue@RflClassMember@fnd@hh@@B
@@ -42825,6 +44290,11 @@ PUBLIC ?classId@GOCVisualUserModel@gocs@heur@@0PEBXEB
     mov rax, 01412c8060h
     jmp rax
 
+PUBLIC ?classId@GOCPointLight@gocs@heur@@0PEBXEB
+?classId@GOCPointLight@gocs@heur@@0PEBXEB:
+    mov rax, 01412c83e0h
+    jmp rax
+
 PUBLIC ?classId@GOCVisualDebugDraw@gocs@heur@@0PEBXEB
 ?classId@GOCVisualDebugDraw@gocs@heur@@0PEBXEB:
     mov rax, 01412c85f0h
@@ -42860,6 +44330,11 @@ PUBLIC ?classId@ResObjectWorld@resources@heur@@0PEBXEB
     mov rax, 01413525d8h
     jmp rax
 
+PUBLIC ?classId@ResObjectWorld@game@hh@@0PEBXEB
+?classId@ResObjectWorld@game@hh@@0PEBXEB:
+    mov rax, 01413525d8h
+    jmp rax
+
 PUBLIC ?classId@ResMasterLevel@resources@heur@@0PEBXEB
 ?classId@ResMasterLevel@resources@heur@@0PEBXEB:
     mov rax, 0141352628h
@@ -42882,6 +44357,11 @@ PUBLIC ?classId@ResLevel@level@app@@0PEBXEB
 
 PUBLIC ?classId@GOCTransform@gocs@heur@@0PEBXEB
 ?classId@GOCTransform@gocs@heur@@0PEBXEB:
+    mov rax, 0141352a90h
+    jmp rax
+
+PUBLIC ?classId@GOCTransform@game@hh@@0PEBXEB
+?classId@GOCTransform@game@hh@@0PEBXEB:
     mov rax, 0141352a90h
     jmp rax
 
@@ -44435,8 +45915,8 @@ PUBLIC ?rflClassMembers@PathSpiralParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@
     mov rax, 01428b7860h
     jmp rax
 
-PUBLIC ?rflClassMembers@PlayerCameraParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
-?rflClassMembers@PlayerCameraParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+PUBLIC ?rflClassMembers@PlayerCameraParameter@player@app@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@PlayerCameraParameter@player@app@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 01428b7a40h
     jmp rax
 
@@ -48975,18 +50455,18 @@ PUBLIC ?typeInfo@PathSpiralParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
     mov rax, 01428c4c70h
     jmp rax
 
-PUBLIC ?typeInfo@PlayerCameraParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
-?typeInfo@PlayerCameraParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B:
+PUBLIC ?typeInfo@PlayerCameraParameter@player@app@@2VRflTypeInfo@fnd@hh@@B
+?typeInfo@PlayerCameraParameter@player@app@@2VRflTypeInfo@fnd@hh@@B:
     mov rax, 01428c4ca0h
     jmp rax
 
-PUBLIC ?typeInfo@PlayerCameraSetParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
-?typeInfo@PlayerCameraSetParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B:
+PUBLIC ?typeInfo@PlayerCameraSetParameter@player@app@@2VRflTypeInfo@fnd@hh@@B
+?typeInfo@PlayerCameraSetParameter@player@app@@2VRflTypeInfo@fnd@hh@@B:
     mov rax, 01428c4cd0h
     jmp rax
 
-PUBLIC ?typeInfo@PlayerCameraSetParameters@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
-?typeInfo@PlayerCameraSetParameters@rfl@heur@@2VRflTypeInfo@fnd@hh@@B:
+PUBLIC ?typeInfo@PlayerCameraSetParameters@player@app@@2VRflTypeInfo@fnd@hh@@B
+?typeInfo@PlayerCameraSetParameters@player@app@@2VRflTypeInfo@fnd@hh@@B:
     mov rax, 01428c4d00h
     jmp rax
 
@@ -51800,9 +53280,79 @@ PUBLIC ?objInfoClass@BossBiolizardInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d0ea8h
     jmp rax
 
+PUBLIC ?objInfoClass@BossBiolizardEngineInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@BossBiolizardEngineInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0eb8h
+    jmp rax
+
+PUBLIC ?objInfoClass@BossBiolizardIkuraInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@BossBiolizardIkuraInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0ec8h
+    jmp rax
+
+PUBLIC ?objInfoClass@BossMephilesInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@BossMephilesInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0ed8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMPLBombPillarInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMPLBombPillarInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0ee8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMPLStageInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMPLStageInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0ef8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMPLStageWallInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMPLStageWallInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f08h
+    jmp rax
+
+PUBLIC ?objInfoClass@BossMetaloverloadInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@BossMetaloverloadInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f18h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjBossStageVortexInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjBossStageVortexInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d0f28h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMOLEnemyInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMOLEnemyInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f38h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMOLMineInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMOLMineInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f48h
+    jmp rax
+
+PUBLIC ?objInfoClass@BossPerfectblackdoomInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@BossPerfectblackdoomInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f58h
+    jmp rax
+
+PUBLIC ?objInfoClass@BossPerfectblackdoomFinalInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@BossPerfectblackdoomFinalInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f68h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPBDDebrisInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPBDDebrisInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f78h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPBDFDebrisInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPBDFDebrisInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f88h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPBDFDoomsEyeFloorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPBDFDoomsEyeFloorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0f98h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjPBDFDoomsEyeFloorGeneratorInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51810,9 +53360,69 @@ PUBLIC ?objInfoClass@ObjPBDFDoomsEyeFloorGeneratorInfo@app@@0VObjInfoClass@game@
     mov rax, 01428d0fa8h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjPBDFDoomsEyeRoadInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPBDFDoomsEyeRoadInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0fb8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPBDFloorBlockInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPBDFloorBlockInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0fc8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPBDMeteoBeamPlaceInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPBDMeteoBeamPlaceInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0fd8h
+    jmp rax
+
+PUBLIC ?objInfoClass@BossDebugPBDObjectGeneratorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@BossDebugPBDObjectGeneratorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0fe8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjCameraStandardInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCameraStandardInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d0ff8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjTimeRecoverInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjTimeRecoverInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1008h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjAmoebaBlockGeneratorInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjAmoebaBlockGeneratorInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d1028h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjAmoebaSwampInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjAmoebaSwampInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1038h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjAmoebaTargetInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjAmoebaTargetInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1048h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjAmoebaTargetGeneratorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjAmoebaTargetGeneratorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1058h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBombInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBombInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1068h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDamageTubeVolumeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDamageTubeVolumeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1088h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDashPanelInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDashPanelInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1098h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjDashRollerInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51820,9 +53430,64 @@ PUBLIC ?objInfoClass@ObjDashRollerInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d10a8h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjDashRingInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDashRingInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d10b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDistSpaceValidationVolumeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDistSpaceValidationVolumeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d10d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDoorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDoorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d10e8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDoorSVInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDoorSVInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d10f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDSurfSpinBreakInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDSurfSpinBreakInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1108h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjEagleInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjEagleInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1118h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjEffectPhotonDashPathInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjEffectPhotonDashPathInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d1128h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjEventForcedEndVolumeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjEventForcedEndVolumeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1148h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjFanInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjFanInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1158h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjGismoInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGismoInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1168h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjGravityCylinderInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGravityCylinderInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1188h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjGravityCylinderWallInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGravityCylinderWallInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1198h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjGrindBoosterInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51830,9 +53495,79 @@ PUBLIC ?objInfoClass@ObjGrindBoosterInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d11a8h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjGrindBoosterW2Info@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGrindBoosterW2Info@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d11b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjHintRingInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjHintRingInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d11c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjIronBoxInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjIronBoxInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d11d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjItemBoxInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjItemBoxInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d11e8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjJumpBoardPathInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjJumpBoardPathInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d11f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjJumpBoardSurfInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjJumpBoardSurfInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1208h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjLRInputSwapVolumeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjLRInputSwapVolumeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1218h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjMagneticVolumeInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjMagneticVolumeInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d1228h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMissionCollectionInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMissionCollectionInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1238h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMissionCollectionItemGeneratorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMissionCollectionItemGeneratorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1248h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMissionClockInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMissionClockInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1258h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMissionRingInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMissionRingInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1268h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWSMissionBaseInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWSMissionBaseInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1278h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPointMarkerInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPointMarkerInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1288h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPopupSpringInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPopupSpringInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1298h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjPropellerSpringInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51840,9 +53575,79 @@ PUBLIC ?objInfoClass@ObjPropellerSpringInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d12a8h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjPulleyInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPulleyInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d12b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPulleyColumnInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPulleyColumnInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d12c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjRailSwitchInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjRailSwitchInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d12d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjRailSwitchPathControllerInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjRailSwitchPathControllerInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d12e8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjRailSwitchSignInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjRailSwitchSignInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d12f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSelectCannonInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSelectCannonInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1308h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSetPathInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSetPathInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1318h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSpearSwitchInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSpearSwitchInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1398h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjSpearTargetInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjSpearTargetInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d13a8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSpringInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSpringInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d13b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSpringEggInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSpringEggInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d13c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSpringPoleInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSpringPoleInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d13d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjThornInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjThornInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d13f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjThornBallInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjThornBallInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1408h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjThornCylinderInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjThornCylinderInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1418h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjTrapSpringInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51850,9 +53655,74 @@ PUBLIC ?objInfoClass@ObjTrapSpringInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d1428h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjWideSpringInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWideSpringInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1438h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBalloonInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBalloonInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1448h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjCannonInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCannonInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1458h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjChangeSwitchInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjChangeSwitchInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1468h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDestructibleWallInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDestructibleWallInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1478h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDownReelInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDownReelInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1488h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjGrindThornInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGrindThornInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1498h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjGuideLaserFenceInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjGuideLaserFenceInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d14a8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjHanggliderInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjHanggliderInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d14b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjJumpSelectorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjJumpSelectorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d14c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjLaserFenceInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjLaserFenceInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d14d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjNormalFloorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjNormalFloorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d14f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjThroughFloorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjThroughFloorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1508h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjGravityFloorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGravityFloorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1518h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjWhiteSpaceNormalFloorInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51860,9 +53730,69 @@ PUBLIC ?objInfoClass@ObjWhiteSpaceNormalFloorInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d1528h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjAmoebaFloorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjAmoebaFloorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1548h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjPoleInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjPoleInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1558h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjRingGeneratorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjRingGeneratorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1568h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjRotateThornBallInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjRotateThornBallInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1578h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSideReelInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSideReelInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1588h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSpringBoardInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSpringBoardInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1598h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjSwingReelInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjSwingReelInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d15a8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSwitchUsualInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSwitchUsualInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d15b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjUpReelInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjUpReelInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d15c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWallJumpBlockInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWallJumpBlockInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d15e8h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyBeesGeneratorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyBeesGeneratorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d15f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyBeetleInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyBeetleInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1608h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyBeetonFCInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyBeetonFCInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1618h
     jmp rax
 
 PUBLIC ?objInfoClass@EnemyChaosflyInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51870,9 +53800,79 @@ PUBLIC ?objInfoClass@EnemyChaosflyInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d1628h
     jmp rax
 
+PUBLIC ?objInfoClass@EnemyChaosflycellInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyChaosflycellInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1638h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyChaospillarInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyChaospillarInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1648h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyCometInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyCometInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1658h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyCoreMachoInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyCoreMachoInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1668h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyCoreMachoTornadoInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyCoreMachoTornadoInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1678h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyDoomsEyeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyDoomsEyeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1688h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyDoomsEyeFloorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyDoomsEyeFloorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1698h
+    jmp rax
+
 PUBLIC ?objInfoClass@EnemyDoomsEyeRoadInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@EnemyDoomsEyeRoadInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d16a8h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyEggFlapperInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyEggFlapperInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d16b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyEggFlyerInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyEggFlyerInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d16c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyEggGuardianInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyEggGuardianInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d16d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyEggGunnerInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyEggGunnerInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d16e8h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyEggPawnInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyEggPawnInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d16f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyEggpawnFcInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyEggpawnFcInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1708h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyEggTankInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyEggTankInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1718h
     jmp rax
 
 PUBLIC ?objInfoClass@EnemyFlashInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51880,9 +53880,99 @@ PUBLIC ?objInfoClass@EnemyFlashInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d1728h
     jmp rax
 
+PUBLIC ?objInfoClass@EnemyGunHunterInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyGunHunterInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1738h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyManInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyManInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1748h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyMotoraInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyMotoraInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1758h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyRhinolinerInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyRhinolinerInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1768h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemySalvoInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemySalvoInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1778h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemySoldierInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemySoldierInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1788h
+    jmp rax
+
+PUBLIC ?objInfoClass@EnemyTwisterInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@EnemyTwisterInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1798h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjBigInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjBigInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d17a8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjGeraldInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGeraldInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d17b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMariaInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMariaInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d17c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjOmegaInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjOmegaInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d17d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjOrbotCubotInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjOrbotCubotInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d17e8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjRougeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjRougeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d17f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBigCannonInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBigCannonInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1848h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBigDoorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBigDoorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1858h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDestructibleBridgeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDestructibleBridgeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1868h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDestructibleFloorWithPillerInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDestructibleFloorWithPillerInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1878h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjGrindFloorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGrindFloorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1888h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjJumpRopeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjJumpRopeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1898h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjJumpRopePoleInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51890,9 +53980,79 @@ PUBLIC ?objInfoClass@ObjJumpRopePoleInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d18a8h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjOgreTrainInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjOgreTrainInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d18b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjOgreTrainGoalInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjOgreTrainGoalInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d18c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSmallDoorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSmallDoorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d18d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjCircuitBreakerInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCircuitBreakerInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d18e8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjKdvPillarInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjKdvPillarInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d18f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjMovingPillarInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjMovingPillarInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1908h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjOldCastleDoorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjOldCastleDoorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1918h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjStainedGlassInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjStainedGlassInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d1928h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWindRoadInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWindRoadInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1938h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWindRoadSwitchInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWindRoadSwitchInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1948h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBombEventInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBombEventInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1958h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDeathEggRobotInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDeathEggRobotInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1968h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDeathEggRobotFloorInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDeathEggRobotFloorInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1978h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDeathEggRobotRubbleInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDeathEggRobotRubbleInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1988h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDeathEggRobotFarInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDeathEggRobotFarInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1998h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjGeyserInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51900,9 +54060,79 @@ PUBLIC ?objInfoClass@ObjGeyserInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d19a8h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjSewagePipeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSewagePipeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d19b8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjAirWallInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjAirWallInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d19c8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjAmoebaPipeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjAmoebaPipeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d19d8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBioMetalBoxInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBioMetalBoxInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d19e8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjCrushingWallInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCrushingWallInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d19f8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjCrushingWallFrameInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCrushingWallFrameInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a08h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjGratingInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjGratingInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a18h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjRollingRockGeneraterInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjRollingRockGeneraterInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d1a28h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjUpDownGondolaInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjUpDownGondolaInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a38h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjJumpBoardW6Info@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjJumpBoardW6Info@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a48h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjLargePoleInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjLargePoleInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a58h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjRocketRadiInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjRocketRadiInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a68h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSignBoardInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSignBoardInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a78h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjUpReelRadiInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjUpReelRadiInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a88h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDSurfSpinTestInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDSurfSpinTestInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1a98h
     jmp rax
 
 PUBLIC ?objInfoClass@ObjBossModelPreviewInfo@app@@0VObjInfoClass@game@hh@@B
@@ -51910,14 +54140,134 @@ PUBLIC ?objInfoClass@ObjBossModelPreviewInfo@app@@0VObjInfoClass@game@hh@@B
     mov rax, 01428d1aa8h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjCharacterModelPreviewInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCharacterModelPreviewInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1ab8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWhiteSpaceTalkTestInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWhiteSpaceTalkTestInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1ac8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWhiteSpaceSectorTestInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWhiteSpaceSectorTestInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1ad8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBoltInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBoltInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1ae8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBossGateInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBossGateInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1af8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjBossGateKeyInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjBossGateKeyInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b08h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjChallengeGateMissionNotesInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjChallengeGateMissionNotesInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b18h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjChallengeGateInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjChallengeGateInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d1b28h
     jmp rax
 
+PUBLIC ?objInfoClass@ObjChallengeGateEclipseInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjChallengeGateEclipseInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b38h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWhiteSpaceClockInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWhiteSpaceClockInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b48h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjCollectionBikeInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCollectionBikeInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b58h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjCollectionFlickyInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCollectionFlickyInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b68h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjCollectionItemBoxInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjCollectionItemBoxInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b78h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDGearInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDGearInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b88h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjDoomZoneSwitchInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjDoomZoneSwitchInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1b98h
+    jmp rax
+
 PUBLIC ?objInfoClass@ObjDPowerSealedStandInfo@app@@0VObjInfoClass@game@hh@@B
 ?objInfoClass@ObjDPowerSealedStandInfo@app@@0VObjInfoClass@game@hh@@B:
     mov rax, 01428d1ba8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjEventFinishCameraApplierInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjEventFinishCameraApplierInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1bb8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjLargeCrestInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjLargeCrestInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1bc8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWhiteSpaceNavigationPillarInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWhiteSpaceNavigationPillarInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1bd8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjStageGateInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjStageGateInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1be8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjSwitchSetLayerInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjSwitchSetLayerInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1bf8h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjTerrainPartsInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjTerrainPartsInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1c08h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjAmoebaPassBoxInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjAmoebaPassBoxInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1c18h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWhiteSpaceGeraldNoteInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWhiteSpaceGeraldNoteInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1c38h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWhiteSpaceGratingInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWhiteSpaceGratingInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1c48h
+    jmp rax
+
+PUBLIC ?objInfoClass@ObjWhiteSpaceSpearSwitchInfo@app@@0VObjInfoClass@game@hh@@B
+?objInfoClass@ObjWhiteSpaceSpearSwitchInfo@app@@0VObjInfoClass@game@hh@@B:
+    mov rax, 01428d1c58h
     jmp rax
 
 PUBLIC ?gameObjectClass@DvAuraRoadObject@dv@app@@0VGameObjectClass@game@hh@@B
@@ -52735,6 +55085,11 @@ PUBLIC ?componentClass@GOCPlayerInformationUpdater@player@app@@0VGOComponentClas
     mov rax, 01428dec90h
     jmp rax
 
+PUBLIC ?componentClass@GOCPlayerParameter@player@app@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCPlayerParameter@player@app@@0VGOComponentClass@game@hh@@B:
+    mov rax, 01428ded50h
+    jmp rax
+
 PUBLIC ?componentClass@GOCPlayerPath@player@app@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCPlayerPath@player@app@@0VGOComponentClass@game@hh@@B:
     mov rax, 01428dedc0h
@@ -53305,6 +55660,26 @@ PUBLIC ?gameObjectClass@SurfRideViewerObject@gameobjects@heur@@0VGameObjectClass
     mov rax, 01428e7260h
     jmp rax
 
+PUBLIC ?typeInfo@ResAtomConfig@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResAtomConfig@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428e7670h
+    jmp rax
+
+PUBLIC ?typeInfo@ResAtomConfig@snd@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResAtomConfig@snd@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428e7670h
+    jmp rax
+
+PUBLIC ?typeInfo@ResAtomCueSheet@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResAtomCueSheet@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428e7698h
+    jmp rax
+
+PUBLIC ?typeInfo@ResAtomCueSheet@snd@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResAtomCueSheet@snd@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428e7698h
+    jmp rax
+
 PUBLIC ?componentClass@GOCSound@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCSound@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 01428e76d0h
@@ -53333,6 +55708,46 @@ PUBLIC ?typeInfo@ResSoftBody@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 PUBLIC ?typeInfo@ResHeightField@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResHeightField@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01428e7af8h
+    jmp rax
+
+PUBLIC ?componentClass@GOCSphereCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCSphereCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
+    mov rax, 01428e7bb0h
+    jmp rax
+
+PUBLIC ?componentClass@GOCSphereCollider@physics@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCSphereCollider@physics@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 01428e7bb0h
+    jmp rax
+
+PUBLIC ?componentClass@GOCBoxCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCBoxCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
+    mov rax, 01428e7c40h
+    jmp rax
+
+PUBLIC ?componentClass@GOCBoxCollider@physics@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCBoxCollider@physics@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 01428e7c40h
+    jmp rax
+
+PUBLIC ?componentClass@GOCCapsuleCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCCapsuleCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
+    mov rax, 01428e7c80h
+    jmp rax
+
+PUBLIC ?componentClass@GOCCapsuleCollider@physics@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCCapsuleCollider@physics@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 01428e7c80h
+    jmp rax
+
+PUBLIC ?componentClass@GOCCylinderCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCCylinderCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
+    mov rax, 01428e7cc0h
+    jmp rax
+
+PUBLIC ?componentClass@GOCCylinderCollider@physics@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCCylinderCollider@physics@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 01428e7cc0h
     jmp rax
 
 PUBLIC ?componentClass@GOCDeformableMeshCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
@@ -54340,6 +56755,16 @@ PUBLIC ?typeInfo@WeatherFxParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
     mov rax, 01428ef770h
     jmp rax
 
+PUBLIC ?typeInfo@ResMirageLight@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResMirageLight@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428ef7e0h
+    jmp rax
+
+PUBLIC ?typeInfo@ResMirageLight@gfx@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResMirageLight@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428ef7e0h
+    jmp rax
+
 PUBLIC ?typeInfo@ResAnimCameraContainer@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResAnimCameraContainer@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01428ef898h
@@ -54370,6 +56795,16 @@ PUBLIC ?typeInfo@ResAnimVis@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
     mov rax, 01428ef960h
     jmp rax
 
+PUBLIC ?typeInfo@ResMaterial@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResMaterial@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428ef988h
+    jmp rax
+
+PUBLIC ?typeInfo@ResMaterial@gfx@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResMaterial@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428ef988h
+    jmp rax
+
 PUBLIC ?typeInfo@ResMirageLightField@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResMirageLightField@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01428ef9b0h
@@ -54378,6 +56813,16 @@ PUBLIC ?typeInfo@ResMirageLightField@resources@heur@@0UResourceTypeInfo@fnd@hh@@
 PUBLIC ?typeInfo@ResMirageTerrainInstanceInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResMirageTerrainInstanceInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01428ef9d8h
+    jmp rax
+
+PUBLIC ?typeInfo@ResModel@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResModel@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428efa00h
+    jmp rax
+
+PUBLIC ?typeInfo@ResModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428efa00h
     jmp rax
 
 PUBLIC ?typeInfo@ResModelInstanceInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
@@ -54398,6 +56843,16 @@ PUBLIC ?typeInfo@ResPointcloud@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 PUBLIC ?typeInfo@ResShaderList@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResShaderList@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01428efaf0h
+    jmp rax
+
+PUBLIC ?typeInfo@ResTerrainModel@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResTerrainModel@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428efb40h
+    jmp rax
+
+PUBLIC ?typeInfo@ResTerrainModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResTerrainModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428efb40h
     jmp rax
 
 PUBLIC ?typeInfo@ResVertexLinkInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
@@ -54438,6 +56893,11 @@ PUBLIC ?componentClass@GOCVisualTransformed@gfx@hh@@0VGOComponentClass@game@3@B
 PUBLIC ?componentClass@GOCVisualUserModel@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCVisualUserModel@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 01428efd30h
+    jmp rax
+
+PUBLIC ?componentClass@GOCPointLight@gocs@heur@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCPointLight@gocs@heur@@0VGOComponentClass@game@hh@@B:
+    mov rax, 01428efd80h
     jmp rax
 
 PUBLIC ?componentClass@GOCVisualDebugDraw@gocs@heur@@0VGOComponentClass@game@hh@@B
@@ -54695,9 +57155,14 @@ PUBLIC ?typeInfo@PackfileExtendedInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@
     mov rax, 01428f61e0h
     jmp rax
 
-PUBLIC ?typeInfo@ResLuaData@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
-?typeInfo@ResLuaData@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
-    mov rax, 01428f6208h
+PUBLIC ?typeInfo@ResReflection@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResReflection@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428f6230h
+    jmp rax
+
+PUBLIC ?typeInfo@ResReflection@fnd@hh@@0UResourceTypeInfo@23@B
+?typeInfo@ResReflection@fnd@hh@@0UResourceTypeInfo@23@B:
+    mov rax, 01428f6230h
     jmp rax
 
 PUBLIC ?typeInfo@ResNameExtra@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
@@ -54730,9 +57195,59 @@ PUBLIC ?typeInfo@ResBitmapFont@font@hh@@0UResourceTypeInfo@fnd@3@B
     mov rax, 01428f62f8h
     jmp rax
 
+PUBLIC ?typeInfo@ResScalableFontSet@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResScalableFontSet@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428f6320h
+    jmp rax
+
+PUBLIC ?typeInfo@ResScalableFontSet@font@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResScalableFontSet@font@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428f6320h
+    jmp rax
+
+PUBLIC ?typeInfo@ResFragmentShader@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResFragmentShader@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428f6370h
+    jmp rax
+
+PUBLIC ?typeInfo@ResFragmentShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResFragmentShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428f6370h
+    jmp rax
+
+PUBLIC ?typeInfo@ResTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428f6398h
+    jmp rax
+
+PUBLIC ?typeInfo@ResTexture@gfnd@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResTexture@gfnd@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428f6398h
+    jmp rax
+
 PUBLIC ?typeInfo@ResStreamingTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResStreamingTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01428f63c0h
+    jmp rax
+
+PUBLIC ?typeInfo@ResVertexShader@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResVertexShader@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428f63e8h
+    jmp rax
+
+PUBLIC ?typeInfo@ResVertexShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResVertexShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428f63e8h
+    jmp rax
+
+PUBLIC ?typeInfo@ResComputeShader@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
+?typeInfo@ResComputeShader@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 01428f6410h
+    jmp rax
+
+PUBLIC ?typeInfo@ResComputeShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResComputeShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 01428f6410h
     jmp rax
 
 PUBLIC ?gameServiceClass@ContentManagerWin32@content@app@@0VGameServiceClass@game@hh@@B
@@ -54790,9 +57305,39 @@ PUBLIC ?stateDesc@Top@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142960350h
     jmp rax
 
+PUBLIC ?stateDesc@Normal@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Normal@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142960370h
+    jmp rax
+
+PUBLIC ?stateDesc@Dash@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dash@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142960390h
+    jmp rax
+
+PUBLIC ?stateDesc@Lockon@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Lockon@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429603b0h
+    jmp rax
+
 PUBLIC ?stateDesc@Wall@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Wall@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B:
     mov rax, 01429603d0h
+    jmp rax
+
+PUBLIC ?stateDesc@Loop@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Loop@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429603f0h
+    jmp rax
+
+PUBLIC ?stateDesc@Battle@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Battle@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142960410h
+    jmp rax
+
+PUBLIC ?stateDesc@Surf@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Surf@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142960430h
     jmp rax
 
 PUBLIC ?rflClass@BossBiolizardSpawner@rfl@heur@@2VRflClass@fnd@hh@@B
@@ -59235,18 +61780,18 @@ PUBLIC ?rflClass@PathSpiralParameter@rfl@heur@@2VRflClass@fnd@hh@@B
     mov rax, 01429719e0h
     jmp rax
 
-PUBLIC ?rflClass@PlayerCameraParameter@rfl@heur@@2VRflClass@fnd@hh@@B
-?rflClass@PlayerCameraParameter@rfl@heur@@2VRflClass@fnd@hh@@B:
+PUBLIC ?rflClass@PlayerCameraParameter@player@app@@2VRflClass@fnd@hh@@B
+?rflClass@PlayerCameraParameter@player@app@@2VRflClass@fnd@hh@@B:
     mov rax, 0142971a30h
     jmp rax
 
-PUBLIC ?rflClass@PlayerCameraSetParameter@rfl@heur@@2VRflClass@fnd@hh@@B
-?rflClass@PlayerCameraSetParameter@rfl@heur@@2VRflClass@fnd@hh@@B:
+PUBLIC ?rflClass@PlayerCameraSetParameter@player@app@@2VRflClass@fnd@hh@@B
+?rflClass@PlayerCameraSetParameter@player@app@@2VRflClass@fnd@hh@@B:
     mov rax, 0142971a80h
     jmp rax
 
-PUBLIC ?rflClass@PlayerCameraSetParameters@rfl@heur@@2VRflClass@fnd@hh@@B
-?rflClass@PlayerCameraSetParameters@rfl@heur@@2VRflClass@fnd@hh@@B:
+PUBLIC ?rflClass@PlayerCameraSetParameters@player@app@@2VRflClass@fnd@hh@@B
+?rflClass@PlayerCameraSetParameters@player@app@@2VRflClass@fnd@hh@@B:
     mov rax, 0142971ad0h
     jmp rax
 
@@ -60350,14 +62895,59 @@ PUBLIC ?stateDesc@DestroyLevel@State@GameModeBakeNavMeshStage@game@app@@0VStateD
     mov rax, 0142976750h
     jmp rax
 
+PUBLIC ?stateDesc@PlayTop@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PlayTop@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976770h
+    jmp rax
+
+PUBLIC ?stateDesc@Play@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Play@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976790h
+    jmp rax
+
+PUBLIC ?stateDesc@BakeNavMesh@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BakeNavMesh@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429767b0h
+    jmp rax
+
 PUBLIC ?stateDesc@StageTop@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StageTop@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142976870h
     jmp rax
 
+PUBLIC ?stateDesc@Build@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Build@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976890h
+    jmp rax
+
+PUBLIC ?stateDesc@BuildLevel@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BuildLevel@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429768b0h
+    jmp rax
+
+PUBLIC ?stateDesc@DestroyLevel@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DestroyLevel@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429768d0h
+    jmp rax
+
 PUBLIC ?stateDesc@PlayTop@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@PlayTop@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B:
     mov rax, 01429768f0h
+    jmp rax
+
+PUBLIC ?stateDesc@Standby@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Standby@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976910h
+    jmp rax
+
+PUBLIC ?stateDesc@PreLoad@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PreLoad@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976930h
+    jmp rax
+
+PUBLIC ?stateDesc@Play@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Play@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976950h
     jmp rax
 
 PUBLIC ?stateDesc@PostPlay@State@GameModeDevEvent@game@app@@0VStateDesc@ut@hh@@B
@@ -60370,9 +62960,99 @@ PUBLIC ?stateDesc@UITestRoot@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142976a28h
     jmp rax
 
+PUBLIC ?stateDesc@TopMenuCollection@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TopMenuCollection@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976a48h
+    jmp rax
+
+PUBLIC ?stateDesc@TopMenuUITest@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TopMenuUITest@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976a68h
+    jmp rax
+
+PUBLIC ?stateDesc@ArtMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ArtMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976a88h
+    jmp rax
+
+PUBLIC ?stateDesc@MovieMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MovieMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976aa8h
+    jmp rax
+
+PUBLIC ?stateDesc@SoundMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@SoundMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976ac8h
+    jmp rax
+
+PUBLIC ?stateDesc@CharaMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CharaMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976ae8h
+    jmp rax
+
+PUBLIC ?stateDesc@HistoryMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@HistoryMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976b08h
+    jmp rax
+
+PUBLIC ?stateDesc@NoteMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@NoteMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976b28h
+    jmp rax
+
+PUBLIC ?stateDesc@ResultMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ResultMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976b48h
+    jmp rax
+
+PUBLIC ?stateDesc@ResultChallengeMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ResultChallengeMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976b68h
+    jmp rax
+
+PUBLIC ?stateDesc@WindowTest@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@WindowTest@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976b88h
+    jmp rax
+
+PUBLIC ?stateDesc@OptionMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@OptionMenu@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976ba8h
+    jmp rax
+
+PUBLIC ?stateDesc@ChangeLanguage@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ChangeLanguage@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976bc8h
+    jmp rax
+
+PUBLIC ?stateDesc@BossName@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BossName@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976be8h
+    jmp rax
+
+PUBLIC ?stateDesc@DPowerName@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DPowerName@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976c08h
+    jmp rax
+
 PUBLIC ?stateDesc@StageFade@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StageFade@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142976c28h
+    jmp rax
+
+PUBLIC ?stateDesc@InputPoint@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@InputPoint@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976c48h
+    jmp rax
+
+PUBLIC ?stateDesc@ItemPoint@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ItemPoint@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976c68h
+    jmp rax
+
+PUBLIC ?stateDesc@PointTimer@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PointTimer@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976c88h
     jmp rax
 
 PUBLIC ?stateDesc@PointRingCount@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
@@ -60380,9 +63060,39 @@ PUBLIC ?stateDesc@PointRingCount@State@GameModeUITest@game@app@@0VStateDesc@ut@h
     mov rax, 0142976ca8h
     jmp rax
 
+PUBLIC ?stateDesc@TargetNavi@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TargetNavi@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976cc8h
+    jmp rax
+
+PUBLIC ?stateDesc@EventPauseSkip@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@EventPauseSkip@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976ce8h
+    jmp rax
+
+PUBLIC ?stateDesc@Announce@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Announce@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976d08h
+    jmp rax
+
 PUBLIC ?stateDesc@InputObjectGuide@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@InputObjectGuide@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142976d28h
+    jmp rax
+
+PUBLIC ?stateDesc@DBlowCursor@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DBlowCursor@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976d48h
+    jmp rax
+
+PUBLIC ?stateDesc@TimeRecovery@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TimeRecovery@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976d68h
+    jmp rax
+
+PUBLIC ?stateDesc@Quit@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Quit@State@GameModeUITest@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142976d88h
     jmp rax
 
 PUBLIC ?instance@?$Singleton@VDebugCameraManager@game@hh@@@fnd@csl@@2PEAVDebugCameraManager@game@hh@@EA
@@ -60405,6 +63115,81 @@ PUBLIC ?stateDesc@RebuildLevel@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@
     mov rax, 0142977100h
     jmp rax
 
+PUBLIC ?stateDesc@DestroyLevel@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@DestroyLevel@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977120h
+    jmp rax
+
+PUBLIC ?stateDesc@PlayTop@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PlayTop@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977140h
+    jmp rax
+
+PUBLIC ?stateDesc@Play@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Play@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977160h
+    jmp rax
+
+PUBLIC ?stateDesc@Pause@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@Pause@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977180h
+    jmp rax
+
+PUBLIC ?stateDesc@PauseMenu@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PauseMenu@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429771a0h
+    jmp rax
+
+PUBLIC ?stateDesc@PauseGame@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PauseGame@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429771c0h
+    jmp rax
+
+PUBLIC ?stateDesc@OptionMenu@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@OptionMenu@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429771e0h
+    jmp rax
+
+PUBLIC ?stateDesc@Retry@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Retry@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977200h
+    jmp rax
+
+PUBLIC ?stateDesc@RetryFromMiss@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@RetryFromMiss@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977220h
+    jmp rax
+
+PUBLIC ?stateDesc@RetryFromMenu@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@RetryFromMenu@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977240h
+    jmp rax
+
+PUBLIC ?stateDesc@GameEditor@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@GameEditor@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977260h
+    jmp rax
+
+PUBLIC ?stateDesc@Finish@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Finish@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977280h
+    jmp rax
+
+PUBLIC ?stateDesc@Result@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Result@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429772a0h
+    jmp rax
+
+PUBLIC ?stateDesc@DebugWarp@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DebugWarp@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429772c0h
+    jmp rax
+
+PUBLIC ?stateDesc@InsertMovie@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@InsertMovie@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429772e0h
+    jmp rax
+
 PUBLIC ?stateDesc@Warp@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Warp@State@GameModeStage@game@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142977300h
@@ -60420,9 +63205,39 @@ PUBLIC ?stateDesc@TitleRoot@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142977398h
     jmp rax
 
+PUBLIC ?stateDesc@ThanksPlayingMenu@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ThanksPlayingMenu@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429773b8h
+    jmp rax
+
+PUBLIC ?stateDesc@TitleTopMenu@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@TitleTopMenu@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429773d8h
+    jmp rax
+
+PUBLIC ?stateDesc@TitleSelectMenu@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@TitleSelectMenu@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429773f8h
+    jmp rax
+
 PUBLIC ?stateDesc@Prologue@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Prologue@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142977418h
+    jmp rax
+
+PUBLIC ?stateDesc@SpecialMovie@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@SpecialMovie@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977438h
+    jmp rax
+
+PUBLIC ?stateDesc@OptionMenu@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@OptionMenu@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977458h
+    jmp rax
+
+PUBLIC ?stateDesc@RankingMenu@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@RankingMenu@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977478h
     jmp rax
 
 PUBLIC ?stateDesc@ChangeLanguage@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B
@@ -60430,9 +63245,89 @@ PUBLIC ?stateDesc@ChangeLanguage@State@GameModeTitle@game@app@@0VStateDesc@ut@hh
     mov rax, 0142977498h
     jmp rax
 
+PUBLIC ?stateDesc@Quit@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Quit@State@GameModeTitle@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429774b8h
+    jmp rax
+
 PUBLIC ?stateDesc@StageTop@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StageTop@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142977590h
+    jmp rax
+
+PUBLIC ?stateDesc@Build@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Build@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429775b0h
+    jmp rax
+
+PUBLIC ?stateDesc@BuildLevel@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BuildLevel@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429775d0h
+    jmp rax
+
+PUBLIC ?stateDesc@RebuildLevel@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@RebuildLevel@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429775f0h
+    jmp rax
+
+PUBLIC ?stateDesc@DestroyLevel@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DestroyLevel@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977610h
+    jmp rax
+
+PUBLIC ?stateDesc@PlayTop@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PlayTop@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977630h
+    jmp rax
+
+PUBLIC ?stateDesc@Play@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Play@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977650h
+    jmp rax
+
+PUBLIC ?stateDesc@TransitStage@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TransitStage@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977670h
+    jmp rax
+
+PUBLIC ?stateDesc@Pause@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Pause@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977690h
+    jmp rax
+
+PUBLIC ?stateDesc@PauseMenu@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PauseMenu@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429776b0h
+    jmp rax
+
+PUBLIC ?stateDesc@PauseGame@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PauseGame@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429776d0h
+    jmp rax
+
+PUBLIC ?stateDesc@OptionMenu@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@OptionMenu@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429776f0h
+    jmp rax
+
+PUBLIC ?stateDesc@CollectionBegin@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CollectionBegin@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977710h
+    jmp rax
+
+PUBLIC ?stateDesc@CollectionEnd@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CollectionEnd@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977730h
+    jmp rax
+
+PUBLIC ?stateDesc@CollectionMenu@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CollectionMenu@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977750h
+    jmp rax
+
+PUBLIC ?stateDesc@CollectionExitWindow@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CollectionExitWindow@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977770h
     jmp rax
 
 PUBLIC ?stateDesc@RetryFromMiss@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
@@ -60440,9 +63335,39 @@ PUBLIC ?stateDesc@RetryFromMiss@State@GameModeWhiteSpace@game@app@@0VStateDesc@u
     mov rax, 01429777b0h
     jmp rax
 
+PUBLIC ?stateDesc@RetryFromMenu@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@RetryFromMenu@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429777d0h
+    jmp rax
+
+PUBLIC ?stateDesc@GameEditor@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@GameEditor@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429777f0h
+    jmp rax
+
+PUBLIC ?stateDesc@MenuToGate@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MenuToGate@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977810h
+    jmp rax
+
 PUBLIC ?stateDesc@StageInfo@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StageInfo@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142977830h
+    jmp rax
+
+PUBLIC ?stateDesc@ChallengeInfo@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ChallengeInfo@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977850h
+    jmp rax
+
+PUBLIC ?stateDesc@DebugWarp@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DebugWarp@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977870h
+    jmp rax
+
+PUBLIC ?stateDesc@InsertMovie@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
+?stateDesc@InsertMovie@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142977890h
     jmp rax
 
 PUBLIC ?stateDesc@EndingMovie@State@GameModeWhiteSpace@game@app@@0VStateDesc@ut@hh@@B
@@ -60530,14 +63455,169 @@ PUBLIC ?stateDesc@AIStateNone@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142978208h
     jmp rax
 
+PUBLIC ?stateDesc@AIStateAttacking@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateAttacking@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978228h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateFighting@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateFighting@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978248h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateGuarding@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateGuarding@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978268h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateIdle@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateIdle@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978288h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateIdleFocusToTarget@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateIdleFocusToTarget@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429782a8h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateFlyToTarget@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateFlyToTarget@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429782c8h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateMove@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateMove@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429782e8h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateMoveAround@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateMoveAround@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978308h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateMoveInCamera@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateMoveInCamera@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978328h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateMoveSearch@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateMoveSearch@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978348h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateMoveToTargetByNavMesh@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateMoveToTargetByNavMesh@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978388h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateMovePath@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateMovePath@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429783a8h
+    jmp rax
+
+PUBLIC ?stateDesc@AIStateMoveToTarget@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AIStateMoveToTarget@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429783c8h
+    jmp rax
+
 PUBLIC ?stateDesc@StartEvent@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StartEvent@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 01429786e8h
     jmp rax
 
+PUBLIC ?stateDesc@Init@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Init@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978708h
+    jmp rax
+
+PUBLIC ?stateDesc@Idling@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idling@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978728h
+    jmp rax
+
+PUBLIC ?stateDesc@ActionCheck@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ActionCheck@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978748h
+    jmp rax
+
+PUBLIC ?stateDesc@YRotAttackBase@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@YRotAttackBase@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978768h
+    jmp rax
+
+PUBLIC ?stateDesc@YRotAttackHead@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@YRotAttackHead@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978788h
+    jmp rax
+
+PUBLIC ?stateDesc@YRotAttackTail@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@YRotAttackTail@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429787a8h
+    jmp rax
+
+PUBLIC ?stateDesc@EnergyBall@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@EnergyBall@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429787c8h
+    jmp rax
+
+PUBLIC ?stateDesc@BodyPress@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@BodyPress@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429787e8h
+    jmp rax
+
+PUBLIC ?stateDesc@HandAttack@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@HandAttack@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978808h
+    jmp rax
+
+PUBLIC ?stateDesc@HandAttackTriple@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@HandAttackTriple@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978828h
+    jmp rax
+
+PUBLIC ?stateDesc@JumpAttack@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@JumpAttack@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978848h
+    jmp rax
+
+PUBLIC ?stateDesc@RoeHandDamaged@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@RoeHandDamaged@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978868h
+    jmp rax
+
+PUBLIC ?stateDesc@RoeHandDamagedTimeStop@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@RoeHandDamagedTimeStop@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978888h
+    jmp rax
+
+PUBLIC ?stateDesc@RoeHandRepair@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@RoeHandRepair@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429788a8h
+    jmp rax
+
+PUBLIC ?stateDesc@GiantIkura@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@GiantIkura@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429788c8h
+    jmp rax
+
 PUBLIC ?stateDesc@HomingIkura@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@HomingIkura@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 01429788e8h
+    jmp rax
+
+PUBLIC ?stateDesc@Down@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Down@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978908h
+    jmp rax
+
+PUBLIC ?stateDesc@DownEnd@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DownEnd@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978928h
+    jmp rax
+
+PUBLIC ?stateDesc@DownWall@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DownWall@BossBiolizardState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978948h
     jmp rax
 
 PUBLIC ?stateDesc@Damaged@BossBiolizardState@app@@0VStateDesc@ut@hh@@B
@@ -60555,9 +63635,159 @@ PUBLIC ?stateDesc@StartEvent@BossMephilesState@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142978cb8h
     jmp rax
 
+PUBLIC ?stateDesc@ChangePhase@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ChangePhase@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978cd8h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978cf8h
+    jmp rax
+
+PUBLIC ?stateDesc@Init@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Init@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978d18h
+    jmp rax
+
+PUBLIC ?stateDesc@ActionCheck@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ActionCheck@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978d38h
+    jmp rax
+
+PUBLIC ?stateDesc@DBlowMoveVertical@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DBlowMoveVertical@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978d58h
+    jmp rax
+
+PUBLIC ?stateDesc@DBlowMoveHorizontal@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DBlowMoveHorizontal@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978d78h
+    jmp rax
+
+PUBLIC ?stateDesc@DBlowWallHit@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DBlowWallHit@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978d98h
+    jmp rax
+
+PUBLIC ?stateDesc@DBlowObjHit@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DBlowObjHit@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978db8h
+    jmp rax
+
+PUBLIC ?stateDesc@DBlowReturn@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DBlowReturn@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978dd8h
+    jmp rax
+
+PUBLIC ?stateDesc@DamageRush@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DamageRush@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978df8h
+    jmp rax
+
+PUBLIC ?stateDesc@DamageRushFinish@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DamageRushFinish@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978e18h
+    jmp rax
+
+PUBLIC ?stateDesc@DamageSpear@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DamageSpear@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978e38h
+    jmp rax
+
+PUBLIC ?stateDesc@DamageGuard@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DamageGuard@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978e58h
+    jmp rax
+
+PUBLIC ?stateDesc@DamageEscapeWarp@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DamageEscapeWarp@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978e78h
+    jmp rax
+
+PUBLIC ?stateDesc@WarpMove@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@WarpMove@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978e98h
+    jmp rax
+
 PUBLIC ?stateDesc@Phase1Idle@BossMephilesState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Phase1Idle@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142978eb8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AmoebaStart@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AmoebaStart@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978ed8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AmoebaHide@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AmoebaHide@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978ef8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AmoebaHideAtkMinion@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AmoebaHideAtkMinion@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978f18h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AmoebaHideAtkBlade@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AmoebaHideAtkBlade@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978f38h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AmoebaHideAtkDemon@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AmoebaHideAtkDemon@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978f58h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AmoebaEnd@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AmoebaEnd@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978f78h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1CounterAtk@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1CounterAtk@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978f98h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2Idle@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2Idle@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978fb8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2Demon@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2Demon@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978fd8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2DemonHideBreak@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2DemonHideBreak@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142978ff8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2DemonIdle@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2DemonIdle@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979018h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2DemonHideStart@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2DemonHideStart@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979038h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2FakerStart@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2FakerStart@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979058h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2FakerIdle@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2FakerIdle@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979078h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2FakerAttack@BossMephilesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2FakerAttack@BossMephilesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979098h
     jmp rax
 
 PUBLIC ?stateDesc@StartEvent@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
@@ -60565,9 +63795,99 @@ PUBLIC ?stateDesc@StartEvent@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142979498h
     jmp rax
 
+PUBLIC ?stateDesc@ChangePhase@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ChangePhase@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429794b8h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429794d8h
+    jmp rax
+
+PUBLIC ?stateDesc@Init@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Init@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429794f8h
+    jmp rax
+
+PUBLIC ?stateDesc@ActionCheck@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ActionCheck@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979518h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Idle@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Idle@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979538h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Move@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Move@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979558h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Rush@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Rush@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979578h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Damage@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Damage@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979598h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Leave@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Leave@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429795b8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AttackMissile@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AttackMissile@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429795d8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AttackTail@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AttackTail@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429795f8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1SelfRecover@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1SelfRecover@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979618h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1TimeStop@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1TimeStop@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979638h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1PhotonDash@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1PhotonDash@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979658h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2Idle@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2Idle@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979678h
+    jmp rax
+
 PUBLIC ?stateDesc@Phase2Damage@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Phase2Damage@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142979698h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2AttackMissile@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2AttackMissile@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429796b8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2AttackShot@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2AttackShot@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429796d8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2AttackMine@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2AttackMine@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429796f8h
     jmp rax
 
 PUBLIC ?stateDesc@Phase2RingPop@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
@@ -60575,9 +63895,99 @@ PUBLIC ?stateDesc@Phase2RingPop@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142979718h
     jmp rax
 
+PUBLIC ?stateDesc@Phase2AttackNormalThrowing@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2AttackNormalThrowing@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979738h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2AttackBigThrowing@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2AttackBigThrowing@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979758h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2EventDamage@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2EventDamage@BossMetaloverloadState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142979778h
+    jmp rax
+
 PUBLIC ?stateDesc@Wait@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Wait@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142979fe8h
+    jmp rax
+
+PUBLIC ?stateDesc@StartEvent@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StartEvent@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a008h
+    jmp rax
+
+PUBLIC ?stateDesc@Init@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Init@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a028h
+    jmp rax
+
+PUBLIC ?stateDesc@ActionCheck@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ActionCheck@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a048h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a068h
+    jmp rax
+
+PUBLIC ?stateDesc@GameOver@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@GameOver@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a088h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleIdle@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleIdle@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a0a8h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleMove@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleMove@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a0c8h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleAmoebaMultiRain@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleAmoebaMultiRain@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a0e8h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleWingTornado@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleWingTornado@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a108h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleSplashBlow@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleSplashBlow@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a128h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleDamage@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleDamage@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a148h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleStun@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleStun@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a168h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleDown@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleDown@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a188h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleRush@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleRush@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a1a8h
+    jmp rax
+
+PUBLIC ?stateDesc@BattleDBlow@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BattleDBlow@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a1c8h
     jmp rax
 
 PUBLIC ?stateDesc@BattleHitSplashBlow@BossPerfectblackdoomFinalState@app@@0VStateDesc@ut@hh@@B
@@ -60588,6 +63998,81 @@ PUBLIC ?stateDesc@BattleHitSplashBlow@BossPerfectblackdoomFinalState@app@@0VStat
 PUBLIC ?stateDesc@StartEvent@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StartEvent@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297a288h
+    jmp rax
+
+PUBLIC ?stateDesc@ChangePhase@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ChangePhase@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a2a8h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a2c8h
+    jmp rax
+
+PUBLIC ?stateDesc@Init@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Init@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a2e8h
+    jmp rax
+
+PUBLIC ?stateDesc@ActionCheck@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ActionCheck@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a308h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Idle@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Idle@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a328h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Move@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Move@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a348h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1StartMotion@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1StartMotion@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a368h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Damage@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Damage@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a388h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1Rush@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1Rush@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a3a8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AttackMeteoriteBeam@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AttackMeteoriteBeam@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a3c8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase1AttackMeteoriteHockey@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase1AttackMeteoriteHockey@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a3e8h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2Idle@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2Idle@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a408h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2Damage@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2Damage@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a428h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2Rush@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2Rush@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a448h
+    jmp rax
+
+PUBLIC ?stateDesc@Phase2AttackFireBeam@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Phase2AttackFireBeam@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297a468h
     jmp rax
 
 PUBLIC ?stateDesc@Phase2AttackFireBomb@BossPerfectblackdoomState@app@@0VStateDesc@ut@hh@@B
@@ -60625,9 +64110,39 @@ PUBLIC ?stateDesc@Idle@EnemyBeesState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297bb20h
     jmp rax
 
+PUBLIC ?stateDesc@Appear@EnemyBeesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Appear@EnemyBeesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bb40h
+    jmp rax
+
+PUBLIC ?stateDesc@Move@EnemyBeesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Move@EnemyBeesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bb60h
+    jmp rax
+
+PUBLIC ?stateDesc@Disappear@EnemyBeesState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Disappear@EnemyBeesState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bb80h
+    jmp rax
+
 PUBLIC ?stateDesc@Idling@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Idling@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297bbf0h
+    jmp rax
+
+PUBLIC ?stateDesc@Respawn@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Respawn@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bc10h
+    jmp rax
+
+PUBLIC ?stateDesc@SpawnDistSpace@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@SpawnDistSpace@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bc30h
+    jmp rax
+
+PUBLIC ?stateDesc@MovePrepara@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MovePrepara@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bc50h
     jmp rax
 
 PUBLIC ?stateDesc@MovingBase@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
@@ -60635,9 +64150,39 @@ PUBLIC ?stateDesc@MovingBase@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297bc70h
     jmp rax
 
+PUBLIC ?stateDesc@MovingFixed@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MovingFixed@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bc90h
+    jmp rax
+
+PUBLIC ?stateDesc@MovingTwoPoint@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MovingTwoPoint@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bcb0h
+    jmp rax
+
+PUBLIC ?stateDesc@MovingOnPath@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MovingOnPath@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bcd0h
+    jmp rax
+
 PUBLIC ?stateDesc@Attack@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Attack@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297bcf0h
+    jmp rax
+
+PUBLIC ?stateDesc@Barrier@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Barrier@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bd10h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bd30h
+    jmp rax
+
+PUBLIC ?stateDesc@Dying@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dying@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bd50h
     jmp rax
 
 PUBLIC ?stateDesc@DyingTimeStop@EnemyBeetleState@app@@0VStateDesc@ut@hh@@B
@@ -60655,14 +64200,59 @@ PUBLIC ?stateDesc@EventIdle@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297bdd0h
     jmp rax
 
+PUBLIC ?stateDesc@Respawn@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Respawn@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bdf0h
+    jmp rax
+
+PUBLIC ?stateDesc@Search@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Search@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297be10h
+    jmp rax
+
+PUBLIC ?stateDesc@SearchIdle@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@SearchIdle@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297be30h
+    jmp rax
+
 PUBLIC ?stateDesc@SearchMove@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@SearchMove@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297be50h
     jmp rax
 
+PUBLIC ?stateDesc@TurnAround@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TurnAround@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297be70h
+    jmp rax
+
+PUBLIC ?stateDesc@TurnTarget@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TurnTarget@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297be90h
+    jmp rax
+
+PUBLIC ?stateDesc@TurnEscapePoint@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TurnEscapePoint@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297beb0h
+    jmp rax
+
 PUBLIC ?stateDesc@Approach@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Approach@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297bed0h
+    jmp rax
+
+PUBLIC ?stateDesc@Straight@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Straight@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bef0h
+    jmp rax
+
+PUBLIC ?stateDesc@Attack@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Attack@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bf10h
+    jmp rax
+
+PUBLIC ?stateDesc@Escape@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Escape@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bf30h
     jmp rax
 
 PUBLIC ?stateDesc@Stun@EnemyBeetonFCState@app@@0VStateDesc@ut@hh@@B
@@ -60680,9 +64270,39 @@ PUBLIC ?stateDesc@Create@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297bfa8h
     jmp rax
 
+PUBLIC ?stateDesc@Idle@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idle@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bfc8h
+    jmp rax
+
+PUBLIC ?stateDesc@Search@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Search@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297bfe8h
+    jmp rax
+
+PUBLIC ?stateDesc@Found@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Found@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c008h
+    jmp rax
+
 PUBLIC ?stateDesc@BeamAttack@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@BeamAttack@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297c028h
+    jmp rax
+
+PUBLIC ?stateDesc@TentacleAttack@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TentacleAttack@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c048h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c068h
+    jmp rax
+
+PUBLIC ?stateDesc@Division@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Division@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c088h
     jmp rax
 
 PUBLIC ?stateDesc@WaitAfterDivision@EnemyChaosflyState@app@@0VStateDesc@ut@hh@@B
@@ -60705,6 +64325,81 @@ PUBLIC ?stateDesc@Create@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297c140h
     jmp rax
 
+PUBLIC ?stateDesc@Idle@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idle@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c160h
+    jmp rax
+
+PUBLIC ?stateDesc@Move@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Move@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c180h
+    jmp rax
+
+PUBLIC ?stateDesc@jumpAttack@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@jumpAttack@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c1a0h
+    jmp rax
+
+PUBLIC ?stateDesc@Blow@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Blow@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c1c0h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@EnemyChaosflycellState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c1e0h
+    jmp rax
+
+PUBLIC ?stateDesc@Create@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Create@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c200h
+    jmp rax
+
+PUBLIC ?stateDesc@Idle@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idle@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c220h
+    jmp rax
+
+PUBLIC ?stateDesc@Search@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Search@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c240h
+    jmp rax
+
+PUBLIC ?stateDesc@Found@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Found@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c260h
+    jmp rax
+
+PUBLIC ?stateDesc@BeamAttack@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BeamAttack@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c280h
+    jmp rax
+
+PUBLIC ?stateDesc@TentacleAttack@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TentacleAttack@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c2a0h
+    jmp rax
+
+PUBLIC ?stateDesc@Guard@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Guard@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c2c0h
+    jmp rax
+
+PUBLIC ?stateDesc@BounceBackWhileGuard@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BounceBackWhileGuard@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c2e0h
+    jmp rax
+
+PUBLIC ?stateDesc@TentacleAttackWhileGuard@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TentacleAttackWhileGuard@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c300h
+    jmp rax
+
+PUBLIC ?stateDesc@StunWhileGuard@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StunWhileGuard@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c320h
+    jmp rax
+
 PUBLIC ?stateDesc@Stun@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Stun@EnemyChaospillarState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297c340h
@@ -60725,9 +64420,99 @@ PUBLIC ?stateDesc@Appear@EnemyCometState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297c400h
     jmp rax
 
+PUBLIC ?stateDesc@Idling@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idling@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c420h
+    jmp rax
+
+PUBLIC ?stateDesc@Guard@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Guard@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c440h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyShockWave@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyShockWave@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c460h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackShockWave@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackShockWave@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c480h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackedShockWave@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackedShockWave@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c4a0h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyReflector@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyReflector@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c4c0h
+    jmp rax
+
+PUBLIC ?stateDesc@ShootReflector@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShootReflector@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c4e0h
+    jmp rax
+
+PUBLIC ?stateDesc@ShotReflector@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShotReflector@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c500h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAway@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAway@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c520h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAwayEnd@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAwayEnd@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c540h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUp@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUp@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c560h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUpEnd@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUpEnd@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c580h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDown@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDown@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c5a0h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDownEnd@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDownEnd@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c5c0h
+    jmp rax
+
+PUBLIC ?stateDesc@Down@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Down@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c5e0h
+    jmp rax
+
 PUBLIC ?stateDesc@RiseUp@EnemyCometState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@RiseUp@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297c600h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c620h
+    jmp rax
+
+PUBLIC ?stateDesc@StunEnd@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StunEnd@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c640h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@EnemyCometState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@EnemyCometState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c660h
     jmp rax
 
 PUBLIC ?stateDesc@DeadImpactWall@EnemyCometState@app@@0VStateDesc@ut@hh@@B
@@ -60740,14 +64525,119 @@ PUBLIC ?stateDesc@Idling@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297c6c8h
     jmp rax
 
+PUBLIC ?stateDesc@Seeking@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Seeking@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c6e8h
+    jmp rax
+
+PUBLIC ?stateDesc@Riding@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Riding@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c708h
+    jmp rax
+
+PUBLIC ?stateDesc@Rode@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Rode@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c728h
+    jmp rax
+
+PUBLIC ?stateDesc@BendBackward@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BendBackward@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c748h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyShockWave@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyShockWave@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c768h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackShockWave@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackShockWave@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c788h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackedShockWave@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackedShockWave@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c7a8h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyProjectile@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyProjectile@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c7c8h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackProjectile@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackProjectile@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c7e8h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackedProjectile@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackedProjectile@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c808h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyTornado@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyTornado@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c828h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackTornado@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackTornado@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c848h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackedTornado@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackedTornado@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c868h
+    jmp rax
+
+PUBLIC ?stateDesc@Escape@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Escape@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c888h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAway@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAway@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c8a8h
+    jmp rax
+
 PUBLIC ?stateDesc@BlownAwayEnd@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@BlownAwayEnd@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297c8c8h
     jmp rax
 
+PUBLIC ?stateDesc@BlownUp@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUp@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c8e8h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUpEnd@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUpEnd@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c908h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDown@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDown@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c928h
+    jmp rax
+
 PUBLIC ?stateDesc@BlownDownEnd@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@BlownDownEnd@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297c948h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c968h
+    jmp rax
+
+PUBLIC ?stateDesc@StunEnd@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StunEnd@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c988h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297c9a8h
     jmp rax
 
 PUBLIC ?stateDesc@DeadImpactWall@EnemyCoreMachoState@app@@0VStateDesc@ut@hh@@B
@@ -60760,9 +64650,39 @@ PUBLIC ?stateDesc@WaitForEvent@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297d340h
     jmp rax
 
+PUBLIC ?stateDesc@Appear@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Appear@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d360h
+    jmp rax
+
+PUBLIC ?stateDesc@Idling@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idling@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d380h
+    jmp rax
+
+PUBLIC ?stateDesc@MoveBetweenTwoPoints@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MoveBetweenTwoPoints@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d3a0h
+    jmp rax
+
 PUBLIC ?stateDesc@MoveOnPath@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@MoveOnPath@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297d3c0h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyCannon@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyCannon@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d3e0h
+    jmp rax
+
+PUBLIC ?stateDesc@ShootCannon@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShootCannon@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d400h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d420h
     jmp rax
 
 PUBLIC ?stateDesc@StunEnd@EnemyEggFlapperState@app@@0VStateDesc@ut@hh@@B
@@ -60780,6 +64700,21 @@ PUBLIC ?stateDesc@Set@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297d498h
     jmp rax
 
+PUBLIC ?stateDesc@Idle@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idle@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d4b8h
+    jmp rax
+
+PUBLIC ?stateDesc@Action@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Action@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d4d8h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d4f8h
+    jmp rax
+
 PUBLIC ?stateDesc@Dead@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Dead@EnemyEggFlyerState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297d518h
@@ -60790,9 +64725,39 @@ PUBLIC ?stateDesc@Idling@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297d540h
     jmp rax
 
+PUBLIC ?stateDesc@Fall@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Fall@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d560h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyRocketPunch@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyRocketPunch@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d580h
+    jmp rax
+
+PUBLIC ?stateDesc@ShootRocketPunch@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShootRocketPunch@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d5a0h
+    jmp rax
+
 PUBLIC ?stateDesc@ShotRocketPunch@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@ShotRocketPunch@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297d5c0h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyVulcan@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyVulcan@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d5e0h
+    jmp rax
+
+PUBLIC ?stateDesc@ShootVulcan@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShootVulcan@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d600h
+    jmp rax
+
+PUBLIC ?stateDesc@ShotVulcan@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShotVulcan@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d620h
     jmp rax
 
 PUBLIC ?stateDesc@RevivalArms@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
@@ -60800,9 +64765,39 @@ PUBLIC ?stateDesc@RevivalArms@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297d640h
     jmp rax
 
+PUBLIC ?stateDesc@Stun@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d660h
+    jmp rax
+
+PUBLIC ?stateDesc@StunEnd@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StunEnd@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d680h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@EnemyEggGuardianState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d6a0h
+    jmp rax
+
 PUBLIC ?stateDesc@Create@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Create@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297d6d0h
+    jmp rax
+
+PUBLIC ?stateDesc@AppearanceWait@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AppearanceWait@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d6f0h
+    jmp rax
+
+PUBLIC ?stateDesc@Appearance@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Appearance@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d710h
+    jmp rax
+
+PUBLIC ?stateDesc@AppearanceMove@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AppearanceMove@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d730h
     jmp rax
 
 PUBLIC ?stateDesc@Idle@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
@@ -60810,9 +64805,39 @@ PUBLIC ?stateDesc@Idle@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297d750h
     jmp rax
 
+PUBLIC ?stateDesc@Search@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Search@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d770h
+    jmp rax
+
+PUBLIC ?stateDesc@Discover@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Discover@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d790h
+    jmp rax
+
+PUBLIC ?stateDesc@Move@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Move@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d7b0h
+    jmp rax
+
 PUBLIC ?stateDesc@VulcanAttack@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@VulcanAttack@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297d7d0h
+    jmp rax
+
+PUBLIC ?stateDesc@RocketAttack@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@RocketAttack@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d7f0h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d810h
+    jmp rax
+
+PUBLIC ?stateDesc@Blown@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Blown@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d830h
     jmp rax
 
 PUBLIC ?stateDesc@Dead@EnemyEggGunnerState@app@@0VStateDesc@ut@hh@@B
@@ -60825,9 +64850,159 @@ PUBLIC ?stateDesc@Hide@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297d8a0h
     jmp rax
 
+PUBLIC ?stateDesc@Set@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Set@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d8c0h
+    jmp rax
+
+PUBLIC ?stateDesc@Idle@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idle@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d8e0h
+    jmp rax
+
+PUBLIC ?stateDesc@MoveBetween2Points@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MoveBetween2Points@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d900h
+    jmp rax
+
+PUBLIC ?stateDesc@MoveOnPath@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MoveOnPath@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d920h
+    jmp rax
+
+PUBLIC ?stateDesc@PrepareAction@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PrepareAction@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d940h
+    jmp rax
+
+PUBLIC ?stateDesc@ActionMelee@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ActionMelee@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d960h
+    jmp rax
+
+PUBLIC ?stateDesc@SearchAround@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@SearchAround@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d980h
+    jmp rax
+
+PUBLIC ?stateDesc@ReturnToSetPos@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReturnToSetPos@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d9a0h
+    jmp rax
+
+PUBLIC ?stateDesc@ActionCannon@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ActionCannon@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d9c0h
+    jmp rax
+
+PUBLIC ?stateDesc@HitSuccess@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@HitSuccess@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297d9e0h
+    jmp rax
+
+PUBLIC ?stateDesc@EventAttack@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@EventAttack@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297da00h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297da20h
+    jmp rax
+
+PUBLIC ?stateDesc@Blow@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Blow@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297da40h
+    jmp rax
+
+PUBLIC ?stateDesc@Slip@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Slip@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297da60h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@EnemyEggPawnState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297da80h
+    jmp rax
+
 PUBLIC ?stateDesc@Search@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Search@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297dac0h
+    jmp rax
+
+PUBLIC ?stateDesc@SearchIdle@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@SearchIdle@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dae0h
+    jmp rax
+
+PUBLIC ?stateDesc@SearchWalk@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@SearchWalk@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297db00h
+    jmp rax
+
+PUBLIC ?stateDesc@TurnBack@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TurnBack@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297db20h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackStart@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackStart@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297db40h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackEnd@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackEnd@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297db60h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackOneHandEnd@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackOneHandEnd@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297db80h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackRest@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackRest@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dba0h
+    jmp rax
+
+PUBLIC ?stateDesc@ChargeStart@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ChargeStart@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dbc0h
+    jmp rax
+
+PUBLIC ?stateDesc@Charge@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Charge@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dbe0h
+    jmp rax
+
+PUBLIC ?stateDesc@Attack@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Attack@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dc00h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackStand@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackStand@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dc20h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackWalk@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackWalk@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dc40h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackTurn@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackTurn@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dc60h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackOneHand@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackOneHand@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dc80h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackConst@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackConst@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dca0h
     jmp rax
 
 PUBLIC ?stateDesc@AttackConstStand@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
@@ -60835,9 +65010,99 @@ PUBLIC ?stateDesc@AttackConstStand@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297dcc0h
     jmp rax
 
+PUBLIC ?stateDesc@AttackConstWalk@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackConstWalk@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dce0h
+    jmp rax
+
+PUBLIC ?stateDesc@EventWait@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@EventWait@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dd00h
+    jmp rax
+
+PUBLIC ?stateDesc@Damage@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Damage@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dd20h
+    jmp rax
+
+PUBLIC ?stateDesc@Fall@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Fall@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dd40h
+    jmp rax
+
+PUBLIC ?stateDesc@Landing@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Landing@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dd60h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dd80h
+    jmp rax
+
+PUBLIC ?stateDesc@Geyser@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Geyser@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dda0h
+    jmp rax
+
+PUBLIC ?stateDesc@Blow@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Blow@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ddc0h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@EnemyEggpawnFcState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dde0h
+    jmp rax
+
+PUBLIC ?stateDesc@Spawn@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Spawn@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297de10h
+    jmp rax
+
+PUBLIC ?stateDesc@Fall@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Fall@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297de30h
+    jmp rax
+
+PUBLIC ?stateDesc@Search@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Search@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297de50h
+    jmp rax
+
+PUBLIC ?stateDesc@Wait@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Wait@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297de70h
+    jmp rax
+
+PUBLIC ?stateDesc@Move@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Move@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297de90h
+    jmp rax
+
+PUBLIC ?stateDesc@Fire@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Fire@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297deb0h
+    jmp rax
+
 PUBLIC ?stateDesc@Interval@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Interval@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297ded0h
+    jmp rax
+
+PUBLIC ?stateDesc@CoolDown@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CoolDown@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297def0h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297df10h
+    jmp rax
+
+PUBLIC ?stateDesc@Blow@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Blow@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297df30h
     jmp rax
 
 PUBLIC ?stateDesc@Dead@EnemyEggTankState@app@@0VStateDesc@ut@hh@@B
@@ -60850,6 +65115,81 @@ PUBLIC ?stateDesc@Idling@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297df88h
     jmp rax
 
+PUBLIC ?stateDesc@ReadyTeleportation@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyTeleportation@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dfa8h
+    jmp rax
+
+PUBLIC ?stateDesc@Teleportation@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Teleportation@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dfc8h
+    jmp rax
+
+PUBLIC ?stateDesc@Hiding@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Hiding@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297dfe8h
+    jmp rax
+
+PUBLIC ?stateDesc@Appear@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Appear@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e008h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyClone@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyClone@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e028h
+    jmp rax
+
+PUBLIC ?stateDesc@Cloning@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Cloning@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e048h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAway@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAway@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e068h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAwayEnd@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAwayEnd@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e088h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUp@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUp@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e0a8h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUpEnd@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUpEnd@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e0c8h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDown@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDown@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e0e8h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDownEnd@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDownEnd@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e108h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e128h
+    jmp rax
+
+PUBLIC ?stateDesc@StunEnd@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StunEnd@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e148h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e168h
+    jmp rax
+
 PUBLIC ?stateDesc@DeadImpactWall@EnemyFlashState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@DeadImpactWall@EnemyFlashState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297e188h
@@ -60860,14 +65200,59 @@ PUBLIC ?stateDesc@Hide@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297e1c0h
     jmp rax
 
+PUBLIC ?stateDesc@Idle@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idle@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e1e0h
+    jmp rax
+
+PUBLIC ?stateDesc@Notice@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Notice@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e200h
+    jmp rax
+
+PUBLIC ?stateDesc@Sit@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Sit@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e220h
+    jmp rax
+
 PUBLIC ?stateDesc@Standup@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Standup@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297e240h
     jmp rax
 
+PUBLIC ?stateDesc@Fall@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Fall@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e260h
+    jmp rax
+
+PUBLIC ?stateDesc@Doomeye@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Doomeye@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e280h
+    jmp rax
+
+PUBLIC ?stateDesc@CombatIdle@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CombatIdle@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e2a0h
+    jmp rax
+
 PUBLIC ?stateDesc@Turn@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Turn@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297e2c0h
+    jmp rax
+
+PUBLIC ?stateDesc@Shot@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Shot@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e2e0h
+    jmp rax
+
+PUBLIC ?stateDesc@Lost@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Lost@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e300h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e320h
     jmp rax
 
 PUBLIC ?stateDesc@Blow@EnemyGunHunterState@app@@0VStateDesc@ut@hh@@B
@@ -60890,14 +65275,119 @@ PUBLIC ?stateDesc@Waiting@EnemyManState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297e450h
     jmp rax
 
+PUBLIC ?stateDesc@Idling@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idling@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e470h
+    jmp rax
+
+PUBLIC ?stateDesc@Appear@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Appear@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e490h
+    jmp rax
+
+PUBLIC ?stateDesc@Respawn@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Respawn@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e4b0h
+    jmp rax
+
+PUBLIC ?stateDesc@Moving@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Moving@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e4d0h
+    jmp rax
+
+PUBLIC ?stateDesc@Running@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Running@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e4f0h
+    jmp rax
+
+PUBLIC ?stateDesc@Walking@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Walking@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e510h
+    jmp rax
+
+PUBLIC ?stateDesc@Around@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Around@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e530h
+    jmp rax
+
+PUBLIC ?stateDesc@Turning@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Turning@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e550h
+    jmp rax
+
+PUBLIC ?stateDesc@Falling@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Falling@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e570h
+    jmp rax
+
+PUBLIC ?stateDesc@Landing@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Landing@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e590h
+    jmp rax
+
+PUBLIC ?stateDesc@Attacking@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Attacking@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e5b0h
+    jmp rax
+
+PUBLIC ?stateDesc@Wall@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Wall@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e5d0h
+    jmp rax
+
+PUBLIC ?stateDesc@Wave@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Wave@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e5f0h
+    jmp rax
+
+PUBLIC ?stateDesc@StraightWave@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StraightWave@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e610h
+    jmp rax
+
+PUBLIC ?stateDesc@DoubleLariat@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DoubleLariat@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e630h
+    jmp rax
+
 PUBLIC ?stateDesc@Rush@EnemyManState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Rush@EnemyManState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297e650h
     jmp rax
 
+PUBLIC ?stateDesc@Guarding@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Guarding@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e670h
+    jmp rax
+
+PUBLIC ?stateDesc@Seeking@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Seeking@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e690h
+    jmp rax
+
+PUBLIC ?stateDesc@Losted@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Losted@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e6b0h
+    jmp rax
+
 PUBLIC ?stateDesc@AttackBase@EnemyManState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@AttackBase@EnemyManState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297e6d0h
+    jmp rax
+
+PUBLIC ?stateDesc@Overturned@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Overturned@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e6f0h
+    jmp rax
+
+PUBLIC ?stateDesc@KnockedBack@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@KnockedBack@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e710h
+    jmp rax
+
+PUBLIC ?stateDesc@KnockedBackStart@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@KnockedBackStart@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e730h
     jmp rax
 
 PUBLIC ?stateDesc@KnockedBackLoop@EnemyManState@app@@0VStateDesc@ut@hh@@B
@@ -60910,14 +65400,119 @@ PUBLIC ?stateDesc@BlownUp@EnemyManState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297e790h
     jmp rax
 
+PUBLIC ?stateDesc@BlownUpStart@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUpStart@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e7b0h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUpLoop@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUpLoop@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e7d0h
+    jmp rax
+
+PUBLIC ?stateDesc@Blow@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Blow@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e7f0h
+    jmp rax
+
+PUBLIC ?stateDesc@Blown@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Blown@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e810h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDown@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDown@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e830h
+    jmp rax
+
+PUBLIC ?stateDesc@Down@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Down@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e850h
+    jmp rax
+
+PUBLIC ?stateDesc@StandUp@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StandUp@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e870h
+    jmp rax
+
+PUBLIC ?stateDesc@DamagedSmash@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@DamagedSmash@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e890h
+    jmp rax
+
+PUBLIC ?stateDesc@Dead@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Dead@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e8b0h
+    jmp rax
+
+PUBLIC ?stateDesc@ChangeMode@EnemyManState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ChangeMode@EnemyManState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e8d0h
+    jmp rax
+
+PUBLIC ?stateDesc@Idling@EnemyManVisualState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idling@EnemyManVisualState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e8f0h
+    jmp rax
+
+PUBLIC ?stateDesc@Appear@EnemyManVisualState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Appear@EnemyManVisualState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e910h
+    jmp rax
+
+PUBLIC ?stateDesc@Spinning@EnemyManVisualState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Spinning@EnemyManVisualState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e930h
+    jmp rax
+
+PUBLIC ?stateDesc@Transform@EnemyManVisualState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Transform@EnemyManVisualState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e950h
+    jmp rax
+
+PUBLIC ?stateDesc@Idle@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idle@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e970h
+    jmp rax
+
 PUBLIC ?stateDesc@Move@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Move@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297e990h
     jmp rax
 
+PUBLIC ?stateDesc@Fall@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Fall@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e9b0h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e9d0h
+    jmp rax
+
+PUBLIC ?stateDesc@TurnAround@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@TurnAround@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297e9f0h
+    jmp rax
+
 PUBLIC ?stateDesc@AttackStart@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@AttackStart@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297ea10h
+    jmp rax
+
+PUBLIC ?stateDesc@Attack@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Attack@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ea30h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackDash@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackDash@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ea50h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackSliding@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackSliding@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ea70h
     jmp rax
 
 PUBLIC ?stateDesc@AttackEnd@EnemyMotoraState@app@@0VStateDesc@ut@hh@@B
@@ -60940,9 +65535,39 @@ PUBLIC ?stateDesc@Hide@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297eb10h
     jmp rax
 
+PUBLIC ?stateDesc@Idling@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idling@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297eb30h
+    jmp rax
+
+PUBLIC ?stateDesc@MovePrepara@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MovePrepara@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297eb50h
+    jmp rax
+
+PUBLIC ?stateDesc@MoveGrind@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MoveGrind@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297eb70h
+    jmp rax
+
 PUBLIC ?stateDesc@Turn@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Turn@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297eb90h
+    jmp rax
+
+PUBLIC ?stateDesc@Jump@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Jump@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ebb0h
+    jmp rax
+
+PUBLIC ?stateDesc@Fall@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Fall@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ebd0h
+    jmp rax
+
+PUBLIC ?stateDesc@MoveValueChange@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MoveValueChange@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ebf0h
     jmp rax
 
 PUBLIC ?stateDesc@Stun@EnemyRhinolinerState@app@@0VStateDesc@ut@hh@@B
@@ -60965,9 +65590,99 @@ PUBLIC ?stateDesc@Idling@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297ec98h
     jmp rax
 
+PUBLIC ?stateDesc@Hiding@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Hiding@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ecb8h
+    jmp rax
+
+PUBLIC ?stateDesc@Appear@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Appear@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ecd8h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyHomingLasers@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyHomingLasers@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ecf8h
+    jmp rax
+
+PUBLIC ?stateDesc@ShootHomingLasers@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShootHomingLasers@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ed18h
+    jmp rax
+
+PUBLIC ?stateDesc@ShotHomingLasers@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShotHomingLasers@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ed38h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyHomingLaser@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyHomingLaser@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ed58h
+    jmp rax
+
+PUBLIC ?stateDesc@ShootHomingLaser@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShootHomingLaser@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ed78h
+    jmp rax
+
+PUBLIC ?stateDesc@ShotHomingLaser@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ShotHomingLaser@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ed98h
+    jmp rax
+
+PUBLIC ?stateDesc@Retreat@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Retreat@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297edb8h
+    jmp rax
+
+PUBLIC ?stateDesc@RetreatEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@RetreatEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297edd8h
+    jmp rax
+
+PUBLIC ?stateDesc@Escape@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Escape@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297edf8h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAway@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAway@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ee18h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAwayEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAwayEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ee38h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUp@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUp@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ee58h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUpEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUpEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ee78h
+    jmp rax
+
 PUBLIC ?stateDesc@BlownDown@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@BlownDown@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297ee98h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDownEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDownEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297eeb8h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297eed8h
+    jmp rax
+
+PUBLIC ?stateDesc@StunEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StunEnd@EnemySalvoState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297eef8h
     jmp rax
 
 PUBLIC ?stateDesc@Dead@EnemySalvoState@app@@0VStateDesc@ut@hh@@B
@@ -60985,6 +65700,81 @@ PUBLIC ?stateDesc@Appear@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
     mov rax, 014297ef78h
     jmp rax
 
+PUBLIC ?stateDesc@Idling@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idling@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297ef98h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyMove@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyMove@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297efb8h
+    jmp rax
+
+PUBLIC ?stateDesc@Moving@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Moving@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297efd8h
+    jmp rax
+
+PUBLIC ?stateDesc@MoveEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MoveEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297eff8h
+    jmp rax
+
+PUBLIC ?stateDesc@ReadyAttackBlade@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@ReadyAttackBlade@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f018h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackBlade@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackBlade@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f038h
+    jmp rax
+
+PUBLIC ?stateDesc@AttackedBlade@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@AttackedBlade@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f058h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAway@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAway@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f078h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownAwayEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownAwayEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f098h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUp@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUp@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f0b8h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownUpEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownUpEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f0d8h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDown@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDown@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f0f8h
+    jmp rax
+
+PUBLIC ?stateDesc@BlownDownEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@BlownDownEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f118h
+    jmp rax
+
+PUBLIC ?stateDesc@Stun@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Stun@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f138h
+    jmp rax
+
+PUBLIC ?stateDesc@StunEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StunEnd@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f158h
+    jmp rax
+
 PUBLIC ?stateDesc@Dead@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Dead@EnemySoldierState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297f178h
@@ -60998,6 +65788,21 @@ PUBLIC ?stateDesc@DeadImpactWall@EnemySoldierState@app@@0VStateDesc@ut@hh@@B
 PUBLIC ?stateDesc@Waiting@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@Waiting@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B:
     mov rax, 014297f1c8h
+    jmp rax
+
+PUBLIC ?stateDesc@Idling@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@Idling@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f1e8h
+    jmp rax
+
+PUBLIC ?stateDesc@MoveBase@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MoveBase@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f208h
+    jmp rax
+
+PUBLIC ?stateDesc@MoveRotateNormal@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B
+?stateDesc@MoveRotateNormal@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 014297f228h
     jmp rax
 
 PUBLIC ?stateDesc@MoveRotateHighSpeed@EnemyTwisterState@app@@0VStateDesc@ut@hh@@B
@@ -61065,9 +65870,99 @@ PUBLIC ?stateDesc@StateChaosAttack@player@app@@0VStateDesc@ut@hh@@B
     mov rax, 01429804a8h
     jmp rax
 
+PUBLIC ?stateDesc@StateShotChaosSpear@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateShotChaosSpear@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429804c8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateShotChaosSpearRunning@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateShotChaosSpearRunning@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429804e8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateShotChaosSpearAir@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateShotChaosSpearAir@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980508h
+    jmp rax
+
+PUBLIC ?stateDesc@StateChaosWarp@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateChaosWarp@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980528h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDBlowRush@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDBlowRush@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980548h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDBlowRushFinish@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDBlowRushFinish@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980568h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDBlowOff@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDBlowOff@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980588h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDBlowUp@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDBlowUp@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429805a8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDBlowDown@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDBlowDown@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429805c8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateGuardedFlipBack@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateGuardedFlipBack@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429805e8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateHomingAttackRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateHomingAttackRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980608h
+    jmp rax
+
+PUBLIC ?stateDesc@StateHomingAttack@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateHomingAttack@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980628h
+    jmp rax
+
+PUBLIC ?stateDesc@StateHomingFinished@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateHomingFinished@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980648h
+    jmp rax
+
+PUBLIC ?stateDesc@StateHomingFinish@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateHomingFinish@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980668h
+    jmp rax
+
+PUBLIC ?stateDesc@StateHomingRepelled@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateHomingRepelled@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980688h
+    jmp rax
+
 PUBLIC ?stateDesc@StateAirBoost@player@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StateAirBoost@player@app@@0VStateDesc@ut@hh@@B:
     mov rax, 01429806a8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateBackflip@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateBackflip@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429806c8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateBallMove@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateBallMove@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429806e8h
+    jmp rax
+
+PUBLIC ?stateDesc@StatePipeMove@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StatePipeMove@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980708h
     jmp rax
 
 PUBLIC ?stateDesc@StatePipeOut@player@app@@0VStateDesc@ut@hh@@B
@@ -61090,9 +65985,159 @@ PUBLIC ?stateDesc@StateBrake@player@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142980798h
     jmp rax
 
+PUBLIC ?stateDesc@StateBrakeNeutral@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateBrakeNeutral@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429807b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateBumpJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateBumpJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429807d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateClimbing@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateClimbing@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429807f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateClimbingEdge@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateClimbingEdge@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980818h
+    jmp rax
+
+PUBLIC ?stateDesc@StateCollectionRoom@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateCollectionRoom@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980838h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDamageRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDamageRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980858h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDamage@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDamage@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980878h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDamageBlowOff@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDamageBlowOff@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980898h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDamageLava@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDamageLava@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429808b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDamageQuake@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDamageQuake@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429808d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDamageRunning@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDamageRunning@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429808f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDamageTurnBack@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDamageTurnBack@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980918h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDAmoeba@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDAmoeba@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980938h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDAmoebaChangeGround@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDAmoebaChangeGround@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980958h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDAmoebaAir@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDAmoebaAir@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980978h
+    jmp rax
+
 PUBLIC ?stateDesc@StateDAmoebaJump@player@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StateDAmoebaJump@player@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142980998h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDAmoebaDash@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDAmoebaDash@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429809b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDAmoebaHoming@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDAmoebaHoming@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429809d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDead@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDead@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429809f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StatePressDead@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StatePressDead@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980a18h
+    jmp rax
+
+PUBLIC ?stateDesc@StateUpDead@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateUpDead@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980a38h
+    jmp rax
+
+PUBLIC ?stateDesc@StateFallingDead@states@heur@@0VStateDesc@ut@hh@@B
+?stateDesc@StateFallingDead@states@heur@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980a58h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSuffocatingDead@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSuffocatingDead@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980a78h
+    jmp rax
+
+PUBLIC ?stateDesc@StateLavaDead@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateLavaDead@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980a98h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDestination@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDestination@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980ab8h
+    jmp rax
+
+PUBLIC ?stateDesc@PlayerStateLevitation@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@PlayerStateLevitation@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980ad8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980af8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDiving@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDiving@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980b18h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingFall@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingFall@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980b38h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingDamage@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingDamage@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980b58h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingSpring@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingSpring@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980b78h
     jmp rax
 
 PUBLIC ?stateDesc@StateDivingChangeVolume@player@app@@0VStateDesc@ut@hh@@B
@@ -61100,14 +66145,119 @@ PUBLIC ?stateDesc@StateDivingChangeVolume@player@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142980b98h
     jmp rax
 
+PUBLIC ?stateDesc@StateDivingSpecialRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingSpecialRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980bb8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingSpecial@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingSpecial@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980bd8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingSpecialFall@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingSpecialFall@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980bf8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingSpecialDamage@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingSpecialDamage@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980c18h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingSpecialPush@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingSpecialPush@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980c38h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDivingSpecialDashRing@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDivingSpecialDashRing@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980c58h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDrift@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDrift@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980c78h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDriftDash@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDriftDash@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980c98h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDriftAir@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDriftAir@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980cb8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDropDash@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDropDash@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980cd8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDSurf@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDSurf@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980cf8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDSurfAir@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDSurfAir@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980d18h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDSurfGround@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDSurfGround@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980d38h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDSurfJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDSurfJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980d58h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDSurfVirticalJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDSurfVirticalJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980d78h
+    jmp rax
+
 PUBLIC ?stateDesc@StateDSurfDamage@player@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StateDSurfDamage@player@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142980d98h
     jmp rax
 
+PUBLIC ?stateDesc@StateDSurfFinish@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDSurfFinish@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980db8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDSurfSpin@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDSurfSpin@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980dd8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDSurfWarp@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDSurfWarp@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980df8h
+    jmp rax
+
 PUBLIC ?stateDesc@StateDWingStart@player@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StateDWingStart@player@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142980e18h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDWingGuard@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDWingGuard@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980e38h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDWingFlinch@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDWingFlinch@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980e58h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDWingDead@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDWingDead@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980e78h
     jmp rax
 
 PUBLIC ?stateDesc@StateFall@player@app@@0VStateDesc@ut@hh@@B
@@ -61140,6 +66290,21 @@ PUBLIC ?stateDesc@StateGliding@player@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142980f50h
     jmp rax
 
+PUBLIC ?stateDesc@StateGoal@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateGoal@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980f70h
+    jmp rax
+
+PUBLIC ?stateDesc@StateFixedGoal@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateFixedGoal@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980f90h
+    jmp rax
+
+PUBLIC ?stateDesc@StateGrindRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateGrindRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142980fb0h
+    jmp rax
+
 PUBLIC ?stateDesc@StateGrind@states@heur@@0VStateDesc@ut@hh@@B
 ?stateDesc@StateGrind@states@heur@@0VStateDesc@ut@hh@@B:
     mov rax, 0142980fd0h
@@ -61170,14 +66335,359 @@ PUBLIC ?stateDesc@StateGuard@player@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142981098h
     jmp rax
 
+PUBLIC ?stateDesc@StateImpactGimmick@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateImpactGimmick@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429810b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429810d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateDoubleJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateDoubleJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429810f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateRecoveryJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateRecoveryJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981118h
+    jmp rax
+
+PUBLIC ?stateDesc@StateBounceJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateBounceJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981138h
+    jmp rax
+
+PUBLIC ?stateDesc@StateShiftJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateShiftJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981158h
+    jmp rax
+
+PUBLIC ?stateDesc@StateShiftJumpAir@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateShiftJumpAir@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981178h
+    jmp rax
+
+PUBLIC ?stateDesc@StateJumpDash@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateJumpDash@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981198h
+    jmp rax
+
+PUBLIC ?stateDesc@StateLightDash@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateLightDash@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429811b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateOperateConsole@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateOperateConsole@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429811d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateParalysis@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateParalysis@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429811f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StatePhotonDash@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StatePhotonDash@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981218h
+    jmp rax
+
+PUBLIC ?stateDesc@StatePlayMotion@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StatePlayMotion@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981238h
+    jmp rax
+
+PUBLIC ?stateDesc@StateQuickStepRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateQuickStepRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981258h
+    jmp rax
+
+PUBLIC ?stateDesc@StateQuickStep@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateQuickStep@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981278h
+    jmp rax
+
+PUBLIC ?stateDesc@StateQuickStepLeft@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateQuickStepLeft@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981298h
+    jmp rax
+
+PUBLIC ?stateDesc@StateQuickStepRight@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateQuickStepRight@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429812b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateQuickStepCrash@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateQuickStepCrash@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429812d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateQuickStepJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateQuickStepJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429812f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateQuickStepDoubleJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateQuickStepDoubleJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981318h
+    jmp rax
+
+PUBLIC ?stateDesc@StateRecoil@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateRecoil@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981338h
+    jmp rax
+
+PUBLIC ?stateDesc@StateRecovery@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateRecovery@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981358h
+    jmp rax
+
+PUBLIC ?stateDesc@StateRun@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateRun@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981378h
+    jmp rax
+
+PUBLIC ?stateDesc@StateRunOnWater@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateRunOnWater@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981398h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSendSignal@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSendSignal@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429813b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateLeftStep@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateLeftStep@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429813d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateRightStep@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateRightStep@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429813f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateLeftStepRun@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateLeftStepRun@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981418h
+    jmp rax
+
+PUBLIC ?stateDesc@StateRightStepRun@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateRightStepRun@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981438h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSlalomStep@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSlalomStep@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981458h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSlider@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSlider@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981478h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSliderAir@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSliderAir@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981498h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSliderJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSliderJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429814b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSpin@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSpin@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429814d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSpinAttack@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSpinAttack@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429814f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSpinDash@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSpinDash@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981518h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSquatRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSquatRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981538h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSquat@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSquat@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981558h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSliding@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSliding@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981578h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSlidingToStand@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSlidingToStand@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981598h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSleep@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSleep@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429815b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStandRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStandRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429815d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStand@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStand@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429815f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateHoldStand@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateHoldStand@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981618h
+    jmp rax
+
+PUBLIC ?stateDesc@StateRunningStart@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateRunningStart@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981638h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStomping@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStomping@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981658h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStompingFlip@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStompingFlip@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981678h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStompingDown@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStompingDown@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981698h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStompingAttack@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStompingAttack@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429816b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStompingPress@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStompingPress@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429816d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStompingLand@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStompingLand@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429816f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStompingBounce@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStompingBounce@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981718h
+    jmp rax
+
+PUBLIC ?stateDesc@StateStraightJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateStraightJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981738h
+    jmp rax
+
+PUBLIC ?stateDesc@StateTalkMode@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateTalkMode@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981758h
+    jmp rax
+
+PUBLIC ?stateDesc@StateTimeStopStart@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateTimeStopStart@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981778h
+    jmp rax
+
+PUBLIC ?stateDesc@StateTreeJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateTreeJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981798h
+    jmp rax
+
+PUBLIC ?stateDesc@StateTumble@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateTumble@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429817b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateTurn@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateTurn@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429817d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWakeUp@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWakeUp@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429817f8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWallHoming@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWallHoming@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981818h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWallHanging@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWallHanging@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981838h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWallLanding@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWallLanding@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981858h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWallRest@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWallRest@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981878h
+    jmp rax
+
 PUBLIC ?stateDesc@StateWallLeave@player@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StateWallLeave@player@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142981898h
     jmp rax
 
+PUBLIC ?stateDesc@StateWallReset@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWallReset@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429818b8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWallActionRoot@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWallActionRoot@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429818d8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWallMove@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWallMove@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429818f8h
+    jmp rax
+
 PUBLIC ?stateDesc@StateWallSlideDown@player@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@StateWallSlideDown@player@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142981918h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWarpStart@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWarpStart@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981938h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWarpEnd@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWarpEnd@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981958h
+    jmp rax
+
+PUBLIC ?stateDesc@StateWaterFall@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateWaterFall@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981978h
     jmp rax
 
 PUBLIC ?stateDesc@StateWaterFlow@player@app@@0VStateDesc@ut@hh@@B
@@ -61195,9 +66705,39 @@ PUBLIC ?stateDesc@StateCloudJump@player@app@@0VStateDesc@ut@hh@@B
     mov rax, 01429819e8h
     jmp rax
 
+PUBLIC ?stateDesc@StateFan@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateFan@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981a08h
+    jmp rax
+
+PUBLIC ?stateDesc@StateHangPole@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateHangPole@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981a28h
+    jmp rax
+
+PUBLIC ?stateDesc@StateHangPoleJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateHangPoleJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981a48h
+    jmp rax
+
 PUBLIC ?stateDesc@StateJumpBoardLaunch@states@heur@@0VStateDesc@ut@hh@@B
 ?stateDesc@StateJumpBoardLaunch@states@heur@@0VStateDesc@ut@hh@@B:
     mov rax, 0142981a68h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSpringJump@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSpringJump@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981a88h
+    jmp rax
+
+PUBLIC ?stateDesc@StateSpringJumpHeadLand@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateSpringJumpHeadLand@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981aa8h
+    jmp rax
+
+PUBLIC ?stateDesc@StateTreadmill@player@app@@0VStateDesc@ut@hh@@B
+?stateDesc@StateTreadmill@player@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142981ac8h
     jmp rax
 
 PUBLIC ?stateDesc@StateWallJumpReady@player@app@@0VStateDesc@ut@hh@@B
@@ -61235,9 +66775,39 @@ PUBLIC ?stateDesc@Idle@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
     mov rax, 0142982200h
     jmp rax
 
+PUBLIC ?stateDesc@CreateModelInstance@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CreateModelInstance@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142982220h
+    jmp rax
+
+PUBLIC ?stateDesc@CreateTerrainModelInstance@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CreateTerrainModelInstance@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142982240h
+    jmp rax
+
+PUBLIC ?stateDesc@CreatePointcloudModelInstance@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CreatePointcloudModelInstance@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 0142982260h
+    jmp rax
+
 PUBLIC ?stateDesc@CreateGrassModelInstance@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
 ?stateDesc@CreateGrassModelInstance@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B:
     mov rax, 0142982280h
+    jmp rax
+
+PUBLIC ?stateDesc@CreateModel@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CreateModel@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429822a0h
+    jmp rax
+
+PUBLIC ?stateDesc@CreateTerrainModel@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CreateTerrainModel@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429822c0h
+    jmp rax
+
+PUBLIC ?stateDesc@CreateClipmap@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
+?stateDesc@CreateClipmap@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B:
+    mov rax, 01429822e0h
     jmp rax
 
 PUBLIC ?stateDesc@Finish@State@TerrainVisualCreator@trr@app@@0VStateDesc@ut@hh@@B
@@ -63420,6 +68990,16 @@ PUBLIC ??0Unk2@GOCPlayerKinematicParams@player@app@@QEAA@XZ
     mov rax, 014bb64c90h
     jmp rax
 
+PUBLIC ?OnGOCEvent@GOCPlayerParameter@player@app@@UEAAXW4GOCEvent@GOComponent@game@hh@@AEAVGameObject@67@PEAX@Z
+?OnGOCEvent@GOCPlayerParameter@player@app@@UEAAXW4GOCEvent@GOComponent@game@hh@@AEAVGameObject@67@PEAX@Z:
+    mov rax, 014bc0a150h
+    jmp rax
+
+PUBLIC ?Setup@GOCPlayerParameter@player@app@@QEAAXAEBUSetupInfo@123@@Z
+?Setup@GOCPlayerParameter@player@app@@QEAAXAEBUSetupInfo@123@@Z:
+    mov rax, 014bc12530h
+    jmp rax
+
 PUBLIC ??0PlayerCounterTimer@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0PlayerCounterTimer@player@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014be056a0h
@@ -63725,6 +69305,16 @@ PUBLIC ??0UIListViewItem@ui@hh@@QEAA@PEAVIAllocator@fnd@csl@@_K@Z
     mov rax, 014f857e00h
     jmp rax
 
+PUBLIC ??_DInputDevice@hid@hh@@QEAAXXZ
+??_DInputDevice@hid@hh@@QEAAXXZ:
+    mov rax, 014f91f1b0h
+    jmp rax
+
+PUBLIC ??_DVibration@hid@hh@@QEAAXXZ
+??_DVibration@hid@hh@@QEAAXXZ:
+    mov rax, 014f91f1b0h
+    jmp rax
+
 PUBLIC ?Create@GOCUICollider@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCUICollider@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014f9c3380h
@@ -63983,6 +69573,11 @@ PUBLIC ?Create@ResAnimTexPat@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@
 PUBLIC ?Create@ResAnimVis@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@ResAnimVis@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01515119b0h
+    jmp rax
+
+PUBLIC ?Load@ResMaterial@gfx@hh@@UEAAXPEAX_K@Z
+?Load@ResMaterial@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0151518440h
     jmp rax
 
 PUBLIC ?Unload@ResMaterial@gfx@hh@@UEAAXXZ
@@ -64430,6 +70025,11 @@ PUBLIC ?SetEnabled@CameraComponent@game@hh@@QEAAX_N@Z
     mov rax, 015249f5b0h
     jmp rax
 
+PUBLIC ??_DResObjectWorld@game@hh@@QEAAXXZ
+??_DResObjectWorld@game@hh@@QEAAXXZ:
+    mov rax, 01524d89d0h
+    jmp rax
+
 PUBLIC ?Create@ResMasterLevel@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@ResMasterLevel@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01524edf30h
@@ -64875,11 +70475,6 @@ PUBLIC ?SendMessage@Messenger@fnd@hh@@IEAAPEAVMessageAsyncHandler@23@AEAV?$Handl
     mov rax, 0156df9960h
     jmp rax
 
-PUBLIC ?GetTempAllocator@MemoryRouter@fnd@hh@@SAPEAVIAllocator@2csl@@XZ
-?GetTempAllocator@MemoryRouter@fnd@hh@@SAPEAVIAllocator@2csl@@XZ:
-    mov rax, 0156e7c3b0h
-    jmp rax
-
 PUBLIC ??0Message@fnd@hh@@QEAA@W4MessageID@12@@Z
 ??0Message@fnd@hh@@QEAA@W4MessageID@12@@Z:
     mov rax, 0156ef40c0h
@@ -64955,6 +70550,41 @@ PUBLIC ?GetNumMembers@RflClass@fnd@hh@@QEBAIXZ
     mov rax, 0157454ab0h
     jmp rax
 
+PUBLIC ?GetTempAllocator@MemoryRouter@fnd@hh@@SAPEAVIAllocator@2csl@@XZ
+?GetTempAllocator@MemoryRouter@fnd@hh@@SAPEAVIAllocator@2csl@@XZ:
+    mov rax, 0157469070h
+    jmp rax
+
+PUBLIC ??_DFilePathResolver@fnd@hh@@QEAAXXZ
+??_DFilePathResolver@fnd@hh@@QEAAXXZ:
+    mov rax, 0157536730h
+    jmp rax
+
+PUBLIC ??_DResourceManager@fnd@hh@@QEAAXXZ
+??_DResourceManager@fnd@hh@@QEAAXXZ:
+    mov rax, 0157539e90h
+    jmp rax
+
+PUBLIC ?AddResourceListener@ResourceManager@fnd@hh@@QEAAXPEAVResourceListener@123@PEBUResourceTypeInfo@23@@Z
+?AddResourceListener@ResourceManager@fnd@hh@@QEAAXPEAVResourceListener@123@PEBUResourceTypeInfo@23@@Z:
+    mov rax, 015753ec40h
+    jmp rax
+
+PUBLIC ?RemoveResourceListener@ResourceManager@fnd@hh@@QEAAXPEAVResourceListener@123@PEBUResourceTypeInfo@23@@Z
+?RemoveResourceListener@ResourceManager@fnd@hh@@QEAAXPEAVResourceListener@123@PEBUResourceTypeInfo@23@@Z:
+    mov rax, 0157545b50h
+    jmp rax
+
+PUBLIC ?RMRU1L_UnkFunc1@ResourceManager@fnd@hh@@UEAAX_K0@Z
+?RMRU1L_UnkFunc1@ResourceManager@fnd@hh@@UEAAX_K0@Z:
+    mov rax, 0157553680h
+    jmp rax
+
+PUBLIC ?RMRU1L_UnkFunc2@ResourceManager@fnd@hh@@UEAAX_K0@Z
+?RMRU1L_UnkFunc2@ResourceManager@fnd@hh@@UEAAX_K0@Z:
+    mov rax, 01575686e0h
+    jmp rax
+
 PUBLIC ?Initialize@ResourceManager@fnd@hh@@QEAAXXZ
 ?Initialize@ResourceManager@fnd@hh@@QEAAXXZ:
     mov rax, 0157578230h
@@ -65025,6 +70655,16 @@ PUBLIC ?Reserve@MessageQueue@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_K@Z
     mov rax, 0157e04170h
     jmp rax
 
+PUBLIC ??_DMouseWin32@hid@hh@@QEAAXXZ
+??_DMouseWin32@hid@hh@@QEAAXXZ:
+    mov rax, 0157f5cc00h
+    jmp rax
+
+PUBLIC ?IsFlag4@MouseWin32@hid@hh@@UEBA_NXZ
+?IsFlag4@MouseWin32@hid@hh@@UEBA_NXZ:
+    mov rax, 0157f63a70h
+    jmp rax
+
 PUBLIC ??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
 ??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z:
     mov rax, 015802e5c0h
@@ -65045,14 +70685,39 @@ PUBLIC ??0Keyboard@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0158431840h
     jmp rax
 
+PUBLIC ??0KeyboardWin32@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0KeyboardWin32@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0158443640h
+    jmp rax
+
 PUBLIC ??_DKeyboardWin32@hid@hh@@QEAAXXZ
 ??_DKeyboardWin32@hid@hh@@QEAAXXZ:
     mov rax, 015844f440h
     jmp rax
 
+PUBLIC ??0Mouse@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0Mouse@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 015848f8d0h
+    jmp rax
+
+PUBLIC ?UnkFunc11@VibrationWin32@hid@hh@@UEAAXXZ
+?UnkFunc11@VibrationWin32@hid@hh@@UEAAXXZ:
+    mov rax, 015849faf0h
+    jmp rax
+
 PUBLIC ?UnkFunc13@VibrationWin32@hid@hh@@UEAAXXZ
 ?UnkFunc13@VibrationWin32@hid@hh@@UEAAXXZ:
     mov rax, 01584a8a60h
+    jmp rax
+
+PUBLIC ??0StaticResourceContainer@fnd@hh@@QEAA@PEAVIAllocator@1csl@@PEBUResourceTypeInfo@12@PEAX@Z
+??0StaticResourceContainer@fnd@hh@@QEAA@PEAVIAllocator@1csl@@PEBUResourceTypeInfo@12@PEAX@Z:
+    mov rax, 0158660ca0h
+    jmp rax
+
+PUBLIC ??_DStaticResourceContainer@fnd@hh@@QEAAXXZ
+??_DStaticResourceContainer@fnd@hh@@QEAAXXZ:
+    mov rax, 0158691710h
     jmp rax
 
 PUBLIC ??_DBuiltinTypeRegistry@fnd@hh@@QEAAXXZ
@@ -65063,6 +70728,26 @@ PUBLIC ??_DBuiltinTypeRegistry@fnd@hh@@QEAAXXZ
 PUBLIC ?Instantiate@BuiltinTypeRegistry@fnd@hh@@SAPEAV123@XZ
 ?Instantiate@BuiltinTypeRegistry@fnd@hh@@SAPEAV123@XZ:
     mov rax, 01586bdce0h
+    jmp rax
+
+PUBLIC ?Initialize@UnpackedResourceContainer@fnd@hh@@QEAAXPEAVResourceCriticalSection@23@@Z
+?Initialize@UnpackedResourceContainer@fnd@hh@@QEAAXPEAVResourceCriticalSection@23@@Z:
+    mov rax, 01586d5d10h
+    jmp rax
+
+PUBLIC ?ResolveName@FilePathResolver@fnd@hh@@UEAAPEADPEBDPEAUResourceTypeInfo@23@PEAD_K@Z
+?ResolveName@FilePathResolver@fnd@hh@@UEAAPEADPEBDPEAUResourceTypeInfo@23@PEAD_K@Z:
+    mov rax, 015880bd70h
+    jmp rax
+
+PUBLIC ??0ResourceCriticalSection@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
+??0ResourceCriticalSection@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z:
+    mov rax, 0158811310h
+    jmp rax
+
+PUBLIC ?Initialize@ResourceCriticalSection@fnd@hh@@QEAAXXZ
+?Initialize@ResourceCriticalSection@fnd@hh@@QEAAXXZ:
+    mov rax, 0158823150h
     jmp rax
 
 PUBLIC ??_DPlayerController@player@app@@QEAAXXZ

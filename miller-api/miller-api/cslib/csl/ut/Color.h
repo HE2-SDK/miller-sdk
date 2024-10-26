@@ -21,8 +21,8 @@ namespace csl::ut {
         }
     };
 
-    using Color8 = Color<uint8_t>;
-    using Colorf = Color<float>;
+    typedef Color<uint8_t> Color8;
+    typedef Color<float> Colorf;
 
     // struct Color8 : Color<uint8_t>{ using Color<uint8_t>::Color; };
     // struct Colorf : Color<float>{ using Color<float>::Color; };

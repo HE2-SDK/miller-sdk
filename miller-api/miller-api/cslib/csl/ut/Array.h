@@ -108,7 +108,7 @@ namespace csl::ut
 			reserve(in_capacity);
 		}
 
-		Array(const Array<T, S>& other) : Array<T, S>{ other.m_capacity, other.m_pAllocator } {
+		Array(const Array<T, S>& other) : Array<T, S>{ other.capacity(), other.m_pAllocator} {
 			for (T& x : other) {
 				this->push_back(x);
 			}

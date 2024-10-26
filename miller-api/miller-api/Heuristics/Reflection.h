@@ -23784,7 +23784,7 @@ namespace heur::rfl {
     };
 }
 
-namespace heur::rfl {
+namespace app::player {
     struct PlayerCameraParameter {
         enum class CameraType : uint8_t {
             None = 0,
@@ -23821,11 +23821,11 @@ namespace heur::rfl {
     };
 }
 
-namespace heur::rfl {
+namespace app::player {
     struct PlayerCameraSetParameter {
         csl::ut::VariableString name;
         float easeoutTime;
-        heur::rfl::PlayerCameraParameter param[8];
+        app::player::PlayerCameraParameter param[8];
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -23836,9 +23836,9 @@ namespace heur::rfl {
     };
 }
 
-namespace heur::rfl {
+namespace app::player {
     struct PlayerCameraSetParameters {
-        heur::rfl::PlayerCameraSetParameter data[45];
+        app::player::PlayerCameraSetParameter data[45];
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;

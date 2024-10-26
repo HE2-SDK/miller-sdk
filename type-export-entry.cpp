@@ -81,6 +81,8 @@ template class csl::ut::InplaceMoveArray<csl::ut::Pair<hh::fnd::HFrame*, bool>, 
 // template class app::gfx::FxParamManager::Interpolator<hh::needle::FxDetailParameter>;
 // template class app::gfx::FxParamManager::Interpolator<hh::needle::FxDynamicResolutionParameter>;
 // template class app::gfx::FxParamManager::Interpolator<hh::gfx::StageCommonTimeProgressParameter>;
+template class hh::fnd::ResReflectionT<app::player::PlayerParameters>;
+template class hh::fnd::ResReflectionT<app::player::PlayerCameraSetParameters>;
 template class csl::ut::PointerMap<hh::game::GameObjectClass*, csl::ut::MoveArray<hh::game::GameObject*>*>;
 template class csl::ut::StringMap<hh::game::ObjectWorldChunkLayer*>;
 template class csl::ut::HashMap<const char*, hh::game::ObjectWorldChunkLayer*, csl::ut::StringMapOperation>;

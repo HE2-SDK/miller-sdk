@@ -22,9 +22,10 @@ namespace hh::fnd {
     class StaticResourceContainer;
     class ManagedResource : public ReferencedObject, private csl::ut::NonCopyable {
     public:
-        csl::ut::VariableString name;
-        uint32_t unk3;
-        uint8_t unk4;
+        void* ref2InnerData;
+        size_t unk1;
+        uint32_t ref2Hash;
+        bool isRef2;
         csl::ut::VariableString unk5;
         csl::ut::MoveArray<void*> unk6;
         csl::ut::VariableString name2;
@@ -57,10 +58,8 @@ namespace hh::fnd {
         static ManagedResource* Create(csl::fnd::IAllocator* allocator, File* file, const char* name, ResourceTypeInfo* resourceTypeInfo);
         static ManagedResource* Create(csl::fnd::IAllocator* allocator, csl::fnd::IAllocator* resourceAllocator, const char* unkStrParam, const char* name, void* data, size_t size, ResourceTypeInfo* resourceTypeInfo);
 
-        // This is only guessed from a similar function in rio, but there this and the following function are swapped.
-        // I haven't actually seen this be overridden anywhere.
-        virtual void LoadFromStaticResourceContainer(void* data, size_t size, StaticResourceContainer* container);
         virtual void Load(void* data, size_t size) = 0;
+        virtual void LoadRef2(void* data, size_t size);
         virtual void Unload() = 0;
         virtual void Resolve(ResourceResolver& resolver) {}
         virtual void Reload(void* data, size_t size) {}

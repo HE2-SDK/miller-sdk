@@ -8,6 +8,7 @@ namespace hh::needle {
         uint32_t pad;
         uint32_t refCount;
     protected:
+        NeedleRefcountObject();
         virtual void ReleasePostDestroyInternal();
         virtual NeedleRefcountObject* GetDependRefcountObject();
         virtual ~NeedleRefcountObject();

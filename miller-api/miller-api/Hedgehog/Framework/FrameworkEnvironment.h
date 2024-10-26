@@ -11,7 +11,6 @@ namespace hh::fw {
             CriSystemThing();
         };
 
-        bool unk1;
         fnd::SUpdateInfo updateInfo;
         Window* window;
         FrameworkOptions* options;

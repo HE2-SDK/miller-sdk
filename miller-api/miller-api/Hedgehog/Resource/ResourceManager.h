@@ -20,7 +20,6 @@ namespace hh::fnd {
         };
 
     private:
-        csl::ut::MoveArray<DynamicResourceContainer*> resourceContainers;
         UnpackedResourceContainer unpackedResourceContainer;
         csl::ut::PointerMap<const ResourceTypeInfo*, uint32_t> resourceContainerIndexByTypeInfo;
         TagResourceContainer tagResourceContainer;
@@ -28,16 +27,27 @@ namespace hh::fnd {
         csl::ut::MoveArray<ResourceListener*> resourceListeners;
         void* unk7;
         void* unk8;
-        ResourceCriticalSection* resourceCriticalSection;
+        fnd::Reference<FilePathResolver> filePathResolver;
+        fnd::Reference<ReferencedObject> unk10;
+        fnd::Reference<ResourceCriticalSection> resourceCriticalSection;
         csl::ut::MoveArray<ManagedResource*> addedResources;
         csl::fnd::Mutex mutex;
+        uint64_t unk11;
+        csl::ut::MoveArray<void*> unk12;
+        csl::fnd::Mutex mutex2;
+        bool unk13;
 
     public:
+        struct GetResourceExInfo {
+            bool unk1; 
+        };
+
         void AddResource(hh::fnd::ManagedResource* resource);
         void RemoveResource(hh::fnd::ManagedResource* resource);
         void FireResourceAdded(hh::fnd::ManagedResource* resource);
         void FireResourceRemoved(hh::fnd::ManagedResource* resource);
         ManagedResource* GetResource(const char* name, const hh::fnd::ResourceTypeInfo* resourceTypeInfo);
+        ManagedResource* GetResourceEx(const char* name, const hh::fnd::ResourceTypeInfo* resourceTypeInfo, const GetResourceExInfo& info);
         ResourceManager();
         void Initialize();
         void InitializeFilePathResolvers();
@@ -56,9 +66,9 @@ namespace hh::fnd {
         virtual void RMRU1L_UnkFunc2(uint64_t unkParam1, uint64_t unkParam2) override;
 
         const csl::ut::MoveArray<ManagedResource*>& GetResourcesByTypeInfo(const ResourceTypeInfo* typeInfo);
-        csl::ut::MoveArray<DynamicResourceContainer*>& GetResourceContainers() {
-            return resourceContainers;
-        }
+        // csl::ut::MoveArray<DynamicResourceContainer*>& GetResourceContainers() {
+        //     return resourceContainers;
+        // }
 
         template<typename T>
         inline T* GetResource(const char* name) {

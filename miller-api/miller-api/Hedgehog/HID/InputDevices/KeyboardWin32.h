@@ -4,7 +4,6 @@ namespace hh::hid {
     class KeyboardWin32 : public Keyboard {
         uint64_t unk101;
         uint64_t unk102;
-        uint64_t unk103;
         char unk104[1024];
         char unk105[1024];
         csl::ut::MoveArray<void*> unk106;

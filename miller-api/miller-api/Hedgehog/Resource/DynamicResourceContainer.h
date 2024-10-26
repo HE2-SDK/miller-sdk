@@ -21,7 +21,7 @@ namespace hh::fnd {
         virtual void* GetRuntimeTypeInfo() const override;
         virtual ManagedResource* GetResourceByName(const char* name) const override;
         virtual int GetNumResources() const override;
-        virtual void LoadResource(csl::fnd::IAllocator* resourceAllocator, const char* name) override;
         virtual ManagedResource* GetResourceByIndex(int index) const override;
+        virtual uint64_t UnkFunc5() override;
     };
 }
