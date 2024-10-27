@@ -749,7 +749,7 @@ struct SLIST_HEADER_SHIM {
 // #include "Application/Game/StageTerrainModule.h"
 // #include "Application/Game/StageObjectModule.h"
 // #include "Application/Game/GameModeResourceManager.h"
-// #include "Application/Game/GameMode.h"
+#include "Application/Game/GameMode.h"
 // #include "Application/Game/GameModeStage.h"
 // #include "Application/Game/GameModeExtension.h"
 // #include "Application/Game/GameModeLayerStatusExtension.h"

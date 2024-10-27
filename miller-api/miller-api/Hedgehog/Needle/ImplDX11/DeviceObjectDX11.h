@@ -39,7 +39,9 @@ namespace hh::needle {
             uint32_t unk9;
             intrusive_ptr<NeedleRefcountObject> unk10[32];
             csl::fnd::Mutex mutex;
-            GpuTimer gpuTimer;
+            uint64_t unk11;
+            intrusive_ptr<NeedleRefcountObject> unk12[508];
+            uint64_t unk13;
             PerfDiagnostics perfDiagnostics;
 
             enum class CreateDispatchFlags : unsigned int {

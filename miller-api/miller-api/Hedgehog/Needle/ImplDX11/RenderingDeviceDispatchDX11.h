@@ -76,6 +76,7 @@ namespace hh::needle::ImplDX11 {
             void FlushComputeShaderStage(ID3D11DeviceContext* deviceContext);
         };
 
+        intrusive_ptr<DeviceObjectDX11> deviceObject;
         ID3D11DeviceContext* deviceContext;
         Unk1 unk1;
         uint64_t* unk28;
