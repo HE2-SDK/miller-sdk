@@ -117,7 +117,7 @@ namespace hh::game
 
 		template<typename T>
 		T* GetComponent() const {
-			GetComponentByClass(T::GetClass());
+			GetComponentByClass(*T::GetClass());
 		}
 
 		GameService* GetService(const GameServiceClass* gameServiceClass) const;
