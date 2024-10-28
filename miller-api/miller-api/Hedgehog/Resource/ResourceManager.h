@@ -19,7 +19,6 @@ namespace hh::fnd {
             virtual void ResourceUnloadedCallback(ManagedResource* resource) {}
         };
 
-    private:
         UnpackedResourceContainer unpackedResourceContainer;
         csl::ut::PointerMap<const ResourceTypeInfo*, uint32_t> resourceContainerIndexByTypeInfo;
         TagResourceContainer tagResourceContainer;
@@ -37,7 +36,6 @@ namespace hh::fnd {
         csl::fnd::Mutex mutex2;
         bool unk13;
 
-    public:
         struct GetResourceExInfo {
             bool unk1; 
         };
@@ -66,9 +64,9 @@ namespace hh::fnd {
         virtual void RMRU1L_UnkFunc2(uint64_t unkParam1, uint64_t unkParam2) override;
 
         const csl::ut::MoveArray<ManagedResource*>& GetResourcesByTypeInfo(const ResourceTypeInfo* typeInfo);
-        // csl::ut::MoveArray<DynamicResourceContainer*>& GetResourceContainers() {
-        //     return resourceContainers;
-        // }
+        csl::ut::MoveArray<UniqueResourceContainer*>& GetResourceContainers() {
+            return unpackedResourceContainer.uniqueResourceContainers;
+        }
 
         template<typename T>
         inline T* GetResource(const char* name) {

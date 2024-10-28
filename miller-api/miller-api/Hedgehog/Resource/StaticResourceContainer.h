@@ -15,6 +15,6 @@ namespace hh::fnd {
         virtual ManagedResource* GetResourceByName(const char* name) const override;
         virtual int GetNumResources() const override;
         virtual ManagedResource* GetResourceByIndex(int index) const override;
-        virtual uint64_t UnkFunc5() override;
+        virtual uint64_t UnkFunc5();
     };
 }

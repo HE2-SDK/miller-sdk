@@ -243,6 +243,7 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/Needle/RenderingCommandList.h"
 #include "Hedgehog/Needle/DisplaySwapDevice.h"
 #include "Hedgehog/Needle/ShaderListInfo.h"
+#include "Hedgehog/Needle/AnimController.h"
 
 #include "Hedgehog/Needle/NeedleResContainer.h"
 #include "Hedgehog/Needle/SceneParamContainer.h"
@@ -468,6 +469,7 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/Graphics/DynamicResolutionController.h"
 #include "Hedgehog/Graphics/DefaultDynamicResolutionController.h"
 #include "Hedgehog/Graphics/RenderManager.h"
+#include "Hedgehog/Graphics/VertexAnimationTextureController.h"
 #include "Hedgehog/Graphics/ResMaterial.h"
 #include "Hedgehog/Graphics/ResModelParameterInterface.h"
 #include "Hedgehog/Graphics/ResModelBase.h"
@@ -480,6 +482,7 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/Graphics/ResMirageLightField.h"
 #include "Hedgehog/Graphics/ResProbe.h"
 #include "Hedgehog/Graphics/ResDecal.h"
+#include "Hedgehog/Graphics/ResVertexAnimationTexture.h"
 #include "Hedgehog/Graphics/GOCVisual.h"
 #include "Hedgehog/Graphics/GOCVisualTransformed.h"
 #include "Hedgehog/Graphics/GOCVisualModel.h"
@@ -642,6 +645,8 @@ struct SLIST_HEADER_SHIM {
 // #include "ApplicationCommon/Camera/CameraFrame.h"
 // #include "ApplicationCommon/Camera/GOCCamera.h"
 // #include "ApplicationCommon/Camera/Messages.h"
+
+#include "ApplicationCommon/HID/GOCCharacterInput.h"
 
 // #include "ApplicationCommon/Game/GOCMotor.h"
 // #include "ApplicationCommon/Game/GOCMotorConstant.h"
