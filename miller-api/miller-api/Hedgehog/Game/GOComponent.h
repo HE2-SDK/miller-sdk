@@ -112,14 +112,14 @@ namespace hh::game
 
 		template<typename T>
 		T* GetComponent() const {
-			GetComponentByClass(*T::GetClass());
+			return GetComponentByClass(*T::GetClass());
 		}
 
 		GameService* GetService(const GameServiceClass* gameServiceClass) const;
 
 		template<typename T>
 		T* GetService() const {
-			GetService(T::GetClass());
+			return GetService(T::GetClass());
 		}
 
 		void SetNameHash(const char* name);
