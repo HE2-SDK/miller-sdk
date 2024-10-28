@@ -14,11 +14,6 @@
 			return &RESOLVE_STATIC_VARIABLE(componentClass);\
 		}
 
-namespace app::player
-{
-	class Sonic;
-}
-
 namespace hh::game
 {
 	class GOComponent;
