@@ -24,6 +24,7 @@ namespace app::gfx {
     class FxParamManager
         : public hh::game::GameService
         , public hh::game::GameStepListener
+        , public hh::game::GamePauseListener
         , public app::game::GameCondition::Listener {
     public:
         class InterpolatorBase : public hh::fnd::ReferencedObject {
@@ -35,6 +36,7 @@ namespace app::gfx {
             virtual void Update(float deltaTime) = 0;
             virtual void SetTweenPosition(uint64_t ownerId, float position) = 0;
             virtual void UnkFunc1() {}
+            virtual const hh::fnd::RflClass* GetRflClass() const;
         };
 
         template<typename T>
@@ -61,6 +63,7 @@ namespace app::gfx {
             virtual void ReverseJob(uint64_t ownerId, float interpolationTime) override;
             virtual void Update(float deltaTime) override;
             virtual void SetTweenPosition(uint64_t ownerId, float position) override;
+            virtual const hh::fnd::RflClass* GetRflClass() const override;
         };
 
         struct NeedleFXParameterInterpolators {
@@ -109,7 +112,7 @@ namespace app::gfx {
         };
 
         struct NeedleFXSceneConfigInterpolators {
-            Interpolator<hh::gfx::FxRenderTargetSetting>* fxRenderTargetSettingInterpolator;
+            Interpolator<hh::needle::FxRenderTargetSetting>* fxRenderTargetSettingInterpolator;
             Interpolator<hh::needle::FxAntiAliasing>* fxAntiAliasingInterpolator;
             Interpolator<hh::needle::FxLODParameter>* fxLODParameterInterpolator;
             Interpolator<hh::needle::FxDetailParameter>* fxDetailParameterInterpolator;
@@ -135,101 +138,41 @@ namespace app::gfx {
         bool UpdateNeedleFxParameterInterpolators();
 
     public:
-        virtual void* GetRuntimeTypeInfo() override;
+        virtual void* GetRuntimeTypeInfo() const override;
         virtual void OnAddedToGame() override;
         virtual void OnRemovedFromGame() override;
 		virtual void PostStepCallback(hh::game::GameManager* gameManager, const hh::game::GameStepInfo& gameStepInfo) override;
+        virtual void GPL_UnkFunc2() override;
+        virtual void GCL_UnkFunc1() override;
 
         void SetSceneParameters(SceneParameters* parameters, int idx);
 
-        inline void AddNeedleFxSceneConfigInterpolationJob(uint64_t ownerId, hh::needle::NeedleFxSceneConfig* needleFxSceneConfig, unsigned int priority, float interpolationTime) {
-            this->mutex.Lock();
-            sceneConfigInterpolators.fxRenderTargetSettingInterpolator->AddJob(ownerId, &needleFxSceneConfig->rendertarget, -1, priority, interpolationTime, -1);
-            sceneConfigInterpolators.fxAntiAliasingInterpolator->AddJob(ownerId, &needleFxSceneConfig->antialiasing, -1, priority, interpolationTime, -1);
-            sceneConfigInterpolators.stageCommonAtmosphereParameterInterpolator->AddJob(ownerId, &needleFxSceneConfig->atmosphere, -1, priority, interpolationTime, -1);
-            sceneConfigInterpolators.fxLODParameterInterpolator->AddJob(ownerId, &needleFxSceneConfig->lod, -1, priority, interpolationTime, -1);
-            sceneConfigInterpolators.fxDetailParameterInterpolator->AddJob(ownerId, &needleFxSceneConfig->detail, -1, priority, interpolationTime, -1);
-            sceneConfigInterpolators.fxDynamicResolutionParameterInterpolator->AddJob(ownerId, &needleFxSceneConfig->dynamicResolution, -1, priority, interpolationTime, -1);
-            sceneConfigInterpolators.stageCommonTimeProgressParameterInterpolator->AddJob(ownerId, &needleFxSceneConfig->timeProgress, -1, priority, interpolationTime, -1);
-            this->mutex.Unlock();
-            sceneConfigDirty |= UpdateNeedleFxSceneConfigInterpolators();
-        }
+        void AddNeedleFxSceneConfigInterpolationJob(uint64_t ownerId, hh::needle::NeedleFxSceneConfig* needleFxSceneConfig, unsigned int priority, float interpolationTime);
         void AddDefaultNeedleFxSceneConfigInterpolationJob(hh::needle::NeedleFxSceneConfig* needleFxParameter, unsigned int priority);
         inline void UpdateNeedleFxSceneConfigInterpolationJob(uint64_t ownerId, hh::needle::NeedleFxSceneConfig* needleFxSceneConfig) {
             this->mutex.Lock();
             sceneConfigInterpolators.fxRenderTargetSettingInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->rendertarget);
             sceneConfigInterpolators.fxAntiAliasingInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->antialiasing);
-            sceneConfigInterpolators.stageCommonAtmosphereParameterInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->atmosphere);
             sceneConfigInterpolators.fxLODParameterInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->lod);
             sceneConfigInterpolators.fxDetailParameterInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->detail);
             sceneConfigInterpolators.fxDynamicResolutionParameterInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->dynamicResolution);
             sceneConfigInterpolators.stageCommonTimeProgressParameterInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->timeProgress);
+            sceneConfigInterpolators.fxModelParameterInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->modelParam);
+            sceneConfigInterpolators.performanceSettingInterpolator->UpdateJob(ownerId, &needleFxSceneConfig->performance);
             this->mutex.Unlock();
-            sceneConfigDirty |= UpdateNeedleFxSceneConfigInterpolators();
+            // sceneConfigDirty |= UpdateNeedleFxSceneConfigInterpolators();
         }
+        // void UpdateNeedleFxSceneConfigInterpolationJob(uint64_t ownerId, hh::needle::NeedleFxSceneConfig* needleFxSceneConfig);
         void UpdateDefaultNeedleFxSceneConfigInterpolationJob(hh::needle::NeedleFxSceneConfig* needleFxParameter);
-        inline void RemoveNeedleFxSceneConfigInterpolationJob(uint64_t ownerId, float interpolationTime) {
-            this->mutex.Lock();
-            sceneConfigInterpolators.fxRenderTargetSettingInterpolator->ReverseJob(ownerId, interpolationTime);
-            sceneConfigInterpolators.fxAntiAliasingInterpolator->ReverseJob(ownerId, interpolationTime);
-            sceneConfigInterpolators.stageCommonAtmosphereParameterInterpolator->ReverseJob(ownerId, interpolationTime);
-            sceneConfigInterpolators.fxLODParameterInterpolator->ReverseJob(ownerId, interpolationTime);
-            sceneConfigInterpolators.fxDetailParameterInterpolator->ReverseJob(ownerId, interpolationTime);
-            sceneConfigInterpolators.fxDynamicResolutionParameterInterpolator->ReverseJob(ownerId, interpolationTime);
-            sceneConfigInterpolators.stageCommonTimeProgressParameterInterpolator->ReverseJob(ownerId, interpolationTime);
-            this->mutex.Unlock();
-            // updated |= UpdateNeedleFxSceneConfigInterpolators();
-        }
+        void RemoveNeedleFxSceneConfigInterpolationJob(uint64_t ownerId, float interpolationTime);
+        void RemoveDefaultNeedleFxSceneConfigInterpolationJob();
     
         void AddNeedleFxParameterInterpolationJob(uint64_t ownerId, hh::needle::NeedleFxParameter* needleFxParameter, unsigned int priority, float interpolationTime);
         void AddDefaultNeedleFxParameterInterpolationJob(hh::needle::NeedleFxParameter* needleFxParameter, unsigned int priority);
-        void UpdateDefaultNeedleFxParameterInterpolationJob(hh::needle::NeedleFxParameter* needleFxParameter);
         void UpdateNeedleFxParameterInterpolationJob(uint64_t ownerId, hh::needle::NeedleFxParameter* needleFxParameter);
-        inline void RemoveNeedleFxParameterInterpolationJob(uint64_t ownerId, float interpolationTime) {
-            this->mutex.Lock();
-            paramInterpolators.bloomInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.dofInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.colorContrastInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.tonemapInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.cameraControlInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.shadowmapInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.shadowHeightMapInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.volShadowInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.blurInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.ssaoInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.shlightfieldInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.lightscatteringInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.rlrInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.ssgiInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.planarReflectionInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.occlusionCapsuleInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.godrayInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.ssGodrayInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.heatHazeInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.sceneEnvInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.renderOptionInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.sggiInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.taaInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.effectInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.atmosphereInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.densityInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.windInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.gpuEnvironmentInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.interactiveWaveInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.chromaticAberrationInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.vignetteInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.terrainBlendInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.weatherInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.colorAccessibilityInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.cyberNoiseInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.cyberStartNoiseInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.cyberNPCSSInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.dentInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.fieldScanInterpolator->ReverseJob(ownerId, interpolationTime);
-            paramInterpolators.ssssInterpolator->ReverseJob(ownerId, interpolationTime);
-            this->mutex.Unlock();
-            // updated |= UpdateNeedleFxParameterInterpolators();
-        }
+        void UpdateDefaultNeedleFxParameterInterpolationJob(hh::needle::NeedleFxParameter* needleFxParameter);
+        void RemoveNeedleFxParameterInterpolationJob(uint64_t ownerId, float interpolationTime);
+        void RemoveDefaultNeedleFxParameterInterpolationJob();
 
         void AddNeedleFxParameterInterpolatorJobById(unsigned int id, uint64_t ownerId, const void* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
         void UpdateNeedleFxParameterInterpolatorJobById(unsigned int id, uint64_t ownerId, const void* value);
@@ -411,17 +354,15 @@ namespace app::gfx {
         unsigned int GetFxDynamicResolutionParameterSceneConfigId() const;
         unsigned int GetStageCommonTimeProgressParameterSceneConfigId() const;
 
-        void AddFxRenderTargetSettingSceneConfigInterpolatorJob(uint64_t ownerId, const hh::gfx::FxRenderTargetSetting* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
+        void AddFxRenderTargetSettingSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxRenderTargetSetting* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
         void AddFxAntiAliasingSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxAntiAliasing* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
-        void AddStageCommonAtmosphereParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::gfx::StageCommonAtmosphereParameter* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
         void AddFxLODParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxLODParameter* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
         void AddFxDetailParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxDetailParameter* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
         void AddFxDynamicResolutionParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxDynamicResolutionParameter* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
         void AddStageCommonTimeProgressParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::gfx::StageCommonTimeProgressParameter* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime);
 
-        void UpdateFxRenderTargetSettingSceneConfigInterpolatorJob(uint64_t ownerId, const hh::gfx::FxRenderTargetSetting* value);
+        void UpdateFxRenderTargetSettingSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxRenderTargetSetting* value);
         void UpdateFxAntiAliasingSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxAntiAliasing* value);
-        void UpdateStageCommonAtmosphereParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::gfx::StageCommonAtmosphereParameter* value);
         void UpdateFxLODParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxLODParameter* value);
         void UpdateFxDetailParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxDetailParameter* value);
         void UpdateFxDynamicResolutionParameterSceneConfigInterpolatorJob(uint64_t ownerId, const hh::needle::FxDynamicResolutionParameter* value);
@@ -429,7 +370,6 @@ namespace app::gfx {
 
         void RemoveFxRenderTargetSettingSceneConfigInterpolatorJob(size_t ownerId, float interpolationTime);
         void RemoveFxAntiAliasingSceneConfigInterpolatorJob(size_t ownerId, float interpolationTime);
-        void RemoveStageCommonAtmosphereParameterSceneConfigInterpolatorJob(size_t ownerId, float interpolationTime);
         void RemoveFxLODParameterSceneConfigInterpolatorJob(size_t ownerId, float interpolationTime);
         void RemoveFxDetailParameterSceneConfigInterpolatorJob(size_t ownerId, float interpolationTime);
         void RemoveFxDynamicResolutionParameterSceneConfigInterpolatorJob(size_t ownerId, float interpolationTime);

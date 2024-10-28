@@ -16410,19 +16410,869 @@ PUBLIC ?InterpolateSphere@FxColManager@gfx@app@@KAMAEBVVector3@math@csl@@0MM@Z
     mov rax, 01401b72d0h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@FxParamExtension@gfx@app@@UEAAPEAXXZ
+?GetRuntimeTypeInfo@FxParamExtension@gfx@app@@UEAAPEAXXZ:
+    mov rax, 01401b7400h
+    jmp rax
+
 PUBLIC ??0FxParamManager@gfx@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0FxParamManager@gfx@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01401bc0e0h
     jmp rax
 
-PUBLIC ??_DGamePauseListener@game@hh@@QEAAXXZ
-??_DGamePauseListener@game@hh@@QEAAXXZ:
-    mov rax, 01401bff80h
+PUBLIC ??0FxParamManager@gfx@app@@AEAA@PEAVIAllocator@fnd@csl@@@Z
+??0FxParamManager@gfx@app@@AEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01401bc0e0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401be070h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401be1d0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401be6a0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401be800h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401beb70h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401bf0f0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401bf250h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401bf7d0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401bfa90h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01401bfb40h
+    jmp rax
+
+PUBLIC ?PostStepCallback@FxParamManager@gfx@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z
+?PostStepCallback@FxParamManager@gfx@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z:
+    mov rax, 01401c00f0h
     jmp rax
 
 PUBLIC ?AddNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KPEAUNeedleFxParameter@needle@hh@@IM@Z
 ?AddNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KPEAUNeedleFxParameter@needle@hh@@IM@Z:
     mov rax, 01401c0360h
+    jmp rax
+
+PUBLIC ?AddNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAX_KPEAUNeedleFxSceneConfig@needle@hh@@IM@Z
+?AddNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAX_KPEAUNeedleFxSceneConfig@needle@hh@@IM@Z:
+    mov rax, 01401c0bc0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01401c40c0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01401c7870h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@FxParamManager@gfx@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@FxParamManager@gfx@app@@UEBAPEAXXZ:
+    mov rax, 01401c7c10h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c95c0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c95e0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9600h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9620h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9640h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9660h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9680h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c96a0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c96c0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c96e0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9700h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9720h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9740h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9760h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c97a0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c97c0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c97e0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9800h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9820h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9840h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9860h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9880h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c98a0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c98c0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c98e0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9900h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9920h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9940h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9960h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9980h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c99a0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c99c0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c99e0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9a00h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9a20h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9a40h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9a60h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9a80h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9aa0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9ac0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9ae0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9b00h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9b20h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9b40h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9b60h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9b80h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9ba0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9bc0h
+    jmp rax
+
+PUBLIC ?GetRflClass@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ
+?GetRflClass@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEBAPEBVRflClass@fnd@hh@@XZ:
+    mov rax, 01401c9be0h
+    jmp rax
+
+PUBLIC ?RemoveNeedleFxSceneConfigInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KM@Z
+?RemoveNeedleFxSceneConfigInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KM@Z:
+    mov rax, 01401c9d20h
+    jmp rax
+
+PUBLIC ?RemoveNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KM@Z
+?RemoveNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KM@Z:
+    mov rax, 01401c9e90h
+    jmp rax
+
+PUBLIC ?RemoveNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAX_KM@Z
+?RemoveNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAX_KM@Z:
+    mov rax, 01401ca200h
+    jmp rax
+
+PUBLIC ?RemoveNeedleFxParameterInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KM@Z
+?RemoveNeedleFxParameterInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KM@Z:
+    mov rax, 01401cb170h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb1c0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb1c0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb1c0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb1c0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb1c0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb1c0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb230h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb2b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb2b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb2b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb320h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb320h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb390h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb390h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb400h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb400h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb460h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb4c0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb530h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb530h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb5b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb5b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb630h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb6b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb6b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb6b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb6b0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb710h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb710h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb710h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb710h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb780h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb780h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb7e0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb860h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb860h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb8d0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb950h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb9d0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cb9d0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cba40h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cbac0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cbac0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cbac0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cbb30h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cbbb0h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cbc30h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cbc30h
+    jmp rax
+
+PUBLIC ?SetTweenPosition@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?SetTweenPosition@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01401cbcb0h
+    jmp rax
+
+PUBLIC ?GPL_UnkFunc2@FxParamManager@gfx@app@@UEAAXXZ
+?GPL_UnkFunc2@FxParamManager@gfx@app@@UEAAXXZ:
+    mov rax, 01401cbeb0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cbfc0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cbfc0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cbfc0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cbfc0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cbfc0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cbfc0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cc310h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cc690h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cc690h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cc690h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cc9f0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cc9f0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ccd50h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ccd50h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cd0a0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cd0a0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cd3e0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cd720h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cda80h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cda80h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cde00h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cde00h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce190h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce510h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce510h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce510h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce510h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce850h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce850h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce850h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ce850h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ceb90h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ceb90h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401ceed0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cf3b0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cf3b0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cf6f0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cfa70h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cfdf0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401cfdf0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d0150h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d04d0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d04d0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d04d0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d0830h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d0bb0h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d0f30h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d0f30h
+    jmp rax
+
+PUBLIC ?Update@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAXM@Z
+?Update@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAXM@Z:
+    mov rax, 01401d12d0h
+    jmp rax
+
+PUBLIC ?UpdateNeedleFxSceneConfigInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KPEBX@Z
+?UpdateNeedleFxSceneConfigInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KPEBX@Z:
+    mov rax, 01401d1630h
+    jmp rax
+
+PUBLIC ?UpdateNeedleFxSceneConfigInterpolators@FxParamManager@gfx@app@@IEAA_NXZ
+?UpdateNeedleFxSceneConfigInterpolators@FxParamManager@gfx@app@@IEAA_NXZ:
+    mov rax, 01401d1650h
     jmp rax
 
 PUBLIC ?UpdateDefaultNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAXPEAUNeedleFxParameter@needle@hh@@@Z
@@ -16433,6 +17283,231 @@ PUBLIC ?UpdateDefaultNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@Q
 PUBLIC ?UpdateDefaultNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAXPEAUNeedleFxSceneConfig@needle@hh@@@Z
 ?UpdateDefaultNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAXPEAUNeedleFxSceneConfig@needle@hh@@@Z:
     mov rax, 01401d1750h
+    jmp rax
+
+PUBLIC ?UpdateNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KPEAUNeedleFxParameter@needle@hh@@@Z
+?UpdateNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KPEAUNeedleFxParameter@needle@hh@@@Z:
+    mov rax, 01401d1870h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d1cd0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d1da0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d1da0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d1df0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d1e60h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d1ec0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d1f30h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d1fb0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2000h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2210h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d22f0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d22f0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2350h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2410h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2410h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2410h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2410h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2490h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2490h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2580h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d25f0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2650h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d26b0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2770h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d27c0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2880h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2880h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d28f0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d29f0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2a50h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2a50h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2a50h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2ac0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2ac0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2b20h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2c10h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2c80h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2cf0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2d40h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2d40h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2e20h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01401d2e70h
+    jmp rax
+
+PUBLIC ?UpdateNeedleFxParameterInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KPEBX@Z
+?UpdateNeedleFxParameterInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KPEBX@Z:
+    mov rax, 01401d2f00h
+    jmp rax
+
+PUBLIC ?UpdateNeedleFxParameterInterpolators@FxParamManager@gfx@app@@IEAA_NXZ
+?UpdateNeedleFxParameterInterpolators@FxParamManager@gfx@app@@IEAA_NXZ:
+    mov rax, 01401d2f20h
     jmp rax
 
 PUBLIC ?Create@FxParamManager@gfx@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -16468,6 +17543,11 @@ PUBLIC ?GameServiceAddedCallback@FxParamTimeProgressExtension@gfx@app@@UEAAXPEAV
 PUBLIC ?Construct@WeatherFxParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
 ?Construct@WeatherFxParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01401db2c0h
+    jmp rax
+
+PUBLIC ?GetSceneData@SceneParameters@gfx@app@@QEAAPEAUNeedleFxSceneData@needle@hh@@XZ
+?GetSceneData@SceneParameters@gfx@app@@QEAAPEAUNeedleFxSceneData@needle@hh@@XZ:
+    mov rax, 01401e02b0h
     jmp rax
 
 PUBLIC ?UnkFunc11@AmbSoundCoordinator@snd@app@@UEAAX_K000@Z
@@ -24215,6 +25295,11 @@ PUBLIC ??0ObjBig@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014053bef0h
     jmp rax
 
+PUBLIC ??0ObjBigInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0ObjBigInfo@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014053bfa0h
+    jmp rax
+
 PUBLIC ??0ObjGerald@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0ObjGerald@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014053cf50h
@@ -28635,6 +29720,11 @@ PUBLIC ?GetClass@GOCCharacterInput@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
     mov rax, 0140813290h
     jmp rax
 
+PUBLIC ?GetClass@GOCCharacterInput@hid@app_cmn@@SAPEBVGOComponentClass@game@hh@@XZ
+?GetClass@GOCCharacterInput@hid@app_cmn@@SAPEBVGOComponentClass@game@hh@@XZ:
+    mov rax, 0140813290h
+    jmp rax
+
 PUBLIC ?Update@GOCCharacterInput@hid@app_cmn@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z
 ?Update@GOCCharacterInput@hid@app_cmn@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z:
     mov rax, 01408132a0h
@@ -29410,6 +30500,11 @@ PUBLIC ?Construct@FxTerrainParameter@needle@hh@@CAXPEAU123@PEAVIAllocator@fnd@cs
     mov rax, 0140997be0h
     jmp rax
 
+PUBLIC ?Construct@StageCommonWeatherProgressParameter@gfx@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
+?Construct@StageCommonWeatherProgressParameter@gfx@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140997be0h
+    jmp rax
+
 PUBLIC ?Construct@Polygonization@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
 ?Construct@Polygonization@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140997bf0h
@@ -29563,11 +30658,6 @@ PUBLIC ?SetDebugViewType@RenderingEngineMiller@gfx@hh@@UEAAXI@Z
 PUBLIC ?DestroyRenderTextureHandle@RenderingEngineNeedle@gfx@hh@@UEAA_KPEAVRenderTextureHandle@needle@3@@Z
 ?DestroyRenderTextureHandle@RenderingEngineNeedle@gfx@hh@@UEAA_KPEAVRenderTextureHandle@needle@3@@Z:
     mov rax, 01409ac0d0h
-    jmp rax
-
-PUBLIC ?GetSceneConfig@RenderingEngineMiller@gfx@hh@@UEAAXPEAUNeedleFxSceneConfig@needle@3@@Z
-?GetSceneConfig@RenderingEngineMiller@gfx@hh@@UEAAXPEAUNeedleFxSceneConfig@needle@3@@Z:
-    mov rax, 01409ac150h
     jmp rax
 
 PUBLIC ?GetMainRenderingPipeline@RenderingEngineMiller@gfx@hh@@UEBAPEAVRenderingPipeline@needle@3@XZ
@@ -30690,6 +31780,11 @@ PUBLIC ?Construct@FxRenderTargetSetting@gfx@hh@@CAXPEAU123@PEAVIAllocator@fnd@cs
     mov rax, 01409b1e10h
     jmp rax
 
+PUBLIC ?Construct@FxRenderTargetSetting@needle@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
+?Construct@FxRenderTargetSetting@needle@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01409b1e10h
+    jmp rax
+
 PUBLIC ?Construct@FxSGGIParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
 ?Construct@FxSGGIParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01409b1e30h
@@ -31160,6 +32255,11 @@ PUBLIC ?Construct@StageCommonDecalModelParameter@rfl@heur@@CAXPEAU123@PEAVIAlloc
     mov rax, 01409b2ae0h
     jmp rax
 
+PUBLIC ?Construct@StageCommonDecalModelParameter@gfx@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
+?Construct@StageCommonDecalModelParameter@gfx@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01409b2ae0h
+    jmp rax
+
 PUBLIC ?Construct@StageCommonParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
 ?Construct@StageCommonParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01409b2af0h
@@ -31367,6 +32467,11 @@ PUBLIC ?GetTexture@ResVertexAnimationTexture@gfx@hh@@QEBAPEAVResTexture@gfnd@3@I
 
 PUBLIC ?GetTypeInfo@ResVertexAnimationTexture@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 ?GetTypeInfo@ResVertexAnimationTexture@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ:
+    mov rax, 01409bc970h
+    jmp rax
+
+PUBLIC ?GetTypeInfo@ResVertexAnimationTexture@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
+?GetTypeInfo@ResVertexAnimationTexture@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
     mov rax, 01409bc970h
     jmp rax
 
@@ -33750,16 +34855,6 @@ PUBLIC ?IsCursorLocked@MouseWin32@hid@hh@@UEBA_NXZ
     mov rax, 0140c0b7e0h
     jmp rax
 
-PUBLIC ?MEH_Unk2@MouseWin32@hid@hh@@UEAA_NXZ
-?MEH_Unk2@MouseWin32@hid@hh@@UEAA_NXZ:
-    mov rax, 0140c0ba00h
-    jmp rax
-
-PUBLIC ?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ
-?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ:
-    mov rax, 0140c0ba50h
-    jmp rax
-
 PUBLIC ?MEH_Unk3@MouseWin32@hid@hh@@UEAA_NXZ
 ?MEH_Unk3@MouseWin32@hid@hh@@UEAA_NXZ:
     mov rax, 0140c0ba60h
@@ -34943,11 +36038,6 @@ PUBLIC ??0Unk7@Impl@PerfDiagnostics@ImplDX11@needle@hh@@QEAA@XZ
 PUBLIC ??0Unk3@Impl@PerfDiagnostics@ImplDX11@needle@hh@@QEAA@XZ
 ??0Unk3@Impl@PerfDiagnostics@ImplDX11@needle@hh@@QEAA@XZ:
     mov rax, 0140ee7710h
-    jmp rax
-
-PUBLIC ??_DImpl@PerfDiagnostics@ImplDX11@needle@hh@@QEAAXXZ
-??_DImpl@PerfDiagnostics@ImplDX11@needle@hh@@QEAAXXZ:
-    mov rax, 0140ee7860h
     jmp rax
 
 PUBLIC ??_DUnk7@Impl@PerfDiagnostics@ImplDX11@needle@hh@@QEAAXXZ
@@ -43555,6 +44645,11 @@ PUBLIC ?classId@GOCPlayerInformationUpdater@player@app@@0PEBXEB
     mov rax, 014120df50h
     jmp rax
 
+PUBLIC ?classId@GOCPlayerParameter@player@app@@0PEBXEB
+?classId@GOCPlayerParameter@player@app@@0PEBXEB:
+    mov rax, 014120e708h
+    jmp rax
+
 PUBLIC ?classId@GOCPlayerPath@player@app@@0PEBXEB
 ?classId@GOCPlayerPath@player@app@@0PEBXEB:
     mov rax, 014120e790h
@@ -43615,6 +44710,11 @@ PUBLIC ?classId@GOCTinyFsm2@gocs@heur@@0PEBXEB
     mov rax, 014124c480h
     jmp rax
 
+PUBLIC ?rflClassMembers@ViewSpaceOffsetRflParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@ViewSpaceOffsetRflParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 014124c5b0h
+    jmp rax
+
 PUBLIC ?rflClassEnums@SwayParamCollision@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 ?rflClassEnums@SwayParamCollision@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 014124c650h
@@ -43672,6 +44772,11 @@ PUBLIC ?classId@GOCRflParameter@gocs@heur@@0PEBXEB
 
 PUBLIC ?classId@GOCCharacterInput@gocs@heur@@0PEBXEB
 ?classId@GOCCharacterInput@gocs@heur@@0PEBXEB:
+    mov rax, 014124fe60h
+    jmp rax
+
+PUBLIC ?classId@GOCCharacterInput@hid@app_cmn@@0PEBXEB
+?classId@GOCCharacterInput@hid@app_cmn@@0PEBXEB:
     mov rax, 014124fe60h
     jmp rax
 
@@ -43825,9 +44930,19 @@ PUBLIC ?rflClassMembers@Filtering@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
     mov rax, 014128de00h
     jmp rax
 
+PUBLIC ?rflClassMembers@NavMeshParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@NavMeshParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 014128e040h
+    jmp rax
+
 PUBLIC ?rflClassEnums@Partitioning@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 ?rflClassEnums@Partitioning@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 014128e250h
+    jmp rax
+
+PUBLIC ?rflClassMembers@Polygonization@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@Polygonization@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 014128e3a0h
     jmp rax
 
 PUBLIC ?rflClassMembers@Rasterization@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
@@ -43843,6 +44958,11 @@ PUBLIC ?rflClassMembers@Region@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 PUBLIC ?rflClassMembers@Tiling@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@Tiling@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 014128e730h
+    jmp rax
+
+PUBLIC ?rflClassMembers@World@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@World@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 014128e8a0h
     jmp rax
 
 PUBLIC ?classId@ResNavMeshConfig@resources@heur@@0PEBXEB
@@ -43865,14 +44985,34 @@ PUBLIC ?rflClassMembers@FxCullingSettings@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 0141291280h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxDofSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxDofSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141291500h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxEffectSettings@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxEffectSettings@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412916d0h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxGlareSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxGlareSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412918c0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxGrassSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxGrassSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141291db0h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxHdrSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@FxHdrSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 01412921b0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxHourSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxHourSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412925b0h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxInShadowShadowScaleSettings@needle@hh@@0QBVRflClassMember@fnd@3@B
@@ -43883,6 +45023,11 @@ PUBLIC ?rflClassMembers@FxInShadowShadowScaleSettings@needle@hh@@0QBVRflClassMem
 PUBLIC ?rflClassEnums@FxLightFieldSettings@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 ?rflClassEnums@FxLightFieldSettings@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 01412928f0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxLightScatteringSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxLightScatteringSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141293180h
     jmp rax
 
 PUBLIC ?rflClassEnums@FxLightSettings@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
@@ -43900,9 +45045,19 @@ PUBLIC ?rflClassMembers@FxParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 0141293ad0h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxSceneCasinoLight@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxSceneCasinoLight@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141294070h
+    jmp rax
+
 PUBLIC ?rflClassEnums@FxSceneConfig@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 ?rflClassEnums@FxSceneConfig@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 01412942c0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxSceneData@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxSceneData@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141294600h
     jmp rax
 
 PUBLIC ?rflClassEnums@FxSceneSettings@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
@@ -43913,6 +45068,16 @@ PUBLIC ?rflClassEnums@FxSceneSettings@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 PUBLIC ?rflClassMembers@FxShadowScale@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@FxShadowScale@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 0141294ac0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxStageDistortion@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxStageDistortion@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141294e10h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxStencilShadow@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxStencilShadow@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412950b0h
     jmp rax
 
 PUBLIC ?rflClassEnums@FxTimeChangeSettings@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
@@ -43968,6 +45133,11 @@ PUBLIC ?rflClassEnums@PSOCacheRasterizer@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 PUBLIC ?rflClassEnums@PSOCacheRenderTargetBlend@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 ?rflClassEnums@PSOCacheRenderTargetBlend@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 0141296e90h
+    jmp rax
+
+PUBLIC ?rflClassMembers@PSOCacheSample@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@PSOCacheSample@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141297190h
     jmp rax
 
 PUBLIC ?rflClassMembers@PSOCacheShader@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
@@ -44030,6 +45200,11 @@ PUBLIC ?rflClassEnums@FxDensityParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
     mov rax, 014129c280h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxDensityWindParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxDensityWindParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 014129ca20h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxDentParameter@gfx@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxDentParameter@gfx@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 014129cd80h
@@ -44075,6 +45250,16 @@ PUBLIC ?rflClassMembers@FxFogParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 014129e8f0h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxGpuEnvironmentParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxGpuEnvironmentParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 014129eb70h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxHeightFogParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxHeightFogParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 014129ee50h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxInteractionDebugParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxInteractionDebugParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 014129f020h
@@ -44090,9 +45275,19 @@ PUBLIC ?rflClassMembers@FxLODParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 014129f5b0h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxModelParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxModelParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 014129f670h
+    jmp rax
+
 PUBLIC ?rflClassMembers@OcclusionCapsuleList@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@OcclusionCapsuleList@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 014129f700h
+    jmp rax
+
+PUBLIC ?rflClassMembers@ColorDropout@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@ColorDropout@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 014129f940h
     jmp rax
 
 PUBLIC ?rflClassMembers@ColorShift@needle@hh@@0QBVRflClassMember@fnd@3@B
@@ -44110,8 +45305,8 @@ PUBLIC ?rflClassEnums@FxAntiAliasing@needle@hh@@0QBVRflClassEnum@fnd@3@B
     mov rax, 01412a0600h
     jmp rax
 
-PUBLIC ?rflClassEnums@FxAutoExposureParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
-?rflClassEnums@FxAutoExposureParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
+PUBLIC ?rflClassEnums@FxAutoExposureParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxAutoExposureParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
     mov rax, 01412a0770h
     jmp rax
 
@@ -44120,8 +45315,8 @@ PUBLIC ?rflClassMembers@FxBloomParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01412a0be0h
     jmp rax
 
-PUBLIC ?rflClassEnums@FxCameraControlParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
-?rflClassEnums@FxCameraControlParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
+PUBLIC ?rflClassEnums@FxCameraControlParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxCameraControlParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
     mov rax, 01412a0d10h
     jmp rax
 
@@ -44135,8 +45330,8 @@ PUBLIC ?rflClassEnums@FxColorAccessibilityFilterParameter@needle@hh@@0QBVRflClas
     mov rax, 01412a12f0h
     jmp rax
 
-PUBLIC ?rflClassEnums@FxColorContrastParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
-?rflClassEnums@FxColorContrastParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
+PUBLIC ?rflClassEnums@FxColorContrastParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxColorContrastParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
     mov rax, 01412a16f0h
     jmp rax
 
@@ -44150,8 +45345,8 @@ PUBLIC ?rflClassMembers@FxDirectionalRadialBlurParameter@needle@hh@@0QBVRflClass
     mov rax, 01412a23a0h
     jmp rax
 
-PUBLIC ?rflClassEnums@FxDOFParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
-?rflClassEnums@FxDOFParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
+PUBLIC ?rflClassEnums@FxDOFParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxDOFParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
     mov rax, 01412a25e0h
     jmp rax
 
@@ -44160,14 +45355,19 @@ PUBLIC ?rflClassMembers@FxFieldScanEffectRenderParameter@needle@hh@@0QBVRflClass
     mov rax, 01412a3440h
     jmp rax
 
-PUBLIC ?rflClassEnums@FxFXAAParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
-?rflClassEnums@FxFXAAParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
+PUBLIC ?rflClassEnums@FxFXAAParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxFXAAParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
     mov rax, 01412a3730h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxGodrayParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxGodrayParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412a3d00h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxGodrayVolumeTexture@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxGodrayVolumeTexture@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412a4200h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxHBAO_Parameter@needle@hh@@0QBVRflClassMember@fnd@3@B
@@ -44178,6 +45378,11 @@ PUBLIC ?rflClassMembers@FxHBAO_Parameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 PUBLIC ?rflClassEnums@FxHDRParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 ?rflClassEnums@FxHDRParameter@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 01412a4710h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxHeatHazeParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxHeatHazeParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412a4be0h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxHeightMapParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
@@ -44195,9 +45400,19 @@ PUBLIC ?rflClassMembers@FxManualExposureParameter@needle@hh@@0QBVRflClassMember@
     mov rax, 01412a5408h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxOcclusionCapsuleParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxOcclusionCapsuleParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412a5940h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxPlanarProjectionShadowParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxPlanarProjectionShadowParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412a5fc0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxPlanarReflectionParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxPlanarReflectionParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412a62d0h
     jmp rax
 
 PUBLIC ?rflClassEnums@FxRenderOption@needle@hh@@0QBVRflClassEnum@fnd@3@B
@@ -44205,8 +45420,8 @@ PUBLIC ?rflClassEnums@FxRenderOption@needle@hh@@0QBVRflClassEnum@fnd@3@B
     mov rax, 01412a6cf0h
     jmp rax
 
-PUBLIC ?rflClassEnums@FxRenderTargetSetting@gfx@hh@@0QBVRflClassEnum@fnd@3@B
-?rflClassEnums@FxRenderTargetSetting@gfx@hh@@0QBVRflClassEnum@fnd@3@B:
+PUBLIC ?rflClassEnums@FxRenderTargetSetting@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxRenderTargetSetting@needle@hh@@0QBVRflClassEnum@fnd@3@B:
     mov rax, 01412a7550h
     jmp rax
 
@@ -44225,14 +45440,34 @@ PUBLIC ?rflClassEnums@FxScreenBlurParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
     mov rax, 01412a8500h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxScreenSpaceGodrayParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxScreenSpaceGodrayParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412a8b10h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxSeparableSSSParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxSeparableSSSParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412a8f50h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxSGGIParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxSGGIParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412a92b0h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxShadowHeightMapParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxShadowHeightMapParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412a9560h
+    jmp rax
+
+PUBLIC ?rflClassEnums@FxShadowMapParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxShadowMapParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
+    mov rax, 01412a9a50h
+    jmp rax
+
+PUBLIC ?rflClassEnums@FxSHLightFieldParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxSHLightFieldParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
+    mov rax, 01412aa8a0h
     jmp rax
 
 PUBLIC ?rflClassEnums@FxSMAAParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
@@ -44260,9 +45495,29 @@ PUBLIC ?rflClassMembers@FxSSGIParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01412ab700h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxSSS_Parameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxSSS_Parameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412abb70h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxTAAParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxTAAParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412ac200h
+    jmp rax
+
+PUBLIC ?rflClassEnums@FxTimeStopParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
+?rflClassEnums@FxTimeStopParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
+    mov rax, 01412ac570h
+    jmp rax
+
 PUBLIC ?rflClassEnums@FxToneMapParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B
 ?rflClassEnums@FxToneMapParameter@needle@hh@@0QBVRflClassEnum@fnd@3@B:
     mov rax, 01412aceb0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxToneMapParameterFilmic@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxToneMapParameterFilmic@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412ad140h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxToneMapParameterGT@needle@hh@@0QBVRflClassMember@fnd@3@B
@@ -44290,9 +45545,29 @@ PUBLIC ?rflClassMembers@enable@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
     mov rax, 01412adbe0h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxVolumetricShadowParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxVolumetricShadowParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412adef0h
+    jmp rax
+
 PUBLIC ?rflClassMembers@GlayScaleColor@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@GlayScaleColor@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 01412ae210h
+    jmp rax
+
+PUBLIC ?rflClassEnums@GlobalLightAngleLimit@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
+?rflClassEnums@GlobalLightAngleLimit@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
+    mov rax, 01412ae3c0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@GlobalLightParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@GlobalLightParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412ae4c0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@GlobalUserParamOption@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@GlobalUserParamOption@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412ae5d0h
     jmp rax
 
 PUBLIC ?rflClassMembers@InterlaceNoise@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
@@ -44300,9 +45575,24 @@ PUBLIC ?rflClassMembers@InterlaceNoise@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
     mov rax, 01412ae7e0h
     jmp rax
 
+PUBLIC ?rflClassMembers@InvertColor@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@InvertColor@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412aeb40h
+    jmp rax
+
 PUBLIC ?rflClassMembers@UVShift@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@UVShift@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 01412aeef0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxTerrainMaterialBlendingParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxTerrainMaterialBlendingParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412af180h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxWindComputeDebugParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxWindComputeDebugParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412af490h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxWindComputeParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
@@ -44320,6 +45610,21 @@ PUBLIC ?rflClassMembers@FxBrunetonSky@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01412b0b40h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxBrunetonSkyNight@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxBrunetonSkyNight@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412b11b0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxCloudBlendParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxCloudBlendParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412b1440h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxCloudParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxCloudParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412b1eb0h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxCloudProcedural@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxCloudProcedural@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412b25e0h
@@ -44335,9 +45640,24 @@ PUBLIC ?rflClassMembers@FxCrepuscularRay@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01412b2950h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxHeightFog@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxHeightFog@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412b2e70h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxCyberNoiseEffectParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxCyberNoiseEffectParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412bd720h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxCyberNPCSSEffectRenderParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxCyberNPCSSEffectRenderParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412bda18h
+    jmp rax
+
+PUBLIC ?rflClassMembers@HourMinuteData@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@HourMinuteData@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412bdb00h
     jmp rax
 
 PUBLIC ?rflClassMembers@NeedleFxParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
@@ -44355,13 +45675,23 @@ PUBLIC ?rflClassMembers@NeedleFxSceneData@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01412bf030h
     jmp rax
 
+PUBLIC ?rflClassMembers@PerformanceSetting@gfx@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@PerformanceSetting@gfx@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412bf170h
+    jmp rax
+
 PUBLIC ?rflClassMembers@ProgressTimePairData@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@ProgressTimePairData@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 01412bf1f8h
     jmp rax
 
-PUBLIC ?rflClassMembers@StageCommonDecalModelParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
-?rflClassMembers@StageCommonDecalModelParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+PUBLIC ?rflClassMembers@StageCameraParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@StageCameraParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412bf330h
+    jmp rax
+
+PUBLIC ?rflClassMembers@StageCommonDecalModelParameter@gfx@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@StageCommonDecalModelParameter@gfx@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412bf418h
     jmp rax
 
@@ -44370,8 +45700,13 @@ PUBLIC ?rflClassMembers@StageCommonParameter@rfl@heur@@0QBVRflClassMember@fnd@hh
     mov rax, 01412bf550h
     jmp rax
 
-PUBLIC ?rflClassMembers@StageCommonWeatherProgressParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
-?rflClassMembers@StageCommonWeatherProgressParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+PUBLIC ?rflClassMembers@StageCommonTimeProgressParameter@gfx@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@StageCommonTimeProgressParameter@gfx@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412bf930h
+    jmp rax
+
+PUBLIC ?rflClassMembers@StageCommonWeatherProgressParameter@gfx@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@StageCommonWeatherProgressParameter@gfx@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412bfb70h
     jmp rax
 
@@ -44393,6 +45728,16 @@ PUBLIC ?rflClassMembers@StageTerrainParameter@rfl@heur@@0QBVRflClassMember@fnd@h
 PUBLIC ?rflClassMembers@StageTerrainPrecisionParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@StageTerrainPrecisionParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 01412c04e0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxTerrainParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxTerrainParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412c0540h
+    jmp rax
+
+PUBLIC ?rflClassMembers@TimeIntervalData@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@TimeIntervalData@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01412c05d0h
     jmp rax
 
 PUBLIC ?rflClassMembers@TimeProgressAtmosphereParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
@@ -44418,6 +45763,16 @@ PUBLIC ?rflClassMembers@FxPuddleParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 PUBLIC ?rflClassMembers@FxRainParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxRainParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01412c18e0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxRippleParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxRippleParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412c1e30h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxWeatherParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxWeatherParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01412c2000h
     jmp rax
 
 PUBLIC ?rflClassMembers@WeatherFxParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
@@ -44525,6 +45880,11 @@ PUBLIC ?classId@ResVertexAnimationTexture@resources@heur@@0PEBXEB
     mov rax, 01412c7588h
     jmp rax
 
+PUBLIC ?classId@ResVertexAnimationTexture@gfx@hh@@0PEBXEB
+?classId@ResVertexAnimationTexture@gfx@hh@@0PEBXEB:
+    mov rax, 01412c7588h
+    jmp rax
+
 PUBLIC ?classId@ResAtmosphericFog@resources@heur@@0PEBXEB
 ?classId@ResAtmosphericFog@resources@heur@@0PEBXEB:
     mov rax, 01412c75e8h
@@ -44625,6 +45985,11 @@ PUBLIC ?classId@GOCInput@gocs@heur@@0PEBXEB
     mov rax, 0141352c98h
     jmp rax
 
+PUBLIC ?rflClassMembers@StatsDataContainer@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@StatsDataContainer@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141357420h
+    jmp rax
+
 PUBLIC ?rflClassEnums@StatsDataValue@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 ?rflClassEnums@StatsDataValue@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 01413574f0h
@@ -44638,6 +46003,11 @@ PUBLIC ?classId@ResPhysicalSkeleton@resources@heur@@0PEBXEB
 PUBLIC ?classId@GOCPhysicalAnimation@gocs@heur@@0PEBXEB
 ?classId@GOCPhysicalAnimation@gocs@heur@@0PEBXEB:
     mov rax, 014135e0c0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@DecoConfigParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@DecoConfigParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 0141369860h
     jmp rax
 
 PUBLIC ?rflClassMembers@DecoBlurParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
@@ -44655,6 +46025,11 @@ PUBLIC ?rflClassEnums@DecoGradationParam@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
     mov rax, 0141369cd0h
     jmp rax
 
+PUBLIC ?rflClassMembers@DecoPassParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@DecoPassParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 014136a020h
+    jmp rax
+
 PUBLIC ?rflClassMembers@DecoRimParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@DecoRimParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 014136a270h
@@ -44663,6 +46038,11 @@ PUBLIC ?rflClassMembers@DecoRimParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 PUBLIC ?rflClassEnums@DecoTechParam@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B
 ?rflClassEnums@DecoTechParam@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B:
     mov rax, 014136a370h
+    jmp rax
+
+PUBLIC ?rflClassMembers@DecoTechParams@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@DecoTechParams@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 014136a520h
     jmp rax
 
 PUBLIC ?classId@ResEffect@resources@heur@@0PEBXEB
@@ -55890,11 +57270,6 @@ PUBLIC ?componentClass@GOCRflParameter@gocs@heur@@0VGOComponentClass@game@hh@@B
     mov rax, 01428e6d40h
     jmp rax
 
-PUBLIC ?componentClass@GOCCharacterInput@gocs@heur@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCCharacterInput@gocs@heur@@0VGOComponentClass@game@hh@@B:
-    mov rax, 01428e6d90h
-    jmp rax
-
 PUBLIC ?typeInfo@ResSurfRideProject@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResSurfRideProject@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01428e6fc8h
@@ -55985,6 +57360,11 @@ PUBLIC ?rflClassMembers@OffMeshLinkElement@rfl@heur@@0QBVRflClassMember@fnd@hh@@
     mov rax, 01428e8710h
     jmp rax
 
+PUBLIC ?rflClassMembers@Partitioning@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@Partitioning@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428e8860h
+    jmp rax
+
 PUBLIC ?typeInfo@Agent@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
 ?typeInfo@Agent@rfl@heur@@2VRflTypeInfo@fnd@hh@@B:
     mov rax, 01428e8890h
@@ -56060,14 +57440,49 @@ PUBLIC ?componentClass@GOCNavMeshAgent@gocs@heur@@0VGOComponentClass@game@hh@@B
     mov rax, 01428e8b40h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxLightFieldSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxLightFieldSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428e8d30h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxLightSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@FxLightSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 01428e9030h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxSceneConfig@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxSceneConfig@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428e91e0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxSceneSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxSceneSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428e9420h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxTimeChangeSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@FxTimeChangeSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428e9720h
+    jmp rax
+
 PUBLIC ?rflClassMembers@PSOCache@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@PSOCache@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 01428e98a0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@PSOCacheDepthStencilOp@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@PSOCacheDepthStencilOp@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428e9bd0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@PSOCacheRasterizer@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@PSOCacheRasterizer@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428e9c90h
+    jmp rax
+
+PUBLIC ?rflClassMembers@PSOCacheRenderTargetBlend@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@PSOCacheRenderTargetBlend@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428e9ea0h
     jmp rax
 
 PUBLIC ?typeInfo@FxCullingSettings@needle@hh@@2VRflTypeInfo@fnd@3@B
@@ -56260,6 +57675,11 @@ PUBLIC ?rflClassMembers@FxDensityParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01428eab80h
     jmp rax
 
+PUBLIC ?rflClassMembers@CapsuleParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@CapsuleParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428eaf10h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxDynamicResolutionParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxDynamicResolutionParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01428eb0c0h
@@ -56275,9 +57695,34 @@ PUBLIC ?rflClassMembers@FxAntiAliasing@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01428eb480h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxAutoExposureParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxAutoExposureParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01428eb510h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxCameraControlParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxCameraControlParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01428eb6c0h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxColorAccessibilityFilterParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxColorAccessibilityFilterParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01428eb750h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxColorContrastParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxColorContrastParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01428eb900h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxDOFParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxDOFParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01428ebc30h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxFXAAParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxFXAAParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01428ec230h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxHDRParameter@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
@@ -56290,14 +57735,24 @@ PUBLIC ?rflClassMembers@FxRenderOption@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01428ec3b0h
     jmp rax
 
-PUBLIC ?rflClassMembers@FxRenderTargetSetting@gfx@hh@@0QBVRflClassMember@fnd@3@B
-?rflClassMembers@FxRenderTargetSetting@gfx@hh@@0QBVRflClassMember@fnd@3@B:
+PUBLIC ?rflClassMembers@FxRenderTargetSetting@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxRenderTargetSetting@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01428ec950h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxScreenBlurParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxScreenBlurParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01428ec9e0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxShadowMapParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxShadowMapParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01428ecb90h
+    jmp rax
+
+PUBLIC ?rflClassMembers@FxSHLightFieldParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxSHLightFieldParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01428ed490h
     jmp rax
 
 PUBLIC ?rflClassMembers@FxSMAAParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
@@ -56310,6 +57765,11 @@ PUBLIC ?rflClassMembers@FxSSAOParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
     mov rax, 01428ed670h
     jmp rax
 
+PUBLIC ?rflClassMembers@FxTimeStopParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
+?rflClassMembers@FxTimeStopParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
+    mov rax, 01428ed7f0h
+    jmp rax
+
 PUBLIC ?rflClassMembers@FxToneMapParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxToneMapParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01428edd30h
@@ -56318,6 +57778,11 @@ PUBLIC ?rflClassMembers@FxToneMapParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 PUBLIC ?rflClassMembers@FxVignetteParameter@needle@hh@@0QBVRflClassMember@fnd@3@B
 ?rflClassMembers@FxVignetteParameter@needle@hh@@0QBVRflClassMember@fnd@3@B:
     mov rax, 01428eddf0h
+    jmp rax
+
+PUBLIC ?rflClassMembers@GlobalLightAngleLimit@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@GlobalLightAngleLimit@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428edfa0h
     jmp rax
 
 PUBLIC ?typeInfo@FxAtmosphereParameter@needle@hh@@2VRflTypeInfo@fnd@3@B
@@ -56640,8 +58105,8 @@ PUBLIC ?typeInfo@FxRenderOption@needle@hh@@2VRflTypeInfo@fnd@3@B
     mov rax, 01428eebd0h
     jmp rax
 
-PUBLIC ?typeInfo@FxRenderTargetSetting@gfx@hh@@2VRflTypeInfo@fnd@3@B
-?typeInfo@FxRenderTargetSetting@gfx@hh@@2VRflTypeInfo@fnd@3@B:
+PUBLIC ?typeInfo@FxRenderTargetSetting@needle@hh@@2VRflTypeInfo@fnd@3@B
+?typeInfo@FxRenderTargetSetting@needle@hh@@2VRflTypeInfo@fnd@3@B:
     mov rax, 01428eec00h
     jmp rax
 
@@ -56860,8 +58325,8 @@ PUBLIC ?typeInfo@StageCameraParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
     mov rax, 01428ef410h
     jmp rax
 
-PUBLIC ?typeInfo@StageCommonDecalModelParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
-?typeInfo@StageCommonDecalModelParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B:
+PUBLIC ?typeInfo@StageCommonDecalModelParameter@gfx@hh@@2VRflTypeInfo@fnd@3@B
+?typeInfo@StageCommonDecalModelParameter@gfx@hh@@2VRflTypeInfo@fnd@3@B:
     mov rax, 01428ef440h
     jmp rax
 
@@ -56875,8 +58340,8 @@ PUBLIC ?typeInfo@StageCommonTimeProgressParameter@gfx@hh@@2VRflTypeInfo@fnd@3@B
     mov rax, 01428ef4a0h
     jmp rax
 
-PUBLIC ?typeInfo@StageCommonWeatherProgressParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
-?typeInfo@StageCommonWeatherProgressParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B:
+PUBLIC ?typeInfo@StageCommonWeatherProgressParameter@gfx@hh@@2VRflTypeInfo@fnd@3@B
+?typeInfo@StageCommonWeatherProgressParameter@gfx@hh@@2VRflTypeInfo@fnd@3@B:
     mov rax, 01428ef4d0h
     jmp rax
 
@@ -57013,11 +58478,6 @@ PUBLIC ?typeInfo@ResShaderList@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 PUBLIC ?typeInfo@ResVertexLinkInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResVertexLinkInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01428efb68h
-    jmp rax
-
-PUBLIC ?typeInfo@ResVertexAnimationTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
-?typeInfo@ResVertexAnimationTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
-    mov rax, 01428efb90h
     jmp rax
 
 PUBLIC ?typeInfo@ResAtmosphericFog@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
@@ -57188,6 +58648,11 @@ PUBLIC ?gameObjectClass@PointLightObject@gameobjects@heur@@0VGameObjectClass@gam
 PUBLIC ?gameObjectClass@SpotlightObject@gameobjects@heur@@0VGameObjectClass@game@hh@@B
 ?gameObjectClass@SpotlightObject@gameobjects@heur@@0VGameObjectClass@game@hh@@B:
     mov rax, 01428f3770h
+    jmp rax
+
+PUBLIC ?rflClassMembers@DecoGradationParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
+?rflClassMembers@DecoGradationParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
+    mov rax, 01428f3800h
     jmp rax
 
 PUBLIC ?rflClassMembers@DecoTechParam@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
@@ -63515,11 +64980,6 @@ PUBLIC ?gameServiceClass@ObjectWorldService@game@app@@0VGameServiceClass@2hh@@B
     mov rax, 0142977ab0h
     jmp rax
 
-PUBLIC ?gameServiceClass@FxParamManager@gfx@app@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@FxParamManager@gfx@app@@0VGameServiceClass@game@hh@@B:
-    mov rax, 0142977b60h
-    jmp rax
-
 PUBLIC ?gameServiceClass@GeometryInstanceManager@gfx@app@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@GeometryInstanceManager@gfx@app@@0VGameServiceClass@game@hh@@B:
     mov rax, 0142977be8h
@@ -67695,13 +69155,8 @@ PUBLIC ?rflClass@FxRenderOption@needle@hh@@2VRflClass@fnd@3@B
     mov rax, 014298dc70h
     jmp rax
 
-PUBLIC ?rflClass@unk_14298DCC0@rfl@heur@@2VRflClass@fnd@hh@@B
-?rflClass@unk_14298DCC0@rfl@heur@@2VRflClass@fnd@hh@@B:
-    mov rax, 014298dcc0h
-    jmp rax
-
-PUBLIC ?rflClass@FxRenderTargetSetting@gfx@hh@@2VRflClass@fnd@3@B
-?rflClass@FxRenderTargetSetting@gfx@hh@@2VRflClass@fnd@3@B:
+PUBLIC ?rflClass@FxRenderTargetSetting@needle@hh@@2VRflClass@fnd@3@B
+?rflClass@FxRenderTargetSetting@needle@hh@@2VRflClass@fnd@3@B:
     mov rax, 014298dcc0h
     jmp rax
 
@@ -67940,8 +69395,8 @@ PUBLIC ?rflClass@StageCameraParameter@rfl@heur@@2VRflClass@fnd@hh@@B
     mov rax, 014298ea30h
     jmp rax
 
-PUBLIC ?rflClass@StageCommonDecalModelParameter@rfl@heur@@2VRflClass@fnd@hh@@B
-?rflClass@StageCommonDecalModelParameter@rfl@heur@@2VRflClass@fnd@hh@@B:
+PUBLIC ?rflClass@StageCommonDecalModelParameter@gfx@hh@@2VRflClass@fnd@3@B
+?rflClass@StageCommonDecalModelParameter@gfx@hh@@2VRflClass@fnd@3@B:
     mov rax, 014298ea80h
     jmp rax
 
@@ -67960,8 +69415,8 @@ PUBLIC ?rflClass@StageCommonTimeProgressParameter@gfx@hh@@2VRflClass@fnd@3@B
     mov rax, 014298eb20h
     jmp rax
 
-PUBLIC ?rflClass@StageCommonWeatherProgressParameter@rfl@heur@@2VRflClass@fnd@hh@@B
-?rflClass@StageCommonWeatherProgressParameter@rfl@heur@@2VRflClass@fnd@hh@@B:
+PUBLIC ?rflClass@StageCommonWeatherProgressParameter@gfx@hh@@2VRflClass@fnd@3@B
+?rflClass@StageCommonWeatherProgressParameter@gfx@hh@@2VRflClass@fnd@3@B:
     mov rax, 014298eb70h
     jmp rax
 
@@ -68225,6 +69680,11 @@ PUBLIC ?CreateSharedDebugDrawResource@DrawSystem@gfnd@hh@@2P6APEAVSharedDebugDra
     mov rax, 0142c99938h
     jmp rax
 
+PUBLIC ??_D?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0145864afch
+    jmp rax
+
 PUBLIC ??_DBlendingTransitionEffect@anim@hh@@QEAAXXZ
 ??_DBlendingTransitionEffect@anim@hh@@QEAAXXZ:
     mov rax, 0146077520h
@@ -68232,6 +69692,11 @@ PUBLIC ??_DBlendingTransitionEffect@anim@hh@@QEAAXXZ
 
 PUBLIC ??_DReferencedObject@fnd@hh@@QEAAXXZ
 ??_DReferencedObject@fnd@hh@@QEAAXXZ:
+    mov rax, 0146077520h
+    jmp rax
+
+PUBLIC ??_DFxParamExtension@gfx@app@@QEAAXXZ
+??_DFxParamExtension@gfx@app@@QEAAXXZ:
     mov rax, 0146077520h
     jmp rax
 
@@ -68555,6 +70020,11 @@ PUBLIC ??0ApplicationSequenceExtension@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 01484d84b0h
     jmp rax
 
+PUBLIC ??_D?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0148545385h
+    jmp rax
+
 PUBLIC ?UnkFunc1@GameModeLayerStatusExtension@game@app@@UEAA_KXZ
 ?UnkFunc1@GameModeLayerStatusExtension@game@app@@UEAA_KXZ:
     mov rax, 014868a060h
@@ -68725,6 +70195,11 @@ PUBLIC ?LoadLightParameter@FxColManager@gfx@app@@IEAAXIPEAUResLightParameter@fnd
     mov rax, 0148f5aa70h
     jmp rax
 
+PUBLIC ??0Mutex@fnd@csl@@QEAA@XZ
+??0Mutex@fnd@csl@@QEAA@XZ:
+    mov rax, 01492545e0h
+    jmp rax
+
 PUBLIC ??_D?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
 ??_D?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
     mov rax, 0149256800h
@@ -68735,14 +70210,729 @@ PUBLIC ??_D?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@
     mov rax, 0149279990h
     jmp rax
 
+PUBLIC ??_D?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 014927eb90h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 014927fcf0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149286e00h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492876d0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492a2ea0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492ac740h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492b7580h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492bddd0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492ca320h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492ccc00h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492dec10h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01492fce40h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149310120h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149312160h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149313e80h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149316680h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 014933a7d0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149342c30h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149347960h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149356ab0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149399880h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01493b07d0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01493db300h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01493f2a30h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 014941a560h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 014941a810h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149423ed0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149427580h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 014943d5d0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149446b90h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149481750h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149494e10h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 014949c250h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01494d36a0h
+    jmp rax
+
+PUBLIC ??_D?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@QEAAXXZ
+??_D?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01494d6c10h
+    jmp rax
+
+PUBLIC ??_DFxParamManager@gfx@app@@QEAAXXZ
+??_DFxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 01494e9800h
+    jmp rax
+
 PUBLIC ?AddDefaultNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAXPEAUNeedleFxParameter@needle@hh@@I@Z
 ?AddDefaultNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAXPEAUNeedleFxParameter@needle@hh@@I@Z:
+    mov rax, 0149507150h
+    jmp rax
+
+PUBLIC ?AddDefaultNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAXPEAUNeedleFxSceneConfig@needle@hh@@I@Z
+?AddDefaultNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAXPEAUNeedleFxSceneConfig@needle@hh@@I@Z:
     mov rax, 0149511190h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 014952e4d0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149531080h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149531080h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149546250h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149557310h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01495582a0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149558850h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149559520h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149561f70h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149568ca0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 014957a5e0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 014957ede0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01495804f0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01495804f0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149587770h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149588680h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 014958bab0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149595070h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149595070h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01495a0300h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01495c45e0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01495da370h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01495efbd0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149623c00h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149623c00h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 014962d6b0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149633500h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149639c10h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149640790h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149643750h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149648240h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149648240h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149661e80h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149676ac0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149676ac0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 014967f8e0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 0149680fb0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496a4220h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496a4fe0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496ad600h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496af430h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496bb1b0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496bbd20h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496c97b0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496da900h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 01496e4210h
     jmp rax
 
 PUBLIC ?AddNeedleFxParameterInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KPEBXIIM@Z
 ?AddNeedleFxParameterInterpolatorJobById@FxParamManager@gfx@app@@QEAAXI_KPEBXIIM@Z:
     mov rax, 0149704a80h
+    jmp rax
+
+PUBLIC ?OnAddedToGame@FxParamManager@gfx@app@@UEAAXXZ
+?OnAddedToGame@FxParamManager@gfx@app@@UEAAXXZ:
+    mov rax, 014976b320h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@FxParamManager@gfx@app@@UEAAXXZ
+?OnRemovedFromGame@FxParamManager@gfx@app@@UEAAXXZ:
+    mov rax, 0149770a10h
+    jmp rax
+
+PUBLIC ?RemoveDefaultNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAXXZ
+?RemoveDefaultNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 014977d5a0h
+    jmp rax
+
+PUBLIC ?RemoveDefaultNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAXXZ
+?RemoveDefaultNeedleFxSceneConfigInterpolationJob@FxParamManager@gfx@app@@QEAAXXZ:
+    mov rax, 0149786850h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxVolumetricShadowParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497974c0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxCyberNPCSSEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497974c0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497974c0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxDetailParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497974c0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxModelParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497974c0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UPerformanceSetting@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497974c0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxAtmosphereParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497a1a00h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxBloomParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497a6aa0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxTerrainMaterialBlendingParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497a6aa0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxRenderTargetSetting@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497a6aa0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxToneMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497a7620h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxCameraControlParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497a7620h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497a7fd0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxChromaticAberrationParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497a7fd0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxGpuEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497af280h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxColorAccessibilityFilterParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497af280h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxColorContrastParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497b3910h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxCyberNoiseEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497b7840h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497d0730h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497d0730h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497d6d80h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497d6d80h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxDensityParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497d78c0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxShadowHeightMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497e20f0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxSSGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497e20f0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxSGGIParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497e20f0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxDentParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497e20f0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxLightScatteringParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497f1920h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxSceneEnvironmentParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497f1920h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxEffectParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497f1920h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxVignetteParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497f1920h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxFogParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497ff370h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxFieldScanEffectRenderParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 01497ff370h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149805f10h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxHeatHazeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 014980c970h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxInteractiveWaveParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 014980c970h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxLODParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 014982ab00h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxOcclusionCapsuleParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 014983f990h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxScreenBlurParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149846d50h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxPlanarReflectionParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149846d50h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 014984d190h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxSHLightFieldParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149862080h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxScreenSpaceGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149862080h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxTAAParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149862080h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxSeparableSSSParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149884340h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxShadowMapParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149889e40h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxWindComputeParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149890ee0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149890ee0h
+    jmp rax
+
+PUBLIC ?ReverseJob@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z
+?ReverseJob@?$Interpolator@UStageCommonTimeProgressParameter@gfx@hh@@@FxParamManager@gfx@app@@UEAAX_KM@Z:
+    mov rax, 0149896ff0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01498b9b80h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxCyberSpaceStartNoiseParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01498ca470h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxTimeStopParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01498ca470h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxDOFParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01498cc750h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxSSAOParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01498cc750h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxRLRParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01498d62d0h
+    jmp rax
+
+PUBLIC ?UpdateJob@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z
+?UpdateJob@?$Interpolator@UFxGodrayParameter@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBX@Z:
+    mov rax, 01498db310h
     jmp rax
 
 PUBLIC ??0FrameworkWin32@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -69623,6 +71813,11 @@ PUBLIC ??0RenderingEngineRangers@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ??0RenderingEngineMiller@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0RenderingEngineMiller@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01512c4810h
+    jmp rax
+
+PUBLIC ?GetSceneConfig@RenderingEngineMiller@gfx@hh@@UEAAXPEAUNeedleFxSceneConfig@needle@3@@Z
+?GetSceneConfig@RenderingEngineMiller@gfx@hh@@UEAAXPEAUNeedleFxSceneConfig@needle@3@@Z:
+    mov rax, 01513048e0h
     jmp rax
 
 PUBLIC ?GetFXParameter@RenderingEngineMiller@gfx@hh@@UEAAXPEAUNeedleFxParameter@needle@3@@Z
@@ -70805,6 +73000,16 @@ PUBLIC ?IsFlag4@MouseWin32@hid@hh@@UEBA_NXZ
     mov rax, 0157f63a70h
     jmp rax
 
+PUBLIC ?MEH_Unk2@MouseWin32@hid@hh@@UEAA_NXZ
+?MEH_Unk2@MouseWin32@hid@hh@@UEAA_NXZ:
+    mov rax, 0157f66580h
+    jmp rax
+
+PUBLIC ?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ
+?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ:
+    mov rax, 0157f66c50h
+    jmp rax
+
 PUBLIC ??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
 ??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z:
     mov rax, 015802e5c0h
@@ -70908,11 +73113,6 @@ PUBLIC ??0UniqueResourceContainer@fnd@hh@@QEAA@PEAVIAllocator@1csl@@PEBUResource
 PUBLIC ??_DUniqueResourceContainer@fnd@hh@@QEAAXXZ
 ??_DUniqueResourceContainer@fnd@hh@@QEAAXXZ:
     mov rax, 0158af73b0h
-    jmp rax
-
-PUBLIC ??_DFxParamManager@gfx@app@@QEAAXXZ
-??_DFxParamManager@gfx@app@@QEAAXXZ:
-    mov rax, 01594c1ff0h
     jmp rax
 
 PUBLIC ?Create@TitleTopMenu@states@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -71063,6 +73263,11 @@ PUBLIC ??0GatherDrawPassInfoJob@needle@hh@@QEAA@PEAVRenderJob@12@PEAVIAllocator@
 PUBLIC ?UnkFunc20@PostEffectRenderJob@needle@hh@@UEAAXIPEAX@Z
 ?UnkFunc20@PostEffectRenderJob@needle@hh@@UEAAXIPEAX@Z:
     mov rax, 015a9c48f0h
+    jmp rax
+
+PUBLIC ?AddJob@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
+?AddJob@?$Interpolator@UFxAntiAliasing@needle@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
+    mov rax, 015ac9e368h
     jmp rax
 
 PUBLIC ?hhMTSimpleJobStart@rsdx@hh@@YAX_KPEAX_NI@Z

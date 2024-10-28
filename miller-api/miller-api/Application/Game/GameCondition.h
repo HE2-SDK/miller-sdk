@@ -5,7 +5,7 @@ namespace app::game {
     public:
         class Listener {
         public:
-            virtual ~Listener() = default;
+            virtual void GCL_UnkFunc1() {}
         };
     };
 }

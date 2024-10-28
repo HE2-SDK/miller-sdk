@@ -748,7 +748,7 @@ struct SLIST_HEADER_SHIM {
 // #include "Application/UI/UIOverlayService.h"
 // #include "Application/UI/Messages.h"
 
-// #include "Application/Game/GameCondition.h"
+#include "Application/Game/GameCondition.h"
 // #include "Application/Game/GameModeResourceCollection.h"
 // #include "Application/Game/GameModeResourceModule.h"
 // #include "Application/Game/StageTerrainModule.h"
@@ -778,8 +778,8 @@ struct SLIST_HEADER_SHIM {
 // #include "Application/Physics/GOCMoveSphereColliderQuery.h"
 
 #include "Application/Graphics/ResFxColFile2.h"
-// #include "Application/Graphics/SceneParameters.h"
-// #include "Application/Graphics/FxParamManager.h"
+#include "Application/Graphics/SceneParameters.h"
+#include "Application/Graphics/FxParamManager.h"
 // #include "Application/Graphics/FxParamTimeProgressExtension.h"
 // #include "Application/Graphics/FxColManager.h"
 

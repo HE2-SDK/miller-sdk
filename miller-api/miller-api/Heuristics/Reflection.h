@@ -16,6 +16,10 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct DecoConfigParam {
+        csl::ut::Color8 clientColor;
+        uint8_t windowAlpha;
+        csl::ut::Color8 startGradationGuideColor;
+        csl::ut::Color8 endGradationGuideColor;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -58,13 +62,20 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct DecoGradationParam {
-        enum class Orientation {
+        enum class Orientation : int8_t {
             ORIENTATION_NONE = 0,
             ORIENTATION_HORIZONTAL = 1,
             ORIENTATION_VERTICAL = 2,
             ORIENTATION_DIAGONAL = 3,
         };
 
+        Orientation orientation;
+        int8_t srcPosX;
+        int8_t srcPosY;
+        int8_t dstPosX;
+        int8_t dstPosY;
+        csl::ut::Color8 srcColor;
+        csl::ut::Color8 dstColor;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -72,18 +83,6 @@ namespace heur::rfl {
         static void Construct(DecoGradationParam* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(DecoGradationParam* pInstance);
         static void Clean(DecoGradationParam* pInstance);
-    };
-}
-
-namespace heur::rfl {
-    struct DecoPassParam {
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(DecoPassParam* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(DecoPassParam* pInstance);
-        static void Clean(DecoPassParam* pInstance);
     };
 }
 
@@ -100,6 +99,23 @@ namespace heur::rfl {
         static void Construct(DecoRimParam* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(DecoRimParam* pInstance);
         static void Clean(DecoRimParam* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct DecoPassParam {
+        heur::rfl::DecoDropShadowParam dropShadow;
+        heur::rfl::DecoRimParam rim;
+        heur::rfl::DecoGradationParam gradation;
+        heur::rfl::DecoBlurParam blur;
+        bool avoidEdgeArtifact;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(DecoPassParam* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(DecoPassParam* pInstance);
+        static void Clean(DecoPassParam* pInstance);
     };
 }
 
@@ -128,6 +144,7 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct DecoTechParams {
+        heur::rfl::DecoTechParam params[512];
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -135,18 +152,6 @@ namespace heur::rfl {
         static void Construct(DecoTechParams* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(DecoTechParams* pInstance);
         static void Clean(DecoTechParams* pInstance);
-    };
-}
-
-namespace heur::rfl {
-    struct StatsDataContainer {
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(StatsDataContainer* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(StatsDataContainer* pInstance);
-        static void Clean(StatsDataContainer* pInstance);
     };
 }
 
@@ -169,6 +174,19 @@ namespace heur::rfl {
         static void Construct(StatsDataValue* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(StatsDataValue* pInstance);
         static void Clean(StatsDataValue* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct StatsDataContainer {
+        csl::ut::MoveArray<heur::rfl::StatsDataValue> data;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(StatsDataContainer* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(StatsDataContainer* pInstance);
+        static void Clean(StatsDataContainer* pInstance);
     };
 }
 
@@ -204,6 +222,12 @@ namespace hh::needle {
 
 namespace heur::rfl {
     struct FxDofSettings {
+        bool enable;
+        bool ignoreSky;
+        float focus;
+        float znear;
+        float zfar;
+        float focusRange;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -230,6 +254,11 @@ namespace hh::needle {
 
 namespace heur::rfl {
     struct FxGlareSettings {
+        bool enable;
+        float brightPassThreshold;
+        float brightPassInvScale;
+        float persistent;
+        float bloomScale;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -242,6 +271,18 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxGrassSettings {
+        bool grassIsHide;
+        float grassHeightMin;
+        float grassHeight;
+        float grassWidth;
+        float grassFar;
+        float grassFarEnd;
+        float grassWindAxis;
+        float grassWindSpeed;
+        float grassWindCycle;
+        float grassWindStrength;
+        uint32_t grassDupCount;
+        float grassDupRange;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -272,6 +313,13 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxHourSettings {
+        float middleGray;
+        csl::math::Vector3 baseColor;
+        csl::math::Vector3 light;
+        float skyIntensity;
+        csl::math::Vector3 sky;
+        csl::math::Vector3 ambient;
+        csl::math::Vector3 lightScattering;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -299,12 +347,28 @@ namespace hh::needle {
 
 namespace heur::rfl {
     struct FxLightFieldSettings {
-        enum class SaturationScalingType {
+        enum class SaturationScalingType : int8_t {
             SATURATION_KEEPING_LUMINANCE = 0,
             SATURATION_KEEPING_BRIGHTNESS = 1,
             SATURATION_NONE = 2,
         };
 
+        bool ignoreData;
+        int8_t defaultUpdateInterval;
+        csl::math::Vector3 offsetColorUp;
+        csl::math::Vector3 offsetColorDown;
+        SaturationScalingType saturationScalingType;
+        float saturationScalingRate;
+        float luminanceScalingRate;
+        bool disableFinalAdjustColor;
+        float luminanceMin;
+        float luminanceMax;
+        float luminanceMidium;
+        float intensityThreshold;
+        float intensityBias;
+        float defaultInterruption;
+        csl::math::Vector3 defaultColorUp;
+        csl::math::Vector3 defaultColorDown;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -317,6 +381,15 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxLightScatteringSettings {
+        bool enable;
+        csl::math::Vector3 color;
+        float depthScale;
+        float inScatteringScale;
+        float rayleigh;
+        float mie;
+        float g;
+        float znear;
+        float zfar;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -370,11 +443,27 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxSceneSettings {
-        enum class PeepingPlayerType {
+        enum class PeepingPlayerType : int8_t {
             TYPE_DEFAULT = 0,
             TYPE_EDGE = 1,
         };
 
+        float skyIntensityScale;
+        float skyFollowupRatioY;
+        bool pseudoFogEnable;
+        bool pseudoFogWithoutFar;
+        bool pseudoDof;
+        bool deepBlurEnable;
+        bool noBlurEnable;
+        float blurScale;
+        bool peepingPlayerEnable;
+        float occCheckedPlayerTime;
+        PeepingPlayerType peepingPlayerType;
+        bool clearFirstSurface;
+        bool useManualZPrepass;
+        bool useCaptureFramebufferColor;
+        bool useCaptureFramebufferDepth;
+        bool playerDrawOverlay;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -387,7 +476,7 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxTimeChangeSettings {
-        enum class TimeType {
+        enum class TimeType : int8_t {
             TIME_NONE = 0,
             TIME_MORNING = 1,
             TIME_DAY = 2,
@@ -395,6 +484,14 @@ namespace heur::rfl {
             TIME_NIGHT = 4,
         };
 
+        bool enable;
+        bool ignoreSky;
+        TimeType timeDebugIndex;
+        float morning;
+        float day;
+        float evening;
+        float night;
+        heur::rfl::FxHourSettings hourParams[4];
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -421,6 +518,15 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxStageDistortion {
+        bool distortionIsUse;
+        float distortionSpeed;
+        float distortionPower;
+        float distortionDensity;
+        float distortionDepthDensity;
+        float distortionPowerBloom;
+        float distortionPowerDepth;
+        float distortionPowerFront;
+        float distortionDensityFront;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -433,6 +539,9 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxStencilShadow {
+        bool enable;
+        csl::math::Vector3 shadowColor;
+        float shadowAlpha;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -445,6 +554,13 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxSceneCasinoLight {
+        bool isUseCasinoLight;
+        csl::math::Vector3 casinoLightAABBMin;
+        csl::math::Vector3 casinoLightAABBMax;
+        float casinoLightMoveRatio;
+        float casinoLightStrengthMax;
+        float casinoLightRadMin;
+        float casinoLightRadMax;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -486,7 +602,7 @@ namespace hh::needle {
 
 namespace heur::rfl {
     struct FxSceneConfig {
-        enum class GIModeTypes {
+        enum class GIModeTypes : int8_t {
             GIMODE_NORMAL = 0,
             GIMODE_ONLY = 1,
             GIMODE_NONE = 2,
@@ -494,12 +610,24 @@ namespace heur::rfl {
             GIMODE_SEPARATED = 4,
         };
 
-        enum class LightFieldModeTypes {
+        enum class LightFieldModeTypes : int8_t {
             LFMODE_NORMAL = 0,
             LFMODE_ONLY = 1,
             LFMODE_NONE = 2,
         };
 
+        float gammaTVWiiU;
+        float gammaDRCWiiU;
+        bool fixedLdr;
+        GIModeTypes giMode;
+        LightFieldModeTypes lightFieldMode;
+        bool drawLightFieldSamplingPoints;
+        bool updateLightFieldEachFrame;
+        bool drawLightFieldRegion;
+        int32_t screenshotLargeScale;
+        bool drawFxColGeom;
+        bool drawFxColName;
+        bool drawLocalLightSphere;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -512,6 +640,8 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct FxSceneData {
+        heur::rfl::FxSceneConfig config;
+        hh::needle::FxParameter items[4];
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -552,7 +682,7 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct PSOCacheRenderTargetBlend {
-        enum class BLEND {
+        enum class BLEND : uint8_t {
             BLEND_INVALID = 0,
             ZERO = 1,
             ONE = 2,
@@ -573,7 +703,7 @@ namespace heur::rfl {
             INV_SRC1_ALPHA = 17,
         };
 
-        enum class BLEND_OP {
+        enum class BLEND_OP : uint8_t {
             BLEND_OP_INVALID = 0,
             ADD = 1,
             SUBTRACT = 2,
@@ -582,7 +712,7 @@ namespace heur::rfl {
             MAX = 5,
         };
 
-        enum class LOGIC_OP {
+        enum class LOGIC_OP : uint8_t {
             LOGIC_OP_CLEAR = 0,
             LOGIC_OP_SET = 1,
             LOGIC_OP_COPY = 2,
@@ -601,6 +731,16 @@ namespace heur::rfl {
             LOGIC_OP_OR_INVERTED = 15,
         };
 
+        bool BlendEnable;
+        bool LogicOpEnable;
+        BLEND SrcBlend;
+        BLEND DestBlend;
+        BLEND_OP BlendOp;
+        BLEND SrcBlendAlpha;
+        BLEND DestBlendAlpha;
+        BLEND_OP BlendOpAlpha;
+        LOGIC_OP LogicOp;
+        uint8_t RenderTargetWriteMask;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -628,20 +768,31 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct PSOCacheRasterizer {
-        enum class FILL_MODE {
+        enum class FILL_MODE : uint8_t {
             FILL_MODE_INVALID = 0,
             FILL_MODE_INVALID2 = 1,
             FILL_MODE_WIREFRAME = 2,
             FILL_MODE_SOLID = 3,
         };
 
-        enum class CULL_MODE {
+        enum class CULL_MODE : uint8_t {
             CULL_MODE_INVALID = 0,
             CULL_MODE_NONE = 1,
             CULL_MODE_FRONT = 2,
             CULL_MODE_BACK = 3,
         };
 
+        FILL_MODE FillMode;
+        CULL_MODE CullMode;
+        bool FrontCounterClockwise;
+        int32_t DepthBias;
+        float DepthBiasClamp;
+        float SlopeScaledDepthBias;
+        bool DepthClipEnable;
+        bool MultisampleEnable;
+        bool AntialiasedLineEnable;
+        uint32_t ForcedSampleCount;
+        bool ConservativeRaster;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -654,7 +805,7 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct PSOCacheDepthStencilOp {
-        enum class STENCIL_OP {
+        enum class STENCIL_OP : uint8_t {
             STENCIL_OP_INVALID = 0,
             STENCIL_OP_KEEP = 1,
             STENCIL_OP_ZERO = 2,
@@ -666,7 +817,7 @@ namespace heur::rfl {
             STENCIL_OP_DECR = 8,
         };
 
-        enum class COMPARISON_FUNC {
+        enum class COMPARISON_FUNC : uint8_t {
             COMPARISON_FUNC_INVALID = 0,
             COMPARISON_FUNC_NEVER = 1,
             COMPARISON_FUNC_LESS = 2,
@@ -678,6 +829,10 @@ namespace heur::rfl {
             COMPARISON_FUNC_ALWAYS = 8,
         };
 
+        STENCIL_OP StencilFailOp;
+        STENCIL_OP StencilDepthFailOp;
+        STENCIL_OP StencilPassOp;
+        COMPARISON_FUNC StencilFunc;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -742,6 +897,8 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct PSOCacheSample {
+        uint32_t Count;
+        uint32_t Quality;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -884,44 +1041,16 @@ namespace heur::rfl {
 }
 
 namespace heur::rfl {
-    struct NavMeshParameter {
+    struct World {
+        csl::math::Vector3 aabbMin;
+        csl::math::Vector3 aabbMax;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
     private:
-        static void Construct(NavMeshParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(NavMeshParameter* pInstance);
-        static void Clean(NavMeshParameter* pInstance);
-    };
-}
-
-namespace heur::rfl {
-    struct Partitioning {
-        enum class Partition {
-            Watershed = 0,
-            Monotone = 1,
-            Layers = 2,
-        };
-
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(Partitioning* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(Partitioning* pInstance);
-        static void Clean(Partitioning* pInstance);
-    };
-}
-
-namespace heur::rfl {
-    struct Polygonization {
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(Polygonization* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(Polygonization* pInstance);
-        static void Clean(Polygonization* pInstance);
+        static void Construct(World* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(World* pInstance);
+        static void Clean(World* pInstance);
     };
 }
 
@@ -954,6 +1083,40 @@ namespace heur::rfl {
 }
 
 namespace heur::rfl {
+    struct Partitioning {
+        enum class Partition : uint8_t {
+            Watershed = 0,
+            Monotone = 1,
+            Layers = 2,
+        };
+
+        Partition type;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(Partitioning* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(Partitioning* pInstance);
+        static void Clean(Partitioning* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct Polygonization {
+        float edgeMaxLength;
+        float maxSimplificationError;
+        int32_t vertsPerPoly;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(Polygonization* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(Polygonization* pInstance);
+        static void Clean(Polygonization* pInstance);
+    };
+}
+
+namespace heur::rfl {
     struct Tiling {
         float size;
         int32_t maxTiles;
@@ -969,14 +1132,23 @@ namespace heur::rfl {
 }
 
 namespace heur::rfl {
-    struct World {
+    struct NavMeshParameter {
+        heur::rfl::World world;
+        heur::rfl::Rasterization rasterization;
+        heur::rfl::Agent agent;
+        heur::rfl::Region region;
+        heur::rfl::Partitioning partitioning;
+        heur::rfl::Filtering filtering;
+        heur::rfl::Polygonization polygonization;
+        heur::rfl::DetailMesh detailMesh;
+        heur::rfl::Tiling tiling;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
     private:
-        static void Construct(World* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(World* pInstance);
-        static void Clean(World* pInstance);
+        static void Construct(NavMeshParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(NavMeshParameter* pInstance);
+        static void Clean(NavMeshParameter* pInstance);
     };
 }
 
@@ -1100,6 +1272,14 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxBrunetonSkyNight {
+        float lunarIntensityInSky;
+        float starIntensityInSky;
+        float lunarIntensityInCloud;
+        float lunarIntensity;
+        float skyIntensity;
+        csl::ut::Color8 lunarLightColor;
+        csl::math::Vector4 lunarLightColorOffset;
+        float lunarLightPower;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1169,8 +1349,69 @@ namespace hh::needle {
     };
 }
 
+namespace hh::needle {
+    struct FxCloudProcedural {
+        csl::math::Vector3 uvScale;
+        csl::math::Vector3 colorGamma;
+        csl::math::Vector3 colorScale;
+        csl::math::Vector3 colorOffset;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxCloudProcedural* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxCloudProcedural* pInstance);
+        static void Clean(FxCloudProcedural* pInstance);
+    };
+}
+
+namespace hh::needle {
+    struct FxCloudBlendParameter {
+        bool enable;
+        float probability;
+        float cloudiness;
+        hh::needle::FxCloudProcedural proceduralCloud;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxCloudBlendParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxCloudBlendParameter* pInstance);
+        static void Clean(FxCloudBlendParameter* pInstance);
+    };
+}
+
 namespace heur::rfl {
     struct FxCloudParameter {
+        bool enable;
+        bool enableAnimation;
+        float animationFrame;
+        float animationSpeed;
+        float animationAngle;
+        float animationSpeedCirrus;
+        float animationAngleCirrus;
+        float skyHorizonOffset;
+        float cloudStartHeight;
+        float cloudCoverageSpeed;
+        float cloudTypeSpeed;
+        float cloudWetnessSpeed;
+        float miePhaseFunctionG;
+        float silverIntensity;
+        float silverSpread;
+        float scale;
+        float density;
+        float densityThreshold;
+        csl::ut::Color8 cloudsExtinctionColor1;
+        csl::math::Vector4 cloudsExtinctionColor1Offset;
+        csl::ut::Color8 cloudsExtinctionColor2;
+        csl::math::Vector4 cloudsExtinctionColor2Offset;
+        csl::ut::Color8 cloudsExtinctionColor3;
+        csl::math::Vector4 cloudsExtinctionColor3Offset;
+        float cloudExtinctionBlend;
+        bool enableShadow;
+        int32_t shadowCoverage;
+        float shadowValueMin;
+        hh::needle::FxCloudBlendParameter blendParam;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1198,7 +1439,35 @@ namespace hh::needle {
 }
 
 namespace hh::needle {
+    struct FxManualHeightFog {
+        csl::math::Vector3 sunColor;
+        csl::math::Vector3 ambColor;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxManualHeightFog* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxManualHeightFog* pInstance);
+        static void Clean(FxManualHeightFog* pInstance);
+    };
+}
+
+namespace hh::needle {
     struct FxHeightFog {
+        bool enable;
+        bool enableFogMap;
+        float heightScale;
+        float distanceOffset;
+        float distanceScale;
+        csl::math::Vector3 rayleighScale;
+        csl::math::Vector3 mieScale;
+        float noiseBlend;
+        float noiseScale;
+        float noiseDistance;
+        float animationSpeed;
+        float animationAngle;
+        bool isAtmospheric;
+        hh::needle::FxManualHeightFog manualFog;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1232,34 +1501,6 @@ namespace hh::needle {
 }
 
 namespace hh::needle {
-    struct FxCloudBlendParameter {
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxCloudBlendParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxCloudBlendParameter* pInstance);
-        static void Clean(FxCloudBlendParameter* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxCloudProcedural {
-        csl::math::Vector3 uvScale;
-        csl::math::Vector3 colorGamma;
-        csl::math::Vector3 colorScale;
-        csl::math::Vector3 colorOffset;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxCloudProcedural* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxCloudProcedural* pInstance);
-        static void Clean(FxCloudProcedural* pInstance);
-    };
-}
-
-namespace hh::needle {
     struct FxCloudShadowParameter {
         bool enableShadow;
         int32_t shadowCoverage;
@@ -1271,20 +1512,6 @@ namespace hh::needle {
         static void Construct(FxCloudShadowParameter* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(FxCloudShadowParameter* pInstance);
         static void Clean(FxCloudShadowParameter* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxManualHeightFog {
-        csl::math::Vector3 sunColor;
-        csl::math::Vector3 ambColor;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxManualHeightFog* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxManualHeightFog* pInstance);
-        static void Clean(FxManualHeightFog* pInstance);
     };
 }
 
@@ -1376,6 +1603,14 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxDensityWindParameter {
+        float windDir;
+        float windPower;
+        float windLenght;
+        float windSpeed;
+        float windRalenght;
+        float windRaamp;
+        float windRalevel;
+        float windRtpower;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1454,6 +1689,7 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxCyberNPCSSEffectRenderParameter {
+        bool enable;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1466,6 +1702,8 @@ namespace hh::needle {
 
 namespace heur::rfl {
     struct HourMinuteData {
+        uint8_t hour;
+        uint8_t minute;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1477,7 +1715,29 @@ namespace heur::rfl {
 }
 
 namespace heur::rfl {
+    struct GlobalLightAngleLimit {
+        enum class Type : int8_t {
+            NONE = 0,
+            SHADOW_LIGHT = 1,
+            SHADOW_AND_DISTANT_LIGHT = 2,
+        };
+
+        Type type;
+        float minLightElevationAngle;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(GlobalLightAngleLimit* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(GlobalLightAngleLimit* pInstance);
+        static void Clean(GlobalLightAngleLimit* pInstance);
+    };
+}
+
+namespace heur::rfl {
     struct GlobalLightParameter {
+        bool enable;
+        heur::rfl::GlobalLightAngleLimit limit;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1568,6 +1828,8 @@ namespace hh::needle {
 
 namespace heur::rfl {
     struct GlobalUserParamOption {
+        bool enable;
+        csl::math::Vector4 value;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1715,6 +1977,12 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxSGGIParameter {
+        float sgStartSmoothness;
+        float sgEndSmoothness;
+        float doStartSmoothness;
+        float doEndSmoothness;
+        float doOffset;
+        float aoOffset;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1784,6 +2052,10 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxPlanarReflectionParameter {
+        bool enable;
+        csl::math::Vector4 plane;
+        uint32_t width;
+        uint32_t height;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1812,12 +2084,56 @@ namespace hh::needle {
 }
 
 namespace hh::needle {
+    struct FxManualExposureParameter {
+        float exposureValue;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxManualExposureParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxManualExposureParameter* pInstance);
+        static void Clean(FxManualExposureParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
+    struct FxAutoExposureParameter {
+        enum class LUMINANCE_RANGE : int8_t {
+            LUMINANCE_RANGE_CLAMP = 0,
+            LUMINANCE_RANGE_CUTOFF = 1,
+            LUMINANCE_RANGE_CUTOFF_PCT_RATE = 2,
+            LUMINANCE_RANGE_CUTOFF_PCT_AREA = 3,
+        };
+
+        float middleGray;
+        float lumMax;
+        float lumMin;
+        float cutMax;
+        float cutMin;
+        float pctMax;
+        float pctMin;
+        float adaptedRatio;
+        LUMINANCE_RANGE luminanceRangeType;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxAutoExposureParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxAutoExposureParameter* pInstance);
+        static void Clean(FxAutoExposureParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
     struct FxCameraControlParameter {
-        enum class Exposure {
+        enum class Exposure : int8_t {
             EXPOSURE_MANUAL = 0,
             EXPOSURE_AUTO = 1,
         };
 
+        Exposure exposureType;
+        hh::needle::FxManualExposureParameter manualExposure;
+        hh::needle::FxAutoExposureParameter autoExposure;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1830,6 +2146,11 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxToneMapParameterFilmic {
+        float whitePoint;
+        float toeStrength;
+        float linearAngle;
+        float linearStrength;
+        float shoulderStrength;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1882,7 +2203,7 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxColorContrastParameter {
-        enum class LutIndex {
+        enum class LutIndex : int32_t {
             LUT_INDEX_DEFAULT = 0,
             LUT_INDEX_WB = 1,
             LUT_INDEX_USER_0 = 2,
@@ -1894,6 +2215,23 @@ namespace hh::needle {
             LUT_INDEX_COUNT = 8,
         };
 
+        bool enable;
+        float contrast;
+        float dynamicRange;
+        float crushShadows;
+        float crushHilights;
+        bool useLut;
+        LutIndex lutIndex0;
+        LutIndex lutIndex1;
+        float blendRatio;
+        float lutRatio;
+        bool useHlsCorrection;
+        float hlsHueOffset;
+        float hlsLightnessOffset;
+        float hlsSaturationOffset;
+        int32_t hlsColorOffset[3];
+        float hlsColorizeRate;
+        float hlsColorizeHue;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1922,6 +2260,12 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxHeightFogParameter {
+        bool enable;
+        float minHeight;
+        float maxHeight;
+        float nearDist;
+        float farDist;
+        float influence;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1952,18 +2296,50 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxDOFParameter {
-        enum class Quality {
+        enum class Quality : int8_t {
             LOW = 0,
             MIDDLE = 1,
             HIGH = 2,
             HIGHEST = 3,
         };
 
-        enum class Mode {
+        enum class Mode : int8_t {
             DISTANCE = 0,
             LENS = 1,
         };
 
+        bool enable;
+        Quality quality;
+        bool useFocusLookAt;
+        Mode lensMode;
+        float foregroundBokehMaxDepth;
+        float foregroundBokehStartDepth;
+        float backgroundBokehStartDepth;
+        float backgroundBokehMaxDepth;
+        float focalLengthInMilliMeters;
+        float fnumber;
+        float fixedFovy;
+        float focusLength;
+        float forceFocusRange;
+        float cocMaxRadius;
+        float foregroundBokehScale;
+        float backgroundBokehScale;
+        float bladeCount;
+        float bladeCurvature;
+        float bladeRotation;
+        bool drawFocalPlane;
+        bool enableCircleDOF;
+        float bokehRadiusScale;
+        int32_t bokehSampleCount;
+        float skyFocusDistance;
+        float bokehBias;
+        bool enableSWA;
+        float swaFocus;
+        float swaFocusRange;
+        float swaNear;
+        float swaFar;
+        bool enableEnhancedForeBokeh;
+        float foreBokehMaxLuminance;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -1976,7 +2352,7 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxShadowMapParameter {
-        enum class ShadowRenderingType {
+        enum class ShadowRenderingType : int8_t {
             SHADOW_RENDERING_TYPE_SHADOW_MAP = 0,
             SHADOW_RENDERING_TYPE_PLANAR_PROJECTION = 1,
             SHADOW_RENDERING_TYPE_PLANAR_PROJECTION_SHADOW_MAP = 2,
@@ -1984,7 +2360,7 @@ namespace hh::needle {
             SHADOW_RENDERING_TYPE_COUNT = 4,
         };
 
-        enum class ShadowFilter {
+        enum class ShadowFilter : int8_t {
             SHADOW_FILTER_POINT = 0,
             SHADOW_FILTER_PCF = 1,
             SHADOW_FILTER_PCSS = 2,
@@ -2001,7 +2377,7 @@ namespace hh::needle {
             SHADOW_FILTER_VSM_LAST = 10,
         };
 
-        enum class ShadowRangeType {
+        enum class ShadowRangeType : int8_t {
             SHADOW_RANGE_TYPE_CAMERA_LOOKAT = 0,
             SHADOW_RANGE_TYPE_POSITION_MANUAL = 1,
             SHADOW_RANGE_TYPE_FULL_MANUAL = 2,
@@ -2009,23 +2385,71 @@ namespace hh::needle {
             SHADOW_RANGE_TYPE_DEFAULT = 0,
         };
 
-        enum class FitProjection {
+        enum class FitProjection : int8_t {
             FIT_PROJECTION_TO_CASCADES = 0,
             FIT_PROJECTION_TO_SCENE = 1,
             FIT_PROJECTION_TO_ROTATE_CASCADES = 2,
         };
 
-        enum class FitNearFar {
+        enum class FitNearFar : int8_t {
             FIT_NEARFAR_ZERO_ONE = 0,
             FIT_NEARFAR_AABB = 1,
             FIT_NEARFAR_SCENE_AABB = 2,
         };
 
-        enum class PartitionType {
+        enum class PartitionType : int8_t {
             PARTITION_PSSM = 0,
             PARTITION_MANUAL = 1,
         };
 
+        ShadowRenderingType renderingType;
+        bool enable;
+        ShadowFilter shadowFilter;
+        ShadowRangeType shadowRangeType;
+        FitProjection fitProjection;
+        FitNearFar fitNearFar;
+        PartitionType partitionType;
+        float sceneRange;
+        float sceneCenter[3];
+        float manualLightPos[3];
+        float pssmLambda;
+        float cascadeOffset;
+        int32_t cascadeLevel;
+        float cascadeSplits[4];
+        float cascadeBias[4];
+        float bias;
+        float offset;
+        float normalBias;
+        int32_t blurQuality;
+        int32_t blurSize;
+        float fadeoutDistance;
+        float cascadeTransitionfadeDistance;
+        bool enableCSMCache;
+        float csmCacheMaxHeight;
+        float csmCacheMinHeight;
+        int32_t csmCacheMaxRenderPass;
+        float csmCacheFixedFovy;
+        float csmCacheLightDirectionThreshold;
+        bool csmCacheParallaxCorrectionEnabled;
+        float csmCacheParallaxCorrectionHorizontalBias;
+        float csmCacheParallaxCorrectionVerticalBias;
+        int32_t csmCacheFramesToRender[3];
+        float csmCacheFadeLightElevationAngle;
+        float csmCacheMinLightElevationAngle;
+        csl::math::Matrix44 shadowCameraViewMatrix;
+        csl::math::Matrix44 shadowCameraProjectionMatrix;
+        float shadowCameraNearDepth;
+        float shadowCameraFarDepth;
+        float shadowCameraLookAtDepth;
+        bool enableBackFaceShadow;
+        bool enableShadowCamera;
+        bool enableDrawSceneAABB;
+        bool enableDrawShadowFrustum;
+        bool enableDrawCascade;
+        bool enableDrawCameraFrustum;
+        bool enableDrawCSMCache;
+        bool enableClearOnCSMCacheIsInvalidated;
+        bool enablePauseCamera;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2055,6 +2479,10 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxVolumetricShadowParameter {
+        bool enable;
+        bool isForceUseShadowmap;
+        bool isUseCloudShadow;
+        bool isUseHeightmapShadow;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2107,6 +2535,17 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxSSS_Parameter {
+        float sssRayLength;
+        int8_t sssRaycount;
+        float sssBias;
+        float sssIntensity;
+        float sssDepthMin;
+        float sssDepthMax;
+        float sssLightDistance;
+        float sssThickness;
+        bool sssGiMaskEnable;
+        float sssLimit;
+        bool sssDitherEnable;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2168,13 +2607,35 @@ namespace hh::needle {
 }
 
 namespace hh::needle {
+    struct FxLightFieldMergeParameter {
+        bool enable;
+        float blendRatio;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxLightFieldMergeParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxLightFieldMergeParameter* pInstance);
+        static void Clean(FxLightFieldMergeParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
     struct FxSHLightFieldParameter {
-        enum class DebugDrawType {
+        enum class DebugDrawType : int8_t {
             DEBUG_DRAW_NONE = 0,
             DEBUG_DRAW_ONLY_ENABLED = 1,
             DEBUG_DRAW_ALL = 2,
         };
 
+        bool enable;
+        DebugDrawType debugDrawType;
+        bool showSkyVisibility;
+        float debugProbeSize;
+        csl::math::Vector3 multiplyColorUp;
+        csl::math::Vector3 multiplyColorDown;
+        float normalBias;
+        hh::needle::FxLightFieldMergeParameter lfMerge;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2222,6 +2683,23 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxOcclusionCapsuleParameter {
+        bool enable;
+        bool enableOcclusion;
+        csl::ut::Color8 occlusionColor;
+        float occlusionPower;
+        bool enableSpecularOcclusion;
+        float specularOcclusionAlpha;
+        float specularOcclusionPower;
+        float specularOcclusionConeAngle;
+        bool enableShadow;
+        csl::ut::Color8 shadowColor;
+        float shadowPower;
+        float shadowConeAngle;
+        float cullingDistance;
+        bool enableManualLight;
+        int32_t manualLightCount;
+        csl::math::Vector3 manualLightPos[4];
+        bool debugDraw;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2257,6 +2735,16 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxScreenSpaceGodrayParameter {
+        bool enable;
+        float rayMarchingCount;
+        float density;
+        float decay;
+        float threshold;
+        float lumMax;
+        float intensity;
+        bool enableDither;
+        csl::math::Vector3 lightPos;
+        csl::math::Vector3 lightDir;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2269,6 +2757,10 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxGodrayVolumeTexture {
+        bool enableVolumeTexture;
+        float uvScale;
+        float timeScale;
+        float animationAngle;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2313,6 +2805,14 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxHeatHazeParameter {
+        bool enable;
+        float speed;
+        float scale;
+        float cycle;
+        float nearDepth;
+        float farDepth;
+        float maxHeight;
+        float parallaxCorrectFactor;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2324,7 +2824,93 @@ namespace hh::needle {
 }
 
 namespace hh::needle {
+    struct FxPuddleParameter {
+        float heightThreshold;
+        float slopeThreshold;
+        float noiseScaleXZ;
+        float noiseScaleY;
+        float noiseThreshold;
+        float noiseAttenuationRange;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxPuddleParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxPuddleParameter* pInstance);
+        static void Clean(FxPuddleParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
+    struct FxRippleParameter {
+        float intensity;
+        float uvScale;
+        float timeScale;
+        float normalIntensity;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxRippleParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxRippleParameter* pInstance);
+        static void Clean(FxRippleParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
+    struct FxDropParameter {
+        float uvScale;
+        float timeScale;
+        float normalIntensity;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxDropParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxDropParameter* pInstance);
+        static void Clean(FxDropParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
+    struct FxRainParameter {
+        bool enableDrop;
+        bool enableFilter;
+        bool enableRipple;
+        bool enableDropWater;
+        float intensity;
+        csl::math::Vector4 dropColor;
+        bool dropRotTarget;
+        bool enableDropOcc;
+        float dropCameraLerp;
+        float dropCameraRate;
+        float dropCameraRotation;
+        float dropWidth;
+        float dropLength;
+        float dropWind;
+        float dropRange;
+        csl::math::Vector4 filterColor;
+        float filterRange;
+        float filterEdge;
+        float filterAngle;
+        hh::needle::FxRippleParameter ripple;
+        hh::needle::FxDropParameter drop;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxRainParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxRainParameter* pInstance);
+        static void Clean(FxRainParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
     struct FxWeatherParameter {
+        float wetness;
+        float char_wetness;
+        hh::needle::FxPuddleParameter puddle;
+        hh::needle::FxRainParameter rain;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2363,6 +2949,21 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxTAAParameter {
+        bool enableUpscaling;
+        float jitterScale;
+        float mipBias;
+        float sharpnessPower;
+        float baseWeight;
+        float velocityVarianceBasedWeightBias;
+        float colorSpaceClippingScale;
+        float colorSpaceClippingScaleForStatic;
+        float velocityVarianceMin;
+        float velocityVarianceMax;
+        bool enableCharaStencilMask;
+        bool enableLiteMode;
+        bool enablePassThrough;
+        bool debugVisualizeVelcotiyVariance;
+        csl::math::Vector4 debug;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2465,6 +3066,15 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxWindComputeDebugParameter {
+        bool debugEnable;
+        bool debugSpace;
+        bool debugGlobal;
+        bool debugGlobalMap;
+        bool debugSpaceAll;
+        int32_t spaceIndex;
+        float spaceThreshold;
+        float min;
+        float max;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2508,6 +3118,10 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxTerrainMaterialBlendingParameter {
+        bool enable;
+        float blendPower;
+        float blendHightPower;
+        float cullingDistance;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2519,7 +3133,48 @@ namespace hh::needle {
 }
 
 namespace hh::needle {
+    struct FxInteractionDebugParameter {
+        bool enable;
+        bool collisionEnable;
+        float threshold;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxInteractionDebugParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxInteractionDebugParameter* pInstance);
+        static void Clean(FxInteractionDebugParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
+    struct FxInteractionParameter {
+        bool enable;
+        float power;
+        float decrease;
+        float timeScale;
+        hh::needle::FxInteractionDebugParameter debug;
+        float tremorPower;
+        float tremorSpeed;
+        float tremorScaleCriterion;
+        float tremorScaleReduce;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(FxInteractionParameter* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(FxInteractionParameter* pInstance);
+        static void Clean(FxInteractionParameter* pInstance);
+    };
+}
+
+namespace hh::needle {
     struct FxGpuEnvironmentParameter {
+        float grassDitherStart;
+        float grassDitherEnd;
+        hh::needle::FxInteractionParameter interaction;
+        bool enableZoomBias;
+        float zoomBias;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2604,6 +3259,12 @@ namespace heur::rfl {
 
 namespace hh::needle {
     struct ColorDropout {
+        float blockLNoiseSizeX;
+        float blockLNoiseSizeY;
+        float blockHNoiseSizeX;
+        float blockHNoiseSizeY;
+        float bNoiseHighRate;
+        float intensity;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2616,6 +3277,13 @@ namespace hh::needle {
 
 namespace heur::rfl {
     struct InvertColor {
+        float blockLNoiseSizeX;
+        float blockLNoiseSizeY;
+        float blockHNoiseSizeX;
+        float blockHNoiseSizeY;
+        float bNoiseHighRate;
+        float intensity;
+        float invertAllRate;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2743,17 +3411,45 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxTimeStopParameter {
-        enum class Mode {
+        enum class Mode : int8_t {
             Active = 0,
             End = 1,
         };
 
-        enum class EffectType {
+        enum class EffectType : int8_t {
             Gray = 0,
             Nega = 1,
             NegaGray = 2,
         };
 
+        bool enable;
+        Mode mode;
+        float startSpeed;
+        EffectType colorType;
+        float rimPower;
+        float rimThreshold;
+        csl::ut::Colorf rimColor[2];
+        float highlightPower;
+        csl::ut::Colorf highlightColor[2];
+        uint32_t highlightCount;
+        float highlightDepth;
+        float flashSpeed;
+        float speedX;
+        float speedY;
+        csl::ut::Colorf maskColor;
+        float distortionPower;
+        float framesize;
+        float frameDistortion;
+        float frameSpeed;
+        float rotSpeed;
+        bool rotMode;
+        float rotDistortionSpeed;
+        bool endFade;
+        float endSpeed;
+        bool overrideParam;
+        bool transObjectEnable;
+        bool objectTimeStop;
+        bool vignette;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2818,7 +3514,7 @@ namespace hh::needle {
     };
 }
 
-namespace hh::gfx {
+namespace hh::needle {
     struct FxRenderTargetSetting {
         enum class DOFRenderTargetSize : int32_t {
             DOF_RTSIZE_FULL_SCALE = 0,
@@ -2927,8 +3623,46 @@ namespace hh::needle {
     };
 }
 
+namespace heur::rfl {
+    struct TimeIntervalData {
+        heur::rfl::HourMinuteData beginTime;
+        heur::rfl::HourMinuteData endTime;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(TimeIntervalData* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(TimeIntervalData* pInstance);
+        static void Clean(TimeIntervalData* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct ProgressTimePairData : heur::rfl::TimeIntervalData {
+        float hourlyTime;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(ProgressTimePairData* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(ProgressTimePairData* pInstance);
+        static void Clean(ProgressTimePairData* pInstance);
+    };
+}
+
 namespace hh::gfx {
     struct StageCommonTimeProgressParameter {
+        bool enable;
+        float solarRadiusScale;
+        float azimuthAngle;
+        float latitude;
+        float longitude;
+        int32_t month;
+        int32_t day;
+        float time;
+        float hourlyTime;
+        heur::rfl::ProgressTimePairData overrideSpeeds[8];
+        heur::rfl::TimeIntervalData night;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2939,7 +3673,7 @@ namespace hh::gfx {
     };
 }
 
-namespace heur::rfl {
+namespace hh::gfx {
     struct StageCommonWeatherProgressParameter {
         bool enable;
 
@@ -2954,6 +3688,7 @@ namespace heur::rfl {
 
 namespace hh::needle {
     struct FxTerrainParameter {
+        bool enableDrawGrid;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2966,6 +3701,8 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxModelParameter {
+        bool zprepass;
+        bool ditherAsBlueNoize;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -2976,7 +3713,7 @@ namespace hh::needle {
     };
 }
 
-namespace heur::rfl {
+namespace hh::gfx {
     struct StageCommonDecalModelParameter {
         float cullingRange;
 
@@ -2991,6 +3728,7 @@ namespace heur::rfl {
 
 namespace hh::gfx {
     struct PerformanceSetting {
+        float smallCullingThreshold;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -3003,16 +3741,16 @@ namespace hh::gfx {
 
 namespace hh::needle {
     struct NeedleFxSceneConfig {
-        hh::gfx::FxRenderTargetSetting rendertarget;
+        hh::needle::FxRenderTargetSetting rendertarget;
         hh::needle::FxAntiAliasing antialiasing;
         hh::needle::FxLODParameter lod;
         hh::needle::FxDetailParameter detail;
         hh::needle::FxDynamicResolutionParameter dynamicResolution;
         hh::gfx::StageCommonTimeProgressParameter timeProgress;
-        heur::rfl::StageCommonWeatherProgressParameter weatherProgress;
+        hh::gfx::StageCommonWeatherProgressParameter weatherProgress;
         hh::needle::FxTerrainParameter terrain;
         hh::needle::FxModelParameter modelParam;
-        heur::rfl::StageCommonDecalModelParameter decalModelParam;
+        hh::gfx::StageCommonDecalModelParameter decalModelParam;
         hh::gfx::PerformanceSetting performance;
 
         static const hh::fnd::RflTypeInfo typeInfo;
@@ -3111,6 +3849,9 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct StageCameraParameter {
+        float zNear;
+        float zFar;
+        float fovy;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -3207,121 +3948,27 @@ namespace hh::needle {
 }
 
 namespace heur::rfl {
-    struct TimeIntervalData {
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(TimeIntervalData* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(TimeIntervalData* pInstance);
-        static void Clean(TimeIntervalData* pInstance);
-    };
-}
-
-namespace heur::rfl {
-    struct ProgressTimePairData : heur::rfl::TimeIntervalData {
-        float hourlyTime;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(ProgressTimePairData* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(ProgressTimePairData* pInstance);
-        static void Clean(ProgressTimePairData* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxDropParameter {
-        float uvScale;
-        float timeScale;
-        float normalIntensity;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxDropParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxDropParameter* pInstance);
-        static void Clean(FxDropParameter* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxPuddleParameter {
-        float heightThreshold;
-        float slopeThreshold;
-        float noiseScaleXZ;
-        float noiseScaleY;
-        float noiseThreshold;
-        float noiseAttenuationRange;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxPuddleParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxPuddleParameter* pInstance);
-        static void Clean(FxPuddleParameter* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxRippleParameter {
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxRippleParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxRippleParameter* pInstance);
-        static void Clean(FxRippleParameter* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxRainParameter {
-        bool enableDrop;
-        bool enableFilter;
-        bool enableRipple;
-        bool enableDropWater;
-        float intensity;
-        csl::math::Vector4 dropColor;
-        bool dropRotTarget;
-        bool enableDropOcc;
-        float dropCameraLerp;
-        float dropCameraRate;
-        float dropCameraRotation;
-        float dropWidth;
-        float dropLength;
-        float dropWind;
-        float dropRange;
-        csl::math::Vector4 filterColor;
-        float filterRange;
-        float filterEdge;
-        float filterAngle;
-        hh::needle::FxRippleParameter ripple;
-        hh::needle::FxDropParameter drop;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxRainParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxRainParameter* pInstance);
-        static void Clean(FxRainParameter* pInstance);
-    };
-}
-
-namespace heur::rfl {
     struct CapsuleParam {
-        enum class VolumeType {
+        enum class VolumeType : int8_t {
             VOLUME_SPHERE = 0,
             VOLUME_CAPSULE = 1,
         };
 
-        enum class LODLevel {
+        enum class LODLevel : int8_t {
             LOD_HIGH = 0,
             LOD_MIDDLE = 1,
             LOD_LOW = 2,
         };
 
+        csl::ut::VariableString type;
+        VolumeType volume;
+        int32_t priority;
+        csl::math::Vector3 translation;
+        csl::math::Vector3 rotation;
+        csl::math::Vector3 scale;
+        csl::math::Vector3 rate;
+        float radius;
+        LODLevel lod;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -3329,42 +3976,6 @@ namespace heur::rfl {
         static void Construct(CapsuleParam* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(CapsuleParam* pInstance);
         static void Clean(CapsuleParam* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxInteractionDebugParameter {
-        bool enable;
-        bool collisionEnable;
-        float threshold;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxInteractionDebugParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxInteractionDebugParameter* pInstance);
-        static void Clean(FxInteractionDebugParameter* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxInteractionParameter {
-        bool enable;
-        float power;
-        float decrease;
-        float timeScale;
-        hh::needle::FxInteractionDebugParameter debug;
-        float tremorPower;
-        float tremorSpeed;
-        float tremorScaleCriterion;
-        float tremorScaleReduce;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxInteractionParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxInteractionParameter* pInstance);
-        static void Clean(FxInteractionParameter* pInstance);
     };
 }
 
@@ -3378,25 +3989,6 @@ namespace heur::rfl {
         static void Construct(OcclusionCapsuleList* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(OcclusionCapsuleList* pInstance);
         static void Clean(OcclusionCapsuleList* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxAutoExposureParameter {
-        enum class LUMINANCE_RANGE {
-            LUMINANCE_RANGE_CLAMP = 0,
-            LUMINANCE_RANGE_CUTOFF = 1,
-            LUMINANCE_RANGE_CUTOFF_PCT_RATE = 2,
-            LUMINANCE_RANGE_CUTOFF_PCT_AREA = 3,
-        };
-
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxAutoExposureParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxAutoExposureParameter* pInstance);
-        static void Clean(FxAutoExposureParameter* pInstance);
     };
 }
 
@@ -3422,13 +4014,14 @@ namespace hh::needle {
 
 namespace hh::needle {
     struct FxFXAAParameter {
-        enum class QualityType {
+        enum class QualityType : int8_t {
             QUALITY_LOW = 0,
             QUALITY_MEDIUM = 1,
             QUALITY_HIGH = 2,
             QUALITY_COUNT = 3,
         };
 
+        QualityType qualityType;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -3488,33 +4081,6 @@ namespace hh::needle {
 }
 
 namespace hh::needle {
-    struct FxLightFieldMergeParameter {
-        bool enable;
-        float blendRatio;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxLightFieldMergeParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxLightFieldMergeParameter* pInstance);
-        static void Clean(FxLightFieldMergeParameter* pInstance);
-    };
-}
-
-namespace hh::needle {
-    struct FxManualExposureParameter {
-        float exposureValue;
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(FxManualExposureParameter* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(FxManualExposureParameter* pInstance);
-        static void Clean(FxManualExposureParameter* pInstance);
-    };
-}
-
-namespace hh::needle {
     struct FxPlanarProjectionShadowParameter {
         bool enable;
         csl::math::Vector4 projectionPlane;
@@ -3561,25 +4127,9 @@ namespace hh::needle {
 }
 
 namespace heur::rfl {
-    struct GlobalLightAngleLimit {
-        enum class Type {
-            NONE = 0,
-            SHADOW_LIGHT = 1,
-            SHADOW_AND_DISTANT_LIGHT = 2,
-        };
-
-
-        static const hh::fnd::RflTypeInfo typeInfo;
-        static const hh::fnd::RflClass rflClass;
-    private:
-        static void Construct(GlobalLightAngleLimit* pInstance, csl::fnd::IAllocator* pAllocator);
-        static void Finish(GlobalLightAngleLimit* pInstance);
-        static void Clean(GlobalLightAngleLimit* pInstance);
-    };
-}
-
-namespace heur::rfl {
     struct ViewSpaceOffsetRflParam {
+        csl::math::Vector3 targetOffset;
+        csl::math::Vector3 eyeOffset;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
