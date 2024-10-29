@@ -10,7 +10,8 @@ namespace hh::hid {
         csl::ut::MoveArray<void*> unk106;
         csl::ut::MoveArray<void*> unk107;
         csl::ut::MoveArray<void*> unk108;
-        char unk109;
+        csl::ut::MoveArray<void*> unk109;
+        char unk110;
     public:
         DeviceManagerWin32(csl::fnd::IAllocator* pAllocator);
     };

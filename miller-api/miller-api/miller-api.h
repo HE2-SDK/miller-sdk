@@ -516,7 +516,7 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/Path/PathManager.h"
 
 // #include "Hedgehog/Effect/CyanRenderHandler.h"
-// #include "Hedgehog/Effect/ResEffect.h"
+#include "Hedgehog/Effect/ResEffect.h"
 // #include "Hedgehog/Effect/EffectManager.h"
 // #include "Hedgehog/Effect/GOCEffect.h"
 
