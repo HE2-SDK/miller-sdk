@@ -14,7 +14,7 @@ namespace app::player {
         struct PlayerSetupInfo {
             char playerId;
             hh::fnd::WorldPosition worldPos;
-            CharacterIdU8 characterId;
+            // CharacterIdU8 characterId;
             uint32_t unk2;
             float deadline;
             float deadFallTime;

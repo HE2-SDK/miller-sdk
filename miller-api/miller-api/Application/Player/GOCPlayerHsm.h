@@ -9,8 +9,8 @@ namespace app::player {
         };
         struct SetupInfo {
             const StateDescRef* stateDescs;
-            uint32_t stateDescCount;
-            uint32_t unk1;
+            unsigned int stateDescCount;
+            unsigned int maxStateDescCount;
             uint32_t unk105bConfig;
             PlayerHsmContext* hsmContext;
             bool enablePreAnimUpdates;
@@ -21,8 +21,10 @@ namespace app::player {
 
         };
 
+        void Initialize(const SetupInfo& setupInfo);
+
     public:
-        hh::ut::HsmBase* hsm;
+        hh::fnd::Reference<hh::ut::StateManager> stateManager;
         hh::ut::HsmBase hsm2;
         hh::fnd::Reference<PlayerHsmContext> hsmContext;
         hh::fnd::Reference<PlayerStateParameter> playerStateParameter;
@@ -36,7 +38,7 @@ namespace app::player {
 
 
         GOCPlayerHsm(csl::fnd::IAllocator* pAllocator);
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void Update(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo) override;
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
 		virtual bool ProcessMessage(hh::fnd::Message& msg) override;

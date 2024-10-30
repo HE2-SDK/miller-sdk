@@ -58,7 +58,7 @@ namespace hh::fnd
 			return m_ClassSize;
 		}
 		
-		[[nodiscard]] uint32_t GetNumMembers() const
+		[[nodiscard]] inline uint32_t GetNumMembers() const
 		{
 			uint32_t count = m_pMembers.count;
 

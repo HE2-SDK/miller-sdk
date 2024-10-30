@@ -28,7 +28,7 @@ namespace app::player {
         };
 
         GOCPlayerVisual(csl::fnd::IAllocator* allocator);
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void Update(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo) override;
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;

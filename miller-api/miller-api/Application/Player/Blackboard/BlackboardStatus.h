@@ -29,28 +29,6 @@ namespace app::player {
             SPIN_DASH = 0x22,
         };
 
-        enum class CombatFlag : unsigned int
-        {
-            SIDE_STEP = 0x05,
-            PARRY = 0x0F,
-            PERFECT_PARRY = 0x10,
-            AIR_TRICK = 0x1A,
-            GRAND_SLAM = 0x22,
-            QUICK_CYLOOP = 0x28,
-            PHANTOM_RUSH = 0x2A,
-            CYCLONE_KICK = 0x2B,
-            RECOVERY_SMASH = 0x2C,
-            SONIC_BOOM = 0x2E,
-            WILD_RUSH = 0x2F,
-            LOOP_KICK = 0x30,
-            SPIN_SLASH = 0x31,
-            STOMP_ATTACK = 0x32,
-            HOMING_SHOT = 0x34,
-            CROSS_SLASH = 0x35,
-            AUTO_COMBO = 0x39,
-            SPIN_DASH = 0x3F,
-        };
-
         enum class WorldFlag : unsigned int
         {
             KILLED = 0x01,
@@ -81,37 +59,35 @@ namespace app::player {
         };
 
         static constexpr const char* name = "BlackboardStatus";
-        uint16_t word20;
+        char byte20;
         uint32_t dword24;
-        csl::ut::Bitset<CombatFlag, uint64_t> combatFlags[2];
+        uint32_t dword28;
+        uint64_t qword30; // also flag
         csl::ut::Bitset<StateFlag, uint64_t> stateFlags;
         csl::ut::Bitset<WorldFlag, uint64_t> worldFlags[2];
         float outOfControlTime;
         float inControlTime;
-        uint64_t qword58;
+        float float58;
+        uint32_t dword5C;
         uint64_t qword60;
         ut::PriorityList<bool, hh::fnd::Handle<hh::fnd::Messenger>> qword68;
         csl::ut::InplaceMoveArray<uint32_t, 4> qword90;
         csl::ut::InplaceMoveArray<uint32_t, 4> qwordC0;
         csl::ut::InplaceMoveArray<uint32_t, 4> qwordF0;
-        uint64_t qword120;
-        uint32_t dword128;
-        ut::PriorityList<Dimension, hh::fnd::Handle<hh::fnd::Messenger>> qword130;
-        csl::math::Vector4 oword160;
-        uint32_t dword170;
-        uint32_t qword174;
-        uint32_t qword178;
-        uint32_t dword17C;
-        Difficulty byte180;
-        uint32_t qword184;
-        uint32_t qword188;
+        uint32_t qword120;
+        uint32_t dword124;
+        ut::PriorityList<Dimension, hh::fnd::Handle<hh::fnd::Messenger>> qword128;
+        csl::math::Vector4 oword150;
+        uint64_t qword160;
+        uint8_t word168;
+        uint8_t word169;
+        uint8_t byte16A;
+        uint32_t dword16C;
 
         virtual unsigned int GetNameHash() const override;
 
-        void SetCombatFlag(CombatFlag combatFlag, bool enabled);
         void SetStateFlag(StateFlag stateFlag, bool enabled);
         void SetWorldFlag(WorldFlag worldFlag, bool enabled);
-        bool GetCombatFlag(CombatFlag combatFlag);
         bool GetStateFlag(StateFlag stateFlag);
         bool GetWorldFlag(WorldFlag worldFlag);
 

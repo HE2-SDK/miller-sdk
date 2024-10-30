@@ -19,12 +19,21 @@ struct SLIST_HEADER_SHIM {
 };
 #define SLIST_HEADER SLIST_HEADER_SHIM
 
+namespace std {
+    template<typename T>
+    class optional {
+        T value;
+        bool hasValue;
+    };
+}
+
 #else
 
 #include <new>
 #include <cassert>
 #include <cstring>
 #include <type_traits>
+#include <optional>
 #include <synchapi.h>
 
 #endif
@@ -113,6 +122,7 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/Utility/TempMoveArray.h"
 #include "Hedgehog/Utility/FSM/TinyFsm.h"
 #include "Hedgehog/Utility/FSM/StateDesc.h"
+#include "Hedgehog/Utility/FSM/StateManager.h"
 #include "Hedgehog/Utility/FSM/State.h"
 #include "Hedgehog/Utility/FSM/Hsm.h"
 #include "Hedgehog/Utility/BinaryFile.h"
@@ -400,9 +410,6 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/HID/DeviceManager.h"
 #include "Hedgehog/HID/DeviceManagerWin32.h"
 
-// // // System Messages
-// // #include "System/Messages/MsgRobChaosEmerald.h"
-
 #include "Hedgehog/Debug/Messages.h"
 #include "Hedgehog/Debug/ViewerContext.h"
 #include "Hedgehog/Debug/Viewer.h"
@@ -633,97 +640,93 @@ struct SLIST_HEADER_SHIM {
 #include "Hedgehog/Dv/DiEventPreviewManager.h"
 #include "Hedgehog/Dv/DvSceneControl.h"
 
-// #include "ApplicationCommon/Reflection/GOCRflParameter.h"
+#include "ApplicationCommon/Reflection/GOCRflParameter.h"
 
-// #include "ApplicationCommon/FSM/GOCTinyFsm2.h"
-// #include "ApplicationCommon/FSM/GOCHsm2.h"
+#include "ApplicationCommon/FSM/GOCTinyFsm2.h"
+#include "ApplicationCommon/FSM/GOCHsm2.h"
 
-// #include "ApplicationCommon/Camera/Types.h"
-// #include "ApplicationCommon/Camera/CameraExtension.h"
-// #include "ApplicationCommon/Camera/CameraController.h"
-// #include "ApplicationCommon/Camera/CameraInterpolator.h"
-// #include "ApplicationCommon/Camera/CameraFrame.h"
-// #include "ApplicationCommon/Camera/GOCCamera.h"
-// #include "ApplicationCommon/Camera/Messages.h"
+#include "ApplicationCommon/Camera/Types.h"
+#include "ApplicationCommon/Camera/CameraExtension.h"
+#include "ApplicationCommon/Camera/CameraController.h"
+#include "ApplicationCommon/Camera/CameraInterpolator.h"
+#include "ApplicationCommon/Camera/CameraFrame.h"
+#include "ApplicationCommon/Camera/GOCCamera.h"
+#include "ApplicationCommon/Camera/Messages.h"
 
 #include "ApplicationCommon/HID/GOCCharacterInput.h"
 
-// #include "ApplicationCommon/Game/GOCMotor.h"
-// #include "ApplicationCommon/Game/GOCMotorConstant.h"
-// #include "ApplicationCommon/Game/GOCMotorRotate.h"
-// #include "ApplicationCommon/Game/GOCMotorOnPath.h"
+#include "ApplicationCommon/Game/GOCMotor.h"
+#include "ApplicationCommon/Game/GOCMotorConstant.h"
+#include "ApplicationCommon/Game/GOCMotorRotate.h"
+#include "ApplicationCommon/Game/GOCMotorOnPath.h"
 
-// #include "Application/Utilities/PriorityList.h"
-// #include "Application/Utilities/SendMessage.h"
+#include "Application/Utilities/PriorityList.h"
+#include "Application/Utilities/SendMessage.h"
 
-// #include "Application/Foundation/AppHeapManager.h"
-// #include "Application/Foundation/AppMessage.h"
+#include "Application/Foundation/AppHeapManager.h"
+#include "Application/Foundation/AppMessage.h"
 
-// #include "Application/FSM/StateContext.h"
+#include "Application/FSM/StateContext.h"
 
-// #include "Application/Resource/AppResourceManager.h"
+#include "Application/Resource/AppResourceManager.h"
 
-// #include "Application/Save/SaveDataLock.h"
-// #include "Application/Save/SaveDataAccessor.h"
-// #include "Application/Save/Accessors.h"
-// #include "Application/Save/UserElement.h"
-// #include "Application/Save/SaveDataLockImpl.h"
-// #include "Application/Save/SaveInterface.h"
-// #include "Application/Save/SaveManager.h"
+#include "Application/Save/SaveDataLock.h"
+#include "Application/Save/SaveDataAccessor.h"
+#include "Application/Save/Accessors.h"
+#include "Application/Save/UserElement.h"
+#include "Application/Save/SaveDataLockImpl.h"
+#include "Application/Save/SaveInterface.h"
+#include "Application/Save/SaveManager.h"
 
-// #include "Application/Camera/CameraBridge.h"
-// #include "Application/Camera/CameraService.h"
+#include "Application/Camera/CameraBridge.h"
+#include "Application/Camera/CameraService.h"
 
 // #include "Application/Player/CharacterId.h"
-// #include "Application/Player/PlayerCounterTimer.h"
-// #include "Application/Player/PlayerHsmContext.h"
-// #include "Application/Player/Blackboard/BlackboardContent.h"
-// #include "Application/Player/Blackboard/BlackboardAmy.h"
-// #include "Application/Player/Blackboard/BlackboardSpeed.h"
-// #include "Application/Player/Blackboard/BlackboardItem.h"
-// #include "Application/Player/Blackboard/BlackboardBattle.h"
-// #include "Application/Player/Blackboard/BlackboardStatus.h"
-// #include "Application/Player/Blackboard/BlackboardTails.h"
-// #include "Application/Player/Blackboard/Blackboard.h"
-// #include "Application/Player/Blackboard/GOCPlayerBlackboard.h"
-// #include "Application/Player/StateParameter.h"
-// #include "Application/Player/RelayedFlagsParameter.h"
-// #include "Application/Player/PlayerStateParameter.h"
-// #include "Application/Player/StatePlugin/StatePlugin.h"
-// #include "Application/Player/StatePlugin/StatePluginManager.h"
-// #include "Application/Player/StatePlugin/StatePluginBoost.h"
-// #include "Application/Player/StatePlugin/StatePluginCyberStart.h"
-// #include "Application/Player/GravityController.h"
-// #include "Application/Player/GOCPlayerHsm.h"
-// #include "Application/Player/GOCPlayerState.h"
+#include "Application/Player/PlayerCounterTimer.h"
+#include "Application/Player/PlayerHsmContext.h"
+#include "Application/Player/Blackboard/BlackboardContent.h"
+#include "Application/Player/Blackboard/BlackboardAmy.h"
+#include "Application/Player/Blackboard/BlackboardSpeed.h"
+#include "Application/Player/Blackboard/BlackboardItem.h"
+#include "Application/Player/Blackboard/BlackboardBattle.h"
+#include "Application/Player/Blackboard/BlackboardStatus.h"
+#include "Application/Player/Blackboard/BlackboardTails.h"
+#include "Application/Player/Blackboard/Blackboard.h"
+#include "Application/Player/Blackboard/GOCPlayerBlackboard.h"
+#include "Application/Player/StateParameter.h"
+#include "Application/Player/RelayedFlagsParameter.h"
+#include "Application/Player/PlayerStateParameter.h"
+#include "Application/Player/StatePlugin/StatePlugin.h"
+#include "Application/Player/StatePlugin/StatePluginManager.h"
+#include "Application/Player/StatePlugin/StatePluginBoost.h"
+#include "Application/Player/StatePlugin/StatePluginCyberStart.h"
+#include "Application/Player/GravityController.h"
+#include "Application/Player/GOCPlayerHsm.h"
+#include "Application/Player/GOCPlayerState.h"
 #include "Application/Player/GOCPlayerParameter.h"
-// #include "Application/Player/GOCPlayerKinematicParams.h"
-// #include "Application/Player/PlayerCollision.h"
-// #include "Application/Player/PlayerController.h"
-// #include "Application/Player/GOCPlayerCollider.h"
-// #include "Application/Player/ComponentCollector.h"
-// #include "Application/Player/VisualLocator.h"
-// #include "Application/Player/VisualLocatorNormal.h"
-// #include "Application/Player/VisualLocatorManager.h"
-// #include "Application/Player/PlayerVisual.h"
-// #include "Application/Player/VisualHuman.h"
-// #include "Application/Player/GOCPlayerVisual.h"
-// #include "Application/Player/PlayerStateBase.h"
-// #include "Application/Player/States.h"
-// #include "Application/Player/PlayerStateBase.h"
-// #include "Application/Player/Messages.h"
+#include "Application/Player/GOCPlayerKinematicParams.h"
+#include "Application/Player/PlayerCollision.h"
+#include "Application/Player/PlayerController.h"
+#include "Application/Player/GOCPlayerCollider.h"
+#include "Application/Player/ComponentCollector.h"
+#include "Application/Player/VisualLocator.h"
+#include "Application/Player/VisualLocatorNormal.h"
+#include "Application/Player/VisualLocatorManager.h"
+#include "Application/Player/PlayerVisual.h"
+#include "Application/Player/VisualHuman.h"
+#include "Application/Player/GOCPlayerVisual.h"
+#include "Application/Player/PlayerStateBase.h"
+#include "Application/Player/States.h"
+#include "Application/Player/PlayerStateBase.h"
+#include "Application/Player/Messages.h"
 
-// #include "Application/Player/Player.h"
-// #include "Application/Player/Characters/Sonic.h"
-// #include "Application/Player/Characters/Tails.h"
-// #include "Application/Player/Characters/VisualAmy.h"
-// #include "Application/Player/Characters/Amy.h"
-// #include "Application/Player/Characters/Knuckles.h"
+#include "Application/Player/Player.h"
+// #include "Application/Player/Characters/Shadow.h"
 
-// #include "Application/Level/PlayerInformation.h"
-// #include "Application/Level/StageData.h"
-// #include "Application/Level/StageInfo.h"
-// #include "Application/Level/LevelInfo.h"
+#include "Application/Level/PlayerInformation.h"
+#include "Application/Level/StageData.h"
+#include "Application/Level/StageInfo.h"
+#include "Application/Level/LevelInfo.h"
 // #include "Application/Level/ResLevel.h"
 // #include "Application/Level/ResMasterLevel.h"
 // #include "Application/Level/LevelManager.h"
