@@ -22,7 +22,7 @@ namespace hh::anim {
             bool unk10;
         };
 
-        uint8_t transitionUnk2;
+        TransitionEasingType easingType;
         float duration;
 
         virtual void Activate() = 0;

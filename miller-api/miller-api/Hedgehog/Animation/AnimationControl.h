@@ -22,8 +22,10 @@ namespace hh::anim {
         virtual float GetEndTime() const = 0;
         virtual void UnkFunc14(uint8_t* unkParam1) = 0;
         virtual void UnkFunc15(float unkParam1) = 0;
-        virtual bool UnkFunc16() const = 0;
+        virtual float UnkFunc16() const = 0;
+        virtual bool UnkFunc17() const = 0;
         virtual bool IsPaused() const = 0;
-        virtual void UnkFunc18(bool unkParam1) = 0;
+        virtual void UnkFunc19(bool unkParam1) = 0;
+        virtual void UnkFunc20(bool unkParam1) = 0;
     };
 }

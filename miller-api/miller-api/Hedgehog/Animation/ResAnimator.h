@@ -72,6 +72,8 @@ namespace hh::anim {
         enum class Flag : uint8_t {
             LOOPS,
             UNK1,
+            DISABLE_PBA,
+            USE_PBA_BLEND_FACTOR,
         };
 
         const char* name;
@@ -89,6 +91,7 @@ namespace hh::anim {
         TransitionData stateEndTransition;
         unsigned short flagIndexCount;
         short flagIndexOffset;
+        float pbaBlendFactor;
     };
 
     enum class BlendNodeType : uint8_t {
@@ -223,13 +226,19 @@ namespace hh::anim {
     class ResAnimator : public fnd::ManagedResource {
     public:
         AsmData* binaryData;
-        void* unk2;
         csl::ut::StringMap<int> stateIdsByName;
         csl::ut::StringMap<int> variableIdsByName;
         csl::ut::MoveArray<EventArray> eventArrays;
         csl::ut::MoveArray<TransitionArray> transitionArrays;
 
         MANAGED_RESOURCE_CLASS_DECLARATION(ResAnimator)
+
+        virtual void Load(void* data, size_t size) override;
+        virtual void Unload() override;
+        virtual void Reload(void* data, size_t size) override;
+
+        void LoadBinaryImage(AsmData* binaryData);
+
         int GetStateId(const char* stateName);
         int GetVariableId(const char* variableName);
         int GetLayerId(const char* layerName);

@@ -1,7 +1,7 @@
 #pragma once
 
 namespace hh::anim {
-    class AnimationControlPxd : public AnimationControl, public fnd::ReloaderListener {
+    class AnimationControlPxd : public AnimationControl {
     public:
         bool paused;
         float localTime;
@@ -29,9 +29,10 @@ namespace hh::anim {
         virtual float GetEndTime() const override;
         virtual void UnkFunc14(uint8_t* unkParam1) override;
         virtual void UnkFunc15(float unkParam1) override;
-        virtual bool UnkFunc16() const override;
+        virtual float UnkFunc16() const override;
+        virtual bool UnkFunc17() const override;
         virtual bool IsPaused() const override;
-        virtual void UnkFunc18(bool unkParam1) override;
-        virtual void PostResourceReloadCallback(fnd::ManagedResource* resource) override;
+        virtual void UnkFunc19(bool unkParam1) override;
+        virtual void UnkFunc20(bool unkParam1) override;
     };
 }

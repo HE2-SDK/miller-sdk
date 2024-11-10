@@ -8,7 +8,7 @@ namespace hh::anim {
         csl::ut::MoveArray<void*> unk103;
         uint64_t unk104;
         csl::ut::PointerMap<void*, void*> unk105;
-        uint64_t unk106;
+        uint64_t unk106a;
 
         virtual void Load(void* data, size_t size) override;
         virtual void Unload() override;
@@ -26,5 +26,7 @@ namespace hh::anim {
         virtual uint64_t UnkFunc16() override;
         virtual uint64_t UnkFunc17() override;
         virtual uint64_t UnkFunc18() override;
+
+        MANAGED_RESOURCE_CLASS_DECLARATION(ResSkeletonPxd);
     };
 }

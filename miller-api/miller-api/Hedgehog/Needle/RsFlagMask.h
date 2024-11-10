@@ -43,12 +43,35 @@ namespace hh::needle {
 
 // IDA doesn't understand the uint64_t sized enum?
 // #ifdef EXPORTING_TYPES
-        uint64_t flags;
+        uint64_t flags0;
+        uint64_t flags1;
+        uint64_t flags2;
+        uint64_t flags3;
+        uint64_t flags4;
+        uint64_t flags5;
+        uint64_t flags6;
+        uint64_t flags7;
+        uint64_t flags8;
 // #else
-        // Flags flags;
+        // Flags flags0;
+        // Flags flags1;
+        // Flags flags2;
+        // Flags flags3;
+        // Flags flags4;
+        // Flags flags5;
+        // Flags flags6;
+        // Flags flags7;
+        // Flags flags8;
 // #endif
         uint64_t unk1;
-        void SetBlendMode(unsigned int mode1, unsigned int mode2, unsigned int op);
+        void SetBlendMode1(BlendMode mode);
+        void SetBlendMode2(BlendMode mode);
+        void SetBlendOp(BlendOp op);
+        void SetAlphaBlendMode1(BlendMode mode);
+        void SetAlphaBlendMode2(BlendMode mode);
+        void SetAlphaBlendOp(BlendOp op);
+        void SetBlendMode(BlendMode mode1, BlendMode mode2, BlendOp op);
+        void SetBlendMode(BlendMode mode1, BlendMode mode2, BlendOp op, BlendMode alphaMode1, BlendMode alphaMode2, BlendOp alphaOp);
         void Invalidate();
     };
 }

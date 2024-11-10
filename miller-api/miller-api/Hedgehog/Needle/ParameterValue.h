@@ -11,17 +11,18 @@ namespace hh::needle {
     };
 
     enum class ParameterType : uint8_t {
-        FLOAT = 0,
-        BOOL = 1,
-        INT = 2,
-        SHADER = 3,
-        EFFECT = 4,
-        TEXTURE = 5,
-        SAMPLER = 6,
-        RS_FLAG_MASK = 7,
-        SHADER_NAME = 8,
-        TEXTURE_NAME = 9,
-        HINT = 10,
+        FLOAT,
+        BOOL,
+        INT,
+        SHADER,
+        EFFECT,
+        TEXTURE,
+        SAMPLER,
+        RS_FLAG_MASK_2,
+        RS_FLAG_MASK,
+        SHADER_NAME,
+        TEXTURE_NAME ,
+        HINT,
     };
 
     struct ParameterFloatValue {
@@ -86,7 +87,7 @@ namespace hh::needle {
     };
 
     struct ParameterHintValue {
-        void* type;
+        intrusive_ptr<CNameIDObject> type;
         intrusive_ptr<CNameIDObject> name;
         ParameterHintData data;
         unsigned int unk1;

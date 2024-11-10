@@ -58,10 +58,12 @@ namespace hh::fnd {
         static ManagedResource* Create(csl::fnd::IAllocator* allocator, File* file, const char* name, ResourceTypeInfo* resourceTypeInfo);
         static ManagedResource* Create(csl::fnd::IAllocator* allocator, csl::fnd::IAllocator* resourceAllocator, const char* unkStrParam, const char* name, void* data, size_t size, ResourceTypeInfo* resourceTypeInfo);
 
+		virtual void ReferencedObject_UnkFunc1(const ReferencedObject::Unk1& unkParam) override;
         virtual void Load(void* data, size_t size) = 0;
         virtual void LoadRef2(void* data, size_t size);
         virtual void Unload() = 0;
         virtual void Resolve(ResourceResolver& resolver) {}
-        virtual void Reload(void* data, size_t size) {}
+        virtual uint64_t UnkFunc5() {}
+        virtual void Reload(void* data, size_t size);
     };
 }

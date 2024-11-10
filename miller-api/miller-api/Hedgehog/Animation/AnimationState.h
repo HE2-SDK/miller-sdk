@@ -70,5 +70,6 @@ namespace hh::anim {
         BlendNodeBase* BuildBlendTree(BlendNodeData* rootBlendNode);
         void Update();
         bool IsFlagContained(int flagId) const;
+        void SetTime(float time);
     };
 }

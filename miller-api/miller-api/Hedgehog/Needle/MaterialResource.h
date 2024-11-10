@@ -115,7 +115,7 @@ namespace hh::needle {
         void SetShaderName(const char* name);
         void SetTexture(const char* type, const char* name);
         void SetParameterHintValue(const ParameterHintValue* value);
-        void SetParameterHintValueUint(const void* nameType, CNameIDObject* name, const uint_vector4& data);
+        void SetParameterHintValueUint(CNameIDObject* type, CNameIDObject* name, const uint_vector4& data);
 
         void AfterTraverseSetupMemory(RenderingDevice* renderingDevice, MaterialResource* elementData);
         MaterialResource* Finish(bool recreate);
@@ -128,8 +128,11 @@ namespace hh::needle {
         struct MaterialResourceData {
             void* instanceParameter;
             uint64_t unk2;
+            uint64_t unk3;
+            uint64_t unk4;
+            uint64_t unk5;
             uint32_t instanceParameterCount;
-            uint32_t unk3;
+            uint32_t unk6;
             MaterialResource* elementData;
 
             // Actual data block starts here.
@@ -137,7 +140,6 @@ namespace hh::needle {
             // - 0x0 : this small header
             // - 0x8 : parameter infos
             // - 0x8 + ((2 * parameterCount + 7) & 0xFFFFFFFFFFFFFFF8ui64) : parameter values
-
             uint32_t dataBufferSize;
             uint32_t parameterCount;
         };

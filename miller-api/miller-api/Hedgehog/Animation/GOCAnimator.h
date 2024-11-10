@@ -8,7 +8,8 @@ namespace hh::anim {
         uint32_t activeTriggerBits;
         char flags;
         char unk204b;
-        uint64_t unk205;
+        uint32_t unk205;
+        float unk206;
     
         struct SetupInfo : public GOCAnimationSingle::SetupInfo {
             AsmResourceManager* asmResourceManager;
@@ -41,6 +42,7 @@ namespace hh::anim {
         void SetPlaybackSpeed(float speed);
         float GetPlaybackSpeed(int layer) const;
         void SetPlaybackSpeed(int layer, float speed);
+        void SetPlaybackSpeedForAllLayers(float speed);
         bool SetFloat(const char* variableName, float value);
         bool GetFloat(const char* variableName, float* value);
         AsmResourceManager* GetResourceManager() const;
@@ -48,6 +50,7 @@ namespace hh::anim {
         AnimationState::Impl* GetCurrentState(int layer) const;
         AnimationState::Impl* GetPreviousState(int layer) const;
         bool IsFinished(int layer) const;
+        void SetTime(float time, int layer);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCAnimator)
     };

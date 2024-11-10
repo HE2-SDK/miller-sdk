@@ -17,6 +17,7 @@ namespace hh::anim {
         Type unk101;
         uint8_t unk101a;
         csl::ut::Bitset<Flag> flags;
+        uint8_t unk102;
         uint32_t visualModelComponentNameHash;
         AnimationManager* animationManager;
         fnd::Reference<SkeletonBlender> skeletonBlender;
@@ -26,8 +27,8 @@ namespace hh::anim {
         uint64_t unk106;
         uint64_t unk107;
         uint64_t unk108;
-        csl::ut::MoveArray<void*> unk109;
         uint64_t unk110;
+        csl::ut::MoveArray<void*> unk109;
         csl::ut::LinkListNode linkListNode;
     public:
         struct SetupInfo {

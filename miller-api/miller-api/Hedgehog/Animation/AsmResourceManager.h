@@ -16,6 +16,9 @@ namespace hh::anim {
         };
 
         struct BlendMaskInfo {
+            int boneCount;
+            bool empty;
+            char defaultMask;
             csl::ut::MoveArray<char> boneMasks;
         };
 
@@ -31,7 +34,7 @@ namespace hh::anim {
         csl::ut::MoveArray<StateBindInfo> stateBindInfos; // index is state ID, see AnimationState ctor
         csl::ut::MoveArray<BlendMaskInfo> blendMaskInfos;
         BlendMaskInfo defaultBlendMaskInfo;
-        csl::ut::MoveArray<void*> unk5;
+        BlendMaskInfo unk5;
         float unk6;
         uint8_t unk7;
 

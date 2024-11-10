@@ -88,6 +88,7 @@ namespace app::player {
         Unk1 unk10;
         Unk2 unk11;
         Unk2 unk12;
+        uint64_t unk12a;
         Unk3 unk13;
         Unk5 unk14;
         Unk5 unk15;
@@ -115,6 +116,7 @@ namespace app::player {
         csl::math::Matrix34 GetWorldMatrix() const;
         void SetPosition(const csl::math::Vector4& position);
         void SetRotation(const csl::math::Matrix34& rotation);
+        const csl::math::Quaternion& GetRotation() const;
         void SetRotation(const csl::math::Quaternion& rotation);
         void SetVelocity(const csl::math::Vector4& velocity);
         void SetGravityScale(float gravityScale);
