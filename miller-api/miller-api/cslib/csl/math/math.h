@@ -1,101 +1,16 @@
 #pragma once
-
-#ifdef EXPORTING_TYPES
-
-namespace csl::math {
-	class Vector2 {
-	public:
-		float x; float y;
-	};
-
-	class alignas(16) Vector3 {
-	public:
-		float x; float y; float z;
-	};
-
-	class alignas(16) Vector4 {
-	public:
-		float x; float y; float z; float w;
-	};
-
-	class alignas(16) Quaternion  {
-	public:
-		float x; float y; float z; float w;
-		void SetRotationBetweenVectors(const Vector4& a, const Vector4& b, const Vector4& fallback);
-		static Vector4 RotateVector(const Quaternion& quaternion, const Vector4& vector);
-	};
-
-	class alignas(16) Matrix44 {
-	public:
-		Vector4 t; Vector4 u; Vector4 v; Vector4 w;
-	};
-
-	class alignas(16) Matrix34 {
-	public:
-		Vector4 t; Vector4 u; Vector4 v; Vector4 w;
-	};
-
-	class Position {
-	public:
-		float x; float y; float z;
-	};
-
-	class Rotation {
-	public:
-		float x; float y; float z; float w;
-	};
-}
-
-#else
-
-#ifndef NO_EIGEN_MATH
-
-#include <Eigen/Eigen>
-// #include <unsupported/Eigen/AlignedVector3>
-
-#define RANGERS_SDK_PACK(...) __VA_ARGS__
-#define RANGERS_SDK_NEWTYPE_WITH_ATTRS(ClassName, BaseClass, ConstructorName, Attrs) \
-	class Attrs ClassName : public BaseClass { \
-	public: \
-		using BaseClass::ConstructorName; \
-    \
-		inline ClassName(const BaseClass& other) : BaseClass{ other } {} \
-		inline ClassName(BaseClass& other) : BaseClass{ std::move(other) } {} \
-	}
-#define RANGERS_SDK_NEWTYPE(ClassName, BaseClass, ConstructorName) RANGERS_SDK_NEWTYPE_WITH_ATTRS(ClassName, BaseClass, ConstructorName,)
-#define RANGERS_SDK_NEWTYPE_ALIGNED(ClassName, BaseClass, ConstructorName, Alignment) RANGERS_SDK_NEWTYPE_WITH_ATTRS(ClassName, BaseClass, ConstructorName, alignas(Alignment))
+#include <ucsl/math.h>
 
 namespace csl::math {
-	RANGERS_SDK_NEWTYPE(Vector2, Eigen::Vector2f, Matrix);
-	// RANGERS_SDK_NEWTYPE(Vector3, Eigen::AlignedVector3<float>, AlignedVector3);
-	RANGERS_SDK_NEWTYPE_ALIGNED(Vector3, Eigen::Vector3f, Matrix, 16);
-	RANGERS_SDK_NEWTYPE(Vector4, Eigen::Vector4f, Matrix);
-	RANGERS_SDK_NEWTYPE(Quaternion, Eigen::Quaternionf, Quaternion);
-	RANGERS_SDK_NEWTYPE(Matrix34, Eigen::Affine3f, Transform);
-	RANGERS_SDK_NEWTYPE(Matrix44, Eigen::Projective3f, Transform);
-	RANGERS_SDK_NEWTYPE(Position, Eigen::Vector3f, Matrix);
-	RANGERS_SDK_NEWTYPE(Rotation, RANGERS_SDK_PACK(Eigen::Quaternion<float, Eigen::DontAlign>), Quaternion);
+	UCSL_NEWTYPE_SIMPLE(Vector2, ucsl::math::Vector2);
+	UCSL_NEWTYPE_SIMPLE(Vector3, ucsl::math::Vector3);
+	UCSL_NEWTYPE_SIMPLE(Vector4, ucsl::math::Vector4);
+	UCSL_NEWTYPE_SIMPLE(Quaternion, ucsl::math::Quaternion);
+	UCSL_NEWTYPE_SIMPLE(Matrix44, ucsl::math::Matrix44);
+	UCSL_NEWTYPE_SIMPLE(Matrix34, ucsl::math::Matrix34);
+	UCSL_NEWTYPE_SIMPLE(Position, ucsl::math::Position);
+	UCSL_NEWTYPE_SIMPLE(Rotation, ucsl::math::Rotation);
 }
-
-inline bool operator==(const csl::math::Matrix44& one, const csl::math::Matrix44& other) {
-	return one.matrix() == other.matrix();
-}
-
-inline bool operator!=(const csl::math::Matrix44& one, const csl::math::Matrix44& other) {
-	return !(one == other);
-}
-
-inline bool operator==(const csl::math::Matrix34& one, const csl::math::Matrix34& other) {
-	return one.matrix() == other.matrix();
-}
-
-inline bool operator!=(const csl::math::Matrix34& one, const csl::math::Matrix34& other) {
-	return !(one == other);
-}
-
-#endif
-
-#endif
 
 static_assert(alignof(csl::math::Vector2) == 4);
 static_assert(alignof(csl::math::Vector3) == 16);

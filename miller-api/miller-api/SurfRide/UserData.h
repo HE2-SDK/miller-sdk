@@ -1,26 +1,6 @@
 #pragma once
 
 namespace SurfRide {
-    struct SRS_DATA {
-        enum class Type {
-            BOOL,
-            INT,
-            UINT,
-            FLOAT,
-            UNK,
-            STRING,
-        };
-
-        const char* name{};
-        Type type{};
-        void* value{};
-    };
-
-    struct SRS_USERDATA {
-        uint32_t count{};
-        SRS_DATA* items{};
-    };
-
     class UserData {
         SRS_USERDATA* userData;
     public:

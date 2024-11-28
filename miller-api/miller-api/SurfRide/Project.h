@@ -2,23 +2,6 @@
 
 namespace SurfRide
 {
-    struct SRS_PROJECT
-    {
-        const char* name{};
-        unsigned short sceneCount{};
-        unsigned short unk1{};
-        unsigned short textureListCount{};
-        unsigned short fontCount{};
-        SRS_SCENE* scenes{};
-        SRS_TEXTURELIST* textureLists{}; // SRS_TEXTURELIST
-        SRS_FONT* fonts{}; // SRS_FONT
-        SRS_CAMERA camera{};
-        int startFrame{};
-        int endFrame{};
-        float frameRate{};
-        void* userData{};
-    };
-
     class BinaryData;
     class Project : public ReferencedObject
     {

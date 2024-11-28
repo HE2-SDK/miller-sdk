@@ -2,16 +2,6 @@
 
 namespace SurfRide
 {
-	struct SRS_LAYER;
-	struct SRS_REFERENCECAST
-	{
-		SRS_LAYER* layer{};
-		int flags{};
-		uint32_t animationId{};
-		uint32_t animationFrame{};
-		int unk2{};
-	};
-
 	class ReferenceCast : public Cast {
 	public:
 		SRS_REFERENCECAST* referenceCastData;

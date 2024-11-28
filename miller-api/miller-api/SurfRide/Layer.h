@@ -2,26 +2,6 @@
 
 namespace SurfRide
 {
-	struct SRS_CASTNODE;
-	struct SRS_LAYER
-	{
-		union SRS_TRS_PTR {
-			SRS_TRS2D* transforms2d;
-			SRS_TRS3D* transforms3d;
-		};
-
-		const char* name{};
-		int id{};
-		int flags{};
-		int castCount{};
-		SRS_CASTNODE* casts{};
-		SRS_TRS_PTR transforms{};
-		int animationCount{};
-		SRS_ANIMATION* animations{};
-		int currentAnimationIndex{};
-		SRS_USERDATA* userData{};
-	};
-
 	class Cast;
 	class ReferenceCast;
 	class ImageCastCast;

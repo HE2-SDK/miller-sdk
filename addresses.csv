@@ -16236,7 +16236,7 @@
 140c238e0,?FinishLoadedObject@RflTypeInfo@fnd@hh@@QEBAXPEAX@Z,1
 140c23960,?CleanupLoadedObject@RflTypeInfoRegistry@fnd@hh@@QEBAXPEAXPEBD@Z,1
 140c239a0,?ConstructObject@RflTypeInfoRegistry@fnd@hh@@QEBAPEAXPEAVIAllocator@2csl@@PEBD@Z,1
-140c23a10,?GetByName@RflTypeInfoRegistry@fnd@hh@@QEBAPEBVRflTypeInfo@23@PEBD@Z,1
+140c23a10,?GetTypeInfo@RflTypeInfoRegistry@fnd@hh@@QEBAPEBVRflTypeInfo@23@PEBD@Z,1
 140c23a90,?RegisterList@RflTypeInfoRegistry@fnd@hh@@QEAAXPEAPEBVRflTypeInfo@23@@Z,1
 140c23a90,?RegisterList@RflClassNameRegistry@fnd@hh@@QEAAXPEAPEBVRflClass@23@@Z,1
 140c23b20,??0RflTypeInfoRegistry@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z,1
@@ -24133,6 +24133,7 @@
 141355ec8,??_7GameServiceTestExecutor@gameobjects@heur@@6B@,0
 141357420,?rflClassMembers@StatsDataContainer@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
 1413574f0,?rflClassEnums@StatsDataValue@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B,1
+1413579d0,??_7WindowD3D11@fw@hh@@6B@,1
 141357a70,??_7Application@fw@hh@@6B@,1
 141357ac8,??_7Application@fw@hh@@6BKeyEventHandler@12@@,1
 141357af0,??_7Application@fw@hh@@6BMouseEventHandler@12@@,1

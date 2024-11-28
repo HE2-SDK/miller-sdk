@@ -55340,8 +55340,8 @@ PUBLIC ?ConstructObject@RflTypeInfoRegistry@fnd@hh@@QEBAPEAXPEAVIAllocator@2csl@
     mov rax, 0140c239a0h
     jmp rax
 
-PUBLIC ?GetByName@RflTypeInfoRegistry@fnd@hh@@QEBAPEBVRflTypeInfo@23@PEBD@Z
-?GetByName@RflTypeInfoRegistry@fnd@hh@@QEBAPEBVRflTypeInfo@23@PEBD@Z:
+PUBLIC ?GetTypeInfo@RflTypeInfoRegistry@fnd@hh@@QEBAPEBVRflTypeInfo@23@PEBD@Z
+?GetTypeInfo@RflTypeInfoRegistry@fnd@hh@@QEBAPEBVRflTypeInfo@23@PEBD@Z:
     mov rax, 0140c23a10h
     jmp rax
 

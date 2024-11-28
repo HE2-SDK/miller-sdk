@@ -1,30 +1,7 @@
 #pragma once
 
 namespace SurfRide {
-	struct SRS_TRS_BASE
-	{
-		Color materialColor{};
-		Color illuminationColor{};
-		bool display{};
-	};
-
-	struct SRS_TRS2D : public SRS_TRS_BASE
-	{
-		Vector2 position{};
-		int rotation{};
-		Vector2 scale{ 1.0f, 1.0f };
-		uint32_t unkX;
-		uint32_t unkY;
-	};
-
-	struct SRS_TRS3D : public SRS_TRS_BASE
-	{
-		Vector3 position{};
-		Rotation3 rotation{};
-		Vector3 scale{ 1.0f, 1.0f, 1.0f };
-	};
-
-    struct DirtyFlag {
+	struct DirtyFlag {
 		enum Flag : uint32_t {
 			TRANSFORM_MATRIX = 0,
 			TRANSFORM_MATERIAL_COLOR = 1,
@@ -57,38 +34,38 @@ namespace SurfRide {
 		csl::ut::Bitset<Flag> cellAny;
 		csl::ut::Bitset<Flag> flags;
 
-		inline void ClearCellAll() { flags.m_dummy &= ~cellAny.m_dummy; }
-		inline void ClearCellCropUV() { flags.m_dummy &= ~cellCropUV.m_dummy; }
-		inline void ClearCellIlluminationColor() { flags.m_dummy &= ~cellIlluminationColor.m_dummy; }
-		inline void ClearCellMaterialColor() { flags.m_dummy &= ~cellMaterialColor.m_dummy; }
-		inline void ClearCellVertexColor() { flags.m_dummy &= ~cellVertexColor.m_dummy; }
-		inline void ClearCellVertices() { flags.m_dummy &= ~cellVertices.m_dummy; }
-		inline void ClearTransformAll() { flags.m_dummy &= ~transformAny.m_dummy; }
-		inline void ClearTransformIlluminationColor() { flags.m_dummy &= ~transformIlluminationColor.m_dummy; }
-		inline void ClearTransformMaterialColor() { flags.m_dummy &= ~transformMaterialColor.m_dummy; }
-		inline void ClearTransformMatrix() { flags.m_dummy &= ~transformMatrix.m_dummy; }
-		inline bool IsCellAny() { return flags.m_dummy & cellAny.m_dummy; }
-		inline bool IsCellCropUV() { return flags.m_dummy & cellCropUV.m_dummy; }
-		inline bool IsCellIlluminationColor() { return flags.m_dummy & cellIlluminationColor.m_dummy; }
-		inline bool IsCellMaterialColor() { return flags.m_dummy & cellMaterialColor.m_dummy; }
-		inline bool IsCellVertexColor() { return flags.m_dummy & cellVertexColor.m_dummy; }
-		inline bool IsCellVertices() { return flags.m_dummy & cellVertices.m_dummy; }
-		inline bool IsTransformAny() { return flags.m_dummy & transformAny.m_dummy; }
-		inline bool IsTransformDisplayFlag() { return flags.m_dummy & transformDisplayFlag.m_dummy; }
-		inline bool IsTransformIlluminationColor() { return flags.m_dummy & transformIlluminationColor.m_dummy; }
-		inline bool IsTransformMaterialColor() { return flags.m_dummy & transformMaterialColor.m_dummy; }
-		inline bool IsTransformMatrix() { return flags.m_dummy & transformMatrix.m_dummy; }
-		inline void SetCellAll() { flags.m_dummy |= cellAny.m_dummy; }
-		inline void SetCellCropUV() { flags.m_dummy |= cellCropUV.m_dummy; }
-		inline void SetCellIlluminationColor() { flags.m_dummy |= cellIlluminationColor.m_dummy; }
-		inline void SetCellMaterialColor() { flags.m_dummy |= cellMaterialColor.m_dummy; }
-		inline void SetCellVertexColor() { flags.m_dummy |= cellVertexColor.m_dummy; }
-		inline void SetCellVertices() { flags.m_dummy |= cellVertices.m_dummy; }
-		inline void SetTransformAll() { flags.m_dummy |= transformAny.m_dummy; }
-		inline void SetTransformDisplayFlag() { flags.m_dummy |= transformDisplayFlag.m_dummy; }
-		inline void SetTransformIlluminationColor() { flags.m_dummy |= transformIlluminationColor.m_dummy; }
-		inline void SetTransformMaterialColor() { flags.m_dummy |= transformMaterialColor.m_dummy; }
-		inline void SetTransformMatrix() { flags.m_dummy |= transformMatrix.m_dummy; }
+		inline void ClearCellAll() { flags.bits &= ~cellAny.bits; }
+		inline void ClearCellCropUV() { flags.bits &= ~cellCropUV.bits; }
+		inline void ClearCellIlluminationColor() { flags.bits &= ~cellIlluminationColor.bits; }
+		inline void ClearCellMaterialColor() { flags.bits &= ~cellMaterialColor.bits; }
+		inline void ClearCellVertexColor() { flags.bits &= ~cellVertexColor.bits; }
+		inline void ClearCellVertices() { flags.bits &= ~cellVertices.bits; }
+		inline void ClearTransformAll() { flags.bits &= ~transformAny.bits; }
+		inline void ClearTransformIlluminationColor() { flags.bits &= ~transformIlluminationColor.bits; }
+		inline void ClearTransformMaterialColor() { flags.bits &= ~transformMaterialColor.bits; }
+		inline void ClearTransformMatrix() { flags.bits &= ~transformMatrix.bits; }
+		inline bool IsCellAny() { return flags.bits & cellAny.bits; }
+		inline bool IsCellCropUV() { return flags.bits & cellCropUV.bits; }
+		inline bool IsCellIlluminationColor() { return flags.bits & cellIlluminationColor.bits; }
+		inline bool IsCellMaterialColor() { return flags.bits & cellMaterialColor.bits; }
+		inline bool IsCellVertexColor() { return flags.bits & cellVertexColor.bits; }
+		inline bool IsCellVertices() { return flags.bits & cellVertices.bits; }
+		inline bool IsTransformAny() { return flags.bits & transformAny.bits; }
+		inline bool IsTransformDisplayFlag() { return flags.bits & transformDisplayFlag.bits; }
+		inline bool IsTransformIlluminationColor() { return flags.bits & transformIlluminationColor.bits; }
+		inline bool IsTransformMaterialColor() { return flags.bits & transformMaterialColor.bits; }
+		inline bool IsTransformMatrix() { return flags.bits & transformMatrix.bits; }
+		inline void SetCellAll() { flags.bits |= cellAny.bits; }
+		inline void SetCellCropUV() { flags.bits |= cellCropUV.bits; }
+		inline void SetCellIlluminationColor() { flags.bits |= cellIlluminationColor.bits; }
+		inline void SetCellMaterialColor() { flags.bits |= cellMaterialColor.bits; }
+		inline void SetCellVertexColor() { flags.bits |= cellVertexColor.bits; }
+		inline void SetCellVertices() { flags.bits |= cellVertices.bits; }
+		inline void SetTransformAll() { flags.bits |= transformAny.bits; }
+		inline void SetTransformDisplayFlag() { flags.bits |= transformDisplayFlag.bits; }
+		inline void SetTransformIlluminationColor() { flags.bits |= transformIlluminationColor.bits; }
+		inline void SetTransformMaterialColor() { flags.bits |= transformMaterialColor.bits; }
+		inline void SetTransformMatrix() { flags.bits |= transformMatrix.bits; }
     };
 
 	class Layer;

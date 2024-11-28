@@ -15,7 +15,7 @@ namespace hh::gfx {
 
     public:
         inline GOCVisualDebugDraw(csl::fnd::IAllocator* allocator) : GOCVisualTransformed{ allocator } {
-            gocEventMask.m_dummy = 5;
+            gocEventMask.bits = 5;
         }
         void Setup(const SetupInfo& setupInfo);
 

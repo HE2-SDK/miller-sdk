@@ -7,10 +7,10 @@ namespace hh::game {
         uint64_t size;
         void* data;
 
-private:
+    private:
         ComponentData(const hh::fnd::RflTypeInfo* rflTypeInfo, void* data) : type{ rflTypeInfo->GetName() }, size{ rflTypeInfo->GetSize() }, data{ data } {}
 
-public:
+    public:
         ComponentData(const char* type, const hh::fnd::RflTypeInfo* rflTypeInfo, void* data) : type{ type }, size{ rflTypeInfo->GetSize() }, data{ data } {}
 
     public:
@@ -29,7 +29,7 @@ public:
         }
 
         static ComponentData* Create(csl::fnd::IAllocator* allocator, const hh::game::GOComponentRegistry::GOComponentRegistryItem* goComponentRegistryItem) {
-            return Create(allocator, goComponentRegistryItem->name, hh::fnd::BuiltinTypeRegistry::GetTypeInfoRegistry()->GetByName(goComponentRegistryItem->rflClass->GetName()));
+            return Create(allocator, goComponentRegistryItem->name, hh::fnd::BuiltinTypeRegistry::GetTypeInfoRegistry()->GetTypeInfo(goComponentRegistryItem->rflClass->GetName()));
         }
 
         static ComponentData* Create(csl::fnd::IAllocator* allocator, const char* type) {

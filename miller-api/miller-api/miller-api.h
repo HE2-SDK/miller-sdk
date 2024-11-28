@@ -45,10 +45,25 @@ namespace std {
 #ifdef SendMessage
 #undef SendMessage
 #endif
+#ifdef max
+#undef max
+#endif
+#ifdef VOID
+#undef VOID
+#endif
 
 #include "cslib/csl/math/math.h"
-
 #include "cslib/csl/fnd/IAllocator.h"
+
+#include <ucsl/newtype.h>
+
+namespace millersdk::ucsl {
+    struct AllocatorSystem {
+        using allocator_type = csl::fnd::IAllocator;
+
+        inline static csl::fnd::IAllocator* get_allocator();
+    };
+}
 
 #include "cslib/csl/ut/Array.h"
 #include "cslib/csl/ut/FixedArray.h"
@@ -130,7 +145,6 @@ namespace std {
 #include "Hedgehog/Utility/BvWorld.h"
 #include "Hedgehog/Utility/KdTree.h"
 
-#include "Hedgehog/Foundation/Type/hhBaseTypes.h"
 #include "Hedgehog/Foundation/Type/WorldPosition.h"
 #include "Hedgehog/Foundation/Type/LogData.h"
 #include "Hedgehog/Foundation/Type/Triangle.h"
@@ -171,21 +185,11 @@ namespace std {
 
 // Hedgehog Reflection Library
 #include "Hedgehog/Reflection/ResReflection.h"
-#include "Hedgehog/Reflection/hhInternalClassMember.h"
-#include "Hedgehog/Reflection/hhRflArray.h"
-#include "Hedgehog/Reflection/hhRflCustomAttribute.h"
-#include "Hedgehog/Reflection/hhRflClassMember.h"
-#include "Hedgehog/Reflection/hhRflClassEnum.h"
-#include "Hedgehog/Reflection/hhRflClass.h"
+#include "Hedgehog/Reflection/RflSystem.h"
 #include "Hedgehog/Reflection/hhRflTypeInfo.h"
-#include "Hedgehog/Reflection/hhRflRegistry.h"
 #include "Hedgehog/Reflection/hhRflTypeInfoRegistry.h"
 #include "Hedgehog/Reflection/hhRflClassNameRegistry.h"
 #include "Hedgehog/Reflection/hhBuiltinTypeRegistry.h"
-// #include "Hedgehog/Reflection/hhDataResource.h"
-#include "Hedgehog/Reflection/hhDataValue.h"
-// #include "Hedgehog/Reflection/hhVariantDataUtil.h"
-// #include "Hedgehog/Reflection/hhRflSerializeUtil.h"
 #include "Hedgehog/Reflection/DeepCopier.h"
 
 #include "Heuristics/Reflection.h"
@@ -547,7 +551,6 @@ namespace std {
 #include "Hedgehog/Animation/ResSkeletonPxd.h"
 #include "Hedgehog/Animation/ResAnimation.h"
 #include "Hedgehog/Animation/ResAnimationPxd.h"
-#include "Hedgehog/Animation/EventArray.h"
 #include "Hedgehog/Animation/ResAnimator.h"
 #include "Hedgehog/Animation/AsmResourceManager.h"
 #include "Hedgehog/Animation/AnimationControl.h"
@@ -570,8 +573,6 @@ namespace std {
 
 #include "SurfRide/Types.h"
 #include "SurfRide/Allocator.h"
-#include "SurfRide/Color.h"
-#include "SurfRide/Math.h"
 #include "SurfRide/Base.h"
 #include "SurfRide/ReferencedObject.h"
 #include "SurfRide/UserData.h"
@@ -579,14 +580,10 @@ namespace std {
 #include "SurfRide/Textures/Texture.h"
 #include "SurfRide/Textures/TextureData.h"
 #include "SurfRide/Textures/TextureList.h"
-#include "SurfRide/Fonts/CharacterMapping.h"
-#include "SurfRide/Fonts/Font.h"
 #include "SurfRide/Transform.h"
 #include "SurfRide/Cell.h"
 #include "SurfRide/Text.h"
 #include "SurfRide/Camera.h"
-#include "SurfRide/Animation.h"
-#include "SurfRide/Effects/Effect.h"
 #include "SurfRide/Effects/Blur.h"
 #include "SurfRide/Effects/Reflect.h"
 #include "SurfRide/Casts/Cast.h"
@@ -798,6 +795,20 @@ namespace std {
 // #include "Application/ObjCamera.h"
 // #include "Application/ObjCameraVolume.h"
 // #include "Application/MeteorShowerEffect.h"
+
+namespace millersdk::ucsl {
+    inline csl::fnd::IAllocator* AllocatorSystem::get_allocator() { return hh::fnd::MemoryRouter::GetModuleAllocator(); }
+	struct GameInterface {
+        using AllocatorSystem = AllocatorSystem;
+		using RflSystem = ::ucsl::rfl::miller;
+		using RflClassNameRegistry = typename hh::fnd::RflClassNameRegistry;
+		using RflTypeInfoRegistry = typename hh::fnd::RflTypeInfoRegistry;
+		using GameObjectClass = typename hh::game::GameObjectClass;
+		using GameObjectSystem = typename hh::game::GameObjectSystem;
+		using GameObjectRegistry = typename hh::game::GameObjectRegistry;
+		using GOComponentRegistry = typename hh::game::GOComponentRegistry;
+	};
+}
 
 namespace heur {
     float RandomBetween(float min, float max);

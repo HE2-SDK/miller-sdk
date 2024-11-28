@@ -14,7 +14,7 @@ namespace hh::fnd
 		{
 		}
 
-		const RflClass* GetByName(const char* pName) const
+		const RflClass* GetClassByName(const char* pName) const
 		{
 			return items.GetValueOrFallback(pName, nullptr);
 		}

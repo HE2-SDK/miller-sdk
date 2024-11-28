@@ -2,20 +2,6 @@
 
 namespace SurfRide
 {
-	struct SRS_CAMERA
-	{
-		const char* name{};
-		int id{};
-		csl::math::Vector3 position{};
-		csl::math::Vector3 target{};
-		bool isOrthogonal{};
-		int fov;
-		float nearPlane{};
-		float farPlane{};
-		float unk1{};
-		uint64_t unk2{};
-	};
-
 	class Camera
 	{
 	public:

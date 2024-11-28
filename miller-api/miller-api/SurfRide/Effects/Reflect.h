@@ -1,41 +1,6 @@
 #pragma once
 
 namespace SurfRide {
-    struct SRS_REFLECT : public SRS_EFFECT {
-        uint32_t unk1{};
-        uint32_t unk2{};
-        uint32_t unk3{};
-        float unk4{};
-        float unk5{};
-        float unk6{};
-        float unk7{};
-        unsigned int flags{};
-        Color color{};
-
-        inline SRE_BLEND_MODE GetBlendMode() const {
-            return static_cast<SRE_BLEND_MODE>(flags & 0xF);
-        }
-
-        inline void SetBlendMode(SRE_BLEND_MODE type) {
-            flags = (flags & ~0xF) | (static_cast<unsigned int>(type) & 0xF);
-        }
-
-        inline bool Hides() const {
-            return flags & 0x1000;
-        }
-
-        inline void SetHides(bool type) {
-            if (type)
-                flags |= 0x1000;
-            else
-                flags &= ~0x1000;
-        }
-    };
-
-    struct SRS_REFLECT3D : public SRS_REFLECT {
-
-    };
-
     class Reflect : public ReferencedObject {
     public:
         SRS_REFLECT* binaryData;
@@ -50,7 +15,7 @@ namespace SurfRide {
         float qword70;
         Colorf color;
         uint32_t cellCount;
-        SRE_BLEND_MODE blendMode;
+        EBlendMode blendMode;
         uint32_t dword8C; // flags & 0x1000
         bool byte90; // flags & 0x10
         bool byte91;
