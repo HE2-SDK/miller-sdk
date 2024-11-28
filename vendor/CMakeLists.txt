@@ -1,1 +1,1 @@
-add_subdirectory(eigen)
+add_subdirectory(universal-cslib)
