@@ -29,7 +29,7 @@ namespace hh::game {
         }
 
         static ComponentData* Create(csl::fnd::IAllocator* allocator, const hh::game::GOComponentRegistry::GOComponentRegistryItem* goComponentRegistryItem) {
-            return Create(allocator, goComponentRegistryItem->name, hh::fnd::BuiltinTypeRegistry::GetTypeInfoRegistry()->GetTypeInfo(goComponentRegistryItem->rflClass->GetName()));
+            return Create(allocator, goComponentRegistryItem->GetName(), hh::fnd::BuiltinTypeRegistry::GetTypeInfoRegistry()->GetTypeInfo(goComponentRegistryItem->GetSpawnerDataClass()->GetName()));
         }
 
         static ComponentData* Create(csl::fnd::IAllocator* allocator, const char* type) {
@@ -72,7 +72,7 @@ namespace hh::game {
 
         ObjectData(csl::fnd::IAllocator* allocator, const GameObjectClass* gameObjectClass, ObjectId id, const char* name, ObjectData* parent, const ObjectTransformData& localTransform)
             : name{ name, allocator }
-            , gameObjectClass{ gameObjectClass->name }
+            , gameObjectClass{ gameObjectClass->GetName() }
             , flags {}
             , localTransform { localTransform }
             , componentData{ allocator }
@@ -86,7 +86,7 @@ namespace hh::game {
                 transform = localTransform;
             }
 
-            auto* spawnerRfl = gameObjectClass->spawnerDataRflClass;
+            auto* spawnerRfl = gameObjectClass->GetSpawnerDataClass();
             if (spawnerRfl == nullptr) {
                 spawnerData = nullptr;
             } else {
@@ -113,7 +113,7 @@ namespace hh::game {
             , parentID{ other.parentID } {
             flags.set(Flag::COMPONENT_DATA_NEEDS_TERMINATION);
             
-            auto* spawnerRfl = GameObjectSystem::GetInstance()->gameObjectRegistry->GetGameObjectClassByName(gameObjectClass)->spawnerDataRflClass;
+            auto* spawnerRfl = GameObjectSystem::GetInstance()->gameObjectRegistry->GetGameObjectClassByName(gameObjectClass)->GetSpawnerDataClass();
             if (spawnerRfl == nullptr) {
                 spawnerData = nullptr;
             } else {

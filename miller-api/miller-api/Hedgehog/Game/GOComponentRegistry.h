@@ -5,10 +5,14 @@ namespace hh::game
     class GOComponentRegistry : fnd::BaseObject {
     public:
         class GOComponentRegistryItem {
-        public:
             const char* name;
             const GOComponentClass* componentClass;
             const fnd::RflClass* rflClass;
+        public:
+
+            inline const char* GetName() const { return name; }
+            inline const GOComponentClass* GetComponentClass() const { return componentClass; }
+            inline const fnd::RflClass* GetSpawnerDataClass() const { return rflClass; }
         };
     private:
         csl::ut::MoveArray<GOComponentRegistryItem*> components;
