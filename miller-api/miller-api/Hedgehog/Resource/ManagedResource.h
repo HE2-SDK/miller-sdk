@@ -42,7 +42,12 @@ namespace hh::fnd {
 
         ManagedResource(csl::fnd::IAllocator* pAllocator);
 
-        inline const char* GetName() const;
+        inline const char* GetName() const {
+            return name2.c_str();
+        }
+
+        // This doesn't work. Seems to be a bug.
+        const char* GetName_() const;
 
         inline const ResourceTypeInfo& GetClass() const {
             return *resourceTypeInfo;

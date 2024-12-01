@@ -25,7 +25,7 @@ namespace hh::game {
 
         template<typename T>
         static ComponentData* Create(csl::fnd::IAllocator* allocator, const char* type) {
-            return Create(allocator, type, &T::rflTypeInfo);
+            return Create(allocator, type, &T::typeInfo);
         }
 
         static ComponentData* Create(csl::fnd::IAllocator* allocator, const hh::game::GOComponentRegistry::GOComponentRegistryItem* goComponentRegistryItem) {

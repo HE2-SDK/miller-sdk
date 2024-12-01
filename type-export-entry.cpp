@@ -1,10 +1,6 @@
 #define EXPORTING_TYPES
 #define RESOLVE_STATIC_VARIABLE(x) x
 
-namespace std {
-	typedef size_t align_val_t;
-}
-
 #include "miller-api/miller-api/miller-api.h"
 
 // template class csl::fnd::Delegate<void ()>;

@@ -8,8 +8,8 @@ namespace hh::game
             const char* name;
             const GOComponentClass* componentClass;
             const fnd::RflClass* rflClass;
-        public:
 
+        public:
             inline const char* GetName() const { return name; }
             inline const GOComponentClass* GetComponentClass() const { return componentClass; }
             inline const fnd::RflClass* GetSpawnerDataClass() const { return rflClass; }

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace heur::rfl {
+namespace hh::anim {
     struct GOCSimpleAnimationSpawner {
         csl::ut::VariableString resSkeleton;
         csl::ut::VariableString resAnimation;
@@ -190,7 +190,7 @@ namespace heur::rfl {
     };
 }
 
-namespace heur::rfl {
+namespace hh::game {
     struct GOCActivatorSpawner {
         float m_range;
         float m_distance;
@@ -652,7 +652,7 @@ namespace heur::rfl {
     };
 }
 
-namespace heur::rfl {
+namespace hh::gfx {
     struct GOCVisualModelSpawner {
         csl::ut::VariableString resModel;
 

@@ -1,4 +1,16 @@
 #pragma once
+#ifdef EXPORTING_TYPES
+namespace csl::math {
+	class Vector2 { public: float x; float y; };
+	class alignas(16) Vector3 { public: float x; float y; float z; };
+	class alignas(16) Vector4 { public: float x; float y; float z; float w; };
+	class alignas(16) Quaternion { public: float x; float y; float z; float w; };
+	class alignas(16) Matrix44 { public: Vector4 t; Vector4 u; Vector4 v; Vector4 w; };
+	class alignas(16) Matrix34 { public: Vector4 t; Vector4 u; Vector4 v; Vector4 w; };
+	class Position { public: float x; float y; float z; };
+	class Rotation { public: float x; float y; float z; float w; };
+}
+#else
 #include <ucsl/math.h>
 
 namespace csl::math {
@@ -11,6 +23,7 @@ namespace csl::math {
 	UCSL_NEWTYPE_SIMPLE(Position, ucsl::math::Position);
 	UCSL_NEWTYPE_SIMPLE(Rotation, ucsl::math::Rotation);
 }
+#endif
 
 static_assert(alignof(csl::math::Vector2) == 4);
 static_assert(alignof(csl::math::Vector3) == 16);

@@ -1397,9 +1397,11 @@
 140024050,??__EgameServiceClass@ConversationService@game@app@@0VGameServiceClass@2hh@@B,0
 140024070,??__EgameServiceClass@DebrisManager@game@app@@0VGameServiceClass@2hh@@B,0
 1400240d0,??__EgameServiceClass@ScreenFadeManager@game@app@@0VGameServiceClass@2hh@@B,0
+140024140,??__EsingletonInitNode@ApplicationSequenceRegistry@game@app@@0VSingletonInitNode@fnd@hh@@B,0
 140024170,??__EgameServiceClass@AttractionManager@game@app@@0VGameServiceClass@2hh@@B,0
 1400244a0,??__EgameServiceClass@GrindService@game@app@@0VGameServiceClass@2hh@@B,0
 1400244d0,??__EgameServiceClass@InputGuideService@game@app@@0VGameServiceClass@2hh@@B,0
+140024520,??__EsingletonInitNode@GameLocale@game@app@@0VSingletonInitNode@fnd@hh@@B,0
 1400245f0,??__EstateDesc@BakeNavMesh@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B,0
 140024640,??__EstateDesc@BuildLevel@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B,0
 140024690,??__EstateDesc@Build@State@GameModeBakeNavMeshStage@game@app@@0VStateDesc@ut@hh@@B,0
@@ -2245,7 +2247,7 @@
 140040070,j_??__ErflClass@FxStencilShadow@rfl@heur@@2VRflClass@fnd@hh@@B,1
 1400400d0,j_??__ErflClass@FxTimeChangeSettings@rfl@heur@@2VRflClass@fnd@hh@@B,1
 140040140,??__ErflClassMembers@FxTimeChangeSettings@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
-140040150,j_??__ErflClass@GOCVisualModelSpawner@rfl@heur@@2VRflClass@fnd@hh@@B,1
+140040150,j_??__ErflClass@GOCVisualModelSpawner@gfx@hh@@2VRflClass@fnd@3@B,1
 1400401b0,j_??__ErflClass@PSOCacheBlend@rfl@heur@@2VRflClass@fnd@hh@@B,1
 140040280,j_??__ErflClass@PSOCacheDepthStencil@rfl@heur@@2VRflClass@fnd@hh@@B,1
 1400402e0,j_??__ErflClass@PSOCacheDepthStencilOp@rfl@heur@@2VRflClass@fnd@hh@@B,1
@@ -6645,7 +6647,10 @@
 1401302e0,??_DNoSaveDataAc@save@app@@QEAAXXZ,1
 1401334a0,?UIEL_UnkFunc1@ApplicationSequenceExtension@game@app@@UEAAXXZ,1
 140133680,j_??_GApplicationSequenceRegistry@game@app@@QEAAXXZ,0
+140133730,?Destroy@ApplicationSequenceRegistry@game@app@@CAXPEAV123@Z,0
+140133730,?Destroy@GameLocale@game@app@@CAXPEAV123@Z,0
 140133750,??0ApplicationSequenceRegistry@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
+140133750,?Create@ApplicationSequenceRegistry@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1401338a0,??0AIInspector@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 140133f40,??_DAIInspector@game@app@@QEAAXXZ,0
 140133f40,??_DHealthInspector@game@app@@QEAAXXZ,0
@@ -6888,6 +6893,7 @@
 14015b1a0,??_DEnemyComet@app@@QEAAXXZ,0
 14015b1a0,??_DEnemyFlash@app@@QEAAXXZ,0
 14015b220,??0GameLocale@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
+14015b220,?Create@GameLocale@game@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 14015b9f0,j_??0GameMode@game@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 14015baf0,?Construct@NeedleFxParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 14015baf0,?Construct@NeedleFxParameter@needle@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
@@ -13941,7 +13947,9 @@
 1407e9de0,?GetTransitionType@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@34@XZ,1
 1407e9de0,?GetTransitionEffect@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAPEAVTransitionEffect@34@XZ,1
 1407e9de0,?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ,1
+1407e9de0,?GetTransitionType@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@v103@animation_state_machine@resources@ucsl@@XZ,1
 1407ec4a0,?GetTransitionType@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@34@XZ,1
+1407ec4a0,?GetTransitionType@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@v103@animation_state_machine@resources@ucsl@@XZ,1
 1407efa90,??0UploadReport@CrashReportDatabase@crashpad@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1407efd20,??_GUploadReport@CrashReportDatabase@crashpad@@QEAAXXZ,0
 1407f0230,j_??_DFileReader@crashpad@@QEAAXXZ,0
@@ -13957,8 +13965,11 @@
 1407f2e20,??_GFileWriterInterface@crashpad@@QEAAXXZ,0
 1407f2e60,??0FileWriterInterface@crashpad@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1407f6260,??0bad_alloc@std@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
-1407f71a0,??_Gbad_alloc@std@@QEAAXXZ,0
-1407f71a0,??_Gbad_exception@std@@QEAAXXZ,0
+1407f71a0,??_Gbad_alloc@std@@QEAAXXZ,1
+1407f71a0,??_Gbad_exception@std@@QEAAXXZ,1
+1407f71a0,??_Dexception@std@@QEAAXXZ,1
+1407f71a0,??_Dbad_exception@std@@QEAAXXZ,1
+1407f71a0,??_Dbad_alloc@std@@QEAAXXZ,1
 140800cf0,?UnkFunc9@Unk7@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ,1
 140800cf0,?UnkFunc10@ProfileElementAccessor@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ,1
 140801560,?GetInputValue@InputDevice@hid@hh@@UEBAMI@Z,1
@@ -14122,6 +14133,8 @@
 140846420,?ClearNamedTextElement@CastTextContainer@ui@hh@@QEAAXPEBD@Z,1
 140848220,j_?Initialize@UIGridPanel@ui@hh@@QEAAXAEBULayout@123@@Z,1
 14084a1a0,?GVCL_UnkFunc1@PhysicsViewerBase@physics@hh@@UEAAXXZ,1
+14084f450,?Destroy@ResourceTypeRegistry@fnd@hh@@CAXPEAV123@Z,0
+14084f450,?Destroy@BuiltinTypeRegistry@fnd@hh@@CAXPEAV123@Z,0
 1408502b0,??_GSurfRideViewerObject@gameobjects@heur@@QEAAXXZ,0
 140850d90,?GetClass@SurfRideViewerObject@gameobjects@heur@@SAPEBVGameObjectClass@game@hh@@XZ,0
 140850e80,?Create@SurfRideViewerObject@gameobjects@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -14176,7 +14189,7 @@
 140869840,?GetClass@GOCSound@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ,0
 14086c2d0,?GetTarget1@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z,1
 14086c2d0,?GetTarget1@Mouse@hid@hh@@UEBA?AVVector4@math@csl@@I@Z,1
-14086c340,?GetName@ManagedResource@fnd@hh@@QEBAPEBDXZ,1
+14086c340,?GetName_@ManagedResource@fnd@hh@@QEBAPEBDXZ,1
 140870fb0,?ForwardMessageImm@Messenger@fnd@hh@@IEAA_NAEAV?$Handle@VMessenger@fnd@hh@@@23@AEAVMessage@23@@Z,1
 1408765b0,??0PhysicsViewerBase@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140877a70,?GetCurrentAnimationState@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAPEAVAnimationState@34@XZ,1
@@ -14379,6 +14392,7 @@
 1409ac8f0,j_?SetSceneConfig@RenderingEngineMiller@gfx@hh@@UEAAXPEAUNeedleFxSceneConfig@needle@3@@Z,1
 1409aca20,j_?SetFXParameter@RenderingEngineMiller@gfx@hh@@UEAAXPEAUNeedleFxParameter@needle@3@PEAVCNameIDObject@53@@Z,1
 1409aff80,?GetClass@GOCVisualModelSpawner@rfl@heur@@SAPEBVRflClass@fnd@hh@@XZ,1
+1409aff80,?GetClass@GOCVisualModelSpawner@gfx@hh@@SAPEBVRflClass@fnd@3@XZ,1
 1409aff90,?Construct@FxParameter@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409aff90,?Construct@FxParameter@needle@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b07c0,?Construct@FxTimeChangeSettings@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
@@ -14387,6 +14401,7 @@
 1409b0bb0,j_?Clean@GOCVisualModelSpawner@rfl@heur@@CAXPEAU123@@Z,1
 1409b0bb0,j_?Clean@PSOCacheInputElement@rfl@heur@@CAXPEAU123@@Z,1
 1409b0bb0,j_?Clean@CapsuleParam@rfl@heur@@CAXPEAU123@@Z,1
+1409b0bb0,j_?Clean@GOCVisualModelSpawner@gfx@hh@@CAXPEAU123@@Z,1
 1409b0bc0,?Clean@PSOCache@rfl@heur@@CAXPEAU123@@Z,1
 1409b0c20,j_?Clean@PSOCacheInputLayout@rfl@heur@@CAXPEAU123@@Z,1
 1409b0c30,?Clean@PSOCacheList@rfl@heur@@CAXPEAU123@@Z,1
@@ -14417,6 +14432,7 @@
 1409b1030,?Construct@FxStencilShadow@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b1050,j_?Construct@FxTimeChangeSettings@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b1060,?Construct@GOCVisualModelSpawner@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
+1409b1060,?Construct@GOCVisualModelSpawner@gfx@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b1070,j_?Construct@PSOCache@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b1080,?Construct@PSOCacheBlend@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b10e0,?Construct@PSOCacheDepthStencil@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
@@ -14429,6 +14445,7 @@
 1409b1170,?Construct@PSOCacheRenderTargetBlend@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b1180,?Construct@GOCActivatorSpawner@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b1180,?Construct@PSOCacheSample@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
+1409b1180,?Construct@GOCActivatorSpawner@game@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b1190,?Construct@PSOCacheShader@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1409b11d0,?GetClass@FxAtmosphereParameter@needle@hh@@SAPEBVRflClass@fnd@3@XZ,1
 1409b11e0,?GetClass@FxBloomParameter@needle@hh@@SAPEBVRflClass@fnd@3@XZ,1
@@ -15495,10 +15512,22 @@
 140a23e00,j_??_DUIEventLogo@ui@app@@QEAAXXZ,0
 140a26590,?Construct@StatsDataValue@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 140a27630,??0WindowD3D11@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
+140a28170,??_DWindowD3D11@fw@hh@@QEAAXXZ,1
 140a28620,?UnkFunc10@WindowD3D11@fw@hh@@UEAA_NXZ,1
+140a28930,j_?UnkFunc17@WindowD3D11@fw@hh@@UEAAXXZ,1
+140a28e90,?UnkFunc13@WindowD3D11@fw@hh@@UEAA_NXZ,1
+140a28ed0,?UnkFunc16@WindowD3D11@fw@hh@@UEAA_NXZ,1
+140a28f50,?UnkFunc1@WindowD3D11@fw@hh@@UEAA_KXZ,1
 140a293c0,?Is3D@Layer@SurfRide@@QEAA_NXZ,1
 140a29490,?UnkFunc9@WindowD3D11@fw@hh@@UEAA_NXZ,1
+140a29590,?UnkFunc8@WindowD3D11@fw@hh@@UEAAXXZ,1
+140a29730,?UnkFunc4@WindowD3D11@fw@hh@@UEAA_KXZ,1
+140a29870,?UnkFunc3@WindowD3D11@fw@hh@@UEAA_KXZ,1
+140a29c50,?UnkFunc11@WindowD3D11@fw@hh@@UEAAXXZ,1
 140a29d50,?UnkFunc14@WindowD3D11@fw@hh@@UEAAXXZ,1
+140a29f50,?UnkFunc6@WindowD3D11@fw@hh@@UEAAXXZ,1
+140a2a160,?UnkFunc15@WindowD3D11@fw@hh@@UEAAXXZ,1
+140a2a2c0,?UnkFunc5@WindowD3D11@fw@hh@@UEAAXXZ,1
 140a2a2d0,?UnkFunc12@WindowD3D11@fw@hh@@UEAAXXZ,1
 140a2a2f0,?UnkFunc7@WindowD3D11@fw@hh@@UEAAXXZ,1
 140a2a930,j_??0MouseEventHandler@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
@@ -15711,7 +15740,9 @@
 140b80520,?UnkFunc4@GOCAnimator@anim@hh@@UEAA_KXZ,1
 140b80640,j_?Update@GOCAnimator@anim@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@@Z,1
 140b80660,j_?UpdateAsync@GOCAnimator@anim@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z,1
+140b80680,?Clean@GOCSimpleAnimationSpawner@anim@hh@@CAXPEAU123@@Z,1
 140b806a0,?Construct@GOCSimpleAnimationSpawner@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
+140b806a0,?Construct@GOCSimpleAnimationSpawner@anim@hh@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 140b83650,??_GAsmViewerObject@gameobjects@heur@@QEAAXXZ,0
 140b850b0,?Create@AsmViewerObject@gameobjects@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140b850b0,?Create@AsmViewerObject@gameobjects@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -16258,14 +16289,21 @@
 140c39e10,?BeginScene@DrawContextNeedle@gfnd@hh@@UEAAXPEBVRenderableParameter@23@@Z,1
 140c39e30,?Destroy@DrawContextNeedle@gfnd@hh@@UEAA_JXZ,1
 140c39e40,?DrawAABB@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVVector3@math@csl@@0AEBU?$Color@E@ut@6@@Z,1
+140c39e40,?DrawAABB@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVVector3@math@csl@@0AEBUColor8@ut@6@@Z,1
 140c39f70,?DrawCapsule@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBU?$Color@E@ut@6@@Z,1
+140c39f70,?DrawCapsule@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBUColor8@ut@6@@Z,1
 140c3a050,?DrawCircle@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z,1
+140c3a050,?DrawCircle@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MAEBUColor8@ut@6@@Z,1
 140c3a120,?DrawCylinder@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBU?$Color@E@ut@6@@Z,1
+140c3a120,?DrawCylinder@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBUColor8@ut@6@@Z,1
 140c3a3b0,?DrawOBB@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@AEBVVector3@56@AEBU?$Color@E@ut@6@@Z,1
+140c3a3b0,?DrawOBB@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@AEBVVector3@56@AEBUColor8@ut@6@@Z,1
 140c3a740,?DrawPlane@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBU?$Color@E@ut@6@@Z,1
+140c3a740,?DrawPlane@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBUColor8@ut@6@@Z,1
 140c3a810,?UnkFunc8@DrawContextNeedle@gfnd@hh@@UEAA_JXZ,1
 140c3aa80,?DrawPrimitive@DrawContextNeedle@gfnd@hh@@UEAA_JW4PrimitiveType@23@PEBUDrawVertex@23@PEBGI@Z,1
 140c3abd0,?DrawSphere@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z,1
+140c3abd0,?DrawSphere@DrawContextNeedle@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MAEBUColor8@ut@6@@Z,1
 140c3ad20,?EndDraw2d@DrawContextNeedle@gfnd@hh@@UEAA_JXZ,1
 140c3ad20,?EndDraw@DrawContextNeedle@gfnd@hh@@UEAA_JXZ,1
 140c3ad30,?EndScene@DrawContextNeedle@gfnd@hh@@UEAA_JXZ,1
@@ -16284,6 +16322,7 @@
 140c3b870,?MyCreate@GraphicsGeometryNeedle@gfnd@hh@@CAPEAV123@PEAXPEAVIAllocator@fnd@csl@@@Z,1
 140c3b910,?Render@GraphicsGeometryNeedle@gfnd@hh@@UEAA_JPEAVDrawContext@23@AEBVMatrix34@math@csl@@@Z,1
 140c3ba30,?SetColor@GraphicsGeometryNeedle@gfnd@hh@@UEAA_JAEBU?$Color@E@ut@csl@@@Z,1
+140c3ba30,?SetColor@GraphicsGeometryNeedle@gfnd@hh@@UEAA_JAEBUColor8@ut@csl@@@Z,1
 140c3c000,?MyCreate@SharedDebugDrawResourceNeedle@gfnd@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 140c3c1b0,??0DrawContext@gfnd@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 140c3f0e0,??0ResourceInspectorFactory@fnd@hh@@AEAA@PEAVIAllocator@fnd@csl@@@Z,1
@@ -16711,6 +16750,7 @@
 140f201c0,?Clean@BGMTransitInfo@snd@app@@CAXPEAU123@@Z,1
 140f201c0,??1VariableString@ut@csl@@QEAA@XZ,1
 140f201c0,?Clean@PlayerCameraSetParameter@player@app@@CAXPEAU123@@Z,1
+140f201c0,?Clean@GOCVisualModelSpawner@gfx@hh@@CAXPEAU123@@Z,1
 140f201f0,??4VariableString@ut@csl@@QEAAAEAV012@$$QEAV012@@Z,1
 140f20250,?assign@VariableString@ut@csl@@IEAAXPEAVIAllocator@fnd@3@PEBDH@Z,1
 140f20300,?c_str@VariableString@ut@csl@@QEBAPEBDXZ,1
@@ -16828,8 +16868,13 @@
 140f6af3c,?UnkFunc20@AnimationControl@anim@hh@@UEAAX_N@Z,1
 140f6af3c,??_DRenderable@needle@hh@@QEAAXXZ,1
 140f6af3c,?OnGOCVisualEvent@GOCVisual@gfx@hh@@UEAAXW4GOCVisualEvent@123@IPEAX@Z,1
-140f6b4f4,??_Dbad_alloc@std@@QEAAXXZ,0
-140f6b4f4,??_Dbad_exception@std@@QEAAXXZ,0
+140f6af3c,?DrawSphere@DrawContext@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MAEBUColor8@ut@6@@Z,1
+140f6af3c,?DrawCapsule@DrawContext@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBUColor8@ut@6@@Z,1
+140f6af3c,?DrawAABB@DrawContext@gfnd@hh@@UEAA_JAEBVVector3@math@csl@@0AEBUColor8@ut@6@@Z,1
+140f6af3c,?DrawOBB@DrawContext@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@AEBVVector3@56@AEBUColor8@ut@6@@Z,1
+140f6af3c,?DrawCylinder@DrawContext@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBUColor8@ut@6@@Z,1
+140f6af3c,?DrawCircle@DrawContext@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MAEBUColor8@ut@6@@Z,1
+140f6af3c,?DrawPlane@DrawContext@gfnd@hh@@UEAA_JAEBVMatrix34@math@csl@@MMAEBUColor8@ut@6@@Z,1
 140f6f238,??0bad_exception@std@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 140f86d80,??_D?$ctype@D@std@@QEAAXXZ,0
 140f86d80,??_D?$collate@D@std@@QEAAXXZ,0
@@ -23885,7 +23930,7 @@
 141294e10,?rflClassMembers@FxStageDistortion@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
 1412950b0,?rflClassMembers@FxStencilShadow@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
 1412951e0,?rflClassEnums@FxTimeChangeSettings@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B,1
-141295448,?rflClassMembers@GOCVisualModelSpawner@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
+141295448,?rflClassMembers@GOCVisualModelSpawner@gfx@hh@@0QBVRflClassMember@fnd@3@B,1
 1412954e0,?rflClassEnums@PSOCache@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B,1
 1412959f0,?rflClassMembers@PSOCacheBlend@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
 141295c50,?rflClassMembers@PSOCacheDepthStencil@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
@@ -45301,6 +45346,7 @@
 1428d3140,?gameObjectClass@FadeObject@game@app@@0VGameObjectClass@2hh@@B,0
 1428d31a0,?gameObjectClass@ImageFadeObject@game@app@@0VGameObjectClass@2hh@@B,0
 1428d3210,?gameObjectClass@StageFadeObject@game@app@@0VGameObjectClass@2hh@@B,0
+1428d3268,?singletonInitNode@ApplicationSequenceRegistry@game@app@@0VSingletonInitNode@fnd@hh@@B,0
 1428d3340,?componentClass@GOCAttraction@game@app@@0VGOComponentClass@2hh@@B,0
 1428d3390,?componentClass@GOCContact@game@app@@0VGOComponentClass@2hh@@B,0
 1428d33e0,?componentClass@GOCDensity@game@app@@0VGOComponentClass@2hh@@B,0
@@ -45335,6 +45381,7 @@
 1428d3f20,?componentClass@GravityFieldOutsideHalfCylinderBoxSpline@game@app@@0VGOComponentClass@2hh@@B,0
 1428d3f60,?componentClass@GravityFieldOutsidePrismSpline@game@app@@0VGOComponentClass@2hh@@B,0
 1428d3fe0,?componentClass@GravityFieldSvSpline@game@app@@0VGOComponentClass@2hh@@B,0
+1428d4020,?singletonInitNode@GameLocale@game@app@@0VSingletonInitNode@fnd@hh@@B,0
 1428d4050,?gameObjectClass@BakeCameraAnimation@game@app@@0VGameObjectClass@2hh@@B,0
 1428d4110,?gameObjectClass@ObjMovieEncoder@app@@0VGameObjectClass@game@hh@@B,0
 1428d41d0,?gameObjectClass@MenuSelect@game@app@@0VGameObjectClass@2hh@@B,0
@@ -45641,7 +45688,7 @@
 1428ea3e0,?typeInfo@FxStageDistortion@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
 1428ea410,?typeInfo@FxStencilShadow@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
 1428ea440,?typeInfo@FxTimeChangeSettings@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
-1428ea470,?typeInfo@GOCVisualModelSpawner@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
+1428ea470,?typeInfo@GOCVisualModelSpawner@gfx@hh@@2VRflTypeInfo@fnd@3@B,1
 1428ea4a0,?typeInfo@PSOCache@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
 1428ea4d0,?typeInfo@PSOCacheBlend@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
 1428ea500,?typeInfo@PSOCacheDepthStencil@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
@@ -45840,7 +45887,7 @@
 1428f0ec0,?componentClass@GOCRenderTexture@gocs@heur@@0VGOComponentClass@game@hh@@B,0
 1428f1560,?typeInfo@ResTextureStreamingPackage@resources@heur@@0UResourceTypeInfo@fnd@hh@@B,0
 1428f1790,?gameObjectClass@PreviewObject@gameobjects@heur@@0VGameObjectClass@game@hh@@B,0
-1428f24d0,?typeInfo@GOCActivatorSpawner@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
+1428f24d0,?typeInfo@GOCActivatorSpawner@game@hh@@2VRflTypeInfo@fnd@3@B,1
 1428f2620,?typeInfo@ResObjectWorld@game@hh@@0UResourceTypeInfo@fnd@3@B,0
 1428f2648,?typeInfo@ResMasterLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B,0
 1428f2670,?typeInfo@ResLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B,0
@@ -45876,7 +45923,7 @@
 1428f59f0,?typeInfo@ResParticleLocation@resources@heur@@0UResourceTypeInfo@fnd@hh@@B,0
 1428f5a30,?componentClass@GOCParticleLocator@gocs@heur@@0VGOComponentClass@game@hh@@B,0
 1428f5a70,?componentClass@GOCAnimator@anim@hh@@0VGOComponentClass@game@3@B,0
-1428f5ab0,?typeInfo@GOCSimpleAnimationSpawner@rfl@heur@@2VRflTypeInfo@fnd@hh@@B,1
+1428f5ab0,?typeInfo@GOCSimpleAnimationSpawner@anim@hh@@2VRflTypeInfo@fnd@3@B,1
 1428f5b80,?gameObjectClass@AsmViewerObject@gameobjects@heur@@0VGameObjectClass@game@hh@@B,0
 1428f5bf0,?typeInfo@ResAnimator@resources@heur@@0UResourceTypeInfo@fnd@hh@@B,0
 1428f5c18,?typeInfo@ResAnimation@resources@heur@@0UResourceTypeInfo@fnd@hh@@B,0
@@ -45898,6 +45945,8 @@
 1428f63c0,?typeInfo@ResStreamingTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B,0
 1428f63e8,?typeInfo@ResVertexShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B,0
 1428f6410,?typeInfo@ResComputeShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B,0
+1428f65e8,?singletonInitNode@ResourceTypeRegistry@fnd@hh@@0VSingletonInitNode@23@B,0
+1428f7230,?singletonInitNode@BuiltinTypeRegistry@fnd@hh@@0VSingletonInitNode@23@B,0
 14290e150,??_R0P8EnemyCometContext@app@@EAAXXZ@8,1
 14290e188,??_R0P8EnemyCoreMachoContext@app@@EAAXXZ@8,1
 14290e1c0,??_R0P6AXPEAVGOCVisualModel@gfx@hh@@PEAX@Z@8,1
@@ -50804,6 +50853,7 @@
 14295f338,?instance@?$Singleton@VGameObjectSystem@game@hh@@@fnd@csl@@2PEAVGameObjectSystem@game@hh@@EA,1
 14295f340,?instance@ObjInfoRegistry@game@hh@@2PEAV123@EA,1
 14295f348,?instance@?$Singleton@VDeviceManagerWin32@hid@hh@@@fnd@csl@@2PEAVDeviceManagerWin32@hid@hh@@EA,1
+14295f360,?instance@GameLocale@game@app@@0PEAV123@EA,0
 142960318,?gameServiceClass@CameraService@camera@app@@0VGameServiceClass@game@hh@@B,0
 142960350,?stateDesc@Top@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B,0
 142960370,?stateDesc@Normal@StandardCameraState@camera@app@@0VStateDesc@ut@hh@@B,0
@@ -51915,6 +51965,7 @@
 1429763e8,?gameServiceClass@ConversationService@game@app@@0VGameServiceClass@2hh@@B,0
 142976400,?gameServiceClass@DebrisManager@game@app@@0VGameServiceClass@2hh@@B,0
 142976488,?gameServiceClass@ScreenFadeManager@game@app@@0VGameServiceClass@2hh@@B,0
+1429764e0,?instance@ApplicationSequenceRegistry@game@app@@0PEAV123@EA,0
 1429764f0,?gameServiceClass@AttractionManager@game@app@@0VGameServiceClass@2hh@@B,0
 142976558,?instance@GraphicsContext@gfnd@hh@@2PEAV123@EA,1
 142976588,?gameServiceClass@GrindService@game@app@@0VGameServiceClass@2hh@@B,0
@@ -52776,7 +52827,7 @@
 14298c410,?rflClass@FxStageDistortion@rfl@heur@@2VRflClass@fnd@hh@@B,1
 14298c460,?rflClass@FxStencilShadow@rfl@heur@@2VRflClass@fnd@hh@@B,1
 14298c4b0,?rflClass@FxTimeChangeSettings@rfl@heur@@2VRflClass@fnd@hh@@B,1
-14298c500,?rflClass@GOCVisualModelSpawner@rfl@heur@@2VRflClass@fnd@hh@@B,1
+14298c500,?rflClass@GOCVisualModelSpawner@gfx@hh@@2VRflClass@fnd@3@B,1
 14298c550,?rflClass@unk_14298C550@rfl@heur@@2VRflClass@fnd@hh@@B,1
 14298c550,?rflClass@PSOCache@rfl@heur@@2VRflClass@fnd@hh@@B,1
 14298c5a0,?rflClass@PSOCacheBlend@rfl@heur@@2VRflClass@fnd@hh@@B,1
@@ -52972,6 +53023,7 @@
 142999cb0,?gameServiceClass@EffectManager@services@heur@@0VGameServiceClass@game@hh@@B,0
 142c92c20,?rflClass@unk_142C92C20@rfl@heur@@2VRflClass@fnd@hh@@B,1
 142c92c20,?rflClass@GOCSimpleAnimationSpawner@rfl@heur@@2VRflClass@fnd@hh@@B,1
+142c92ee8,?instance@BuiltinTypeRegistry@fnd@hh@@0PEAV123@EA,0
 142c93348,?instance@?$Singleton@VRflTypeInfoRegistry@fnd@hh@@@fnd@csl@@2PEAVRflTypeInfoRegistry@2hh@@EA,1
 142c93368,singletonList,1
 142c933c8,?primitiveRenderer@DrawSystemNeedle@gfnd@hh@@0PEAVPrimitiveRenderer@needle@3@EA,1
@@ -53016,7 +53068,7 @@
 14319aa70,??__ErflClass@FxStageDistortion@rfl@heur@@2VRflClass@fnd@hh@@B,1
 14319f860,??__ErflClass@FxStencilShadow@rfl@heur@@2VRflClass@fnd@hh@@B,1
 1431a6b30,??__ErflClass@FxTimeChangeSettings@rfl@heur@@2VRflClass@fnd@hh@@B,1
-1431a7d40,??__ErflClass@GOCVisualModelSpawner@rfl@heur@@2VRflClass@fnd@hh@@B,1
+1431a7d40,??__ErflClass@GOCVisualModelSpawner@gfx@hh@@2VRflClass@fnd@3@B,1
 1431c0250,??__ErflClass@PSOCacheBlend@rfl@heur@@2VRflClass@fnd@hh@@B,1
 1431d3660,??__ErflClass@PSOCacheDepthStencil@rfl@heur@@2VRflClass@fnd@hh@@B,1
 1431e4af0,??__ErflClass@PSOCacheDepthStencilOp@rfl@heur@@2VRflClass@fnd@hh@@B,1
@@ -53136,6 +53188,8 @@
 143fa7c70,??__ErflClass@DecoTechParams@rfl@heur@@2VRflClass@fnd@hh@@B,1
 144051660,??__EgameServiceClass@EffectManager@services@heur@@0VGameServiceClass@game@hh@@B,0
 1440a9970,??_D?$Interpolator@UFxWeatherParameter@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ,1
+1441b93c0,??__EsingletonInitNode@ResourceTypeRegistry@fnd@hh@@0VSingletonInitNode@23@B,0
+14423e600,??__EsingletonInitNode@BuiltinTypeRegistry@fnd@hh@@0VSingletonInitNode@23@B,0
 1443c1de4,??_D?$Interpolator@UFxRenderOption@needle@hh@@@FxParamManager@gfx@app@@QEAAXXZ,1
 145267e5e,?Create@StateJumpBoardLaunch@states@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 145dc8800,??_DReferencedObject@fnd@hh@@QEAAXXZ,1
@@ -55470,6 +55524,7 @@
 1507fa180,?UnkFunc2@FrameworkWin32@fw@hh@@UEAAXAEBUFrameworkConfig@23@PEAUFrameworkOptions@23@@Z,1
 1507fa7d0,?UnkFunc4@FrameworkWin32@fw@hh@@UEAA_KAEAVFrameworkEnvironment@23@@Z,1
 150841420,??_DUIEventLogo@ui@app@@QEAAXXZ,0
+1508eb280,?UnkFunc17@WindowD3D11@fw@hh@@UEAAXXZ,1
 1509180d0,??0Application@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVFrameworkEnvironment@12@@Z,1
 15091e750,??0MouseEventHandler@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 150ae80c0,?AddKeyEventHandler@EventStack@fw@hh@@QEAAXPEAVKeyEventHandler@23@HI@Z,1

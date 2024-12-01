@@ -15,7 +15,7 @@ namespace SurfRide {
         virtual int64_t Unk8();
     };
 
-	class Scene;
+    class Scene;
     class Cast : public ReferencedObject {
     public:
 		struct Unk1 {
