@@ -47900,13 +47900,13 @@ PUBLIC ?GetTransitionEffect@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBA
     mov rax, 01407e9de0h
     jmp rax
 
-PUBLIC ?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ
-?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ:
+PUBLIC ?GetTransitionType@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@v103@animation_state_machine@resources@ucsl@@XZ
+?GetTransitionType@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@v103@animation_state_machine@resources@ucsl@@XZ:
     mov rax, 01407e9de0h
     jmp rax
 
-PUBLIC ?GetTransitionType@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@v103@animation_state_machine@resources@ucsl@@XZ
-?GetTransitionType@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@v103@animation_state_machine@resources@ucsl@@XZ:
+PUBLIC ?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ
+?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ:
     mov rax, 01407e9de0h
     jmp rax
 
@@ -48968,6 +48968,11 @@ PUBLIC ?SetEnabled@GOCCollider@physics@hh@@QEAAX_N@Z
 PUBLIC ?SetScale@GOCCollider@physics@hh@@UEAAXAEBVVector3@math@csl@@@Z
 ?SetScale@GOCCollider@physics@hh@@UEAAXAEBVVector3@math@csl@@@Z:
     mov rax, 01408af440h
+    jmp rax
+
+PUBLIC ?Setup@GOCCollider@physics@hh@@QEAAXAEBUSetupInfo@123@@Z
+?Setup@GOCCollider@physics@hh@@QEAAXAEBUSetupInfo@123@@Z:
+    mov rax, 01408af520h
     jmp rax
 
 PUBLIC ?GetClass@GOCMeshCollider@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
@@ -51895,6 +51900,11 @@ PUBLIC ?UnkFunc11@GameObject@game@hh@@UEAAX_K000@Z
     mov rax, 01409f5cc0h
     jmp rax
 
+PUBLIC ?SetComponentLengths@GameObject@game@hh@@IEAAXW4UpdatingPhase@fnd@3@@Z
+?SetComponentLengths@GameObject@game@hh@@IEAAXW4UpdatingPhase@fnd@3@@Z:
+    mov rax, 01409f5cd0h
+    jmp rax
+
 PUBLIC ??0GameApplication@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVFrameworkEnvironment@fw@2@@Z
 ??0GameApplication@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVFrameworkEnvironment@fw@2@@Z:
     mov rax, 01409f5cf0h
@@ -52118,6 +52128,11 @@ PUBLIC ?GetComponentByClass@GOComponent@game@hh@@QEBAPEAV123@AEBVGOComponentClas
 PUBLIC ?GetRuntimeTypeInfo@GOComponent@game@hh@@UEBAPEAXXZ
 ?GetRuntimeTypeInfo@GOComponent@game@hh@@UEBAPEAXXZ:
     mov rax, 01409fef70h
+    jmp rax
+
+PUBLIC ?SetNameHash@GOComponent@game@hh@@QEAAXPEBD@Z
+?SetNameHash@GOComponent@game@hh@@QEAAXPEBD@Z:
+    mov rax, 01409fefe0h
     jmp rax
 
 PUBLIC ?SetUpdatePriority@GOComponent@game@hh@@QEAAXW4UpdatingPhase@fnd@3@E@Z
@@ -100463,6 +100478,11 @@ PUBLIC ??0MsgTriggerLeave@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ?Create@GOCBoxCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCBoxCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014ebae120h
+    jmp rax
+
+PUBLIC ?Setup@GOCBoxCollider@physics@hh@@QEAAXAEBUSetupInfo@GOCCollider@23@@Z
+?Setup@GOCBoxCollider@physics@hh@@QEAAXAEBUSetupInfo@GOCCollider@23@@Z:
+    mov rax, 014ebb63e0h
     jmp rax
 
 PUBLIC ?Create@GOCCapsuleCollider@physics@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z

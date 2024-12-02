@@ -13946,8 +13946,8 @@
 1407e9de0,?GetPreviousAnimationState@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAPEAVAnimationState@34@XZ,1
 1407e9de0,?GetTransitionType@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@34@XZ,1
 1407e9de0,?GetTransitionEffect@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAPEAVTransitionEffect@34@XZ,1
-1407e9de0,?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ,1
 1407e9de0,?GetTransitionType@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@v103@animation_state_machine@resources@ucsl@@XZ,1
+1407e9de0,?GetModelGatherBufferSize@RenderingEngine@gfx@hh@@UEAAIXZ,1
 1407ec4a0,?GetTransitionType@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@34@XZ,1
 1407ec4a0,?GetTransitionType@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@v103@animation_state_machine@resources@ucsl@@XZ,1
 1407efa90,??0UploadReport@CrashReportDatabase@crashpad@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
@@ -14247,6 +14247,7 @@
 1408aec20,?OnGOCEvent@GOCCollider@physics@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z,1
 1408af270,?SetEnabled@GOCCollider@physics@hh@@QEAAX_N@Z,1
 1408af440,?SetScale@GOCCollider@physics@hh@@UEAAXAEBVVector3@math@csl@@@Z,1
+1408af520,?Setup@GOCCollider@physics@hh@@QEAAXAEBUSetupInfo@123@@Z,1
 1408af820,j_??_GGOCMeshCollider@gocs@heur@@QEAAXXZ,0
 1408af8b0,j_?Create@GOCMeshCollider@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1408af8b0,j_?Create@GOCMeshCollider@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -14273,6 +14274,7 @@
 1408b19d0,j_?Create@GOCBoxCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z,1
 1408b1a70,?GetRuntimeTypeInfo@GOCBoxCollider@physics@hh@@UEBAPEAXXZ,1
 1408b1a80,?GetShape@GOCBoxCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z,1
+1408b1af0,j_?Setup@GOCBoxCollider@physics@hh@@QEAAXAEBUSetupInfo@GOCCollider@23@@Z,1
 1408b1b20,?GetClass@GOCBoxCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ,0
 1408b1b30,j_?Create@GOCCapsuleCollider@physics@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1408b1b30,j_?Create@GOCCapsuleCollider@physics@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -15130,6 +15132,7 @@
 1409f59e0,j_?SetLayer@GameObject@game@hh@@IEAAXD@Z,1
 1409f5c00,j_?SetUpdateFlag@GameObject@game@hh@@IEAAXW4UpdatingPhase@fnd@3@_N@Z,1
 1409f5cc0,?UnkFunc11@GameObject@game@hh@@UEAAX_K000@Z,1
+1409f5cd0,?SetComponentLengths@GameObject@game@hh@@IEAAXW4UpdatingPhase@fnd@3@@Z,1
 1409f5cf0,??0GameApplication@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVFrameworkEnvironment@fw@2@@Z,1
 1409f5d40,j_??0GameApplication@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1409f5dc0,??_DGameApplication@game@hh@@QEAAXXZ,1
@@ -15372,6 +15375,7 @@
 1409fef10,?GetComponentByClass@GOComponent@game@hh@@QEBAPEAV123@AEBVGOComponentClass@23@@Z,1
 1409fef70,?GetRuntimeTypeInfo@GOComponent@game@hh@@UEBAPEAXXZ,1
 1409fef90,j_?CreateComponent@GameObject@game@hh@@IEAAPEAVGOComponent@23@PEBVGOComponentClass@23@@Z,1
+1409fefe0,?SetNameHash@GOComponent@game@hh@@QEAAXPEBD@Z,1
 1409ff020,j_?SetUpdateFlag@GOComponent@game@hh@@QEAAXW4UpdatingPhase@fnd@3@_N@Z,1
 1409ff040,?SetUpdatePriority@GOComponent@game@hh@@QEAAXW4UpdatingPhase@fnd@3@E@Z,1
 1409ff050,?UpdateAsync@GOComponent@game@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z,1
@@ -55013,6 +55017,7 @@
 14eb4a820,?Setup@GOCSphereCollider@physics@hh@@QEAAXAEBUSetupInfo@123@@Z,1
 14eb828e0,??0MsgTriggerLeave@physics@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 14ebae120,?Create@GOCBoxCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z,1
+14ebb63e0,?Setup@GOCBoxCollider@physics@hh@@QEAAXAEBUSetupInfo@GOCCollider@23@@Z,1
 14ebc0800,?Create@GOCCapsuleCollider@physics@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 14ebc0800,?Create@GOCCapsuleCollider@physics@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 14ebd06f0,?GetShape@GOCCapsuleCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z,1
