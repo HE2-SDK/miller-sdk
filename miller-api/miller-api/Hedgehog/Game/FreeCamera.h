@@ -21,7 +21,7 @@ namespace hh::game {
             bool unk4;
         };
 
-    private:
+    public:
         CreateInfo createInfo;
         fnd::Reference<GameManager> gameManager;
         fnd::Reference<CameraManager> cameraManager;
@@ -33,7 +33,6 @@ namespace hh::game {
         csl::ut::MoveArray<void*> unk8;
         gfnd::ViewportData viewportData;
 
-    public:
         FreeCamera(csl::fnd::IAllocator* allocator, const CreateInfo& createInfo);
         void Initialize(csl::fnd::IAllocator* allocator);
         bool HasCamera();
@@ -50,12 +49,24 @@ namespace hh::game {
     };
 
     class FreeCameraUnk2 {
-        csl::math::Vector4 unk1;
-        csl::math::Vector4 unk2;
-        csl::math::Vector3 unk3;
-        csl::math::Vector4 unk5;
-        uint32_t unk6;
-        csl::math::Vector4 unk7;
+    public:
+        struct CameraSettings {
+            csl::math::Vector3 origin;
+            csl::math::Vector3 position;
+            float yaw;
+            float pitch;
+            float zoom;
+            csl::math::Vector3 up;
+            float roll;
+        };
+        struct ViewportSettings {
+            float nearClip;
+            float farClip;
+            float fov;
+        };
+
+        CameraSettings camera;
+        ViewportSettings viewport;
 
         FreeCameraUnk2(csl::fnd::IAllocator* allocator);
     };
@@ -80,6 +91,7 @@ namespace hh::game {
     };
 
     class PadFreeCameraController : public fnd::ReferencedObject, public FreeCameraListener {
+    public:
         void* unk1;
         gfnd::ViewportData viewportData;
         FreeCameraUnk2 unk3;
@@ -88,20 +100,22 @@ namespace hh::game {
         float unk6;
         float unk7;
         float unk8;
-        float unk9;
-        csl::ut::MoveArray<void*> unk10;
-        uint32_t unk11;
+        float currentSpeed;
+        csl::ut::MoveArray<float> speedOptions;
+        unsigned int currentSpeedOptionIdx;
         bool unk12;
         float unk13;
         uint16_t unk14;
-    public:
+
         PadFreeCameraController(csl::fnd::IAllocator* allocator);
+        void LoadSpeedOptions(float* speeds, size_t count);
     };
     
     class UnkPadFreeCameraController : public PadFreeCameraController {
+    public:
         uint64_t unk101; // set from unk6 on defaultcontroller
         csl::math::Vector4 unk102;
-    public:
+
         UnkPadFreeCameraController(csl::fnd::IAllocator* allocator);
     };
 
@@ -135,12 +149,12 @@ namespace hh::game {
     };
 
     class DefaultFreeCameraController : public FreeCameraControllerBase {
+    public:
         fnd::Reference<UnkPadFreeCameraController> padController;
         fnd::Reference<ArcBallCameraController> arcBallController;
         bool unk4;
         bool unk5; // comes from unk4 on freeCamera createinfo
         uint64_t unk6;
-    public:
         DefaultFreeCameraController(csl::fnd::IAllocator* allocator);
         virtual uint64_t UnkFunc1() override;
         virtual uint64_t UnkFunc2() override;
