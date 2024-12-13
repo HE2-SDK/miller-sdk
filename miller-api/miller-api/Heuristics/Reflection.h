@@ -6228,6 +6228,9 @@ namespace heur::rfl {
     struct ObjCameraStandardCommonParameter {
         float distance;
         float azimuthSensitivity;
+        bool isAzimuthLimited;
+        float azimuthMax;
+        float azimuthFront;
         float minElevation;
         float maxElevation;
         float elevationUpSensitivity;
@@ -6854,6 +6857,7 @@ namespace heur::rfl {
         bool forceFall;
         bool endByAir;
         bool custom;
+        bool skytree;
         float initialSideSpeed;
         float acceleSideForce;
         float deceleSideForce;
@@ -6949,6 +6953,9 @@ namespace heur::rfl {
         enum class ShapeType : int8_t {
             Box = 0,
             TriangularPrism = 1,
+            Sphere = 2,
+            Capsule = 3,
+            Cylinder = 4,
         };
 
         enum class MaterialType : int8_t {
@@ -7229,6 +7236,48 @@ namespace heur::rfl {
         static void Construct(ObjConversationVolumeSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(ObjConversationVolumeSpawner* pInstance);
         static void Clean(ObjConversationVolumeSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct ObjMultipleConversationVolumeSpawner {
+        enum class EndRule : uint8_t {
+            AUTOBYTIME = 0,
+            AUTOBYVOICE = 1,
+            AUTOBYVOICEANDDELAY = 2,
+        };
+
+        enum class StateType : int8_t {
+            DEFAULTSTATE_ON = 0,
+            DEFAULTSTATE_OFF = 1,
+        };
+
+        enum class ActionType : int8_t {
+            ACTION_EACHTIME = 0,
+            ACTION_ONCE = 1,
+        };
+
+        enum class PlayerActionType : int8_t {
+            NONE = 0,
+            HOMING_OR_SPEAR = 1,
+        };
+
+        heur::rfl::VolumeTriggerSpawner volume;
+        csl::ut::VariableString labelNames[4];
+        EndRule endRule;
+        float displayTime;
+        float firstWaitTime;
+        float delayTime;
+        StateType state;
+        ActionType action;
+        PlayerActionType playerActionType;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(ObjMultipleConversationVolumeSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(ObjMultipleConversationVolumeSpawner* pInstance);
+        static void Clean(ObjMultipleConversationVolumeSpawner* pInstance);
     };
 }
 
@@ -7850,6 +7899,8 @@ namespace heur::rfl {
             W01_MissMissileEvent = 2,
             W02_EnterDistSpace1 = 3,
             W04_DeathEggRobotEvent = 4,
+            W20_GA2010Event = 5,
+            W20_GA2020Event = 6,
         };
 
         Kind kind;
@@ -9350,6 +9401,12 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct ObjPointLightSpawner {
+        enum class TargetShadingKindMaskType : uint8_t {
+            TSKM_NONE = 0,
+            TSKM_CHARA = 1,
+            TSKM_ENVIRONMENT = 2,
+        };
+
         float colorR;
         float colorG;
         float colorB;
@@ -9358,6 +9415,7 @@ namespace heur::rfl {
         float attenuationRadius;
         bool enableShadow;
         heur::rfl::MoveParameter move;
+        TargetShadingKindMaskType targetShadingKindMaskType;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -9510,6 +9568,7 @@ namespace heur::rfl {
         };
 
         Visual visual;
+        bool isWire;
         csl::ut::VariableString pathName;
         float startPosition1D;
         float endPosition1D;
@@ -11104,11 +11163,30 @@ namespace heur::rfl {
         enum class Dimension : int8_t {
             DIM_SV = 0,
             DIM_FV = 1,
+            DIM_FV_LARGE = 2,
+        };
+
+        enum class MoveType : int8_t {
+            MOVE_NONE = 0,
+            MOVE_POINT = 1,
+            MOVE_PATH = 2,
+        };
+
+        enum class PatrolType : int8_t {
+            PATROL_RETURN = 0,
+            PATROL_LOOP = 1,
+            PATROL_ONEWAY = 2,
+        };
+
+        enum class TimeType : int8_t {
+            TIME_LOCAL = 0,
+            TIME_GLOBAL = 1,
         };
 
         Visual visual;
         Color balloonColor;
         Dimension dimension;
+        float scale;
         float upSpeed;
         float speedMin;
         float speedMax;
@@ -11118,9 +11196,19 @@ namespace heur::rfl {
         float ignoreSwingingTime;
         bool isDefaultPositionRespawn;
         bool eventDriven;
+        bool isHideUntilEvent;
         bool isHorming;
         bool isWaitAppear;
         bool castShadow;
+        MoveType moveType;
+        PatrolType patrolType;
+        TimeType timeType;
+        csl::math::Vector3 moveVector;
+        csl::ut::VariableString pathName;
+        csl::ut::MoveArray<hh::game::ObjectId> locaterList;
+        float waitTime;
+        float phase;
+        float speed;
         heur::rfl::ActionNotification actions[3];
 
         static const hh::fnd::RflTypeInfo typeInfo;
@@ -11331,6 +11419,7 @@ namespace heur::rfl {
         bool isEnablePoleCollision;
         bool isEventDriven;
         bool isSE;
+        bool isEffect;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -11552,6 +11641,7 @@ namespace heur::rfl {
         };
 
         SizeType sizeType;
+        float modelScale;
         MoveType moveType;
         PatrolType patrolType;
         TimeType timeType;
@@ -13606,6 +13696,201 @@ namespace heur::rfl {
 }
 
 namespace heur::rfl {
+    struct EnemyGunHelicopterBigSpawner {
+        enum class MoveType : int8_t {
+            Fixed = 0,
+            Offset = 1,
+            Path = 2,
+        };
+
+        enum class MoveMotionType : int8_t {
+            Normal = 0,
+            Upper = 1,
+        };
+
+        enum class OrientationForMoveTypeFix : int8_t {
+            Set = 0,
+            Player = 1,
+            PathFront = 2,
+            PathBack = 3,
+        };
+
+        enum class PatrolType : int8_t {
+            Return = 0,
+            OneWay = 1,
+            OneWayIdling = 2,
+        };
+
+        enum class EventDrivenType : int8_t {
+            None = 0,
+            HideToAppear = 1,
+            IdleToMove = 2,
+            HideToMove = 3,
+        };
+
+        int32_t no;
+        MoveType moveType;
+        MoveMotionType moveMotionType;
+        OrientationForMoveTypeFix orientationForMoveTypeFix;
+        PatrolType patrolType;
+        EventDrivenType eventDrivenType;
+        csl::math::Vector3 moveOffset;
+        csl::ut::VariableString pathName;
+        float moveSpeed;
+        float keepNearestDistanceDuringBattle;
+        float attackCannonSpeed;
+        float attackCannonReadyTime;
+        float attackCannonCycleTime;
+        float attackCannonLifeTime;
+        float attackCannonRadius;
+        float attackCannonHeight;
+        float respawnTime;
+        int32_t addLightGaugeNum;
+        bool fixWarpAngle;
+        float warpAngle;
+        bool isTransparency;
+        bool isAttackWhileMoving;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(EnemyGunHelicopterBigSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(EnemyGunHelicopterBigSpawner* pInstance);
+        static void Clean(EnemyGunHelicopterBigSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct EnemyGunHelicopterBigVolumeSpawner {
+        enum class StateType : int8_t {
+            DEFAULTSTATE_ON = 0,
+            DEFAULTSTATE_OFF = 1,
+        };
+
+        enum class ActionType : int8_t {
+            ACTION_EACHTIME = 0,
+            ACTION_ONCE = 1,
+        };
+
+        StateType state;
+        ActionType action;
+        bool isEventDriven;
+        heur::rfl::VolumeTriggerSpawner volume;
+        float keepNearestDistanceDuringBattle;
+        int32_t attackCannonNum;
+        float attackCannonSpeedScale[2];
+        csl::ut::VariableString attackCannonPathName0;
+        csl::ut::VariableString attackCannonPathName1;
+        float attackCannonPathPositionOffsetY[2];
+        hh::game::ObjectId attackTargetObjectId;
+        bool rotateInAttackTargetObject;
+        bool waitForAttackAnimToFinish;
+        bool attackReadyCannonEffect[2];
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(EnemyGunHelicopterBigVolumeSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(EnemyGunHelicopterBigVolumeSpawner* pInstance);
+        static void Clean(EnemyGunHelicopterBigVolumeSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct EnemyGunHelicopterSmallSpawner {
+        enum class MoveType : int8_t {
+            Fixed = 0,
+            Offset = 1,
+            Path = 2,
+        };
+
+        enum class OrientationForMoveTypeFix : int8_t {
+            Set = 0,
+            Player = 1,
+            PathFront = 2,
+            PathBack = 3,
+        };
+
+        enum class PatrolType : int8_t {
+            Return = 0,
+            OneWay = 1,
+            OneWayIdling = 2,
+        };
+
+        enum class EventDrivenType : int8_t {
+            None = 0,
+            HideToAppear = 1,
+            IdleToMove = 2,
+            HideToMove = 3,
+        };
+
+        int32_t no;
+        MoveType moveType;
+        OrientationForMoveTypeFix orientationForMoveTypeFix;
+        PatrolType patrolType;
+        EventDrivenType eventDrivenType;
+        csl::math::Vector3 moveOffset;
+        csl::ut::VariableString pathName;
+        float moveSpeed;
+        float attackCannonSpeed;
+        float attackCannonReadyTime;
+        float attackCannonCycleTime;
+        float attackCannonLifeTime;
+        float attackCannonRadius;
+        float attackCannonHeight;
+        float respawnTime;
+        csl::math::Vector3 blowOffVector;
+        float blowOffTime;
+        int32_t addLightGaugeNum;
+        bool fixWarpAngle;
+        float warpAngle;
+        bool isTransparency;
+        bool isAttackWhileMoving;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(EnemyGunHelicopterSmallSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(EnemyGunHelicopterSmallSpawner* pInstance);
+        static void Clean(EnemyGunHelicopterSmallSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct EnemyGunHelicopterSmallVolumeSpawner {
+        enum class StateType : int8_t {
+            DEFAULTSTATE_ON = 0,
+            DEFAULTSTATE_OFF = 1,
+        };
+
+        enum class ActionType : int8_t {
+            ACTION_EACHTIME = 0,
+            ACTION_ONCE = 1,
+        };
+
+        StateType state;
+        ActionType action;
+        bool isEventDriven;
+        heur::rfl::VolumeTriggerSpawner volume;
+        int32_t attackCannonNum;
+        float attackCannonSpeedScale[2];
+        csl::ut::VariableString attackCannonPathName0;
+        csl::ut::VariableString attackCannonPathName1;
+        float attackCannonPathPositionOffsetY[2];
+        hh::game::ObjectId attackTargetObjectId;
+        bool rotateInAttackTargetObject;
+        bool waitForAttackAnimToFinish;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(EnemyGunHelicopterSmallVolumeSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(EnemyGunHelicopterSmallVolumeSpawner* pInstance);
+        static void Clean(EnemyGunHelicopterSmallVolumeSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
     struct GunHunterAttackParam {
         float searchDistance;
         float attackDistance;
@@ -13644,6 +13929,7 @@ namespace heur::rfl {
         bool doesRespawn;
         float respawnTime;
         int32_t addLightGaugeNum;
+        bool blowCollisionEnable;
         bool fixWarpAngle;
         float warpAngle;
         heur::rfl::GunHunterAttackParam attackParam;
@@ -13652,6 +13938,7 @@ namespace heur::rfl {
         csl::math::Vector3 guideSize;
         csl::math::Vector3 guideColOffset;
         csl::math::Vector3 guideViewOffset;
+        bool enableBlockCollision;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -14457,7 +14744,8 @@ namespace heur::rfl {
             Character = 3,
             History = 4,
             GeraldNote = 5,
-            Num = 6,
+            Poster = 6,
+            Num = 7,
             None = -1,
         };
 
@@ -15165,6 +15453,153 @@ namespace heur::rfl {
         static void Construct(ObjSmallDoorSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
         static void Finish(ObjSmallDoorSpawner* pInstance);
         static void Clean(ObjSmallDoorSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct CarLaunchInfo {
+        float threathold;
+        float firstSpeed;
+        float elevation;
+        float outOfControl;
+        float keepVelocityDistance;
+        float motionTime;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(CarLaunchInfo* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(CarLaunchInfo* pInstance);
+        static void Clean(CarLaunchInfo* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct ObjCarSpawner {
+        enum class SizeType : int8_t {
+            SIZE_A = 0,
+            SIZE_B = 1,
+            SIZE_C = 2,
+            SIZE_D = 3,
+            SIZE_E = 4,
+            SIZE_F = 5,
+            SIZE_G = 6,
+            NUM_SIZE_TYPE = 7,
+        };
+
+        enum class CollisionType : int8_t {
+            Normal = 0,
+            Side = 1,
+            NUM_COLLISION_TYPE = 2,
+        };
+
+        SizeType sizeType;
+        CollisionType collisionType;
+        uint8_t colorType;
+        heur::rfl::CarLaunchInfo launchInfos[2];
+        heur::rfl::ActionNotification actions[3];
+        bool lighting;
+        float lightingOffsetFrame;
+        float targetEffectLifeTime;
+        bool backGroundObj;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(ObjCarSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(ObjCarSpawner* pInstance);
+        static void Clean(ObjCarSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct ObjCollectionPosterSpawner {
+        int32_t posterID;
+        bool eventDriven;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(ObjCollectionPosterSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(ObjCollectionPosterSpawner* pInstance);
+        static void Clean(ObjCollectionPosterSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct ObjFlamingSpawner {
+        enum class SizeType : int8_t {
+            SIZE_A = 0,
+            SIZE_B = 1,
+            NUM_SIZE_TYPE = 2,
+        };
+
+        csl::math::Vector3 startExtents;
+        SizeType flameSize;
+        bool flamingFromTheStart;
+        float targetEffectLifeTime;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(ObjFlamingSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(ObjFlamingSpawner* pInstance);
+        static void Clean(ObjFlamingSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct ObjManholeSpawner {
+        int32_t dummy;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(ObjManholeSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(ObjManholeSpawner* pInstance);
+        static void Clean(ObjManholeSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct ObjSlopeSpawner {
+        enum class SlopeModelType : int32_t {
+            SLOPE_5M = 0,
+            SLOPE_10M = 1,
+            NUM_MODELS = 2,
+        };
+
+        SlopeModelType type;
+        float modelScale;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(ObjSlopeSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(ObjSlopeSpawner* pInstance);
+        static void Clean(ObjSlopeSpawner* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct ObjTrainSpawner {
+        enum class ModelType : int8_t {
+            ORANGE = 0,
+            GREEN = 1,
+        };
+
+        ModelType modelType;
+        bool isTailTrainRump;
+        bool isFrontTrainRump;
+        int32_t trainNum;
+        heur::rfl::ActionNotification actions[3];
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(ObjTrainSpawner* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(ObjTrainSpawner* pInstance);
+        static void Clean(ObjTrainSpawner* pInstance);
     };
 }
 
@@ -16434,6 +16869,7 @@ namespace heur::rfl {
             Num = 6,
             Invalid = -1,
             WhiteSpace = 8,
+            MovZone = 9,
         };
 
         Value stageID;
@@ -16480,6 +16916,8 @@ namespace heur::rfl {
             RadicalHighway_ACT2 = 14,
             BossPerfectBlackDoom = 15,
             Num = 16,
+            MovStageACT1 = 16,
+            NumAll = 17,
             Invalid = -1,
         };
 
@@ -16639,7 +17077,8 @@ namespace heur::rfl {
             Character = 3,
             History = 4,
             GeraldNote = 5,
-            Num = 6,
+            Poster = 6,
+            Num = 7,
             None = -1,
         };
 
@@ -16691,7 +17130,8 @@ namespace heur::rfl {
             Character = 3,
             History = 4,
             GeraldNote = 5,
-            Num = 6,
+            Poster = 6,
+            Num = 7,
             None = -1,
         };
 
@@ -16867,6 +17307,7 @@ namespace heur::rfl {
             Num = 6,
             Invalid = -1,
             WhiteSpace = 8,
+            MovZone = 9,
         };
 
         Value stageID;
@@ -17098,6 +17539,9 @@ namespace heur::rfl {
         float minElevation;
         float maxElevation;
         float azimuthSensitivity;
+        bool isAzimuthLimited;
+        float azimuthMax;
+        float azimuthFront;
         float elevationUpSensitivity;
         float elevationDownSensitivity;
         float elevationOffset;
@@ -17368,6 +17812,7 @@ namespace heur::rfl {
             LockedCollectionBox = 1,
             Opened = 2,
             DLC_DDX = 3,
+            DLC_ADD = 4,
         };
 
         bool isEnable;
@@ -17587,7 +18032,7 @@ namespace heur::rfl {
     struct CollectionParamter {
         heur::rfl::CollectionArtInfo artInfos[121];
         heur::rfl::CollectionSoundInfo soundInfos[100];
-        heur::rfl::CollectionMovieInfo movieInfos[30];
+        heur::rfl::CollectionMovieInfo movieInfos[33];
         heur::rfl::CollectionCharacterInfo charaInfos[7];
         heur::rfl::CollectionHistoryInfo historyInfos[11];
         heur::rfl::CollectionGeraldNoteInfo noteInfos[28];
@@ -18113,7 +18558,9 @@ namespace heur::rfl {
             StoneLabyrinth = 10,
             DeathEggRobotPanic = 11,
             GondolaSurveyTeam = 12,
-            Num = 13,
+            MovieDLC1 = 13,
+            MovieDLC2 = 14,
+            Num = 15,
         };
 
         enum class IconType : int8_t {
@@ -18126,8 +18573,9 @@ namespace heur::rfl {
             OBJSURFSPIN = 6,
             ENEMYEGGSTINGER = 7,
             ENEMYTWISTER = 8,
-            None = 9,
-            NUM = 10,
+            BALLOON = 9,
+            None = 10,
+            NUM = 11,
         };
 
         csl::ut::VariableString stageCode;
@@ -18154,6 +18602,7 @@ namespace heur::rfl {
     struct GameChallengeParameter {
         heur::rfl::GameChallengeData datas[32];
         heur::rfl::GameChallengeData hardChallenges[11];
+        heur::rfl::GameChallengeData dlcChallenges[2];
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -18499,6 +18948,7 @@ namespace heur::rfl {
     struct WhiteSpaceStageUI {
         heur::rfl::WhiteSpaceStageUIModelParam modelParam;
         heur::rfl::WhiteSpaceStageUIModelParam dwingModelParam;
+        heur::rfl::WhiteSpaceStageUIModelParam dlcaddParam;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -23658,6 +24108,69 @@ namespace heur::rfl {
 }
 
 namespace heur::rfl {
+    struct EnemyGunHelicopterBigCommonParam {
+        float killWaitTime;
+        int32_t maxHealthPoint;
+        csl::ut::VariableString colliderNodeName;
+        float rotateSpeed;
+        heur::rfl::EnemyCollisionParam collisionParam;
+        heur::rfl::EnemyComboParam comboParam;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(EnemyGunHelicopterBigCommonParam* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(EnemyGunHelicopterBigCommonParam* pInstance);
+        static void Clean(EnemyGunHelicopterBigCommonParam* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct EnemyGunHelicopterBigConfig {
+        heur::rfl::EnemyGunHelicopterBigCommonParam commonParam;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(EnemyGunHelicopterBigConfig* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(EnemyGunHelicopterBigConfig* pInstance);
+        static void Clean(EnemyGunHelicopterBigConfig* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct EnemyGunHelicopterSmallCommonParam {
+        float killWaitTime;
+        int32_t maxHealthPoint;
+        csl::ut::VariableString colliderNodeName;
+        float rotateSpeed;
+        float stunTime;
+        heur::rfl::EnemyCollisionParam collisionParam;
+        heur::rfl::EnemyComboParam comboParam;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(EnemyGunHelicopterSmallCommonParam* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(EnemyGunHelicopterSmallCommonParam* pInstance);
+        static void Clean(EnemyGunHelicopterSmallCommonParam* pInstance);
+    };
+}
+
+namespace heur::rfl {
+    struct EnemyGunHelicopterSmallConfig {
+        heur::rfl::EnemyGunHelicopterSmallCommonParam commonParam;
+
+        static const hh::fnd::RflTypeInfo typeInfo;
+        static const hh::fnd::RflClass rflClass;
+    private:
+        static void Construct(EnemyGunHelicopterSmallConfig* pInstance, csl::fnd::IAllocator* pAllocator);
+        static void Finish(EnemyGunHelicopterSmallConfig* pInstance);
+        static void Clean(EnemyGunHelicopterSmallConfig* pInstance);
+    };
+}
+
+namespace heur::rfl {
     struct EnemyGunHunterCommonConfig {
         float stunHp;
         float chaosSpearStunTime;
@@ -24401,7 +24914,7 @@ namespace app::player {
 
 namespace heur::rfl {
     struct EffectRecord : heur::rfl::Record {
-        csl::ut::VariableString emitterSetName[3];
+        csl::ut::VariableString emitterSetName[4];
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
