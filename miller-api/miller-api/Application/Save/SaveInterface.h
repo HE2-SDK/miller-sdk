@@ -8,28 +8,23 @@ namespace app::save {
             uint64_t unk2;
         };
 
-        struct Unk2 {
-            uint64_t unk1;
-            uint64_t unk2;
-            uint64_t unk3;
-            uint64_t unk4;
-        };
-
-        uint64_t qword90;
+        uint64_t qword108;
         csl::ut::MoveArray<hh::fnd::Reference<UserElement>> userElements;
-        uint32_t dwordB8;
-        uint32_t qwordBC;
-        uint32_t qwordC0;
-        uint32_t qwordC4;
-        uint32_t qwordC8;
-        uint8_t byteCC;
-        uint32_t dwordD0[4];
+        uint32_t dword130;
+        uint32_t dword134;
+        uint32_t dword138;
+        uint8_t byte13C;
+        uint16_t word13E;
+        uint32_t qword140;
+        uint32_t qword144;
+        uint8_t byte148;
+        uint32_t dword14C[4];
         csl::ut::MoveArray<void*> unkE0;
         csl::ut::InplaceMoveArray<Unk1, 32> unk100;
         uint64_t qword320;
-        uint16_t word328;
+        uint8_t word328;
         uint32_t dword32C;
-        Unk2 dword330[11];
+        uint64_t dword330[16];
 
         SaveInterface(csl::fnd::IAllocator* allocator);
 

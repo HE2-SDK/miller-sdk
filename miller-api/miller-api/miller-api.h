@@ -392,6 +392,8 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Framework/Framework.h"
 #include "Hedgehog/Framework/AppModule.h"
 #include "Hedgehog/Framework/Application.h"
+#include "Hedgehog/Framework/Save/EncryptionKeys.h"
+#include "Hedgehog/Framework/Save/SaveProcess.h"
 #include "Hedgehog/Framework/SaveManagerInterface.h"
 
 // HID
