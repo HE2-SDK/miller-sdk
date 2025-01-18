@@ -501,6 +501,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Graphics/GOCVisualModel.h"
 #include "Hedgehog/Graphics/GOCVisualUserModel.h"
 #include "Hedgehog/Graphics/GOCVisualDebugDraw.h"
+#include "Hedgehog/Graphics/GOCOcclusionCapsule.h"
 #include "Hedgehog/Graphics/VisualManager.h"
 #include "Hedgehog/Graphics/VisibilityManager.h"
 #include "Hedgehog/Graphics/FxParamEditor.h"
@@ -527,6 +528,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Path/PathComponent.h"
 #include "Hedgehog/Path/PathCollisionHandler.h"
 #include "Hedgehog/Path/PathManager.h"
+#include "Hedgehog/Path/PathEvaluator.h"
 
 // #include "Hedgehog/Effect/CyanRenderHandler.h"
 #include "Hedgehog/Effect/ResEffect.h"
@@ -748,7 +750,7 @@ namespace millersdk::ucsl {
 // #include "Application/UI/RequestOverlayWindow.h"
 // #include "Application/UI/RequestOverlayCaption.h"
 // #include "Application/UI/UIOverlayService.h"
-// #include "Application/UI/Messages.h"
+#include "Application/UI/Messages.h"
 
 #include "Application/Game/GameCondition.h"
 // #include "Application/Game/GameModeResourceCollection.h"

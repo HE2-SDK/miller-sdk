@@ -36,7 +36,7 @@ namespace hh::ui {
         csl::ut::MoveArray<void*> field_138;
         csl::ut::MoveArray<void*> field_158;
         uint64_t renderable;
-        csl::ut::Bitset<Flag> field_180;
+        csl::ut::Bitset<Flag> flags;
         uint16_t nextId;
         ViewportDimensions viewportDimensions;
         uint64_t field_190;
@@ -71,6 +71,10 @@ namespace hh::ui {
         LayerController* GetLayerController(const char* sceneName, const char* layerName, uint16_t id);
         LayerController* GetLayerControllerWithNextId(SurfRide::Layer* layer);
         SurfRide::Project* GetProject();
+
+        void SetFlag(Flag flag, bool enabled);
+        void EnableFlag(Flag flag);
+        void DisableFlag(Flag flag);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCSprite)
     };

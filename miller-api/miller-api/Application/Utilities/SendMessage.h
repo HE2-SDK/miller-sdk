@@ -4,6 +4,8 @@ namespace app::ut {
     bool SendMessageImmToCameraFrame(hh::game::GameObject& gameObject, int unusedCameraFrameId, hh::fnd::Message& message);
     bool SendMessageImmToCameraFrame(hh::fnd::Messenger& messenger, hh::game::GameManager* gameManager, int unusedCameraFrameId, hh::fnd::Message& message);
     bool SendMessageImmToCameraService(hh::game::GameObject& gameObject, hh::fnd::Message& message);
+    bool SendMessageImmToCameraService(hh::fnd::Messenger& messenger, hh::game::GameManager* gameManager, hh::fnd::Message& message);
+    void SendMessageImmToLayers(hh::game::GameObject& gameObject, unsigned int layerMask, hh::fnd::Message& message);
     void SendMessageImmToLayers(hh::fnd::Messenger& messenger, hh::game::GameManager* gameManager, unsigned int layerMask, hh::fnd::Message& message);
     bool SendMessageImmToSetObject(hh::game::GameObject& gameObject, hh::game::ObjectId objectId, hh::fnd::Message& message);
     bool SendMessageImmToSetObject(hh::fnd::Messenger& messenger, hh::game::GameManager* gameManager, hh::game::ObjectId objectId, hh::fnd::Message& message);

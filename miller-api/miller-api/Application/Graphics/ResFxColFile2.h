@@ -2,9 +2,9 @@
 #include <ucsl/resources/fxcol/v1.h>
 
 namespace app::gfx {
-    using ucsl::resources::fxcol::v1::FxColCollisionShapeData;
-    using ucsl::resources::fxcol::v1::FxColBoundingVolumeData;
-    using ucsl::resources::fxcol::v1::FxColUnk1Data;
+    using FxColCollisionShapeData = ucsl::resources::fxcol::v1::ShapeData;
+    using FxColKdTreeLeafData = ucsl::resources::fxcol::v1::KdTreeLeafData;
+    using FxColKdTreeNodeData = ucsl::resources::fxcol::v1::KdTreeNodeData;
     using ucsl::resources::fxcol::v1::FxColData;
 
     class ResFxColFile2 : public hh::fnd::ManagedResource {

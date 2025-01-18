@@ -60,8 +60,9 @@ namespace hh::game {
             bool exclusive; // flag 1
         };
 
-        InputComponent(csl::fnd::IAllocator* pAllocator, const Config& config, InputManager& inputManager);
-        static InputComponent* Create(csl::fnd::IAllocator* pAllocator, const Config& config, InputManager& inputManager);
+        InputComponent(csl::fnd::IAllocator* pAllocator, const Config& config, InputManager** inputManager);
+        static InputComponent* Create(csl::fnd::IAllocator* pAllocator, const Config& config, InputManager** inputManager);
+        static InputComponent* Create(csl::fnd::IAllocator* pAllocator, const Config& config, InputManager* inputManager);
 
         inline char GetInternalPlayerInputId() {
             return internalPlayerInputIndex;
