@@ -532,7 +532,7 @@ namespace millersdk::ucsl {
 
 // #include "Hedgehog/Effect/CyanRenderHandler.h"
 #include "Hedgehog/Effect/ResEffect.h"
-// #include "Hedgehog/Effect/EffectManager.h"
+#include "Hedgehog/Effect/EffectManager.h"
 // #include "Hedgehog/Effect/GOCEffect.h"
 
 #include "Hedgehog/Sound/ResAtomConfig.h"
@@ -723,6 +723,9 @@ namespace millersdk::ucsl {
 
 #include "Application/Player/Player.h"
 // #include "Application/Player/Characters/Shadow.h"
+#include "Application/Player/PlayerReplayService.h"
+#include "Application/Player/GOCPlayerReplayRecorder.h"
+#include "Application/Player/GOCPlayerReplayPlayer.h"
 
 #include "Application/Level/PlayerInformation.h"
 #include "Application/Level/StageData.h"

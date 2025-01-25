@@ -44,6 +44,8 @@ namespace csl::fnd {
     template<typename TLock>
     class alignas(8) OptimizedFreeListHeapTemplate : public OptimizedFreeListHeapBase {
         TLock m_Lock;
+    public:
+        OptimizedFreeListHeapTemplate(const char* name) : OptimizedFreeListHeapBase{ name } {}
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void* Alloc(size_t in_size, size_t in_alignment) override;

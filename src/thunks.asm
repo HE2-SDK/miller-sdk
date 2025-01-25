@@ -15110,6 +15110,16 @@ PUBLIC ??_GAutoSequenceManager@dbg@app@@QEAAXXZ
     mov rax, 01400e38b0h
     jmp rax
 
+PUBLIC ?OnAddedToGame@PlayerReplayService@player@app@@UEAAXXZ
+?OnAddedToGame@PlayerReplayService@player@app@@UEAAXXZ:
+    mov rax, 01400e4730h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@PlayerReplayService@player@app@@UEAAXXZ
+?OnRemovedFromGame@PlayerReplayService@player@app@@UEAAXXZ:
+    mov rax, 01400e4750h
+    jmp rax
+
 PUBLIC ?Create@AutoSequenceManager@dbg@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@AutoSequenceManager@dbg@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01400e5ca0h
@@ -39770,8 +39780,18 @@ PUBLIC ??_GGOCPlayerReplayPlayer@player@app@@QEAAXXZ
     mov rax, 0140638380h
     jmp rax
 
+PUBLIC ??_DGOCPlayerReplayPlayer@player@app@@QEAAXXZ
+??_DGOCPlayerReplayPlayer@player@app@@QEAAXXZ:
+    mov rax, 0140638380h
+    jmp rax
+
 PUBLIC ??_GGOCPlayerReplayRecorder@player@app@@QEAAXXZ
 ??_GGOCPlayerReplayRecorder@player@app@@QEAAXXZ:
+    mov rax, 0140638420h
+    jmp rax
+
+PUBLIC ??_DGOCPlayerReplayRecorder@player@app@@QEAAXXZ
+??_DGOCPlayerReplayRecorder@player@app@@QEAAXXZ:
     mov rax, 0140638420h
     jmp rax
 
@@ -39795,14 +39815,39 @@ PUBLIC ?Create@GOCPlayerReplayRecorder@player@app@@SAPEAV123@PEAVIAllocator@fnd@
     mov rax, 01406386d0h
     jmp rax
 
+PUBLIC ?Create@GOCPlayerReplayRecorder@player@app@@CAPEAVGOComponent@game@hh@@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCPlayerReplayRecorder@player@app@@CAPEAVGOComponent@game@hh@@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01406386d0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCPlayerReplayPlayer@player@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCPlayerReplayPlayer@player@app@@UEBAPEAXXZ:
+    mov rax, 01406387c0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCPlayerReplayRecorder@player@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCPlayerReplayRecorder@player@app@@UEBAPEAXXZ:
+    mov rax, 01406387d0h
+    jmp rax
+
 PUBLIC ?GetClass@GOCPlayerReplayPlayer@player@app@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCPlayerReplayPlayer@player@app@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 0140639470h
     jmp rax
 
-PUBLIC ??_DGOCPlayerReplayRecorder@player@app@@QEAAXXZ
-??_DGOCPlayerReplayRecorder@player@app@@QEAAXXZ:
-    mov rax, 01406394b0h
+PUBLIC ?GetClass@GOCPlayerReplayRecorder@player@app@@SAPEBVGOComponentClass@game@hh@@XZ
+?GetClass@GOCPlayerReplayRecorder@player@app@@SAPEBVGOComponentClass@game@hh@@XZ:
+    mov rax, 0140639480h
+    jmp rax
+
+PUBLIC ?Update@GOCPlayerReplayPlayer@player@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z
+?Update@GOCPlayerReplayPlayer@player@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z:
+    mov rax, 0140639530h
+    jmp rax
+
+PUBLIC ?Update@GOCPlayerReplayRecorder@player@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z
+?Update@GOCPlayerReplayRecorder@player@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z:
+    mov rax, 0140639570h
     jmp rax
 
 PUBLIC ??_GPlayerGhost@player@app@@QEAAXXZ
@@ -39827,7 +39872,17 @@ PUBLIC ??_GPlayerReplayService@player@app@@QEAAXXZ
 
 PUBLIC ??_DPlayerReplayService@player@app@@QEAAXXZ
 ??_DPlayerReplayService@player@app@@QEAAXXZ:
-    mov rax, 014063ad70h
+    mov rax, 014063a520h
+    jmp rax
+
+PUBLIC ?PreStepCallback@PlayerReplayService@player@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z
+?PreStepCallback@PlayerReplayService@player@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z:
+    mov rax, 014063a670h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@PlayerReplayService@player@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@PlayerReplayService@player@app@@UEBAPEAXXZ:
+    mov rax, 014063ab60h
     jmp rax
 
 PUBLIC ?Create@PlayerReplayService@player@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -39837,6 +39892,11 @@ PUBLIC ?Create@PlayerReplayService@player@app@@CAPEAV123@PEAVIAllocator@fnd@csl@
 
 PUBLIC ?Create@PlayerReplayService@player@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@PlayerReplayService@player@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014063b630h
+    jmp rax
+
+PUBLIC ?Create@PlayerReplayService@player@app@@CAPEAVGameService@game@hh@@PEAVIAllocator@fnd@csl@@@Z
+?Create@PlayerReplayService@player@app@@CAPEAVGameService@game@hh@@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014063b630h
     jmp rax
 
@@ -54325,11 +54385,6 @@ PUBLIC ??_DGatlingShotBullet@app@@QEAAXXZ
     mov rax, 0140ab1400h
     jmp rax
 
-PUBLIC ??_DGOCPlayerReplayPlayer@player@app@@QEAAXXZ
-??_DGOCPlayerReplayPlayer@player@app@@QEAAXXZ:
-    mov rax, 0140ab1400h
-    jmp rax
-
 PUBLIC ?GetClass@GOCEffect@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCEffect@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 0140ab45d0h
@@ -55350,6 +55405,11 @@ PUBLIC ?UnkFunc21@FileSystem@fnd@hh@@UEAA_NPEBD0@Z
     mov rax, 0140bebcd0h
     jmp rax
 
+PUBLIC ??0WorldPosition@fnd@hh@@QEAA@AEBVVector3@math@csl@@AEBVQuaternion@45@@Z
+??0WorldPosition@fnd@hh@@QEAA@AEBVVector3@math@csl@@AEBVQuaternion@45@@Z:
+    mov rax, 0140bec0e0h
+    jmp rax
+
 PUBLIC ??0WorldPosition@fnd@hh@@QEAA@XZ
 ??0WorldPosition@fnd@hh@@QEAA@XZ:
     mov rax, 0140bec100h
@@ -56185,6 +56245,11 @@ PUBLIC ?Free@ThreadSafeTlsfHeapAllocator@fnd@hh@@UEAAXPEAX@Z
     mov rax, 0140c12550h
     jmp rax
 
+PUBLIC ?Free@IAllocator@memory@ucsl@@UEAAXPEAX@Z
+?Free@IAllocator@memory@ucsl@@UEAAXPEAX@Z:
+    mov rax, 0140c12550h
+    jmp rax
+
 PUBLIC ?IntersectionRay3Aabb@ut@hh@@YA_NAEBVVector3@math@csl@@0MAEBVAabb@geom@5@PEAM2@Z
 ?IntersectionRay3Aabb@ut@hh@@YA_NAEBVVector3@math@csl@@0MAEBVAabb@geom@5@PEAM2@Z:
     mov rax, 0140c151d0h
@@ -56233,6 +56298,21 @@ PUBLIC ?Dispatch@MessageManager@fnd@hh@@QEAAXXZ
 PUBLIC ?LoadPackfile@ResourceLoader@fnd@hh@@QEAAXPEBDAEBULocale@123@@Z
 ?LoadPackfile@ResourceLoader@fnd@hh@@QEAAXPEBDAEBULocale@123@@Z:
     mov rax, 0140c18d70h
+    jmp rax
+
+PUBLIC ??0OptimizedFreeListHeapAllocatorBase@fnd@hh@@QEAA@PEAVOptimizedFreeListHeapBase@1csl@@@Z
+??0OptimizedFreeListHeapAllocatorBase@fnd@hh@@QEAA@PEAVOptimizedFreeListHeapBase@1csl@@@Z:
+    mov rax, 0140c1f3c0h
+    jmp rax
+
+PUBLIC ??_DOptimizedFreeListHeapAllocatorBase@fnd@hh@@QEAAXXZ
+??_DOptimizedFreeListHeapAllocatorBase@fnd@hh@@QEAAXXZ:
+    mov rax, 0140c1f430h
+    jmp rax
+
+PUBLIC ?Alloc@IAllocator@memory@ucsl@@UEAAPEAX_K0@Z
+?Alloc@IAllocator@memory@ucsl@@UEAAPEAX_K0@Z:
+    mov rax, 0140c1f490h
     jmp rax
 
 PUBLIC ?GetTypeInfos@ResourceTypeRegistry@fnd@hh@@QEAAXAEAV?$MoveArray@PEBUResourceTypeInfo@fnd@hh@@@ut@csl@@@Z
@@ -79490,24 +79570,9 @@ PUBLIC ?gameObjectClass@ObjHomingEffectElement@player@app@@0VGameObjectClass@gam
     mov rax, 0142920720h
     jmp rax
 
-PUBLIC ?componentClass@GOCPlayerBlackboard@player@app@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCPlayerBlackboard@player@app@@0VGOComponentClass@game@hh@@B:
-    mov rax, 01429207a0h
-    jmp rax
-
-PUBLIC ?componentClass@GOCPlayerCollider@player@app@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCPlayerCollider@player@app@@0VGOComponentClass@game@hh@@B:
-    mov rax, 01429207f0h
-    jmp rax
-
 PUBLIC ?componentClass@GOCPlayerEyesight@player@app@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCPlayerEyesight@player@app@@0VGOComponentClass@game@hh@@B:
     mov rax, 01429208e0h
-    jmp rax
-
-PUBLIC ?componentClass@GOCPlayerHsm@player@app@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCPlayerHsm@player@app@@0VGOComponentClass@game@hh@@B:
-    mov rax, 0142920960h
     jmp rax
 
 PUBLIC ?componentClass@GOCPlayerInformationUpdater@player@app@@0VGOComponentClass@game@hh@@B
@@ -79523,6 +79588,11 @@ PUBLIC ?componentClass@GOCPlayerPath@player@app@@0VGOComponentClass@game@hh@@B
 PUBLIC ?componentClass@GOCPlayerPosture@player@app@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCPlayerPosture@player@app@@0VGOComponentClass@game@hh@@B:
     mov rax, 0142920bb0h
+    jmp rax
+
+PUBLIC ?componentClass@GOCPlayerReplayRecorder@player@app@@0VGOComponentClass@game@hh@@B
+?componentClass@GOCPlayerReplayRecorder@player@app@@0VGOComponentClass@game@hh@@B:
+    mov rax, 0142920c20h
     jmp rax
 
 PUBLIC ?componentClass@GOCPlayerReplayPlayer@player@app@@0VGOComponentClass@game@hh@@B
@@ -80110,16 +80180,6 @@ PUBLIC ?gameObjectClass@SurfRideViewerObject@gameobjects@heur@@0VGameObjectClass
     mov rax, 014292ab10h
     jmp rax
 
-PUBLIC ?typeInfo@ResAtomConfig@snd@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResAtomConfig@snd@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 014292af20h
-    jmp rax
-
-PUBLIC ?typeInfo@ResAtomCueSheet@snd@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResAtomCueSheet@snd@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 014292af48h
-    jmp rax
-
 PUBLIC ?componentClass@GOCSound@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCSound@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 014292af80h
@@ -80160,49 +80220,9 @@ PUBLIC ?componentClass@GOCMeshCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
     mov rax, 014292b420h
     jmp rax
 
-PUBLIC ?componentClass@GOCSphereCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCSphereCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
-    mov rax, 014292b460h
-    jmp rax
-
-PUBLIC ?componentClass@GOCSphereCollider@physics@hh@@0VGOComponentClass@game@3@B
-?componentClass@GOCSphereCollider@physics@hh@@0VGOComponentClass@game@3@B:
-    mov rax, 014292b460h
-    jmp rax
-
 PUBLIC ?componentClass@GOCHeightFieldCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCHeightFieldCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 014292b4b0h
-    jmp rax
-
-PUBLIC ?componentClass@GOCBoxCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCBoxCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
-    mov rax, 014292b4f0h
-    jmp rax
-
-PUBLIC ?componentClass@GOCBoxCollider@physics@hh@@0VGOComponentClass@game@3@B
-?componentClass@GOCBoxCollider@physics@hh@@0VGOComponentClass@game@3@B:
-    mov rax, 014292b4f0h
-    jmp rax
-
-PUBLIC ?componentClass@GOCCapsuleCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCCapsuleCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
-    mov rax, 014292b530h
-    jmp rax
-
-PUBLIC ?componentClass@GOCCapsuleCollider@physics@hh@@0VGOComponentClass@game@3@B
-?componentClass@GOCCapsuleCollider@physics@hh@@0VGOComponentClass@game@3@B:
-    mov rax, 014292b530h
-    jmp rax
-
-PUBLIC ?componentClass@GOCCylinderCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCCylinderCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
-    mov rax, 014292b570h
-    jmp rax
-
-PUBLIC ?componentClass@GOCCylinderCollider@physics@hh@@0VGOComponentClass@game@3@B
-?componentClass@GOCCylinderCollider@physics@hh@@0VGOComponentClass@game@3@B:
-    mov rax, 014292b570h
     jmp rax
 
 PUBLIC ?componentClass@GOCDeformableMeshCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
@@ -81320,11 +81340,6 @@ PUBLIC ?typeInfo@WeatherFxParameter@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
     mov rax, 0142933020h
     jmp rax
 
-PUBLIC ?typeInfo@ResMirageLight@gfx@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResMirageLight@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 0142933090h
-    jmp rax
-
 PUBLIC ?typeInfo@ResAnimCameraContainer@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResAnimCameraContainer@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 0142933148h
@@ -81355,11 +81370,6 @@ PUBLIC ?typeInfo@ResAnimVis@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
     mov rax, 0142933210h
     jmp rax
 
-PUBLIC ?typeInfo@ResMaterial@gfx@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResMaterial@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 0142933238h
-    jmp rax
-
 PUBLIC ?typeInfo@ResMirageLightField@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResMirageLightField@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 0142933260h
@@ -81368,11 +81378,6 @@ PUBLIC ?typeInfo@ResMirageLightField@resources@heur@@0UResourceTypeInfo@fnd@hh@@
 PUBLIC ?typeInfo@ResMirageTerrainInstanceInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResMirageTerrainInstanceInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 0142933288h
-    jmp rax
-
-PUBLIC ?typeInfo@ResModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 01429332b0h
     jmp rax
 
 PUBLIC ?typeInfo@ResModelInstanceInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
@@ -81393,11 +81398,6 @@ PUBLIC ?typeInfo@ResPointcloud@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 PUBLIC ?typeInfo@ResShaderList@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResShaderList@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 01429333a0h
-    jmp rax
-
-PUBLIC ?typeInfo@ResTerrainModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResTerrainModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 01429333f0h
     jmp rax
 
 PUBLIC ?typeInfo@ResVertexLinkInfo@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
@@ -81445,16 +81445,6 @@ PUBLIC ?componentClass@GOCPointLight@gocs@heur@@0VGOComponentClass@game@hh@@B
     mov rax, 0142933630h
     jmp rax
 
-PUBLIC ?componentClass@GOCVisualDebugDraw@gocs@heur@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCVisualDebugDraw@gocs@heur@@0VGOComponentClass@game@hh@@B:
-    mov rax, 0142933670h
-    jmp rax
-
-PUBLIC ?componentClass@GOCVisualDebugDraw@gfx@hh@@0VGOComponentClass@game@3@B
-?componentClass@GOCVisualDebugDraw@gfx@hh@@0VGOComponentClass@game@3@B:
-    mov rax, 0142933670h
-    jmp rax
-
 PUBLIC ?componentClass@GOCOcclusionCapsule@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCOcclusionCapsule@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 01429336c0h
@@ -81495,11 +81485,6 @@ PUBLIC ?typeInfo@GOCActivatorSpawner@game@hh@@2VRflTypeInfo@fnd@3@B
     mov rax, 0142935d80h
     jmp rax
 
-PUBLIC ?typeInfo@ResObjectWorld@game@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResObjectWorld@game@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 0142935ed0h
-    jmp rax
-
 PUBLIC ?typeInfo@ResMasterLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResMasterLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 0142935ef8h
@@ -81508,16 +81493,6 @@ PUBLIC ?typeInfo@ResMasterLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B
 PUBLIC ?typeInfo@ResLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResLevel@level@app@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 0142935f20h
-    jmp rax
-
-PUBLIC ?componentClass@GOCTransform@gocs@heur@@0VGOComponentClass@game@hh@@B
-?componentClass@GOCTransform@gocs@heur@@0VGOComponentClass@game@hh@@B:
-    mov rax, 0142935f60h
-    jmp rax
-
-PUBLIC ?componentClass@GOCTransform@game@hh@@0VGOComponentClass@23@B
-?componentClass@GOCTransform@game@hh@@0VGOComponentClass@23@B:
-    mov rax, 0142935f60h
     jmp rax
 
 PUBLIC ?componentClass@GOCInput@gocs@heur@@0VGOComponentClass@game@hh@@B
@@ -81645,11 +81620,6 @@ PUBLIC ?typeInfo@DecoTechParams@rfl@heur@@2VRflTypeInfo@fnd@hh@@B
     mov rax, 0142937460h
     jmp rax
 
-PUBLIC ?typeInfo@ResEffect@eff@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResEffect@eff@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 01429376a8h
-    jmp rax
-
 PUBLIC ?componentClass@GOCEffect@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCEffect@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 0142937720h
@@ -81725,11 +81695,6 @@ PUBLIC ?typeInfo@ResLuaData@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
     mov rax, 0142939aa8h
     jmp rax
 
-PUBLIC ?typeInfo@ResReflection@fnd@hh@@0UResourceTypeInfo@23@B
-?typeInfo@ResReflection@fnd@hh@@0UResourceTypeInfo@23@B:
-    mov rax, 0142939ad0h
-    jmp rax
-
 PUBLIC ?typeInfo@ResNameExtra@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResNameExtra@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 0142939af8h
@@ -81755,34 +81720,9 @@ PUBLIC ?typeInfo@ResBitmapFont@font@hh@@0UResourceTypeInfo@fnd@3@B
     mov rax, 0142939b98h
     jmp rax
 
-PUBLIC ?typeInfo@ResScalableFontSet@font@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResScalableFontSet@font@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 0142939bc0h
-    jmp rax
-
-PUBLIC ?typeInfo@ResFragmentShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResFragmentShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 0142939c10h
-    jmp rax
-
-PUBLIC ?typeInfo@ResTexture@gfnd@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResTexture@gfnd@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 0142939c38h
-    jmp rax
-
 PUBLIC ?typeInfo@ResStreamingTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResStreamingTexture@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
     mov rax, 0142939c60h
-    jmp rax
-
-PUBLIC ?typeInfo@ResVertexShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResVertexShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 0142939c88h
-    jmp rax
-
-PUBLIC ?typeInfo@ResComputeShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B
-?typeInfo@ResComputeShader@gfnd@hh@@0UResourceTypeInfo@fnd@3@B:
-    mov rax, 0142939cb0h
     jmp rax
 
 PUBLIC ?gameServiceClass@ContentManagerWin32@content@app@@0VGameServiceClass@game@hh@@B
@@ -81820,14 +81760,14 @@ PUBLIC ?instance@ObjInfoRegistry@game@hh@@2PEAV123@EA
     mov rax, 01429a46c0h
     jmp rax
 
+PUBLIC ?instance@?$Singleton@VDeviceManagerWin32@hid@hh@@@fnd@csl@@2PEAVDeviceManagerWin32@hid@hh@@EA
+?instance@?$Singleton@VDeviceManagerWin32@hid@hh@@@fnd@csl@@2PEAVDeviceManagerWin32@hid@hh@@EA:
+    mov rax, 01429a46c8h
+    jmp rax
+
 PUBLIC ?instance@GameLocale@game@app@@0PEAV123@EA
 ?instance@GameLocale@game@app@@0PEAV123@EA:
     mov rax, 01429a46e0h
-    jmp rax
-
-PUBLIC ?gameServiceClass@CameraService@camera@app@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@CameraService@camera@app@@0VGameServiceClass@game@hh@@B:
-    mov rax, 01429a5698h
     jmp rax
 
 PUBLIC ?instance@?$HandleManager@VMessenger@fnd@hh@@@fnd@hh@@2PEAV123@EA
@@ -88060,11 +88000,6 @@ PUBLIC ?gameServiceClass@ObjectWorldService@game@app@@0VGameServiceClass@2hh@@B
     mov rax, 01429bd370h
     jmp rax
 
-PUBLIC ?gameServiceClass@FxParamManager@gfx@app@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@FxParamManager@gfx@app@@0VGameServiceClass@game@hh@@B:
-    mov rax, 01429bd420h
-    jmp rax
-
 PUBLIC ?gameServiceClass@GeometryInstanceManager@gfx@app@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@GeometryInstanceManager@gfx@app@@0VGameServiceClass@game@hh@@B:
     mov rax, 01429bd4a8h
@@ -90648,11 +90583,6 @@ PUBLIC ?gameServiceClass@WhiteSpaceNavigation@app@@0VGameServiceClass@game@hh@@B
 PUBLIC ?gameServiceClass@PlayerBlackboardService@player@app@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@PlayerBlackboardService@player@app@@0VGameServiceClass@game@hh@@B:
     mov rax, 01429c5f90h
-    jmp rax
-
-PUBLIC ?gameServiceClass@PlayerReplayService@player@app@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@PlayerReplayService@player@app@@0VGameServiceClass@game@hh@@B:
-    mov rax, 01429c6108h
     jmp rax
 
 PUBLIC ?gameServiceClass@ShadowShapeParamManager@player@app@@0VGameServiceClass@game@hh@@B
@@ -103478,6 +103408,11 @@ PUBLIC ??_DAsmViewerObject@gameobjects@heur@@QEAAXXZ
 PUBLIC ?AddComponent@GameObject@game@hh@@IEAAXPEAVGOComponent@23@@Z
 ?AddComponent@GameObject@game@hh@@IEAAXPEAVGOComponent@23@@Z:
     mov rax, 014f211d50h
+    jmp rax
+
+PUBLIC ?AddGameObject@GameManager@game@hh@@QEAAXPEAVGameObject@23@PEBD_NPEAUWorldPosition@fnd@3@0@Z
+?AddGameObject@GameManager@game@hh@@QEAAXPEAVGameObject@23@PEBD_NPEAUWorldPosition@fnd@3@0@Z:
+    mov rax, 014f2295c0h
     jmp rax
 
 PUBLIC ?Kill@GameObject@game@hh@@QEAAXXZ

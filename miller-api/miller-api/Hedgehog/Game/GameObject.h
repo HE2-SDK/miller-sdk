@@ -207,6 +207,10 @@ namespace hh::game
 		inline void UNSAFE_SetUpdateFlags(fnd::UpdatingPhase phase) {
 			SetUpdateFlags(phase);
 		}
+		template<typename T>
+		inline T* UNSAFE_CreateComponent() {
+			return CreateComponent<T>();
+		}
 		inline void UNSAFE_AddComponent(GOComponent* component) {
 			AddComponent(component);
 		}
