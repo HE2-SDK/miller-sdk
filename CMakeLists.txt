@@ -11,7 +11,7 @@ set(CMAKE_ASM_MASM_CREATE_STATIC_LIBRARY "<CMAKE_AR> /OUT:<TARGET> <LINK_FLAGS> 
 set(UCSL_EIGEN_MATH ON)
 
 include(FetchContent)
-FetchContent_Declare(universal-cslib GIT_REPOSITORY https://github.com/angryzor/universal-cslib.git GIT_TAG v1.0.27 FIND_PACKAGE_ARGS)
+FetchContent_Declare(universal-cslib GIT_REPOSITORY https://github.com/angryzor/universal-cslib.git GIT_TAG v1.0.31 FIND_PACKAGE_ARGS)
 FetchContent_MakeAvailable(universal-cslib)
 
 add_library(miller-sdk STATIC)
