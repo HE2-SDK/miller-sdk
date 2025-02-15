@@ -49280,11 +49280,6 @@ PUBLIC ??_Dbad_alloc@std@@QEAAXXZ
     mov rax, 0140823110h
     jmp rax
 
-PUBLIC ?what@exception@std@@UEBAPEBDXZ
-?what@exception@std@@UEBAPEBDXZ:
-    mov rax, 0140829f80h
-    jmp rax
-
 PUBLIC ?GetUpdateTiming@DvNodeBase@dv@hh@@UEAAHXZ
 ?GetUpdateTiming@DvNodeBase@dv@hh@@UEAAHXZ:
     mov rax, 014082c5e0h
@@ -54273,16 +54268,6 @@ PUBLIC ??_DDvSceneControl@dv@hh@@QEAAXXZ
 PUBLIC ??_DObjectUpdateListener@game@hh@@QEAAXXZ
 ??_DObjectUpdateListener@game@hh@@QEAAXXZ:
     mov rax, 0140a91238h
-    jmp rax
-
-PUBLIC ?PreStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z
-?PreStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z:
-    mov rax, 0140a91680h
-    jmp rax
-
-PUBLIC ?PostStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z
-?PostStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z:
-    mov rax, 0140a916f0h
     jmp rax
 
 PUBLIC ?PreObjectUpdateCallback@ObjectUpdateListener@game@hh@@UEAAXPEAVGameManager@23@W4UpdatingPhase@fnd@3@AEBUSUpdateInfo@63@@Z
