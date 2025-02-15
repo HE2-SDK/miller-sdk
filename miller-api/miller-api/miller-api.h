@@ -643,9 +643,20 @@ namespace millersdk::ucsl {
 #include "Hedgehog/UI/UIListener.h"
 #include "Hedgehog/UI/UIManager.h"
 
-#include "Hedgehog/Dv/DiEventManager.h"
-#include "Hedgehog/Dv/DiEventPreviewManager.h"
+#include "Hedgehog/Dv/DvResourceBase.h"
+#include "Hedgehog/Dv/DvResource.h"
+
+#include "Hedgehog/Dv/DvNodeBase.h"
+#include "Hedgehog/Dv/DvPage.h"
+#include "Hedgehog/Dv/DvParamController.h"
+#include "Hedgehog/Dv/DvDirectionalLightParamController.h"
+#include "Hedgehog/Dv/DvParamUpdater.h"
+#include "Hedgehog/Dv/DvSceneNodeTree.h"
+#include "Hedgehog/Dv/DvSceneTimeline.h"
+#include "Hedgehog/Dv/ResDvScene.h"
+#include "Hedgehog/Dv/DvSceneControlListener.h"
 #include "Hedgehog/Dv/DvSceneControl.h"
+#include "Hedgehog/Dv/DiEventManager.h"
 
 #include "ApplicationCommon/Reflection/GOCRflParameter.h"
 
