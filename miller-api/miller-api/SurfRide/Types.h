@@ -57,9 +57,31 @@ namespace SurfRide {
 	UCSL_NEWTYPE_STRUCT_SIMPLE(SRS_CAMERA, ucsl::resources::swif::v6::SRS_CAMERA);
 	UCSL_NEWTYPE_STRUCT_SIMPLE(SRS_SCENE, ucsl::resources::swif::v6::SRS_SCENE);
 	UCSL_NEWTYPE_STRUCT_SIMPLE(SRS_PROJECT, ucsl::resources::swif::v6::SRS_PROJECT);
-	UCSL_NEWTYPE_STRUCT_SIMPLE(SRS_CHUNK_HEADER, ucsl::resources::swif::v6::SRS_CHUNK_HEADER);
-	UCSL_NEWTYPE_STRUCT_SIMPLE(SRS_BINARY_FILE_HEADER_CHUNK_HEADER, ucsl::resources::swif::v6::SRS_BINARY_FILE_HEADER_CHUNK_HEADER);
-	UCSL_NEWTYPE_STRUCT_SIMPLE(SRS_TEXTURELIST_CHUNK_HEADER, ucsl::resources::swif::v6::SRS_TEXTURELIST_CHUNK_HEADER);
-	UCSL_NEWTYPE_STRUCT_SIMPLE(SRS_PROJECT_CHUNK_HEADER, ucsl::resources::swif::v6::SRS_PROJECT_CHUNK_HEADER);
-	UCSL_NEWTYPE_STRUCT_SIMPLE(SRS_ADDRESS_RESOLUTION_CHUNK_HEADER, ucsl::resources::swif::v6::SRS_ADDRESS_RESOLUTION_CHUNK_HEADER);
+
+    struct SRS_CHUNK_HEADER {
+        unsigned int magic;
+        unsigned int chunkSize;
+    };
+
+    struct SRS_BINARY_FILE_HEADER_CHUNK_HEADER {
+        unsigned int chunkCount;
+        unsigned int chunksStart;
+        unsigned int chunksSize;
+        unsigned int addressResolutionHeaderOffset;
+        unsigned int revision;
+    };
+
+    struct SRS_TEXTURELIST_CHUNK_HEADER {
+        unsigned int startOffset;
+        unsigned int textureListCount;
+    };
+
+    struct SRS_PROJECT_CHUNK_HEADER {
+        unsigned int startOffset;
+    };
+
+    struct SRS_ADDRESS_RESOLUTION_CHUNK_HEADER {
+        unsigned int addressToResolveCount;
+        unsigned int isResolved; // 0 if not, 1 if yes
+    };
 }

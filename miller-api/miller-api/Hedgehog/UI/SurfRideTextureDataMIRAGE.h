@@ -4,7 +4,7 @@ namespace hh::ui::surfride {
     class SurfRideTextureDataMIRAGE : public SurfRide::TextureData {
     public:
         csl::ut::MoveArray<hh::needle::intrusive_ptr<hh::needle::Texture>> textures;
-        csl::ut::MoveArray<unsigned int> unk2;
+        csl::ut::MoveArray<unsigned int> textureFlags;
         SurfRideTextureDataMIRAGE* original;
         csl::ut::MoveArray<uint8_t> unk5;
 

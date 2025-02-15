@@ -15,6 +15,7 @@ namespace hh::fnd {
         const char *pScopedName;
         size_t objectSize;
         bool isInBinaContainer;
+        bool unk1;
         ManagedResource* (*instantiator)(csl::fnd::IAllocator* pAllocator);
     };
 
@@ -35,7 +36,7 @@ namespace hh::fnd {
         const ResourceTypeInfo* resourceTypeInfo;
         void* unpackedBinaryData;
         size_t size;
-        File* file;
+        FileResource* file;
         csl::fnd::IAllocator* resourceAllocator;
         uint16_t unk7;
         uint8_t unk8;
@@ -60,7 +61,7 @@ namespace hh::fnd {
             return resourceAllocator;
         }
 
-        static ManagedResource* Create(csl::fnd::IAllocator* allocator, File* file, const char* name, ResourceTypeInfo* resourceTypeInfo);
+        static ManagedResource* Create(csl::fnd::IAllocator* allocator, FileResource* file, const char* name, ResourceTypeInfo* resourceTypeInfo);
         static ManagedResource* Create(csl::fnd::IAllocator* allocator, csl::fnd::IAllocator* resourceAllocator, const char* unkStrParam, const char* name, void* data, size_t size, ResourceTypeInfo* resourceTypeInfo);
 
 		virtual void ReferencedObject_UnkFunc1(const ReferencedObject::Unk1& unkParam) override;
@@ -70,5 +71,7 @@ namespace hh::fnd {
         virtual void Resolve(ResourceResolver& resolver) {}
         virtual uint64_t UnkFunc5() {}
         virtual void Reload(void* data, size_t size);
+
+        void SetFile(FileResource* file);
     };
 }

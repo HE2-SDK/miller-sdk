@@ -15,7 +15,7 @@ namespace SurfRide {
     class SliceCast : public Cast {
     public:
         SRS_SLICECAST* sliceCastData;
-        uint32_t type; // (data.flags >> 19) & 0xF
+        EPivotType pivotType;
         uint64_t qwordE0;
         Vector2 size;
         Color vertexColorTopLeft;
@@ -25,7 +25,7 @@ namespace SurfRide {
         bool bool100;
         csl::ut::MoveArray<Slice> slices;
 
-        SliceCast(SRS_CASTNODE* castData, Cast* parentCast, Layer* layer);
+        SliceCast(csl::fnd::IAllocator* allocator, SRS_CASTNODE* castData, Cast* parentCast, Layer* layer);
 
         static Vector2 CalcPivot(float width, float height, const SRS_SLICECAST& sliceCastData);
 

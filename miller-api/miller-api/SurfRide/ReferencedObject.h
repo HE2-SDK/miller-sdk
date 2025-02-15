@@ -2,10 +2,12 @@
 
 namespace SurfRide {
     class ReferencedObject : public Base {
-		uint16_t RefCount{};
+		bool isRefCounted{};
+		volatile long refCount{};
     public:
         inline void AddRef() {
-            RefCount++;
+			if (isRefCounted)
+				InterlockedIncrement(&refCount);
         }
         void Free();
     };

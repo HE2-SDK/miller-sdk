@@ -85,6 +85,7 @@ namespace millersdk::ucsl {
 #include "cslib/csl/ut/Pair.h"
 #include "cslib/csl/ut/String.h"
 #include "cslib/csl/ut/VariableString.h"
+#include "cslib/csl/ut/Byteswap.h"
 
 #include "cslib/csl/fnd/Singleton.h"
 #include "cslib/csl/fnd/Mutex.h"
@@ -159,7 +160,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Filesystem/InplaceTempUri.h"
 #include "Hedgehog/Filesystem/FileInfo.h"
 #include "Hedgehog/Filesystem/FileBind.h"
-#include "Hedgehog/Filesystem/File.h"
+#include "Hedgehog/Filesystem/FileResource.h"
 #include "Hedgehog/Filesystem/FileCache.h"
 #include "Hedgehog/Filesystem/FileSystem.h"
 
@@ -175,6 +176,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Resource/UnpackedResourceContainer.h"
 #include "Hedgehog/Resource/DynamicResourceContainer.h"
 #include "Hedgehog/Resource/TagResourceContainer.h"
+#include "Hedgehog/Resource/ResFileCommon.h"
 #include "Hedgehog/Resource/Packfile.h"
 #include "Hedgehog/Resource/ResourceLoader.h"
 #include "Hedgehog/Resource/ResourceManager.h"
@@ -457,6 +459,10 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Game/ObjectWorldChunk.def.h"
 #include "Hedgehog/Game/ObjectWorldExtension.h"
 #include "Hedgehog/Game/ObjectWorld.h"
+#include "Hedgehog/Game/ResLevel.h"
+#include "Hedgehog/Game/Level.h"
+#include "Hedgehog/Game/MasterLevel.h"
+#include "Hedgehog/Game/LevelManager.h"
 
 #include "Hedgehog/Game/GOComponents/GOCInput.h"
 #include "Hedgehog/Game/GOComponents/GOCTransform.h"
@@ -731,9 +737,7 @@ namespace millersdk::ucsl {
 #include "Application/Level/StageData.h"
 #include "Application/Level/StageInfo.h"
 #include "Application/Level/LevelInfo.h"
-// #include "Application/Level/ResLevel.h"
-// #include "Application/Level/ResMasterLevel.h"
-// #include "Application/Level/LevelManager.h"
+#include "Application/Level/ResMasterLevel.h"
 
 // #include "Application/Event/EventPlayer.h"
 
@@ -789,6 +793,7 @@ namespace millersdk::ucsl {
 #include "Application/Graphics/FxParamManager.h"
 // #include "Application/Graphics/FxParamTimeProgressExtension.h"
 // #include "Application/Graphics/FxColManager.h"
+#include "Application/ResSvCol2.h"
 
 // #include "Application/Terrain/TerrainManager.h"
 

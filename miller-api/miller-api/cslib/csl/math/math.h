@@ -75,8 +75,8 @@ namespace csl::geom {
 		float DistanceSq(const math::Vector3& point, math::Vector3* distanceByAxis) const;
 
 		inline void AddPoint(const csl::math::Vector3& point) {
-			// min = min.cwiseMin(point);
-			// max = max.cwiseMax(point);
+			min = min.cwiseMin(point);
+			max = max.cwiseMax(point);
 		}
 	};
 

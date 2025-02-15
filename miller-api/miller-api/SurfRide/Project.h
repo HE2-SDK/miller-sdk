@@ -15,7 +15,7 @@ namespace SurfRide
         BinaryData* binaryData;
         void* binaryDataData;
 
-        Project();
+        Project(csl::fnd::IAllocator* allocator);
         static Project* Create(const BinaryData& binaryData, bool cloneBinaryData);
         SRS_CAMERA* GetCameraData();
         Scene* GetScene(const char* name);

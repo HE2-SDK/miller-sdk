@@ -28,12 +28,12 @@ namespace hh::ut {
         virtual bool DoUpdateAsync(fnd::UpdatingPhase phase, float deltaTime) override;
         virtual bool DoProcessMessage(const hh::fnd::Message& message) override;
 
-        virtual bool Init(T& context) = 0;
-        virtual void Enter(T& context, int previousState) = 0;
-        virtual void Leave(T& context, int nextState) = 0;
-        virtual bool ProcessMessage(T& context, const hh::fnd::Message& message) = 0;
-        virtual bool Step(T& context, float deltaTime) = 0;
-        virtual bool Update(T& context, fnd::UpdatingPhase phase, float deltaTime) = 0;
-        virtual bool UpdateAsync(T& context, fnd::UpdatingPhase phase, float deltaTime) = 0;
+        virtual bool Init(T& context) { return false; }
+        virtual void Enter(T& context, int previousState) {}
+        virtual void Leave(T& context, int nextState) {}
+        virtual bool ProcessMessage(T& context, const hh::fnd::Message& message) { return false; }
+        virtual bool Step(T& context, float deltaTime) { return false; }
+        virtual bool Update(T& context, fnd::UpdatingPhase phase, float deltaTime) { return false; }
+        virtual bool UpdateAsync(T& context, fnd::UpdatingPhase phase, float deltaTime) { return false; }
     };
 }

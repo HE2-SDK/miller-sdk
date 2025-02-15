@@ -20,7 +20,7 @@ namespace SurfRide {
         bool byte90; // flags & 0x10
         bool byte91;
 
-        Reflect(SRS_REFLECT* binaryData, Cast* cast);
+        Reflect(csl::fnd::IAllocator* allocator, SRS_REFLECT* binaryData, Cast* cast);
         bool Hides() const;
         bool IsIntervalZero() const;
         float GetGainFrame(float deltaTime) const;
@@ -33,7 +33,7 @@ namespace SurfRide {
     public:
         SRS_CELL3D cells[9];
 
-        Reflect3D(SRS_REFLECT3D* binaryData, Cast* cast);
+        Reflect3D(csl::fnd::IAllocator* allocator, SRS_REFLECT3D* binaryData, Cast* cast);
 
         virtual int64_t UnkFunc1();
         virtual int64_t UnkFunc2();

@@ -148,7 +148,7 @@ namespace hh::anim {
         bool ChangeStateWithoutTransition(const char* stateName);
         bool ChangeToNull(int layer);
         bool Transit(const char* eventName, int layer);
-        bool DoTransit(const TransitionData& transitionData, int layer);
+        bool DoTransit(const TransitionData& transitionData, int layer, float unkParam);
         int GetActiveInternalState(int layer) const;
         AnimationState::Impl* GetActiveState(int layer) const;
         AnimationState::Impl* GetCurrentState(int layer) const;
@@ -167,6 +167,7 @@ namespace hh::anim {
         void SetPlaybackSpeedForAllLayers(float speed);
         void SetPlaybackSpeed(int layer, float speed);
         void SetTime(float time, int layer);
+        void SetLocalTime(float time, int layer);
 
         BlendNodeBase* BuildLayerBlendTree(const BlendNodeData& blendNodeData);
         void UpdateTrigger(AnimationState& animationState, int layerId, float unkParam1, bool unkParam2, bool unkParam3);

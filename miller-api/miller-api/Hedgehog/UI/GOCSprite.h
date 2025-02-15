@@ -43,10 +43,10 @@ namespace hh::ui {
         uint64_t field_198;
         uint64_t field_1A0;
         uint64_t field_1A8;
-        csl::ut::MoveArray<SurfRideCastHandle> casts;
-        csl::ut::PointerMap<SurfRide::Cast*, SurfRideCastHandle> castMap;
-        csl::ut::MoveArray<SurfRideLayerHandle> layers;
-        csl::ut::PointerMap<SurfRide::Layer*, SurfRideLayerHandle> layerMap;
+        csl::ut::MoveArray<SurfRideCastHandle*> castHandles;
+        csl::ut::PointerMap<SurfRide::Cast*, SurfRideCastHandle> castHandleMap;
+        csl::ut::MoveArray<SurfRideLayerHandle*> layerHandles;
+        csl::ut::PointerMap<SurfRide::Layer*, SurfRideLayerHandle> layerHandleMap;
         
         LayerController* GetLayerController(SurfRide::Layer* layer, uint16_t id);
         fnd::Handle<SurfRideCastHandle> GetCastHandle(SurfRide::Cast* cast);

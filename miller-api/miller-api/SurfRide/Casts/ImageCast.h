@@ -6,7 +6,7 @@ namespace SurfRide {
     public:
 
         SRS_IMAGECAST* imageCastData;
-        uint32_t imageCastFlags;
+        EPivotType pivotType;
         Text* text;
         Vector2 size;
         Color vertexColorTopLeft;
@@ -19,7 +19,7 @@ namespace SurfRide {
         bool cropRectDirty[2];
         SRS_CELL3D* cell;
 
-        ImageCast(SRS_CASTNODE* castData, Cast* parentCast, Layer* layer);
+        ImageCast(csl::fnd::IAllocator* allocator, SRS_CASTNODE* castData, Cast* parentCast, Layer* layer);
         
         virtual void* GetRuntimeTypeInfo() const override;
         virtual bool UnkFunc2() override;

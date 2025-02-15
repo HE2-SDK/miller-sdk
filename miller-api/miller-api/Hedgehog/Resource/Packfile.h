@@ -1,6 +1,50 @@
 #pragma once
 
 namespace hh::fnd {
+    namespace res {
+        class PacV4Header {
+        public:
+            struct Header {
+                enum class Type : unsigned char {
+                    ROOT,
+                    SPLIT,
+                    HAS_SPLITS,
+                };
+
+                enum class RuntimeFlag : unsigned char {
+                    LOADED,
+                    UNK1,
+                    BYTESWAPPED,
+                    RESOLVED,
+                };
+
+                unsigned int magic{};
+                unsigned char version[3]{};
+                char endianness{};
+                unsigned int id{};
+                unsigned int fileSize{};
+                unsigned int dicSize{};
+                unsigned int dependTableSize{};
+                unsigned int dataEntriesSize{};
+                unsigned int strTableSize{};
+                unsigned int fileDataSize{};
+                unsigned int offsetTableSize{};
+                csl::ut::Bitset<Type> type{};
+                csl::ut::Bitset<RuntimeFlag> runtimeFlags{};
+                unsigned char flags{};
+                unsigned char dicCount{};
+                unsigned short dependCount{};
+            };
+
+            Header* header;
+
+            bool IsValid() const;
+            void Convert();
+            void Resolve();
+            bool IsRoot() const;
+        };
+    }
+
     class Packfile : public ManagedResource {
         csl::ut::MoveArray<void*> unk1;
         csl::ut::MoveArray<StaticResourceContainer*> resourceContainers;
@@ -23,6 +67,7 @@ namespace hh::fnd {
             return resourceContainers;
         }
 
+        StaticResourceContainer* GetResourceContainer(const ResourceTypeInfo* typeInfo) const;
         ManagedResource* GetResourceByName(const char* name, const ResourceTypeInfo* typeInfo);
         template<typename T>
         T* GetResourceByName(const char* name) {

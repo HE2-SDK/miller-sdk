@@ -255,16 +255,16 @@ namespace hh::game
 			gameObjectLayers[object->layer]->RemoveObject(object);
 			GameManagerCallbackUtil::FireGameObjectRemoved(this, object);
 		}
-		void RegisterGameStepListener(GameStepListener& listener);
-		void UnregisterGameStepListener(GameStepListener& listener);
-		void RegisterGamePauseListener(GamePauseListener& listener);
-		void UnregisterGamePauseListener(GamePauseListener& listener);
+		void AddGameStepListener(GameStepListener* listener);
+		void RemoveGameStepListener(GameStepListener* listener);
+		void AddGamePauseListener(GamePauseListener* listener);
+		void RemoveGamePauseListener(GamePauseListener* listener);
+		void AddGameUpdateListener(GameUpdateListener* listener);
+		void RemoveGameUpdateListener(GameUpdateListener* listener);
 		void AddListener(GameManagerListener* listener);
 		void RemoveListener(GameManagerListener* listener);
 		void AddComponentListener(ComponentListener* listener);
 		void RemoveComponentListener(ComponentListener* listener);
-		void AddGameUpdateListener(GameUpdateListener* listener);
-		void RemoveGameUpdateListener(GameUpdateListener* listener);
 		void AddGameObjectListener(GameObjectListener* listener);
 		void RemoveGameObjectListener(GameObjectListener* listener);
 		void AddObjectUpdateListener(ObjectUpdateListener* listener);

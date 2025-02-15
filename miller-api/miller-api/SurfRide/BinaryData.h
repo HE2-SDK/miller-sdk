@@ -5,7 +5,7 @@ namespace SurfRide
 	class BinaryData : public ReferencedObject {
 		void* data{};
 	public:
-		BinaryData(void* data);
+		BinaryData(csl::fnd::IAllocator* allocator, void* data);
 		void ResolveAddress();
 		static void ResolveAddress(void* data);
 		Project* ApplyMemoryImageToProject(bool unkParam);

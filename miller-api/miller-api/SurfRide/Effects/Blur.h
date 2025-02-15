@@ -22,7 +22,7 @@ namespace SurfRide {
         int hides; // flags & 0x1000
         uint8_t byte40;
 
-        Blur(SRS_BLUR* binaryData, Cast* cast);
+        Blur(csl::fnd::IAllocator* allocator, SRS_BLUR* binaryData, Cast* cast);
         bool Hides() const;
         bool IsIntervalZero() const;
         float GetGainFrame(float deltaTime) const;
@@ -34,10 +34,10 @@ namespace SurfRide {
 
     class Blur3D : public Blur {
     public:
-        BLUR3D_DATA* blurDataIn;
-        BLUR3D_DATA* blurDataOut;
+        csl::ut::MoveArray<BLUR3D_DATA> blurDataIn;
+        csl::ut::MoveArray<BLUR3D_DATA> blurDataOut;
 
-        Blur3D(SRS_BLUR3D* binaryData, Cast* cast);
+        Blur3D(csl::fnd::IAllocator* allocator, SRS_BLUR3D* binaryData, Cast* cast);
 
         virtual int64_t UnkFunc1();
         virtual int64_t UnkFunc2();

@@ -15,5 +15,6 @@ namespace hh::ut {
         StateManager(csl::fnd::IAllocator* pAllocator, size_t size);
 
         void AddStateDesc(int stateId, StateDesc* stateDesc);
+        internal::StateDescImpl* GetStateDescImpl(int stateId) const;
     };
 }

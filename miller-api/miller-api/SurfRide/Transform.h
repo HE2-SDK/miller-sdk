@@ -80,7 +80,7 @@ namespace SurfRide {
 		Color illuminationColor;
 		Color fullIlluminationColor;
 		bool display;
-		uint8_t unk9;
+		bool fullDisplay;
 		DirtyFlag dirtyFlag;
 		Layer* layer;
 		Cast* cast;

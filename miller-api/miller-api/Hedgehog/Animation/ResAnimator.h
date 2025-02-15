@@ -3,25 +3,25 @@
 #undef SYNCHRONIZE
 #endif
 
-#include <ucsl/resources/asm/v103.h>
+#include <ucsl/resources/asm/v103-miller.h>
 
 namespace hh::anim {
-    using ucsl::resources::animation_state_machine::v103::ClipData;
-    using ucsl::resources::animation_state_machine::v103::TransitionEasingType;
-    using ucsl::resources::animation_state_machine::v103::TransitionType;
-    using ucsl::resources::animation_state_machine::v103::TransitionData;
-    using ucsl::resources::animation_state_machine::v103::StateType;
-    using ucsl::resources::animation_state_machine::v103::StateData;
-    using ucsl::resources::animation_state_machine::v103::BlendNodeType;
-    using ucsl::resources::animation_state_machine::v103::BlendNodeData;
-    using ucsl::resources::animation_state_machine::v103::TransitionArrayData;
-    using ucsl::resources::animation_state_machine::v103::EventData;
-    using ucsl::resources::animation_state_machine::v103::LayerData;
-    using ucsl::resources::animation_state_machine::v103::BlendMaskData;
-    using ucsl::resources::animation_state_machine::v103::TriggerType;
-    using ucsl::resources::animation_state_machine::v103::TriggerData;
-    using ucsl::resources::animation_state_machine::v103::BlendSpaceData;
-    UCSL_NEWTYPE_STRUCT_SIMPLE(AsmData, ucsl::resources::animation_state_machine::v103::AsmData);
+    using ucsl::resources::animation_state_machine::v103_miller::ClipData;
+    using ucsl::resources::animation_state_machine::v103_miller::TransitionEasingType;
+    using ucsl::resources::animation_state_machine::v103_miller::TransitionType;
+    using ucsl::resources::animation_state_machine::v103_miller::TransitionData;
+    using ucsl::resources::animation_state_machine::v103_miller::StateType;
+    using ucsl::resources::animation_state_machine::v103_miller::StateData;
+    using ucsl::resources::animation_state_machine::v103_miller::BlendNodeType;
+    using ucsl::resources::animation_state_machine::v103_miller::BlendNodeData;
+    using ucsl::resources::animation_state_machine::v103_miller::TransitionArrayData;
+    using ucsl::resources::animation_state_machine::v103_miller::EventData;
+    using ucsl::resources::animation_state_machine::v103_miller::LayerData;
+    using ucsl::resources::animation_state_machine::v103_miller::BlendMaskData;
+    using ucsl::resources::animation_state_machine::v103_miller::TriggerType;
+    using ucsl::resources::animation_state_machine::v103_miller::TriggerData;
+    using ucsl::resources::animation_state_machine::v103_miller::BlendSpaceData;
+    UCSL_NEWTYPE_STRUCT_SIMPLE(AsmData, ucsl::resources::animation_state_machine::v103_miller::AsmData);
 
     class EventArray {
     public:

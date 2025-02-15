@@ -50,7 +50,7 @@ namespace hh::anim {
         AnimationState::Impl* GetCurrentState(int layer) const;
         AnimationState::Impl* GetPreviousState(int layer) const;
         bool IsFinished(int layer) const;
-        void SetTime(float time, int layer);
+        void SetActiveStateLocalTime(float time, int layer);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCAnimator)
     };

@@ -6,16 +6,25 @@ namespace SurfRide
 	class Scene : public ReferencedObject
 	{
 	public:
+		enum class Flag : unsigned int {
+			HIDE,
+		};
+
 		SRS_SCENE* sceneData;
 		Project* project;
 		Camera camera;
 		csl::ut::MoveArray<Layer*> layers;
 		uint32_t unk1;
-		uint32_t flags;
+		csl::ut::Bitset<Flag> flags;
 
-		Scene(const SRS_SCENE& sceneData, Project* project);
+		Scene(csl::fnd::IAllocator* allocator, const SRS_SCENE& sceneData, Project* project);
 
 		Layer* GetLayer(const char* layers);
+		Layer* GetLayer(unsigned int id);
+		Vector2 GetResolution() const;
+		Vector2 ToScreenCoordinates(const Vector2& coords) const;
+		void SetHideFlag(bool enabled);
+		bool Hides() const;
 		
 
         inline csl::ut::MoveArray<SurfRide::Layer*>& GetLayers() {
