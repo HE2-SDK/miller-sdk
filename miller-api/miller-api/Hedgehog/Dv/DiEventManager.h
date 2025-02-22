@@ -22,7 +22,7 @@ namespace hh::dv {
         virtual bool ReceiveMessage(hh::fnd::Message& message) override;
         virtual void OnAddedToGame() override;
         virtual void OnRemovedFromGame() override;
-        virtual void DSCL_UnkFunc7() override;
+        virtual void OnCutsceneEnd() override;
 
         virtual void UnkFunc0(void* unk);
         virtual bool UnkFunc1() { return false; }

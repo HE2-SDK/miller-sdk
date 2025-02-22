@@ -1,5 +1,9 @@
 #pragma once
 
+#define DV_PAGE_CONDITION_DECLARATION_BASE(ClassName)public:\
+		ClassName(csl::fnd::IAllocator* allocator);\
+		static DvPageConditionBase* Create(DvPageTransition* transition, csl::fnd::IAllocator* allocator);
+
 namespace hh::dv{
     class DvSceneControl;
     class DvPage;
@@ -8,9 +12,9 @@ namespace hh::dv{
     class DvPageConditionBase : public fnd::ReferencedObject{
     public:
         DvPageTransition* transition;
-        int unk2;
+        int idx;
         int unk3;
-        int unk4;
+        DvPageConditionBase* unkCondition;
 
         virtual void Setup(void* setupInfo) {};
         virtual void UnkFunc1() {};
@@ -49,7 +53,7 @@ namespace hh::dv{
             int transitionSize;
             int skipFrame;
             int pageIndex;
-            int skipLinkIndexNum;
+            int dataSize;
             int unks[3];
             char pageName[32];
         };

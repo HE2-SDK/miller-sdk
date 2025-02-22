@@ -12,7 +12,7 @@ namespace hh::dv{
         virtual void DSCL_UnkFunc4() {}
         virtual void DSCL_UnkFunc5() {}
         virtual void DSCL_UnkFunc6() {}
-        virtual void DSCL_UnkFunc7() {}
+        virtual void OnCutsceneEnd() {}
         virtual void DSCL_UnkFunc8() {}
         virtual void DSCL_UnkFunc9() {}
         virtual void DSCL_UnkFunc10() {}
