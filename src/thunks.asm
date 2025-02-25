@@ -50930,11 +50930,6 @@ PUBLIC ??_Dbad_alloc@std@@QEAAXXZ
     mov rax, 0140823110h
     jmp rax
 
-PUBLIC ?what@exception@std@@UEBAPEBDXZ
-?what@exception@std@@UEBAPEBDXZ:
-    mov rax, 0140829f80h
-    jmp rax
-
 PUBLIC ?GetUpdateTiming@DvNodeBase@dv@hh@@UEAAHXZ
 ?GetUpdateTiming@DvNodeBase@dv@hh@@UEAAHXZ:
     mov rax, 014082c5e0h
