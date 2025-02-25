@@ -13,18 +13,19 @@ namespace hh::dv{
 
         DvElementBase(csl::fnd::IAllocator* allocator);
 
-        virtual void Setup(void* unk) {};
-        virtual bool UnkFunc1() { return true; };
-        virtual void* UnkFunc2() {};
+        virtual void Update(int currentFrame, csl::math::Transform transform) {};
+        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) { return true; };
+        virtual void* RemoveCallback() {};
         virtual void SetData(void* data) {};
         virtual void DeleteData() {};
         virtual bool UnkFunc5() { return true; };
-        virtual void UnkFunc6() {};
+        virtual void UnkFunc6(int currentFrame, csl::math::Transform transform) {};
         virtual void UnkFunc7() {};
         virtual void UnkFunc8() {};
 
         game::GameService* GetService(const game::GameServiceClass* gameServiceClass);
         DvSceneControl* GetDvSceneControl();
+        float CalculateCurrentCurve(int dataSize, int currentFrame, float* data, int unk);
     };
 
     class DvNodeElement : public DvNodeBase {

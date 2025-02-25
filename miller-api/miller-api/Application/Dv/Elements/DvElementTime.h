@@ -10,15 +10,11 @@ namespace app::dv{
             int unk2;
             int unk3;
             int unk4;
-            int unk5;
-            int unk6;
-            int unk7;
-            int unk8;
             float curveData[32];
         };
 
-        virtual void Setup(void* unk) override;
-        virtual bool UnkFunc1() override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementTime)
     };

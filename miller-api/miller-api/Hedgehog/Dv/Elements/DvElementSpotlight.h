@@ -25,12 +25,12 @@ namespace hh::dv{
         csl::math::Vector4 csl__math__vector41A0;
         int64_t qword1B0;
         
-        virtual void Setup(void* unk) override;
-        virtual bool UnkFunc1() override;
-        virtual void* UnkFunc2() override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
+        virtual void* RemoveCallback() override;
         virtual void SetData(void* data) override;
         virtual void DeleteData() override;
-        virtual void UnkFunc6() override;
+        virtual void UnkFunc6(int currentFrame, csl::math::Transform transform) override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementSpotlight)
     };

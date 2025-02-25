@@ -6,14 +6,16 @@ namespace app::dv{
         struct Data {
         public:
             bool curveEnabled;
-            csl::math::Position rotation;
-            csl::math::Position finishRotation;
+            float rotation;
+            float finishRotation;
             float curveData[32];
         };
 
+        void* unk0;
         hh::needle::FxAtmosphereParameter* fxAtmosphereParam;
+        float rotation;
 
-        virtual void Setup(void* unk) override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementSun)
     };

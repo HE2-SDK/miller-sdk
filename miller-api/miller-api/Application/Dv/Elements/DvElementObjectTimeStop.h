@@ -8,7 +8,7 @@ namespace app::dv{
             int type;
         };
 
-        virtual bool UnkFunc1() override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementObjectTimeStop)
     };

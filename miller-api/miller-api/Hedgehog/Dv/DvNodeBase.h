@@ -55,6 +55,7 @@ namespace hh::dv{
         virtual void UnkFunc12() {};
 
         char* GetGUID();
+        void SetTransform(csl::math::Transform* transform);
 
         DvNodeBase(csl::fnd::IAllocator* allocator);
     };

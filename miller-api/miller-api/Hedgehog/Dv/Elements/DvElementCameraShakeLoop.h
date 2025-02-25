@@ -26,8 +26,8 @@ namespace hh::dv{
         int64_t unk1;
         int64_t unk2;
 
-        virtual void Setup(void* unk) override;
-        virtual bool UnkFunc1() override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
         virtual void SetData(void* data) override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementCameraShakeLoop)

@@ -12,7 +12,7 @@ namespace hh::dv{
 
         Data binaryData;
 
-        virtual void Setup(void* unk) override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
         virtual void SetData(void* data) override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementDirectionalLight)

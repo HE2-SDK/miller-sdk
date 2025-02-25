@@ -49,7 +49,7 @@ namespace hh::dv{
         csl::ut::Bitset<EffectHandleFlags> effectHandleFlags;
         DvNodeBase* parentNode;
 
-        virtual void Setup(void* unk) override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
         virtual void SetData(void* data) override;
         virtual void DeleteData() override;
 

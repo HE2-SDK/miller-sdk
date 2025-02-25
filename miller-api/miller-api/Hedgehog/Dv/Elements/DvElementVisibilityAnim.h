@@ -21,8 +21,8 @@ namespace hh::dv{
         Data binaryData;
         hh::fnd::ManagedResource* visAnimRes; // hasn't been reversed
 
-        virtual void Setup(void* unk) override;
-        virtual void* UnkFunc2() override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual void* RemoveCallback() override;
         virtual void SetData(void* data) override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementVisibilityAnim)

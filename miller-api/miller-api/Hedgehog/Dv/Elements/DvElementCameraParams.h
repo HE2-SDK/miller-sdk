@@ -34,9 +34,9 @@ namespace hh::dv{
         Data binaryData;
         int unk0[10];
 
-        virtual void Setup(void* unk) override;
-        virtual bool UnkFunc1() override;
-        virtual void* UnkFunc2() override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
+        virtual void* RemoveCallback() override;
         virtual void SetData(void* data) override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementCameraParams)

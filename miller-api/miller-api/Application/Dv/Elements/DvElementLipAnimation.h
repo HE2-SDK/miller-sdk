@@ -12,9 +12,9 @@ namespace app::dv{
 
         char unk0;
 
-        virtual void Setup(void* unk) override;
-        virtual bool UnkFunc1() override;
-        virtual void* UnkFunc2() override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
+        virtual void* RemoveCallback() override;
         virtual void AppUnkFunc2() override;
         virtual void* AppUnkFunc3(void* unk0, unsigned int unk1) override;
 

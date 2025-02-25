@@ -14,8 +14,8 @@ namespace app::dv{
 
         hh::fnd::Reference<hh::game::GameObject> dvFadeObject;
 
-        virtual void Setup(void* unk) override;
-        virtual void* UnkFunc2() override;
+        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual void* RemoveCallback() override;
         virtual void OnDataUpdated() override;
         virtual void OnDataDeleted() override;
 
