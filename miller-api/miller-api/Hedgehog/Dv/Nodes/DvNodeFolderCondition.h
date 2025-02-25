@@ -7,8 +7,8 @@ namespace hh::dv{
         int64_t qword284;
 
         virtual void Setup(void* setupInfo) override;
-        virtual void Update(int curFrame) override;
-        virtual void UnkFunc1(void* unk) override;
+        virtual void Update(int currentFrame) override;
+        virtual void PreStepUpdate(int currentFrame) override;
         virtual bool UnkFunc3() override;
 
         DV_NODE_DECLARATION_BASE(DvNodeFolderCondition)

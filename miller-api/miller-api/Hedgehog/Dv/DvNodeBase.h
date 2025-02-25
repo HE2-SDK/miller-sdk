@@ -39,9 +39,9 @@ namespace hh::dv{
 
         virtual void Setup(void* setupInfo);
         virtual void Start();
-        virtual void Update(int curFrame) {};
-        virtual void UnkFunc1(void* unk) {}; // another update?
-        virtual void Update1() {};
+        virtual void Update(int currentFrame) {};
+        virtual void PreStepUpdate(int currentFrame) {}; // another update?
+        virtual void PostStepUpdate(int currentFrame) {};
         virtual bool IsUnkFlag0();
         virtual bool UnkFunc3() { return true; }
         virtual void UnkFunc4() {};

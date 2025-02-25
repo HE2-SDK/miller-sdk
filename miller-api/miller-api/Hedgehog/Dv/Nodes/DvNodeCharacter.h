@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvNodeCharacter : public DvNodeBaseAnimationModel {
     public:
-        virtual void Update(int curFrame) override;
+        virtual void Update(int currentFrame) override;
 
         DV_NODE_DECLARATION_BASE(DvNodeCharacter)
     };

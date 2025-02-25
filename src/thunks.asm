@@ -50930,6 +50930,11 @@ PUBLIC ??_Dbad_alloc@std@@QEAAXXZ
     mov rax, 0140823110h
     jmp rax
 
+PUBLIC ?what@exception@std@@UEBAPEBDXZ
+?what@exception@std@@UEBAPEBDXZ:
+    mov rax, 0140829f80h
+    jmp rax
+
 PUBLIC ?GetUpdateTiming@DvNodeBase@dv@hh@@UEAAHXZ
 ?GetUpdateTiming@DvNodeBase@dv@hh@@UEAAHXZ:
     mov rax, 014082c5e0h
@@ -56020,6 +56025,11 @@ PUBLIC ?Update1@DvNodeBaseAnimationModel@dv@hh@@UEAAXXZ
     mov rax, 0140a8e9f0h
     jmp rax
 
+PUBLIC ?PostStepUpdate@DvNodeBaseAnimationModel@dv@hh@@UEAAXH@Z
+?PostStepUpdate@DvNodeBaseAnimationModel@dv@hh@@UEAAXH@Z:
+    mov rax, 0140a8e9f0h
+    jmp rax
+
 PUBLIC ?GetDvSceneObject@DvNodeBaseAnimationModel@dv@hh@@QEAAPEAVAppDvSceneObjectBase@2app@@XZ
 ?GetDvSceneObject@DvNodeBaseAnimationModel@dv@hh@@QEAAPEAVAppDvSceneObjectBase@2app@@XZ:
     mov rax, 0140a8eef0h
@@ -56187,6 +56197,11 @@ PUBLIC ?Update@DvNodeCamera@dv@hh@@UEAAXH@Z
 
 PUBLIC ?Update1@DvNodeCamera@dv@hh@@UEAAXXZ
 ?Update1@DvNodeCamera@dv@hh@@UEAAXXZ:
+    mov rax, 0140a97a90h
+    jmp rax
+
+PUBLIC ?PostStepUpdate@DvNodeCamera@dv@hh@@UEAAXH@Z
+?PostStepUpdate@DvNodeCamera@dv@hh@@UEAAXH@Z:
     mov rax, 0140a97a90h
     jmp rax
 
@@ -56470,6 +56485,11 @@ PUBLIC ?UnkFunc1@DvNodeElement@dv@hh@@UEAAXPEAX@Z
     mov rax, 0140a9b750h
     jmp rax
 
+PUBLIC ?PreStepUpdate@DvNodeElement@dv@hh@@UEAAXH@Z
+?PreStepUpdate@DvNodeElement@dv@hh@@UEAAXH@Z:
+    mov rax, 0140a9b750h
+    jmp rax
+
 PUBLIC ?GetUpdateTiming@DvNodeElement@dv@hh@@UEAAHXZ
 ?GetUpdateTiming@DvNodeElement@dv@hh@@UEAAHXZ:
     mov rax, 0140a9b800h
@@ -56532,6 +56552,11 @@ PUBLIC ?Update@DvNodeFolderCondition@dv@hh@@UEAAXH@Z
 
 PUBLIC ?UnkFunc1@DvNodeFolderCondition@dv@hh@@UEAAXPEAX@Z
 ?UnkFunc1@DvNodeFolderCondition@dv@hh@@UEAAXPEAX@Z:
+    mov rax, 0140a9be00h
+    jmp rax
+
+PUBLIC ?PreStepUpdate@DvNodeFolderCondition@dv@hh@@UEAAXH@Z
+?PreStepUpdate@DvNodeFolderCondition@dv@hh@@UEAAXH@Z:
     mov rax, 0140a9be00h
     jmp rax
 

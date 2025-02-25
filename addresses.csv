@@ -14677,6 +14677,7 @@
 140823110,??_Dexception@std@@QEAAXXZ,1
 140823110,??_Dbad_exception@std@@QEAAXXZ,1
 140823110,??_Dbad_alloc@std@@QEAAXXZ,1
+140829f80,?what@exception@std@@UEBAPEBDXZ,1
 14082c5e0,?GetUpdateTiming@DvNodeBase@dv@hh@@UEAAHXZ,1
 140830530,?UnkFunc9@Unk7@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ,1
 140830530,?UnkFunc10@ProfileElementAccessor@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ,1
@@ -16358,6 +16359,7 @@
 140a8e180,?Setup@DvNodeBaseAnimationModel@dv@hh@@UEAAXPEAX@Z,1
 140a8e8f0,?Start@DvNodeBaseAnimationModel@dv@hh@@UEAAXXZ,1
 140a8e9f0,?Update1@DvNodeBaseAnimationModel@dv@hh@@UEAAXXZ,1
+140a8e9f0,?PostStepUpdate@DvNodeBaseAnimationModel@dv@hh@@UEAAXH@Z,1
 140a8eef0,?GetDvSceneObject@DvNodeBaseAnimationModel@dv@hh@@QEAAPEAVAppDvSceneObjectBase@2app@@XZ,1
 140a8ef30,?IsUnkFlag0@DvNodeBaseAnimationModel@dv@hh@@UEAA_NXZ,1
 140a91238,??_DDvSceneControl@dv@hh@@QEAAXXZ,1
@@ -16405,6 +16407,7 @@
 140a979b0,?Start@DvNodeCamera@dv@hh@@UEAAXXZ,1
 140a97a00,?Update@DvNodeCamera@dv@hh@@UEAAXH@Z,1
 140a97a90,?Update1@DvNodeCamera@dv@hh@@UEAAXXZ,1
+140a97a90,?PostStepUpdate@DvNodeCamera@dv@hh@@UEAAXH@Z,1
 140a98420,??0DvNodeCharacterMotion@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140a984c0,??_DDvNodeCharacterMotion@dv@hh@@QEAAXXZ,1
 140a98520,?Setup@DvNodeCharacterMotion@dv@hh@@UEAAXPEAX@Z,1
@@ -16471,6 +16474,7 @@
 140a9b5d0,j_?Start@DvNodeElement@dv@hh@@UEAAXXZ,1
 140a9b620,?Update@DvNodeElement@dv@hh@@UEAAXH@Z,1
 140a9b750,?UnkFunc1@DvNodeElement@dv@hh@@UEAAXPEAX@Z,1
+140a9b750,?PreStepUpdate@DvNodeElement@dv@hh@@UEAAXH@Z,1
 140a9b800,?GetUpdateTiming@DvNodeElement@dv@hh@@UEAAHXZ,1
 140a9b850,j_?IsUnkFlag0@DvNodeElement@dv@hh@@UEAA_NXZ,1
 140a9b890,?UnkFunc10@DvNodeBase@dv@hh@@UEAAXXZ,1
@@ -16485,6 +16489,7 @@
 140a9bcd0,?Setup@DvNodeFolderCondition@dv@hh@@UEAAXPEAX@Z,1
 140a9bd70,?Update@DvNodeFolderCondition@dv@hh@@UEAAXH@Z,1
 140a9be00,?UnkFunc1@DvNodeFolderCondition@dv@hh@@UEAAXPEAX@Z,1
+140a9be00,?PreStepUpdate@DvNodeFolderCondition@dv@hh@@UEAAXH@Z,1
 140a9bef0,?UnkFunc3@DvNodeFolderCondition@dv@hh@@UEAA_NXZ,1
 140a9c670,?Create@DvPageConditionEnd@dv@hh@@SAPEAVDvPageConditionBase@23@PEAVDvPageTransition@23@PEAVIAllocator@fnd@csl@@@Z,1
 140a9cbe0,??0DvElementCameraParams@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1

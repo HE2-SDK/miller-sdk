@@ -13,7 +13,7 @@ namespace hh::dv{
         int nodeID;
 
         virtual void Setup(void* setupInfo) override;
-        virtual void Update(int curFrame) override;
+        virtual void Update(int currentFrame) override;
         virtual int GetUpdateTiming() override;
 
         DV_NODE_DECLARATION_BASE(DvNodeModelNode)

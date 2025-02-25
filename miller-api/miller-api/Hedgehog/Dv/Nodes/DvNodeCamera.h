@@ -39,8 +39,8 @@ namespace hh::dv{
 
         virtual void Setup(void* setupInfo) override;
         virtual void Start() override;
-        virtual void Update(int curFrame) override;
-        virtual void Update1() override;
+        virtual void Update(int currentFrame) override;
+        virtual void PostStepUpdate(int currentFrame) override;
         virtual int GetUpdateTiming() override;
 
         DV_NODE_DECLARATION_BASE(DvNodeCamera)

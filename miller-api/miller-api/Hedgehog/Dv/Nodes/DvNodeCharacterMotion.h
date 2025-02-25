@@ -35,7 +35,7 @@ namespace hh::dv{
 
         virtual void Setup(void* setupInfo) override;
         virtual void Start() override;
-        virtual void Update(int curFrame) override;
+        virtual void Update(int currentFrame) override;
         virtual int GetUpdateTiming() override;
 
         DV_NODE_DECLARATION_BASE(DvNodeCharacterMotion)

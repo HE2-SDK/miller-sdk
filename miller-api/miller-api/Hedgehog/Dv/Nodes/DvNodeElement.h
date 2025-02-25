@@ -155,8 +155,8 @@ namespace hh::dv{
 
         virtual void Setup(void* setupInfo) override;
         virtual void Start() override;
-        virtual void Update(int curFrame) override;
-        virtual void UnkFunc1(void* unk) override;
+        virtual void Update(int currentFrame) override;
+        virtual void PreStepUpdate(int currentFrame) override;
         virtual bool IsUnkFlag0() override;
         virtual int GetUpdateTiming() override;
         virtual void UnkFunc6(void* unk0, void* unk1) override;

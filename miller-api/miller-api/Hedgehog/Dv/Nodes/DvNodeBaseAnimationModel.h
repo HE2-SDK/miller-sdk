@@ -27,7 +27,7 @@ namespace hh::dv{
 
         virtual void Setup(void* setupInfo) override;
         virtual void Start() override;
-        virtual void Update1() override;
+        virtual void PostStepUpdate(int currentFrame) override;
         virtual bool IsUnkFlag0() override;
         virtual bool UnkFunc3() override;
         virtual int GetUpdateTiming() override;
