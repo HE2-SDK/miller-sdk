@@ -13,7 +13,7 @@ namespace hh::dv{
         int currentFrame1;
         int frameStart;
         int frameEnd;
-        int unk0;
+        int currentFrame2;
         int unk1;
         int currentCut;
         int currentPage;

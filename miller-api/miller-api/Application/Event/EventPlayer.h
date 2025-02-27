@@ -71,8 +71,9 @@ namespace app::evt {
         int flags2;
         void* unk10;
         int64_t unk11;
-        char flags3;
-        csl::math::Vector4 unk12;
+        int64_t unk12;
+        int64_t unk13;
+        int64_t unk14;
 
         void Setup(const char* cutsceneName);
         static void SetName(char* name, const char* nameValue, long long unk);
@@ -87,28 +88,25 @@ namespace app::evt {
 
     class EventScene : public hh::fnd::BaseObject, hh::dv::DvSceneControlListener {
     public:
-        struct UnkStr0 {
-        public:
-            struct UnkStr1 {
-            public:
-                void* unkFnc0;
-                void* unkFnc1;
-                void* unkFnc2;
-                char unk0;
-            };
-            UnkStr1 unkStrs[2];
-            char unk0;
+        enum class Flags : int {
+            UNK0 = 0x20000
         };
 
         EventPlayer* evtPlayer;
-        UnkStr0 unkStr;
+        hh::ut::TinyFsm<EventScene, hh::ut::TinyFsmEvent> fsm;
         hh::dv::DiEventManager* diEvtMgr;
         EventSetupData setupData;
         void* resourceCollection;
-        int unk0;
-        int unk1;
+        bool update;
+        bool unkBool0;
+        bool play;
+        char unkFlags0;
+        bool unkBool1;
         long long unk2;
-        float unk3;
+        long long unk3;
+        long long unk4;
+        float unk5;
+        csl::ut::Bitset<Flags> flags;
     };
 
     class EventSceneManager : public hh::fnd::BaseObject {

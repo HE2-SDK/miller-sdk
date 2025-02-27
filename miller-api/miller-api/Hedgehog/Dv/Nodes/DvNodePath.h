@@ -6,6 +6,7 @@ namespace hh::dv{
         struct Data {
         public:
             csl::math::Matrix44 matrix;
+            int unk[4];
         };
 
         Data binaryData;
