@@ -25,7 +25,7 @@ namespace app::player {
 
     public:
         hh::fnd::Reference<hh::ut::StateManager> stateManager;
-        hh::ut::HsmBase hsm2;
+        hh::ut::HsmBase hsm;
         hh::fnd::Reference<PlayerHsmContext> hsmContext;
         hh::fnd::Reference<PlayerStateParameter> playerStateParameter;
         hh::fnd::Reference<StatePluginManager<PlayerHsmContext>> statePluginManager;

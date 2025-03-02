@@ -19060,9 +19060,44 @@ PUBLIC ?Create@GOCGrind@game@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0140145260h
     jmp rax
 
+PUBLIC ?Create@GOCGrind@game@app@@CAPEAVGOComponent@2hh@@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCGrind@game@app@@CAPEAVGOComponent@2hh@@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140145260h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCGrind@game@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCGrind@game@app@@UEBAPEAXXZ:
+    mov rax, 0140145320h
+    jmp rax
+
+PUBLIC ?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z
+?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z:
+    mov rax, 0140145330h
+    jmp rax
+
+PUBLIC ?HFrameUpdatedCallback@GOCGrind@game@app@@UEAAXPEBVHFrame@fnd@hh@@_N@Z
+?HFrameUpdatedCallback@GOCGrind@game@app@@UEAAXPEBVHFrame@fnd@hh@@_N@Z:
+    mov rax, 0140145330h
+    jmp rax
+
+PUBLIC ?OnGOCEvent@GOCGrind@game@app@@UEAAXW4GOCEvent@GOComponent@2hh@@AEAVGameObject@26@PEAX@Z
+?OnGOCEvent@GOCGrind@game@app@@UEAAXW4GOCEvent@GOComponent@2hh@@AEAVGameObject@26@PEAX@Z:
+    mov rax, 01401453b0h
+    jmp rax
+
+PUBLIC ?ProcessMessage@GOCGrind@game@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@GOCGrind@game@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 0140145a20h
+    jmp rax
+
 PUBLIC ?GetClass@GOCGrind@game@app@@SAPEBVGOComponentClass@2hh@@XZ
 ?GetClass@GOCGrind@game@app@@SAPEBVGOComponentClass@2hh@@XZ:
     mov rax, 0140145b50h
+    jmp rax
+
+PUBLIC ?UpdateAsync@GOCGrind@game@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z
+?UpdateAsync@GOCGrind@game@app@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@PEAX@Z:
+    mov rax, 0140145b60h
     jmp rax
 
 PUBLIC ??_G?$TransitionValue@M@ut@app@@QEAAXXZ
@@ -52010,6 +52045,11 @@ PUBLIC ?GetClass@GOCMeshCollider@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
     mov rax, 01408df6e0h
     jmp rax
 
+PUBLIC ?GetClass@GOCMeshCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ
+?GetClass@GOCMeshCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ:
+    mov rax, 01408df6e0h
+    jmp rax
+
 PUBLIC ??_GGOCSphereCollider@gocs@heur@@QEAAXXZ
 ??_GGOCSphereCollider@gocs@heur@@QEAAXXZ:
     mov rax, 01408df700h
@@ -52387,11 +52427,6 @@ PUBLIC ?SetPathObject@PathEvaluator@path@hh@@QEAAXPEAVPathComponent@23@@Z
 
 PUBLIC ??_DPathComponent@path@hh@@QEAAXXZ
 ??_DPathComponent@path@hh@@QEAAXXZ:
-    mov rax, 01409bc35ch
-    jmp rax
-
-PUBLIC ??_DHFrameListener@fnd@hh@@QEAAXXZ
-??_DHFrameListener@fnd@hh@@QEAAXXZ:
     mov rax, 01409bc35ch
     jmp rax
 
@@ -59265,6 +59300,11 @@ PUBLIC ?Reload@ManagedResource@fnd@hh@@UEAAXPEAX_K@Z
     mov rax, 0140bf7090h
     jmp rax
 
+PUBLIC ?SetFile@ManagedResource@fnd@hh@@QEAAXPEAVFileResource@23@@Z
+?SetFile@ManagedResource@fnd@hh@@QEAAXPEAVFileResource@23@@Z:
+    mov rax, 0140bf70c0h
+    jmp rax
+
 PUBLIC ??0HFrame@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
 ??0HFrame@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z:
     mov rax, 0140bf7240h
@@ -59370,6 +59410,11 @@ PUBLIC ?ChangeState@HsmBase@ut@hh@@QEAAXHH@Z
     mov rax, 0140bf9cb0h
     jmp rax
 
+PUBLIC ?GetStateDescImpl@StateManager@ut@hh@@QEBAPEAVStateDescImpl@internal@23@H@Z
+?GetStateDescImpl@StateManager@ut@hh@@QEBAPEAVStateDescImpl@internal@23@H@Z:
+    mov rax, 0140bfa160h
+    jmp rax
+
 PUBLIC ?EnterState@HsmBase@ut@hh@@QEAAXHH@Z
 ?EnterState@HsmBase@ut@hh@@QEAAXHH@Z:
     mov rax, 0140bfa170h
@@ -59380,8 +59425,8 @@ PUBLIC ?GetBottomStateId@HsmBase@ut@hh@@QEBAHXZ
     mov rax, 0140bfa300h
     jmp rax
 
-PUBLIC ?GetParentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z
-?GetParentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z:
+PUBLIC ?GetCurrentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z
+?GetCurrentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z:
     mov rax, 0140bfa320h
     jmp rax
 
@@ -59785,6 +59830,11 @@ PUBLIC ?Resolve@ResourceManagerResolver@fnd@hh@@UEAAPEAVManagedResource@23@PEAVI
     mov rax, 0140c3ce10h
     jmp rax
 
+PUBLIC ?LoadData@FileResource@fnd@hh@@QEAAXPEAX_K@Z
+?LoadData@FileResource@fnd@hh@@QEAAXPEAX_K@Z:
+    mov rax, 0140c3d2d0h
+    jmp rax
+
 PUBLIC ?UnkFunc9@KeyboardWin32@hid@hh@@UEBAPEBDXZ
 ?UnkFunc9@KeyboardWin32@hid@hh@@UEBAPEBDXZ:
     mov rax, 0140c4b920h
@@ -59808,6 +59858,11 @@ PUBLIC ?UnkFunc12@VibrationWin32@hid@hh@@UEAAXXZ
 PUBLIC ?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ
 ?UnkFunc10@VibrationWin32@hid@hh@@UEAAIXZ:
     mov rax, 0140c4c050h
+    jmp rax
+
+PUBLIC ?IsRoot@PacV4Header@res@fnd@hh@@QEBA_NXZ
+?IsRoot@PacV4Header@res@fnd@hh@@QEBA_NXZ:
+    mov rax, 0140c51260h
     jmp rax
 
 PUBLIC ?GetResourceByName@StaticResourceContainer@fnd@hh@@UEBAPEAVManagedResource@23@PEBD@Z
@@ -59893,6 +59948,26 @@ PUBLIC ?BindInput@AxisMapping@hid@hh@@QEAAXIMH@Z
 PUBLIC ?BindInputEx@AxisMapping@hid@hh@@QEAAXIMMH@Z
 ?BindInputEx@AxisMapping@hid@hh@@QEAAXIMMH@Z:
     mov rax, 0140c5c000h
+    jmp rax
+
+PUBLIC ?ChangeEndian32@ResFileCommon@fnd@hh@@SAX_NPEBIPEAI@Z
+?ChangeEndian32@ResFileCommon@fnd@hh@@SAX_NPEBIPEAI@Z:
+    mov rax, 0140c67fc0h
+    jmp rax
+
+PUBLIC ?GetReverseBigEndian@ResFileCommon@fnd@hh@@SAII@Z
+?GetReverseBigEndian@ResFileCommon@fnd@hh@@SAII@Z:
+    mov rax, 0140c67fe0h
+    jmp rax
+
+PUBLIC ?ReplaceDic@ResFileCommon@fnd@hh@@SAXPEAX0I_N@Z
+?ReplaceDic@ResFileCommon@fnd@hh@@SAXPEAX0I_N@Z:
+    mov rax, 0140c68010h
+    jmp rax
+
+PUBLIC ?ReplacePof0@ResFileCommon@fnd@hh@@SAXPEAX0_K_N@Z
+?ReplacePof0@ResFileCommon@fnd@hh@@SAXPEAX0_K_N@Z:
+    mov rax, 0140c68250h
     jmp rax
 
 PUBLIC ?BeginDraw2d@DrawContextNeedle@gfnd@hh@@UEAA_JXZ
@@ -62313,6 +62388,21 @@ PUBLIC ?AllocBottom@OptimizedFreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z
 PUBLIC ?Free@OptimizedFreeListHeapBase@fnd@csl@@UEAAXPEAX@Z
 ?Free@OptimizedFreeListHeapBase@fnd@csl@@UEAAXPEAX@Z:
     mov rax, 0140f5d370h
+    jmp rax
+
+PUBLIC ?NativeFromBig16@ut@csl@@YAXPEAXPEBXH@Z
+?NativeFromBig16@ut@csl@@YAXPEAXPEBXH@Z:
+    mov rax, 0140f5f2f0h
+    jmp rax
+
+PUBLIC ?NativeFromBig32@ut@csl@@YAXPEAXPEBXH@Z
+?NativeFromBig32@ut@csl@@YAXPEAXPEBXH@Z:
+    mov rax, 0140f5f330h
+    jmp rax
+
+PUBLIC ?NativeFromBigPtr@ut@csl@@YAXPEAXPEBXH@Z
+?NativeFromBigPtr@ut@csl@@YAXPEAXPEBXH@Z:
+    mov rax, 0140f5f360h
     jmp rax
 
 PUBLIC ??0Object@gindows@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -83850,6 +83940,11 @@ PUBLIC ?componentClass@GOCMeshCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
     mov rax, 014292b420h
     jmp rax
 
+PUBLIC ?componentClass@GOCMeshCollider@physics@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCMeshCollider@physics@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 014292b420h
+    jmp rax
+
 PUBLIC ?componentClass@GOCHeightFieldCollider@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCHeightFieldCollider@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 014292b4b0h
@@ -100365,6 +100460,16 @@ PUBLIC ??_GGOCGrind@game@app@@QEAAXXZ
     mov rax, 01471b0050h
     jmp rax
 
+PUBLIC ??_DGOCGrind@game@app@@QEAAXXZ
+??_DGOCGrind@game@app@@QEAAXXZ:
+    mov rax, 01471b0050h
+    jmp rax
+
+PUBLIC ??0GrindModelUpdater@game@app@@QEAA@PEAVIAllocator@fnd@csl@@_N@Z
+??0GrindModelUpdater@game@app@@QEAA@PEAVIAllocator@fnd@csl@@_N@Z:
+    mov rax, 01471d5d80h
+    jmp rax
+
 PUBLIC ??_GPhase2Idle@BossMephilesState@app@@QEAAXXZ
 ??_GPhase2Idle@BossMephilesState@app@@QEAAXXZ:
     mov rax, 01471d6450h
@@ -100372,6 +100477,11 @@ PUBLIC ??_GPhase2Idle@BossMephilesState@app@@QEAAXXZ
 
 PUBLIC ??_GPostureQuickStepJump@player@app@@QEAAXXZ
 ??_GPostureQuickStepJump@player@app@@QEAAXXZ:
+    mov rax, 01471d6450h
+    jmp rax
+
+PUBLIC ??_DGrindModelUpdater@game@app@@QEAAXXZ
+??_DGrindModelUpdater@game@app@@QEAAXXZ:
     mov rax, 01471d6450h
     jmp rax
 
@@ -105905,6 +106015,11 @@ PUBLIC ?Create@GOCMeshCollider@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014dd19f60h
     jmp rax
 
+PUBLIC ?Create@GOCMeshCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCMeshCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014dd19f60h
+    jmp rax
+
 PUBLIC ?Create@GOCSphereCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCSphereCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014dd258f0h
@@ -109320,6 +109435,11 @@ PUBLIC ?Create@ResReflection@fnd@hh@@CAPEAV123@PEAVIAllocator@2csl@@@Z
     mov rax, 0153520b40h
     jmp rax
 
+PUBLIC ?Create@ManagedResource@fnd@hh@@SAPEAV123@PEAVIAllocator@2csl@@PEAVFile@23@PEBDPEAUResourceTypeInfo@23@@Z
+?Create@ManagedResource@fnd@hh@@SAPEAV123@PEAVIAllocator@2csl@@PEAVFile@23@PEBDPEAUResourceTypeInfo@23@@Z:
+    mov rax, 01535c8ca0h
+    jmp rax
+
 PUBLIC ?ProcessMessage@HsmBase@ut@hh@@QEAAXAEBVMessage@fnd@3@@Z
 ?ProcessMessage@HsmBase@ut@hh@@QEAAXAEBVMessage@fnd@3@@Z:
     mov rax, 015362c340h
@@ -109480,9 +109600,19 @@ PUBLIC ?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ
     mov rax, 0153fb8860h
     jmp rax
 
-PUBLIC ??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
-??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z:
+PUBLIC ??0FileResource@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
+??0FileResource@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z:
     mov rax, 0154093210h
+    jmp rax
+
+PUBLIC ??_DFileResource@fnd@hh@@QEAAXXZ
+??_DFileResource@fnd@hh@@QEAAXXZ:
+    mov rax, 0154099950h
+    jmp rax
+
+PUBLIC ?AllocateMemory@FileResource@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_KI@Z
+?AllocateMemory@FileResource@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_KI@Z:
+    mov rax, 01540bdab0h
     jmp rax
 
 PUBLIC ?GetSceneConfig@RenderingEngineMiller@gfx@hh@@UEAAXPEAUNeedleFxSceneConfig@needle@3@@Z
@@ -109510,6 +109640,16 @@ PUBLIC ?UnkFunc13@VibrationWin32@hid@hh@@UEAAXXZ
     mov rax, 01544a2360h
     jmp rax
 
+PUBLIC ?Convert@PacV4Header@res@fnd@hh@@QEAAXXZ
+?Convert@PacV4Header@res@fnd@hh@@QEAAXXZ:
+    mov rax, 0154527c10h
+    jmp rax
+
+PUBLIC ?Resolve@PacV4Header@res@fnd@hh@@QEAAXXZ
+?Resolve@PacV4Header@res@fnd@hh@@QEAAXXZ:
+    mov rax, 01545e1910h
+    jmp rax
+
 PUBLIC ??0StaticResourceContainer@fnd@hh@@QEAA@PEAVIAllocator@1csl@@PEBUResourceTypeInfo@12@PEAX@Z
 ??0StaticResourceContainer@fnd@hh@@QEAA@PEAVIAllocator@1csl@@PEBUResourceTypeInfo@12@PEAX@Z:
     mov rax, 01545e6c40h
@@ -109533,6 +109673,11 @@ PUBLIC ?ResolveName@FilePathResolver@fnd@hh@@UEAAPEADPEBDPEAUResourceTypeInfo@23
 PUBLIC ?Initialize@ResourceCriticalSection@fnd@hh@@QEAAXXZ
 ?Initialize@ResourceCriticalSection@fnd@hh@@QEAAXXZ:
     mov rax, 01547287f0h
+    jmp rax
+
+PUBLIC ?ChangeEndian16@ResFileCommon@fnd@hh@@SAX_NPEBGPEAG@Z
+?ChangeEndian16@ResFileCommon@fnd@hh@@SAX_NPEBGPEAG@Z:
+    mov rax, 0154892ed0h
     jmp rax
 
 PUBLIC ??0UniqueResourceContainer@fnd@hh@@QEAA@PEAVIAllocator@1csl@@PEBUResourceTypeInfo@12@@Z

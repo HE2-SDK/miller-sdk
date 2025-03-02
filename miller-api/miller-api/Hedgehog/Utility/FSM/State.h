@@ -3,6 +3,7 @@
 namespace hh::ut {
     namespace internal {
         class StateImpl : public fnd::ReferencedObject {
+        public:
             int id;
             const char* name;
             void* context;

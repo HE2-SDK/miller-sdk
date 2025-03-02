@@ -2,9 +2,10 @@
 
 namespace hh::ut {
     namespace internal {
-        class alignas(8) StateManagerImpl : public fnd::ReferencedObject {
-            csl::ut::MoveArray<StateDescImpl*> stateDescs;
+        class StateManagerImpl : public fnd::ReferencedObject {
         public:
+            csl::ut::MoveArray<StateDescImpl*> stateDescs;
+
             StateManagerImpl(csl::fnd::IAllocator* pAllocator, size_t size);
             virtual ~StateManagerImpl();
         };
