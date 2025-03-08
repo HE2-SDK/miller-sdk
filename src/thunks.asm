@@ -15300,6 +15300,11 @@ PUBLIC ?UnkFunc4@DvElementFade@dv@app@@UEAAXXZ
     mov rax, 01400e9480h
     jmp rax
 
+PUBLIC ?DeleteData@AppDvElementBase@dv@app@@UEAAXXZ
+?DeleteData@AppDvElementBase@dv@app@@UEAAXXZ:
+    mov rax, 01400e9480h
+    jmp rax
+
 PUBLIC ?GetBinaryData@AppDvElementBase@dv@app@@QEAAPEBDXZ
 ?GetBinaryData@AppDvElementBase@dv@app@@QEAAPEBDXZ:
     mov rax, 01400e9520h
@@ -19070,13 +19075,13 @@ PUBLIC ?GetRuntimeTypeInfo@GOCGrind@game@app@@UEBAPEAXXZ
     mov rax, 0140145320h
     jmp rax
 
-PUBLIC ?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z
-?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z:
+PUBLIC ?HFrameUpdatedCallback@GOCGrind@game@app@@UEAAXPEBVHFrame@fnd@hh@@_N@Z
+?HFrameUpdatedCallback@GOCGrind@game@app@@UEAAXPEBVHFrame@fnd@hh@@_N@Z:
     mov rax, 0140145330h
     jmp rax
 
-PUBLIC ?HFrameUpdatedCallback@GOCGrind@game@app@@UEAAXPEBVHFrame@fnd@hh@@_N@Z
-?HFrameUpdatedCallback@GOCGrind@game@app@@UEAAXPEBVHFrame@fnd@hh@@_N@Z:
+PUBLIC ?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z
+?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z:
     mov rax, 0140145330h
     jmp rax
 
@@ -51285,8 +51290,18 @@ PUBLIC ?OnAddedToGame@PathManager@path@hh@@UEAAXXZ
     mov rax, 0140845950h
     jmp rax
 
+PUBLIC ?OnAddedToGame@MovieManager@fmv@hh@@UEAAXXZ
+?OnAddedToGame@MovieManager@fmv@hh@@UEAAXXZ:
+    mov rax, 0140845950h
+    jmp rax
+
 PUBLIC ?OnRemovedFromGame@PathManager@path@hh@@UEAAXXZ
 ?OnRemovedFromGame@PathManager@path@hh@@UEAAXXZ:
+    mov rax, 0140845a10h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@MovieManager@fmv@hh@@UEAAXXZ
+?OnRemovedFromGame@MovieManager@fmv@hh@@UEAAXXZ:
     mov rax, 0140845a10h
     jmp rax
 
@@ -55920,9 +55935,44 @@ PUBLIC ?setup@LocalHeap@heap@fw@hh@@QEAAXPEBUSystemMemoryParam@234@PEBUMemoryPar
     mov rax, 0140a60710h
     jmp rax
 
+PUBLIC ??_DMovieRenderObject@fmv@hh@@QEAAXXZ
+??_DMovieRenderObject@fmv@hh@@QEAAXXZ:
+    mov rax, 0140a6a3b0h
+    jmp rax
+
 PUBLIC ?GetTransitionEffect@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAPEAVTransitionEffect@34@XZ
 ?GetTransitionEffect@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAPEAVTransitionEffect@34@XZ:
     mov rax, 0140a6a910h
+    jmp rax
+
+PUBLIC ?UnkFunc3@MovieRenderObject@fmv@hh@@UEAAXXZ
+?UnkFunc3@MovieRenderObject@fmv@hh@@UEAAXXZ:
+    mov rax, 0140a6a930h
+    jmp rax
+
+PUBLIC ?UnkFunc0@MovieRenderObject@fmv@hh@@UEAAPEAXIIPEAX@Z
+?UnkFunc0@MovieRenderObject@fmv@hh@@UEAAPEAXIIPEAX@Z:
+    mov rax, 0140a6b010h
+    jmp rax
+
+PUBLIC ?PreStepCallback@MovieManager@fmv@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z
+?PreStepCallback@MovieManager@fmv@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z:
+    mov rax, 0140a6b9b0h
+    jmp rax
+
+PUBLIC ?PostStepCallback@MovieManager@fmv@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z
+?PostStepCallback@MovieManager@fmv@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z:
+    mov rax, 0140a6bbb0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@MovieManager@fmv@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@MovieManager@fmv@hh@@UEBAPEAXXZ:
+    mov rax, 0140a6bd20h
+    jmp rax
+
+PUBLIC ?GetClass@MovieManager@fmv@hh@@SAPEBVGameServiceClass@game@3@XZ
+?GetClass@MovieManager@fmv@hh@@SAPEBVGameServiceClass@game@3@XZ:
+    mov rax, 0140a6bdd0h
     jmp rax
 
 PUBLIC ??_GGOCSkinnedMeshCollider@gocs@heur@@QEAAXXZ
@@ -59423,6 +59473,11 @@ PUBLIC ?EnterState@HsmBase@ut@hh@@QEAAXHH@Z
 PUBLIC ?GetBottomStateId@HsmBase@ut@hh@@QEBAHXZ
 ?GetBottomStateId@HsmBase@ut@hh@@QEBAHXZ:
     mov rax, 0140bfa300h
+    jmp rax
+
+PUBLIC ?GetParentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z
+?GetParentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z:
+    mov rax, 0140bfa320h
     jmp rax
 
 PUBLIC ?GetCurrentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z
@@ -91115,6 +91170,16 @@ PUBLIC ?gameServiceClass@DebugTips@dbg@app@@0VGameServiceClass@game@hh@@B
     mov rax, 01429bb400h
     jmp rax
 
+PUBLIC ?instance@?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@hh@@2PEAV123@EA
+?instance@?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@hh@@2PEAV123@EA:
+    mov rax, 01429bb9b8h
+    jmp rax
+
+PUBLIC ?gameServiceClass@EventPlayer@evt@app@@0VGameServiceClass@game@hh@@B
+?gameServiceClass@EventPlayer@evt@app@@0VGameServiceClass@game@hh@@B:
+    mov rax, 01429bba40h
+    jmp rax
+
 PUBLIC ?gameServiceClass@EventPreviewHelper@evt@app@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@EventPreviewHelper@evt@app@@0VGameServiceClass@game@hh@@B:
     mov rax, 01429bba60h
@@ -96460,6 +96525,11 @@ PUBLIC ?rflClass@StatsDataValue@rfl@heur@@2VRflClass@fnd@hh@@B
     mov rax, 01429df8f0h
     jmp rax
 
+PUBLIC ?gameServiceClass@MovieManager@fmv@hh@@0VGameServiceClass@game@3@B
+?gameServiceClass@MovieManager@fmv@hh@@0VGameServiceClass@game@3@B:
+    mov rax, 01429dfe28h
+    jmp rax
+
 PUBLIC ?GetClass@DiEventManager@dv@hh@@SAPEBVGameServiceClass@game@3@XZ
 ?GetClass@DiEventManager@dv@hh@@SAPEBVGameServiceClass@game@3@XZ:
     mov rax, 01429dfe88h
@@ -99788,11 +99858,6 @@ PUBLIC ??0AppDvElementBase@dv@app@@QEAA@PEAVIAllocator@fnd@csl@@J@Z
 PUBLIC ?SetData@AppDvElementBase@dv@app@@UEAAXPEAX@Z
 ?SetData@AppDvElementBase@dv@app@@UEAAXPEAX@Z:
     mov rax, 014669e710h
-    jmp rax
-
-PUBLIC ?DeleteData@AppDvElementBase@dv@app@@UEAAXXZ
-?DeleteData@AppDvElementBase@dv@app@@UEAAXXZ:
-    mov rax, 014669f9b0h
     jmp rax
 
 PUBLIC ?DeleteData@DvElementFade@dv@app@@UEAAXXZ
@@ -108775,6 +108840,46 @@ PUBLIC ??0DeviceManagerListener@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014fd7f760h
     jmp rax
 
+PUBLIC ??0MovieRenderObject@fmv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0MovieRenderObject@fmv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014fff53b0h
+    jmp rax
+
+PUBLIC ??_DTextureData@MovieRenderObject@fmv@hh@@QEAAXXZ
+??_DTextureData@MovieRenderObject@fmv@hh@@QEAAXXZ:
+    mov rax, 0150002890h
+    jmp rax
+
+PUBLIC ?UnkFunc2@MovieRenderObject@fmv@hh@@UEAAXXZ
+?UnkFunc2@MovieRenderObject@fmv@hh@@UEAAXXZ:
+    mov rax, 015000f2f0h
+    jmp rax
+
+PUBLIC ?UnkFunc1@MovieRenderObject@fmv@hh@@UEAAPEAXIIPEAX@Z
+?UnkFunc1@MovieRenderObject@fmv@hh@@UEAAPEAXIIPEAX@Z:
+    mov rax, 01500268a0h
+    jmp rax
+
+PUBLIC ??0MovieManager@fmv@hh@@AEAA@PEAVIAllocator@fnd@csl@@@Z
+??0MovieManager@fmv@hh@@AEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 015004b210h
+    jmp rax
+
+PUBLIC ??_DMovieManager@fmv@hh@@QEAAXXZ
+??_DMovieManager@fmv@hh@@QEAAXXZ:
+    mov rax, 015005a1c0h
+    jmp rax
+
+PUBLIC ?CreateMovie@MovieManager@fmv@hh@@QEAA?AV?$Handle@VMovieHandleObj@fmv@hh@@V?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@3@@fnd@3@PEBDPEAUMovieSetupData@123@PEAVIAllocator@5csl@@D@Z
+?CreateMovie@MovieManager@fmv@hh@@QEAA?AV?$Handle@VMovieHandleObj@fmv@hh@@V?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@3@@fnd@3@PEBDPEAUMovieSetupData@123@PEAVIAllocator@5csl@@D@Z:
+    mov rax, 015005b910h
+    jmp rax
+
+PUBLIC ?Create@MovieManager@fmv@hh@@CAPEAVGameService@game@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@MovieManager@fmv@hh@@CAPEAVGameService@game@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 015006dad0h
+    jmp rax
+
 PUBLIC ??_DGOCPhysicalAnimation@gocs@heur@@QEAAXXZ
 ??_DGOCPhysicalAnimation@gocs@heur@@QEAAXXZ:
     mov rax, 015019c420h
@@ -109598,6 +109703,11 @@ PUBLIC ?MEH_Unk2@MouseWin32@hid@hh@@UEAA_NXZ
 PUBLIC ?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ
 ?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ:
     mov rax, 0153fb8860h
+    jmp rax
+
+PUBLIC ??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z
+??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z:
+    mov rax, 0154093210h
     jmp rax
 
 PUBLIC ??0FileResource@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z

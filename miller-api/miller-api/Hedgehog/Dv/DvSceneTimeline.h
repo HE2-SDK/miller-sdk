@@ -9,8 +9,8 @@ namespace hh::dv{
             float end;
         };
 
-        int currentFrame0;
-        int currentFrame1;
+        int preCurrentFrame;
+        int postCurrentFrame;
         int frameStart;
         int frameEnd;
         int currentFrame2;
@@ -22,9 +22,10 @@ namespace hh::dv{
         csl::ut::MoveArray<float> cuts;
         csl::ut::MoveArray<DisableFrame> disableFrames;
         csl::ut::MoveArray<DvPage*> pages;
-        int64_t unk4;
-        int64_t unk5;
+        int unk4;
+        int unk5;
         int64_t unk6;
+        int64_t unk7;
         int ticksEnabled;
         int unk8;
 

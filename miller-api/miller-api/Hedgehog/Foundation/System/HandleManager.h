@@ -1,5 +1,9 @@
 #pragma once
 
+namespace hh::fmv{
+    class MovieHandleObj;
+}
+
 namespace hh::fnd
 {
 	class HandleManagerBase : public ReferencedObject {

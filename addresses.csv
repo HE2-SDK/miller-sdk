@@ -6356,6 +6356,7 @@
 1400e9480,?UnkFunc4@DvElementFade@dv@app@@UEAAXXZ,1
 1400e9480,j_?DeleteData@AppDvElementBase@dv@app@@UEAAXXZ,1
 1400e9480,j_?DeleteData@DvElementFade@dv@app@@UEAAXXZ,1
+1400e9480,?DeleteData@AppDvElementBase@dv@app@@UEAAXXZ,1
 1400e9520,?GetBinaryData@AppDvElementBase@dv@app@@QEAAPEBDXZ,1
 1400e95a0,?GetService@DvElementBase@dv@hh@@QEAAPEAVGameService@game@3@PEBVGameServiceClass@53@@Z,1
 1400e9630,??_GDvElementAtmosphereGodrayParam@dv@app@@QEAAXXZ,1
@@ -7269,8 +7270,8 @@
 140145260,?Create@GOCGrind@game@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 140145260,?Create@GOCGrind@game@app@@CAPEAVGOComponent@2hh@@PEAVIAllocator@fnd@csl@@@Z,1
 140145320,?GetRuntimeTypeInfo@GOCGrind@game@app@@UEBAPEAXXZ,1
-140145330,?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z,1
 140145330,?HFrameUpdatedCallback@GOCGrind@game@app@@UEAAXPEBVHFrame@fnd@hh@@_N@Z,1
+140145330,?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z,1
 1401453b0,?OnGOCEvent@GOCGrind@game@app@@UEAAXW4GOCEvent@GOComponent@2hh@@AEAVGameObject@26@PEAX@Z,1
 140145a20,?ProcessMessage@GOCGrind@game@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
 140145b50,?GetClass@GOCGrind@game@app@@SAPEBVGOComponentClass@2hh@@XZ,0
@@ -14797,7 +14798,9 @@
 140843870,?UpdateInput@GOCCharacterInput@hid@app_cmn@@QEAAXAEBUSUpdateInfo@fnd@hh@@@Z,1
 1408440f0,?GetPlayTime@SoundHandle@snd@hh@@QEBAMXZ,1
 140845950,?OnAddedToGame@PathManager@path@hh@@UEAAXXZ,1
+140845950,?OnAddedToGame@MovieManager@fmv@hh@@UEAAXXZ,1
 140845a10,?OnRemovedFromGame@PathManager@path@hh@@UEAAXXZ,1
+140845a10,?OnRemovedFromGame@MovieManager@fmv@hh@@UEAAXXZ,1
 140845aa0,j_??_DGOCUICollider@gocs@heur@@QEAAXXZ,0
 1408465d0,j_?AddGOCSprite@UIManager@ui@hh@@QEAAXPEAVGOCSprite@23@@Z,1
 1408466a0,?PreStepCallback@UIManager@ui@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z,1
@@ -16331,7 +16334,19 @@
 140a60710,?setup@LocalHeap@heap@fw@hh@@QEAAXPEBUSystemMemoryParam@234@PEBUMemoryParam@234@_K@Z,1
 140a60e10,j_??0Window@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140a611d0,j_??0DeviceManagerListener@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
+140a6a3b0,??_DMovieRenderObject@fmv@hh@@QEAAXXZ,1
+140a6a4d0,j_??_DTextureData@MovieRenderObject@fmv@hh@@QEAAXXZ,1
+140a6a540,j_?UnkFunc2@MovieRenderObject@fmv@hh@@UEAAXXZ,1
+140a6a6d0,j_?UnkFunc1@MovieRenderObject@fmv@hh@@UEAAPEAXIIPEAX@Z,1
 140a6a910,?GetTransitionEffect@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAPEAVTransitionEffect@34@XZ,1
+140a6a930,?UnkFunc3@MovieRenderObject@fmv@hh@@UEAAXXZ,1
+140a6b010,?UnkFunc0@MovieRenderObject@fmv@hh@@UEAAPEAXIIPEAX@Z,1
+140a6b950,j_??_DMovieManager@fmv@hh@@QEAAXXZ,1
+140a6b9b0,?PreStepCallback@MovieManager@fmv@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z,1
+140a6ba60,j_?CreateMovie@MovieManager@fmv@hh@@QEAA?AV?$Handle@VMovieHandleObj@fmv@hh@@V?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@3@@fnd@3@PEBDPEAUMovieSetupData@123@PEAVIAllocator@5csl@@D@Z,1
+140a6bbb0,?PostStepCallback@MovieManager@fmv@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z,1
+140a6bd20,?GetRuntimeTypeInfo@MovieManager@fmv@hh@@UEBAPEAXXZ,1
+140a6bdd0,?GetClass@MovieManager@fmv@hh@@SAPEBVGameServiceClass@game@3@XZ,1
 140a6f5f0,??_GGOCSkinnedMeshCollider@gocs@heur@@QEAAXXZ,0
 140a6f920,?Create@GOCSkinnedMeshCollider@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140a6f920,?Create@GOCSkinnedMeshCollider@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -17175,6 +17190,7 @@
 140bfa160,?GetStateDescImpl@StateManager@ut@hh@@QEBAPEAVStateDescImpl@internal@23@H@Z,1
 140bfa170,?EnterState@HsmBase@ut@hh@@QEAAXHH@Z,1
 140bfa300,?GetBottomStateId@HsmBase@ut@hh@@QEBAHXZ,1
+140bfa320,?GetParentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z,1
 140bfa320,?GetCurrentState@HsmBase@ut@hh@@QEBAPEAVStateImpl@internal@23@H@Z,1
 140bfa330,j_?InitState@HsmBase@ut@hh@@QEAAXH@Z,1
 140bfa3b0,j_?LeaveState@HsmBase@ut@hh@@QEAAXH@Z,1
@@ -17282,6 +17298,7 @@
 140c3b5a0,?SetCursorPosition@MouseWin32@hid@hh@@UEAAXII@Z,1
 140c3b740,?UnkFunc18@MouseWin32@hid@hh@@UEAAXII@Z,1
 140c3ce10,?Resolve@ResourceManagerResolver@fnd@hh@@UEAAPEAVManagedResource@23@PEAVIAllocator@2csl@@PEBDPEBUResourceTypeInfo@23@@Z,1
+140c3cf30,j_??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z,1
 140c3cf30,j_??0FileResource@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z,1
 140c3cfa0,j_??_DFileResource@fnd@hh@@QEAAXXZ,1
 140c3d170,j_?AllocateMemory@FileResource@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_KI@Z,1
@@ -25432,6 +25449,10 @@
 141390dc8,??_7GameServiceTestExecutor@gameobjects@heur@@6B@,0
 141392320,?rflClassMembers@StatsDataContainer@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
 1413923f0,?rflClassEnums@StatsDataValue@rfl@heur@@0QBVRflClassEnum@fnd@hh@@B,1
+1413944a0,??_7TextureData@MovieRenderObject@fmv@hh@@6B@,1
+1413944b0,??_7MovieRenderObject@fmv@hh@@6B@,1
+141394510,??_7MovieManager@fmv@hh@@6B@,1
+141394558,??_7MovieManager@fmv@hh@@6BGameStepListener@game@2@@,1
 141397b90,?classId@GOCSkinnedMeshCollider@gocs@heur@@0PEBXEB,0
 141397d58,??_7GOCSkinnedMeshCollider@gocs@heur@@6B@,0
 141398df0,?classId@ResPhysicalSkeleton@resources@heur@@0PEBXEB,0
@@ -53711,6 +53732,8 @@
 1429bb3c0,?gameServiceClass@KeybindMonitorImGui@dbg@app@@0VGameServiceClass@game@hh@@B,0
 1429bb3d8,?gameServiceClass@ProfilerSnapshotManager@dbg@app@@0VGameServiceClass@game@hh@@B,0
 1429bb400,?gameServiceClass@DebugTips@dbg@app@@0VGameServiceClass@game@hh@@B,0
+1429bb9b8,?instance@?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@hh@@2PEAV123@EA,1
+1429bba40,?gameServiceClass@EventPlayer@evt@app@@0VGameServiceClass@game@hh@@B,1
 1429bba60,?gameServiceClass@EventPreviewHelper@evt@app@@0VGameServiceClass@game@hh@@B,0
 1429bbc10,?gameServiceClass@DevEventInfo@evt@app@@0VGameServiceClass@game@hh@@B,0
 1429bbc88,?gameServiceClass@AmbientService@game@app@@0VGameServiceClass@2hh@@B,0
@@ -54780,6 +54803,7 @@
 1429df860,?instance@LocalHeap@heap@fw@hh@@2PEAV1234@EA,1
 1429df8a0,?rflClass@StatsDataContainer@rfl@heur@@2VRflClass@fnd@hh@@B,1
 1429df8f0,?rflClass@StatsDataValue@rfl@heur@@2VRflClass@fnd@hh@@B,1
+1429dfe28,?gameServiceClass@MovieManager@fmv@hh@@0VGameServiceClass@game@3@B,1
 1429dfe88,?GetClass@DiEventManager@dv@hh@@SAPEBVGameServiceClass@game@3@XZ,1
 1429dfe88,?gameServiceClass@DiEventManager@dv@hh@@0VGameServiceClass@game@3@B,1
 1429e2d40,?rflClass@DecoConfigParam@rfl@heur@@2VRflClass@fnd@hh@@B,1
@@ -55605,7 +55629,6 @@
 146699c20,??0AppDvElementBase@dv@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVDvNodeElement@1hh@@@Z,1
 146699c20,??0AppDvElementBase@dv@app@@QEAA@PEAVIAllocator@fnd@csl@@J@Z,1
 14669e710,?SetData@AppDvElementBase@dv@app@@UEAAXPEAX@Z,1
-14669f9b0,?DeleteData@AppDvElementBase@dv@app@@UEAAXXZ,1
 14669f9b0,?DeleteData@DvElementFade@dv@app@@UEAAXXZ,1
 1466b4e40,?OnDataDeleted@DvElementFade@dv@app@@UEAAXXZ,1
 1466b4e40,?OnDataDeleted@AppDvElementBase@dv@app@@UEAAXXZ,1
@@ -57418,6 +57441,14 @@
 14fd06cc0,?FireOnKeyUp@EventStack@fw@hh@@QEAAXAEAUKeyEventArgs@23@AEAE@Z,1
 14fd25f20,??0Window@fw@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 14fd7f760,??0DeviceManagerListener@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
+14fff53b0,??0MovieRenderObject@fmv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
+150002890,??_DTextureData@MovieRenderObject@fmv@hh@@QEAAXXZ,1
+15000f2f0,?UnkFunc2@MovieRenderObject@fmv@hh@@UEAAXXZ,1
+1500268a0,?UnkFunc1@MovieRenderObject@fmv@hh@@UEAAPEAXIIPEAX@Z,1
+15004b210,??0MovieManager@fmv@hh@@AEAA@PEAVIAllocator@fnd@csl@@@Z,1
+15005a1c0,??_DMovieManager@fmv@hh@@QEAAXXZ,1
+15005b910,?CreateMovie@MovieManager@fmv@hh@@QEAA?AV?$Handle@VMovieHandleObj@fmv@hh@@V?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@3@@fnd@3@PEBDPEAUMovieSetupData@123@PEAVIAllocator@5csl@@D@Z,1
+15006dad0,?Create@MovieManager@fmv@hh@@CAPEAVGameService@game@3@PEAVIAllocator@fnd@csl@@@Z,1
 15019c420,??_DGOCPhysicalAnimation@gocs@heur@@QEAAXXZ,0
 1501a6300,??_GGOCPhysicalAnimation@gocs@heur@@QEAAXXZ,0
 1501e4850,?Create@GOCPhysicalAnimation@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -57583,6 +57614,7 @@
 153f97de0,?IsFlag4@MouseWin32@hid@hh@@UEBA_NXZ,1
 153f9ce10,?MEH_Unk2@MouseWin32@hid@hh@@UEAA_NXZ,1
 153fb8860,?MEH_Unk1@MouseWin32@hid@hh@@UEAA_NXZ,1
+154093210,??0File@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z,1
 154093210,??0FileResource@fnd@hh@@QEAA@PEAVIAllocator@1csl@@@Z,1
 154099950,??_DFileResource@fnd@hh@@QEAAXXZ,1
 1540bdab0,?AllocateMemory@FileResource@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_KI@Z,1

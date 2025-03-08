@@ -512,6 +512,10 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Graphics/VisibilityManager.h"
 #include "Hedgehog/Graphics/FxParamEditor.h"
 
+#include "Hedgehog/FMV/MovieRenderObject.h"
+#include "Hedgehog/FMV/MoviePlayer.h"
+#include "Hedgehog/FMV/MovieManager.h"
+
 #include "Hedgehog/Physics/ShapeHolder.h"
 #include "Hedgehog/Physics/EventQueue.h"
 #include "Hedgehog/Physics/GOCCollider.h"
