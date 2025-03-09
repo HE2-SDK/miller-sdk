@@ -5,7 +5,13 @@ namespace hh::dv{
     public:
         struct Data {
         public:
-            int unk0[4];
+            enum class Flags : unsigned int {
+                VISIBLE,
+                IGNORE_END
+            };
+
+            csl::ut::Bitset<Flags> flags;
+            int unk0[3];
         };
 
         Data binaryData;

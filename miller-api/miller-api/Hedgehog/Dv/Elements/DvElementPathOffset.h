@@ -5,8 +5,13 @@ namespace hh::dv{
     public:
         struct Data {
         public:
+            enum class Flags : unsigned int {
+                DISABLED = 2
+            };
+
             csl::math::Matrix44 offsetMatrix;
-            int unk0[4];
+            csl::ut::Bitset<Flags> flags;
+            int unk0[3];
         };
         
         Data binaryData;
