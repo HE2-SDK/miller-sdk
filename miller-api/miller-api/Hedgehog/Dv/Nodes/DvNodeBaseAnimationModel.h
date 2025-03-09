@@ -8,7 +8,10 @@ namespace hh::dv{
     class DvNodeBaseAnimationModel : public DvNodeBase{
     public:
         struct Data {
-            int useName3;
+            bool useName3;
+        private:
+            char padding[3];
+        public:
             char modelName[64];
             char skeletonName[64];
             char name3[64];
