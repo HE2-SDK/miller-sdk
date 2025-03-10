@@ -414,6 +414,10 @@ namespace millersdk::ucsl {
 #include "Hedgehog/HID/InputDevices/PointingWin32.h"
 #include "Hedgehog/HID/InputDevices/Vibration.h"
 #include "Hedgehog/HID/InputDevices/VibrationWin32.h"
+#include "Hedgehog/HID/ResVibration.h"
+#include "Hedgehog/HID/VibrationDataContainer.h"
+#include "Hedgehog/HID/VibrationContainer.h"
+#include "Hedgehog/HID/VibrationManager.h"
 
 #include "Hedgehog/HID/DeviceManager.h"
 #include "Hedgehog/HID/DeviceManagerWin32.h"
@@ -463,6 +467,8 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Game/Level.h"
 #include "Hedgehog/Game/MasterLevel.h"
 #include "Hedgehog/Game/LevelManager.h"
+#include "Hedgehog/Game/GOCVibration.h"
+#include "Hedgehog/Game/VibrationManager.h"
 
 #include "Hedgehog/Game/GOComponents/GOCInput.h"
 #include "Hedgehog/Game/GOComponents/GOCTransform.h"

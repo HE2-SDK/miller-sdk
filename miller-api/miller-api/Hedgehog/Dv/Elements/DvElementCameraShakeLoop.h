@@ -10,14 +10,12 @@ namespace hh::dv{
                 UNK0
             };
 
-            int unk0;
+            bool pattern;
             csl::ut::Bitset<Flags> flags;
             float frequency;
-            float unk3;
+            float unk3; //unused
             float unk4;
-            float unk5;
-            float unk6;
-            float unk7;
+            float unk5[3]; //unused
             float curveData[64];
         };
 

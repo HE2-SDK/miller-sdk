@@ -51295,6 +51295,11 @@ PUBLIC ?OnAddedToGame@MovieManager@fmv@hh@@UEAAXXZ
     mov rax, 0140845950h
     jmp rax
 
+PUBLIC ?OnAddedToGame@VibrationManager@game@hh@@UEAAXXZ
+?OnAddedToGame@VibrationManager@game@hh@@UEAAXXZ:
+    mov rax, 0140845950h
+    jmp rax
+
 PUBLIC ?OnRemovedFromGame@PathManager@path@hh@@UEAAXXZ
 ?OnRemovedFromGame@PathManager@path@hh@@UEAAXXZ:
     mov rax, 0140845a10h
@@ -51302,6 +51307,11 @@ PUBLIC ?OnRemovedFromGame@PathManager@path@hh@@UEAAXXZ
 
 PUBLIC ?OnRemovedFromGame@MovieManager@fmv@hh@@UEAAXXZ
 ?OnRemovedFromGame@MovieManager@fmv@hh@@UEAAXXZ:
+    mov rax, 0140845a10h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@VibrationManager@game@hh@@UEAAXXZ
+?OnRemovedFromGame@VibrationManager@game@hh@@UEAAXXZ:
     mov rax, 0140845a10h
     jmp rax
 
@@ -52053,6 +52063,11 @@ PUBLIC ?SetScale@GOCCollider@physics@hh@@UEAAXAEBVVector3@math@csl@@@Z
 PUBLIC ?Setup@GOCCollider@physics@hh@@QEAAXAEBUSetupInfo@123@@Z
 ?Setup@GOCCollider@physics@hh@@QEAAXAEBUSetupInfo@123@@Z:
     mov rax, 01408df1c0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCMeshCollider@physics@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCMeshCollider@physics@hh@@UEBAPEAXXZ:
+    mov rax, 01408df610h
     jmp rax
 
 PUBLIC ?GetClass@GOCMeshCollider@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
@@ -55540,8 +55555,18 @@ PUBLIC ??0WorldObjectStatus@game@hh@@QEAA@XZ
     mov rax, 0140a3a110h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@VibrationManager@game@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@VibrationManager@game@hh@@UEBAPEAXXZ:
+    mov rax, 0140a3a480h
+    jmp rax
+
 PUBLIC ?GetClass@VibrationManager@services@heur@@SAPEBVGameServiceClass@game@hh@@XZ
 ?GetClass@VibrationManager@services@heur@@SAPEBVGameServiceClass@game@hh@@XZ:
+    mov rax, 0140a3a5f0h
+    jmp rax
+
+PUBLIC ?GetClass@VibrationManager@game@hh@@SAPEBVGameServiceClass@23@XZ
+?GetClass@VibrationManager@game@hh@@SAPEBVGameServiceClass@23@XZ:
     mov rax, 0140a3a5f0h
     jmp rax
 
@@ -59783,6 +59808,16 @@ PUBLIC ?Alloc@IAllocator@memory@ucsl@@UEAAPEAX_K0@Z
 PUBLIC ?GetTypeInfos@ResourceTypeRegistry@fnd@hh@@QEAAXAEAV?$MoveArray@PEBUResourceTypeInfo@fnd@hh@@@ut@csl@@@Z
 ?GetTypeInfos@ResourceTypeRegistry@fnd@hh@@QEAAXAEAV?$MoveArray@PEBUResourceTypeInfo@fnd@hh@@@ut@csl@@@Z:
     mov rax, 0140c23780h
+    jmp rax
+
+PUBLIC ??_DVibrationContainer@hid@hh@@QEAAXXZ
+??_DVibrationContainer@hid@hh@@QEAAXXZ:
+    mov rax, 0140c2d250h
+    jmp rax
+
+PUBLIC ??_DVibrationMarge@VibrationContainer@hid@hh@@QEAAXXZ
+??_DVibrationMarge@VibrationContainer@hid@hh@@QEAAXXZ:
+    mov rax, 0140c2d3c0h
     jmp rax
 
 PUBLIC ??0BinaryFile@ut@hh@@QEAA@PEAX@Z
@@ -96510,6 +96545,11 @@ PUBLIC ?gameServiceClass@VibrationManager@services@heur@@0VGameServiceClass@game
     mov rax, 01429dd798h
     jmp rax
 
+PUBLIC ?gameServiceClass@VibrationManager@game@hh@@0VGameServiceClass@23@B
+?gameServiceClass@VibrationManager@game@hh@@0VGameServiceClass@23@B:
+    mov rax, 01429dd798h
+    jmp rax
+
 PUBLIC ?instance@LocalHeap@heap@fw@hh@@2PEAV1234@EA
 ?instance@LocalHeap@heap@fw@hh@@2PEAV1234@EA:
     mov rax, 01429df860h
@@ -106075,6 +106115,11 @@ PUBLIC ??_GGOCMeshCollider@gocs@heur@@QEAAXXZ
     mov rax, 014dd19be0h
     jmp rax
 
+PUBLIC ??_DGOCMeshCollider@physics@hh@@QEAAXXZ
+??_DGOCMeshCollider@physics@hh@@QEAAXXZ:
+    mov rax, 014dd19be0h
+    jmp rax
+
 PUBLIC ?Create@GOCMeshCollider@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCMeshCollider@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014dd19f60h
@@ -106083,6 +106128,11 @@ PUBLIC ?Create@GOCMeshCollider@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ?Create@GOCMeshCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCMeshCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014dd19f60h
+    jmp rax
+
+PUBLIC ?GetShape@GOCMeshCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z
+?GetShape@GOCMeshCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z:
+    mov rax, 014dd1b4f0h
     jmp rax
 
 PUBLIC ?Create@GOCSphereCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
@@ -108645,8 +108695,18 @@ PUBLIC ??0LevelManager@game@hh@@AEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014f6dc7e0h
     jmp rax
 
+PUBLIC ??_DVibrationManager@game@hh@@QEAAXXZ
+??_DVibrationManager@game@hh@@QEAAXXZ:
+    mov rax, 014f6ea270h
+    jmp rax
+
 PUBLIC ?Create@VibrationManager@services@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@VibrationManager@services@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014f703fa0h
+    jmp rax
+
+PUBLIC ?Create@VibrationManager@game@hh@@CAPEAVGameService@23@PEAVIAllocator@fnd@csl@@@Z
+?Create@VibrationManager@game@hh@@CAPEAVGameService@23@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014f703fa0h
     jmp rax
 
@@ -109683,6 +109743,26 @@ PUBLIC ?GetTypeInfoByExtension@ResourceTypeRegistry@fnd@hh@@QEAAPEBUResourceType
 PUBLIC ?GetTypeInfoByName@ResourceTypeRegistry@fnd@hh@@QEAAPEBUResourceTypeInfo@23@PEBD@Z
 ?GetTypeInfoByName@ResourceTypeRegistry@fnd@hh@@QEAAPEBUResourceTypeInfo@23@PEBD@Z:
     mov rax, 0153c36660h
+    jmp rax
+
+PUBLIC ??_DPresetContainerListener@VibrationManager@hid@hh@@QEAAXXZ
+??_DPresetContainerListener@VibrationManager@hid@hh@@QEAAXXZ:
+    mov rax, 0153d26650h
+    jmp rax
+
+PUBLIC ??_DVibrationManager@hid@hh@@QEAAXXZ
+??_DVibrationManager@hid@hh@@QEAAXXZ:
+    mov rax, 0153d32580h
+    jmp rax
+
+PUBLIC ?ResourceLoadedCallback@PresetContainerListener@VibrationManager@hid@hh@@UEAAXPEAVManagedResource@fnd@4@@Z
+?ResourceLoadedCallback@PresetContainerListener@VibrationManager@hid@hh@@UEAAXPEAVManagedResource@fnd@4@@Z:
+    mov rax, 0153d564a0h
+    jmp rax
+
+PUBLIC ?ResourceUnloadedCallback@PresetContainerListener@VibrationManager@hid@hh@@UEAAXPEAVManagedResource@fnd@4@@Z
+?ResourceUnloadedCallback@PresetContainerListener@VibrationManager@hid@hh@@UEAAXPEAVManagedResource@fnd@4@@Z:
+    mov rax, 0153d5b160h
     jmp rax
 
 PUBLIC ?Reserve@MessageQueue@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_K@Z

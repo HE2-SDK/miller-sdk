@@ -7,8 +7,8 @@ namespace hh::dv{
         public:
             bool enabled;
             csl::math::Position offsetPosition;
-            csl::math::Position offsetUnk;
-            float unk1[5];
+            csl::math::Position finishOffsetPosition;
+            float unk1[5]; //unused
             float curveData[256];
         };
 
