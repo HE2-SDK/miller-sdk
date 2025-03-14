@@ -6,8 +6,8 @@ namespace hh::dv{
         struct Data {
         public:
             enum class Flags : unsigned int {
-                NEAR_CLIP,
-                FAR_CLIP
+                DISABLED_NEAR_CLIP,
+                DISABLED_FAR_CLIP
             };
             
             csl::ut::Bitset<Flags> flags;

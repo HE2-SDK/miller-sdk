@@ -18,16 +18,13 @@ namespace hh::dv{
         int currentCut;
         int currentPage;
         bool looping;
-        int unk3;
         csl::ut::MoveArray<float> cuts;
         csl::ut::MoveArray<DisableFrame> disableFrames;
         csl::ut::MoveArray<DvPage*> pages;
-        int unk4;
-        int unk5;
-        int64_t unk6;
-        int64_t unk7;
+        int cameraFrameProgressionCount;
+        float* cameraFrameProgression;
+        float* cameraFrameProgressionSpeed;
         int ticksEnabled;
-        int unk8;
 
         DvSceneTimeline(csl::fnd::IAllocator* allocator);
     };

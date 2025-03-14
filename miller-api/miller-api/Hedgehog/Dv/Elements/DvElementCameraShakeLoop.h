@@ -5,13 +5,11 @@ namespace hh::dv{
     public:
         struct Data {
         public:
-            enum class Flags : unsigned int {
-                ENABLED,
-                UNK0
-            };
-
             bool pattern;
-            csl::ut::Bitset<Flags> flags;
+        private:
+            char padding[3];
+        public:
+            bool enabled;
             float frequency;
             float unk3; //unused
             float unk4;

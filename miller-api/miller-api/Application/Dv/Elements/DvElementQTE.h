@@ -43,11 +43,11 @@ namespace app::dv{
             float redCircleOutlineThickness;
             float whiteLineOutlineThickness;
             int failCount;
-            int unk0;
-            char qteName[128];
-            float unk1;
-            float unk2;
-            float unk3;
+            int mashCount;
+            char asmVarName[128];
+            float start;
+            float end;
+            float speedMultiplier;
             csl::math::Vector2 offset;
             char unk4[64];
             char soundCueName[192];
