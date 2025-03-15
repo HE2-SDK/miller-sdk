@@ -8,7 +8,7 @@ namespace app::dv {
     public:
         struct Data {
         public:
-            int unk0;
+            bool failed;
             int unk1;
             int unk2;
             int unk3;

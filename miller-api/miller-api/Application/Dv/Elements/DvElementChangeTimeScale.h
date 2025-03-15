@@ -5,10 +5,10 @@ namespace app::dv{
     public:
         struct Data {
         public:
-            bool enabled;
+            bool unkEnabled;
             float timeScale;
             int unk1;
-            int unk2;
+            float multiplier;
         };
 
         bool messageSent;
