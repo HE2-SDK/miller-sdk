@@ -18,15 +18,20 @@ namespace hh::dv{
             char unkData[76];
         };
 
+        enum class Flags : unsigned int {
+            UNHANDLED,
+            HIDDEN
+        };
+
         Data binaryData;
         app::dv::AppDvSceneObjectBase* nodeCharacterObj;
-        int unk0;
+        csl::ut::Bitset<Flags> mdlFlags;
+        int maybeHandle0;
         csl::ut::MoveArray<void*> guids;
+        int unk0;
         float unk1;
-        csl::ut::MoveArray<void*> unk3;
-        float unk4;
-        uint32_t unk5;
-        uint32_t unk6;
+        csl::ut::MoveArray<const char*> unk2;
+        char unk3;
 
         virtual void Setup(void* setupInfo) override;
         virtual void Start() override;
