@@ -150,6 +150,21 @@ namespace hh::eff {
 
     class GOCEffect : public game::GOComponent {
     public:
+        class Listener {
+        public:
+            struct PreCreateEffectInfo {
+                const char* resource;
+                bool handled;
+                bool discard;
+                bool replaceResource;
+                csl::ut::InplaceMoveArray32<char, 127> newResource;
+            };
+
+            virtual ~Listener() = default;
+            virtual void PreCreateEffect(GOCEffect* component, const PreCreateEffectInfo& preCreateEffectInfo) {}
+            virtual void PostCreateEffect(GOCEffect* component, EffectHandle* effectHandle, const EffectCreateInfo& createInfo) {}
+        };
+
         struct Description {
             uint32_t unk1;
             uint32_t unk2;
@@ -199,7 +214,7 @@ namespace hh::eff {
         gfx::GOCVisualModel* model;
         csl::ut::MoveArray<void*> unkB0;
         csl::ut::MoveArray<void*> unkD0;
-        csl::ut::InplaceMoveArray<void*, 1> listeners;
+        csl::ut::InplaceMoveArray<Listener*, 1> listeners;
         uint32_t modelNameHash;
 
 		virtual void* GetRuntimeTypeInfo() const override;

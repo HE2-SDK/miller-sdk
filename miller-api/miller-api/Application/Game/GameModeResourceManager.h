@@ -11,20 +11,20 @@ namespace app::game {
             void RemoveModule(GameModeResourceModule* module);
         };
 
-        struct GameModeResourceCollectionCacheEntry {
+        struct LevelLoaderEntry {
             uint32_t moduleNameHash;
             uint32_t gameModeNameHash;
-            hh::fnd::Reference<GameModeResourceCollection> resourceCollection;
+            hh::fnd::Reference<hh::game::LevelLoader> levelLoader;
         };
         ModuleList modules;
-        csl::ut::MoveArray<GameModeResourceCollectionCacheEntry> cachedResourceCollections; // first of pair is name hash
+        csl::ut::MoveArray<LevelLoaderEntry> cachedResourceCollections; // first of pair is name hash
         hh::ut::TinyFsm<GameModeResourceManager> fsm;
 
         virtual void* GetRuntimeTypeInfo() override;
 		virtual void OnAddedToGame() override;
 		virtual void OnRemovedFromGame() override;
 
-        GameModeResourceCollection* CreateResourceCollection(GameModeResourceModule* module);
+        hh::game::LevelLoader* CreateLevelLoader(GameModeResourceModule* module);
         void AddModule(GameModeResourceModule* module);
         void RemoveModule(GameModeResourceModule* module);
 

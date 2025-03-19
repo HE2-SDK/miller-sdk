@@ -31,7 +31,7 @@ namespace hh::fnd
 		}
 
 		static void* operator new(size_t count, csl::fnd::IAllocator* pAllocator) {
-			return pAllocator->Alloc(count, 8);
+			return pAllocator->Alloc(count, __STDCPP_DEFAULT_NEW_ALIGNMENT__);
 		}
 
 		static void operator delete(void* ptr, csl::fnd::IAllocator* pAllocator) noexcept {

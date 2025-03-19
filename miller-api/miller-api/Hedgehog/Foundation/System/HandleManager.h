@@ -15,13 +15,16 @@ namespace hh::fnd
         HandleManagerBase(size_t size);
         void AddObject(RefByHandleObject* obj);
         void RemoveObject(RefByHandleObject* obj);
+        static HandleManagerBase* Create(csl::fnd::IAllocator* pAllocator, int size);
     };
 
     template<typename T>
     class HandleManager : public HandleManagerBase {
     public:
         static HandleManager<T>* instance;
-        static HandleManager<T>* Create(csl::fnd::IAllocator* pAllocator, size_t size);
+        inline static HandleManager<T>* Create(csl::fnd::IAllocator* pAllocator, int size) {
+            return (HandleManager<T>*)HandleManagerBase::Create(pAllocator, size);
+        }
 
         // inline void AddObject(T* obj) {
         //     HandleManagerBase::AddObject(obj);

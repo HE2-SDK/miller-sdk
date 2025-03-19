@@ -8,7 +8,7 @@ namespace hh::anim {
         csl::ut::MoveArray<void*> unk103;
         uint64_t unk104;
         csl::ut::PointerMap<void*, void*> unk105;
-        uint64_t unk106a;
+        uint64_t unk106;
 
         virtual void Load(void* data, size_t size) override;
         virtual void Unload() override;

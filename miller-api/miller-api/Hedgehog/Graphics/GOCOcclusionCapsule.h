@@ -20,6 +20,11 @@ namespace hh::gfx {
             float unk9;
         };
 
+        struct SetupInfo {
+            hh::gfx::ResOcclusionCapsule* resource{};
+            unsigned int gocVisualModelNameHash{};
+        };
+
         uint8_t unk1;
         csl::ut::MoveArray<Capsule> capsules;
         int unk3;
@@ -27,6 +32,8 @@ namespace hh::gfx {
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;
         virtual void HFrameUpdatedCallback(const fnd::HFrame* frame, bool unkParam) override;
+
+        void Setup(const SetupInfo& setupInfo);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCOcclusionCapsule)
     };

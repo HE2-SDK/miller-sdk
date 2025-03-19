@@ -17,6 +17,7 @@ namespace hh::eff {
         void SetAlpha(uint8_t alpha);
     };
 
+    class EffectManager;
     // class EffectManager : public game::GameService, public game::GameStepListener, public game::GameUpdateListener {
     // public:
     //     struct RenderableInfo {

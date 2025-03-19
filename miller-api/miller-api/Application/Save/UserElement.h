@@ -4,7 +4,7 @@ namespace app::save {
     class UserElement : public hh::fnd::ReferencedObject {
     public:
         csl::fnd::Mutex mutex;
-        uint64_t qword40;
+        hh::fnd::UserId userId;
         GameData gamedata50;
         GameData gamedataA8420;
         // OptionData optiondata1507F0;

@@ -1,26 +1,34 @@
 #pragma once
 
+#define OBJINFO_CLASS_DECLARATION(ClassName) private:\
+		static const hh::game::ObjInfoClass objInfoClass;\
+		ClassName(csl::fnd::IAllocator* allocator);\
+		static hh::game::ObjInfo* Create(csl::fnd::IAllocator* allocator);\
+	public:\
+		static const hh::game::ObjInfoClass* GetClass();
+
 namespace hh::game {
     class ObjInfo;
     class ObjInfoContainer;
 
     class ObjInfoClass {
     public:
-        const char *pName;
-        ObjInfo* (*Create)(csl::fnd::IAllocator* pAllocator);
+        const char *name;
+        ObjInfo* (*instantiator)(csl::fnd::IAllocator* pAllocator);
     };
 
     class ObjInfo : public fnd::ReferencedObject {
+    public:
         enum class Flag {
             LOADED = 0,
             INITIALIZED = 1,
         };
 
         csl::ut::Bitset<Flag> flags;
-        fnd::ResourceLoader* resourceLoader;
-        void* unk7;
+        fnd::Reference<fnd::ResourceLoader> resourceLoader;
+        fnd::Reference<LevelLoader> levelLoader;
         GameManager* gameManager;
-    public:
+
         ObjInfo(csl::fnd::IAllocator* pAllocator);
         virtual void Load() {}
         virtual void Initialize(GameManager* gameManager) {}
