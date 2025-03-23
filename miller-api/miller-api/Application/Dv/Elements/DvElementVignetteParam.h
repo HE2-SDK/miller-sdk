@@ -9,7 +9,7 @@ namespace app::dv{
                 CURVE_ENABLED = 1
             };
 
-            enum class GradationMode : unsigned int {
+            enum class GradationType : unsigned int {
                 GRADATION_MODE_CIRCLE,
                 GRADATION_MODE_LINE,
             };
@@ -41,8 +41,8 @@ namespace app::dv{
             };
 
             csl::ut::Bitset<Flags> flags;
-            GradationMode gradationType;
-            VignetteParam params;
+            GradationType gradationType;
+            VignetteParam vignetteParams;
         private:
             float unused0;
         public:
@@ -50,7 +50,7 @@ namespace app::dv{
         private:
             float unused1[9];
         public:
-            VignetteParam finishParams;
+            VignetteParam finishVignetteParams;
             float curveData[32];
         };
 

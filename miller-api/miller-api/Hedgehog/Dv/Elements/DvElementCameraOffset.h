@@ -5,9 +5,9 @@ namespace hh::dv{
     public:
         struct Data {
         public:
-            bool enabled;
-            csl::math::Position offsetPosition;
+            bool disabled;
             csl::math::Position finishOffsetPosition;
+            csl::math::Position offsetPosition;
             float unk1[5]; //unused
             float curveData[256];
         };
