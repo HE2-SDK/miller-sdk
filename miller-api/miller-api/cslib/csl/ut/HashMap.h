@@ -220,6 +220,11 @@ namespace csl::ut
 			}
 		}
 
+		size_t size() const
+		{
+			return m_Length;
+		}
+
 		iterator InsertAndGet(TKey key, TValue value)
 		{
 			size_t hash = TOp::hash(key) & 0x7FFFFFFFFFFFFFFF;
@@ -323,11 +328,37 @@ namespace csl::ut
 			if (iter == end())
 				return;
 
-			Elem* pElem = &m_pElements[iter.m_CurIdx];
+			size_t idx = iter.m_CurIdx;
+		
+			Elem* pElem = &m_pElements[idx];
 			pElem->m_Hash = INVALID_KEY;
 			m_Length--;
 
 			pElem->m_Value.~TValue();
+
+			size_t lowestIdx = (idx + GetHashMask()) & GetHashMask();
+			while (m_pElements[lowestIdx].m_Hash != INVALID_KEY)
+				lowestIdx = (lowestIdx + GetHashMask()) & GetHashMask();
+			lowestIdx = (lowestIdx + 1) & GetHashMask();
+
+			size_t emptyIdx = idx;
+
+			for (idx = (idx + 1) & GetHashMask(); m_pElements[idx].m_Hash != INVALID_KEY; idx = (idx + 1) & GetHashMask()) {
+				size_t desiredIdx = m_pElements[idx].m_Hash & GetHashMask();
+
+				if (idx >= lowestIdx && desiredIdx > emptyIdx)
+					continue;
+
+				if (idx < emptyIdx && (desiredIdx > emptyIdx || desiredIdx <= idx))
+					continue;
+
+				if (desiredIdx > emptyIdx && desiredIdx < lowestIdx)
+					continue;
+
+				m_pElements[emptyIdx] = std::move(m_pElements[idx]);
+				m_pElements[idx].m_Hash = INVALID_KEY;
+				emptyIdx = idx;
+			}
 		}
 	};
 }

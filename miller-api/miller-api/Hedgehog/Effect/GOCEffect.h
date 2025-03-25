@@ -166,14 +166,14 @@ namespace hh::eff {
         };
 
         struct Description {
-            uint32_t unk1;
-            uint32_t unk2;
-            float unk3;
-            uint32_t unk4;
-            int unk5;
-            uint32_t unk6;
-            uint8_t unk7;
-            bool unk8;
+            uint32_t unkB0Count{};
+            uint32_t unk2{ 1 };
+            float scale{ 1.0f };
+            uint32_t unk4{};
+            int unk5{ -1 };
+            unsigned int modelNameHash{};
+            uint8_t unk7{};
+            bool unk8{};
         };
 
         struct EffectTransInfo {
@@ -216,6 +216,7 @@ namespace hh::eff {
         csl::ut::MoveArray<void*> unkD0;
         csl::ut::InplaceMoveArray<Listener*, 1> listeners;
         uint32_t modelNameHash;
+        float unk201;
 
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
