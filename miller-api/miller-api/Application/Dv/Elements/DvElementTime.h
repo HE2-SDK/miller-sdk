@@ -5,11 +5,15 @@ namespace app::dv{
     public:
         struct Data {
         public:
+            struct Time {
+            public:
+                int hour;
+                int minute;
+            };
+
             bool curveEnabled;
-            int unk1;
-            int unk2;
-            int unk3;
-            int unk4;
+            Time time;
+            Time finishTime;
             float curveData[32];
         };
 

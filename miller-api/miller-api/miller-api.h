@@ -709,6 +709,9 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Dv/Elements/DvElementTexturePatternAnim.h"
 #include "Hedgehog/Dv/Elements/DvElementMaterialParam.h"
 
+#include "Hedgehog/Dv/DvStandardCharacter.h"
+#include "Hedgehog/Dv/DvSceneObjectBase.h"
+
 #include "ApplicationCommon/Reflection/GOCRflParameter.h"
 
 #include "ApplicationCommon/FSM/GOCTinyFsm2.h"
@@ -865,7 +868,7 @@ namespace millersdk::ucsl {
 // #include "Application/Player/Postures/PostureSliding.h"
 
 #include "Application/Dv/AppDvElementBase.h"
-//#include "Application/Dv/AppDvSceneObjectBase.h"
+#include "Application/Dv/AppDvSceneObjectBase.h"
 #include "Application/Dv/Elements/DvElementBloomParam.h"
 #include "Application/Dv/Elements/DvElementDOFParam.h"
 #include "Application/Dv/Elements/DvElementColorContrast.h"

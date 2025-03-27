@@ -17655,6 +17655,66 @@ PUBLIC ?Create@DvPageConditionQTE@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 01400fb9e0h
     jmp rax
 
+PUBLIC ??0AppDvSceneObjectBase@dv@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVDvStandardCharacter@1hh@@@Z
+??0AppDvSceneObjectBase@dv@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVDvStandardCharacter@1hh@@@Z:
+    mov rax, 01400fbac0h
+    jmp rax
+
+PUBLIC ??_DAppDvSceneObjectBase@dv@app@@QEAAXXZ
+??_DAppDvSceneObjectBase@dv@app@@QEAAXXZ:
+    mov rax, 01400fbb90h
+    jmp rax
+
+PUBLIC ?ReturnA2@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z
+?ReturnA2@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z:
+    mov rax, 01400fc210h
+    jmp rax
+
+PUBLIC ?SetModelResource@AppDvSceneObjectBase@dv@app@@UEAAXPEAVResModel@gfx@hh@@@Z
+?SetModelResource@AppDvSceneObjectBase@dv@app@@UEAAXPEAVResModel@gfx@hh@@@Z:
+    mov rax, 01400fc6e0h
+    jmp rax
+
+PUBLIC ?VisualModelRelated0@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAVResVertexAnimationTexture@gfx@3@PEAX_N@Z
+?VisualModelRelated0@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAVResVertexAnimationTexture@gfx@3@PEAX_N@Z:
+    mov rax, 01400fc6e0h
+    jmp rax
+
+PUBLIC ?SetModelResource@DvSceneObjectBase@dv@hh@@UEAAXPEAVResModel@gfx@3@@Z
+?SetModelResource@DvSceneObjectBase@dv@hh@@UEAAXPEAVResModel@gfx@3@@Z:
+    mov rax, 01400fc6e0h
+    jmp rax
+
+PUBLIC ?VisualModelRelated2@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAXM_N@Z
+?VisualModelRelated2@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAXM_N@Z:
+    mov rax, 01400fc700h
+    jmp rax
+
+PUBLIC ?VisualModelRelated1@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAXM_N@Z
+?VisualModelRelated1@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAXM_N@Z:
+    mov rax, 01400fc7f0h
+    jmp rax
+
+PUBLIC ?VisualModelRelated5@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z
+?VisualModelRelated5@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z:
+    mov rax, 01400fcb10h
+    jmp rax
+
+PUBLIC ?VisualModelRelated7@AppDvSceneObjectBase@dv@app@@UEAAPEAXPEAX@Z
+?VisualModelRelated7@AppDvSceneObjectBase@dv@app@@UEAAPEAXPEAX@Z:
+    mov rax, 01400fce00h
+    jmp rax
+
+PUBLIC ?UnkTransform@DvSceneObjectBase@dv@hh@@UEAA_NPEAXMDPEAVTransform@math@csl@@@Z
+?UnkTransform@DvSceneObjectBase@dv@hh@@UEAA_NPEAXMDPEAVTransform@math@csl@@@Z:
+    mov rax, 01400fde10h
+    jmp rax
+
+PUBLIC ?GetGOCAnimator@DvSceneObjectBase@dv@hh@@UEAAPEAVGOCAnimator@anim@3@XZ
+?GetGOCAnimator@DvSceneObjectBase@dv@hh@@UEAAPEAVGOCAnimator@anim@3@XZ:
+    mov rax, 01400fe100h
+    jmp rax
+
 PUBLIC ??_GDLCManager@dlc@app@@QEAAXXZ
 ??_GDLCManager@dlc@app@@QEAAXXZ:
     mov rax, 01400fec40h
@@ -56145,6 +56205,96 @@ PUBLIC ?IsUnkFlag0@DvNodeBaseAnimationModel@dv@hh@@UEAA_NXZ
     mov rax, 0140a8ef30h
     jmp rax
 
+PUBLIC ??0DvSceneObjectBase@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVDvStandardCharacter@12@@Z
+??0DvSceneObjectBase@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVDvStandardCharacter@12@@Z:
+    mov rax, 0140a8f420h
+    jmp rax
+
+PUBLIC ??_DDvSceneObjectBase@dv@hh@@QEAAXXZ
+??_DDvSceneObjectBase@dv@hh@@QEAAXXZ:
+    mov rax, 0140a8f5b0h
+    jmp rax
+
+PUBLIC ?ShowDebugDraw@DvSceneObjectBase@dv@hh@@UEAAXXZ
+?ShowDebugDraw@DvSceneObjectBase@dv@hh@@UEAAXXZ:
+    mov rax, 0140a8f7d0h
+    jmp rax
+
+PUBLIC ?VisualModelIsAcceptingMessages@DvSceneObjectBase@dv@hh@@UEAA_NXZ
+?VisualModelIsAcceptingMessages@DvSceneObjectBase@dv@hh@@UEAA_NXZ:
+    mov rax, 0140a8fdb0h
+    jmp rax
+
+PUBLIC ?GetGOCAnimatorUnk0@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z
+?GetGOCAnimatorUnk0@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z:
+    mov rax, 0140a8fe20h
+    jmp rax
+
+PUBLIC ?VisualModelRelated3@AppDvSceneObjectBase@dv@app@@UEAAPEAXPEAXM_N@Z
+?VisualModelRelated3@AppDvSceneObjectBase@dv@app@@UEAAPEAXPEAXM_N@Z:
+    mov rax, 0140a8ffd0h
+    jmp rax
+
+PUBLIC ?VisualModelRelated3@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAXM_N@Z
+?VisualModelRelated3@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAXM_N@Z:
+    mov rax, 0140a8ffd0h
+    jmp rax
+
+PUBLIC ?VisualModelRelated7@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z
+?VisualModelRelated7@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z:
+    mov rax, 0140a900d0h
+    jmp rax
+
+PUBLIC ?VisualModelRelated6@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z
+?VisualModelRelated6@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z:
+    mov rax, 0140a901f0h
+    jmp rax
+
+PUBLIC ?VisualModelRelated4@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z
+?VisualModelRelated4@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX@Z:
+    mov rax, 0140a902f0h
+    jmp rax
+
+PUBLIC ?HideDebugDraw@DvSceneObjectBase@dv@hh@@UEAAXXZ
+?HideDebugDraw@DvSceneObjectBase@dv@hh@@UEAAXXZ:
+    mov rax, 0140a906b0h
+    jmp rax
+
+PUBLIC ?SetUnkGOCAnimator1@DvSceneObjectBase@dv@hh@@UEAA_NPEBDH@Z
+?SetUnkGOCAnimator1@DvSceneObjectBase@dv@hh@@UEAA_NPEBDH@Z:
+    mov rax, 0140a90ae0h
+    jmp rax
+
+PUBLIC ?SetAnimatorState@DvSceneObjectBase@dv@hh@@UEAAXPEBD0@Z
+?SetAnimatorState@DvSceneObjectBase@dv@hh@@UEAAXPEBD0@Z:
+    mov rax, 0140a90b40h
+    jmp rax
+
+PUBLIC ?GetUnkGOCAnimator0@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX00H@Z
+?GetUnkGOCAnimator0@DvSceneObjectBase@dv@hh@@UEAAPEAXPEAX00H@Z:
+    mov rax, 0140a90b90h
+    jmp rax
+
+PUBLIC ?SetVisibility1@DvSceneObjectBase@dv@hh@@UEAAX_N@Z
+?SetVisibility1@DvSceneObjectBase@dv@hh@@UEAAX_N@Z:
+    mov rax, 0140a90d40h
+    jmp rax
+
+PUBLIC ?SetTransform@DvSceneObjectBase@dv@hh@@UEAAXVTransform@math@csl@@@Z
+?SetTransform@DvSceneObjectBase@dv@hh@@UEAAXVTransform@math@csl@@@Z:
+    mov rax, 0140a90dd0h
+    jmp rax
+
+PUBLIC ?SetVisualModelUnk0@DvSceneObjectBase@dv@hh@@UEAAXN@Z
+?SetVisualModelUnk0@DvSceneObjectBase@dv@hh@@UEAAXN@Z:
+    mov rax, 0140a90ef0h
+    jmp rax
+
+PUBLIC ?SetVisibility0@DvSceneObjectBase@dv@hh@@UEAAX_N0@Z
+?SetVisibility0@DvSceneObjectBase@dv@hh@@UEAAX_N0@Z:
+    mov rax, 0140a90f80h
+    jmp rax
+
 PUBLIC ??_DDvSceneControl@dv@hh@@QEAAXXZ
 ??_DDvSceneControl@dv@hh@@QEAAXXZ:
     mov rax, 0140a91238h
@@ -56198,6 +56348,11 @@ PUBLIC ??_DDvNodeCharacter@dv@hh@@QEAAXXZ
 PUBLIC ?Update@DvNodeCharacter@dv@hh@@UEAAXH@Z
 ?Update@DvNodeCharacter@dv@hh@@UEAAXH@Z:
     mov rax, 0140a93b30h
+    jmp rax
+
+PUBLIC ??0DvPage@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0DvPage@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140a93b80h
     jmp rax
 
 PUBLIC ?UnkFuncBase@DvNodeBaseAnimationModel@dv@hh@@UEAA_NXZ
