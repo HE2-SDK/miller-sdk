@@ -51,6 +51,9 @@ namespace std {
 #ifdef VOID
 #undef VOID
 #endif
+#ifdef GetUserName
+#undef GetUserName
+#endif
 
 #include "cslib/csl/math/math.h"
 #include "cslib/csl/fnd/IAllocator.h"
@@ -95,6 +98,7 @@ namespace millersdk::ucsl {
 #include "cslib/csl/fnd/OptimizedFreeListHeap.h"
 #include "cslib/csl/fnd/TlsfHeap.h"
 #include "cslib/csl/fnd/Delegate.h"
+#include "cslib/csl/fnd/Function.h"
 
 #include "Hedgehog/rsdx/rsdx_noncopyable.h"
 #include "Hedgehog/rsdx/core/algo/hhrsdxalgomutex.h"
@@ -380,6 +384,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Font/FontContainer.h"
 
 #include "Hedgehog/User/UserInfoEvent.h"
+#include "Hedgehog/User/UserService.h"
 
 // Hedgehog Framework
 #include "Hedgehog/Framework/FrameworkConfig.h"
@@ -442,6 +447,11 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Game/InputComponent.h"
 #include "Hedgehog/Game/CameraComponent.h"
 #include "Hedgehog/Game/CameraManager.h"
+#include "Hedgehog/Game/ResLevel.h"
+#include "Hedgehog/Game/Level.h"
+#include "Hedgehog/Game/MasterLevel.h"
+#include "Hedgehog/Game/LevelManager.h"
+#include "Hedgehog/Game/LevelLoader.h"
 #include "Hedgehog/Game/ObjInfo.h"
 #include "Hedgehog/Game/ObjInfoContainer.h"
 #include "Hedgehog/Game/GameObjectRegistry.h"
@@ -508,6 +518,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Graphics/ResProbe.h"
 #include "Hedgehog/Graphics/ResDecal.h"
 #include "Hedgehog/Graphics/ResVertexAnimationTexture.h"
+#include "Hedgehog/Graphics/ResOcclusionCapsule.h"
 #include "Hedgehog/Graphics/GOCVisual.h"
 #include "Hedgehog/Graphics/GOCVisualTransformed.h"
 #include "Hedgehog/Graphics/GOCVisualModel.h"
@@ -550,7 +561,14 @@ namespace millersdk::ucsl {
 // #include "Hedgehog/Effect/CyanRenderHandler.h"
 #include "Hedgehog/Effect/ResEffect.h"
 #include "Hedgehog/Effect/EffectManager.h"
-// #include "Hedgehog/Effect/GOCEffect.h"
+#include "Hedgehog/Effect/GOCEffect.h"
+
+#include "Hedgehog/Sound/ResAtomConfig.h"
+#include "Hedgehog/Sound/ResAtomCueSheet.h"
+#include "Hedgehog/Sound/SoundHandle.h"
+#include "Hedgehog/Sound/SoundManager.h"
+#include "Hedgehog/Sound/SoundManagerCri.h"
+#include "Hedgehog/Sound/GOCSound.h"
 
 #include "Hedgehog/Sound/ResAtomConfig.h"
 #include "Hedgehog/Sound/ResAtomCueSheet.h"
@@ -584,13 +602,23 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Animation/BlendTreeSyncContext.h"
 #include "Hedgehog/Animation/BlendNode.h"
 #include "Hedgehog/Animation/Calc.h"
+#include "Hedgehog/Animation/IkInfo.h"
+#include "Hedgehog/Animation/IkSolver.h"
+#include "Hedgehog/Animation/ResCharacterIk.h"
+#include "Hedgehog/Animation/RaycastInterface.h"
 #include "Hedgehog/Animation/AnimationInternalState.h"
 #include "Hedgehog/Animation/AnimationStateMachine.h"
 #include "Hedgehog/Animation/GOCAnimation.h"
 #include "Hedgehog/Animation/GOCAnimationSingle.h"
+#include "Hedgehog/Animation/GOCAnimationSimple.h"
+#include "Hedgehog/Animation/GOCAnimationBlend.h"
 #include "Hedgehog/Animation/GOCAnimator.h"
+#include "Hedgehog/Animation/GOCCharacterIk.h"
 #include "Hedgehog/Animation/AnimationManager.h"
 #include "Hedgehog/Animation/AnimationInterface.h"
+
+#include "Hedgehog/AnimationEffect/ResParticleLocation.h"
+#include "Hedgehog/AnimationEffect/GOCParticleLocator.h"
 
 #include "SurfRide/Types.h"
 #include "SurfRide/Allocator.h"
@@ -734,6 +762,7 @@ namespace millersdk::ucsl {
 
 #include "Application/Utilities/PriorityList.h"
 #include "Application/Utilities/SendMessage.h"
+#include "Application/Utilities/TransitionValue.h"
 
 #include "Application/Foundation/AppHeapManager.h"
 #include "Application/Foundation/AppMessage.h"
@@ -752,6 +781,8 @@ namespace millersdk::ucsl {
 
 #include "Application/Camera/CameraBridge.h"
 #include "Application/Camera/CameraService.h"
+
+#include "Application/Event/EventPlayer.h"
 
 // #include "Application/Player/CharacterId.h"
 #include "Application/Player/PlayerCounterTimer.h"
@@ -781,11 +812,14 @@ namespace millersdk::ucsl {
 #include "Application/Player/PlayerController.h"
 #include "Application/Player/GOCPlayerCollider.h"
 #include "Application/Player/ComponentCollector.h"
+#include "Application/Player/PlayerEffect.h"
+#include "Application/Player/EffectList.h"
 #include "Application/Player/VisualLocator.h"
 #include "Application/Player/VisualLocatorNormal.h"
 #include "Application/Player/VisualLocatorManager.h"
 #include "Application/Player/PlayerVisual.h"
 #include "Application/Player/VisualHuman.h"
+#include "Application/Player/GOCPlayerEffect.h"
 #include "Application/Player/GOCPlayerVisual.h"
 #include "Application/Player/PlayerStateBase.h"
 #include "Application/Player/States.h"
@@ -793,6 +827,8 @@ namespace millersdk::ucsl {
 #include "Application/Player/Messages.h"
 
 #include "Application/Player/Player.h"
+#include "Application/Player/PlayerRaycastInterface.h"
+#include "Application/Player/Characters/VisualShadow.h"
 // #include "Application/Player/Characters/Shadow.h"
 #include "Application/Player/PlayerReplayService.h"
 #include "Application/Player/GOCPlayerReplayRecorder.h"
@@ -824,6 +860,7 @@ namespace millersdk::ucsl {
 // #include "Application/UI/UIOverlayService.h"
 #include "Application/UI/Messages.h"
 
+#include "Application/Game/Helpers.h"
 #include "Application/Game/GameCondition.h"
 // #include "Application/Game/GameModeResourceCollection.h"
 // #include "Application/Game/GameModeResourceModule.h"
@@ -851,6 +888,7 @@ namespace millersdk::ucsl {
 #include "Application/Game/GOCGrind.h"
 // #include "Application/Game/Messages.h"
 // #include "Application/Game/Posture.h"
+#include "Application/Game/GOCLookAt.h"
 
 // #include "Application/Physics/GOCColliderQuery.h"
 // #include "Application/Physics/GOCMoveSphereColliderQuery.h"

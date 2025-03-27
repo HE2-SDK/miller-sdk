@@ -13,7 +13,7 @@ namespace app::game {
         uint32_t unk3;
         GameModeResourceManager* manager;
         csl::ut::String stageName;
-        hh::fnd::Reference<GameModeResourceCollection> resourceCollection;
+        hh::fnd::Reference<hh::game::LevelLoader> levelLoader;
         csl::ut::Bitset<Flag> flags;
         uint8_t unk7;
 
@@ -33,7 +33,7 @@ namespace app::game {
         virtual bool UnkFunc12() { return false; }
 
         void SetStageName(const char* name);
-        void SetResourceCollection(GameModeResourceCollection* collection);
+        void SetLevelLoader(hh::game::LevelLoader* levelLoader);
         level::StageData* GetStageData();
         void CallUnkFunc3();
     };

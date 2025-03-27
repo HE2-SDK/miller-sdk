@@ -18,9 +18,11 @@ namespace hh::game {
         , public hh::fnd::ResourceManager::ResourceListener
         , public hh::fw::FrameworkFrameListener
     {
+    public:
         csl::fnd::IAllocator* levelAllocator;
         uint64_t unk101;
         csl::ut::MoveArray<hh::game::MasterLevel*> masterLevels;
+        uint64_t unk102;
         csl::ut::InplaceMoveArray<LevelManagerListener*, 1> listeners;
         bool unk104;
 
@@ -33,6 +35,9 @@ namespace hh::game {
         virtual void FFL_UnkFunc1() override;
 
         Level* GetLevelByName(const char* name) const;
+        bool LoadLevel(const char* name);
+        void LoadLevel(const char* name, const Level::LoadInfo& loadInfo);
+        void UnloadLevel(const char* name);
 
         GAMESERVICE_CLASS_DECLARATION(LevelManager);
     };

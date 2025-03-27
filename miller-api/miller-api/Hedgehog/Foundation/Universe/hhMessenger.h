@@ -24,6 +24,7 @@ namespace hh::fnd
 		uint32_t unk3;
 
 		Messenger(csl::fnd::IAllocator* pAllocator);
+		virtual ~Messenger();
 
 		virtual void* GetRuntimeTypeInfo() const;
 		virtual bool ProcessMessage(Message& message);

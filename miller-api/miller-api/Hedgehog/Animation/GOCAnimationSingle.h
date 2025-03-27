@@ -10,21 +10,21 @@ namespace hh::anim {
         };
         enum class Flag : uint8_t {
             UNK2 = 2,
-            HAS_UNK104 = 5,
-            UNK6 = 6,
+            USE_MODEL_SKELETON = 5,
+            CREATE_SKELETAL_MESH_BINDING_ON_MODEL = 6,
         };
 
         Type unk101;
         uint8_t unk101a;
         csl::ut::Bitset<Flag> flags;
         uint8_t unk102;
-        uint32_t visualModelComponentNameHash;
+        unsigned int gocVisualModelNameHash;
         AnimationManager* animationManager;
         fnd::Reference<SkeletonBlender> skeletonBlender;
         gfx::GOCVisualModel* visualModel;
-        fnd::ReferencedObject* unk104;
+        fnd::Reference<ResSkeleton> skeleton;
         fnd::ReferencedObject* unk105;
-        uint64_t unk106;
+        void* visualVisibilityHandle;
         uint64_t unk107;
         uint64_t unk108;
         uint64_t unk110;
@@ -35,9 +35,9 @@ namespace hh::anim {
             uint8_t unk1;
             uint8_t unk1a;
             bool setUnk6Flag;
-            uint32_t unk3;
+            unsigned int gocVisualModelNameHash;
             uint32_t nameHash;
-            fnd::ReferencedObject* unk5; // comes from visualmodel unk305
+            anim::ResSkeleton* skeleton;
             fnd::ReferencedObject* unk6;
         };
 

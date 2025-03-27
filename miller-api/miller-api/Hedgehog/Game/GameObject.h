@@ -164,16 +164,6 @@ namespace hh::game
 		// 	return GetGOC<T>();
 		// }
 
-		hh::game::GOComponent* CreateComponent(const GOComponentClass* gocClass);
-
-	protected:
-		template<typename T>
-		T* CreateComponent() {
-			return static_cast<T*>(CreateComponent(T::GetClass()));
-		}
-
-		void AddComponent(GOComponent* component);
-		void RemoveComponent(GOComponent* component);
 		void SetUpdateFlag(fnd::UpdatingPhase phase, bool enabled);
 		void SetComponentLengths(fnd::UpdatingPhase phase);
 
@@ -204,18 +194,18 @@ namespace hh::game
 			return static_cast<T*>(GetService(T::GetClass()));
 		}
 	public:
+		hh::game::GOComponent* CreateComponent(const GOComponentClass* gocClass);
+
+		template<typename T>
+		T* CreateComponent() {
+			return static_cast<T*>(CreateComponent(T::GetClass()));
+		}
+
+		void AddComponent(GOComponent* component);
+		void RemoveComponent(GOComponent* component);
+
 		inline void UNSAFE_SetUpdateFlags(fnd::UpdatingPhase phase) {
 			SetUpdateFlags(phase);
-		}
-		template<typename T>
-		inline T* UNSAFE_CreateComponent() {
-			return CreateComponent<T>();
-		}
-		inline void UNSAFE_AddComponent(GOComponent* component) {
-			AddComponent(component);
-		}
-		inline void UNSAFE_RemoveComponent(GOComponent* component) {
-			RemoveComponent(component);
 		}
 		inline void UNSAFE_SetComponentLengths(fnd::UpdatingPhase phase) {
 			SetComponentLengths(phase);

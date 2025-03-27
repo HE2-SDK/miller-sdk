@@ -1,30 +1,35 @@
 #pragma once
 
 namespace app::player {
-    class GOCPlayerVisual : public hh::game::GOComponent {
+    class GOCPlayerVisual : public hh::game::GOComponent, public app::evt::EventPlayerListener {
     public:
         struct Unk1 {
             int unk1;
-            uint32_t unk2;
+            uint8_t unk2;
+
+            Unk1();
         };
     
-    private:
+    public:
         hh::fnd::Reference<ComponentCollector> componentCollector;
-        csl::ut::MoveArray<void*> unk2;
-        csl::ut::InplaceMoveArray<void*, 8> unk3; // has no allocator?
+        csl::ut::MoveArray<PlayerVisualClass*> visualClasses;
+        csl::ut::InplaceMoveArray<PlayerVisual*, 8> visuals; // has no allocator?
         PlayerVisual* playerVisual;
-        uint64_t unk5;
-        uint64_t unk6;
-        Unk1 unk7[4];
+        hh::fnd::Reference<PlayerVisual> unk5;
+        PlayerVisual* unk6;
+        Unk1 unk7[1];
+        char currentPlayerVisualId;
         char unk8;
         hh::fnd::Reference<VisualLocatorManager> visualLocatorManager;
+        uint64_t unk9;
+        uint64_t unk9a;
         uint32_t unk10;
         csl::ut::MoveArray<void*> unk11;
         uint16_t flags;
+        uint32_t unk12;
 
-    public:
-        struct Config {
-            int unk2Count;
+        struct SetupInfo {
+            unsigned int visualCount;
         };
 
         GOCPlayerVisual(csl::fnd::IAllocator* allocator);
@@ -33,7 +38,16 @@ namespace app::player {
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 
-        void Initialize(const Config& config);
+        void Setup(const SetupInfo& setupInfo);
+
+        void AddVisual(PlayerVisualClass* playerVisualClass, char id);
+        void SetupEffects();
+
+        PlayerVisual* GetPlayerVisual(unsigned int nameHash) const;
+        PlayerVisual* GetCurrentPlayerVisual() const;
+
+        bool SwitchPlayerVisual(char id, bool unkParam1);
+        void TriggerSwitchPlayerVisual(char id, bool unkParam1);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerVisual)
     };

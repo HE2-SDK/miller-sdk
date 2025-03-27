@@ -23,11 +23,18 @@ namespace hh::game {
         csl::ut::InplaceMoveArray<LevelListener*, 1> listeners;
         bool loaded;
         uint16_t wordCA;
-        uint32_t dwordCC;
+        uint32_t loadStatus;
         uint8_t byteD0;
-        uint32_t dwordD4;
+        int dwordD4;
         csl::ut::VariableString unk1;
         csl::ut::VariableString unk2;
+
+        struct LoadInfo {
+            uint8_t unk1{};
+            int unk2{};
+            const char* unk3{};
+            const char* unk4{};
+        };
 
         CREATE_FUNC(Level, const char* name, MasterLevel* masterLevel);
         void Setup(); // incorrect, this has an extra parameter.
@@ -35,5 +42,9 @@ namespace hh::game {
         void AddListener(LevelListener* listener);
         void RemoveListener(LevelListener* listener);
         void AddDependency(Level* dependency);
+        bool Load();
+        void Load2();
+        void Load3(const LoadInfo& loadInfo);
+        void Unload();
     };
 }

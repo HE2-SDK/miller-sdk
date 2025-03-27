@@ -2,6 +2,7 @@
 
 namespace hh::anim {
     class SkeletalMeshBinding;
+    class ResSkeleton;
 }
 
 namespace hh::gfx {
@@ -38,8 +39,8 @@ namespace hh::gfx {
         bool disableColorDraw;
         bool useGIPRT;
         bool useGISG;
-        uint32_t nameHash;
-        uint32_t unk303;
+        unsigned int nameHash;
+        unsigned int masterPoseComponentNameHash; // a GOCVisualModel
         bool unk304;
         bool unk305;
 
@@ -60,7 +61,7 @@ namespace hh::gfx {
         needle::PBRModelInstance* modelInstance;
         csl::fnd::IAllocator* allocator;
         uint16_t unk2;
-        int unk3;
+        int rootNode;
         uint32_t unk4;
         uint64_t unk5;
         needle::Model model;
@@ -82,12 +83,15 @@ namespace hh::gfx {
 
     class GOCVisualModel : public GOCVisualTransformed {
     public:
+        struct Unk1 {
+            char pad1[32];
+        };
         GOCVisualModelImpl* pImplementation;
         GOCVisualModel* masterPoseComponent;
         csl::ut::InplaceMoveArray<GOCVisualModel*, 3> poseComponents;
-        uint32_t unk303;
+        unsigned int masterPoseComponentNameHash;
         fnd::Reference<gfx::ResModel> model;
-        fnd::Reference<fnd::ManagedResource> skeleton;
+        fnd::Reference<anim::ResSkeleton> skeleton;
         uint64_t unk306;
         uint64_t unk307;
         uint64_t unk308;
@@ -99,6 +103,7 @@ namespace hh::gfx {
         uint64_t unk314;
         fnd::Reference<anim::SkeletalMeshBinding> skeletalMeshBinding;
         float unk316;
+        csl::ut::InplaceMoveArray<Unk1, 3> unk317;
         GOCVisualModelDescription description;
         GOCVisualModelImpl implementation;
         uint64_t unk332;
@@ -111,6 +116,8 @@ namespace hh::gfx {
         void SetMasterPoseComponent(GOCVisualModel* component);
         int GetNodeIndex(const char* nodeName) const;
         void Setup(const GOCVisualModelDescription& description);
+        void SetRootNode(int nodeIndex);
+        void SetVisibility(const char* sceneRenderPass, bool visible);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCVisualModel)
     };

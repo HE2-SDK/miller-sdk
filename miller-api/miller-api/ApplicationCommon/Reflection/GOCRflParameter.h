@@ -11,7 +11,7 @@ namespace app_cmn::rfl {
 
         GOCRflParameter(csl::fnd::IAllocator* allocator);
         void Setup(const SetupInfo& setupInfo);
-		virtual void* GetRuntimeTypeInfo();
+		virtual void* GetRuntimeTypeInfo() const override;
         void SetParameter(hh::fnd::ResReflection* resource, int idx);
         hh::fnd::ResReflection* GetParameter(int idx, hh::fnd::RflClass* rflClass) const;
 

@@ -96,4 +96,59 @@ namespace hh::fnd
 			return operator*();
 		}
 	};
+
+	template<typename T, typename M = typename T::HandleManager>
+	class CustomHandle : public HandleBase
+	{
+	public:
+		CustomHandle()
+		{
+
+		}
+
+		CustomHandle(const T* pObj) : HandleBase(pObj)
+		{
+
+		}
+
+
+		CustomHandle<T, M>& operator=(T* pObj)
+		{
+			Set(pObj);
+			return *this;
+		}
+
+		CustomHandle<T, M>& operator=(const CustomHandle<T, M>& hObj)
+		{
+			handle = hObj.handle;
+			return *this;
+		}
+
+		T* operator*() const
+		{
+			return reinterpret_cast<T*>(HandleBase::Get(M::instance));
+		}
+
+		T* operator->() const
+		{
+			return operator*();
+		}
+
+		// template<typename U, typename = std::enable_if<std::is_base_of<U, T>>>
+		// operator const hh::fnd::CustomHandle<U, M>&() const & {
+		// 	return *(hh::fnd::CustomHandle<U, M>*)this;
+		// }
+
+		// template<typename U, typename = std::enable_if<std::is_base_of<T, U>>>
+		// explicit operator hh::fnd::CustomHandle<U, M>() const && {
+		// 	hh::fnd::CustomHandle<U, M> res{};
+		// 	res.handle = handle;
+		// 	return res;
+		// }
+
+		// template<typename U, typename = std::enable_if<std::is_base_of<T, U>>>
+		// explicit operator hh::fnd::CustomHandle<U, M>&() const & {
+		// 	return *(hh::fnd::CustomHandle<U, M>*)this;
+		// }
+	};
 }
