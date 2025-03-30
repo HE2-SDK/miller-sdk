@@ -15045,11 +15045,6 @@ PUBLIC ??_D?$InplaceTempUri@$0IA@@fnd@hh@@QEAAXXZ
     mov rax, 01400ddf90h
     jmp rax
 
-PUBLIC ??_DGameUpdateListener@game@hh@@QEAAXXZ
-??_DGameUpdateListener@game@hh@@QEAAXXZ:
-    mov rax, 01400de030h
-    jmp rax
-
 PUBLIC ??_GContentManager@content@app@@QEAAXXZ
 ??_GContentManager@content@app@@QEAAXXZ:
     mov rax, 01400df370h
@@ -15608,6 +15603,11 @@ PUBLIC ??_GDvElementCameraControlParam@dv@app@@QEAAXXZ
 PUBLIC ?Create@DvElementCameraControlParam@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@DvElementCameraControlParam@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01400ed230h
+    jmp rax
+
+PUBLIC ??_DRequestOverlayCaption@ui@app@@QEAAXXZ
+??_DRequestOverlayCaption@ui@app@@QEAAXXZ:
+    mov rax, 01400ed930h
     jmp rax
 
 PUBLIC ?Create@DvElementCaption@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -18560,6 +18560,16 @@ PUBLIC ?Create@RequestOverlayTalk@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014016d1f0h
     jmp rax
 
+PUBLIC ?Create@RequestOverlayWindow@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
+?Create@RequestOverlayWindow@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014016d330h
+    jmp rax
+
+PUBLIC ?AddVariable@RequestOverlayTagReplace@ui@app@@QEAAPEAUOverlayTextVariable@23@AEBUAddInfo@123@@Z
+?AddVariable@RequestOverlayTagReplace@ui@app@@QEAAPEAUOverlayTextVariable@23@AEBUAddInfo@123@@Z:
+    mov rax, 014016d580h
+    jmp rax
+
 PUBLIC ??_GDbgObjItem@game@app@@QEAAXXZ
 ??_GDbgObjItem@game@app@@QEAAXXZ:
     mov rax, 014016da90h
@@ -18573,6 +18583,11 @@ PUBLIC ??_GRequestOverlayItemPoint@ui@app@@QEAAXXZ
 PUBLIC ??_GRequestOverlayTalk@ui@app@@QEAAXXZ
 ??_GRequestOverlayTalk@ui@app@@QEAAXXZ:
     mov rax, 014016dd80h
+    jmp rax
+
+PUBLIC ??_DRequestOverlayWindow@ui@app@@QEAAXXZ
+??_DRequestOverlayWindow@ui@app@@QEAAXXZ:
+    mov rax, 014016def0h
     jmp rax
 
 PUBLIC ??_GTopMenuCollection@State@GameModeUITest@game@app@@QEAAXXZ
@@ -47175,9 +47190,49 @@ PUBLIC ?Create@Finish@State@TerrainVisualCreator@trr@app@@SAPEAV12345@PEAVIAlloc
     mov rax, 014073ae30h
     jmp rax
 
+PUBLIC ??_DTextListener@font@hh@@QEAAXXZ
+??_DTextListener@font@hh@@QEAAXXZ:
+    mov rax, 014073b670h
+    jmp rax
+
+PUBLIC ?UnkFunc1@TextListenerObject@ui@hh@@UEAAPEAXXZ
+?UnkFunc1@TextListenerObject@ui@hh@@UEAAPEAXXZ:
+    mov rax, 014073b720h
+    jmp rax
+
+PUBLIC ?TL_UnkFunc1@AppTextListener@text@app@@EEAA_NPEAX0@Z
+?TL_UnkFunc1@AppTextListener@text@app@@EEAA_NPEAX0@Z:
+    mov rax, 014073b770h
+    jmp rax
+
 PUBLIC ??_GDeviceManagerListener@hid@hh@@QEAAXXZ
 ??_GDeviceManagerListener@hid@hh@@QEAAXXZ:
     mov rax, 014073c240h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@TextManager@text@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@TextManager@text@app@@UEBAPEAXXZ:
+    mov rax, 014073e6a0h
+    jmp rax
+
+PUBLIC ?ResourceLoadedCallback@TextManager@text@app@@UEAAXPEAVManagedResource@fnd@hh@@@Z
+?ResourceLoadedCallback@TextManager@text@app@@UEAAXPEAVManagedResource@fnd@hh@@@Z:
+    mov rax, 014073ee80h
+    jmp rax
+
+PUBLIC ?ResourceUnloadedCallback@TextManager@text@app@@UEAAXPEAVManagedResource@fnd@hh@@@Z
+?ResourceUnloadedCallback@TextManager@text@app@@UEAAXPEAVManagedResource@fnd@hh@@@Z:
+    mov rax, 014073ee90h
+    jmp rax
+
+PUBLIC ?UnkFunc5@AppUITextInterface@ui@app@@UEAAPEAXPEAX0@Z
+?UnkFunc5@AppUITextInterface@ui@app@@UEAAPEAXPEAX0@Z:
+    mov rax, 014073f4b0h
+    jmp rax
+
+PUBLIC ?UnkFunc3@AppUITextInterface@ui@app@@UEAAPEAXPEAX@Z
+?UnkFunc3@AppUITextInterface@ui@app@@UEAAPEAXPEAX@Z:
+    mov rax, 014073f4e0h
     jmp rax
 
 PUBLIC ?UnkFunc1@AppUITextInterface@ui@app@@UEAAPEAXPEAX0@Z
@@ -48555,13 +48610,48 @@ PUBLIC ?SetTranslatedValue@OverlayTextVariable@ui@app@@QEAAXPEBD0@Z
     mov rax, 01407b82f0h
     jmp rax
 
+PUBLIC ?SetUntranslatedValue@OverlayTextVariable@ui@app@@QEAAXPEBD0@Z
+?SetUntranslatedValue@OverlayTextVariable@ui@app@@QEAAXPEBD0@Z:
+    mov rax, 01407b8390h
+    jmp rax
+
 PUBLIC ??0UIOverlayService@ui@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0UIOverlayService@ui@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01407bb840h
     jmp rax
 
+PUBLIC ??0UIOverlayService@ui@app@@AEAA@PEAVIAllocator@fnd@csl@@@Z
+??0UIOverlayService@ui@app@@AEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01407bb840h
+    jmp rax
+
+PUBLIC ?PreGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game@hh@@AEBUSUpdateInfo@fnd@6@@Z
+?PreGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game@hh@@AEBUSUpdateInfo@fnd@6@@Z:
+    mov rax, 01407bbd80h
+    jmp rax
+
+PUBLIC ?PostGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game@hh@@AEBUSUpdateInfo@fnd@6@@Z
+?PostGameUpdateCallback@UIOverlayService@ui@app@@UEAAXPEAVGameManager@game@hh@@AEBUSUpdateInfo@fnd@6@@Z:
+    mov rax, 01407bd790h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@UIOverlayService@ui@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@UIOverlayService@ui@app@@UEBAPEAXXZ:
+    mov rax, 01407bdb90h
+    jmp rax
+
+PUBLIC ?OnAddedToGame@UIOverlayService@ui@app@@UEAAXXZ
+?OnAddedToGame@UIOverlayService@ui@app@@UEAAXXZ:
+    mov rax, 01407bded0h
+    jmp rax
+
 PUBLIC ??0OverlayJob@UIOverlayService@ui@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0OverlayJob@UIOverlayService@ui@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01407be1a0h
+    jmp rax
+
+PUBLIC ?QueueBeginRequest@UIOverlayService@ui@app@@QEAAXPEAVRequestOverlayBegin@23@@Z
+?QueueBeginRequest@UIOverlayService@ui@app@@QEAAXPEAVRequestOverlayBegin@23@@Z:
     mov rax, 01407be1a0h
     jmp rax
 
@@ -49350,6 +49440,11 @@ PUBLIC ?UnkFunc7@Keyboard@hid@hh@@UEBA_NXZ
     mov rax, 0140810a50h
     jmp rax
 
+PUBLIC ?TL_UnkFunc2@TextListener@font@hh@@UEAAHXZ
+?TL_UnkFunc2@TextListener@font@hh@@UEAAHXZ:
+    mov rax, 01408158a0h
+    jmp rax
+
 PUBLIC ?GetCellProbably@Cast@SurfRide@@UEBAPEAXXZ
 ?GetCellProbably@Cast@SurfRide@@UEBAPEAXXZ:
     mov rax, 0140815d50h
@@ -50063,11 +50158,6 @@ PUBLIC ?Unload@ResBitmapFont@font@hh@@UEAAXXZ
 PUBLIC ?Unload@ResMasterLevel@level@app@@UEAAXXZ
 ?Unload@ResMasterLevel@level@app@@UEAAXXZ:
     mov rax, 0140890930h
-    jmp rax
-
-PUBLIC ??_DAppTextListener@text@app@@QEAAXXZ
-??_DAppTextListener@text@app@@QEAAXXZ:
-    mov rax, 0140890c70h
     jmp rax
 
 PUBLIC ?SetLocalizationVariable@TagReplacer@text@hh@@QEAAXPEBD0@Z
@@ -54005,6 +54095,11 @@ PUBLIC ?FFL_UnkFunc1@LevelManager@game@hh@@UEAAXXZ
     mov rax, 0140a388e0h
     jmp rax
 
+PUBLIC ?GetLevelByName@LevelManager@game@hh@@QEBAPEAVLevel@23@PEBD@Z
+?GetLevelByName@LevelManager@game@hh@@QEBAPEAVLevel@23@PEBD@Z:
+    mov rax, 0140a38930h
+    jmp rax
+
 PUBLIC ?GetRuntimeTypeInfo@LevelManager@game@hh@@EEBAPEAXXZ
 ?GetRuntimeTypeInfo@LevelManager@game@hh@@EEBAPEAXXZ:
     mov rax, 0140a389b0h
@@ -54215,9 +54310,24 @@ PUBLIC ??_DLevel@game@hh@@QEAAXXZ
     mov rax, 0140a45b70h
     jmp rax
 
+PUBLIC ?AddDependency@Level@game@hh@@QEAAXPEAV123@@Z
+?AddDependency@Level@game@hh@@QEAAXPEAV123@@Z:
+    mov rax, 0140a46020h
+    jmp rax
+
+PUBLIC ?AddResource@Level@game@hh@@QEAAXPEBD@Z
+?AddResource@Level@game@hh@@QEAAXPEBD@Z:
+    mov rax, 0140a46120h
+    jmp rax
+
 PUBLIC ?Load@Level@game@hh@@QEAA_NXZ
 ?Load@Level@game@hh@@QEAA_NXZ:
     mov rax, 0140a46840h
+    jmp rax
+
+PUBLIC ?Setup@Level@game@hh@@QEAAXXZ
+?Setup@Level@game@hh@@QEAAXXZ:
+    mov rax, 0140a479b0h
     jmp rax
 
 PUBLIC ?GetAttribute@GameObjectClass@game@hh@@QEBAPEBUValue@RflClassMember@fnd@3@PEBD@Z
@@ -54252,7 +54362,7 @@ PUBLIC ?GetResourceByIndex@StaticResourceContainer@fnd@hh@@UEBAPEAVManagedResour
 
 PUBLIC ?GetLevel@MasterLevel@game@hh@@QEBAPEAVLevel@23@PEBD@Z
 ?GetLevel@MasterLevel@game@hh@@QEBAPEAVLevel@23@PEBD@Z:
-    mov rax, 0140a498d0h
+    mov rax, 0140a49850h
     jmp rax
 
 PUBLIC ?LoadLevel@MasterLevel@game@hh@@QEAA_NPEBD@Z
@@ -92185,11 +92295,6 @@ PUBLIC ?gameServiceClass@UIFilterService@ui@app@@0VGameServiceClass@game@hh@@B
     mov rax, 01429cbcb8h
     jmp rax
 
-PUBLIC ?gameServiceClass@UIOverlayService@ui@app@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@UIOverlayService@ui@app@@0VGameServiceClass@game@hh@@B:
-    mov rax, 01429cbcd8h
-    jmp rax
-
 PUBLIC ?gameServiceClass@MariaManager@user@app@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@MariaManager@user@app@@0VGameServiceClass@game@hh@@B:
     mov rax, 01429cd838h
@@ -96685,6 +96790,11 @@ PUBLIC ??_DRequestOverlayTalk@ui@app@@QEAAXXZ
     mov rax, 01466bf1f0h
     jmp rax
 
+PUBLIC ?Add@CaptionCollection@ui@app@@QEAAPEAUCaption@123@AEBUAddInfo@123@@Z
+?Add@CaptionCollection@ui@app@@QEAAPEAUCaption@123@AEBUAddInfo@123@@Z:
+    mov rax, 01466c5590h
+    jmp rax
+
 PUBLIC ??_GDvElementCaption@dv@app@@QEAAXXZ
 ??_GDvElementCaption@dv@app@@QEAAXXZ:
     mov rax, 01466d1cc0h
@@ -96747,11 +96857,6 @@ PUBLIC ??0EventEnvironmentManager@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 
 PUBLIC ??_DGOCLineGeometrize@gfx@app@@QEAAXXZ
 ??_DGOCLineGeometrize@gfx@app@@QEAAXXZ:
-    mov rax, 014689a300h
-    jmp rax
-
-PUBLIC ??_DUIOverlayService@ui@app@@QEAAXXZ
-??_DUIOverlayService@ui@app@@QEAAXXZ:
     mov rax, 014689a300h
     jmp rax
 
@@ -97102,6 +97207,11 @@ PUBLIC ??_GApplicationSequenceRegistry@game@app@@QEAAXXZ
 
 PUBLIC ??_DBlackboardContent@player@app@@QEAAXXZ
 ??_DBlackboardContent@player@app@@QEAAXXZ:
+    mov rax, 01470abdc0h
+    jmp rax
+
+PUBLIC ??_DAppUITextInterface@ui@app@@QEAAXXZ
+??_DAppUITextInterface@ui@app@@QEAAXXZ:
     mov rax, 01470abdc0h
     jmp rax
 
@@ -101955,6 +102065,11 @@ PUBLIC ??_GAppTextListener@text@app@@QEAAXXZ
     mov rax, 014b5c39b0h
     jmp rax
 
+PUBLIC ??_DAppTextListener@text@app@@QEAAXXZ
+??_DAppTextListener@text@app@@QEAAXXZ:
+    mov rax, 014b5c39b0h
+    jmp rax
+
 PUBLIC ??0TextManager@text@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0TextManager@text@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014b5ee0b0h
@@ -101965,9 +102080,29 @@ PUBLIC ??_GTextManager@text@app@@QEAAXXZ
     mov rax, 014b5fcf70h
     jmp rax
 
+PUBLIC ??_DTextManager@text@app@@QEAAXXZ
+??_DTextManager@text@app@@QEAAXXZ:
+    mov rax, 014b5fcf70h
+    jmp rax
+
+PUBLIC ?OnAddedToGame@TextManager@text@app@@UEAAXXZ
+?OnAddedToGame@TextManager@text@app@@UEAAXXZ:
+    mov rax, 014b68e0e0h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@TextManager@text@app@@UEAAXXZ
+?OnRemovedFromGame@TextManager@text@app@@UEAAXXZ:
+    mov rax, 014b6a2450h
+    jmp rax
+
 PUBLIC ??_DObjConversationVolume@app@@QEAAXXZ
 ??_DObjConversationVolume@app@@QEAAXXZ:
     mov rax, 014b6cb9adh
+    jmp rax
+
+PUBLIC ?CreateTextListener@AppUITextInterface@ui@app@@UEAAPEAVAppTextListener@text@3@XZ
+?CreateTextListener@AppUITextInterface@ui@app@@UEAAPEAVAppTextListener@text@3@XZ:
+    mov rax, 014b704a20h
     jmp rax
 
 PUBLIC ??_GUIBossLife@ui@app@@QEAAXXZ
@@ -102163,6 +102298,31 @@ PUBLIC ?OnAddedToGame@MonologueService@game@app@@UEAAXXZ
 PUBLIC ??_GUIOverlayService@ui@app@@QEAAXXZ
 ??_GUIOverlayService@ui@app@@QEAAXXZ:
     mov rax, 014bf57480h
+    jmp rax
+
+PUBLIC ??_DUIOverlayService@ui@app@@QEAAXXZ
+??_DUIOverlayService@ui@app@@QEAAXXZ:
+    mov rax, 014bf57480h
+    jmp rax
+
+PUBLIC ?ARML_UnkFunc1@UIOverlayService@ui@app@@UEAAXH@Z
+?ARML_UnkFunc1@UIOverlayService@ui@app@@UEAAXH@Z:
+    mov rax, 014bf8b110h
+    jmp rax
+
+PUBLIC ?ARML_UnkFunc0@UIOverlayService@ui@app@@UEAAXH@Z
+?ARML_UnkFunc0@UIOverlayService@ui@app@@UEAAXH@Z:
+    mov rax, 014bf98a60h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@UIOverlayService@ui@app@@UEAAXXZ
+?OnRemovedFromGame@UIOverlayService@ui@app@@UEAAXXZ:
+    mov rax, 014bf9dfc0h
+    jmp rax
+
+PUBLIC ?ProcessMessage@UIOverlayService@ui@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@UIOverlayService@ui@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 014bfb5ea0h
     jmp rax
 
 PUBLIC ??_GUITitle@ui@app@@QEAAXXZ
@@ -102703,6 +102863,11 @@ PUBLIC ?OnGOCEvent@GOCSprite@ui@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameO
 PUBLIC ??_DLayerController@ui@hh@@QEAAXXZ
 ??_DLayerController@ui@hh@@QEAAXXZ:
     mov rax, 014cc39790h
+    jmp rax
+
+PUBLIC ?GetTranslation@AppUITextInterface@ui@app@@UEAA?AUUnicodeString@text@hh@@PEBDI@Z
+?GetTranslation@AppUITextInterface@ui@app@@UEAA?AUUnicodeString@text@hh@@PEBDI@Z:
+    mov rax, 014cfa07b0h
     jmp rax
 
 PUBLIC ??0UIListViewItem@ui@hh@@QEAA@PEAVIAllocator@fnd@csl@@_K@Z

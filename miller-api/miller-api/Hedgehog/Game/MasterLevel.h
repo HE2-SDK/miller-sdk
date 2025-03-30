@@ -34,5 +34,10 @@ namespace hh::game {
         bool LoadLevel(const char* name);
         Unk1 LoadLevel(const char* name, const Level::LoadInfo& loadInfo);
         Unk1 UnloadLevel(const char* name);
+
+        inline void AddLevel(Level* level) {
+            levels.push_back(level);
+            levelsByName.Insert(level->name.c_str(), level);
+        }
     };
 }

@@ -42,6 +42,7 @@ namespace hh::game {
         void AddListener(LevelListener* listener);
         void RemoveListener(LevelListener* listener);
         void AddDependency(Level* dependency);
+        void AddResource(const char* resource);
         bool Load();
         void Load2();
         void Load3(const LoadInfo& loadInfo);

@@ -21,8 +21,8 @@ namespace hh::game {
     public:
         csl::fnd::IAllocator* levelAllocator;
         uint64_t unk101;
-        csl::ut::MoveArray<hh::game::MasterLevel*> masterLevels;
         uint64_t unk102;
+        csl::ut::MoveArray<hh::game::MasterLevel*> masterLevels;
         csl::ut::InplaceMoveArray<LevelManagerListener*, 1> listeners;
         bool unk104;
 
