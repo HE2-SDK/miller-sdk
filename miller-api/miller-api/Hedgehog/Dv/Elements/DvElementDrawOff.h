@@ -16,7 +16,7 @@ namespace hh::dv{
 
         Data binaryData;
         
-        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
         virtual void SetData(void* data) override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementDrawOff)

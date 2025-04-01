@@ -42,7 +42,7 @@ namespace hh::fmv{
         virtual void* UnkFunc1(unsigned int a2, unsigned int a3, void* a4);
         virtual void UnkFunc2();
         virtual void UnkFunc3();
-        virtual void UpdateTextureData(csl::ut::MoveArray<char>* textureInfos); //hh::fmv::MoviePlayerCri::TextureInfo
+        virtual void UpdateTextureData(csl::ut::MoveArray<char>& textureInfos); //hh::fmv::MoviePlayerCri::TextureInfo
 
         MovieRenderObject(csl::fnd::IAllocator* allocator);
     };

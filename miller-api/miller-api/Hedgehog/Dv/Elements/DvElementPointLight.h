@@ -37,9 +37,9 @@ namespace hh::dv{
         Data binaryData;
         hh::fnd::Reference<hh::game::GameObject> light;
         
-        virtual void Update(int currentFrame, csl::math::Transform transform) override;
-        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
-        virtual void* RemoveCallback() override;
+        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) override;
+        virtual void RemoveCallback() override;
         virtual void SetData(void* data) override;
         virtual void DeleteData() override;
         virtual void UnkFunc6(int currentFrame, csl::math::Transform transform) override;

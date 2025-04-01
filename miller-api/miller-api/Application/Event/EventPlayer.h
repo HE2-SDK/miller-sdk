@@ -181,13 +181,10 @@ namespace app::evt {
         };
 
         enum class Flag : unsigned long long {
-            LOADING0  =    0x10000000,
-            LOADING1  =    0x30000000,
-            UNLOADING =    0x40000000,
-            PLAYING   =   0x200000000,
-            PAUSED    =   0x600000000,
-            FADING    =  0x1000000000,
-            UNK0      =  0x8000000000,
+            LOADING   =  29,
+            PLAYING   =  30,
+            UNLOADING =  31,
+            UNK0      =  32,
         };
 
         hh::ut::TinyFsm<EventPlayer, hh::ut::TinyFsmEvent> fsm;

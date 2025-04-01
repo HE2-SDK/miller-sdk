@@ -13,9 +13,9 @@ namespace hh::dv{
 
         DvElementBase(csl::fnd::IAllocator* allocator);
 
-        virtual void Update(int currentFrame, csl::math::Transform transform) {};
-        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) { return true; };
-        virtual void* RemoveCallback() {};
+        virtual void Update(int currentFrame, csl::math::Transform* transform) {};
+        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) { return true; };
+        virtual void RemoveCallback() {};
         virtual void SetData(void* data) {};
         virtual void DeleteData() {};
         virtual bool UnkFunc5() { return true; };

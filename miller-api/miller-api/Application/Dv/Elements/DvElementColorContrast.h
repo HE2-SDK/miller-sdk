@@ -42,8 +42,8 @@ namespace app::dv{
         int framesOnScreen;
         bool jobGenerated;
 
-        virtual void Update(int currentFrame, csl::math::Transform transform) override;
-        virtual void* RemoveCallback() override;
+        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
+        virtual void RemoveCallback() override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementColorContrast)
     };

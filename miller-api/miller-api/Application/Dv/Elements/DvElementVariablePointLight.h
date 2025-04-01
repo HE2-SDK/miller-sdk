@@ -27,9 +27,9 @@ namespace app::dv{
 
         hh::fnd::Reference<hh::game::GameObject> lightHandle;
 
-        virtual void Update(int currentFrame, csl::math::Transform transform) override;
-        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
-        virtual void* RemoveCallback() override;
+        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) override;
+        virtual void RemoveCallback() override;
         virtual void UnkFunc6(int currentFrame, csl::math::Transform transform) override;
         virtual void OnDataUpdated() override;
         virtual void OnDataDeleted() override;

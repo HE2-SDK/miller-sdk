@@ -14,9 +14,9 @@ namespace app::dv{
         bool messageSent;
         int unkHandle;
 
-        virtual void Update(int currentFrame, csl::math::Transform transform) override;
-        virtual bool AddCallback(int currentFrame, csl::math::Transform transform) override;
-        virtual void* RemoveCallback() override;
+        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) override;
+        virtual void RemoveCallback() override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementChangeTimeScale)
     };

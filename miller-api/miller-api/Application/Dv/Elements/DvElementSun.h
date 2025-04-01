@@ -15,7 +15,7 @@ namespace app::dv{
         hh::needle::FxAtmosphereParameter* fxAtmosphereParam;
         float rotation;
 
-        virtual void Update(int currentFrame, csl::math::Transform transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementSun)
     };
