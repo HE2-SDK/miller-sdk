@@ -3,8 +3,14 @@
 namespace hh::physics {
     class GOCCylinderCollider : public GOCCollider {
     public:
-        float radius;
-        float halfHeight;
+        struct SetupInfo : GOCCollider::SetupInfo {
+            float radius{};
+            float halfHeight{};
+
+            SetupInfo() : GOCCollider::SetupInfo{ ColliShape::Type::CYLINDER } {}
+        };
+
+        SetupInfo setupInfo;
 
 		virtual void* GetRuntimeTypeInfo() const override;
         virtual void GetShape(ColliShape& shape) const override;

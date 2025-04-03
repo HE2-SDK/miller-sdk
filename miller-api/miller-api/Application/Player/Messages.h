@@ -22,4 +22,13 @@ namespace app::player {
 
         MsgReplayCommand(Command command) : fnd::AppMessageCustom<MsgReplayCommand>{ hh::fnd::MessageID::REPLAY_COMMAND }, command{ command } {}
     };
+
+    class MsgDead : public fnd::AppMessage<MsgDead> {
+    public:
+        uint32_t unk1{};
+        float unk2{ -1.0f };
+        short unk3{ -1 };
+
+        MsgDead() : fnd::AppMessage<MsgDead>{ hh::fnd::MessageID::DEAD } {}
+    };
 }

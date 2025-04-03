@@ -518,6 +518,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Graphics/ResProbe.h"
 #include "Hedgehog/Graphics/ResDecal.h"
 #include "Hedgehog/Graphics/ResVertexAnimationTexture.h"
+#include "Hedgehog/Graphics/ResPointcloud.h"
 #include "Hedgehog/Graphics/ResOcclusionCapsule.h"
 #include "Hedgehog/Graphics/GOCVisual.h"
 #include "Hedgehog/Graphics/GOCVisualTransformed.h"

@@ -42,7 +42,7 @@ namespace hh::fnd {
             virtual void HFrameUpdatedCallback(const HFrame* frame, bool unkParam) {}
         };
 
-        enum class Flag : unsigned short {
+        enum Flag : unsigned short {
             DIRTY = (1 << 0),
             CHILD_DIRTY = (1 << 1),
             UPDATE = (1 << 2),

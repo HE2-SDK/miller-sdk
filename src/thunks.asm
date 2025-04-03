@@ -60475,23 +60475,18 @@ PUBLIC ??_DNVMeFileSystemNull@fnd@hh@@QEAAXXZ
     mov rax, 0140bea920h
     jmp rax
 
+PUBLIC ?OpenFile@FileSystem@fnd@hh@@UEAA_KAEBVUri@23@@Z
+?OpenFile@FileSystem@fnd@hh@@UEAA_KAEBVUri@23@@Z:
+    mov rax, 0140bea9d0h
+    jmp rax
+
 PUBLIC ?Delete@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z
 ?Delete@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z:
     mov rax, 0140bea9d0h
     jmp rax
 
-PUBLIC ?UnkFunc18@FileSystem@fnd@hh@@UEAA_K_K@Z
-?UnkFunc18@FileSystem@fnd@hh@@UEAA_K_K@Z:
-    mov rax, 0140bea9d0h
-    jmp rax
-
 PUBLIC ?DeleteByPath@FileSystem@fnd@hh@@UEAA_NPEBD@Z
 ?DeleteByPath@FileSystem@fnd@hh@@UEAA_NPEBD@Z:
-    mov rax, 0140beaa00h
-    jmp rax
-
-PUBLIC ?UnkFunc19@FileSystem@fnd@hh@@UEAA_NPEBD@Z
-?UnkFunc19@FileSystem@fnd@hh@@UEAA_NPEBD@Z:
     mov rax, 0140beaa00h
     jmp rax
 
@@ -60515,18 +60510,13 @@ PUBLIC ?IsDirectory@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z
     mov rax, 0140bead40h
     jmp rax
 
-PUBLIC ?UnkFunc24@FileSystem@fnd@hh@@UEAA_K_K@Z
-?UnkFunc24@FileSystem@fnd@hh@@UEAA_K_K@Z:
-    mov rax, 0140bead40h
+PUBLIC ?UnkFunc17@FileSystem@fnd@hh@@UEAA_N_K@Z
+?UnkFunc17@FileSystem@fnd@hh@@UEAA_N_K@Z:
+    mov rax, 0140bead70h
     jmp rax
 
 PUBLIC ?IsDirectoryByPath@FileSystem@fnd@hh@@UEAA_NPEBD@Z
 ?IsDirectoryByPath@FileSystem@fnd@hh@@UEAA_NPEBD@Z:
-    mov rax, 0140bead70h
-    jmp rax
-
-PUBLIC ?UnkFunc25@FileSystem@fnd@hh@@UEAA_KPEBD@Z
-?UnkFunc25@FileSystem@fnd@hh@@UEAA_KPEBD@Z:
     mov rax, 0140bead70h
     jmp rax
 
@@ -60535,18 +60525,8 @@ PUBLIC ?IsFile@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z
     mov rax, 0140beaee0h
     jmp rax
 
-PUBLIC ?UnkFunc22@FileSystem@fnd@hh@@UEAA_K_K@Z
-?UnkFunc22@FileSystem@fnd@hh@@UEAA_K_K@Z:
-    mov rax, 0140beaee0h
-    jmp rax
-
 PUBLIC ?IsFileByPath@FileSystem@fnd@hh@@UEAA_NPEBD@Z
 ?IsFileByPath@FileSystem@fnd@hh@@UEAA_NPEBD@Z:
-    mov rax, 0140beaf10h
-    jmp rax
-
-PUBLIC ?UnkFunc23@FileSystem@fnd@hh@@UEAA_KPEBD@Z
-?UnkFunc23@FileSystem@fnd@hh@@UEAA_KPEBD@Z:
     mov rax, 0140beaf10h
     jmp rax
 
@@ -60555,18 +60535,8 @@ PUBLIC ?UnkFunc7@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z
     mov rax, 0140beb080h
     jmp rax
 
-PUBLIC ?UnkFunc7@FileSystem@fnd@hh@@UEAA_K_K@Z
-?UnkFunc7@FileSystem@fnd@hh@@UEAA_K_K@Z:
-    mov rax, 0140beb080h
-    jmp rax
-
 PUBLIC ?UnkFunc7a@FileSystem@fnd@hh@@UEAA_NPEBD@Z
 ?UnkFunc7a@FileSystem@fnd@hh@@UEAA_NPEBD@Z:
-    mov rax, 0140beb0b0h
-    jmp rax
-
-PUBLIC ?UnkFunc7a@FileSystem@fnd@hh@@UEAA_N_K@Z
-?UnkFunc7a@FileSystem@fnd@hh@@UEAA_N_K@Z:
     mov rax, 0140beb0b0h
     jmp rax
 
@@ -60575,28 +60545,18 @@ PUBLIC ?UnkFunc3@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z
     mov rax, 0140beb240h
     jmp rax
 
-PUBLIC ?UnkFunc3@FileSystem@fnd@hh@@UEAA_K_K@Z
-?UnkFunc3@FileSystem@fnd@hh@@UEAA_K_K@Z:
-    mov rax, 0140beb240h
-    jmp rax
-
 PUBLIC ?UnkFunc4@FileSystem@fnd@hh@@UEAA_NPEBD@Z
 ?UnkFunc4@FileSystem@fnd@hh@@UEAA_NPEBD@Z:
     mov rax, 0140beb270h
     jmp rax
 
-PUBLIC ?UnkFunc4@FileSystem@fnd@hh@@UEAA_N_K@Z
-?UnkFunc4@FileSystem@fnd@hh@@UEAA_N_K@Z:
-    mov rax, 0140beb270h
+PUBLIC ?UnkFunc12@FileSystem@fnd@hh@@UEAA_K_K0@Z
+?UnkFunc12@FileSystem@fnd@hh@@UEAA_K_K0@Z:
+    mov rax, 0140beb400h
     jmp rax
 
 PUBLIC ?ListDirectory@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@AEAVFileSet@23@@Z
 ?ListDirectory@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@AEAVFileSet@23@@Z:
-    mov rax, 0140beb400h
-    jmp rax
-
-PUBLIC ?UnkFunc14@FileSystem@fnd@hh@@UEAA_K_K0@Z
-?UnkFunc14@FileSystem@fnd@hh@@UEAA_K_K0@Z:
     mov rax, 0140beb400h
     jmp rax
 
@@ -60615,28 +60575,13 @@ PUBLIC ?CreateDirectoryA@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z
     mov rax, 0140beb5b0h
     jmp rax
 
-PUBLIC ?UnkFunc16@FileSystem@fnd@hh@@UEAA_K_K@Z
-?UnkFunc16@FileSystem@fnd@hh@@UEAA_K_K@Z:
-    mov rax, 0140beb5b0h
-    jmp rax
-
 PUBLIC ?CreateDirectoryByPath@FileSystem@fnd@hh@@UEAA_NPEBD@Z
 ?CreateDirectoryByPath@FileSystem@fnd@hh@@UEAA_NPEBD@Z:
     mov rax, 0140beb5e0h
     jmp rax
 
-PUBLIC ?UnkFunc17@FileSystem@fnd@hh@@UEAA_N_K@Z
-?UnkFunc17@FileSystem@fnd@hh@@UEAA_N_K@Z:
-    mov rax, 0140beb5e0h
-    jmp rax
-
 PUBLIC ?UnkFunc5@FileSystem@fnd@hh@@UEAAIAEBVUri@23@@Z
 ?UnkFunc5@FileSystem@fnd@hh@@UEAAIAEBVUri@23@@Z:
-    mov rax, 0140beb770h
-    jmp rax
-
-PUBLIC ?UnkFunc5@FileSystem@fnd@hh@@UEAA_K_K@Z
-?UnkFunc5@FileSystem@fnd@hh@@UEAA_K_K@Z:
     mov rax, 0140beb770h
     jmp rax
 
@@ -60650,28 +60595,13 @@ PUBLIC ?OpenFileForReading@FileSystem@fnd@hh@@UEAAPEAVStreamReader@23@AEBVUri@23
     mov rax, 0140beb920h
     jmp rax
 
-PUBLIC ?OpenFile@FileSystem@fnd@hh@@UEAA_KAEBVUri@23@@Z
-?OpenFile@FileSystem@fnd@hh@@UEAA_KAEBVUri@23@@Z:
-    mov rax, 0140beb920h
-    jmp rax
-
 PUBLIC ?OpenFileForReadingByPath@FileSystem@fnd@hh@@UEAAPEAVStreamReader@23@PEBD@Z
 ?OpenFileForReadingByPath@FileSystem@fnd@hh@@UEAAPEAVStreamReader@23@PEBD@Z:
     mov rax, 0140beb950h
     jmp rax
 
-PUBLIC ?UnkFunc8@FileSystem@fnd@hh@@UEAA_KPEBD@Z
-?UnkFunc8@FileSystem@fnd@hh@@UEAA_KPEBD@Z:
-    mov rax, 0140beb950h
-    jmp rax
-
 PUBLIC ?OpenFileForWriting@FileSystem@fnd@hh@@UEAAPEAVStreamWriter@23@AEBVUri@23@PEAVIAllocator@2csl@@@Z
 ?OpenFileForWriting@FileSystem@fnd@hh@@UEAAPEAVStreamWriter@23@AEBVUri@23@PEAVIAllocator@2csl@@@Z:
-    mov rax, 0140bebad0h
-    jmp rax
-
-PUBLIC ?UnkFunc12@FileSystem@fnd@hh@@UEAA_K_K0@Z
-?UnkFunc12@FileSystem@fnd@hh@@UEAA_K_K0@Z:
     mov rax, 0140bebad0h
     jmp rax
 
@@ -60687,11 +60617,6 @@ PUBLIC ?OpenFileForWritingByPath@FileSystem@fnd@hh@@UEAAPEAVStreamWriter@23@PEBD
 
 PUBLIC ?Rename@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@0@Z
 ?Rename@FileSystem@fnd@hh@@UEAA_NAEBVUri@23@0@Z:
-    mov rax, 0140bebc80h
-    jmp rax
-
-PUBLIC ?UnkFunc20@FileSystem@fnd@hh@@UEAA_K_K0@Z
-?UnkFunc20@FileSystem@fnd@hh@@UEAA_K_K0@Z:
     mov rax, 0140bebc80h
     jmp rax
 
@@ -61607,11 +61532,6 @@ PUBLIC ?CreateDirectoryA@IFileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z
 
 PUBLIC ?CreateDirectoryRecursively@IFileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z
 ?CreateDirectoryRecursively@IFileSystem@fnd@hh@@UEAA_NAEBVUri@23@@Z:
-    mov rax, 0140c11a50h
-    jmp rax
-
-PUBLIC ?UnkFunc26@IFileSystem@fnd@hh@@UEAA_K_K@Z
-?UnkFunc26@IFileSystem@fnd@hh@@UEAA_K_K@Z:
     mov rax, 0140c11a50h
     jmp rax
 
