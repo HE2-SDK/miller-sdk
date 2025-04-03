@@ -10,7 +10,8 @@ namespace hh::physics {
             SetupInfo() : GOCCollider::SetupInfo{ ColliShape::Type::CYLINDER } {}
         };
 
-        SetupInfo setupInfo;
+        float radius{};
+        float halfHeight{};
 
 		virtual void* GetRuntimeTypeInfo() const override;
         virtual void GetShape(ColliShape& shape) const override;

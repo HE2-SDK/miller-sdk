@@ -10,6 +10,7 @@ namespace hh::game{
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void OnAddedToGame() override;
 		virtual void OnRemovedFromGame() override;
+		virtual void PostStepCallback(game::GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;
 
         GAMESERVICE_CLASS_DECLARATION(VibrationManager)
     };

@@ -14914,7 +14914,6 @@
 140823110,??_Dexception@std@@QEAAXXZ,1
 140823110,??_Dbad_exception@std@@QEAAXXZ,1
 140823110,??_Dbad_alloc@std@@QEAAXXZ,1
-140829f80,?what@exception@std@@UEBAPEBDXZ,1
 14082c5e0,?GetUpdateTiming@DvNodeBase@dv@hh@@UEAAHXZ,1
 140830530,?UnkFunc9@Unk7@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ,1
 140830530,?UnkFunc10@ProfileElementAccessor@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ,1
@@ -16511,7 +16510,7 @@
 140a3a100,?GetClass@GOCActivator@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ,0
 140a3a110,??0WorldObjectStatus@game@hh@@QEAA@XZ,1
 140a3a150,j_??_DVibrationManager@game@hh@@QEAAXXZ,1
-140a3a390,?PostStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z,1
+140a3a390,?PostStepCallback@VibrationManager@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z,1
 140a3a480,?GetRuntimeTypeInfo@VibrationManager@game@hh@@UEBAPEAXXZ,1
 140a3a510,j_?Create@VibrationManager@services@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 140a3a510,j_?Create@VibrationManager@game@hh@@CAPEAVGameService@23@PEAVIAllocator@fnd@csl@@@Z,1
