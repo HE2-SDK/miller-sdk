@@ -15,8 +15,8 @@ namespace app::dv{
         void* unk1;
         void* unk2;
 
-        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
-        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform& transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
         virtual void OnDataUpdated() override;
         virtual void OnDataDeleted() override;
 

@@ -20,8 +20,8 @@ namespace hh::dv{
         int unk8;
         char unk9;
 
-        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
-        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform& transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
         virtual void SetData(void* data) override;
 

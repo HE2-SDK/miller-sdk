@@ -34,7 +34,7 @@ namespace hh::dv{
         csl::math::Vector4 unk5;
         char unk6;
 
-        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
         virtual void SetData(void* data) override;
 

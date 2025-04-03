@@ -51,8 +51,8 @@ namespace hh::dv{
         int unk1;
         UnkStruct unk2;
 
-        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
-        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform& transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
         virtual void SetData(void* data) override;
 

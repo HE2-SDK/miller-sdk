@@ -19,7 +19,7 @@ namespace app::dv{
 
         hh::fnd::Reference<hh::game::GameObject> uiBossNameObject;
 
-        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementBossName)
     };

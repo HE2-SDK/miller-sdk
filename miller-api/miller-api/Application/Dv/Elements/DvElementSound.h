@@ -19,8 +19,8 @@ namespace app::dv{
         csl::ut::MoveArray32<void*> unkArray;
         short unk1;
 
-        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
-        virtual bool AddCallback(int currentFrame, csl::math::Transform* transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform& transform) override;
+        virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
         virtual void AppUnkFunc2() override;
         virtual void* AppUnkFunc3(void* unk0, unsigned int unk1) override;

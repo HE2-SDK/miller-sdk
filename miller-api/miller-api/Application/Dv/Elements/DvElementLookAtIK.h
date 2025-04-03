@@ -18,7 +18,7 @@ namespace app::dv{
             float curveData[64];
         };
 
-        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
         virtual void* AppUnkFunc3(void* unk0, unsigned int unk1) override;
 

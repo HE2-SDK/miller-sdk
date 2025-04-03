@@ -21,7 +21,7 @@ namespace hh::dv{
         Data binaryData;
         hh::fnd::ManagedResource* vatAnimRes; // hasn't been reversed
 
-        virtual void Update(int currentFrame, csl::math::Transform* transform) override;
+        virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
         virtual void SetData(void* data) override;
 
