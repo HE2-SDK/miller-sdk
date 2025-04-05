@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementAuraRoad : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             int unk0;
             float curveData0[32];

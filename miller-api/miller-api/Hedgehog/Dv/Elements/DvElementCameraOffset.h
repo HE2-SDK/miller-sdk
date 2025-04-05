@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementCameraOffset : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             bool disabled;
             csl::math::Position finishOffsetPosition;
@@ -12,7 +12,7 @@ namespace hh::dv{
             float curveData[256];
         };
 
-        Data binaryData;
+        Description binaryData;
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual void SetData(void* data) override;

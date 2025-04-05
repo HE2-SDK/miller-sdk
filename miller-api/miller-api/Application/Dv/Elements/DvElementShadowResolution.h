@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementShadowResolution : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             int width;
             int height;

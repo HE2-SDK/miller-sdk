@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementChangeTimeScale : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             bool unkEnabled;
             float timeScale;

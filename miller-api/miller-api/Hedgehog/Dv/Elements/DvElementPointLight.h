@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementPointLight : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             struct Parameters {
             public:
@@ -34,7 +34,7 @@ namespace hh::dv{
             float curveData[128];
         };
 
-        Data binaryData;
+        Description binaryData;
         hh::fnd::Reference<hh::game::GameObject> light;
         
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;

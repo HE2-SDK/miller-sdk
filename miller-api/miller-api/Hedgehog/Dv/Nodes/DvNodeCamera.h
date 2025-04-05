@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvNodeCamera : public DvNodeBase {
     public:
-        struct Data {
+        struct Description : DvNodeBase::Description {
             int flags;
             int frameProgressionCount;
             int captionCount;
@@ -20,7 +20,7 @@ namespace hh::dv{
             hh::gfnd::ViewportData::FovProjectionParameters fovProjectionParams;
         };
 
-        Data binaryData;
+        Description binaryData;
         hh::game::CameraComponent* camComponent;
         int unk3;
         int unk4;
@@ -37,7 +37,7 @@ namespace hh::dv{
         csl::math::Vector4 unk12;
         char unk13;
 
-        virtual void Setup(void* setupInfo) override;
+        virtual void Setup(DvNodeBase::Description& description) override;
         virtual void Start() override;
         virtual void Update(int currentFrame) override;
         virtual void PostStepUpdate(int currentFrame) override;

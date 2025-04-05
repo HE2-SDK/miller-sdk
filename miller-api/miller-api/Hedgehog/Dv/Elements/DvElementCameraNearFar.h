@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementCameraNearFar : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             enum class Flags : unsigned int {
                 DISABLED_NEAR_CLIP,
@@ -16,7 +16,7 @@ namespace hh::dv{
             int unk1[5];
         };
 
-        Data binaryData;
+        Description binaryData;
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual void SetData(void* data) override;

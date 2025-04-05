@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementCameraHedgehog : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             struct Camera {
             public:
@@ -46,7 +46,7 @@ namespace hh::dv{
             uint32_t dword_88;
         };
 
-        Data binaryData;
+        Description binaryData;
         void* unk0;
         int unk1;
         UnkStruct unk2;

@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementPbaReset : public AppDvElementBase{
     public:
-        struct Data { };
+        struct Description : hh::dv::DvElementBase::Description { };
 
         hh::dv::DvNodeBaseAnimationModel* dvMdl;
 

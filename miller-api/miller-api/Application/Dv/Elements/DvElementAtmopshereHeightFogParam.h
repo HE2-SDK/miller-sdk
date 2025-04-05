@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementAtmosphereHeightFogParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
           int int0;
           int int4;

@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementBulletTime : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             int type;
             int unk0;

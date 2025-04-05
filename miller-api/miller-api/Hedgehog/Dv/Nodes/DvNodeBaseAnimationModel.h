@@ -7,7 +7,7 @@ namespace app::dv{
 namespace hh::dv{
     class DvNodeBaseAnimationModel : public DvNodeBase{
     public:
-        struct Data {
+        struct Description : DvNodeBase::Description {
             bool useName3;
         private:
             char padding[3];
@@ -23,7 +23,7 @@ namespace hh::dv{
             HIDDEN
         };
 
-        Data binaryData;
+        Description binaryData;
         app::dv::AppDvSceneObjectBase* nodeCharacterObj;
         csl::ut::Bitset<Flags> mdlFlags;
         int maybeHandle0;
@@ -33,7 +33,7 @@ namespace hh::dv{
         csl::ut::MoveArray<const char*> unk2;
         char unk3;
 
-        virtual void Setup(void* setupInfo) override;
+        virtual void Setup(DvNodeBase::Description& description) override;
         virtual void Start() override;
         virtual void PostStepUpdate(int currentFrame) override;
         virtual bool IsUnkFlag0() override;

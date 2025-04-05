@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementTimeStop : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             int type;
             int unk0;

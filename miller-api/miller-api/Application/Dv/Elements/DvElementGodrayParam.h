@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementGodrayParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             float color[3];
             float intensity;

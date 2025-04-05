@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementOpeningLogo : public AppDvElementBase{
     public:
-        struct Data {};
+        struct Description : hh::dv::DvElementBase::Description {};
 
         hh::fnd::Reference<hh::game::GameObject> handle;
 

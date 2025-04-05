@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementMaterialParam : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             enum class Flags : unsigned int {
                 PARAM_X,
@@ -20,10 +20,10 @@ namespace hh::dv{
             float curveData[32];
         };
 
-        Data binaryData;
+        Description binaryData;
         csl::ut::VariableString materialName;
         csl::ut::VariableString paramName;
-        csl::ut::Bitset<Data::Flags> flags;
+        csl::ut::Bitset<Description::Flags> flags;
         int64_t unk1;
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;

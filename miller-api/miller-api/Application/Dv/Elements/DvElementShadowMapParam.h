@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementShadowMapParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             enum class ShadowFilter : unsigned int {
                 SHADOW_FILTER_POINT,

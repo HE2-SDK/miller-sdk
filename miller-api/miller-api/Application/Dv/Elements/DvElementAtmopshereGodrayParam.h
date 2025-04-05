@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementAtmosphereGodrayParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             bool enabled;
             float density;

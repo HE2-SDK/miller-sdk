@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementOverrideASM : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
             char asmName[64];
             char asmNameTarget[64];
         };

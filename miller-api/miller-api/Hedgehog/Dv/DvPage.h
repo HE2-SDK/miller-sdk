@@ -11,12 +11,14 @@ namespace hh::dv{
 
     class DvPageConditionBase : public fnd::ReferencedObject{
     public:
+        struct Description {};
+
         DvPageTransition* transition;
         int idx;
         int unk3;
         DvPageConditionBase* unkCondition;
 
-        virtual void Setup(void* setupInfo) {};
+        virtual void Setup(Description& description) {};
         virtual void UnkFunc1() {};
         virtual void UnkFunc2() {};
         virtual void UnkFunc3() {};
@@ -30,14 +32,14 @@ namespace hh::dv{
 
     class DvPageTransition : public fnd::ReferencedObject{
     public:
-        struct Data{
+        struct Description{
             int destinationPageID;
             int conditionCount;
             int64_t conditionSize;
         };
 
         DvPage* page;
-        Data binaryData;
+        Description binaryData;
         DvPageConditionBase* condition;
 
         DvPageTransition(csl::fnd::IAllocator* allocator);
@@ -45,7 +47,7 @@ namespace hh::dv{
 
     class DvPage : public fnd::ReferencedObject{
     public:
-        struct Data{
+        struct Description{
             int64_t unk0;
             int start;
             int end;
@@ -59,7 +61,7 @@ namespace hh::dv{
         };
 
         DvSceneControl* dvSceneControl;
-        Data binaryData;
+        Description binaryData;
         csl::ut::MoveArray<DvPageTransition*> transitions;
         int framesTakenToLoad;
         int unk2;

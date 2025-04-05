@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementSSAOParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             enum class SSAOType : unsigned int {
                 SSAO,

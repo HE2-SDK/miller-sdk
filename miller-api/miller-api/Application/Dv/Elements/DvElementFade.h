@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementFade : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             bool enabled;
             int r;

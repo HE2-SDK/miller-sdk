@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvNodeCharacterMotion : public DvNodeBase {
     public:
-        struct Data {
+        struct Description : DvNodeBase::Description {
         public:
             enum class Flags : unsigned int {
                 UNK0,
@@ -24,7 +24,7 @@ namespace hh::dv{
             int unk4;
         };
 
-        Data binaryData;
+        Description binaryData;
         int unk1;
         int unk2;
         int unk3;
@@ -33,7 +33,7 @@ namespace hh::dv{
         csl::math::Transform transform1;
         float unk5;
 
-        virtual void Setup(void* setupInfo) override;
+        virtual void Setup(DvNodeBase::Description& description) override;
         virtual void Start() override;
         virtual void Update(int currentFrame) override;
         virtual int GetUpdateTiming() override;

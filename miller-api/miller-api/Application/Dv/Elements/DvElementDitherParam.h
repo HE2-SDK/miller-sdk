@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementDitherParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             float grassDitherStart;
             float grassDitherEnd;

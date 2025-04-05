@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementCrossFade : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             bool curveEnabled;
             int unk1;

@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementEffect : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             enum class EffectTransType : unsigned int {
                 NODE,
@@ -44,7 +44,7 @@ namespace hh::dv{
             LOADED
         };
 
-        Data binaryData;
+        Description binaryData;
         eff::EffectHandle effectHandle;
         csl::ut::Bitset<EffectHandleFlags> effectHandleFlags;
         DvNodeBase* parentNode;

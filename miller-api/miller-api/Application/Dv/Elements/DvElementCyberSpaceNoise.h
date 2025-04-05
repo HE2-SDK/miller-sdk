@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementCyberSpaceNoise : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             int unk0;
             float curveData[32];

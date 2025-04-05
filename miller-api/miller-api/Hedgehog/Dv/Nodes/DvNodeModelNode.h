@@ -3,16 +3,16 @@
 namespace hh::dv{
     class DvNodeModelNode : public DvNodeBase {
     public:
-        struct Data {
+        struct Description : DvNodeBase::Description {
             int field00;
             char nodeName[64];
             int padding[3];
         };
 
-        Data binaryData;
+        Description binaryData;
         int nodeID;
 
-        virtual void Setup(void* setupInfo) override;
+        virtual void Setup(DvNodeBase::Description& description) override;
         virtual void Update(int currentFrame) override;
         virtual int GetUpdateTiming() override;
 
