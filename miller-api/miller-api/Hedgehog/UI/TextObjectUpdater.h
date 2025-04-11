@@ -38,6 +38,7 @@ namespace hh::ui {
         void UnregisterListener(TextObjectUpdaterListener* listener);
         void SetLocalizationVariable(const char* name, const char* value);
         void SetLocalizationTag(const char* name);
+        void SetText(const char* text, unsigned int unkParam1);
         text::TagReplacer& GetTagReplacer();
     };
 }

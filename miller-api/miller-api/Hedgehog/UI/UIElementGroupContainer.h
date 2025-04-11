@@ -6,13 +6,15 @@
 
 namespace hh::ui {
     class UIElementGroupContainer : public UIElement {
+    public:
         void* unk101;
         csl::ut::InplaceMoveArray<UIElementGroupContainer*, 4> childContainers;
         csl::ut::StringMap<UIElementGroupContainer*> childContainersByName;
         csl::ut::InplaceMoveArray<UIElementGroup*, 8> elementGroups;
         csl::ut::StringMap<UIElementGroup*> elementGroupsByName;
-    public:
+
         UIElementGroupContainer(csl::fnd::IAllocator* pAllocator, GOCUIComposition* gocUIComposition, const char* name, void* unkParam);
+        UIElementGroupContainer* FindChildContainer(const char* name);
         UIElementGroup* FindGroup(const char* name);
         UIElement* FindElement(const char* name);
     };

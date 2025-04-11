@@ -38,7 +38,6 @@ namespace hh::dv {
         csl::ut::Bitset<Flags> flags;
         bool unkBool1;
 
-        virtual bool ProcessMessage(hh::fnd::Message& message) override;
 		virtual void AddCallback(hh::game::GameManager* gameManager) override;
 		virtual void RemoveCallback(hh::game::GameManager* gameManager) override;
         virtual void PreStepCallback(hh::game::GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;

@@ -13,6 +13,7 @@ namespace hh::ui {
         UITextElement(csl::fnd::IAllocator* pAllocator, SurfRide::Cast* cast, GOCUIComposition* uiComposition);
         void SetLocalizationVariable(const char* name, const char* value);
         void SetLocalizationTag(const char* tag);
+        void SetText(const char* text, unsigned int unkParam1);
         virtual void TOUL_UnkFunc1() override;
     };
 }

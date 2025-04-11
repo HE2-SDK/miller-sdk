@@ -2,6 +2,7 @@
 
 namespace hh::ui {
     class UIElementGroup : public UIElement, public game::InputListener, public UIElement::UIElementListener {
+    public:
         uint32_t unk101;
         csl::ut::MoveArray<UIElement*> elements;
         csl::ut::MoveArray<void*> unk103;
@@ -11,7 +12,7 @@ namespace hh::ui {
         uint32_t unk107;
         bool unk108;
         bool isCurrentGroup;
-    public:
+
         UIElementGroup(csl::fnd::IAllocator* pAllocator, SurfRide::Cast* cast, GOCUIComposition* gocUIComposition, uint32_t unkParam1);
         UIElement* FindElement(const char* name);
 
