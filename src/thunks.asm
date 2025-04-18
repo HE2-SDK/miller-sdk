@@ -51760,6 +51760,26 @@ PUBLIC ?OpenFileForWritingByPath@NVMeFileSystem@fnd@hh@@UEAAPEAVStreamWriter@23@
     mov rax, 0140815d50h
     jmp rax
 
+PUBLIC ?UnkFunc12@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc12@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?UnkFunc14@GOCPhysicalAnimation@pba@hh@@UEAAHXZ
+?UnkFunc14@GOCPhysicalAnimation@pba@hh@@UEAAHXZ:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?UnkFunc15@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc15@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?GetNumManifolds@GOCPhysicalAnimation@pba@hh@@UEAAHXZ
+?GetNumManifolds@GOCPhysicalAnimation@pba@hh@@UEAAHXZ:
+    mov rax, 0140815d50h
+    jmp rax
+
 PUBLIC ?GetTransitionType@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@34@XZ
 ?GetTransitionType@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAAEBW4TransitionType@34@XZ:
     mov rax, 0140818410h
@@ -57125,14 +57145,374 @@ PUBLIC ??_GResPhysicalSkeleton@resources@heur@@QEAAXXZ
     mov rax, 0140a75ce0h
     jmp rax
 
+PUBLIC ??_DResPhysicalSkeleton@pba@hh@@QEAAXXZ
+??_DResPhysicalSkeleton@pba@hh@@QEAAXXZ:
+    mov rax, 0140a75ce0h
+    jmp rax
+
 PUBLIC ?GetTypeInfo@ResPhysicalSkeleton@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 ?GetTypeInfo@ResPhysicalSkeleton@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ:
     mov rax, 0140a76150h
     jmp rax
 
+PUBLIC ?GetTypeInfo@ResPhysicalSkeleton@pba@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
+?GetTypeInfo@ResPhysicalSkeleton@pba@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
+    mov rax, 0140a76150h
+    jmp rax
+
+PUBLIC ?Load@ResPhysicalSkeleton@pba@hh@@UEAAXPEAX_K@Z
+?Load@ResPhysicalSkeleton@pba@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140a76160h
+    jmp rax
+
+PUBLIC ?Reload@ResPhysicalSkeleton@pba@hh@@UEAAXPEAX_K@Z
+?Reload@ResPhysicalSkeleton@pba@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140a76b80h
+    jmp rax
+
+PUBLIC ?Unload@ResPhysicalSkeleton@pba@hh@@UEAAXXZ
+?Unload@ResPhysicalSkeleton@pba@hh@@UEAAXXZ:
+    mov rax, 0140a76c40h
+    jmp rax
+
+PUBLIC ??_DGOCPhysicalAnimation@pba@hh@@QEAAXXZ
+??_DGOCPhysicalAnimation@pba@hh@@QEAAXXZ:
+    mov rax, 0140a77de0h
+    jmp rax
+
+PUBLIC ?AEL_UnkFunc2@GOCPhysicalAnimation@pba@hh@@UEAAXPEAX_N@Z
+?AEL_UnkFunc2@GOCPhysicalAnimation@pba@hh@@UEAAXPEAX_N@Z:
+    mov rax, 0140a77e40h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCPhysicalAnimation@pba@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCPhysicalAnimation@pba@hh@@UEBAPEAXXZ:
+    mov rax, 0140a78100h
+    jmp rax
+
+PUBLIC ?UnkFunc32@GOCPhysicalAnimation@pba@hh@@UEAAX_J00@Z
+?UnkFunc32@GOCPhysicalAnimation@pba@hh@@UEAAX_J00@Z:
+    mov rax, 0140a783d0h
+    jmp rax
+
+PUBLIC ?UnkFunc27@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z
+?UnkFunc27@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a78460h
+    jmp rax
+
+PUBLIC ?UnkFunc26@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z
+?UnkFunc26@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a78520h
+    jmp rax
+
+PUBLIC ?UnkFunc34@GOCPhysicalAnimation@pba@hh@@UEAAXH_J@Z
+?UnkFunc34@GOCPhysicalAnimation@pba@hh@@UEAAXH_J@Z:
+    mov rax, 0140a78710h
+    jmp rax
+
+PUBLIC ?UnkFunc31@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z
+?UnkFunc31@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140a78770h
+    jmp rax
+
+PUBLIC ?UnkFunc30@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z
+?UnkFunc30@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140a78790h
+    jmp rax
+
+PUBLIC ?UnkFunc25@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc25@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140a78aa0h
+    jmp rax
+
+PUBLIC ?OnGOCEvent@GOCPhysicalAnimation@pba@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z
+?OnGOCEvent@GOCPhysicalAnimation@pba@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z:
+    mov rax, 0140a78bb0h
+    jmp rax
+
+PUBLIC ?UnkFunc33@GOCPhysicalAnimation@pba@hh@@UEAAXH@Z
+?UnkFunc33@GOCPhysicalAnimation@pba@hh@@UEAAXH@Z:
+    mov rax, 0140a78ff0h
+    jmp rax
+
+PUBLIC ?UnkFunc29@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z
+?UnkFunc29@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140a790c0h
+    jmp rax
+
+PUBLIC ?UnkFunc28@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z
+?UnkFunc28@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a79330h
+    jmp rax
+
+PUBLIC ?UnkFunc24@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc24@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140a795b0h
+    jmp rax
+
+PUBLIC ?UnkFunc24@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc24@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a795b0h
+    jmp rax
+
 PUBLIC ?GetClass@GOCPhysicalAnimation@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCPhysicalAnimation@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 0140a79860h
+    jmp rax
+
+PUBLIC ?GetClass@GOCPhysicalAnimationBullet@pba@hh@@SAPEBVGOComponentClass@game@3@XZ
+?GetClass@GOCPhysicalAnimationBullet@pba@hh@@SAPEBVGOComponentClass@game@3@XZ:
+    mov rax, 0140a79860h
+    jmp rax
+
+PUBLIC ?UpdateAsync@GOCPhysicalAnimation@pba@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z
+?UpdateAsync@GOCPhysicalAnimation@pba@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z:
+    mov rax, 0140a79870h
+    jmp rax
+
+PUBLIC ?UnkFunc11@GOCPhysicalAnimationBullet@pba@hh@@UEAAHXZ
+?UnkFunc11@GOCPhysicalAnimationBullet@pba@hh@@UEAAHXZ:
+    mov rax, 0140a7aaa0h
+    jmp rax
+
+PUBLIC ?UnkFunc11@GOCPhysicalAnimationBullet@pba@hh@@UEAAH_J0@Z
+?UnkFunc11@GOCPhysicalAnimationBullet@pba@hh@@UEAAH_J0@Z:
+    mov rax, 0140a7aaa0h
+    jmp rax
+
+PUBLIC ?UnkFunc3@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc3@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7c330h
+    jmp rax
+
+PUBLIC ?UnkFunc1@GOCPhysicalAnimation@pba@hh@@UEAA_NXZ
+?UnkFunc1@GOCPhysicalAnimation@pba@hh@@UEAA_NXZ:
+    mov rax, 0140a7c360h
+    jmp rax
+
+PUBLIC ?UnkFunc1@GOCPhysicalAnimationBullet@pba@hh@@UEAA_NXZ
+?UnkFunc1@GOCPhysicalAnimationBullet@pba@hh@@UEAA_NXZ:
+    mov rax, 0140a7c360h
+    jmp rax
+
+PUBLIC ?UnkFunc1@GOCPhysicalAnimationBullet@pba@hh@@UEAA_N_J0N@Z
+?UnkFunc1@GOCPhysicalAnimationBullet@pba@hh@@UEAA_N_J0N@Z:
+    mov rax, 0140a7c360h
+    jmp rax
+
+PUBLIC ?UnkFunc14@GOCPhysicalAnimationBullet@pba@hh@@UEAAHXZ
+?UnkFunc14@GOCPhysicalAnimationBullet@pba@hh@@UEAAHXZ:
+    mov rax, 0140a7c450h
+    jmp rax
+
+PUBLIC ?GetNumManifolds@GOCPhysicalAnimationBullet@pba@hh@@UEAAHXZ
+?GetNumManifolds@GOCPhysicalAnimationBullet@pba@hh@@UEAAHXZ:
+    mov rax, 0140a7c450h
+    jmp rax
+
+PUBLIC ?UnkFunc12@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc12@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7c500h
+    jmp rax
+
+PUBLIC ?UnkFunc15@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc15@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7c520h
+    jmp rax
+
+PUBLIC ?UnkFunc2@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc2@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7c530h
+    jmp rax
+
+PUBLIC ?UnkFunc6@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc6@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7c540h
+    jmp rax
+
+PUBLIC ?UnkFunc0@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc0@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7c550h
+    jmp rax
+
+PUBLIC ?UnkFunc0@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0N@Z
+?UnkFunc0@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0N@Z:
+    mov rax, 0140a7c550h
+    jmp rax
+
+PUBLIC ?UnkFunc9@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc9@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7c930h
+    jmp rax
+
+PUBLIC ?UnkFunc9@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z
+?UnkFunc9@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a7c930h
+    jmp rax
+
+PUBLIC ?UnkFunc7@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc7@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7cc00h
+    jmp rax
+
+PUBLIC ?UnkFunc7@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z
+?UnkFunc7@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a7cc00h
+    jmp rax
+
+PUBLIC ?UnkFunc32@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J00@Z
+?UnkFunc32@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J00@Z:
+    mov rax, 0140a7dd50h
+    jmp rax
+
+PUBLIC ?UnkFunc27@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z
+?UnkFunc27@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a7de60h
+    jmp rax
+
+PUBLIC ?UnkFunc26@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z
+?UnkFunc26@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a7e100h
+    jmp rax
+
+PUBLIC ?UnkFunc34@GOCPhysicalAnimationBullet@pba@hh@@UEAAXH_J@Z
+?UnkFunc34@GOCPhysicalAnimationBullet@pba@hh@@UEAAXH_J@Z:
+    mov rax, 0140a7e5f0h
+    jmp rax
+
+PUBLIC ?UnkFunc31@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z
+?UnkFunc31@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140a7e8b0h
+    jmp rax
+
+PUBLIC ?UnkFunc23@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc23@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7ec70h
+    jmp rax
+
+PUBLIC ?UnkFunc23@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z
+?UnkFunc23@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140a7ec70h
+    jmp rax
+
+PUBLIC ?UnkFunc30@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z
+?UnkFunc30@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140a7ee10h
+    jmp rax
+
+PUBLIC ?UnkFunc25@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc25@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7f7c0h
+    jmp rax
+
+PUBLIC ?UnkFunc20@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc20@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7f9f0h
+    jmp rax
+
+PUBLIC ?UnkFunc19@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc19@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a7fa40h
+    jmp rax
+
+PUBLIC ?UnkFunc19@GOCPhysicalAnimationBullet@pba@hh@@UEAAXH@Z
+?UnkFunc19@GOCPhysicalAnimationBullet@pba@hh@@UEAAXH@Z:
+    mov rax, 0140a7fa40h
+    jmp rax
+
+PUBLIC ?UnkFunc33@GOCPhysicalAnimationBullet@pba@hh@@UEAAXH@Z
+?UnkFunc33@GOCPhysicalAnimationBullet@pba@hh@@UEAAXH@Z:
+    mov rax, 0140a7fa50h
+    jmp rax
+
+PUBLIC ?UnkFunc29@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z
+?UnkFunc29@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140a7fb50h
+    jmp rax
+
+PUBLIC ?UnkFunc28@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z
+?UnkFunc28@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a7fc90h
+    jmp rax
+
+PUBLIC ?UnkFunc21@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc21@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a80300h
+    jmp rax
+
+PUBLIC ?UnkFunc22@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc22@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a80330h
+    jmp rax
+
+PUBLIC ?UnkFunc22@GOCPhysicalAnimationBullet@pba@hh@@UEAAXN@Z
+?UnkFunc22@GOCPhysicalAnimationBullet@pba@hh@@UEAAXN@Z:
+    mov rax, 0140a80330h
+    jmp rax
+
+PUBLIC ?PBAUpdate@GOCPhysicalAnimationBullet@pba@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z
+?PBAUpdate@GOCPhysicalAnimationBullet@pba@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z:
+    mov rax, 0140a803d0h
+    jmp rax
+
+PUBLIC ?UnkFunc4@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc4@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a80c90h
+    jmp rax
+
+PUBLIC ?UnkFunc4@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z
+?UnkFunc4@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140a80c90h
+    jmp rax
+
+PUBLIC ?UnkFunc5@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc5@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a80cc0h
+    jmp rax
+
+PUBLIC ?UnkFunc5@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z
+?UnkFunc5@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140a80cc0h
+    jmp rax
+
+PUBLIC ?UnkFunc13@GOCPhysicalAnimation@pba@hh@@UEAAHXZ
+?UnkFunc13@GOCPhysicalAnimation@pba@hh@@UEAAHXZ:
+    mov rax, 0140a81080h
+    jmp rax
+
+PUBLIC ?UnkFunc13@GOCPhysicalAnimationBullet@pba@hh@@UEAAHXZ
+?UnkFunc13@GOCPhysicalAnimationBullet@pba@hh@@UEAAHXZ:
+    mov rax, 0140a81080h
+    jmp rax
+
+PUBLIC ?UnkFunc13@GOCPhysicalAnimationBullet@pba@hh@@UEAAHH@Z
+?UnkFunc13@GOCPhysicalAnimationBullet@pba@hh@@UEAAHH@Z:
+    mov rax, 0140a81080h
+    jmp rax
+
+PUBLIC ?SetNumberOfBulletPhysIterations@GOCPhysicalAnimationBullet@pba@hh@@UEAAXH@Z
+?SetNumberOfBulletPhysIterations@GOCPhysicalAnimationBullet@pba@hh@@UEAAXH@Z:
+    mov rax, 0140a81080h
+    jmp rax
+
+PUBLIC ?UnkFunc10@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc10@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a810a0h
+    jmp rax
+
+PUBLIC ?UnkFunc10@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_JD@Z
+?UnkFunc10@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_JD@Z:
+    mov rax, 0140a810a0h
+    jmp rax
+
+PUBLIC ?UnkFunc8@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc8@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 0140a814c0h
+    jmp rax
+
+PUBLIC ?UnkFunc8@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_JD@Z
+?UnkFunc8@GOCPhysicalAnimationBullet@pba@hh@@UEAAX_JD@Z:
+    mov rax, 0140a814c0h
     jmp rax
 
 PUBLIC ?GetTypeInfo@ResDvScene@resources@heur@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
@@ -60023,6 +60403,11 @@ PUBLIC ?UnkFunc10@?$GOCPlayerStateBase@VPlayerHsmContext@player@app@@@player@app
 PUBLIC ??0Timestamp@game@app@@QEAA@XZ
 ??0Timestamp@game@app@@QEAA@XZ:
     mov rax, 0140bbe5f0h
+    jmp rax
+
+PUBLIC ??0UnkStr0@GOCPhysicalAnimationBullet@pba@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0UnkStr0@GOCPhysicalAnimationBullet@pba@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140bbfe70h
     jmp rax
 
 PUBLIC ?AddBindable@BindableCollection@anim@hh@@QEAAXPEAVBindable@23@@Z
@@ -65262,6 +65647,166 @@ PUBLIC ?IsFileByPath@IFileSystem@fnd@hh@@UEAA_NPEBD@Z
 
 PUBLIC ?IsDirectoryByPath@IFileSystem@fnd@hh@@UEAA_NPEBD@Z
 ?IsDirectoryByPath@IFileSystem@fnd@hh@@UEAA_NPEBD@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc18@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc18@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc0@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc0@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc2@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc2@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc3@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc3@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc4@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc4@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc5@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc5@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc6@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc6@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc7@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc7@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc8@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc8@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc9@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc9@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc10@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc10@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc11@GOCPhysicalAnimation@pba@hh@@UEAAHXZ
+?UnkFunc11@GOCPhysicalAnimation@pba@hh@@UEAAHXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc16@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc16@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc17@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc17@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?PBAUpdate@GOCPhysicalAnimation@pba@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z
+?PBAUpdate@GOCPhysicalAnimation@pba@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc19@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc19@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc20@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc20@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc21@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc21@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc22@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc22@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc23@GOCPhysicalAnimation@pba@hh@@UEAAXXZ
+?UnkFunc23@GOCPhysicalAnimation@pba@hh@@UEAAXXZ:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc0@GOCPhysicalAnimation@pba@hh@@UEAAX_J0N@Z
+?UnkFunc0@GOCPhysicalAnimation@pba@hh@@UEAAX_J0N@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc4@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z
+?UnkFunc4@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc5@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z
+?UnkFunc5@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc7@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z
+?UnkFunc7@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc8@GOCPhysicalAnimation@pba@hh@@UEAAX_JD@Z
+?UnkFunc8@GOCPhysicalAnimation@pba@hh@@UEAAX_JD@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc9@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z
+?UnkFunc9@GOCPhysicalAnimation@pba@hh@@UEAAX_J@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc10@GOCPhysicalAnimation@pba@hh@@UEAAX_JD@Z
+?UnkFunc10@GOCPhysicalAnimation@pba@hh@@UEAAX_JD@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc11@GOCPhysicalAnimation@pba@hh@@UEAAH_J0@Z
+?UnkFunc11@GOCPhysicalAnimation@pba@hh@@UEAAH_J0@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc19@GOCPhysicalAnimation@pba@hh@@UEAAXH@Z
+?UnkFunc19@GOCPhysicalAnimation@pba@hh@@UEAAXH@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc21@GOCPhysicalAnimation@pba@hh@@UEAAXD@Z
+?UnkFunc21@GOCPhysicalAnimation@pba@hh@@UEAAXD@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc22@GOCPhysicalAnimation@pba@hh@@UEAAXN@Z
+?UnkFunc22@GOCPhysicalAnimation@pba@hh@@UEAAXN@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc23@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z
+?UnkFunc23@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z:
     mov rax, 0140f9a14ch
     jmp rax
 
@@ -87192,6 +87737,11 @@ PUBLIC ?componentClass@GOCSkinnedMeshCollider@gocs@heur@@0VGOComponentClass@game
 
 PUBLIC ?typeInfo@ResPhysicalSkeleton@resources@heur@@0UResourceTypeInfo@fnd@hh@@B
 ?typeInfo@ResPhysicalSkeleton@resources@heur@@0UResourceTypeInfo@fnd@hh@@B:
+    mov rax, 0142936cf0h
+    jmp rax
+
+PUBLIC ?typeInfo@ResPhysicalSkeleton@pba@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResPhysicalSkeleton@pba@hh@@0UResourceTypeInfo@fnd@3@B:
     mov rax, 0142936cf0h
     jmp rax
 
@@ -111130,6 +111680,16 @@ PUBLIC ?Create@MovieManager@fmv@hh@@CAPEAVGameService@game@3@PEAVIAllocator@fnd@
     mov rax, 015006dad0h
     jmp rax
 
+PUBLIC ??0GOCPhysicalAnimation@pba@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0GOCPhysicalAnimation@pba@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0150148ff0h
+    jmp rax
+
+PUBLIC ?Setup@GOCPhysicalAnimationBullet@pba@hh@@QEAAXAEAUSetupInfo@123@@Z
+?Setup@GOCPhysicalAnimationBullet@pba@hh@@QEAAXAEAUSetupInfo@123@@Z:
+    mov rax, 015016c9d0h
+    jmp rax
+
 PUBLIC ??_DGOCPhysicalAnimation@gocs@heur@@QEAAXXZ
 ??_DGOCPhysicalAnimation@gocs@heur@@QEAAXXZ:
     mov rax, 015019c420h
@@ -111137,6 +111697,11 @@ PUBLIC ??_DGOCPhysicalAnimation@gocs@heur@@QEAAXXZ
 
 PUBLIC ??_GGOCPhysicalAnimation@gocs@heur@@QEAAXXZ
 ??_GGOCPhysicalAnimation@gocs@heur@@QEAAXXZ:
+    mov rax, 01501a6300h
+    jmp rax
+
+PUBLIC ??_DGOCPhysicalAnimationBullet@pba@hh@@QEAAXXZ
+??_DGOCPhysicalAnimationBullet@pba@hh@@QEAAXXZ:
     mov rax, 01501a6300h
     jmp rax
 
@@ -111148,6 +111713,31 @@ PUBLIC ?Create@GOCPhysicalAnimation@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@
 PUBLIC ?Create@GOCPhysicalAnimation@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCPhysicalAnimation@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 01501e4850h
+    jmp rax
+
+PUBLIC ?Create@GOCPhysicalAnimationBullet@pba@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCPhysicalAnimationBullet@pba@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01501e4850h
+    jmp rax
+
+PUBLIC ?UnkFunc17@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc17@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 01501f2470h
+    jmp rax
+
+PUBLIC ?UnkFunc16@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
+?UnkFunc16@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ:
+    mov rax, 01501faf30h
+    jmp rax
+
+PUBLIC ?UnkFunc21@GOCPhysicalAnimationBullet@pba@hh@@UEAAXD@Z
+?UnkFunc21@GOCPhysicalAnimationBullet@pba@hh@@UEAAXD@Z:
+    mov rax, 015020a740h
+    jmp rax
+
+PUBLIC ??_DPhysicalSkeletonBinding@pba@hh@@QEAAXXZ
+??_DPhysicalSkeletonBinding@pba@hh@@QEAAXXZ:
+    mov rax, 0150236270h
     jmp rax
 
 PUBLIC ??_GResDvScene@resources@heur@@QEAAXXZ
@@ -111698,6 +112288,11 @@ PUBLIC ?UnkFunc3@GOCAnimationSimple@anim@hh@@UEAAXXZ
 PUBLIC ?Setup@GOCAnimationSimple@anim@hh@@QEAAXAEBUSetupInfo@123@@Z
 ?Setup@GOCAnimationSimple@anim@hh@@QEAAXAEBUSetupInfo@123@@Z:
     mov rax, 0152d01230h
+    jmp rax
+
+PUBLIC ??0UnkStr1@GOCPhysicalAnimationBullet@pba@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0UnkStr1@GOCPhysicalAnimationBullet@pba@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0152e1d560h
     jmp rax
 
 PUBLIC ??0BlendSpaceNode@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVAsmResourceManager@12@PEAUBlendSpaceData@12@@Z
