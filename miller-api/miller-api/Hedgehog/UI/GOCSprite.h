@@ -37,7 +37,7 @@ namespace hh::ui {
         csl::ut::MoveArray<void*> field_158;
         uint64_t renderable;
         csl::ut::Bitset<Flag> flags;
-        uint16_t nextId;
+        unsigned short nextId;
         ViewportDimensions viewportDimensions;
         uint64_t field_190;
         uint64_t field_198;
@@ -47,20 +47,20 @@ namespace hh::ui {
         csl::ut::PointerMap<SurfRide::Cast*, SurfRideCastHandle> castHandleMap;
         csl::ut::MoveArray<SurfRideLayerHandle*> layerHandles;
         csl::ut::PointerMap<SurfRide::Layer*, SurfRideLayerHandle> layerHandleMap;
-        
-        LayerController* GetLayerController(SurfRide::Layer* layer, uint16_t id);
+
+        LayerController* CreateLayerController(SurfRide::Layer* layer, unsigned short id);
         fnd::Handle<SurfRideCastHandle> GetCastHandle(SurfRide::Cast* cast);
         fnd::Handle<SurfRideLayerHandle> GetLayerHandle(SurfRide::Layer* layer);
 
-        struct alignas(8) SetupInfo {
-            hh::ui::ResSurfRideProject* projectResource;
-            const char* name;
-            uint32_t renderPass;
-            uint8_t renderPriority;
-            uint32_t renderableUnk5;
-            uint32_t layerControllerCount;
-            uint32_t unk5;
-            ViewportDimensions viewportDimensions;
+        struct SetupInfo {
+            hh::ui::ResSurfRideProject* resource{};
+            const char* name{};
+            unsigned int renderableContainer{ 7 };
+            unsigned char renderPriority{ 10 };
+            unsigned int renderableUnk5{ 2 };
+            unsigned int layerControllerCount{};
+            unsigned int updatePriority{ 2 };
+            ViewportDimensions viewportDimensions{};
         };
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void Update(fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) override;
@@ -68,8 +68,11 @@ namespace hh::ui {
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;
 
         void Setup(const SetupInfo& config);
-        LayerController* GetLayerController(const char* sceneName, const char* layerName, uint16_t id);
-        LayerController* GetLayerControllerWithNextId(SurfRide::Layer* layer);
+        LayerController* GetLayerController(unsigned short id) const;
+        LayerController* CopyLayerController(LayerController* layerController, unsigned short id);
+        LayerController* CopyLayerController(SurfRide::Layer* layer, unsigned short id);
+        LayerController* CreateLayerController(const char* sceneName, const char* layerName, unsigned short id);
+        LayerController* CreateLayerControllerWithNextId(SurfRide::Layer* layer);
         SurfRide::Project* GetProject();
 
         void SetFlag(Flag flag, bool enabled);

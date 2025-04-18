@@ -2,9 +2,14 @@
 
 namespace hh::ui {
     class alignas(8) UIElementBase : public fnd::ReferencedObject {
+    public:
         csl::fnd::Delegate<void ()> unk1;
         csl::fnd::Delegate<void ()> unk2;
         csl::fnd::Delegate<void ()> unk3;
+        csl::fnd::Delegate<void ()> unk4;
+        csl::fnd::Delegate<void ()> unk5;
+        csl::fnd::Delegate<void ()> unk6;
+        csl::fnd::Delegate<void ()> unk6a;
         fnd::Handle<GOCUIComposition> hGOCUIComposition;
         fnd::Handle<GOCUICollider> hGOCUICollider;
         fnd::Handle<GOCSprite> hGOCSprite;
@@ -20,7 +25,7 @@ namespace hh::ui {
         bool unk14b;
         bool unk14c;
         bool unk14d;
-    public:
+
         UIElementBase(csl::fnd::IAllocator* pAllocator, const char* name, GOCUIComposition* gocUIComposition);
         GOCSprite* GetGOCSprite();
         GOCUIComposition* GetGOCUIComposition();
