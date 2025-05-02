@@ -618,6 +618,11 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Animation/AnimationManager.h"
 #include "Hedgehog/Animation/AnimationInterface.h"
 
+#include "Hedgehog/PBA/PbaManager.h"
+#include "Hedgehog/PBA/ResPhysicalSkeleton.h"
+#include "Hedgehog/PBA/PhysicalSkeletonBinding.h"
+#include "Hedgehog/PBA/GOCPhysicalAnimation.h"
+
 #include "Hedgehog/AnimationEffect/ResParticleLocation.h"
 #include "Hedgehog/AnimationEffect/GOCParticleLocator.h"
 

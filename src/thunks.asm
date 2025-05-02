@@ -52360,9 +52360,19 @@ PUBLIC ?CopyLayerController@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEAVLaye
     mov rax, 0140857ea0h
     jmp rax
 
+PUBLIC ?GetLayerController@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEAVLayer@SurfRide@@G@Z
+?GetLayerController@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEAVLayer@SurfRide@@G@Z:
+    mov rax, 0140858000h
+    jmp rax
+
 PUBLIC ?CreateLayerController@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEAVLayer@SurfRide@@G@Z
 ?CreateLayerController@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEAVLayer@SurfRide@@G@Z:
     mov rax, 0140858000h
+    jmp rax
+
+PUBLIC ?GetLayerController@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEBD0G@Z
+?GetLayerController@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEBD0G@Z:
+    mov rax, 0140858150h
     jmp rax
 
 PUBLIC ?CreateLayerController@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEBD0G@Z
@@ -52430,6 +52440,11 @@ PUBLIC ?GetCast@LayerController@ui@hh@@QEBAPEAVCast@SurfRide@@PEBD@Z
     mov rax, 014085a220h
     jmp rax
 
+PUBLIC ?GetLayer@LayerController@ui@hh@@QEAAPEAVLayer@SurfRide@@XZ
+?GetLayer@LayerController@ui@hh@@QEAAPEAVLayer@SurfRide@@XZ:
+    mov rax, 014085a3f0h
+    jmp rax
+
 PUBLIC ?GetLayer@LayerController@ui@hh@@QEBAPEAVLayer@SurfRide@@XZ
 ?GetLayer@LayerController@ui@hh@@QEBAPEAVLayer@SurfRide@@XZ:
     mov rax, 014085a3f0h
@@ -52463,6 +52478,11 @@ PUBLIC ?SetPosition@LayerController@ui@hh@@QEAAXAEBVVector3@math@csl@@@Z
 PUBLIC ?SetParameterNormalized@LayerController@ui@hh@@QEAAXPEBDM@Z
 ?SetParameterNormalized@LayerController@ui@hh@@QEAAXPEBDM@Z:
     mov rax, 014085b180h
+    jmp rax
+
+PUBLIC ?SetVisibility@LayerController@ui@hh@@QEAAX_N@Z
+?SetVisibility@LayerController@ui@hh@@QEAAX_N@Z:
+    mov rax, 014085b5d0h
     jmp rax
 
 PUBLIC ?SetVisible@LayerController@ui@hh@@QEAAX_N@Z
@@ -52550,6 +52570,11 @@ PUBLIC ?SetLocalizationVariable@TextObjectUpdater@ui@hh@@QEAAXPEBD0@Z
     mov rax, 014086d600h
     jmp rax
 
+PUBLIC ?FindGroup@UIElementGroupContainer@ui@hh@@QEAAPEAVUIElementGroup@23@PEBD@Z
+?FindGroup@UIElementGroupContainer@ui@hh@@QEAAPEAVUIElementGroup@23@PEBD@Z:
+    mov rax, 014086f0e0h
+    jmp rax
+
 PUBLIC ?FindChildContainer@UIElementGroupContainer@ui@hh@@QEAAPEAV123@PEBD@Z
 ?FindChildContainer@UIElementGroupContainer@ui@hh@@QEAAPEAV123@PEBD@Z:
     mov rax, 014086f0e0h
@@ -52558,11 +52583,6 @@ PUBLIC ?FindChildContainer@UIElementGroupContainer@ui@hh@@QEAAPEAV123@PEBD@Z
 PUBLIC ?FindElement@UIElementGroupContainer@ui@hh@@QEAAPEAVUIElement@23@PEBD@Z
 ?FindElement@UIElementGroupContainer@ui@hh@@QEAAPEAVUIElement@23@PEBD@Z:
     mov rax, 014086f1a0h
-    jmp rax
-
-PUBLIC ?FindGroup@UIElementGroupContainer@ui@hh@@QEAAPEAVUIElementGroup@23@PEBD@Z
-?FindGroup@UIElementGroupContainer@ui@hh@@QEAAPEAVUIElementGroup@23@PEBD@Z:
-    mov rax, 014086f240h
     jmp rax
 
 PUBLIC ??_GGOCUIEffect@gocs@heur@@QEAAXXZ
@@ -56617,6 +56637,11 @@ PUBLIC ??_GGOCInput@gocs@heur@@QEAAXXZ
 
 PUBLIC ?GetClass@GOCInput@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCInput@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ:
+    mov rax, 0140a33500h
+    jmp rax
+
+PUBLIC ?GetClass@GOCInput@game@hh@@SAPEAVGOComponentClass@23@XZ
+?GetClass@GOCInput@game@hh@@SAPEAVGOComponentClass@23@XZ:
     mov rax, 0140a33500h
     jmp rax
 
@@ -65982,6 +66007,11 @@ PUBLIC ?UnkFunc22@GOCPhysicalAnimation@pba@hh@@UEAAXN@Z
 
 PUBLIC ?UnkFunc23@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z
 ?UnkFunc23@GOCPhysicalAnimation@pba@hh@@UEAAX_J0@Z:
+    mov rax, 0140f9a14ch
+    jmp rax
+
+PUBLIC ?UnkFunc16@GOCPhysicalAnimation@pba@hh@@UEAAXPEAVGOCAnimator@anim@3@@Z
+?UnkFunc16@GOCPhysicalAnimation@pba@hh@@UEAAXPEAVGOCAnimator@anim@3@@Z:
     mov rax, 0140f9a14ch
     jmp rax
 
@@ -106425,6 +106455,11 @@ PUBLIC ??_GHomingEyesight@player@app@@QEAAXXZ
     mov rax, 0149d2c2e0h
     jmp rax
 
+PUBLIC ?GetChildLayer@LayerController@ui@hh@@QEAAPEAV123@PEBDG@Z
+?GetChildLayer@LayerController@ui@hh@@QEAAPEAV123@PEBDG@Z:
+    mov rax, 0149d6d4d0h
+    jmp rax
+
 PUBLIC ??0Unk2@PlayerInformation@level@app@@QEAA@XZ
 ??0Unk2@PlayerInformation@level@app@@QEAA@XZ:
     mov rax, 0149d72b20h
@@ -108738,6 +108773,11 @@ PUBLIC ?Create@GOCSprite@ui@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@
 PUBLIC ??_DGOCSprite@ui@hh@@QEAAXXZ
 ??_DGOCSprite@ui@hh@@QEAAXXZ:
     mov rax, 014cbd44d0h
+    jmp rax
+
+PUBLIC ?GetLayerControllerWithNextId@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEAVLayer@SurfRide@@@Z
+?GetLayerControllerWithNextId@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEAVLayer@SurfRide@@@Z:
+    mov rax, 014cbec630h
     jmp rax
 
 PUBLIC ?CreateLayerControllerWithNextId@GOCSprite@ui@hh@@QEAAPEAVLayerController@23@PEAVLayer@SurfRide@@@Z
@@ -111555,6 +111595,11 @@ PUBLIC ?Create@GOCInput@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014f5d7520h
     jmp rax
 
+PUBLIC ?Create@GOCInput@game@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCInput@game@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014f5d7520h
+    jmp rax
+
 PUBLIC ??0LevelLoader@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0LevelLoader@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014f618020h
@@ -111960,6 +112005,11 @@ PUBLIC ?UnkFunc16@GOCPhysicalAnimationBullet@pba@hh@@UEAAXXZ
     mov rax, 01501faf30h
     jmp rax
 
+PUBLIC ?UnkFunc16@GOCPhysicalAnimationBullet@pba@hh@@UEAAXPEAVGOCAnimator@anim@3@@Z
+?UnkFunc16@GOCPhysicalAnimationBullet@pba@hh@@UEAAXPEAVGOCAnimator@anim@3@@Z:
+    mov rax, 01501faf30h
+    jmp rax
+
 PUBLIC ?UnkFunc21@GOCPhysicalAnimationBullet@pba@hh@@UEAAXD@Z
 ?UnkFunc21@GOCPhysicalAnimationBullet@pba@hh@@UEAAXD@Z:
     mov rax, 015020a740h
@@ -112008,6 +112058,11 @@ PUBLIC ?AddCallback@GameObject@game@hh@@UEAAXPEAVGameManager@23@@Z
 PUBLIC ?AddCallback@DvSceneControl@dv@hh@@UEAAXPEAVGameManager@game@3@@Z
 ?AddCallback@DvSceneControl@dv@hh@@UEAAXPEAVGameManager@game@3@@Z:
     mov rax, 01502ec690h
+    jmp rax
+
+PUBLIC ?RemoveCallback@GameObject@game@hh@@UEAAXPEAVGameManager@23@@Z
+?RemoveCallback@GameObject@game@hh@@UEAAXPEAVGameManager@23@@Z:
+    mov rax, 015030c020h
     jmp rax
 
 PUBLIC ?RemoveCallback@DvSceneControl@dv@hh@@UEAAXPEAVGameManager@game@3@@Z
@@ -113365,11 +113420,6 @@ PUBLIC ?ApplyAnimation@Layer@SurfRide@@QEAA_NH@Z
     mov rax, 0156e14230h
     jmp rax
 
-PUBLIC ?Copy@Layer@SurfRide@@QEAAPEAV12@XZ
-?Copy@Layer@SurfRide@@QEAAPEAV12@XZ:
-    mov rax, 0156e19880h
-    jmp rax
-
 PUBLIC ?GetAnimationLength@Layer@SurfRide@@QEBAMPEBD@Z
 ?GetAnimationLength@Layer@SurfRide@@QEBAMPEBD@Z:
     mov rax, 0156e267d0h
@@ -113430,11 +113480,6 @@ PUBLIC ??_DScene@SurfRide@@QEAAXXZ
     mov rax, 0156efbc40h
     jmp rax
 
-PUBLIC ?SetHideFlag@Scene@SurfRide@@QEAAX_N@Z
-?SetHideFlag@Scene@SurfRide@@QEAAX_N@Z:
-    mov rax, 0156f1ea20h
-    jmp rax
-
 PUBLIC ??0Camera@SurfRide@@QEAA@PEAVIAllocator@fnd@csl@@AEBUSRS_CAMERA@1@MM@Z
 ??0Camera@SurfRide@@QEAA@PEAVIAllocator@fnd@csl@@AEBUSRS_CAMERA@1@MM@Z:
     mov rax, 0156f2ab20h
@@ -113463,11 +113508,6 @@ PUBLIC ??0SliceCast@SurfRide@@QEAA@PEAVIAllocator@fnd@csl@@PEAUSRS_CASTNODE@1@PE
 PUBLIC ?GetCellCount@SliceCast@SurfRide@@UEBAIXZ
 ?GetCellCount@SliceCast@SurfRide@@UEBAIXZ:
     mov rax, 0156f78f10h
-    jmp rax
-
-PUBLIC ?ResolveAddress@BinaryData@SurfRide@@SAXPEAX@Z
-?ResolveAddress@BinaryData@SurfRide@@SAXPEAX@Z:
-    mov rax, 0156fa88d0h
     jmp rax
 
 PUBLIC ?GetTextureListCount@ChunkInfo@SRS_BINARY_FILE_HEADER_CHUNK@SurfRide@@QEBAIXZ
