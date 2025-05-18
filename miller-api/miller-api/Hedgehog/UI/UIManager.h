@@ -11,13 +11,19 @@ namespace hh::ui {
 
     class UIManagerListener {
     public:
+        struct UIRenderInfo {
+            const hh::gfnd::RenderableParameter* renderableParameter;
+            // more here
+        };
+
         virtual ~UIManagerListener() = default;
-        virtual void ExtensionAddedCallback(UIManagerExtension* extension);
-        virtual void ExtensionRemovedCallback(UIManagerExtension* extension);
-        virtual void GOCSpriteAddedCallback(GOCSprite* gocSprite);
-        virtual void GOCSpriteRemovedCallback(GOCSprite* gocSprite);
-        virtual void TextObjectUpdaterAddedCallback(TextObjectUpdater* textObjectUpdater);
-        virtual void TextObjectUpdaterRemovedCallback(TextObjectUpdater* textObjectUpdater);
+        virtual void ExtensionAddedCallback(UIManagerExtension* extension) {}
+        virtual void ExtensionRemovedCallback(UIManagerExtension* extension) {}
+        virtual void GOCSpriteAddedCallback(GOCSprite* gocSprite) {}
+        virtual void GOCSpriteRemovedCallback(GOCSprite* gocSprite) {}
+        virtual void TextObjectUpdaterAddedCallback(TextObjectUpdater* textObjectUpdater) {}
+        virtual void TextObjectUpdaterRemovedCallback(TextObjectUpdater* textObjectUpdater) {}
+        virtual void PreRenderCallback(UIRenderInfo& renderInfo) {}
     };
 
     class UIManager : public game::GameService, public game::GameStepListener {
@@ -78,6 +84,9 @@ namespace hh::ui {
 
         void AddTextObjectUpdater(TextObjectUpdater* textObjectUpdater);
         void RemoveTextObjectUpdater(TextObjectUpdater* textObjectUpdater);
+
+        void AddListener(UIManagerListener* listener);
+        void RemoveListener(UIManagerListener* listener);
 
         SurfRide::Project* SetupSurfRideProject(ResSurfRideProject* resource, csl::fnd::IAllocator* allocator);
         void RenderSurfRideProject(gfnd::RenderableParameter* renderableParameter, SurfRide::Project* project, const ViewportDimensions& viewportDimensions);

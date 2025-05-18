@@ -566,14 +566,11 @@ namespace millersdk::ucsl {
 
 #include "Hedgehog/Sound/ResAtomConfig.h"
 #include "Hedgehog/Sound/ResAtomCueSheet.h"
+#include "Hedgehog/Sound/SoundTween.h"
+#include "Hedgehog/Sound/SoundCue.h"
 #include "Hedgehog/Sound/SoundHandle.h"
-#include "Hedgehog/Sound/SoundManager.h"
-#include "Hedgehog/Sound/SoundManagerCri.h"
-#include "Hedgehog/Sound/GOCSound.h"
-
-#include "Hedgehog/Sound/ResAtomConfig.h"
-#include "Hedgehog/Sound/ResAtomCueSheet.h"
-#include "Hedgehog/Sound/SoundHandle.h"
+#include "Hedgehog/Sound/SoundSystem.h"
+#include "Hedgehog/Sound/SoundPlayer.h"
 #include "Hedgehog/Sound/SoundManager.h"
 #include "Hedgehog/Sound/SoundManagerCri.h"
 #include "Hedgehog/Sound/GOCSound.h"

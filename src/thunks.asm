@@ -19590,11 +19590,6 @@ PUBLIC ?GetClass@GOCEventWipeout@game@app@@SAPEBVGOComponentClass@2hh@@XZ
     mov rax, 0140141920h
     jmp rax
 
-PUBLIC ??_DAnimationStateMachineListener@anim@hh@@QEAAXXZ
-??_DAnimationStateMachineListener@anim@hh@@QEAAXXZ:
-    mov rax, 0140141a90h
-    jmp rax
-
 PUBLIC ??_GGOCEyeAnimation@game@app@@QEAAXXZ
 ??_GGOCEyeAnimation@game@app@@QEAAXXZ:
     mov rax, 0140141ac0h
@@ -34613,6 +34608,11 @@ PUBLIC ??_GEnemyEggPawn@app@@QEAAXXZ
 PUBLIC ??_GEnemyEggPawnInfo@app@@QEAAXXZ
 ??_GEnemyEggPawnInfo@app@@QEAAXXZ:
     mov rax, 01404c8bf0h
+    jmp rax
+
+PUBLIC ??_DParticleLocatorListener@animeff@hh@@QEAAXXZ
+??_DParticleLocatorListener@animeff@hh@@QEAAXXZ:
+    mov rax, 01404c8cb0h
     jmp rax
 
 PUBLIC ??0EnemyEggPawnContext@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -51725,6 +51725,16 @@ PUBLIC ?UnkFunc29@NVMeFileSystem@fnd@hh@@UEAAHXZ
     mov rax, 01408158a0h
     jmp rax
 
+PUBLIC ?UnkFunc28@SoundPlayer@snd@hh@@UEBAHAEBVSoundHandle@23@@Z
+?UnkFunc28@SoundPlayer@snd@hh@@UEBAHAEBVSoundHandle@23@@Z:
+    mov rax, 01408158a0h
+    jmp rax
+
+PUBLIC ?UnkFunc31@SoundPlayer@snd@hh@@UEBAHAEBVSoundHandle@23@@Z
+?UnkFunc31@SoundPlayer@snd@hh@@UEBAHAEBVSoundHandle@23@@Z:
+    mov rax, 01408158a0h
+    jmp rax
+
 PUBLIC ?GetCellProbably@Cast@SurfRide@@UEBAPEAXXZ
 ?GetCellProbably@Cast@SurfRide@@UEBAPEAXXZ:
     mov rax, 0140815d50h
@@ -51747,6 +51757,41 @@ PUBLIC ?UnkFunc33@NVMeFileSystem@fnd@hh@@UEAAIXZ
 
 PUBLIC ?OpenFileForWritingByPath@NVMeFileSystem@fnd@hh@@UEAAPEAVStreamWriter@23@PEBDPEAVIAllocator@2csl@@@Z
 ?OpenFileForWritingByPath@NVMeFileSystem@fnd@hh@@UEAAPEAVStreamWriter@23@PEBDPEAVIAllocator@2csl@@@Z:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?GetNumBlocks@SoundPlayer@snd@hh@@UEBAIAEBVSoundHandle@23@@Z
+?GetNumBlocks@SoundPlayer@snd@hh@@UEBAIAEBVSoundHandle@23@@Z:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?UnkFunc45@SoundPlayer@snd@hh@@UEBAIXZ
+?UnkFunc45@SoundPlayer@snd@hh@@UEBAIXZ:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?GetCueName@SoundPlayer@snd@hh@@UEBAPEBDAEBVSoundHandle@23@@Z
+?GetCueName@SoundPlayer@snd@hh@@UEBAPEBDAEBVSoundHandle@23@@Z:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?UnkFunc48@SoundPlayer@snd@hh@@UEBAIXZ
+?UnkFunc48@SoundPlayer@snd@hh@@UEBAIXZ:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?UnkFunc49@SoundPlayer@snd@hh@@UEBAIXZ
+?UnkFunc49@SoundPlayer@snd@hh@@UEBAIXZ:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?UnkFunc56@SoundPlayer@snd@hh@@UEBAIXZ
+?UnkFunc56@SoundPlayer@snd@hh@@UEBAIXZ:
+    mov rax, 0140815d50h
+    jmp rax
+
+PUBLIC ?UnkFunc57@SoundPlayer@snd@hh@@UEBAIXZ
+?UnkFunc57@SoundPlayer@snd@hh@@UEBAIXZ:
     mov rax, 0140815d50h
     jmp rax
 
@@ -51853,6 +51898,21 @@ PUBLIC ?UnkFunc9@Unk7@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ
 PUBLIC ?UnkFunc10@ProfileElementAccessor@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ
 ?UnkFunc10@ProfileElementAccessor@Impl@PerfDiagnostics@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 0140830530h
+    jmp rax
+
+PUBLIC ?GetPlayTime@SoundPlayer@snd@hh@@UEBAMAEBVSoundHandle@23@@Z
+?GetPlayTime@SoundPlayer@snd@hh@@UEBAMAEBVSoundHandle@23@@Z:
+    mov rax, 0140830da0h
+    jmp rax
+
+PUBLIC ?UnkFunc46@SoundPlayer@snd@hh@@UEBAMXZ
+?UnkFunc46@SoundPlayer@snd@hh@@UEBAMXZ:
+    mov rax, 0140830da0h
+    jmp rax
+
+PUBLIC ?UnkFunc65@SoundPlayer@snd@hh@@UEBAMXZ
+?UnkFunc65@SoundPlayer@snd@hh@@UEBAMXZ:
+    mov rax, 0140830da0h
     jmp rax
 
 PUBLIC ?GetDeviceId@Vibration@hid@hh@@UEBAIXZ
@@ -52150,14 +52210,24 @@ PUBLIC ?UpdateInput@GOCCharacterInput@hid@app_cmn@@QEAAXAEBUSUpdateInfo@fnd@hh@@
     mov rax, 0140843870h
     jmp rax
 
-PUBLIC ?GetPlayTime@SoundHandle@snd@hh@@QEBAMXZ
-?GetPlayTime@SoundHandle@snd@hh@@QEBAMXZ:
-    mov rax, 01408440f0h
+PUBLIC ?AddListener@UIManager@ui@hh@@QEAAXPEAVUIManagerListener@23@@Z
+?AddListener@UIManager@ui@hh@@QEAAXPEAVUIManagerListener@23@@Z:
+    mov rax, 01408464d0h
     jmp rax
 
 PUBLIC ?PreStepCallback@UIManager@ui@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z
 ?PreStepCallback@UIManager@ui@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z:
     mov rax, 01408466a0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@UIManager@ui@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@UIManager@ui@hh@@UEBAPEAXXZ:
+    mov rax, 01408467e0h
+    jmp rax
+
+PUBLIC ?RemoveListener@UIManager@ui@hh@@QEAAXPEAVUIManagerListener@23@@Z
+?RemoveListener@UIManager@ui@hh@@QEAAXPEAVUIManagerListener@23@@Z:
+    mov rax, 01408467f0h
     jmp rax
 
 PUBLIC ??_DUIPauseMenu@ui@app@@QEAAXXZ
@@ -52167,6 +52237,11 @@ PUBLIC ??_DUIPauseMenu@ui@app@@QEAAXXZ
 
 PUBLIC ??_DUIWhiteSpaceMapMenu@ui@app@@QEAAXXZ
 ??_DUIWhiteSpaceMapMenu@ui@app@@QEAAXXZ:
+    mov rax, 0140846cc0h
+    jmp rax
+
+PUBLIC ?GetClass@UIManager@ui@hh@@SAPEBVGameServiceClass@game@3@XZ
+?GetClass@UIManager@ui@hh@@SAPEBVGameServiceClass@game@3@XZ:
     mov rax, 0140846cc0h
     jmp rax
 
@@ -52325,6 +52400,11 @@ PUBLIC ?GetLayerHandle@GOCSprite@ui@hh@@QEAA?AV?$Handle@VSurfRideLayerHandle@ui@
     mov rax, 0140858ae0h
     jmp rax
 
+PUBLIC ?SetFlag@GOCSprite@ui@hh@@QEAAXW4Flag@123@_N@Z
+?SetFlag@GOCSprite@ui@hh@@QEAAXW4Flag@123@_N@Z:
+    mov rax, 0140859020h
+    jmp rax
+
 PUBLIC ?GetClass@GOCSprite@ui@hh@@SAPEBVGOComponentClass@game@3@XZ
 ?GetClass@GOCSprite@ui@hh@@SAPEBVGOComponentClass@game@3@XZ:
     mov rax, 01408593b0h
@@ -52445,6 +52525,11 @@ PUBLIC ?Construct@DecoTechParam@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0140861cd0h
     jmp rax
 
+PUBLIC ??0StyleParameters@TextObjectUpdater@ui@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0StyleParameters@TextObjectUpdater@ui@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140861e60h
+    jmp rax
+
 PUBLIC ?UnkFunc4@AppUITextInterface@ui@app@@UEAAPEAXPEAXI@Z
 ?UnkFunc4@AppUITextInterface@ui@app@@UEAAPEAXPEAXI@Z:
     mov rax, 01408652b0h
@@ -52473,6 +52558,21 @@ PUBLIC ?SetText@TextObjectUpdater@ui@hh@@QEAAXPEBDI@Z
 PUBLIC ?SetLocalizationVariable@TextObjectUpdater@ui@hh@@QEAAXPEBD0@Z
 ?SetLocalizationVariable@TextObjectUpdater@ui@hh@@QEAAXPEBD0@Z:
     mov rax, 014086d600h
+    jmp rax
+
+PUBLIC ?SetStyleParameters@TextObjectUpdater@ui@hh@@QEAAXAEBUStyleParameters@123@@Z
+?SetStyleParameters@TextObjectUpdater@ui@hh@@QEAAXAEBUStyleParameters@123@@Z:
+    mov rax, 014086d710h
+    jmp rax
+
+PUBLIC ?Update@TextObjectUpdater@ui@hh@@QEAAXXZ
+?Update@TextObjectUpdater@ui@hh@@QEAAXXZ:
+    mov rax, 014086db30h
+    jmp rax
+
+PUBLIC ?LoadTextParameters@TextObjectUpdater@ui@hh@@QEAA_NAEAVVariableString@strings@ucsl@@AEAUStyleParameters@123@@Z
+?LoadTextParameters@TextObjectUpdater@ui@hh@@QEAA_NAEAVVariableString@strings@ucsl@@AEAUStyleParameters@123@@Z:
+    mov rax, 014086dfd0h
     jmp rax
 
 PUBLIC ?FindChildContainer@UIElementGroupContainer@ui@hh@@QEAAPEAV123@PEBD@Z
@@ -52710,6 +52810,21 @@ PUBLIC ?UnkFunc7@TagReplacer@text@hh@@UEAAPEAXPEAX0@Z
     mov rax, 01408932f0h
     jmp rax
 
+PUBLIC ??0SoundSystemCri@snd@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEBUPoolParam@SoundCueCri@12@@Z
+??0SoundSystemCri@snd@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEBUPoolParam@SoundCueCri@12@@Z:
+    mov rax, 0140893f70h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@SoundSystemCri@snd@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@SoundSystemCri@snd@hh@@UEBAPEAXXZ:
+    mov rax, 0140894640h
+    jmp rax
+
+PUBLIC ?Update@SoundSystemCri@snd@hh@@UEAAXM@Z
+?Update@SoundSystemCri@snd@hh@@UEAAXM@Z:
+    mov rax, 0140894710h
+    jmp rax
+
 PUBLIC ?GetTypeInfo@ResAtomConfig@snd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
 ?GetTypeInfo@ResAtomConfig@snd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
     mov rax, 0140896810h
@@ -52720,14 +52835,79 @@ PUBLIC ?GetTypeInfo@ResAtomCueSheet@snd@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
     mov rax, 0140896970h
     jmp rax
 
+PUBLIC ??0SoundListenerHandle@snd@hh@@QEAA@PEBVSoundListenerObject@12@@Z
+??0SoundListenerHandle@snd@hh@@QEAA@PEBVSoundListenerObject@12@@Z:
+    mov rax, 0140896a50h
+    jmp rax
+
 PUBLIC ??0Unk1@SoundDirector@snd@app@@QEAA@XZ
 ??0Unk1@SoundDirector@snd@app@@QEAA@XZ:
     mov rax, 0140896a80h
     jmp rax
 
+PUBLIC ??0SoundListenerHandle@snd@hh@@QEAA@XZ
+??0SoundListenerHandle@snd@hh@@QEAA@XZ:
+    mov rax, 0140896a80h
+    jmp rax
+
+PUBLIC ??0SoundListenerObject@snd@hh@@QEAA@XZ
+??0SoundListenerObject@snd@hh@@QEAA@XZ:
+    mov rax, 0140896a90h
+    jmp rax
+
+PUBLIC ??0SoundPlaybackObject@snd@hh@@QEAA@XZ
+??0SoundPlaybackObject@snd@hh@@QEAA@XZ:
+    mov rax, 0140896ad0h
+    jmp rax
+
+PUBLIC ??_DSoundPlaybackObject@snd@hh@@QEAAXXZ
+??_DSoundPlaybackObject@snd@hh@@QEAAXXZ:
+    mov rax, 0140896bb0h
+    jmp rax
+
+PUBLIC ?DetachAisacAll@SoundHandle@snd@hh@@QEAAXXZ
+?DetachAisacAll@SoundHandle@snd@hh@@QEAAXXZ:
+    mov rax, 0140896c20h
+    jmp rax
+
+PUBLIC ?GetCueName@SoundHandle@snd@hh@@QEBAPEBDXZ
+?GetCueName@SoundHandle@snd@hh@@QEBAPEBDXZ:
+    mov rax, 0140896ca0h
+    jmp rax
+
 PUBLIC ?GetDistance@SoundHandle@snd@hh@@QEAAMAEBVSoundListenerHandle@23@@Z
 ?GetDistance@SoundHandle@snd@hh@@QEAAMAEBVSoundListenerHandle@23@@Z:
+    mov rax, 0140896d30h
+    jmp rax
+
+PUBLIC ?GetPlayTime@SoundHandle@snd@hh@@QEBAMXZ
+?GetPlayTime@SoundHandle@snd@hh@@QEBAMXZ:
+    mov rax, 0140896ef0h
+    jmp rax
+
+PUBLIC ?GetPosition@SoundHandle@snd@hh@@QEBA?AVVector3@math@csl@@XZ
+?GetPosition@SoundHandle@snd@hh@@QEBA?AVVector3@math@csl@@XZ:
     mov rax, 0140896f40h
+    jmp rax
+
+PUBLIC ?GetStatus@SoundHandle@snd@hh@@QEBAIXZ
+?GetStatus@SoundHandle@snd@hh@@QEBAIXZ:
+    mov rax, 0140897030h
+    jmp rax
+
+PUBLIC ?IsAisac@SoundHandle@snd@hh@@QEBA_NXZ
+?IsAisac@SoundHandle@snd@hh@@QEBA_NXZ:
+    mov rax, 0140897080h
+    jmp rax
+
+PUBLIC ?IsLoop@SoundHandle@snd@hh@@QEBA_NXZ
+?IsLoop@SoundHandle@snd@hh@@QEBA_NXZ:
+    mov rax, 01408970c0h
+    jmp rax
+
+PUBLIC ?IsPause@SoundHandle@snd@hh@@QEBA_NXZ
+?IsPause@SoundHandle@snd@hh@@QEBA_NXZ:
+    mov rax, 0140897100h
     jmp rax
 
 PUBLIC ??_DObjRotateThornBall@app@@QEAAXXZ
@@ -52755,9 +52935,44 @@ PUBLIC ??_DObjUpDownGondola@app@@QEAAXXZ
     mov rax, 0140897140h
     jmp rax
 
+PUBLIC ?IsPlay@SoundHandle@snd@hh@@QEBA_NXZ
+?IsPlay@SoundHandle@snd@hh@@QEBA_NXZ:
+    mov rax, 0140897140h
+    jmp rax
+
 PUBLIC ?Pause@SoundHandle@snd@hh@@QEAAX_NM@Z
 ?Pause@SoundHandle@snd@hh@@QEAAX_NM@Z:
     mov rax, 01408971d0h
+    jmp rax
+
+PUBLIC ?SetAisac@SoundHandle@snd@hh@@QEAAXPEBDM@Z
+?SetAisac@SoundHandle@snd@hh@@QEAAXPEBDM@Z:
+    mov rax, 0140897280h
+    jmp rax
+
+PUBLIC ?SetMaxDistance@SoundHandle@snd@hh@@QEAAXM@Z
+?SetMaxDistance@SoundHandle@snd@hh@@QEAAXM@Z:
+    mov rax, 0140897370h
+    jmp rax
+
+PUBLIC ?SetMinDistance@SoundHandle@snd@hh@@QEAAXM@Z
+?SetMinDistance@SoundHandle@snd@hh@@QEAAXM@Z:
+    mov rax, 01408973c0h
+    jmp rax
+
+PUBLIC ?SetMinMaxDistance@SoundHandle@snd@hh@@QEAAXMM@Z
+?SetMinMaxDistance@SoundHandle@snd@hh@@QEAAXMM@Z:
+    mov rax, 0140897410h
+    jmp rax
+
+PUBLIC ?SetPosition@SoundHandle@snd@hh@@QEAAXAEBVVector3@math@csl@@@Z
+?SetPosition@SoundHandle@snd@hh@@QEAAXAEBVVector3@math@csl@@@Z:
+    mov rax, 0140897490h
+    jmp rax
+
+PUBLIC ?SetVolume@SoundHandle@snd@hh@@QEAAXM@Z
+?SetVolume@SoundHandle@snd@hh@@QEAAXM@Z:
+    mov rax, 01408975e0h
     jmp rax
 
 PUBLIC ??_DUICollectionSoundPlayer@ui@app@@QEAAXXZ
@@ -52767,6 +52982,11 @@ PUBLIC ??_DUICollectionSoundPlayer@ui@app@@QEAAXXZ
 
 PUBLIC ??_DUIOptionMenu@ui@app@@QEAAXXZ
 ??_DUIOptionMenu@ui@app@@QEAAXXZ:
+    mov rax, 0140897680h
+    jmp rax
+
+PUBLIC ?StopImm@SoundHandle@snd@hh@@QEAAXXZ
+?StopImm@SoundHandle@snd@hh@@QEAAXXZ:
     mov rax, 0140897680h
     jmp rax
 
@@ -52780,6 +53000,11 @@ PUBLIC ??_DSoundManager@snd@hh@@QEAAXXZ
     mov rax, 0140897a40h
     jmp rax
 
+PUBLIC ?AddListener@SoundManager@snd@hh@@QEAAXPEAVSoundManagerListener@23@@Z
+?AddListener@SoundManager@snd@hh@@QEAAXPEAVSoundManagerListener@23@@Z:
+    mov rax, 0140897d70h
+    jmp rax
+
 PUBLIC ?PostStepCallback@SoundManager@snd@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z
 ?PostStepCallback@SoundManager@snd@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z:
     mov rax, 0140897f30h
@@ -52788,6 +53013,16 @@ PUBLIC ?PostStepCallback@SoundManager@snd@hh@@UEAAXPEAVGameManager@game@3@AEBUGa
 PUBLIC ?GetRuntimeTypeInfo@SoundManager@snd@hh@@UEBAPEAXXZ
 ?GetRuntimeTypeInfo@SoundManager@snd@hh@@UEBAPEAXXZ:
     mov rax, 0140898050h
+    jmp rax
+
+PUBLIC ?Play@SoundManager@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z
+?Play@SoundManager@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z:
+    mov rax, 0140898170h
+    jmp rax
+
+PUBLIC ?RemoveListener@SoundManager@snd@hh@@QEAAXPEAVSoundManagerListener@23@@Z
+?RemoveListener@SoundManager@snd@hh@@QEAAXPEAVSoundManagerListener@23@@Z:
+    mov rax, 01408982d0h
     jmp rax
 
 PUBLIC ?Create@SoundManager@services@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -52815,6 +53050,61 @@ PUBLIC ?GetRuntimeTypeInfo@GOCSound@snd@hh@@UEBAPEAXXZ
     mov rax, 0140898c60h
     jmp rax
 
+PUBLIC ?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@AEBUSoundPlayInfo@23@@Z
+?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@AEBUSoundPlayInfo@23@@Z:
+    mov rax, 0140898da0h
+    jmp rax
+
+PUBLIC ?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBD@Z
+?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBD@Z:
+    mov rax, 0140898dc0h
+    jmp rax
+
+PUBLIC ?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDAEBUSoundParam@23@@Z
+?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDAEBUSoundParam@23@@Z:
+    mov rax, 0140898e50h
+    jmp rax
+
+PUBLIC ?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDAEBVVector3@math@csl@@AEBUSoundParam@23@@Z
+?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDAEBVVector3@math@csl@@AEBUSoundParam@23@@Z:
+    mov rax, 0140898ea0h
+    jmp rax
+
+PUBLIC ?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDAEBVVector3@math@csl@@M@Z
+?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDAEBVVector3@math@csl@@M@Z:
+    mov rax, 0140898ef0h
+    jmp rax
+
+PUBLIC ?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDM@Z
+?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDM@Z:
+    mov rax, 0140898f90h
+    jmp rax
+
+PUBLIC ?Play@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBD@Z
+?Play@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBD@Z:
+    mov rax, 0140899030h
+    jmp rax
+
+PUBLIC ?Play@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z
+?Play@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z:
+    mov rax, 01408990a0h
+    jmp rax
+
+PUBLIC ?Play@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDAEBUSoundParam@23@@Z
+?Play@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDAEBUSoundParam@23@@Z:
+    mov rax, 01408990d0h
+    jmp rax
+
+PUBLIC ?Play@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDM@Z
+?Play@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBDM@Z:
+    mov rax, 0140899100h
+    jmp rax
+
+PUBLIC ?PlayVoice3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBD@Z
+?PlayVoice3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBD@Z:
+    mov rax, 0140899440h
+    jmp rax
+
 PUBLIC ?GetClass@GOCSound@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCSound@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 0140899640h
@@ -52823,6 +53113,11 @@ PUBLIC ?GetClass@GOCSound@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
 PUBLIC ?GetClass@GOCSound@snd@hh@@SAPEBVGOComponentClass@game@3@XZ
 ?GetClass@GOCSound@snd@hh@@SAPEBVGOComponentClass@game@3@XZ:
     mov rax, 0140899640h
+    jmp rax
+
+PUBLIC ?StopFollow@GOCSound@snd@hh@@QEAAXAEBVSoundHandle@23@M@Z
+?StopFollow@GOCSound@snd@hh@@QEAAXAEBVSoundHandle@23@M@Z:
+    mov rax, 0140899650h
     jmp rax
 
 PUBLIC ?Update@GOCSound@snd@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@@Z
@@ -52835,6 +53130,46 @@ PUBLIC ?UpdateAsync@GOCSound@snd@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@
     mov rax, 0140899900h
     jmp rax
 
+PUBLIC ??0SoundPlayer@snd@hh@@QEAA@PEAVIAllocator@fnd@csl@@I@Z
+??0SoundPlayer@snd@hh@@QEAA@PEAVIAllocator@fnd@csl@@I@Z:
+    mov rax, 014089a4a0h
+    jmp rax
+
+PUBLIC ??_DSoundSystemListener@snd@hh@@QEAAXXZ
+??_DSoundSystemListener@snd@hh@@QEAAXXZ:
+    mov rax, 014089aea4h
+    jmp rax
+
+PUBLIC ??_DSoundPlayer@snd@hh@@QEAAXXZ
+??_DSoundPlayer@snd@hh@@QEAAXXZ:
+    mov rax, 014089b190h
+    jmp rax
+
+PUBLIC ?AddPlaybackObject@SoundPlayer@snd@hh@@QEAAXAEAVSoundPlaybackObject@23@@Z
+?AddPlaybackObject@SoundPlayer@snd@hh@@QEAAXAEAVSoundPlaybackObject@23@@Z:
+    mov rax, 014089b8a0h
+    jmp rax
+
+PUBLIC ?AddListenerObject@SoundPlayer@snd@hh@@QEAAXAEAVSoundListenerObject@23@@Z
+?AddListenerObject@SoundPlayer@snd@hh@@QEAAXAEAVSoundListenerObject@23@@Z:
+    mov rax, 014089b8e0h
+    jmp rax
+
+PUBLIC ?UnkFunc21@SoundPlayer@snd@hh@@UEAAXXZ
+?UnkFunc21@SoundPlayer@snd@hh@@UEAAXXZ:
+    mov rax, 014089ba70h
+    jmp rax
+
+PUBLIC ?DetachCategoryAisacAll@SoundPlayer@snd@hh@@UEAAXI@Z
+?DetachCategoryAisacAll@SoundPlayer@snd@hh@@UEAAXI@Z:
+    mov rax, 014089be00h
+    jmp rax
+
+PUBLIC ?GetFreePlaybackObject@SoundPlayer@snd@hh@@QEAAPEAVSoundPlaybackObject@23@XZ
+?GetFreePlaybackObject@SoundPlayer@snd@hh@@QEAAPEAVSoundPlaybackObject@23@XZ:
+    mov rax, 014089c0c0h
+    jmp rax
+
 PUBLIC ?GetTarget1@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z
 ?GetTarget1@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z:
     mov rax, 014089c0e0h
@@ -52843,6 +53178,36 @@ PUBLIC ?GetTarget1@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@I@Z
 PUBLIC ?GetTarget1@Mouse@hid@hh@@UEBA?AVVector4@math@csl@@I@Z
 ?GetTarget1@Mouse@hid@hh@@UEBA?AVVector4@math@csl@@I@Z:
     mov rax, 014089c0e0h
+    jmp rax
+
+PUBLIC ?GetSourcePosition@SoundPlayer@snd@hh@@UEBA?AVVector3@math@csl@@AEBVSoundHandle@23@@Z
+?GetSourcePosition@SoundPlayer@snd@hh@@UEBA?AVVector3@math@csl@@AEBVSoundHandle@23@@Z:
+    mov rax, 014089c0e0h
+    jmp rax
+
+PUBLIC ?UnkFunc58@SoundPlayer@snd@hh@@UEBA?AVVector3@math@csl@@XZ
+?UnkFunc58@SoundPlayer@snd@hh@@UEBA?AVVector3@math@csl@@XZ:
+    mov rax, 014089c0e0h
+    jmp rax
+
+PUBLIC ?UnkFunc63@SoundPlayer@snd@hh@@UEBA?AVVector3@math@csl@@XZ
+?UnkFunc63@SoundPlayer@snd@hh@@UEBA?AVVector3@math@csl@@XZ:
+    mov rax, 014089c0e0h
+    jmp rax
+
+PUBLIC ?GetListenerDistance@SoundPlayer@snd@hh@@UEBAMAEBVSoundHandle@23@AEBVSoundListenerHandle@23@@Z
+?GetListenerDistance@SoundPlayer@snd@hh@@UEBAMAEBVSoundHandle@23@AEBVSoundListenerHandle@23@@Z:
+    mov rax, 014089c130h
+    jmp rax
+
+PUBLIC ?GetMasterVolume@SoundPlayer@snd@hh@@UEBAMI@Z
+?GetMasterVolume@SoundPlayer@snd@hh@@UEBAMI@Z:
+    mov rax, 014089c140h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@SoundPlayer@snd@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@SoundPlayer@snd@hh@@UEBAPEAXXZ:
+    mov rax, 014089c170h
     jmp rax
 
 PUBLIC ?GetUpdateTiming@DvNodeCameraMotion@dv@hh@@UEAAHXZ
@@ -52855,9 +53220,364 @@ PUBLIC ?GetUpdateTiming@DvNodeCharacterMotion@dv@hh@@UEAAHXZ
     mov rax, 014089c180h
     jmp rax
 
+PUBLIC ?GetStatus@SoundPlayer@snd@hh@@UEBAIAEBVSoundHandle@23@@Z
+?GetStatus@SoundPlayer@snd@hh@@UEBAIAEBVSoundHandle@23@@Z:
+    mov rax, 014089c180h
+    jmp rax
+
+PUBLIC ?MoveToTweenReset@snd@hh@@YA_NPEAUSoundTween@12@MM@Z
+?MoveToTweenReset@snd@hh@@YA_NPEAUSoundTween@12@MM@Z:
+    mov rax, 014089c2a0h
+    jmp rax
+
+PUBLIC ?Play@SoundPlayer@snd@hh@@UEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z
+?Play@SoundPlayer@snd@hh@@UEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z:
+    mov rax, 014089c340h
+    jmp rax
+
+PUBLIC ?Play3D@SoundPlayer@snd@hh@@UEAA?AVSoundHandle@23@IPEBDAEBVVector3@math@csl@@AEBUSoundParam@23@@Z
+?Play3D@SoundPlayer@snd@hh@@UEAA?AVSoundHandle@23@IPEBDAEBVVector3@math@csl@@AEBUSoundParam@23@@Z:
+    mov rax, 014089c340h
+    jmp rax
+
+PUBLIC ?PostRegisterData@SoundCategoryListener@snd@hh@@UEAAXI@Z
+?PostRegisterData@SoundCategoryListener@snd@hh@@UEAAXI@Z:
+    mov rax, 014089c470h
+    jmp rax
+
+PUBLIC ?PreUnregisterData@SoundCategoryListener@snd@hh@@UEAAXI@Z
+?PreUnregisterData@SoundCategoryListener@snd@hh@@UEAAXI@Z:
+    mov rax, 014089c480h
+    jmp rax
+
+PUBLIC ??_DSoundSystem@snd@hh@@QEAAXXZ
+??_DSoundSystem@snd@hh@@QEAAXXZ:
+    mov rax, 014089d170h
+    jmp rax
+
+PUBLIC ?GetUnk3@SoundSystem@snd@hh@@UEBAPEAXXZ
+?GetUnk3@SoundSystem@snd@hh@@UEBAPEAXXZ:
+    mov rax, 014089d300h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@SoundSystem@snd@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@SoundSystem@snd@hh@@UEBAPEAXXZ:
+    mov rax, 014089d310h
+    jmp rax
+
+PUBLIC ?SetRootDirectory@SoundSystem@snd@hh@@QEAAXPEBD@Z
+?SetRootDirectory@SoundSystem@snd@hh@@QEAAXPEBD@Z:
+    mov rax, 014089d480h
+    jmp rax
+
+PUBLIC ??0SoundPlayerCri@snd@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEBUPoolParam@SoundCueCri@12@@Z
+??0SoundPlayerCri@snd@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEBUPoolParam@SoundCueCri@12@@Z:
+    mov rax, 014089e4b0h
+    jmp rax
+
+PUBLIC ?UnkFunc72@SoundPlayerCri@snd@hh@@UEAA_NXZ
+?UnkFunc72@SoundPlayerCri@snd@hh@@UEAA_NXZ:
+    mov rax, 014089fd30h
+    jmp rax
+
+PUBLIC ?UnkFunc16@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc16@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 014089ff40h
+    jmp rax
+
+PUBLIC ?CategoryPause@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@_NM@Z
+?CategoryPause@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@_NM@Z:
+    mov rax, 01408a0110h
+    jmp rax
+
+PUBLIC ?CreatePlaybackObject@SoundPlayerCri@snd@hh@@QEAAPEAVSoundPlaybackObject@23@IPEBD@Z
+?CreatePlaybackObject@SoundPlayerCri@snd@hh@@QEAAPEAVSoundPlaybackObject@23@IPEBD@Z:
+    mov rax, 01408a0350h
+    jmp rax
+
+PUBLIC ?DetachAisac@SoundPlayerCri@snd@hh@@UEAA_NAEBVSoundHandle@23@PEBD@Z
+?DetachAisac@SoundPlayerCri@snd@hh@@UEAA_NAEBVSoundHandle@23@PEBD@Z:
+    mov rax, 01408a0610h
+    jmp rax
+
+PUBLIC ?DetachAisacAll@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@@Z
+?DetachAisacAll@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@@Z:
+    mov rax, 01408a06d0h
+    jmp rax
+
+PUBLIC ?DetachCategoryAisacAll@SoundPlayerCri@snd@hh@@UEAAXI@Z
+?DetachCategoryAisacAll@SoundPlayerCri@snd@hh@@UEAAXI@Z:
+    mov rax, 01408a08d0h
+    jmp rax
+
+PUBLIC ?UnkFunc17@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc17@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a09e0h
+    jmp rax
+
 PUBLIC ?ForwardMessageImm@Messenger@fnd@hh@@IEAA_NAEAV?$Handle@VMessenger@fnd@hh@@@23@AEAVMessage@23@@Z
 ?ForwardMessageImm@Messenger@fnd@hh@@IEAA_NAEAV?$Handle@VMessenger@fnd@hh@@@23@AEAVMessage@23@@Z:
     mov rax, 01408a0de0h
+    jmp rax
+
+PUBLIC ?UnkFunc28@SoundPlayerCri@snd@hh@@UEBAHAEBVSoundHandle@23@@Z
+?UnkFunc28@SoundPlayerCri@snd@hh@@UEBAHAEBVSoundHandle@23@@Z:
+    mov rax, 01408a0de0h
+    jmp rax
+
+PUBLIC ?UnkFunc48@SoundPlayerCri@snd@hh@@UEBAIXZ
+?UnkFunc48@SoundPlayerCri@snd@hh@@UEBAIXZ:
+    mov rax, 01408a0e70h
+    jmp rax
+
+PUBLIC ?UnkFunc46@SoundPlayerCri@snd@hh@@UEBAMXZ
+?UnkFunc46@SoundPlayerCri@snd@hh@@UEBAMXZ:
+    mov rax, 01408a0f30h
+    jmp rax
+
+PUBLIC ?GetCueName@SoundPlayerCri@snd@hh@@UEBAPEBDAEBVSoundHandle@23@@Z
+?GetCueName@SoundPlayerCri@snd@hh@@UEBAPEBDAEBVSoundHandle@23@@Z:
+    mov rax, 01408a0fb0h
+    jmp rax
+
+PUBLIC ?UnkFunc49@SoundPlayerCri@snd@hh@@UEBAIXZ
+?UnkFunc49@SoundPlayerCri@snd@hh@@UEBAIXZ:
+    mov rax, 01408a1080h
+    jmp rax
+
+PUBLIC ?UnkFunc56@SoundPlayerCri@snd@hh@@UEBAIXZ
+?UnkFunc56@SoundPlayerCri@snd@hh@@UEBAIXZ:
+    mov rax, 01408a13c0h
+    jmp rax
+
+PUBLIC ?UnkFunc65@SoundPlayerCri@snd@hh@@UEBAMXZ
+?UnkFunc65@SoundPlayerCri@snd@hh@@UEBAMXZ:
+    mov rax, 01408a1420h
+    jmp rax
+
+PUBLIC ?UnkFunc63@SoundPlayerCri@snd@hh@@UEBA?AVVector3@math@csl@@XZ
+?UnkFunc63@SoundPlayerCri@snd@hh@@UEBA?AVVector3@math@csl@@XZ:
+    mov rax, 01408a1480h
+    jmp rax
+
+PUBLIC ?UnkFunc57@SoundPlayerCri@snd@hh@@UEBAIXZ
+?UnkFunc57@SoundPlayerCri@snd@hh@@UEBAIXZ:
+    mov rax, 01408a1500h
+    jmp rax
+
+PUBLIC ?UnkFunc58@SoundPlayerCri@snd@hh@@UEBA?AVVector3@math@csl@@XZ
+?UnkFunc58@SoundPlayerCri@snd@hh@@UEBA?AVVector3@math@csl@@XZ:
+    mov rax, 01408a1560h
+    jmp rax
+
+PUBLIC ?GetListenerDistance@SoundPlayerCri@snd@hh@@UEBAMAEBVSoundHandle@23@AEBVSoundListenerHandle@23@@Z
+?GetListenerDistance@SoundPlayerCri@snd@hh@@UEBAMAEBVSoundHandle@23@AEBVSoundListenerHandle@23@@Z:
+    mov rax, 01408a15e0h
+    jmp rax
+
+PUBLIC ?GetMasterVolume@SoundPlayerCri@snd@hh@@UEBAMI@Z
+?GetMasterVolume@SoundPlayerCri@snd@hh@@UEBAMI@Z:
+    mov rax, 01408a16e0h
+    jmp rax
+
+PUBLIC ?GetNumBlocks@SoundPlayerCri@snd@hh@@UEBAIAEBVSoundHandle@23@@Z
+?GetNumBlocks@SoundPlayerCri@snd@hh@@UEBAIAEBVSoundHandle@23@@Z:
+    mov rax, 01408a1740h
+    jmp rax
+
+PUBLIC ?GetPlayTime@SoundPlayerCri@snd@hh@@UEBAMAEBVSoundHandle@23@@Z
+?GetPlayTime@SoundPlayerCri@snd@hh@@UEBAMAEBVSoundHandle@23@@Z:
+    mov rax, 01408a17a0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@SoundPlayerCri@snd@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@SoundPlayerCri@snd@hh@@UEBAPEAXXZ:
+    mov rax, 01408a1810h
+    jmp rax
+
+PUBLIC ?UnkFunc45@SoundPlayerCri@snd@hh@@UEBAIXZ
+?UnkFunc45@SoundPlayerCri@snd@hh@@UEBAIXZ:
+    mov rax, 01408a1820h
+    jmp rax
+
+PUBLIC ?GetSourcePosition@SoundPlayerCri@snd@hh@@UEBA?AVVector3@math@csl@@AEBVSoundHandle@23@@Z
+?GetSourcePosition@SoundPlayerCri@snd@hh@@UEBA?AVVector3@math@csl@@AEBVSoundHandle@23@@Z:
+    mov rax, 01408a1880h
+    jmp rax
+
+PUBLIC ?GetStatus@SoundPlayerCri@snd@hh@@UEBAIAEBVSoundHandle@23@@Z
+?GetStatus@SoundPlayerCri@snd@hh@@UEBAIAEBVSoundHandle@23@@Z:
+    mov rax, 01408a1910h
+    jmp rax
+
+PUBLIC ?IsAisac@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z
+?IsAisac@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z:
+    mov rax, 01408a19e0h
+    jmp rax
+
+PUBLIC ?IsMasterMute@SoundPlayerCri@snd@hh@@UEBA_NI@Z
+?IsMasterMute@SoundPlayerCri@snd@hh@@UEBA_NI@Z:
+    mov rax, 01408a1aa0h
+    jmp rax
+
+PUBLIC ?IsPause@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z
+?IsPause@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z:
+    mov rax, 01408a1b00h
+    jmp rax
+
+PUBLIC ?IsPlay@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z
+?IsPlay@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z:
+    mov rax, 01408a1b20h
+    jmp rax
+
+PUBLIC ?UnkFunc24@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc24@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a2270h
+    jmp rax
+
+PUBLIC ?Pause@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@_NM@Z
+?Pause@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@_NM@Z:
+    mov rax, 01408a2390h
+    jmp rax
+
+PUBLIC ?Play@SoundPlayerCri@snd@hh@@UEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z
+?Play@SoundPlayerCri@snd@hh@@UEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z:
+    mov rax, 01408a2690h
+    jmp rax
+
+PUBLIC ?PlayCore@SoundPlayerCri@snd@hh@@QEAA?AVSoundHandle@23@PEAVSoundPlaybackObject@23@AEBUSoundParam@23@@Z
+?PlayCore@SoundPlayerCri@snd@hh@@QEAA?AVSoundHandle@23@PEAVSoundPlaybackObject@23@AEBUSoundParam@23@@Z:
+    mov rax, 01408a26d0h
+    jmp rax
+
+PUBLIC ?SetAisac@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@PEBDM@Z
+?SetAisac@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@PEBDM@Z:
+    mov rax, 01408a2f20h
+    jmp rax
+
+PUBLIC ?SetBlockIdxByName@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@PEBD@Z
+?SetBlockIdxByName@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@PEBD@Z:
+    mov rax, 01408a3510h
+    jmp rax
+
+PUBLIC ?UnkFunc18@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc18@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a35b0h
+    jmp rax
+
+PUBLIC ?SetDspParameter@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@HM@Z
+?SetDspParameter@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@HM@Z:
+    mov rax, 01408a35b0h
+    jmp rax
+
+PUBLIC ?UnkFunc67@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc67@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3630h
+    jmp rax
+
+PUBLIC ?UnkFunc62@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc62@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3690h
+    jmp rax
+
+PUBLIC ?UnkFunc66@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc66@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3710h
+    jmp rax
+
+PUBLIC ?UnkFunc64@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc64@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3780h
+    jmp rax
+
+PUBLIC ?UnkFunc61@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc61@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3840h
+    jmp rax
+
+PUBLIC ?UnkFunc59@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc59@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3900h
+    jmp rax
+
+PUBLIC ?UnkFunc60@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc60@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3980h
+    jmp rax
+
+PUBLIC ?UnkFunc68@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc68@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3a10h
+    jmp rax
+
+PUBLIC ?SetMasterVolume@SoundPlayerCri@snd@hh@@UEAAXIM@Z
+?SetMasterVolume@SoundPlayerCri@snd@hh@@UEAAXIM@Z:
+    mov rax, 01408a3b90h
+    jmp rax
+
+PUBLIC ?UnkFunc7@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc7@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3cb0h
+    jmp rax
+
+PUBLIC ?SetMaxDistance@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@M@Z
+?SetMaxDistance@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@M@Z:
+    mov rax, 01408a3cb0h
+    jmp rax
+
+PUBLIC ?UnkFunc6@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc6@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3d30h
+    jmp rax
+
+PUBLIC ?SetMinDistance@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@M@Z
+?SetMinDistance@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@M@Z:
+    mov rax, 01408a3d30h
+    jmp rax
+
+PUBLIC ?UnkFunc8@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc8@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3db0h
+    jmp rax
+
+PUBLIC ?SetMinMaxDistance@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@MM@Z
+?SetMinMaxDistance@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@MM@Z:
+    mov rax, 01408a3db0h
+    jmp rax
+
+PUBLIC ?SetSelectorLabel@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@PEBD1@Z
+?SetSelectorLabel@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@PEBD1@Z:
+    mov rax, 01408a3e40h
+    jmp rax
+
+PUBLIC ?UnkFunc43@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc43@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a3ed0h
+    jmp rax
+
+PUBLIC ?SetSourceDefaultDistance@SoundPlayerCri@snd@hh@@UEAAXMM@Z
+?SetSourceDefaultDistance@SoundPlayerCri@snd@hh@@UEAAXMM@Z:
+    mov rax, 01408a3f60h
+    jmp rax
+
+PUBLIC ?SetSourcePosition@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@AEBVVector3@math@csl@@@Z
+?SetSourcePosition@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@AEBVVector3@math@csl@@@Z:
+    mov rax, 01408a3fb0h
+    jmp rax
+
+PUBLIC ?SetSourceVelocity@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@AEBVVector3@math@csl@@@Z
+?SetSourceVelocity@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@AEBVVector3@math@csl@@@Z:
+    mov rax, 01408a4050h
+    jmp rax
+
+PUBLIC ?SetVolume@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@M@Z
+?SetVolume@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@M@Z:
+    mov rax, 01408a4100h
+    jmp rax
+
+PUBLIC ?UnkFunc71@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc71@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 01408a4310h
     jmp rax
 
 PUBLIC ?GetCurrentAnimationState@LayerStateSimple@AnimationStateMachine@anim@hh@@UEBAPEAVAnimationState@34@XZ
@@ -59535,6 +60255,16 @@ PUBLIC ?Construct@CollectionCharacterModelParam@rfl@heur@@CAXPEAU123@PEAVIAlloca
     mov rax, 0140ae8368h
     jmp rax
 
+PUBLIC ?criAtomExPlayer_GetParameterId@@YAIW4CriAtomExParameterIdTag@@@Z
+?criAtomExPlayer_GetParameterId@@YAIW4CriAtomExParameterIdTag@@@Z:
+    mov rax, 0140aee118h
+    jmp rax
+
+PUBLIC ?criAtomExPlayerParameter_SetParameterValue@@YAXPEAUCriAtomExPlayerParameter@@II@Z
+?criAtomExPlayerParameter_SetParameterValue@@YAXPEAUCriAtomExPlayerParameter@@II@Z:
+    mov rax, 0140b06560h
+    jmp rax
+
 PUBLIC ??0CriMvSoundInterface@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0CriMvSoundInterface@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0140b4cab0h
@@ -59560,9 +60290,34 @@ PUBLIC ?GetTypeInfo@ResParticleLocation@resources@heur@@SAPEBUResourceTypeInfo@f
     mov rax, 0140ba4130h
     jmp rax
 
+PUBLIC ?EventCallback@GOCParticleLocator@animeff@hh@@UEAAXAEBUTrigger@TriggerListener@anim@3@@Z
+?EventCallback@GOCParticleLocator@animeff@hh@@UEAAXAEBUTrigger@TriggerListener@anim@3@@Z:
+    mov rax, 0140ba4a00h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCParticleLocator@animeff@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCParticleLocator@animeff@hh@@UEBAPEAXXZ:
+    mov rax, 0140ba4fc0h
+    jmp rax
+
+PUBLIC ?OnGOCEvent@GOCParticleLocator@animeff@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z
+?OnGOCEvent@GOCParticleLocator@animeff@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z:
+    mov rax, 0140ba4fd0h
+    jmp rax
+
 PUBLIC ?GetClass@GOCParticleLocator@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
 ?GetClass@GOCParticleLocator@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ:
     mov rax, 0140ba6720h
+    jmp rax
+
+PUBLIC ?GetClass@GOCParticleLocator@animeff@hh@@SAPEBVGOComponentClass@game@3@XZ
+?GetClass@GOCParticleLocator@animeff@hh@@SAPEBVGOComponentClass@game@3@XZ:
+    mov rax, 0140ba6720h
+    jmp rax
+
+PUBLIC ?UpdateAsync@GOCParticleLocator@animeff@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z
+?UpdateAsync@GOCParticleLocator@animeff@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@PEAX@Z:
+    mov rax, 0140ba6ea0h
     jmp rax
 
 PUBLIC ?BuildLayerBlendTree@AnimationStateMachine@anim@hh@@QEAAPEAVBlendNodeBase@23@AEBUBlendNodeData@23@@Z
@@ -59578,6 +60333,11 @@ PUBLIC ?ChangeState@AnimationStateMachine@anim@hh@@QEAA_NPEBD@Z
 PUBLIC ?ChangeToNull@AnimationStateMachine@anim@hh@@QEAA_NH@Z
 ?ChangeToNull@AnimationStateMachine@anim@hh@@QEAA_NH@Z:
     mov rax, 0140ba8b70h
+    jmp rax
+
+PUBLIC ?GetActiveState@AnimationStateMachine@anim@hh@@QEBAPEAVImpl@AnimationState@23@H@Z
+?GetActiveState@AnimationStateMachine@anim@hh@@QEBAPEAVImpl@AnimationState@23@H@Z:
+    mov rax, 0140ba9c80h
     jmp rax
 
 PUBLIC ?GetActiveAnimationState@LayerStateTransition@AnimationStateMachine@anim@hh@@UEBAPEAVAnimationState@34@XZ
@@ -87925,6 +88685,11 @@ PUBLIC ?componentClass@GOCParticleLocator@gocs@heur@@0VGOComponentClass@game@hh@
     mov rax, 01429392d0h
     jmp rax
 
+PUBLIC ?componentClass@GOCParticleLocator@animeff@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCParticleLocator@animeff@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 01429392d0h
+    jmp rax
+
 PUBLIC ?componentClass@GOCAnimator@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCAnimator@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 0142939310h
@@ -88083,6 +88848,11 @@ PUBLIC ?instance@ObjInfoRegistry@game@hh@@2PEAV123@EA
 PUBLIC ?instance@?$Singleton@VDeviceManagerWin32@hid@hh@@@fnd@csl@@2PEAVDeviceManagerWin32@hid@hh@@EA
 ?instance@?$Singleton@VDeviceManagerWin32@hid@hh@@@fnd@csl@@2PEAVDeviceManagerWin32@hid@hh@@EA:
     mov rax, 01429a46c8h
+    jmp rax
+
+PUBLIC ?instance@?$Singleton@VSoundSystem@snd@hh@@@fnd@csl@@2PEAVSoundSystem@snd@hh@@EA
+?instance@?$Singleton@VSoundSystem@snd@hh@@@fnd@csl@@2PEAVSoundSystem@snd@hh@@EA:
+    mov rax, 01429a46d0h
     jmp rax
 
 PUBLIC ?instance@GameLocale@game@app@@0PEAV123@EA
@@ -93705,6 +94475,11 @@ PUBLIC ?gameServiceClass@DebugTips@dbg@app@@0VGameServiceClass@game@hh@@B
     mov rax, 01429bb400h
     jmp rax
 
+PUBLIC ?instance@?$HandleManager@VSoundPlaybackObject@snd@hh@@@fnd@hh@@2PEAV123@EA
+?instance@?$HandleManager@VSoundPlaybackObject@snd@hh@@@fnd@hh@@2PEAV123@EA:
+    mov rax, 01429bb968h
+    jmp rax
+
 PUBLIC ?instance@?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@hh@@2PEAV123@EA
 ?instance@?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@hh@@2PEAV123@EA:
     mov rax, 01429bb9b8h
@@ -97815,9 +98590,19 @@ PUBLIC ?gameServiceClass@RankingDbgData@ranking@app@@0VGameServiceClass@game@hh@
     mov rax, 01429c7e90h
     jmp rax
 
+PUBLIC ?instance@?$Singleton@VSoundPlayer@snd@hh@@@fnd@csl@@2PEAVSoundPlayer@snd@hh@@EA
+?instance@?$Singleton@VSoundPlayer@snd@hh@@@fnd@csl@@2PEAVSoundPlayer@snd@hh@@EA:
+    mov rax, 01429c7f00h
+    jmp rax
+
 PUBLIC ?gameServiceClass@SoundDirector@snd@app@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@SoundDirector@snd@app@@0VGameServiceClass@game@hh@@B:
     mov rax, 01429c7f10h
+    jmp rax
+
+PUBLIC ?instance@?$HandleManager@VSoundListenerObject@snd@hh@@@fnd@hh@@2PEAV123@EA
+?instance@?$HandleManager@VSoundListenerObject@snd@hh@@@fnd@hh@@2PEAV123@EA:
+    mov rax, 01429c7f28h
     jmp rax
 
 PUBLIC ?gameServiceClass@TerrainManager@trr@app@@0VGameServiceClass@game@hh@@B
@@ -97943,6 +98728,11 @@ PUBLIC ?gameServiceClass@RenderTextureFreeCameraManager@services@heur@@0VGameSer
 PUBLIC ?gameServiceClass@ShapeHistoryManager@services@heur@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@ShapeHistoryManager@services@heur@@0VGameServiceClass@game@hh@@B:
     mov rax, 01429d3e30h
+    jmp rax
+
+PUBLIC ?gameServiceClass@UIManager@ui@hh@@0VGameServiceClass@game@3@B
+?gameServiceClass@UIManager@ui@hh@@0VGameServiceClass@game@3@B:
+    mov rax, 01429d3e68h
     jmp rax
 
 PUBLIC ?instance@?$Singleton@VResourceTypeRegistry@fnd@hh@@@fnd@csl@@2PEAVResourceTypeRegistry@2hh@@EA
@@ -107675,6 +108465,11 @@ PUBLIC ?TL_MaybeOnTrigger@VisualHuman@player@app@@UEAAXXZ
     mov rax, 014b08a4d0h
     jmp rax
 
+PUBLIC ?EventCallback@VisualHuman@player@app@@UEAAXAEBUTrigger@TriggerListener@anim@hh@@@Z
+?EventCallback@VisualHuman@player@app@@UEAAXAEBUTrigger@TriggerListener@anim@hh@@@Z:
+    mov rax, 014b08a4d0h
+    jmp rax
+
 PUBLIC ?InitializeAttachPointFrames@VisualHuman@player@app@@QEAAXXZ
 ?InitializeAttachPointFrames@VisualHuman@player@app@@QEAAXXZ:
     mov rax, 014b097bb0h
@@ -108605,6 +109400,11 @@ PUBLIC ?OnAddedToGame@MovieManager@fmv@hh@@UEAAXXZ
     mov rax, 014c98bb90h
     jmp rax
 
+PUBLIC ?OnAddedToGame@UIManager@ui@hh@@UEAAXXZ
+?OnAddedToGame@UIManager@ui@hh@@UEAAXXZ:
+    mov rax, 014c98bb90h
+    jmp rax
+
 PUBLIC ?OnRemovedFromGame@PathManager@path@hh@@UEAAXXZ
 ?OnRemovedFromGame@PathManager@path@hh@@UEAAXXZ:
     mov rax, 014c9975c0h
@@ -108625,9 +109425,19 @@ PUBLIC ?OnRemovedFromGame@MovieManager@fmv@hh@@UEAAXXZ
     mov rax, 014c9975c0h
     jmp rax
 
+PUBLIC ?OnRemovedFromGame@UIManager@ui@hh@@UEAAXXZ
+?OnRemovedFromGame@UIManager@ui@hh@@UEAAXXZ:
+    mov rax, 014c9975c0h
+    jmp rax
+
 PUBLIC ??_DGOCUICollider@gocs@heur@@QEAAXXZ
 ??_DGOCUICollider@gocs@heur@@QEAAXXZ:
     mov rax, 014c9a9c30h
+    jmp rax
+
+PUBLIC ??_DUIManager@ui@hh@@QEAAXXZ
+??_DUIManager@ui@hh@@QEAAXXZ:
+    mov rax, 014c9ebfc0h
     jmp rax
 
 PUBLIC ?AddGOCSprite@UIManager@ui@hh@@QEAAXPEAVGOCSprite@23@@Z
@@ -108635,9 +109445,34 @@ PUBLIC ?AddGOCSprite@UIManager@ui@hh@@QEAAXPEAVGOCSprite@23@@Z
     mov rax, 014c9f5b80h
     jmp rax
 
+PUBLIC ?AddTextObjectUpdater@UIManager@ui@hh@@QEAAXPEAVTextObjectUpdater@23@@Z
+?AddTextObjectUpdater@UIManager@ui@hh@@QEAAXPEAVTextObjectUpdater@23@@Z:
+    mov rax, 014c9f94b0h
+    jmp rax
+
 PUBLIC ?RemoveGOCSprite@UIManager@ui@hh@@QEAAXPEAVGOCSprite@23@@Z
 ?RemoveGOCSprite@UIManager@ui@hh@@QEAAXPEAVGOCSprite@23@@Z:
     mov rax, 014ca0d4b0h
+    jmp rax
+
+PUBLIC ?RemoveTextObjectUpdater@UIManager@ui@hh@@QEAAXPEAVTextObjectUpdater@23@@Z
+?RemoveTextObjectUpdater@UIManager@ui@hh@@QEAAXPEAVTextObjectUpdater@23@@Z:
+    mov rax, 014ca2dc20h
+    jmp rax
+
+PUBLIC ?Initialize@UIManager@ui@hh@@QEAAXAEBUConfig@123@@Z
+?Initialize@UIManager@ui@hh@@QEAAXAEBUConfig@123@@Z:
+    mov rax, 014ca38c30h
+    jmp rax
+
+PUBLIC ?SetupSurfRideProject@UIManager@ui@hh@@QEAAPEAVProject@SurfRide@@PEAVResSurfRideProject@23@PEAVIAllocator@fnd@csl@@@Z
+?SetupSurfRideProject@UIManager@ui@hh@@QEAAPEAVProject@SurfRide@@PEAVResSurfRideProject@23@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014ca39f30h
+    jmp rax
+
+PUBLIC ?Create@UIManager@ui@hh@@CAPEAVGameService@game@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@UIManager@ui@hh@@CAPEAVGameService@game@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014ca52160h
     jmp rax
 
 PUBLIC ??_GResSurfRideProject@resources@heur@@QEAAXXZ
@@ -108760,6 +109595,11 @@ PUBLIC ?Create@GOCUICollider@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014d0e1250h
     jmp rax
 
+PUBLIC ?Clear@TextObjectUpdater@ui@hh@@QEAAXXZ
+?Clear@TextObjectUpdater@ui@hh@@QEAAXXZ:
+    mov rax, 014d14a450h
+    jmp rax
+
 PUBLIC ?Initialize@UIGridPanel@ui@hh@@QEAAXAEBULayout@123@@Z
 ?Initialize@UIGridPanel@ui@hh@@QEAAXAEBULayout@123@@Z:
     mov rax, 014d3980b0h
@@ -108773,6 +109613,21 @@ PUBLIC ??_DLayer@SurfRide@@QEAAXXZ
 PUBLIC ?TL_UnkFunc1@ConverseTextListener@text@hh@@EEAA_NPEAX0@Z
 ?TL_UnkFunc1@ConverseTextListener@text@hh@@EEAA_NPEAX0@Z:
     mov rax, 014d7196e0h
+    jmp rax
+
+PUBLIC ??_DSoundSystemCri@snd@hh@@QEAAXXZ
+??_DSoundSystemCri@snd@hh@@QEAAXXZ:
+    mov rax, 014d81e600h
+    jmp rax
+
+PUBLIC ?Create@SoundSystemCri@snd@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@PEBUPoolParam@SoundCueCri@23@@Z
+?Create@SoundSystemCri@snd@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@PEBUPoolParam@SoundCueCri@23@@Z:
+    mov rax, 014d829510h
+    jmp rax
+
+PUBLIC ?Setup@SoundSystemCri@snd@hh@@UEAAXPEBD@Z
+?Setup@SoundSystemCri@snd@hh@@UEAAXPEBD@Z:
+    mov rax, 014d829eb0h
     jmp rax
 
 PUBLIC ??_GResAtomConfig@snd@hh@@QEAAXXZ
@@ -108825,6 +109680,16 @@ PUBLIC ?Create@ResAtomCueSheet@snd@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocato
     mov rax, 014d8470c0h
     jmp rax
 
+PUBLIC ??_DSoundListenerObject@snd@hh@@QEAAXXZ
+??_DSoundListenerObject@snd@hh@@QEAAXXZ:
+    mov rax, 014d85b840h
+    jmp rax
+
+PUBLIC ?Stop@SoundHandle@snd@hh@@QEAAXM@Z
+?Stop@SoundHandle@snd@hh@@QEAAXM@Z:
+    mov rax, 014d880650h
+    jmp rax
+
 PUBLIC ??0SoundManager@services@heur@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0SoundManager@services@heur@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014d886550h
@@ -108835,6 +109700,21 @@ PUBLIC ??0SoundManager@snd@hh@@AEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014d886550h
     jmp rax
 
+PUBLIC ?AddGOCSound@SoundManager@snd@hh@@QEAAXPEAVGOCSound@23@@Z
+?AddGOCSound@SoundManager@snd@hh@@QEAAXPEAVGOCSound@23@@Z:
+    mov rax, 014d89c540h
+    jmp rax
+
+PUBLIC ?Play3D@SoundManager@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBVVector3@math@csl@@AEBUSoundParam@23@@Z
+?Play3D@SoundManager@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBVVector3@math@csl@@AEBUSoundParam@23@@Z:
+    mov rax, 014d89dc00h
+    jmp rax
+
+PUBLIC ?RemoveGOCSound@SoundManager@snd@hh@@QEAAXPEAVGOCSound@23@@Z
+?RemoveGOCSound@SoundManager@snd@hh@@QEAAXPEAVGOCSound@23@@Z:
+    mov rax, 014d89f940h
+    jmp rax
+
 PUBLIC ??_GGOCSound@gocs@heur@@QEAAXXZ
 ??_GGOCSound@gocs@heur@@QEAAXXZ:
     mov rax, 014d8a41a0h
@@ -108843,6 +109723,16 @@ PUBLIC ??_GGOCSound@gocs@heur@@QEAAXXZ
 PUBLIC ??_DGOCSound@snd@hh@@QEAAXXZ
 ??_DGOCSound@snd@hh@@QEAAXXZ:
     mov rax, 014d8a41a0h
+    jmp rax
+
+PUBLIC ?CreateSoundHandle3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBUSoundFollowFrameInfo@23@AEBUSoundParam@23@@Z
+?CreateSoundHandle3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBUSoundFollowFrameInfo@23@AEBUSoundParam@23@@Z:
+    mov rax, 014d8ac330h
+    jmp rax
+
+PUBLIC ?CreateSoundHandle@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z
+?CreateSoundHandle@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IPEBDAEBUSoundParam@23@@Z:
+    mov rax, 014d8b3300h
     jmp rax
 
 PUBLIC ?Create@GOCSound@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
@@ -108865,6 +109755,16 @@ PUBLIC ?OnGOCEvent@GOCSound@snd@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameO
     mov rax, 014d8b7a50h
     jmp rax
 
+PUBLIC ?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IAEBUSoundPlayInfo@23@@Z
+?Play3D@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@IAEBUSoundPlayInfo@23@@Z:
+    mov rax, 014d8cb770h
+    jmp rax
+
+PUBLIC ?PlayVoice@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBD@Z
+?PlayVoice@GOCSound@snd@hh@@QEAA?AVSoundHandle@23@PEBD@Z:
+    mov rax, 014d8d4790h
+    jmp rax
+
 PUBLIC ?Initialize@GOCSound@snd@hh@@QEAAXAEBUConfig@123@@Z
 ?Initialize@GOCSound@snd@hh@@QEAAXAEBUConfig@123@@Z:
     mov rax, 014d8eba50h
@@ -108875,9 +109775,129 @@ PUBLIC ?Setup@GOCSound@snd@hh@@QEAAXAEBUSetupInfo@123@@Z
     mov rax, 014d8eba50h
     jmp rax
 
+PUBLIC ?StopAll@GOCSound@snd@hh@@QEAAXM@Z
+?StopAll@GOCSound@snd@hh@@QEAAXM@Z:
+    mov rax, 014d8ede70h
+    jmp rax
+
 PUBLIC ?Create@SoundManagerCri@snd@hh@@CAPEAVGameService@game@3@PEAVIAllocator@fnd@csl@@@Z
 ?Create@SoundManagerCri@snd@hh@@CAPEAVGameService@game@3@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014d92a460h
+    jmp rax
+
+PUBLIC ??_DSoundCategoryListener@snd@hh@@QEAAXXZ
+??_DSoundCategoryListener@snd@hh@@QEAAXXZ:
+    mov rax, 014d930d30h
+    jmp rax
+
+PUBLIC ?AttachCategoryAisac@SoundPlayer@snd@hh@@UEAAXIPEBD0@Z
+?AttachCategoryAisac@SoundPlayer@snd@hh@@UEAAXIPEBD0@Z:
+    mov rax, 014d943100h
+    jmp rax
+
+PUBLIC ?DetachCategoryAisac@SoundPlayer@snd@hh@@UEAAXIPEBD0@Z
+?DetachCategoryAisac@SoundPlayer@snd@hh@@UEAAXIPEBD0@Z:
+    mov rax, 014d9444e0h
+    jmp rax
+
+PUBLIC ?MoveToTween@snd@hh@@YA_NPEAUSoundTween@12@MM@Z
+?MoveToTween@snd@hh@@YA_NPEAUSoundTween@12@MM@Z:
+    mov rax, 014d94ff80h
+    jmp rax
+
+PUBLIC ?ResetTween@snd@hh@@YAXPEAUSoundTween@12@M_N@Z
+?ResetTween@snd@hh@@YAXPEAUSoundTween@12@M_N@Z:
+    mov rax, 014d955260h
+    jmp rax
+
+PUBLIC ??0SoundSystem@snd@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0SoundSystem@snd@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014d97ebd0h
+    jmp rax
+
+PUBLIC ??_DSoundPlayerCri@snd@hh@@QEAAXXZ
+??_DSoundPlayerCri@snd@hh@@QEAAXXZ:
+    mov rax, 014d9db6d0h
+    jmp rax
+
+PUBLIC ?AttachCategoryAisac@SoundPlayerCri@snd@hh@@UEAAXIPEBD0@Z
+?AttachCategoryAisac@SoundPlayerCri@snd@hh@@UEAAXIPEBD0@Z:
+    mov rax, 014d9f1210h
+    jmp rax
+
+PUBLIC ?Create@SoundPlayerCri@snd@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@PEBUPoolParam@SoundCueCri@23@@Z
+?Create@SoundPlayerCri@snd@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@PEBUPoolParam@SoundCueCri@23@@Z:
+    mov rax, 014d9fda10h
+    jmp rax
+
+PUBLIC ?DetachCategoryAisac@SoundPlayerCri@snd@hh@@UEAAXIPEBD0@Z
+?DetachCategoryAisac@SoundPlayerCri@snd@hh@@UEAAXIPEBD0@Z:
+    mov rax, 014da09670h
+    jmp rax
+
+PUBLIC ?UnkFunc31@SoundPlayerCri@snd@hh@@UEBAHAEBVSoundHandle@23@@Z
+?UnkFunc31@SoundPlayerCri@snd@hh@@UEBAHAEBVSoundHandle@23@@Z:
+    mov rax, 014da1a760h
+    jmp rax
+
+PUBLIC ?IsLoop2@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z
+?IsLoop2@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z:
+    mov rax, 014da1cd20h
+    jmp rax
+
+PUBLIC ?IsLoop@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z
+?IsLoop@SoundPlayerCri@snd@hh@@UEBA_NAEBVSoundHandle@23@@Z:
+    mov rax, 014da1f520h
+    jmp rax
+
+PUBLIC ?MatchCategory@SoundPlayerCri@snd@hh@@UEAA_NIPEAX@Z
+?MatchCategory@SoundPlayerCri@snd@hh@@UEAA_NIPEAX@Z:
+    mov rax, 014da29a50h
+    jmp rax
+
+PUBLIC ?UnkFunc20@SoundPlayer@snd@hh@@UEAAXXZ
+?UnkFunc20@SoundPlayer@snd@hh@@UEAAXXZ:
+    mov rax, 014da2f4c0h
+    jmp rax
+
+PUBLIC ?Play3D@SoundPlayerCri@snd@hh@@UEAA?AVSoundHandle@23@IPEBDAEBVVector3@math@csl@@AEBUSoundParam@23@@Z
+?Play3D@SoundPlayerCri@snd@hh@@UEAA?AVSoundHandle@23@IPEBDAEBVVector3@math@csl@@AEBUSoundParam@23@@Z:
+    mov rax, 014da35970h
+    jmp rax
+
+PUBLIC ?UnkFunc55@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc55@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 014da3c530h
+    jmp rax
+
+PUBLIC ?UnkFunc26@SoundPlayerCri@snd@hh@@UEAAXXZ
+?UnkFunc26@SoundPlayerCri@snd@hh@@UEAAXXZ:
+    mov rax, 014da3d3f0h
+    jmp rax
+
+PUBLIC ?SetBlockIdx@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@H@Z
+?SetBlockIdx@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@H@Z:
+    mov rax, 014da405a0h
+    jmp rax
+
+PUBLIC ?SetListenerIdMap@SoundPlayerCri@snd@hh@@UEAAXAEBUListenerIdMapArgs@SoundPlayer@23@@Z
+?SetListenerIdMap@SoundPlayerCri@snd@hh@@UEAAXAEBUListenerIdMapArgs@SoundPlayer@23@@Z:
+    mov rax, 014da418a0h
+    jmp rax
+
+PUBLIC ?SetMasterMute@SoundPlayerCri@snd@hh@@UEAAXI_N@Z
+?SetMasterMute@SoundPlayerCri@snd@hh@@UEAAXI_N@Z:
+    mov rax, 014da4dd00h
+    jmp rax
+
+PUBLIC ?Stop@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@M@Z
+?Stop@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@M@Z:
+    mov rax, 014da61b80h
+    jmp rax
+
+PUBLIC ?StopImm@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@@Z
+?StopImm@SoundPlayerCri@snd@hh@@UEAAXAEBVSoundHandle@23@@Z:
+    mov rax, 014da68780h
     jmp rax
 
 PUBLIC ??_GGOCCollisionQuery@gocs@heur@@QEAAXXZ
@@ -109280,8 +110300,8 @@ PUBLIC ?Create@ResVertexAnimationTexture@resources@heur@@SAPEAV123@PEAVIAllocato
     mov rax, 014e7d8040h
     jmp rax
 
-PUBLIC ??0GOCVisual@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
-??0GOCVisual@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+PUBLIC ??0GOCVisual@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@E@Z
+??0GOCVisual@gfx@hh@@QEAA@PEAVIAllocator@fnd@csl@@E@Z:
     mov rax, 014e806d90h
     jmp rax
 
@@ -112160,6 +113180,16 @@ PUBLIC ??_GGOCParticleLocator@gocs@heur@@QEAAXXZ
     mov rax, 0152a2cd40h
     jmp rax
 
+PUBLIC ??_DGOCParticleLocator@animeff@hh@@QEAAXXZ
+??_DGOCParticleLocator@animeff@hh@@QEAAXXZ:
+    mov rax, 0152a2cd40h
+    jmp rax
+
+PUBLIC ?AddListener@GOCParticleLocator@animeff@hh@@QEAAXPEAVParticleLocatorListener@23@@Z
+?AddListener@GOCParticleLocator@animeff@hh@@QEAAXPEAVParticleLocatorListener@23@@Z:
+    mov rax, 0152a392d0h
+    jmp rax
+
 PUBLIC ?Create@GOCParticleLocator@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCParticleLocator@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0152a644a0h
@@ -112170,6 +113200,26 @@ PUBLIC ?Create@GOCParticleLocator@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@
     mov rax, 0152a644a0h
     jmp rax
 
+PUBLIC ?Create@GOCParticleLocator@animeff@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCParticleLocator@animeff@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0152a644a0h
+    jmp rax
+
+PUBLIC ?RemoveListener@GOCParticleLocator@animeff@hh@@QEAAXPEAVParticleLocatorListener@23@@Z
+?RemoveListener@GOCParticleLocator@animeff@hh@@QEAAXPEAVParticleLocatorListener@23@@Z:
+    mov rax, 0152a786f0h
+    jmp rax
+
+PUBLIC ?Setup@GOCParticleLocator@animeff@hh@@QEAAXAEBUSetupInfo@123@@Z
+?Setup@GOCParticleLocator@animeff@hh@@QEAAXAEBUSetupInfo@123@@Z:
+    mov rax, 0152a79230h
+    jmp rax
+
+PUBLIC ?TransitionEndedCallback@GOCParticleLocator@animeff@hh@@UEAAXPEAVAnimationStateMachine@anim@3@H@Z
+?TransitionEndedCallback@GOCParticleLocator@animeff@hh@@UEAAXPEAVAnimationStateMachine@anim@3@H@Z:
+    mov rax, 0152a970b0h
+    jmp rax
+
 PUBLIC ??0AnimationStateMachine@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0AnimationStateMachine@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0152ab8230h
@@ -112178,6 +113228,11 @@ PUBLIC ??0AnimationStateMachine@anim@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ?AddStateListener@AnimationStateMachine@anim@hh@@QEAAXPEAVAnimationStateListener@23@@Z
 ?AddStateListener@AnimationStateMachine@anim@hh@@QEAAXPEAVAnimationStateListener@23@@Z:
     mov rax, 0152aecca0h
+    jmp rax
+
+PUBLIC ?AddTriggerListener@AnimationStateMachine@anim@hh@@QEAAXHPEAVTriggerListener@23@@Z
+?AddTriggerListener@AnimationStateMachine@anim@hh@@QEAAXHPEAVTriggerListener@23@@Z:
+    mov rax, 0152aee740h
     jmp rax
 
 PUBLIC ?BuildTransitionBlendTree@LayerStateTransition@AnimationStateMachine@anim@hh@@QEAAXXZ
@@ -112242,6 +113297,11 @@ PUBLIC ?ChangeStateWithoutTransition@GOCAnimator@anim@hh@@QEAA_NPEBD@Z
 
 PUBLIC ?TL_MaybeOnTrigger@GOCAnimator@anim@hh@@UEAAXXZ
 ?TL_MaybeOnTrigger@GOCAnimator@anim@hh@@UEAAXXZ:
+    mov rax, 0152b93270h
+    jmp rax
+
+PUBLIC ?EventCallback@GOCAnimator@anim@hh@@UEAAXAEBUTrigger@TriggerListener@23@@Z
+?EventCallback@GOCAnimator@anim@hh@@UEAAXAEBUTrigger@TriggerListener@23@@Z:
     mov rax, 0152b93270h
     jmp rax
 

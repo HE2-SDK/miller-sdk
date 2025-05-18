@@ -65,87 +65,74 @@ namespace hh::eff {
     };
 
     struct EffectCreateInfo {
-        uint8_t unk1;
-        bool unk1a;
-        uint8_t unk2;
-        const char* resourceName;
-        float scale;
-        int unk4a;
-        float unk5;
-        uint32_t unk5a;
-        uint64_t unk6;
+        bool setFlag0{ true };
+        bool unk1a{ false };
+        bool setFlag1{ false };
+        const char* resource;
+        float scale{ 1.0f };
+        int unk4a{ -1 };
+        float unk5{ 0.0f };
+        float delay{ 0.0f };
+        uint64_t unk6{ 0 };
         EffectTransType transType;
-        fnd::WorldPosition additionalWorldPos;
-        bool useAdditionalWorldPos;
+        fnd::WorldPosition additionalWorldPos{};
+        bool useAdditionalWorldPos{ false };
 
-        EffectCreateInfo(EffectTransType transType, const char* resourceName)
-            : transType{ transType }
-            , unk1{ 1 }
-            , unk1a{ 0 }
-            , unk2{ 0 }
-            , resourceName{ resourceName }
-            , scale{ 1.0f }
-            , unk4a{ -1 }
-            , unk5{ 0.0f }
-            , unk5a{ 0 }
-            , unk6{ 0 }
-            , additionalWorldPos{}
-            , useAdditionalWorldPos{ false }
-        {}
+        EffectCreateInfo(EffectTransType transType, const char* resource) : transType{ transType }, resource{ resource } {}
     };
 
     struct EffectTransFrameCreateInfo : EffectCreateInfo {
         EffectTransFrameInfo transInfo;
 
-        EffectTransFrameCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::FRAME, resourceName } {}
+        EffectTransFrameCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::FRAME, resource } {}
     };
 
     struct EffectTransNodeCreateInfo : EffectCreateInfo {
         EffectTransNodeInfo transInfo;
 
-        EffectTransNodeCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::NODE, resourceName } {}
+        EffectTransNodeCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::NODE, resource } {}
     };
 
     struct EffectTransNodeAndFrameCreateInfo : EffectCreateInfo {
         EffectTransNodeAndFrameInfo transInfo;
 
-        EffectTransNodeAndFrameCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::NODE_AND_FRAME, resourceName } {}
+        EffectTransNodeAndFrameCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::NODE_AND_FRAME, resource } {}
     };
 
     struct EffectTransNodePositionCreateInfo : EffectCreateInfo {
         EffectTransNodePositionInfo transInfo;
 
-        EffectTransNodePositionCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::NODE_POSITION, resourceName } {}
+        EffectTransNodePositionCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::NODE_POSITION, resource } {}
     };
 
     struct EffectTransModelCreateInfo : EffectCreateInfo {
         EffectTransModelInfo transInfo;
 
-        EffectTransModelCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::MODEL, resourceName } {}
+        EffectTransModelCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::MODEL, resource } {}
     };
 
     struct EffectTransModelSpaceNodeCreateInfo : EffectCreateInfo {
         EffectTransModelSpaceNodeInfo transInfo;
 
-        EffectTransModelSpaceNodeCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::MODEL_SPACE_NODE, resourceName } {}
+        EffectTransModelSpaceNodeCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::MODEL_SPACE_NODE, resource } {}
     };
 
     struct EffectTransWorldPositionCreateInfo : EffectCreateInfo {
         EffectTransWorldPositionInfo transInfo;
 
-        EffectTransWorldPositionCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::WORLD_POSITION, resourceName } {}
+        EffectTransWorldPositionCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::WORLD_POSITION, resource } {}
     };
 
     struct EffectTransFrameOverrideRotationScaleCreateInfo : EffectCreateInfo {
         EffectTransFrameOverrideRotationScaleInfo transInfo;
 
-        EffectTransFrameOverrideRotationScaleCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::FRAME_OVERRIDE_ROTATION_SCALE, resourceName } {}
+        EffectTransFrameOverrideRotationScaleCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::FRAME_OVERRIDE_ROTATION_SCALE, resource } {}
     };
 
     struct EffectTransFramePositionCreateInfo : EffectCreateInfo {
         EffectTransFramePositionInfo transInfo;
 
-        EffectTransFramePositionCreateInfo(const char* resourceName) : EffectCreateInfo{ EffectTransType::FRAME_POSITION, resourceName } {}
+        EffectTransFramePositionCreateInfo(const char* resource) : EffectCreateInfo{ EffectTransType::FRAME_POSITION, resource } {}
     };
 
     class GOCEffect : public game::GOComponent {
@@ -204,6 +191,21 @@ namespace hh::eff {
             csl::math::Matrix34 additionalTransformationMatrix;
         };
 
+        struct EffectInfo {
+            enum class Flag : unsigned char {
+                UNK0,
+                UNK1,
+            };
+
+            EffectHandle handle;
+            csl::ut::Bitset<Flag> flags;
+        };
+
+        struct NewEffectInfo : EffectInfo {
+            EffectTransInfo transInfo;
+            float delay;
+        };
+
         hh::eff::EffectManager* effectManager;
         fnd::Reference<fnd::HFrame> frame;
         float scale;
@@ -212,8 +214,8 @@ namespace hh::eff {
         float dword9C;
         uint32_t dwordA0;
         gfx::GOCVisualModel* model;
-        csl::ut::MoveArray<void*> unkB0;
-        csl::ut::MoveArray<void*> unkD0;
+        csl::ut::MoveArray<NewEffectInfo> newEffects;
+        csl::ut::MoveArray<EffectInfo> effects;
         csl::ut::InplaceMoveArray<Listener*, 1> listeners;
         uint32_t modelNameHash;
         float unk201;
