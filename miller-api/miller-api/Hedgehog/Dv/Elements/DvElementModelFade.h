@@ -3,13 +3,13 @@
 namespace hh::dv{
     class DvElementModelFade : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             int unk0[8];
             float curveData[128];
         };
 
-        Data binaryData;
+        Description binaryData;
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual void SetData(void* data) override;

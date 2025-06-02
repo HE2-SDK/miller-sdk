@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementAura : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             struct AuraNode {
             public:

@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementVertexAnimationTexture : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             enum class Flags : unsigned int {
                 UNK0,
@@ -18,7 +18,7 @@ namespace hh::dv{
             int unk4;
         };
 
-        Data binaryData;
+        Description binaryData;
         hh::fnd::ManagedResource* vatAnimRes; // hasn't been reversed
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;

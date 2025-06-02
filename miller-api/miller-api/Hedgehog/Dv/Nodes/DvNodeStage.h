@@ -5,7 +5,7 @@ namespace hh::dv{
     public:
         char unk0[148];
 
-        virtual void Setup(void* setupInfo) override;
+        virtual void Setup(DvNodeBase::Description& description) override;
         virtual void Start() override;
 
         DV_NODE_DECLARATION_BASE(DvNodeStage)

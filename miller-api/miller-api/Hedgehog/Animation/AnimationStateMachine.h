@@ -40,7 +40,7 @@ namespace hh::anim {
             virtual void* UnkFunc10(csl::ut::MoveArray<void*>& unkParam1) const = 0;
             virtual void UnkFunc11(csl::ut::MoveArray<void*>& unkParam1) const = 0;
             virtual BlendNodeBase* GetStateBlendTreeForState(AnimationState* state) const = 0;
-            virtual float UnkFunc13(float* unkParam) const = 0;
+            virtual float UnkFunc13(float* unkParam) const = 0; // most likely GetCurrentPBABlendFactor
         };
 
         struct LayerInfo {

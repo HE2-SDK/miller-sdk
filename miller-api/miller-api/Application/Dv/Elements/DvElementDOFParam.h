@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementDOFParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             struct DOFParam {
             public:

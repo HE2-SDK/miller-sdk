@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementCameraParams : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             enum class Flags : unsigned char {
                 POSITION,
@@ -31,7 +31,7 @@ namespace hh::dv{
             float curveData[256];
         };
 
-        Data binaryData;
+        Description binaryData;
         int unk0[10];
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;

@@ -9,6 +9,8 @@ namespace hh::dv{
 
     class DvElementBase : public hh::fnd::ReferencedObject {
     public:
+        struct Description {};
+
         DvNodeElement* baseNode;
 
         DvElementBase(csl::fnd::IAllocator* allocator);
@@ -130,7 +132,7 @@ namespace hh::dv{
             MOTION_UPDATE
         };
 
-        struct Data {
+        struct DescriptionBase : DvNodeBase::Description {
             enum class Flags : unsigned char {
                 UNK0,
                 LOOSE_LENGTH
@@ -146,14 +148,19 @@ namespace hh::dv{
             int padding;
         };
 
+        template<typename ElementDesc = DvElementBase::Description>
+        struct Description : DescriptionBase {
+            ElementDesc elementDescription;
+        };
+
         int isActive;
-        Data binaryData;
+        DescriptionBase binaryData;
         int unk0;
         DvElementBase* element;
         int start;
         int end;
 
-        virtual void Setup(void* setupInfo) override;
+        virtual void Setup(DvNodeBase::Description& description) override;
         virtual void Start() override;
         virtual void Update(int currentFrame) override;
         virtual void PreStepUpdate(int currentFrame) override;

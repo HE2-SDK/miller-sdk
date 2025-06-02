@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementBossName : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             enum class BossID : unsigned int {
                 BIOLIZARD,

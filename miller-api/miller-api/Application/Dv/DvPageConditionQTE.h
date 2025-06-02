@@ -6,7 +6,7 @@
 namespace app::dv {
     class DvPageConditionQTE : public hh::dv::DvPageConditionBase {
     public:
-        struct Data {
+        struct Description : hh::dv::DvPageConditionBase::Description {
         public:
             bool failed;
             int unk1;
@@ -14,11 +14,11 @@ namespace app::dv {
             int unk3;
         };
 
-        Data binaryData;
+        Description binaryData;
         evt::EventPlayer* evtPlayer;
         bool unk0;
 
-        virtual void Setup(void* setupInfo) override;
+        virtual void Setup(hh::dv::DvPageConditionBase::Description& description) override;
         virtual bool UnkFunc5() override;
 
         APP_DV_PAGE_CONDITION_DECLARATION_BASE(DvPageConditionQTE)

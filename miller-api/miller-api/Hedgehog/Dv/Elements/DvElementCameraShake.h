@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementCameraShake : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             int unk0; //unused
             bool enabled;
@@ -12,7 +12,7 @@ namespace hh::dv{
             int unk2[4]; //unused
         };
 
-        Data binaryData;
+        Description binaryData;
         csl::math::Vector4 unk0;
         int unk1;
 

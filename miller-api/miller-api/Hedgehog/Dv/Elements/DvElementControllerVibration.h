@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementControllerVibration : public DvElementBase {
     public:
-    struct Data {
+    struct Description : DvElementBase::Description {
         public:
             enum class Flags : unsigned int {
                 IGNORE_END = 2
@@ -16,7 +16,7 @@ namespace hh::dv{
             int unk0[3];
         };
 
-        Data binaryData;
+        Description binaryData;
         void* unk0;
         void* unk1;
         void* unk2;

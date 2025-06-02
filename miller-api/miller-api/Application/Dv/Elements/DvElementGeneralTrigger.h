@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementGeneralTrigger : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             int unk0;
             char triggerName[64];

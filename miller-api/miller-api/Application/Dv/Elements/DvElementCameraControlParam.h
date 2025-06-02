@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementCameraControlParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             int empty0;
             float exposureValue;

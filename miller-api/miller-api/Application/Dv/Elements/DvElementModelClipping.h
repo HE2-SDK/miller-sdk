@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementModelClipping : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             csl::math::Rotation unk0;
             float unk1;

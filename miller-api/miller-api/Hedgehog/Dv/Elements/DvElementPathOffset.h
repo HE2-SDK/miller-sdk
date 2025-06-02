@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementPathOffset : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             enum class Flags : unsigned int {
                 DISABLED = 2
@@ -14,7 +14,7 @@ namespace hh::dv{
             int unk0[3];
         };
         
-        Data binaryData;
+        Description binaryData;
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual void SetData(void* data) override;

@@ -3,7 +3,7 @@
 namespace hh::dv{
     class DvElementMultipleAnim : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             struct Animation {
             public:
@@ -24,7 +24,7 @@ namespace hh::dv{
             int activeAnimationsCount;
         };
 
-        Data binaryData;
+        Description binaryData;
         csl::ut::MoveArray<void*> unkArray0;
         csl::math::Vector4 unk0;
         csl::math::Vector4 unk1;

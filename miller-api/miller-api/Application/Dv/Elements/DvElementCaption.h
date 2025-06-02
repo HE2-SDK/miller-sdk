@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementCaption : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             enum class LanguageID : unsigned int {
                 ENGLISH,

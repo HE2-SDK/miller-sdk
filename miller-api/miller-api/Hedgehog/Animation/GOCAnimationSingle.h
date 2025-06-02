@@ -3,6 +3,7 @@
 namespace hh::anim {
     class AnimationManager;
     class GOCAnimationSingle : public GOCAnimation {
+    public:
         enum class Type : uint8_t {
             UNK0,
             UNK1,
@@ -30,7 +31,7 @@ namespace hh::anim {
         uint64_t unk110;
         csl::ut::MoveArray<void*> unk109;
         csl::ut::LinkListNode linkListNode;
-    public:
+    //public:
         struct SetupInfo {
             uint8_t unk1;
             uint8_t unk1a;

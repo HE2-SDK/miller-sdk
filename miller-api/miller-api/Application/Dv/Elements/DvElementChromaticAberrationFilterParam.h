@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementChromaticAberrationFilterParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             struct ChromaticAberrationParam {
             public:

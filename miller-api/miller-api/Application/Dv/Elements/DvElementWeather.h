@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementWeather : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             enum class WeatherType : unsigned int {
                 UNK0 = 1,

@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementLookAtIK : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             struct Object {
             public:

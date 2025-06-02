@@ -5,6 +5,8 @@ namespace hh::dv{
 
     class DvNodeBase : public hh::fnd::ReferencedObject{
     public:
+        struct Description {};
+
         enum class NodeType : uint32_t{
             PATH = 1,
             PATH_MOTION,
@@ -37,7 +39,7 @@ namespace hh::dv{
         csl::ut::MoveArray<DvNodeBase*> childrenElements2;
         DvSceneNodeTree* dvsceneNodeTree;
 
-        virtual void Setup(void* setupInfo);
+        virtual void Setup(Description& description);
         virtual void Start();
         virtual void Update(int currentFrame) {};
         virtual void PreStepUpdate(int currentFrame) {}; // another update?

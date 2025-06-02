@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementVignetteParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             enum class Flags : unsigned int {
                 CURVE_ENABLED = 1

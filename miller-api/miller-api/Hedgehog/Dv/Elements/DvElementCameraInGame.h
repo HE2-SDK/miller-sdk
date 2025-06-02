@@ -3,12 +3,12 @@
 namespace hh::dv{
     class DvElementCameraInGame : public DvElementBase {
     public:
-        struct Data {
+        struct Description : DvElementBase::Description {
         public:
             float unk0[26];
         };
 
-        Data binaryData;
+        Description binaryData;
         void* unk0;
         void* unk1;
         void* unk2;

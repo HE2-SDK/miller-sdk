@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementOcclusionCapsuleParam : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             bool enabled;
             unsigned int occlusionColor[4];

@@ -3,7 +3,7 @@
 namespace app::dv{
     class DvElementFalloff : public AppDvElementBase{
     public:
-        struct Data {
+        struct Description : hh::dv::DvElementBase::Description {
         public:
             float value;
         };
