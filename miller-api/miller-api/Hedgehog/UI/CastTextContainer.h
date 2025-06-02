@@ -1,6 +1,7 @@
 #pragma once
 
 namespace hh::ui {
+    class UITextElement;
     class CastTextContainer : public fnd::ReferencedObject {
         csl::ut::MoveArray<void*> unk1;
         csl::ut::MoveArray<void*> unk2;
@@ -8,8 +9,8 @@ namespace hh::ui {
     public:
         CastTextContainer(csl::fnd::IAllocator* pAllocator, UITextElement* textElement);
 
-        UITextElement& GetTextElement();
-        UITextElement& GetNamedTextElement(const char* name);
+        UITextElement* GetTextElement() const;
+        UITextElement* GetNamedTextElement(const char* name) const;
 
         void SetTextElementTextData(const char* unk1, int unk2);
         void SetNamedTextElementTextData(const char* name, const char* unk1, int unk2);

@@ -216,6 +216,7 @@ namespace hh::game
 			return static_cast<T*>(GetComponent(T::GetClass()));
 		}
 
+		void SetProperty(unsigned int id, fnd::PropertyValue value);
 		void AddListener(GameObjectListener* listener);
 		void RemoveListener(GameObjectListener* listener);
 		void SetEditorStatus(bool status);

@@ -2,7 +2,8 @@
 
 namespace hh::ui {
     class PageInfo : public fnd::ReferencedObject {
-        csl::ut::MoveArray<void*> unk1;
-        bool unk2;
+    public:
+        csl::ut::MoveArray<const wchar_t> str;
+        bool isDebug;
     };
 }

@@ -246,6 +246,8 @@ namespace hh::ui {
             Cursor* cursor;
         };
 
+    public:
+
         csl::fnd::Delegate<void ()> unk15;
         csl::fnd::Delegate<void (UIListViewElement*, ListViewEventArg&)> onHighlightItem; // guessed at the moment
         csl::fnd::Delegate<void ()> unk17;
@@ -254,7 +256,7 @@ namespace hh::ui {
         csl::fnd::Delegate<void (UIListViewElement*, bool)> onScroll;
         csl::ut::MoveArray<void*> unk21;
         csl::ut::MoveArray<void*> unk22;
-        bool unk23;
+        bool initialized;
         float unk24;
         UIListViewLayout layout;
         csl::ut::MoveArray<UIListViewItemView*> listViewItemViews;
@@ -275,9 +277,9 @@ namespace hh::ui {
         bool unk37;
         bool unk38;
         bool unk39;
-    public:
 
         UIListViewElement(csl::fnd::IAllocator* pAllocator, SurfRide::Cast* cast, GOCUIComposition* gocUIComposition);
+        void SetupLayout(SurfRide::Cast* cast);
         void AddItem(UIListViewItem* item);
         void Reset();
         int GetCurrentItemIndex();
@@ -285,17 +287,17 @@ namespace hh::ui {
         LayerController* GetItemLayerController(UIListViewItem* item);
         LayerController* GetCurrentItemViewLayerController();
         void NUnkFunc1(int a2, char a3, char a4);
-        virtual void GetRuntimeTypeInfo();
-        virtual void UnkFunc2();
-        virtual void UnkFunc3();
-        virtual void UnkFunc4();
-        virtual void UnkFunc5();
-        virtual bool UnkFunc9();
-        virtual void UnkFunc10();
-        virtual void UnkFunc11();
-        virtual bool CheckSomethingInTheCast() { return true; }
-        virtual bool UnkFunc14();
-        virtual void NotifyUnk1();
-        virtual void NotifyUnk3();
+        virtual void* GetRuntimeTypeInfo() const override;
+        virtual void Update(const fnd::SUpdateInfo& updateInfo) override;
+        virtual void UpdateAsync(const fnd::SUpdateInfo& updateInfo) override;
+        virtual void Initialize() override;
+        virtual void Deinitialize() override;
+        virtual bool ProcessMessage(fnd::Message& message) override;
+        virtual void ProcessActionInput(const game::InputListener::ActionInputInfo& actionInputInfo) override;
+        virtual void ProcessAxisInput(const game::InputListener::AxisInputInfo& axisInputInfo) override;
+        virtual bool IsVisible() const override { return true; }
+        virtual bool UnkFunc14() override;
+        virtual void OnEnabledChange() override;
+        virtual void OnCollisionEnabledChange() override;
     };
 }

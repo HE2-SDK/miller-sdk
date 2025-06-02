@@ -7,6 +7,7 @@ namespace hh::text {
         , public fnd::ReloaderListener
         , public font::FontContainerListener
     {
+    public:
         csl::ut::VariableString defaultLocaleId;
         uint32_t unk102;
         uint64_t unk103;
@@ -20,13 +21,11 @@ namespace hh::text {
         virtual void ResourceUnloadedCallback(fnd::ManagedResource* resource) override;
         virtual void FCL_UnkFunc1(uint64_t unkParam1, uint64_t unkParam2, uint64_t unkParam3) override;
 
-        TextAppModule(csl::fnd::IAllocator* pAllocator);
-
-        static TextAppModule* Create(csl::fnd::IAllocator*);
-    public:
         static const ConverseData* Translate(const char* tag, int localeIdx);
         const ConverseData* GetTranslation(const char* tag, int localeIdx);
         virtual void UnkFunc1() override;
         virtual void UnkFunc2() override;
+
+        APPMODULE_CLASS_DECLARATION(TextAppModule)
     };
 }

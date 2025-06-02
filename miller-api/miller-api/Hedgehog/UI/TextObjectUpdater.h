@@ -64,7 +64,7 @@ namespace hh::ui {
         UITextInterface* textInterface;
         fnd::Handle<GOCSprite> hGOCSprite;
         hh::ui::UIManager* uiManager;
-        uint64_t unk8;
+        hh::fnd::Reference<TextObject> textObject;
         uint64_t unk9;
         uint64_t unk10;
         uint64_t unk11;
@@ -83,6 +83,7 @@ namespace hh::ui {
         void SetText(const char* text, unsigned int unkParam1);
         void Clear();
         bool LoadTextParameters(csl::ut::VariableString& text, StyleParameters& styleParams);
+        void SetTextData(TextData* textData);
         void SetStyleParameters(const StyleParameters& styleParams);
         void Update();
         text::TagReplacer& GetTagReplacer();

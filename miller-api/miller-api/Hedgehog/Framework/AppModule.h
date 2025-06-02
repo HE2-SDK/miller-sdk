@@ -1,5 +1,11 @@
 #pragma once
 
+#define APPMODULE_CLASS_DECLARATION(ClassName) private:\
+		static const hh::fw::AppModuleClass staticModuleClass;\
+		static hh::fw::AppModule* Create(csl::fnd::IAllocator* allocator);\
+	public:\
+		static const hh::fw::AppModuleClass* GetClass();
+
 namespace hh::fw {
     class AppModule;
 

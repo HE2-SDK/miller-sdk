@@ -2,8 +2,9 @@
 
 namespace hh::ui {
     class alignas(8) UIPanel : public fnd::ReferencedObject {
-        csl::ut::MoveArray<UIObject*> children;
     public:
+        csl::ut::MoveArray<hh::fnd::Reference<UIObject>> children;
+
         UIPanel(csl::fnd::IAllocator* pAllocator);
         void Clear();
         void AddChild(UIObject* child);

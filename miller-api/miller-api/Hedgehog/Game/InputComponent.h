@@ -3,9 +3,21 @@
 namespace hh::game {
     class InputListener {
 	public:
+        struct ActionInputInfo {
+            InputComponent* inputComponent;
+            unsigned int monitorIdx;
+            unsigned int event;
+        };
+
+        struct AxisInputInfo {
+            InputComponent* inputComponent;
+            unsigned int monitorIdx;
+            float value;
+        };
+
 		virtual ~InputListener() = default;
-        virtual void IL_UnkFunc1() {};
-        virtual void IL_UnkFunc2() {};
+        virtual void ActionInputReceived(const ActionInputInfo& actionInputInfo) {};
+        virtual void AxisInputReceived(const AxisInputInfo& axisInputInfo) {};
     };
 
     class InputComponent : public fnd::ReferencedObject {
@@ -43,7 +55,7 @@ namespace hh::game {
         InputManager* inputManager;
         InternalPlayerInput* internalPlayerInput;
         csl::ut::VariableString objectName;
-        csl::ut::InplaceMoveArray<InputListener*, 2> inputListeners;
+        csl::ut::InplaceMoveArray<InputListener*, 2> listeners;
     public:
         csl::ut::MoveArray<ActionMonitor> actionMonitors;
         csl::ut::MoveArray<AxisMonitor> axisMonitors;
@@ -72,8 +84,8 @@ namespace hh::game {
             return flags.test(Flags::LISTENING);
         }
 
-        void RegisterInputListener(InputListener& listener);
-        void UnregisterInputListener(InputListener& listener);
+        void AddListener(InputListener& listener);
+        void RemoveListener(InputListener& listener);
 
         void SetListening(bool value);
         void SetActionEnabled(int actionMonitorId, bool value);
