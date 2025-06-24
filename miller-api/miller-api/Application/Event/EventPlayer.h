@@ -65,23 +65,17 @@ namespace app::evt {
         UnkStr unkStr;
         char unk7;
         int unk8;
-        void* unk9;
         hh::fnd::WorldPosition playerWorldPos;
         csl::ut::Bitset<PlayerFlag> playerFlags;
         int flags2;
-        void* unk10;
         int64_t unk11;
-        int64_t unk12;
-        int64_t unk13;
-        int64_t unk14;
 
         void Setup(const char* cutsceneName);
-        static void SetName(char* name, const char* nameValue, long long unk);
-        void SetCutsceneName(const char* name, long long unk){
-            SetName(cutsceneName, name, unk);
+        inline void SetCutsceneName(const char* name){
+            strcpy(cutsceneName, name);
         }
-        void SetSoundName(const char* name, long long unk){
-            SetName(soundName, name, unk);
+        inline void SetSoundName(const char* name){
+            strcpy(soundName, name);
         }
         void SetTransform(csl::math::Vector4* transform);
     };
@@ -107,6 +101,11 @@ namespace app::evt {
         long long unk4;
         float unk5;
         csl::ut::Bitset<Flags> flags;
+
+        EventScene(csl::fnd::IAllocator* allocator, const char* cutsceneName);
+
+        EventSetupData& GetSetupData() const;
+        void SetEventPlayer(EventPlayer* evtPlayer);
     };
 
     class EventSceneManager : public hh::fnd::BaseObject {
@@ -114,6 +113,10 @@ namespace app::evt {
         EventPlayer* evtPlayer;
         csl::ut::MoveArray<EventScene*> evtScenes;
         csl::ut::MoveArray<csl::ut::VariableString> cutsceneNames;
+
+        EventScene* GetEventScene(const char* cutsceneName);
+        bool HasCutscene(const char* cutsceneName);
+        void AddCutscene(const char* cutsceneName, bool addCutsceneName);
     };
 
     class EventEnvironmentContext;
@@ -206,7 +209,7 @@ namespace app::evt {
 
         void AddListener(EventPlayerListener* listener);
         void RemoveListener(EventPlayerListener* listener);
-        void PlayEvent(EventSetupData* setupData);
+        void PlayEvent(EventSetupData& setupData);
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual bool ProcessMessage(hh::fnd::Message& message) override;

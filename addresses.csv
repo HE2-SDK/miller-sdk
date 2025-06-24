@@ -2494,6 +2494,7 @@
 140076600,?Create@MyLightResourceViewer@app@@SAPEAV12@PEAVIAllocator@fnd@csl@@@Z,0
 140076b80,??_DCameraBridge@camera@app@@QEAAXXZ,1
 140076bb0,?CFL_UnkFunc1@CameraBridge@camera@app@@UEAAXAEBUFrustumParameter@2app_cmn@@@Z,1
+140076c40,?SetEventPlayer@EventScene@evt@app@@QEAAXPEAVEventPlayer@23@@Z,1
 140076c50,?CFL_UnkFunc2@CameraBridge@camera@app@@UEAAXAEBVMatrix34@math@csl@@AEBUFrustumParameter@2app_cmn@@@Z,1
 140076f10,?Construct@CameraShakeTable@rfl@heur@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z,1
 1400771b0,??_D?$SaveDataAccessor@UOptionCameraData@save@app@@@save@app@@QEAAXXZ,1
@@ -7079,6 +7080,7 @@
 140105370,?DSCL_UnkFunc2@EventPlayer@evt@app@@UEAA_NPEAX0@Z,1
 1401053b0,?GetEventPlayerRuntimeTypeInfo@MyDvSceneControlListener@EventPlayer@evt@app@@UEAAPEAXXZ,1
 140105400,j_?PlayEvent@EventPlayer@evt@app@@QEAAXPEAUEventSetupData@23@@Z,1
+140105400,j_?PlayEvent@EventPlayer@evt@app@@QEAAXAEAUEventSetupData@23@@Z,1
 1401054c0,j_?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXXZ,1
 140105750,?EventPlayerOnAddedToGame@MyDvSceneControlListener@EventPlayer@evt@app@@UEAAPEAXXZ,1
 140105800,j_?ProcessMessage@EventPlayer@evt@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
@@ -7095,8 +7097,12 @@
 140109f40,?GetClass@EventQTEInput@evt@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
 14010ad20,?Create@EventQTEInput@evt@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 14010ad20,?Create@EventQTEInput@evt@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
+14010af60,j_??0EventScene@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@PEBD@Z,1
 14010b1b0,??_D?$SaveDataAccessor@UOptionAudioData@save@app@@@save@app@@QEAAXXZ,1
 14010b1b0,??_DOptionAudioAc@save@app@@QEAAXXZ,1
+14010b300,?GetSetupData@EventScene@evt@app@@QEBAAEAUEventSetupData@23@XZ,1
+14010d2b0,j_?AddCutscene@EventSceneManager@evt@app@@QEAAXPEBD_N@Z,1
+14010d6e0,j_?GetEventScene@EventSceneManager@evt@app@@QEAAPEAVEventScene@23@PEBD@Z,1
 14010ded0,??0EventCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 14010df40,??_GEventCamera@camera@app@@QEAAXXZ,0
 14010e310,??_DDevEventInfo@evt@app@@QEAAXXZ,0
@@ -14534,7 +14540,6 @@
 140781520,?Create@UIIndicatorObject@ui@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140781520,?Create@UIIndicatorObject@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1407815b0,j_??_DUIInputHelp@ui@app@@QEAAXXZ,0
-1407817b0,??_DInputListener@game@hh@@QEAAXXZ,1
 1407817e0,??_DTextObjectUpdaterListener@ui@hh@@QEAAXXZ,1
 140781810,j_??_GUIInputHelp@ui@app@@QEAAXXZ,0
 140783ef0,?GetClass@UIInputHelp@ui@app@@SAPEBVGameObjectClass@game@hh@@XZ,0
@@ -16436,7 +16441,6 @@
 140a2d010,??_DResMasterLevel@level@app@@QEAAXXZ,1
 140a2d070,?GetTypeInfo@ResMasterLevel@level@app@@SAPEBUResourceTypeInfo@fnd@hh@@XZ,0
 140a2d080,j_?Load@ResMasterLevel@level@app@@UEAAXPEAX_K@Z,1
-140a2d080,?Load@ResMasterLevel@level@app@@UEAAXPEAX_K@Z,1
 140a2d0b0,j_?Create@ResMasterLevel@level@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140a2d0b0,j_?Create@ResMasterLevel@level@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 140a2d110,j_??_GResLevel@level@app@@QEAAXXZ,0
@@ -16514,10 +16518,13 @@
 140a32cd0,?SetActionEnabled@InputComponent@game@hh@@QEAAXH_N@Z,1
 140a32d00,?SetAxisEnabled@InputComponent@game@hh@@QEAAXH_N@Z,1
 140a32d30,?SetListening@InputComponent@game@hh@@QEAAX_N@Z,1
-140a331f0,??_GGOCInput@gocs@heur@@QEAAXXZ,0
+140a331f0,??_GGOCInput@gocs@heur@@QEAAXXZ,1
+140a331f0,??_DGOCInput@game@hh@@QEAAXXZ,1
 140a33280,j_?Create@GOCInput@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 140a33280,j_?Create@GOCInput@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 140a33280,j_?Create@GOCInput@game@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
+140a33310,?GetRuntimeTypeInfo@GOCInput@game@hh@@UEBAPEAXXZ,1
+140a33320,j_?OnGOCEvent@GOCInput@game@hh@@UEAAXW4GOCEvent@GOComponent@23@AEAVGameObject@23@PEAX@Z,1
 140a33500,?GetClass@GOCInput@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ,1
 140a33500,?GetClass@GOCInput@game@hh@@SAPEAVGOComponentClass@23@XZ,1
 140a33a10,?Update@GameUpdater@game@hh@@QEAAXAEBUSUpdateInfo@fnd@3@PEAVGameApplication@23@@Z,1
@@ -56446,9 +56453,14 @@
 146966f10,?OnAddedToGame@EventPlayer@evt@app@@UEAAXXZ,1
 146979fa0,?OnRemovedFromGame@EventPlayer@evt@app@@UEAAXXZ,1
 146986900,?PlayEvent@EventPlayer@evt@app@@QEAAXPEAUEventSetupData@23@@Z,1
+146986900,?PlayEvent@EventPlayer@evt@app@@QEAAXAEAUEventSetupData@23@@Z,1
 1469a3550,?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXXZ,1
 1469a54c0,?ProcessMessage@EventPlayer@evt@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
+1469fc640,??0EventScene@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@PEBD@Z,1
 146a94380,j_??_DEventSceneManager@evt@app@@QEAAXXZ,1
+146aa4340,?AddCutscene@EventSceneManager@evt@app@@QEAAXPEBD_N@Z,1
+146ac0450,?HasCutscene@EventSceneManager@evt@app@@QEAA_NPEBD@Z,1
+146ac0450,?GetEventScene@EventSceneManager@evt@app@@QEAAPEAVEventScene@23@PEBD@Z,1
 146af8200,??0EventEnvironmentCameraInterpolate@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 146af8670,??_DEventEnvironmentCameraInterpolate@evt@app@@QEAAXXZ,0
 146afc620,??0EventEnvironmentCameraLookAt@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
@@ -58184,6 +58196,7 @@
 14f3c8220,?RemoveWorldChunk@ObjectWorld@game@hh@@QEAAXPEAVObjectWorldChunk@23@@Z,1
 14f3f2e40,?SetEnabled@CameraComponent@game@hh@@QEAAX_N@Z,1
 14f4034b0,??_DResObjectWorld@game@hh@@QEAAXXZ,1
+14f4034b0,?Load@ResMasterLevel@level@app@@UEAAXPEAX_K@Z,1
 14f406d50,?Create@ResMasterLevel@level@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 14f406d50,?Create@ResMasterLevel@level@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 14f40a3c0,??_GResLevel@level@app@@QEAAXXZ,0
@@ -58222,6 +58235,7 @@
 14f5d7520,?Create@GOCInput@gocs@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 14f5d7520,?Create@GOCInput@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 14f5d7520,?Create@GOCInput@game@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
+14f5e0f90,?OnGOCEvent@GOCInput@game@hh@@UEAAXW4GOCEvent@GOComponent@23@AEAVGameObject@23@PEAX@Z,1
 14f618020,??0LevelLoader@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 14f626a60,??_DLevelLoader@game@hh@@QEAAXXZ,1
 14f62ec90,??_DObjectWorldChunk@game@hh@@QEAAXXZ,1

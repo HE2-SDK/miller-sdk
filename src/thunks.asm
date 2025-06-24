@@ -145,6 +145,11 @@ PUBLIC ?CFL_UnkFunc1@CameraBridge@camera@app@@UEAAXAEBUFrustumParameter@2app_cmn
     mov rax, 0140076bb0h
     jmp rax
 
+PUBLIC ?SetEventPlayer@EventScene@evt@app@@QEAAXPEAVEventPlayer@23@@Z
+?SetEventPlayer@EventScene@evt@app@@QEAAXPEAVEventPlayer@23@@Z:
+    mov rax, 0140076c40h
+    jmp rax
+
 PUBLIC ?CFL_UnkFunc2@CameraBridge@camera@app@@UEAAXAEBVMatrix34@math@csl@@AEBUFrustumParameter@2app_cmn@@@Z
 ?CFL_UnkFunc2@CameraBridge@camera@app@@UEAAXAEBVMatrix34@math@csl@@AEBUFrustumParameter@2app_cmn@@@Z:
     mov rax, 0140076c50h
@@ -18553,6 +18558,11 @@ PUBLIC ??_D?$SaveDataAccessor@UOptionAudioData@save@app@@@save@app@@QEAAXXZ
 PUBLIC ??_DOptionAudioAc@save@app@@QEAAXXZ
 ??_DOptionAudioAc@save@app@@QEAAXXZ:
     mov rax, 014010b1b0h
+    jmp rax
+
+PUBLIC ?GetSetupData@EventScene@evt@app@@QEBAAEAUEventSetupData@23@XZ
+?GetSetupData@EventScene@evt@app@@QEBAAEAUEventSetupData@23@XZ:
+    mov rax, 014010b300h
     jmp rax
 
 PUBLIC ??0EventCamera@camera@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -50275,11 +50285,6 @@ PUBLIC ?Create@UIIndicatorObject@ui@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 0140781520h
     jmp rax
 
-PUBLIC ??_DInputListener@game@hh@@QEAAXXZ
-??_DInputListener@game@hh@@QEAAXXZ:
-    mov rax, 01407817b0h
-    jmp rax
-
 PUBLIC ??_DTextObjectUpdaterListener@ui@hh@@QEAAXXZ
 ??_DTextObjectUpdaterListener@ui@hh@@QEAAXXZ:
     mov rax, 01407817e0h
@@ -56420,11 +56425,6 @@ PUBLIC ?GetTypeInfo@ResMasterLevel@level@app@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
     mov rax, 0140a2d070h
     jmp rax
 
-PUBLIC ?Load@ResMasterLevel@level@app@@UEAAXPEAX_K@Z
-?Load@ResMasterLevel@level@app@@UEAAXPEAX_K@Z:
-    mov rax, 0140a2d080h
-    jmp rax
-
 PUBLIC ?GetTypeInfo@ResLevel@level@app@@SAPEBUResourceTypeInfo@fnd@hh@@XZ
 ?GetTypeInfo@ResLevel@level@app@@SAPEBUResourceTypeInfo@fnd@hh@@XZ:
     mov rax, 0140a2d170h
@@ -56633,6 +56633,16 @@ PUBLIC ?SetListening@InputComponent@game@hh@@QEAAX_N@Z
 PUBLIC ??_GGOCInput@gocs@heur@@QEAAXXZ
 ??_GGOCInput@gocs@heur@@QEAAXXZ:
     mov rax, 0140a331f0h
+    jmp rax
+
+PUBLIC ??_DGOCInput@game@hh@@QEAAXXZ
+??_DGOCInput@game@hh@@QEAAXXZ:
+    mov rax, 0140a331f0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCInput@game@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCInput@game@hh@@UEBAPEAXXZ:
+    mov rax, 0140a33310h
     jmp rax
 
 PUBLIC ?GetClass@GOCInput@gocs@heur@@SAPEBVGOComponentClass@game@hh@@XZ
@@ -102795,6 +102805,11 @@ PUBLIC ?PlayEvent@EventPlayer@evt@app@@QEAAXPEAUEventSetupData@23@@Z
     mov rax, 0146986900h
     jmp rax
 
+PUBLIC ?PlayEvent@EventPlayer@evt@app@@QEAAXAEAUEventSetupData@23@@Z
+?PlayEvent@EventPlayer@evt@app@@QEAAXAEAUEventSetupData@23@@Z:
+    mov rax, 0146986900h
+    jmp rax
+
 PUBLIC ?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXXZ
 ?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXXZ:
     mov rax, 01469a3550h
@@ -102803,6 +102818,26 @@ PUBLIC ?OnCutsceneEnd@EventPlayer@evt@app@@UEAAXXZ
 PUBLIC ?ProcessMessage@EventPlayer@evt@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
 ?ProcessMessage@EventPlayer@evt@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
     mov rax, 01469a54c0h
+    jmp rax
+
+PUBLIC ??0EventScene@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@PEBD@Z
+??0EventScene@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@PEBD@Z:
+    mov rax, 01469fc640h
+    jmp rax
+
+PUBLIC ?AddCutscene@EventSceneManager@evt@app@@QEAAXPEBD_N@Z
+?AddCutscene@EventSceneManager@evt@app@@QEAAXPEBD_N@Z:
+    mov rax, 0146aa4340h
+    jmp rax
+
+PUBLIC ?HasCutscene@EventSceneManager@evt@app@@QEAA_NPEBD@Z
+?HasCutscene@EventSceneManager@evt@app@@QEAA_NPEBD@Z:
+    mov rax, 0146ac0450h
+    jmp rax
+
+PUBLIC ?GetEventScene@EventSceneManager@evt@app@@QEAAPEAVEventScene@23@PEBD@Z
+?GetEventScene@EventSceneManager@evt@app@@QEAAPEAVEventScene@23@PEBD@Z:
+    mov rax, 0146ac0450h
     jmp rax
 
 PUBLIC ??0EventEnvironmentCameraInterpolate@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
@@ -111410,6 +111445,11 @@ PUBLIC ??_DResObjectWorld@game@hh@@QEAAXXZ
     mov rax, 014f4034b0h
     jmp rax
 
+PUBLIC ?Load@ResMasterLevel@level@app@@UEAAXPEAX_K@Z
+?Load@ResMasterLevel@level@app@@UEAAXPEAX_K@Z:
+    mov rax, 014f4034b0h
+    jmp rax
+
 PUBLIC ?Create@ResMasterLevel@level@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@ResMasterLevel@level@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014f406d50h
@@ -111598,6 +111638,11 @@ PUBLIC ?Create@GOCInput@gocs@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 PUBLIC ?Create@GOCInput@game@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@GOCInput@game@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014f5d7520h
+    jmp rax
+
+PUBLIC ?OnGOCEvent@GOCInput@game@hh@@UEAAXW4GOCEvent@GOComponent@23@AEAVGameObject@23@PEAX@Z
+?OnGOCEvent@GOCInput@game@hh@@UEAAXW4GOCEvent@GOComponent@23@AEAVGameObject@23@PEAX@Z:
+    mov rax, 014f5e0f90h
     jmp rax
 
 PUBLIC ??0LevelLoader@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
