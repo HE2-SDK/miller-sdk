@@ -7,7 +7,14 @@ namespace app::dv{
         public:
             struct Object {
             public:
-                int unk1;
+                enum class Type : unsigned int {
+                    OFFSET,
+                    OFFSET_GUID_TARGET,
+                    CAMERA,
+                    OFFSET_GUID_POSITION
+                };
+
+                Type type;
                 char guid[16];
                 csl::math::Position offset;
             };

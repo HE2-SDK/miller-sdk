@@ -5,8 +5,6 @@ namespace app::dv{
     public:
         struct Description : hh::dv::DvElementBase::Description {};
 
-        char unk0;
-
         virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
 

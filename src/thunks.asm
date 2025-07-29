@@ -57995,6 +57995,11 @@ PUBLIC ?GetListeners@DvSceneControl@dv@hh@@QEBAAEAV?$MoveArray@PEAVDvSceneContro
     mov rax, 0140a91a60h
     jmp rax
 
+PUBLIC ?GetCutsceneName@DvSceneControl@dv@hh@@QEAAPEBDXZ
+?GetCutsceneName@DvSceneControl@dv@hh@@QEAAPEBDXZ:
+    mov rax, 0140a91d80h
+    jmp rax
+
 PUBLIC ?PreObjectUpdateCallback@ObjectUpdateListener@game@hh@@UEAAXPEAVGameManager@23@W4UpdatingPhase@fnd@3@AEBUSUpdateInfo@63@@Z
 ?PreObjectUpdateCallback@ObjectUpdateListener@game@hh@@UEAAXPEAVGameManager@23@W4UpdatingPhase@fnd@3@AEBUSUpdateInfo@63@@Z:
     mov rax, 0140a920c0h
@@ -93960,8 +93965,8 @@ PUBLIC ?gameServiceClass@DebugTips@dbg@app@@0VGameServiceClass@game@hh@@B
     mov rax, 01429bb400h
     jmp rax
 
-PUBLIC ?instance@?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@hh@@2PEAV123@EA
-?instance@?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@hh@@2PEAV123@EA:
+PUBLIC ?instance@?$HandleManager@VMoviePlaybackObject@fmv@hh@@@fnd@hh@@2PEAV123@EA
+?instance@?$HandleManager@VMoviePlaybackObject@fmv@hh@@@fnd@hh@@2PEAV123@EA:
     mov rax, 01429bb9b8h
     jmp rax
 
@@ -102655,6 +102660,11 @@ PUBLIC ?DeleteData@DvElementFade@dv@app@@UEAAXXZ
     mov rax, 014669f9b0h
     jmp rax
 
+PUBLIC ?GetDvSceneControl@DvElementBase@dv@hh@@QEAAPEAVDvSceneControl@23@XZ
+?GetDvSceneControl@DvElementBase@dv@hh@@QEAAPEAVDvSceneControl@23@XZ:
+    mov rax, 01466b2080h
+    jmp rax
+
 PUBLIC ?OnDataDeleted@DvElementFade@dv@app@@UEAAXXZ
 ?OnDataDeleted@DvElementFade@dv@app@@UEAAXXZ:
     mov rax, 01466b4e40h
@@ -102920,9 +102930,19 @@ PUBLIC ?ProcessMessage@EventPlayer@evt@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
     mov rax, 01469a54c0h
     jmp rax
 
+PUBLIC ?SetMovie@EventPlayer@evt@app@@QEAAXPEBD_N@Z
+?SetMovie@EventPlayer@evt@app@@QEAAXPEBD_N@Z:
+    mov rax, 01469a6cd0h
+    jmp rax
+
 PUBLIC ??0EventScene@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@PEBD@Z
 ??0EventScene@evt@app@@QEAA@PEAVIAllocator@fnd@csl@@PEBD@Z:
     mov rax, 01469fc640h
+    jmp rax
+
+PUBLIC ?SetMovie@EventScene@evt@app@@QEAAX_N@Z
+?SetMovie@EventScene@evt@app@@QEAAX_N@Z:
+    mov rax, 0146a700e0h
     jmp rax
 
 PUBLIC ?AddCutscene@EventSceneManager@evt@app@@QEAAXPEBD_N@Z
@@ -112060,6 +112080,11 @@ PUBLIC ??0DeviceManagerListener@hid@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
     mov rax, 014fd7f760h
     jmp rax
 
+PUBLIC ??0MoviePlaybackObject@fmv@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVMoviePlayerCri@12@@Z
+??0MoviePlaybackObject@fmv@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVMoviePlayerCri@12@@Z:
+    mov rax, 014ffd0390h
+    jmp rax
+
 PUBLIC ??0MovieRenderObject@fmv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
 ??0MovieRenderObject@fmv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 014fff53b0h
@@ -112090,8 +112115,8 @@ PUBLIC ??_DMovieManager@fmv@hh@@QEAAXXZ
     mov rax, 015005a1c0h
     jmp rax
 
-PUBLIC ?CreateMovie@MovieManager@fmv@hh@@QEAA?AV?$Handle@VMovieHandleObj@fmv@hh@@V?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@3@@fnd@3@PEBDPEAUMovieSetupData@123@PEAVIAllocator@5csl@@D@Z
-?CreateMovie@MovieManager@fmv@hh@@QEAA?AV?$Handle@VMovieHandleObj@fmv@hh@@V?$HandleManager@VMovieHandleObj@fmv@hh@@@fnd@3@@fnd@3@PEBDPEAUMovieSetupData@123@PEAVIAllocator@5csl@@D@Z:
+PUBLIC ?CreateMovie@MovieManager@fmv@hh@@QEAA?AV?$Handle@VMoviePlaybackObj@fmv@hh@@V?$HandleManager@VMoviePlaybackObj@fmv@hh@@@fnd@3@@fnd@3@PEBDPEAUMovieSetupData@123@PEAVIAllocator@5csl@@D@Z
+?CreateMovie@MovieManager@fmv@hh@@QEAA?AV?$Handle@VMoviePlaybackObj@fmv@hh@@V?$HandleManager@VMoviePlaybackObj@fmv@hh@@@fnd@3@@fnd@3@PEBDPEAUMovieSetupData@123@PEAVIAllocator@5csl@@D@Z:
     mov rax, 015005b910h
     jmp rax
 

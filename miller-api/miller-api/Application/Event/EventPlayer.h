@@ -83,7 +83,8 @@ namespace app::evt {
     class EventScene : public hh::fnd::BaseObject, hh::dv::DvSceneControlListener {
     public:
         enum class Flags : int {
-            UNK0 = 0x20000
+            UNK0 = 0x11,
+            MOVIE_PLAYING = 0x12
         };
 
         EventPlayer* evtPlayer;
@@ -91,14 +92,11 @@ namespace app::evt {
         hh::dv::DiEventManager* diEvtMgr;
         EventSetupData setupData;
         void* resourceCollection;
-        bool update;
-        bool unkBool0;
-        bool play;
-        char unkFlags0;
+        long long unk0;
         bool unkBool1;
         long long unk2;
-        long long unk3;
-        long long unk4;
+        void* levelLoader;
+        hh::fnd::Handle<hh::fmv::MoviePlaybackObject> movieHandle;
         float unk5;
         csl::ut::Bitset<Flags> flags;
 
@@ -106,6 +104,7 @@ namespace app::evt {
 
         EventSetupData& GetSetupData() const;
         void SetEventPlayer(EventPlayer* evtPlayer);
+        void SetMovie(bool playing);
     };
 
     class EventSceneManager : public hh::fnd::BaseObject {
@@ -210,6 +209,7 @@ namespace app::evt {
         void AddListener(EventPlayerListener* listener);
         void RemoveListener(EventPlayerListener* listener);
         void PlayEvent(EventSetupData& setupData);
+        void SetMovie(const char* movieName, bool playing);
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual bool ProcessMessage(hh::fnd::Message& message) override;

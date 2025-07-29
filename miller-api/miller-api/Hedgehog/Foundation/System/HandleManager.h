@@ -1,7 +1,7 @@
 #pragma once
 
 namespace hh::fmv{
-    class MovieHandleObj;
+    class MoviePlaybackObject;
 }
 
 namespace hh::fnd

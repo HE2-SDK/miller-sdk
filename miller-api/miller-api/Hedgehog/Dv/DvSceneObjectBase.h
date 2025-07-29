@@ -4,7 +4,7 @@ namespace hh::dv {
     class DvSceneObjectBase : public fnd::ReferencedObject {
     public:
         fnd::Handle<DvStandardCharacter> dvStandardChar;
-        void* unk0;
+        void* pose;
         int visualModelNameHash;
         int unk2;
         int64_t qword30;
