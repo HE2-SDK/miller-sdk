@@ -5,14 +5,14 @@ namespace app::dv{
     public:
         struct Description : hh::dv::DvElementBase::Description {
         public:
-            bool unkEnabled;
+            bool soundEnabled;
             float timeScale;
             int unk1;
             float multiplier;
         };
 
         bool messageSent;
-        int unkHandle;
+        int soundHandle;
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;

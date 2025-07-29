@@ -7,10 +7,10 @@ namespace hh::dv{
         public:
             struct Parameters {
             public:
-                float range;
+                float attenuationRadius;
                 float intensity;
-                float falloff;
-                float angle;
+                float radius;
+                float rotationMultiplier;
             };
             
             enum class Flags : unsigned int {
@@ -19,7 +19,7 @@ namespace hh::dv{
                 UNK2,
                 UNK3,
                 UNK4,
-                UNK5,
+                CAST_SHADOW,
             };
 
             csl::ut::Bitset<Flags> flags;
@@ -29,7 +29,7 @@ namespace hh::dv{
             unsigned int finishColor[3];
             Parameters params;
             Parameters finishParams;
-            bool unkBool0;
+            bool curveEnabled;
             float unk14[10];
             float curveData[128];
         };
@@ -42,7 +42,7 @@ namespace hh::dv{
         virtual void RemoveCallback() override;
         virtual void SetData(void* data) override;
         virtual void DeleteData() override;
-        virtual void UnkFunc6(int currentFrame, csl::math::Transform transform) override;
+        virtual void UnkUpdate(int currentFrame, csl::math::Transform& transform) override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementPointLight)
     };

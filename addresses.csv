@@ -6354,11 +6354,9 @@
 1400e92f0,?Create@DebugTips@dbg@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1400e93b0,j_??0AppDvElementBase@dv@app@@QEAA@PEAVIAllocator@fnd@csl@@PEAVDvNodeElement@1hh@@@Z,1
 1400e93b0,j_??0AppDvElementBase@dv@app@@QEAA@PEAVIAllocator@fnd@csl@@J@Z,1
-1400e93f0,??_DDvElementOverrideAsm@dv@app@@QEAAXXZ,0
 1400e93f0,??_DDvElementToneMapParam@dv@app@@QEAAXXZ,0
 1400e9400,??_DAppDvElementBase@dv@app@@QEAAXXZ,1
 1400e9460,j_?SetData@AppDvElementBase@dv@app@@UEAAXPEAX@Z,1
-1400e9480,?UnkFunc4@AppDvElementBase@dv@app@@UEAAXXZ,1
 1400e9480,?UnkFunc4@DvElementFade@dv@app@@UEAAXXZ,1
 1400e9480,j_?DeleteData@AppDvElementBase@dv@app@@UEAAXXZ,1
 1400e9480,j_?DeleteData@DvElementFade@dv@app@@UEAAXXZ,1
@@ -6368,6 +6366,7 @@
 1400e9630,??_GDvElementAtmosphereGodrayParam@dv@app@@QEAAXXZ,1
 1400e9630,??_DDvElementAtmosphereGodrayParam@dv@app@@QEAAXXZ,1
 1400e9690,?Create@DvElementAtmosphereGodrayParam@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
+1400e96f0,?AppUnkFunc4@DvElementAtmosphereGodrayParam@dv@app@@UEAAXPEAX@Z,1
 1400e9750,?UnkFunc1@DvElementAtmosphereGodrayParam@dv@app@@UEAA_NXZ,1
 1400e9750,?AddCallback@DvElementAtmosphereGodrayParam@dv@app@@UEAA_NXZ,1
 1400e9750,?AddCallback@DvElementAtmosphereGodrayParam@dv@app@@UEAA_NHVTransform@math@csl@@@Z,1
@@ -6378,10 +6377,11 @@
 1400e9920,?RemoveCallback@DvElementAtmosphereHeightFogParam@dv@app@@UEAAPEAXXZ,1
 1400e9920,?RemoveCallback@DvElementAtmosphereGodrayParam@dv@app@@UEAAXXZ,1
 1400e9920,?RemoveCallback@DvElementAtmosphereHeightFogParam@dv@app@@UEAAXXZ,1
-1400e9a10,?AppUnkFunc3@AppDvElementBase@dv@app@@UEAAPEAXPEAXI@Z,1
+1400e9a10,?AppUnkFunc3@DvElementAtmosphereGodrayParam@dv@app@@UEAAPEAXPEAXI@Z,1
 1400e9d30,??_GDvElementAtmosphereHeightFogParam@dv@app@@QEAAXXZ,1
 1400e9d30,??_DDvElementAtmosphereHeightFogParam@dv@app@@QEAAXXZ,1
 1400ea0a0,?Create@DvElementAtmosphereHeightFogParam@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
+1400ea100,?AppUnkFunc4@DvElementAtmosphereHeightFogParam@dv@app@@UEAAXPEAX@Z,1
 1400ea250,?Setup@DvElementAtmosphereHeightFogParam@dv@app@@UEAAXPEAX@Z,1
 1400ea250,?Update@DvElementAtmosphereHeightFogParam@dv@app@@UEAAXH@Z,1
 1400ea250,?Update@DvElementAtmosphereHeightFogParam@dv@app@@UEAAXHVTransform@math@csl@@@Z,1
@@ -6407,7 +6407,7 @@
 1400ead30,??0AuraRoadVertexBuilder@dv@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z,0
 1400eb9c0,?Create@DvElementAuraRoad@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1400eba30,j_?OnDataDeleted@DvElementFade@dv@app@@UEAAXXZ,1
-1400eba30,j_?OnDataDeleted@AppDvElementBase@dv@app@@UEAAXXZ,1
+1400eba30,j_?OnDataDeleted@DvElementAuraRoad@dv@app@@UEAAXXZ,1
 1400eba80,?AppUnkFunc0@DvElementAuraRoad@dv@app@@UEAAXXZ,1
 1400eba80,?OnDataUpdated@DvElementAuraRoad@dv@app@@UEAAXXZ,1
 1400ebb30,?Setup@DvElementAuraRoad@dv@app@@UEAAXPEAX@Z,1
@@ -6457,6 +6457,7 @@
 1400ecb70,??_GDvElementCameraBlurParam@dv@app@@QEAAXXZ,1
 1400ecb70,??_DDvElementCameraBlurParam@dv@app@@QEAAXXZ,1
 1400eccb0,?Create@DvElementCameraBlurParam@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
+1400ecd10,?AppUnkFunc4@DvElementCameraBlurParam@dv@app@@UEAAXPEAX@Z,1
 1400ecd70,?Setup@DvElementCameraBlurParam@dv@app@@UEAAXPEAX@Z,1
 1400ecd70,?Update@DvElementCameraBlurParam@dv@app@@UEAAXH@Z,1
 1400ecd70,?Update@DvElementCameraBlurParam@dv@app@@UEAAXHVTransform@math@csl@@@Z,1
@@ -6492,6 +6493,7 @@
 1400ed8d0,j_??_DDvElementCaption@dv@app@@QEAAXXZ,1
 1400ed930,??_DRequestOverlayCaption@ui@app@@QEAAXXZ,1
 1400ed9e0,?Create@DvElementCaption@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
+1400eda50,?AppUnkFunc4@DvElementCaption@dv@app@@UEAAXPEAX@Z,1
 1400edb50,?UnkFunc1@DvElementCaption@dv@app@@UEAA_NXZ,1
 1400edb50,?AddCallback@DvElementCaption@dv@app@@UEAA_NXZ,1
 1400edb50,?AddCallback@DvElementCaption@dv@app@@UEAA_NHVTransform@math@csl@@@Z,1
@@ -6538,6 +6540,7 @@
 1400eec90,j_?Update@DvElementColorContrast@dv@app@@UEAAXH@Z,1
 1400eec90,j_?Update@DvElementColorContrast@dv@app@@UEAAXHVTransform@math@csl@@@Z,1
 1400eec90,j_?Update@DvElementColorContrast@dv@app@@UEAAXHAEAVTransform@math@csl@@@Z,1
+1400eeca0,?AddCallback@DvElementColorContrast@dv@app@@UEAA_NHAEAVTransform@math@csl@@@Z,1
 1400eed60,?UnkFunc2@DvElementColorContrast@dv@app@@UEAAPEAXXZ,1
 1400eed60,?RemoveCallback@DvElementColorContrast@dv@app@@UEAAPEAXXZ,1
 1400eed60,?RemoveCallback@DvElementColorContrast@dv@app@@UEAAXXZ,1
@@ -6562,11 +6565,9 @@
 1400ef680,?AddCallback@DvElementCrossFade@dv@app@@UEAA_NHVTransform@math@csl@@@Z,1
 1400ef680,?AddCallback@DvElementCrossFade@dv@app@@UEAA_NHAEAVTransform@math@csl@@@Z,1
 1400efa70,?UnkFunc2@DvElementFade@dv@app@@UEAAPEAXXZ,1
-1400efa70,?UnkFunc2@DvElementBase@dv@hh@@UEAAPEAXXZ,1
 1400efa70,?RemoveCallback@DvElementFade@dv@app@@UEAAPEAXXZ,1
-1400efa70,?RemoveCallback@DvElementBase@dv@hh@@UEAAPEAXXZ,1
 1400efa70,?RemoveCallback@DvElementFade@dv@app@@UEAAXXZ,1
-1400efa70,?RemoveCallback@DvElementBase@dv@hh@@UEAAXXZ,1
+1400efa70,?RemoveCallback@DvElementCrossFade@dv@app@@UEAAXXZ,1
 1400efae0,?Create@DvCrossFadeObject@dv@app@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1400efae0,?Create@DvCrossFadeObject@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1400efbf0,??_GDvElementCyberSpaceNoise@dv@app@@QEAAXXZ,1
@@ -6666,7 +6667,6 @@
 1400f16e0,j_??_GDvFadeObject@dv@app@@QEAAXXZ,0
 1400f1870,?Create@DvElementFade@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1400f18e0,j_?AppUnkFunc0@AppDvElementBase@dv@app@@UEAAXXZ,1
-1400f18e0,j_?OnDataUpdated@AppDvElementBase@dv@app@@UEAAXXZ,1
 1400f18e0,j_?OnDataUpdated@DvElementFade@dv@app@@UEAAXXZ,1
 1400f1950,j_?Setup@DvElementBase@dv@hh@@UEAAXPEAX@Z,1
 1400f1950,j_?Setup@DvElementFade@dv@app@@UEAAXPEAX@Z,1
@@ -6704,9 +6704,9 @@
 1400f2aa0,??_DDvElementFootIk@dv@app@@QEAAXXZ,1
 1400f2b00,?Create@DvElementFootIk@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
 1400f2d00,?AppUnkFunc0@DvElementFootIk@dv@app@@UEAAXXZ,1
-1400f2d00,?AppUnkFunc0@AppDvElementBase@dv@app@@UEAAXXZ,1
-1400f2d00,?OnDataUpdated@AppDvElementBase@dv@app@@UEAAXXZ,1
 1400f2d00,?OnDataUpdated@DvElementFootIk@dv@app@@UEAAXXZ,1
+1400f2d00,?OnDataUpdated@AppDvElementBase@dv@app@@UEAAXXZ,1
+1400f2d00,?OnDataUpdated@DvElementOverrideAsm@dv@app@@UEAAXXZ,1
 1400f2d30,?UnkFunc1@DvElementFootIk@dv@app@@UEAA_NXZ,1
 1400f2d30,?AddCallback@DvElementFootIk@dv@app@@UEAA_NXZ,1
 1400f2d30,?AddCallback@DvElementFootIk@dv@app@@UEAA_NHVTransform@math@csl@@@Z,1
@@ -6756,6 +6756,8 @@
 1400f39f0,?Update@DvElementLetterBox@dv@app@@UEAAXH@Z,1
 1400f39f0,?Update@DvElementLetterBox@dv@app@@UEAAXHVTransform@math@csl@@@Z,1
 1400f39f0,?Update@DvElementLetterBox@dv@app@@UEAAXHAEAVTransform@math@csl@@@Z,1
+1400f3a60,?RemoveCallback@DvElementBase@dv@hh@@UEAAXXZ,1
+1400f3a60,?RemoveCallback@DvElementLetterBox@dv@app@@UEAAXXZ,1
 1400f3aa0,??_GDvElementLipAnimation@dv@app@@QEAAXXZ,1
 1400f3aa0,??_DDvElementLipAnimation@dv@app@@QEAAXXZ,1
 1400f3b00,?Create@DvElementLipAnimation@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -6779,6 +6781,8 @@
 1400f3d90,??_GDvElementLookAtIK@dv@app@@QEAAXXZ,1
 1400f3d90,??_DDvElementLookAtIK@dv@app@@QEAAXXZ,1
 1400f4050,?Create@DvElementLookAtIK@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
+1400f40b0,?AppUnkFunc4@AppDvElementBase@dv@app@@UEAAXPEAX@Z,1
+1400f40b0,?AppUnkFunc4@DvElementLookAtIK@dv@app@@UEAAXPEAX@Z,1
 1400f4250,?Setup@DvElementLookAtIK@dv@app@@UEAAXPEAX@Z,1
 1400f4250,?Update@DvElementLookAtIK@dv@app@@UEAAXH@Z,1
 1400f4250,?Update@DvElementLookAtIK@dv@app@@UEAAXHVTransform@math@csl@@@Z,1
@@ -6834,8 +6838,12 @@
 1400f5d30,??_GDvElementOpeningLogo@dv@app@@QEAAXXZ,1
 1400f5d30,??_DDvElementOpeningLogo@dv@app@@QEAAXXZ,1
 1400f5d90,?Create@DvElementOpeningLogo@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
-1400f5df0,??_GDvElementOverrideAsm@dv@app@@QEAAXXZ,0
+1400f5df0,??_GDvElementOverrideAsm@dv@app@@QEAAXXZ,1
+1400f5df0,??_DDvElementOverrideAsm@dv@app@@QEAAXXZ,1
 1400f5e50,?Create@DvElementOverrideAsm@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
+1400f5ec0,?Update@DvElementOverrideAsm@dv@app@@UEAAXHAEAVTransform@math@csl@@@Z,1
+1400f5f20,?AddCallback@DvElementOverrideAsm@dv@app@@UEAA_NHAEAVTransform@math@csl@@@Z,1
+1400f5fd0,?RemoveCallback@DvElementOverrideAsm@dv@app@@UEAAXXZ,1
 1400f5ff0,??_GDvElementPbaReset@dv@app@@QEAAXXZ,1
 1400f5ff0,??_DDvElementPbaReset@dv@app@@QEAAXXZ,1
 1400f6050,?Create@DvElementPbaReset@dv@app@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,0
@@ -6970,6 +6978,7 @@
 1400fafa0,?AllocBottom@?$TlsfHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z,1
 1400fafa0,?UnkFunc6@DvElementVariablePointLight@dv@app@@UEAAXXZ,1
 1400fafa0,?UnkFunc6@DvElementVariablePointLight@dv@app@@UEAAXHVTransform@math@csl@@@Z,1
+1400fafa0,?UnkUpdate@DvElementVariablePointLight@dv@app@@UEAAXHAEAVTransform@math@csl@@@Z,1
 1400fafb0,?Create@VariablePointLightObject@DvElementVariablePointLight@dv@app@@CAPEAV1234@PEAVIAllocator@fnd@csl@@@Z,0
 1400fafb0,?Create@VariablePointLightObject@DvElementVariablePointLight@dv@app@@SAPEAV1234@PEAVIAllocator@fnd@csl@@@Z,0
 1400fb040,??_GDvElementVignetteParam@dv@app@@QEAAXXZ,1
@@ -14949,6 +14958,7 @@
 140838a10,j_??0CameraParameter@camera@app_cmn@@QEAA@XZ,1
 140838ab0,j_??0FrustumParameter@camera@app_cmn@@QEAA@XZ,1
 140839040,?GetGUID@DvNodeBase@dv@hh@@QEAAPEADXZ,1
+140839040,?GetGUID@DvNodeBase@dv@hh@@QEBAPEADXZ,1
 140839810,j_??_DCameraFrame@gameobjects@heur@@QEAAXXZ,0
 14083a360,?fUnk3@CameraFrame@camera@app_cmn@@UEAA_NXZ,1
 14083aaf0,j_?SetListener@CameraFrame@camera@app_cmn@@QEAAXPEAUListener@123@@Z,1
@@ -15064,12 +15074,13 @@
 14084bfd0,?Reload@ResTerrainModel@gfx@hh@@UEAAXPEAX_K@Z,1
 14084bfd0,?Reload@ResMirageLight@gfx@hh@@UEAAXPEAX_K@Z,1
 14084bfd0,?Reload@ResEffect@eff@hh@@UEAAXPEAX_K@Z,1
-14084bfd0,?UnkFunc6@DvElementBase@dv@hh@@UEAAXXZ,1
 14084bfd0,?UnkFunc6@DvElementPointLight@dv@hh@@UEAAXXZ,1
 14084bfd0,?UnkFunc6@DvElementSpotlight@dv@hh@@UEAAXXZ,1
-14084bfd0,?UnkFunc6@DvElementBase@dv@hh@@UEAAXHVTransform@math@csl@@@Z,1
 14084bfd0,?UnkFunc6@DvElementPointLight@dv@hh@@UEAAXHVTransform@math@csl@@@Z,1
 14084bfd0,?UnkFunc6@DvElementSpotlight@dv@hh@@UEAAXHVTransform@math@csl@@@Z,1
+14084bfd0,?UnkUpdate@DvElementBase@dv@hh@@UEAAXHAEAVTransform@math@csl@@@Z,1
+14084bfd0,?UnkUpdate@DvElementPointLight@dv@hh@@UEAAXHAEAVTransform@math@csl@@@Z,1
+14084bfd0,?UnkUpdate@DvElementSpotlight@dv@hh@@UEAAXHAEAVTransform@math@csl@@@Z,1
 14084fef0,??_DResScene@resources@heur@@QEAAXXZ,0
 140850b10,?SetLocalizationTag@UITextElement@ui@hh@@QEAAXPEBD@Z,1
 140850b20,?SetText@UITextElement@ui@hh@@QEAAXPEBDI@Z,1
@@ -16834,7 +16845,9 @@
 140a8dbb0,?GetLocalBlendMaskImpl@LerpBlendNode@anim@hh@@UEBA_KXZ,1
 140a8dbb0,?GetLocalBlendMaskImpl@TwoPointLerpBlendNode@anim@hh@@UEBA_KXZ,1
 140a8dbf0,?IsUnkFlag0@DvNodeBase@dv@hh@@UEAA_NXZ,1
+140a8dbf0,?IsInitialized@DvNodeBase@dv@hh@@UEAA_NXZ,1
 140a8dc80,?SetTransform@DvNodeBase@dv@hh@@QEAAXPEAVTransform@math@csl@@@Z,1
+140a8dd30,j_?SetInitializedFlag@DvNodeBase@dv@hh@@QEAAX_N@Z,1
 140a8dee0,??0DvNodeBaseAnimationModel@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140a8e050,??_DDvNodeBaseAnimationModel@dv@hh@@QEAAXXZ,1
 140a8e180,?Setup@DvNodeBaseAnimationModel@dv@hh@@UEAAXPEAX@Z,1
@@ -16844,6 +16857,7 @@
 140a8e9f0,?PostStepUpdate@DvNodeBaseAnimationModel@dv@hh@@UEAAXH@Z,1
 140a8eef0,?GetDvSceneObject@DvNodeBaseAnimationModel@dv@hh@@QEAAPEAVAppDvSceneObjectBase@2app@@XZ,1
 140a8ef30,?IsUnkFlag0@DvNodeBaseAnimationModel@dv@hh@@UEAA_NXZ,1
+140a8ef30,?IsInitialized@DvNodeBaseAnimationModel@dv@hh@@UEAA_NXZ,1
 140a8f420,??0DvSceneObjectBase@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@PEAVDvStandardCharacter@12@@Z,1
 140a8f5b0,??_DDvSceneObjectBase@dv@hh@@QEAAXXZ,1
 140a8f7d0,?ShowDebugDraw@DvSceneObjectBase@dv@hh@@UEAAXXZ,1
@@ -16868,6 +16882,7 @@
 140a91380,j_?AddCallback@DvSceneControl@dv@hh@@UEAAXPEAVGameManager@game@3@@Z,1
 140a91680,?PreStepCallback@DvSceneControl@dv@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z,1
 140a916f0,?PostStepCallback@DvSceneControl@dv@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z,1
+140a91a60,?GetListeners@DvSceneControl@dv@hh@@QEBAAEAV?$MoveArray@PEAVDvSceneControlListener@dv@hh@@@ut@csl@@XZ,1
 140a920c0,?PreObjectUpdateCallback@ObjectUpdateListener@game@hh@@UEAAXPEAVGameManager@23@W4UpdatingPhase@fnd@3@AEBUSUpdateInfo@63@@Z,1
 140a920c0,?PreObjectUpdateCallback@DvSceneControl@dv@hh@@UEAAXPEAVGameManager@game@3@W4UpdatingPhase@fnd@3@AEBUSUpdateInfo@73@@Z,1
 140a92130,j_?RemoveCallback@GameObject@game@hh@@UEAAXPEAVGameManager@23@@Z,1
@@ -16937,10 +16952,12 @@
 140a99650,j_?Setup@DvNodePath@dv@hh@@UEAAXAEAUDescription@DvNodeBase@23@@Z,1
 140a99700,?Update@DvNodePath@dv@hh@@UEAAXH@Z,1
 140a99b30,?UnkFunc6@DvNodeBase@dv@hh@@UEAAXPEAX0@Z,1
+140a99b30,?UnkUpdate@DvNodeBase@dv@hh@@UEAAXHAEAVTransform@math@csl@@@Z,1
 140a9a040,??0DvNodeModel@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140a9a070,??_DDvNodeModel@dv@hh@@QEAAXXZ,1
 140a9a0d0,?Update@DvNodeModel@dv@hh@@UEAAXH@Z,1
 140a9a170,?UnkFunc6@DvNodeModel@dv@hh@@UEAAXPEAX0@Z,1
+140a9a170,?UnkUpdate@DvNodeModel@dv@hh@@UEAAXHAEAVTransform@math@csl@@@Z,1
 140a9a1c0,??0DvNodeModelMotion@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140a9a210,??_DDvNodeModelMotion@dv@hh@@QEAAXXZ,1
 140a9a270,?Update@DvNodeModelMotion@dv@hh@@UEAAXH@Z,1
@@ -16986,9 +17003,11 @@
 140a9b750,?PreStepUpdate@DvNodeElement@dv@hh@@UEAAXH@Z,1
 140a9b800,?GetUpdateTiming@DvNodeElement@dv@hh@@UEAAHXZ,1
 140a9b850,j_?IsUnkFlag0@DvNodeElement@dv@hh@@UEAA_NXZ,1
+140a9b850,j_?IsInitialized@DvNodeElement@dv@hh@@UEAA_NXZ,1
 140a9b890,?UnkFunc10@DvNodeBase@dv@hh@@UEAAXXZ,1
 140a9b8e0,?UnkFunc11@DvNodeBase@dv@hh@@UEAAXXZ,1
 140a9b930,?UnkFunc6@DvNodeElement@dv@hh@@UEAAXPEAX0@Z,1
+140a9b930,?UnkUpdate@DvNodeElement@dv@hh@@UEAAXHAEAVTransform@math@csl@@@Z,1
 140a9b950,??0DvNodeModelNode@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140a9b9b0,??_DDvNodeModelNode@dv@hh@@QEAAXXZ,1
 140a9ba10,?Setup@DvNodeModelNode@dv@hh@@UEAAXPEAX@Z,1
@@ -17204,8 +17223,8 @@
 140aa47c0,??0DvElementControllerVibration@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 140aa4830,j_??_DDvElementControllerVibration@dv@hh@@QEAAXXZ,1
 140aa48a0,?SetData@DvElementControllerVibration@dv@hh@@UEAAXPEAX@Z,1
-140aa4900,?UnkFunc7@DvElementBase@dv@hh@@UEAAXXZ,1
-140aa4910,?UnkFunc8@DvElementBase@dv@hh@@UEAAXXZ,1
+140aa4900,?UnkFunc7@DvElementControllerVibration@dv@hh@@UEAAXXZ,1
+140aa4910,?UnkFunc8@DvElementControllerVibration@dv@hh@@UEAAXXZ,1
 140aa4920,j_?UnkFunc1@DvElementControllerVibration@dv@hh@@UEAA_NXZ,1
 140aa4920,j_?AddCallback@DvElementControllerVibration@dv@hh@@UEAA_NXZ,1
 140aa4920,j_?AddCallback@DvElementControllerVibration@dv@hh@@UEAA_NHVTransform@math@csl@@@Z,1
@@ -17230,6 +17249,8 @@
 140aa4e20,?Update@DvElementMaterialParam@dv@hh@@UEAAXH@Z,1
 140aa4e20,?Update@DvElementMaterialParam@dv@hh@@UEAAXHVTransform@math@csl@@@Z,1
 140aa4e20,?Update@DvElementMaterialParam@dv@hh@@UEAAXHAEAVTransform@math@csl@@@Z,1
+140aa4ea0,?AddCallback@DvElementBase@dv@hh@@UEAA_NHAEAVTransform@math@csl@@@Z,1
+140aa4ea0,?AddCallback@DvElementMaterialParam@dv@hh@@UEAA_NHAEAVTransform@math@csl@@@Z,1
 140aa4fa0,?UnkFunc2@DvElementMaterialParam@dv@hh@@UEAAPEAXXZ,1
 140aa4fa0,?RemoveCallback@DvElementMaterialParam@dv@hh@@UEAAPEAXXZ,1
 140aa4fa0,?RemoveCallback@DvElementMaterialParam@dv@hh@@UEAAXXZ,1
@@ -56403,7 +56424,7 @@
 14669e710,?SetData@AppDvElementBase@dv@app@@UEAAXPEAX@Z,1
 14669f9b0,?DeleteData@DvElementFade@dv@app@@UEAAXXZ,1
 1466b4e40,?OnDataDeleted@DvElementFade@dv@app@@UEAAXXZ,1
-1466b4e40,?OnDataDeleted@AppDvElementBase@dv@app@@UEAAXXZ,1
+1466b4e40,?OnDataDeleted@DvElementAuraRoad@dv@app@@UEAAXXZ,1
 1466bf1f0,??_DRequestOverlayTalk@ui@app@@QEAAXXZ,0
 1466c5590,?Add@CaptionCollection@ui@app@@QEAAPEAUCaption@123@AEBUAddInfo@123@@Z,1
 1466d1cc0,??_GDvElementCaption@dv@app@@QEAAXXZ,1
@@ -58326,6 +58347,7 @@
 1502766a0,?Create@ResDvScene@resources@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z,1
 1502766a0,?Create@ResDvScene@dv@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z,1
 1502977c0,??0DvNodeBase@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
+1502e0280,?SetInitializedFlag@DvNodeBase@dv@hh@@QEAAX_N@Z,1
 1502ec690,?AddCallback@GameObject@game@hh@@UEAAXPEAVGameManager@23@@Z,1
 1502ec690,?AddCallback@DvSceneControl@dv@hh@@UEAAXPEAVGameManager@game@3@@Z,1
 15030c020,?RemoveCallback@GameObject@game@hh@@UEAAXPEAVGameManager@23@@Z,1
@@ -58352,6 +58374,7 @@
 1504f1de0,?Setup@DvNodeElement@dv@hh@@UEAAXAEAUDescription@DvNodeBase@23@@Z,1
 150500430,?Start@DvNodeElement@dv@hh@@UEAAXXZ,1
 150502690,?IsUnkFlag0@DvNodeElement@dv@hh@@UEAA_NXZ,1
+150502690,?IsInitialized@DvNodeElement@dv@hh@@UEAA_NXZ,1
 15054fbc0,??0DvElementCameraInGame@dv@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z,1
 150570a00,??_DDvElementControllerVibration@dv@hh@@QEAAXXZ,1
 150577860,?UnkFunc1@DvElementControllerVibration@dv@hh@@UEAA_NXZ,1
