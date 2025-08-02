@@ -3,7 +3,7 @@
 namespace hh::gfx {
     class GOCVisual : public game::GOComponent {
     public:
-        enum class Flag {
+        enum class Flag : unsigned char {
             VISIBLE,
         };
 
@@ -14,8 +14,8 @@ namespace hh::gfx {
         };
     public:
         csl::ut::Bitset<Flag> visualFlags;
-        uint8_t unk102;
-        GOCVisual(csl::fnd::IAllocator* allocator);
+        unsigned char unk102;
+        GOCVisual(csl::fnd::IAllocator* allocator, unsigned char unk102Param);
 		virtual void* GetRuntimeTypeInfo() const override;
         virtual void OnGOCVisualEvent(GOCVisualEvent event, unsigned int unkParam2, void* unkParam3) = 0;
         void SetVisible(bool visible);

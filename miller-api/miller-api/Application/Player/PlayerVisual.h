@@ -41,7 +41,6 @@ namespace app::player {
             IS_CURRENT,
         };
 
-    private:
         hh::game::GameObject* gameObject;
         GOCPlayerVisual* gocPlayerVisual;
         ComponentCollection* componentCollection;
@@ -49,7 +48,6 @@ namespace app::player {
         csl::ut::Bitset<Flag> flags;
         csl::ut::Bitset<StateFlag> stateFlags;
 
-    public:
         PlayerVisual(csl::fnd::IAllocator* allocator, hh::game::GameObject* gameObject, ComponentCollection* componentCollection);
 
         virtual unsigned int GetNameHash() const = 0;

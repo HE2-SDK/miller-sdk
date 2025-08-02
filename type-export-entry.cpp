@@ -115,6 +115,11 @@ template class hh::fnd::Handle<hh::fnd::Messenger>;
 template class hh::fnd::HandleManager<hh::game::GOComponent>;
 template class hh::fnd::Handle<hh::game::GOComponent>;
 
+template class hh::fnd::HandleManager<hh::snd::SoundListenerObject>;
+template class hh::fnd::Handle<hh::snd::SoundListenerObject>;
+template class hh::fnd::HandleManager<hh::snd::SoundPlaybackObject>;
+template class hh::fnd::Handle<hh::snd::SoundPlaybackObject>;
+
 template class hh::needle::NeedleResContainer::NeedleResourceHolder<hh::needle::RenderTarget>;
 template class hh::needle::NeedleResContainer::NeedleResourceHolder<hh::needle::DepthStencil>;
 template class hh::needle::NeedleResContainer::NeedleResourceHolder<hh::needle::Texture>;

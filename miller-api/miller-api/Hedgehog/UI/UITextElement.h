@@ -11,9 +11,17 @@ namespace hh::ui {
 
     public:
         UITextElement(csl::fnd::IAllocator* pAllocator, SurfRide::Cast* cast, GOCUIComposition* uiComposition);
+
+        virtual void* GetRuntimeTypeInfo() const override;
+        virtual void Update(const fnd::SUpdateInfo& updateInfo) override;
+        virtual void Initialize() override;
+        virtual void Deinitialize() override;
+        virtual bool IsVisible() const override;
+        virtual bool UnkFunc14() override;
+        virtual void TOUL_UnkFunc2() override;
+
         void SetLocalizationVariable(const char* name, const char* value);
         void SetLocalizationTag(const char* tag);
         void SetText(const char* text, unsigned int unkParam1);
-        virtual void TOUL_UnkFunc1() override;
     };
 }

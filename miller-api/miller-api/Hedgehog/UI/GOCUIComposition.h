@@ -12,13 +12,13 @@ namespace hh::ui {
         int currentGroupIndex;
         UIElementGroupContainer* rootContainer;
         csl::ut::MoveArray<UIElementGroup*> elementGroups;
-        csl::ut::MoveArray<void*> unk107;
+        csl::ut::MoveArray<UIElementGroup*> elementGroupsToBeUpdated;
         csl::ut::MoveArray<void*> unk108;
         SurfRide::Project* project;
         uint64_t unk110;
         uint32_t unk111;
         UITextInterface* textInterface;
-        csl::ut::MoveArray<void*> unk113;
+        csl::ut::MoveArray<fnd::Reference<CastSizeBinder>> castSizeBinders;
         uint64_t unk114;
 
         void Unk12421(SurfRide::Project* project, csl::ut::InplaceMoveArray<const char*, 32>& sceneNames);
@@ -45,5 +45,13 @@ namespace hh::ui {
         void SetCurrentGroup(const char* name);
         UIElement* FindElement(const char* container, const char* name);
         UIElement* FindElement(const char* name);
+        UIElementGroupContainer* GetRootContainer() const;
+
+    private:
+        void UnloadProject();
+        void LoadProject(SurfRide::Project* project, const csl::ut::MoveArray<SurfRide::Scene*>& scenes);
+        void LoadScene(SurfRide::Scene* scene);
+        void LoadElementsRecursively(UIElement* parent, UIElementGroup* group, UIElementGroupContainer* container, SurfRide::Cast* cast, csl::ut::MoveArray<SurfRide::Cast*>& casts);
+        void SetupCastSizeBinders(UIElementGroup* group, const csl::ut::MoveArray<SurfRide::Cast*>& casts);
     };
 }

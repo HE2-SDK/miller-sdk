@@ -15,6 +15,7 @@ namespace csl::ut {
 
     public:
         inline constexpr HashedString() : hash{} {}
+        inline constexpr HashedString(unsigned int hash) : hash{ hash } {}
         inline constexpr HashedString(const char* str) : hash{ HashString(str) } {}
         inline bool operator==(HashedString other) const { return hash == other.hash; }
         inline bool operator!=(HashedString other) const { return hash != other.hash; }

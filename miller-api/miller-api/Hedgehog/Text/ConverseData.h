@@ -1,11 +1,11 @@
 #pragma once
+#include <ucsl/resources/converse-text/v6.h>
 
 namespace hh::text {
+    using ucsl::resources::converse_text::v6::Entry;
+
     class ConverseData {
-        uint32_t id;
-        const char* tag;
-        void* unk;
-        const wchar_t* translation;
-        int length;
+    public:
+        Entry data;
     };
 }

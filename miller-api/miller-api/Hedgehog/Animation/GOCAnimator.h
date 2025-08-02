@@ -26,7 +26,7 @@ namespace hh::anim {
         virtual void UnkFunc2() override;
         virtual void UnkFunc3() override;
         virtual uint64_t UnkFunc4() override;
-        virtual void TL_MaybeOnTrigger() override;
+        virtual void EventCallback(const TriggerListener::Trigger& trigger) override;
         virtual void ASL_MaybeOnStateChange() override;
 
         void Setup(const SetupInfo& setupInfo);

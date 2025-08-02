@@ -51,6 +51,9 @@ namespace std {
 #ifdef VOID
 #undef VOID
 #endif
+#ifdef CreateDirectory
+#undef CreateDirectory
+#endif
 #ifdef GetUserName
 #undef GetUserName
 #endif
@@ -99,6 +102,7 @@ namespace millersdk::ucsl {
 #include "cslib/csl/fnd/TlsfHeap.h"
 #include "cslib/csl/fnd/Delegate.h"
 #include "cslib/csl/fnd/Function.h"
+#include "cslib/csl/fnd/ThreadSleep.h"
 
 #include "Hedgehog/rsdx/rsdx_noncopyable.h"
 #include "Hedgehog/rsdx/core/algo/hhrsdxalgomutex.h"
@@ -381,6 +385,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Font/ResBitmapFont.h"
 #include "Hedgehog/Font/ResScalableFontSet.h"
 #include "Hedgehog/Font/TextListener.h"
+#include "Hedgehog/Font/TextTagWriterFeedListener.h"
 #include "Hedgehog/Font/FontContainer.h"
 
 #include "Hedgehog/User/UserInfoEvent.h"
@@ -566,14 +571,11 @@ namespace millersdk::ucsl {
 
 #include "Hedgehog/Sound/ResAtomConfig.h"
 #include "Hedgehog/Sound/ResAtomCueSheet.h"
+#include "Hedgehog/Sound/SoundTween.h"
+#include "Hedgehog/Sound/SoundCue.h"
 #include "Hedgehog/Sound/SoundHandle.h"
-#include "Hedgehog/Sound/SoundManager.h"
-#include "Hedgehog/Sound/SoundManagerCri.h"
-#include "Hedgehog/Sound/GOCSound.h"
-
-#include "Hedgehog/Sound/ResAtomConfig.h"
-#include "Hedgehog/Sound/ResAtomCueSheet.h"
-#include "Hedgehog/Sound/SoundHandle.h"
+#include "Hedgehog/Sound/SoundSystem.h"
+#include "Hedgehog/Sound/SoundPlayer.h"
 #include "Hedgehog/Sound/SoundManager.h"
 #include "Hedgehog/Sound/SoundManagerCri.h"
 #include "Hedgehog/Sound/GOCSound.h"
@@ -670,16 +672,20 @@ namespace millersdk::ucsl {
 #include "Hedgehog/UI/LayerController.h"
 #include "Hedgehog/UI/TextListenerObject.h"
 #include "Hedgehog/UI/UITextInterface.h"
+#include "Hedgehog/UI/PageInfo.h"
+#include "Hedgehog/UI/TextData.h"
+#include "Hedgehog/UI/TextObject.h"
 #include "Hedgehog/UI/TextObjectUpdater.h"
+#include "Hedgehog/UI/CastSizeBinder.h"
+#include "Hedgehog/UI/CastTextContainer.h"
 #include "Hedgehog/UI/GOCUICollider.h"
 #include "Hedgehog/UI/GOCUIComposition.h"
 #include "Hedgehog/UI/UIObject.h"
-#include "Hedgehog/UI/UIElementBase.h"
 #include "Hedgehog/UI/UIElement.h"
 #include "Hedgehog/UI/UIElementGroup.h"
 #include "Hedgehog/UI/UIElementGroupContainer.h"
+#include "Hedgehog/UI/UIElementFactory.h"
 #include "Hedgehog/UI/UITextElement.h"
-#include "Hedgehog/UI/CastTextContainer.h"
 #include "Hedgehog/UI/UIPanel.h"
 #include "Hedgehog/UI/UIStackPanel.h"
 #include "Hedgehog/UI/UIGridPanel.h"
