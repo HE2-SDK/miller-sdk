@@ -1,12 +1,6 @@
 #pragma once
 
 namespace hh::anim {
-    class AnimationEnabledListener {
-    public:
-        virtual void AEL_UnkFunc1() {}
-        virtual void AEL_UnkFunc2(void* unkParam1, bool enabled) {} //unkParam1 is hh::anim::GOCAnimator*
-    };
-
     class GOCCharacterIk : public game::GOComponent, public AnimationEnabledListener {
     public:
         struct Unk1 {

@@ -2,78 +2,80 @@
 #include <ucsl/resources/pba/v1.h>
 
 namespace hh::pba{
+    struct RigidBody {
+        csl::ut::VariableString boneName;
+        ucsl::resources::pba::v1::RigidBody::Type type;
+        ucsl::resources::pba::v1::RigidBody::Shape shape;
+        uint8_t unk1;
+        char group;
+        float shapeRadius;
+        float shapeHeight;
+        float shapeDepth;
+        float mass;
+        float friction;
+        float restitution;
+        float linearDamping;
+        float angularDamping;
+        hh::fnd::WorldPosition offset;
+    };
+
+    struct Constraint {
+        csl::ut::VariableString boneName;
+        bool disableCollisionsBetweenLinkedBodies;
+        char unk1;
+        short overrideSolverIterationCount;
+        short parentRigidBodyIndex;
+        short childRigidBodyIndex;
+        short skeletonParentBoneIndex;
+        ucsl::resources::pba::v1::Limit angularLimits[3];
+        ucsl::resources::pba::v1::Limit linearLimits[3];
+        hh::fnd::WorldPosition offsetA;
+        hh::fnd::WorldPosition offsetB;
+    };
+
+    struct Node {
+        csl::ut::VariableString boneName;
+        float mass;
+        short rigidBodyIndex;
+        bool isPinned;
+        bool disableCollisionBetweenLinkedBodies;
+        float influence;
+        short downSiblingIndex;
+        short upSiblingIndex;
+        short backSiblingIndex;
+        short forwardSiblingIndex;
+        short leftSiblingIndex;
+        short rightSiblingIndex;
+    };
+
+    struct SoftBody{
+        csl::ut::VariableString name;
+        csl::ut::MoveArray<Node> nodes;
+        csl::ut::MoveArray<ucsl::resources::pba::v1::Link> links;
+        float margin;
+        float dampingCoeff;
+        float dragCoeff;
+        float liftCoeff;
+        float dynamicFrictionCoeff;
+        float poseMatchingCoeff;
+        float rigidContactsHardness;
+        float kineticContactsHardness;
+        float softContactsHardness;
+        float anchorsHardness;
+        int positionSolverIterationCount;
+        char unk0;
+        char group;
+    };
+
     class ResPhysicalSkeleton : public hh::fnd::ManagedResource {
     public:
-        struct RigidBody {
-            csl::ut::VariableString boneName;
-            bool isStaticObject;
-            bool isShapeBox;
-            float shapeRadius;
-            float shapeHeight;
-            float shapeDepth;
-            float mass;
-            float friction;
-            float resitution;
-            float linearDamping;
-            float angularDamping;
-            csl::math::Vector3 offsetPosition;
-            csl::math::Quaternion offsetRotation;
-        };
-
-        struct Constraint {
-            csl::ut::VariableString boneName;
-            char unk0;
-            char unk1;
-            short numIterations;
-            short localParentBoneIndex;
-            short localBoneIndex;
-            short realParentBoneIndex;
-            ucsl::resources::pba::v1::Limit angularLimits[3];
-            ucsl::resources::pba::v1::Limit linearLimits[3];
-            csl::math::Vector3 offsetPositionA;
-            csl::math::Quaternion offsetRotationA;
-            csl::math::Vector3 offsetPositionB;
-            csl::math::Quaternion offsetRotationB;
-        };
-
-        struct Node {
-            csl::ut::VariableString boneName;
-            float mass;
-            short unk1;
-            bool ifPinned;
-            int unk1b;
-            short childIdx;
-            short parentIdx;
-            short unk2[2];
-            short leftIdx;
-            short rightIdx;
-        };
-
-        struct SoftBody{
-            csl::ut::VariableString name;
-            csl::ut::MoveArray<Node> nodes;
-            csl::ut::MoveArray<ucsl::resources::pba::v1::Link> links;
-            float scale;
-            float dampingCoeff;
-            float dragCoeff;
-            float liftCoeff;
-            float dynamicFrictionCoeff;
-            float poseMatchingCoeff;
-            float rigidContactsCoeff;
-            float kineticContactsHardness;
-            float softContactsHardness;
-            float anchorsHardness;
-            int positionIterations;
-            char unk2;
-            char unk3;
-        };
 
         csl::ut::MoveArray<RigidBody> rigidbodies;
         csl::ut::MoveArray<Constraint> constraints;
         csl::ut::MoveArray<SoftBody> softbodies;
         csl::ut::MoveArray<short> unkArray3; // contains somekind of indices
         csl::ut::MoveArray<short> unkArray4; // contains somekind of indices
-        csl::ut::MoveArray<short> unkArray5; // contains somekind of indices
+        csl::ut::MoveArray<short> unkArray5a; // contains somekind of indices
 
         MANAGED_RESOURCE_CLASS_DECLARATION(ResPhysicalSkeleton)
 

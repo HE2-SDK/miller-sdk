@@ -12,6 +12,11 @@
 // template class hh::game::InputComponent::InputMonitor<uint32_t>;
 // template class hh::game::InputComponent::InputMonitor<csl::math::Vector4>;
 template class csl::ut::InplaceMoveArray<const char*, 32>;
+template class csl::ut::MoveArray<csl::math::Transform>;
+template class csl::ut::MoveArray<short>;
+template class csl::ut::MoveArray<hh::fnd::WorldPosition>;
+template class csl::ut::MoveArray<hh::pba::GOCPhysicalAnimation::RigidBodyTransInfo>;
+template class csl::ut::MoveArray<hh::pba::GOCPhysicalAnimation::ConstraintTransInfo>;
 // template class csl::ut::Pair<SurfRide::ReferenceCast*, hh::ui::UIListViewElement::Cursor*>;
 // template class hh::fnd::Reference<hh::ui::UIListViewElement::Cursor>;
 // template class hh::fnd::Reference<hh::ui::UIElement>;
