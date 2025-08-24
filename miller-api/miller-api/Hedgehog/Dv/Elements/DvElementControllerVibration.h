@@ -24,6 +24,8 @@ namespace hh::dv{
         virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
         virtual void SetData(void* data) override;
+        virtual void UnkFunc7() override;
+        virtual void UnkFunc8() override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementControllerVibration)
     };

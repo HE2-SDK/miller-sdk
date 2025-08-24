@@ -3,9 +3,9 @@
 namespace app::dv{
     class DvElementFootIk : public AppDvElementBase{
     public:
-        struct Description : hh::dv::DvElementBase::Description { };
+        struct Description : hh::dv::DvElementBase::Description {};
 
-        void* unk0;
+        hh::dv::DvNodeCharacter* parentCharacter;
 
         virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;

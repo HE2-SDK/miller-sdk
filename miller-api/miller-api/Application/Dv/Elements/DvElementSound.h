@@ -6,18 +6,24 @@ namespace app::dv{
         struct Description : hh::dv::DvElementBase::Description {
         public:
             enum class SoundID : unsigned int {
-                BGM,
-                SFX,
-                Voice
+                Voice,
+                SFX
             };
+
+            enum class Flags : unsigned int {
+                FACIAL_ANIMATION,
+                STOP_IMMEDIATELY
+            };
+
             char cueName[64];
             SoundID soundId;
-            int unk0;
+            csl::ut::Bitset<Flags> flags;
         };
 
-        short unk0;
+        hh::snd::SoundHandle soundHandle;
         csl::ut::MoveArray32<void*> unkArray;
-        short unk1;
+        bool facialAnimation;
+        bool stopImmediately;
 
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;

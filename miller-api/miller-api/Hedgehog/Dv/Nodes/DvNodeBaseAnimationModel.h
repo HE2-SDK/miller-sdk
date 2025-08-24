@@ -36,7 +36,7 @@ namespace hh::dv{
         virtual void Setup(DvNodeBase::Description& description) override;
         virtual void Start() override;
         virtual void PostStepUpdate(int currentFrame) override;
-        virtual bool IsUnkFlag0() override;
+        virtual bool IsInitialized() override;
         virtual bool UnkFunc3() override;
         virtual int GetUpdateTiming() override;
         virtual void* GetUnkNodeChar();

@@ -7,10 +7,10 @@ namespace app::dv{
         public:
             struct DOFParam {
             public:
-                float focus;
-                float focusRange;
-                float nearDist;
-                float farDist;
+                float foregroundBokehMaxDepth;
+                float foregroundBokehStartDepth;
+                float backgroundBokehStartDepth;
+                float backgroundBokehMaxDepth;
             };
 
             enum class Flags : unsigned int {
@@ -20,15 +20,23 @@ namespace app::dv{
                 CURVE_ENABLED
             };
 
+            enum class RenderTargetSize : unsigned int {
+                RTSIZE_FULL_SCALE = 0,
+                RTSIZE_HALF_SCALE = 1,
+                RTSIZE_QUARTER_SCALE = 2,
+                RTSIZE_COUNT = 3,
+                RTSIZE_INVALID = 3,
+            };
+
             csl::ut::Bitset<Flags> flags;
             DOFParam param;
             DOFParam finishParam;
             float cocMaxRadius;
-            float focalTransition;
+            float bokehRadiusScale;
             int bokehSampleCount;
-            int bokehQuality;
-            float bokehIntensity;
-            float rtScale;
+            float skyFocusDistance;
+            float bokehBias;
+            RenderTargetSize rtScale;
             float unk5[5];
             float curveData[32];
         };

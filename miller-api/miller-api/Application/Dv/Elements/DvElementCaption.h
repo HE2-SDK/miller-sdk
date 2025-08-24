@@ -23,7 +23,7 @@ namespace app::dv{
 
             char converseName[32];
             LanguageID languageId;
-            int eventNameOffset;
+            int style;
             bool soundEnabled;
         private:
             char padding0[3];
@@ -39,6 +39,7 @@ namespace app::dv{
 
         virtual bool AddCallback(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
+        virtual void AppUnkFunc4(void* unk) override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementCaption)
     };
