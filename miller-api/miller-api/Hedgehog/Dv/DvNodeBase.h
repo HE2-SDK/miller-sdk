@@ -44,11 +44,11 @@ namespace hh::dv{
         virtual void Update(int currentFrame) {};
         virtual void PreStepUpdate(int currentFrame) {}; // another update?
         virtual void PostStepUpdate(int currentFrame) {};
-        virtual bool IsUnkFlag0();
+        virtual bool IsInitialized();
         virtual bool UnkFunc3() { return true; }
         virtual void UnkFunc4() {};
         virtual int GetUpdateTiming();
-        virtual void UnkFunc6(void* unk0, void* unk1) {};
+        virtual void UnkUpdate(int currentFrame, csl::math::Transform& transform) {};
         virtual void UnkFunc7() {};
         virtual void UnkFunc8() {};
         virtual void UnkFunc9() {};
@@ -56,8 +56,9 @@ namespace hh::dv{
         virtual void UnkFunc11() {};
         virtual void UnkFunc12() {};
 
-        char* GetGUID();
+        char* GetGUID() const;
         void SetTransform(csl::math::Transform* transform);
+        void SetInitializedFlag(bool enabled);
 
         DvNodeBase(csl::fnd::IAllocator* allocator);
     };

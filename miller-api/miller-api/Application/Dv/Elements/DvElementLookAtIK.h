@@ -7,7 +7,14 @@ namespace app::dv{
         public:
             struct Object {
             public:
-                int unk1;
+                enum class Type : unsigned int {
+                    OFFSET,
+                    OFFSET_GUID_TARGET,
+                    CAMERA,
+                    OFFSET_GUID_POSITION
+                };
+
+                Type type;
                 char guid[16];
                 csl::math::Position offset;
             };
@@ -21,6 +28,7 @@ namespace app::dv{
         virtual void Update(int currentFrame, csl::math::Transform& transform) override;
         virtual void RemoveCallback() override;
         virtual void* AppUnkFunc3(void* unk0, unsigned int unk1) override;
+        virtual void AppUnkFunc4(void* unk) override;
 
         APP_DV_ELEMENT_DECLARATION_BASE(DvElementLookAtIK)
     };

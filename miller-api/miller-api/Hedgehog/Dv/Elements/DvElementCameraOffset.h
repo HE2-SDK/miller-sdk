@@ -5,9 +5,9 @@ namespace hh::dv{
     public:
         struct Description : DvElementBase::Description {
         public:
-            bool disabled;
-            csl::math::Position finishOffsetPosition;
+            bool targetOffsetEnabled;
             csl::math::Position offsetPosition;
+            csl::math::Position offsetTarget;
             float unk1[5]; //unused
             float curveData[256];
         };

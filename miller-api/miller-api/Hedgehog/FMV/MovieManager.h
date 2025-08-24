@@ -1,11 +1,14 @@
 #pragma once
 
 namespace hh::fmv{
-    class MovieHandleObj : public fnd::RefByHandleObject {
+    class MoviePlaybackObject : public fnd::RefByHandleObject {
     public:
-        typedef fnd::HandleManager<MovieHandleObj> HandleManager;
+        typedef fnd::HandleManager<MoviePlaybackObject> HandleManager;
 
+        csl::ut::MoveArray<int64_t> unk0;
         MoviePlayerCri* moviePlayer;
+
+        MoviePlaybackObject(csl::fnd::IAllocator* allocator, MoviePlayerCri* playerCri);
     };
 
     class MovieManager : public game::GameService, game::GameStepListener {
@@ -35,7 +38,7 @@ namespace hh::fmv{
         };
 
         csl::ut::MoveArray<void*> unkArray;
-        csl::ut::MoveArray<fnd::Handle<MovieHandleObj>> movies;
+        csl::ut::MoveArray<fnd::Handle<MoviePlaybackObject>> movies;
         csl::ut::MoveArray<const char*> shaderNames;
         const char* shaderName;
         bool paused;
@@ -46,7 +49,7 @@ namespace hh::fmv{
 		virtual void PreStepCallback(game::GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;
 		virtual void PostStepCallback(game::GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;
 
-        fnd::Handle<MovieHandleObj> CreateMovie(const char* movieName, MovieSetupData* setupData, csl::fnd::IAllocator* allocator, char unk);
+        fnd::Handle<MoviePlaybackObject> CreateMovie(const char* movieName, MovieSetupData* setupData, csl::fnd::IAllocator* allocator, char unk);
 
         GAMESERVICE_CLASS_DECLARATION(MovieManager)
     };

@@ -45,6 +45,7 @@ namespace hh::dv {
         virtual void PreObjectUpdateCallback(game::GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) override;
 
         const char* GetCutsceneName();
+        csl::ut::MoveArray<DvSceneControlListener*>& GetListeners() const;
 
         GAMEOBJECT_CLASS_DECLARATION(DvSceneControl)
     };

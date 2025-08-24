@@ -30,7 +30,7 @@ namespace hh::dv{
         virtual void RemoveCallback() override;
         virtual void SetData(void* data) override;
         virtual void DeleteData() override;
-        virtual void UnkFunc6(int currentFrame, csl::math::Transform transform) override;
+        virtual void UnkUpdate(int currentFrame, csl::math::Transform& transform) override;
 
         DV_ELEMENT_DECLARATION_BASE(DvElementSpotlight)
     };

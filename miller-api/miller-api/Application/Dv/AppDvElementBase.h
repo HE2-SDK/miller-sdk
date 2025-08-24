@@ -2,7 +2,7 @@
 
 #define APP_DV_ELEMENT_DECLARATION_BASE(ClassName)public:\
 		static app::dv::AppDvElementBase* Create(csl::fnd::IAllocator* allocator);\
-        ClassName::Description* GetData() {\
+        inline ClassName::Description* GetData() {\
             return reinterpret_cast<ClassName::Description*>(elementBinaryData);\
         }
 

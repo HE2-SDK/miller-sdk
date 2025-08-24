@@ -21,7 +21,7 @@ namespace hh::dv{
         virtual void SetData(void* data) {};
         virtual void DeleteData() {};
         virtual bool UnkFunc5() { return true; };
-        virtual void UnkFunc6(int currentFrame, csl::math::Transform transform) {};
+        virtual void UnkUpdate(int currentFrame, csl::math::Transform& transform) {};
         virtual void UnkFunc7() {};
         virtual void UnkFunc8() {};
 
@@ -164,9 +164,9 @@ namespace hh::dv{
         virtual void Start() override;
         virtual void Update(int currentFrame) override;
         virtual void PreStepUpdate(int currentFrame) override;
-        virtual bool IsUnkFlag0() override;
+        virtual bool IsInitialized() override;
         virtual int GetUpdateTiming() override;
-        virtual void UnkFunc6(void* unk0, void* unk1) override;
+        virtual void UnkUpdate(int currentFrame, csl::math::Transform& transform) override;
 
         static const void** elementBaseCreateFuncs[28];
 
