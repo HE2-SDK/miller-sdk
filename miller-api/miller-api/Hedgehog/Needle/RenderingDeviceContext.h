@@ -25,6 +25,11 @@ namespace hh::needle {
         virtual uint64_t UnkFunc11() = 0;
         virtual uint64_t UnkFunc12() = 0;
         virtual uint64_t UnkFunc13() = 0;
+        virtual uint64_t UnkFunc13a() = 0;
+        virtual uint64_t UnkFunc13b() = 0;
+        virtual uint64_t UnkFunc13c() = 0;
+        virtual uint64_t UnkFunc13d() = 0;
+        virtual uint64_t UnkFunc13e() = 0;
         virtual void DrawVerticesUP(const void* vertices, unsigned int vertexCount, unsigned int vertexStride) = 0;
         virtual void DrawIndexedVerticesUP(const unsigned short* indices, unsigned int indexCount, const void* vertices, unsigned int vertexCount, unsigned int vertexStride) = 0;
         virtual void DrawIndexed(unsigned int indexCount, unsigned int startIndexLocation, int baseVertexLocation) = 0;
@@ -73,7 +78,6 @@ namespace hh::needle {
         virtual void SetTwoSidedStencil(bool unkParam1, ComparisonFunc comparisonFunc1, int unkParam21, unsigned int unkParam31, StencilOp stencilOp11, StencilOp stencilOp12, StencilOp stencilOp13, unsigned int unkParam41, ComparisonFunc comparisonFunc2, int unkParam22, unsigned int unkParam32, StencilOp stencilOp21, StencilOp stencilOp22, StencilOp stencilOp23, unsigned int unkParam42) = 0;
         virtual void SetStencil(bool unkParam1, ComparisonFunc comparisonFunc, int unkParam2, unsigned int unkParam3, StencilOp stencilOp1, StencilOp stencilOp2, StencilOp stencilOp3, unsigned int unkParam4) = 0;
         virtual void SetColorWriteEnable(bool enabled) = 0;
-        virtual void UnkFunc61() = 0;
         virtual void SetBlendDescSetting() = 0;
         virtual void SetBlendModeWithAlpha(bool enabled, BlendMode src, BlendMode dst, BlendOp op, BlendMode alphaSrc, BlendMode alphaDst, BlendOp alphaOp) = 0;
         virtual void SetBlendMode(bool enabled, BlendMode src, BlendMode dst, BlendOp op) = 0;
@@ -81,7 +85,7 @@ namespace hh::needle {
         virtual void UnkFunc66() = 0;
         virtual void SetScissor(const Rectangle* scissorRects, unsigned int count) = 0;
         virtual uint64_t UnkFunc68() = 0;
-        virtual uint64_t UnkFunc69() = 0;
+        virtual uint64_t UnkFunc69(bool enabled, int64_t* bits) = 0;
         virtual uint64_t UnkFunc70() = 0;
         virtual void GetRsFlagMask(RsFlagMask& rsFlagMask) = 0;
         virtual void SetRenderTargets(const RenderTargetsSetting& renderTargetsSetting) = 0;

@@ -23,8 +23,8 @@ namespace hh::needle {
             bool unk2;
         };
 
-        RenderingDeviceContext* renderingDeviceContext;
         RenderProperty* renderProperty;
+        RenderingDeviceContext* renderingDeviceContext;
 
         intrusive_ptr<RenderTarget> renderTargets[65]; // 17 = luminance
         intrusive_ptr<Texture> renderTargetViews[65];

@@ -530,6 +530,7 @@ namespace millersdk::ucsl {
 #include "Hedgehog/Graphics/GOCVisualModel.h"
 #include "Hedgehog/Graphics/GOCVisualUserModel.h"
 #include "Hedgehog/Graphics/GOCVisualDebugDraw.h"
+#include "Hedgehog/Graphics/GOCRenderTexture.h"
 #include "Hedgehog/Graphics/GOCOcclusionCapsule.h"
 #include "Hedgehog/Graphics/VisualManager.h"
 #include "Hedgehog/Graphics/VisibilityManager.h"
