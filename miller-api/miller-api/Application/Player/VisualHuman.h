@@ -5,7 +5,6 @@ namespace app::player {
     public:
         enum class AttachPointId : char {
             HEAD,
-            HEAD_TOP,
             HIPS,
             UPPER_ARM_L,
             UPPER_ARM_R,
@@ -21,11 +20,8 @@ namespace app::player {
             FOOT_R,
             FREE01,
             FREE02,
+            SPINE1,
             CHR_SONICSPIN,
-            COS_WEAPON_L,
-            COS_WEAPON_R,
-            TAIL3_L,
-            TAIL3_R,
         };
 
         int actionTriggerTypeIndex;

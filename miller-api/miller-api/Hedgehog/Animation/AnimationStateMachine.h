@@ -34,7 +34,7 @@ namespace hh::anim {
             virtual AnimationState* GetPreviousAnimationState() const = 0;
             virtual AnimationState* GetActiveAnimationState() const = 0;
             virtual bool IsTransitioning() = 0;
-            virtual const TransitionType& GetTransitionType() const = 0;
+            virtual const TransitionData::TransitionInfo& GetTransitionInfo() const = 0;
             virtual TransitionEffect* GetTransitionEffect() const = 0;
             virtual void* UnkFunc9(void* unkParam1) const = 0;
             virtual void* UnkFunc10(csl::ut::MoveArray<void*>& unkParam1) const = 0;
@@ -69,7 +69,7 @@ namespace hh::anim {
             virtual AnimationState* GetPreviousAnimationState() const override;
             virtual AnimationState* GetActiveAnimationState() const override;
             virtual bool IsTransitioning() override { return false; }
-            virtual const TransitionType& GetTransitionType() const override;
+            virtual const TransitionData::TransitionInfo& GetTransitionInfo() const override;
             virtual TransitionEffect* GetTransitionEffect() const override;
             virtual void* UnkFunc9(void* unkParam1) const override;
             virtual void* UnkFunc10(csl::ut::MoveArray<void*>& unkParam1) const override;
@@ -80,10 +80,7 @@ namespace hh::anim {
 
         class LayerStateTransition : public LayerStateBase {
         public:
-            TransitionType transitionType;
-            uint8_t transitionUnk2;
-            unsigned short transitionId;
-            float currentTransitionTime;
+            TransitionData::TransitionInfo transitionInfo;
             float transitionTime;
             const char* targetAnimationName;
             fnd::Reference<LayerStateBase> prevLayerState;
@@ -99,7 +96,7 @@ namespace hh::anim {
             virtual AnimationState* GetPreviousAnimationState() const override;
             virtual AnimationState* GetActiveAnimationState() const override;
             virtual bool IsTransitioning() override;
-            virtual const TransitionType& GetTransitionType() const override;
+            virtual const TransitionData::TransitionInfo& GetTransitionInfo() const override;
             virtual TransitionEffect* GetTransitionEffect() const override;
             virtual void* UnkFunc9(void* unkParam1) const override;
             virtual void* UnkFunc10(csl::ut::MoveArray<void*>& unkParam1) const override;
@@ -161,6 +158,7 @@ namespace hh::anim {
         void SetSkeletonBlender(SkeletonBlender* skeletonBlender);
         bool IsFlagContained(const char* flag, int layer) const;
         bool IsInTransition(int layer) const;
+        const TransitionData::TransitionInfo& GetTransitionInfo(int layer) const;
         inline void SetPlaybackSpeed(float speed) {
             playbackSpeed = speed;
         }

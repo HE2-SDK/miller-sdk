@@ -5,6 +5,6 @@ namespace hh::anim {
         csl::ut::MoveArray<void*> unk1;
         csl::ut::MoveArray<void*> unk2;
     public:
-        SkeletalMeshBinding(csl::fnd::IAllocator* allocator, uint64_t unkParam1, uint64_t unkParam2);
+        SkeletalMeshBinding(csl::fnd::IAllocator* allocator, fnd::ManagedResource* pose, gfx::ResModel* model);
     };
 }

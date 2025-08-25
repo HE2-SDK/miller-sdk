@@ -3,27 +3,52 @@
 namespace hh::pba{
     class GOCPhysicalAnimation : public hh::game::GOComponent, hh::anim::AnimationEnabledListener{
     public:
-        int64_t unk0;
-        int64_t unk1;
+        struct RigidBodyTransInfo {
+            hh::fnd::WorldPosition position;
+            csl::math::Vector3 linearVelocity;
+            csl::math::Vector3 angularVelocity;
+        };
+
+        struct ConstraintTransInfo {
+            hh::fnd::WorldPosition positionA;
+            hh::fnd::WorldPosition positionB;
+        };
+
+        struct RigidBodyState {
+            bool active;
+            RigidBodyTransInfo transInfo;
+        };
+
+        struct ConstraintState {
+            bool active;
+            ConstraintTransInfo transInfo;
+        };
+
+        int64_t unk200;
+        int64_t unk201;
         PhysicalSkeletonBinding* physSkelBind;
         PbaManagerBullet* pbaManager;
         ResPhysicalSkeleton* physSkelRes;
-        hh::anim::GOCAnimator* gocAnimator0;
-        csl::ut::MoveArray<hh::anim::GOCAnimator*> gocAnimators;
+        hh::anim::GOCAnimationSingle* gocAnimationSingle;
+        csl::ut::MoveArray<hh::anim::GOCAnimationSingle*> gocAnimationSingles; // looks more like component class actually
         hh::anim::GOCAnimator* gocAnimator1;
-        int64_t unk2;
-        csl::fnd::Function<bool (class hh::anim::GOCAnimationSingle const *)>* function0Ptr;
-        csl::fnd::Function<bool (class hh::anim::GOCAnimationSingle const *)> function0;
-        float pbaBlendFactor;
-        int32_t dword134;
-        csl::ut::MoveArray<float> pbaBlendFactors;
+        csl::fnd::Function<bool (class hh::anim::GOCAnimationSingle const *)> componentSelector;
+        char unk202;
+        unsigned char framesPerPhysicsStep;
+        float frameTime;
+        bool isRagdoll;
+        bool enabled;
+        bool isActive; // or maybe isBlending? This gets set to true if PBA should be applied according to masks when gocAnimationSingle is an animator, and to true if gocAnimationSingle is non-null but not an animator
+        float speed;
+        float minimumBoneWeight;
+        csl::ut::MoveArray<float> boneWeights;
         csl::math::Transform csl__math__transform160;
         csl::math::Transform csl__math__transform4190;
         int32_t dword1C0;
         int64_t qword1C8;
-        csl::math::Vector4 csl__math__vector41D0;
-        csl::math::Vector4 csl__math__vector41E0;
-        float dword1F0;
+        csl::math::Vector3 positionOffset;
+        csl::math::Vector3 windVelocity;
+        float airDensity;
 
         GOCPhysicalAnimation(csl::fnd::IAllocator* allocator);
 
@@ -31,60 +56,60 @@ namespace hh::pba{
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
         virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 
-        virtual void UnkFunc0(int64_t a2, int64_t a3, double a4) {}
-        virtual bool UnkFunc1(int64_t a2, int64_t a3, double a4) { return false; }
+        virtual void GetRigidBodyAndConstraintStates(csl::ut::MoveArray<RigidBodyState>& rigidBodyStates, csl::ut::MoveArray<ConstraintState>& constraintStates) {}
+        virtual bool GetSoftBodyNodePositions(int index, csl::ut::MoveArray<csl::math::Vector3>& positions) { return false; }
         virtual void UnkFunc2() {}
         virtual void UnkFunc3() {}
         virtual void UnkFunc4(int64_t a2) {}
         virtual void UnkFunc5(int64_t a2, int64_t a3) {}
-        virtual void UnkFunc6() {}
-        virtual void UnkFunc7(int64_t a2) {}
-        virtual void UnkFunc8(int64_t a2, char a3) {}
-        virtual void UnkFunc9(int64_t a2) {}
-        virtual void UnkFunc10(int64_t a2, char a3) {}
-        virtual int UnkFunc11(int64_t a2, int64_t a3) { return 0; }
-        virtual void UnkFunc12() {}
-        virtual void SetNumberOfBulletPhysIterations(int iterationCount) { }
-        virtual int GetNumManifolds() { return 0; }
-        virtual void UnkFunc15() {}
-        virtual void UnkFunc16(hh::anim::GOCAnimator* gocAnimator) {}
-        virtual void UnkFunc17() {}
-        virtual void PBAUpdate(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) {}
+        virtual unsigned int GetRigidBodyCount() const {}
+        virtual void GetRigidBodyPositions(csl::ut::MoveArray<hh::fnd::WorldPosition>& positions) {}
+        virtual void SetRigidBodyPositions(const csl::ut::MoveArray<hh::fnd::WorldPosition>& positions, bool a3) {}
+        virtual void GetRigidBodyTransInfos(csl::ut::MoveArray<RigidBodyTransInfo>& transInfos) {}
+        virtual void SetRigidBodyTransInfos(const csl::ut::MoveArray<RigidBodyTransInfo>& transInfos, bool a3) {}
+        virtual int ApplyForce(int rigidBodyIndex, const csl::math::Vector3& force) { return 0; }
+        virtual int GetIterationCount() const {}
+        virtual void SetIterationCount(int iterationCount) { }
+        virtual int GetManifoldCount() const { return 0; }
+        virtual int GetSelectedManifoldCount() const {}
+        virtual void Initialize(hh::anim::GOCAnimator* gocAnimator) {}
+        virtual void Deinitialize() {}
+        virtual void PBAUpdate(float timeStep) {}
         virtual void UnkFunc19(int a2) {}
         virtual void UnkFunc20() {}
         virtual void UnkFunc21(char a2) {}
-        virtual void UnkFunc22(double a2) {}
+        virtual void UnkFunc22(float timeStep) {}
         virtual void UnkFunc23(int64_t a2, int64_t a3) {}
 
         virtual void UnkFunc24();
-        virtual void UnkFunc25();
-        virtual void UnkFunc26(int64_t a2);
-        virtual void UnkFunc27(int64_t a2);
-        virtual void UnkFunc28(int64_t a2);
-        virtual void UnkFunc29(int64_t a2, int64_t a3);
-        virtual void UnkFunc30(int64_t a2, int64_t a3);
-        virtual void UnkFunc31(int64_t a2, int64_t a3);
-        virtual void UnkFunc32(int64_t a2, int64_t a3, int64_t a4);
-        virtual void UnkFunc33(int a2);
-        virtual void UnkFunc34(int a2, int64_t a3);
+        virtual void Reset();
+        virtual void AddRigidBody(const RigidBody& rigidBody);
+        virtual void AddConstraint(const Constraint& constraint);
+        virtual void RemoveRigidBody(int index);
+        virtual void RemoveConstraint(int index);
+        virtual void UpdateRigidBody(int index, const RigidBody& rigidBody);
+        virtual void UpdateConstraint(int index, const Constraint& constraint);
+        virtual void AddSoftBody(const SoftBody& softBody);
+        virtual void RemoveSoftBody(int index);
+        virtual void UpdateSoftBody(int index, const SoftBody& softBody);
 
-        virtual void AEL_UnkFunc2(void* unkParam1, bool enabled) override;
+        virtual void AEL_UnkFunc2(anim::GOCAnimationSingle* gocAnimationSingle, bool enabled) override;
+
+        float GetBoneWeight(int boneIdx);
+        float GetClampedBoneWeight(int boneIdx);
+        csl::math::Transform GetTransform() const;
+        void SetEnabled(bool enabled);
     };
 
     class GOCPhysicalAnimationBullet : public GOCPhysicalAnimation {
     public:
         struct SetupInfo {
-            ResPhysicalSkeleton* resource;
-            char reserved40;
-            char reserved41;
-            int64_t unk2;
-            char unk3;
-            void* gocColliderBullet; //hh::physics::GOCColliderBullet
-            void* bulletCollisionShape0; //hh::physics::bullet::CollisionShape
-            void* bulletCollisionShape1; //hh::physics::bullet::CollisionShape
-            csl::math::Vector4 unk8;
-            int nameHash;
-            int gocDword1c0;
+            ResPhysicalSkeleton* resource{};
+            bool isRagdoll{};
+            bool enabled{ true };
+            csl::fnd::Function<bool (class hh::anim::GOCAnimationSingle const *)> componentSelector{};
+            unsigned int animationComponentName{};
+            int dword1C0{ 0x80 };
         };
 
         struct UnkStr0 {
@@ -117,61 +142,93 @@ namespace hh::pba{
             UnkStr1(csl::fnd::IAllocator* allocator);
         };
 
-        int64_t dynamicsWorld; // btDiscreteDynamicsWorld
-        int64_t unk3;
-        csl::ut::MoveArray<int64_t> rigidBodies; // btRigidBody
-        csl::ut::MoveArray<int64_t> constraints; // btGeneric6DofSpring2Constraint
-        csl::ut::MoveArray<int64_t> softbodies;
-        csl::ut::MoveArray<short> unkArray1;
-        csl::ut::MoveArray<short> unkArray2;
-        csl::ut::MoveArray<void*> unkArray3;
+        struct Unk3 {
+            uint8_t unk1;
+            int unk2;
+        };
+
+        struct RigidBodyInfo {
+            btRigidBody* rigidBody;
+            int group;
+            int mask;
+        };
+
+        struct ConstraintInfo {
+            btGeneric6DofSpring2Constraint* constraint;
+            bool maybeActive;
+        };
+
+        struct SoftBodyInfo {
+            btSoftBody* softBody;
+            uint32_t qword8;
+            int group;
+            int mask;
+            bool maybeActive;
+            csl::ut::MoveArray<void*> unk18;
+        };
+
+        btSoftRigidDynamicsWorld* dynamicsWorld;
+        btRigidBody* rootRigidBody;
+        csl::ut::MoveArray<RigidBodyInfo> rigidBodyInfos;
+        csl::ut::MoveArray<ConstraintInfo> constraintInfos;
+        csl::ut::MoveArray<SoftBodyInfo> softbodyInfos;
+        csl::ut::MoveArray<short> dynamicRigidBodyIndices;
+        csl::ut::MoveArray<short> staticRigidBodyIndices;
+        csl::ut::MoveArray<short> constraintIndices;
         bool hasSoftBody;
-        csl::ut::MoveArray<void*> unkArray4;
-        int64_t unk5[3]; //unkArray4 allocates here?
-        int64_t unk6;
-        int64_t unk7;
+        csl::ut::MoveArray<Unk3> unkArray4;
+        int64_t unk305[3]; //unkArray4 allocates here?
+        int64_t ragdollInstance;
+        int64_t ragdollRigidBodyController;
         csl::ut::MoveArray<void*> unkArray5;
         UnkStr0 unkStr0;
         UnkStr1 unkStr1[2];
         int numManifolds; //based on bullet lib
 
-        virtual void UnkFunc0(int64_t a2, int64_t a3, double a4) override;
-        virtual bool UnkFunc1(int64_t a2, int64_t a3, double a4) override;
+        virtual void GetRigidBodyAndConstraintStates(csl::ut::MoveArray<RigidBodyState>& rigidBodyStates, csl::ut::MoveArray<ConstraintState>& constraintStates) override;
+        virtual bool GetSoftBodyNodePositions(int index, csl::ut::MoveArray<csl::math::Vector3>& positions) override;
         virtual void UnkFunc2() override;
         virtual void UnkFunc3() override;
         virtual void UnkFunc4(int64_t a2) override;
         virtual void UnkFunc5(int64_t a2, int64_t a3) override;
-        virtual void UnkFunc6() override;
-        virtual void UnkFunc7(int64_t a2) override;
-        virtual void UnkFunc8(int64_t a2, char a3) override;
-        virtual void UnkFunc9(int64_t a2) override;
-        virtual void UnkFunc10(int64_t a2, char a3) override;
-        virtual int UnkFunc11(int64_t a2, int64_t a3) override;
-        virtual void UnkFunc12() override;
-        virtual void SetNumberOfBulletPhysIterations(int iterationCount) override;
-        virtual int GetNumManifolds() override;
-        virtual void UnkFunc15() override;
-        virtual void UnkFunc16(hh::anim::GOCAnimator* gocAnimator) override; // first, third, fifth function that gets executed
-        virtual void UnkFunc17() override;
-        virtual void PBAUpdate(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
+        virtual unsigned int GetRigidBodyCount() const override;
+        virtual void GetRigidBodyPositions(csl::ut::MoveArray<hh::fnd::WorldPosition>& positions) override;
+        virtual void SetRigidBodyPositions(const csl::ut::MoveArray<hh::fnd::WorldPosition>& positions, bool a3) override;
+        virtual void GetRigidBodyTransInfos(csl::ut::MoveArray<RigidBodyTransInfo>& transInfos) override;
+        virtual void SetRigidBodyTransInfos(const csl::ut::MoveArray<RigidBodyTransInfo>& transInfos, bool a3) override;
+        virtual int ApplyForce(int rigidBodyIndex, const csl::math::Vector3& force) override;
+        virtual int GetIterationCount() const override;
+        virtual void SetIterationCount(int iterationCount) override;
+        virtual int GetManifoldCount() const override;
+        virtual int GetSelectedManifoldCount() const override;
+        virtual void Initialize(hh::anim::GOCAnimator* gocAnimator) override; // first, third, fifth function that gets executed
+        virtual void Deinitialize() override;
+        virtual void PBAUpdate(float timeStep) override;
         virtual void UnkFunc19(int a2) override;
         virtual void UnkFunc20() override; // executed when jumping, perhaps related to stopping the sim?
         virtual void UnkFunc21(char a2) override; // second, fourth, sixth function that gets executed
-        virtual void UnkFunc22(double a2) override;
+        virtual void UnkFunc22(float timeStep) override;
         virtual void UnkFunc23(int64_t a2, int64_t a3) override;
 
-        virtual void UnkFunc25() override;
-        virtual void UnkFunc26(int64_t a2) override;
-        virtual void UnkFunc27(int64_t a2) override;
-        virtual void UnkFunc28(int64_t a2) override;
-        virtual void UnkFunc29(int64_t a2, int64_t a3) override;
-        virtual void UnkFunc30(int64_t a2, int64_t a3) override;
-        virtual void UnkFunc31(int64_t a2, int64_t a3) override;
-        virtual void UnkFunc32(int64_t a2, int64_t a3, int64_t a4) override;
-        virtual void UnkFunc33(int a2) override;
-        virtual void UnkFunc34(int a2, int64_t a3) override;
+        virtual void Reset() override;
+        virtual void AddRigidBody(const RigidBody& rigidBody) override;
+        virtual void AddConstraint(const Constraint& constraint) override;
+        virtual void RemoveRigidBody(int index) override;
+        virtual void RemoveConstraint(int index) override;
+        virtual void UpdateRigidBody(int index, const RigidBody& rigidBody) override;
+        virtual void UpdateConstraint(int index, const Constraint& constraint) override;
+        virtual void AddSoftBody(const SoftBody& softBody) override;
+        virtual void RemoveSoftBody(int index) override;
+        virtual void UpdateSoftBody(int index, const SoftBody& softBody) override;
 
-        void Setup(SetupInfo& setupInfo);
+        void Setup(const SetupInfo& setupInfo);
+
+    private:
+        btRigidBody* GetRootRigidBody();
+
+        static btRigidBody* CreateBulletRigidBody(const RigidBody& rigidBody, btMotionState* motionState);
+        static btGeneric6DofSpring2Constraint* CreateBulletConstraint(const Constraint& constraint, btRigidBody* parentRigidBody, btRigidBody* childRigidBody, const hh::fnd::WorldPosition& offset);
+        static void LoadConstraintIntoBulletConstraint(btGeneric6DofSpring2Constraint* bulletConstraint, const Constraint& constraint);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCPhysicalAnimationBullet);
     };

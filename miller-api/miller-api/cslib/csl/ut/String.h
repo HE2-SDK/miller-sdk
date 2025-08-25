@@ -18,7 +18,7 @@ namespace csl::ut {
 
         template<size_t Len>
         inline void copyFrom(const char (&str)[Len], size_t srcOffset = 0, size_t dstOffset = 0) {
-            copyFrom(str, Len, srcOffset, dstOffset);
+            copyFrom(str, Len - 1, srcOffset, dstOffset);
         }
     };
 }
