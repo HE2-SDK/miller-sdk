@@ -9,26 +9,41 @@ namespace app_cmn::camera {
     };
 
     struct CameraParameter {
-        struct Target {
+        struct Positioning {
             csl::math::Vector3 position;
             csl::math::Vector3 offset;
             csl::math::Vector4 unk3;
+
+            csl::math::Vector3& GetPosition() const;
+            void SetPosition(csl::math::Vector3& position);
         };
-        struct Offset {
-            float angleX;
-            float angleY;
-            float distance;
-        };
+
         struct Orientation {
-            csl::math::Vector4 unk7;
-            uint8_t unk8;
-            csl::math::Vector4 unk9;
-            uint32_t unk8b;  
+            struct Offset {
+                float angleX;
+                float angleY;
+                float distance;
+                csl::math::Vector3 targetPosition;
+                bool usePosition;
+            };
+            struct Target {
+                csl::math::Vector4 upVector;
+                uint32_t unk8b;  
+
+                void SetUnk8b(uint32_t unk8b);
+                uint32_t GetUnk8b() const;
+            };
+
+            Offset offset;
+            Target target;
+
+            void SetTargetPosition(csl::math::Vector3& targetPosition);
         };
-        Target target;
-        Offset offset;
+
+        Positioning positioning;
         Orientation orientation;
         FrustumParameter frustum;
+
         CameraParameter();
     };
 

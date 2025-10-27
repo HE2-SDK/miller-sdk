@@ -76,7 +76,6 @@ namespace hh::needle::ImplDX11 {
         virtual void SetTwoSidedStencil(bool unkParam1, ComparisonFunc comparisonFunc1, int unkParam21, unsigned int unkParam31, StencilOp stencilOp11, StencilOp stencilOp12, StencilOp stencilOp13, unsigned int unkParam41, ComparisonFunc comparisonFunc2, int unkParam22, unsigned int unkParam32, StencilOp stencilOp21, StencilOp stencilOp22, StencilOp stencilOp23, unsigned int unkParam42) override;
         virtual void SetStencil(bool unkParam1, ComparisonFunc comparisonFunc, int unkParam2, unsigned int unkParam3, StencilOp stencilOp1, StencilOp stencilOp2, StencilOp stencilOp3, unsigned int unkParam4) override;
         virtual void SetColorWriteEnable(bool enabled) override;
-        virtual void UnkFunc61() override;
         virtual void SetBlendDescSetting() override;
         virtual void SetBlendModeWithAlpha(bool enabled, BlendMode src, BlendMode dst, BlendOp op, BlendMode alphaSrc, BlendMode alphaDst, BlendOp alphaOp) override;
         virtual void SetBlendMode(bool enabled, BlendMode src, BlendMode dst, BlendOp op) override;
@@ -84,7 +83,7 @@ namespace hh::needle::ImplDX11 {
         virtual void UnkFunc66() override;
         virtual void SetScissor(const Rectangle* scissorRects, unsigned int count) override;
         virtual uint64_t UnkFunc68() override;
-        virtual uint64_t UnkFunc69() override;
+        virtual uint64_t UnkFunc69(bool enabled, int64_t* bits) override;
         virtual uint64_t UnkFunc70() override;
         virtual void GetRsFlagMask(RsFlagMask& rsFlagMask) override;
         virtual void SetRenderTargets(const RenderTargetsSetting& renderTargetsSetting) override;
