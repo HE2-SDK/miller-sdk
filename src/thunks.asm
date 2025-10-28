@@ -61940,6 +61940,11 @@ PUBLIC ?GetTypeInfo@ResParticleLocation@resources@heur@@SAPEBUResourceTypeInfo@f
     mov rax, 0140ba4130h
     jmp rax
 
+PUBLIC ?GetTypeInfo@ResParticleLocation@animeff@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
+?GetTypeInfo@ResParticleLocation@animeff@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
+    mov rax, 0140ba4130h
+    jmp rax
+
 PUBLIC ?EventCallback@GOCParticleLocator@animeff@hh@@UEAAXAEBUTrigger@TriggerListener@anim@3@@Z
 ?EventCallback@GOCParticleLocator@animeff@hh@@UEAAXAEBUTrigger@TriggerListener@anim@3@@Z:
     mov rax, 0140ba4a00h
@@ -90565,6 +90570,11 @@ PUBLIC ?typeInfo@ResParticleLocation@resources@heur@@0UResourceTypeInfo@fnd@hh@@
     mov rax, 0142939290h
     jmp rax
 
+PUBLIC ?typeInfo@ResParticleLocation@animeff@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResParticleLocation@animeff@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 0142939290h
+    jmp rax
+
 PUBLIC ?componentClass@GOCParticleLocator@gocs@heur@@0VGOComponentClass@game@hh@@B
 ?componentClass@GOCParticleLocator@gocs@heur@@0VGOComponentClass@game@hh@@B:
     mov rax, 01429392d0h
@@ -115315,6 +115325,16 @@ PUBLIC ??_GResParticleLocation@resources@heur@@QEAAXXZ
     mov rax, 01529f8f10h
     jmp rax
 
+PUBLIC ??_DResParticleLocation@animeff@hh@@QEAAXXZ
+??_DResParticleLocation@animeff@hh@@QEAAXXZ:
+    mov rax, 01529f8f10h
+    jmp rax
+
+PUBLIC ?Load@ResParticleLocation@animeff@hh@@UEAAXPEAX_K@Z
+?Load@ResParticleLocation@animeff@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0152a10240h
+    jmp rax
+
 PUBLIC ?Create@ResParticleLocation@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@ResParticleLocation@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
     mov rax, 0152a15760h
@@ -115322,6 +115342,11 @@ PUBLIC ?Create@ResParticleLocation@resources@heur@@CAPEAV123@PEAVIAllocator@fnd@
 
 PUBLIC ?Create@ResParticleLocation@resources@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
 ?Create@ResParticleLocation@resources@heur@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0152a15760h
+    jmp rax
+
+PUBLIC ?Create@ResParticleLocation@animeff@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z
+?Create@ResParticleLocation@animeff@hh@@CAPEAVManagedResource@fnd@3@PEAVIAllocator@5csl@@@Z:
     mov rax, 0152a15760h
     jmp rax
 
