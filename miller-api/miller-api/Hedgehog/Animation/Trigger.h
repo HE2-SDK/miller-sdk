@@ -1,20 +1,26 @@
 #pragma once
 
 namespace hh::anim {
-    class TriggerListener {
-    public:
-        struct Trigger {
-            uint8_t byte0;
-            short type;
-            uint16_t word4;
-            uint16_t word6;
-            uint32_t dword8;
-            uint32_t dwordC;
-            const char* soundEffectName;
-            uint64_t qword18;
-            uint64_t qword20;
+    struct Trigger {
+        enum class Type : unsigned char {
+            STAY,
+            ENTER,
+            LEAVE,
         };
 
+        Type type;
+        short typeIndex;
+        short clipIndex;
+        short boneIndex;
+        float unk2;
+        float unk3;
+        const char* triggerName;
+        const char* colliderName;
+        AnimationState::Impl* state;
+    };
+
+    class TriggerListener {
+    public:
         virtual ~TriggerListener() = default;
         virtual void EventCallback(const Trigger& trigger) = 0;
     };

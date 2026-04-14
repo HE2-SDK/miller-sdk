@@ -25,38 +25,38 @@ namespace hh::needle {
         HINT,
     };
 
-    struct ParameterFloatValue {
+    struct ParameterValueFloat {
         intrusive_ptr<CNameIDObject> name;
         float_vector4 values;
     };
 
-    struct ParameterBoolValue {
+    struct ParameterValueBool {
         intrusive_ptr<CNameIDObject> name;
         unsigned int value;
     };
 
-    struct ParameterIntValue {
+    struct ParameterValueInt {
         intrusive_ptr<CNameIDObject> name;
         uint_vector4 uintVector;
     };
 
-    struct ParameterShaderValue {
+    struct ParameterValueShader {
         intrusive_ptr<CNameIDObject> name;
         ShaderResourceSetting shaderResourceSetting;
     };
 
-    struct ParameterEffectValue {
+    struct ParameterValueEffect {
         TechniqueInfo techniqueInfo;
     };
 
     class Texture;
-    struct ParameterTextureValue {
+    struct ParameterValueTexture {
         intrusive_ptr<CNameIDObject> type;
         intrusive_ptr<CNameIDObject> name;
         Texture* texture;
     };
 
-    struct ParameterSamplerValue {
+    struct ParameterValueSampler {
         intrusive_ptr<CNameIDObject> name;
         intrusive_ptr<CNameIDObject> texCoordIndexName;
         intrusive_ptr<CNameIDObject> texCoordMtxName;
@@ -67,16 +67,16 @@ namespace hh::needle {
         uint32_t builderUnk11;
     };
 
-    struct ParameterShaderNameValue {
+    struct ParameterValueShaderName {
         intrusive_ptr<CNameIDObject> name;
     };
 
-    struct ParameterTextureNameValue {
+    struct ParameterValueTextureName {
         intrusive_ptr<CNameIDObject> type;
         intrusive_ptr<CNameIDObject> name;
     };
 
-    struct ParameterRsFlagMaskValue {
+    struct ParameterValueRsFlagMask {
         uint32_t unk1;
         RsFlagMask rsFlagMask;
     };
@@ -94,16 +94,16 @@ namespace hh::needle {
     };
 
     union ParameterValue {
-        ParameterFloatValue floatValue;
-        ParameterBoolValue boolValue;
-        ParameterIntValue intValue;
-        ParameterShaderValue shaderValue;
-        ParameterEffectValue effectValue;
-        ParameterTextureValue textureValue;
-        ParameterSamplerValue samplerValue;
-        ParameterShaderNameValue shaderNameValue;
-        ParameterTextureNameValue textureNameValue;
-        ParameterRsFlagMaskValue rsFlagMaskValue;
+        ParameterValueFloat floatValue;
+        ParameterValueBool boolValue;
+        ParameterValueInt intValue;
+        ParameterValueShader shaderValue;
+        ParameterValueEffect effectValue;
+        ParameterValueTexture textureValue;
+        ParameterValueSampler samplerValue;
+        ParameterValueShaderName shaderNameValue;
+        ParameterValueTextureName textureNameValue;
+        ParameterValueRsFlagMask rsFlagMaskValue;
         ParameterHintValue hintValue;
     };
 }

@@ -3,7 +3,7 @@
 namespace hh::eff {
     class CyanRenderHandler : Cyan::Graphics::ExternalMeshInstance<needle::Model, needle::PBRModelInstance>::RenderHandler {
     public:
-        uint64_t qword100;
+        Cyan::Manager* cyanManager;
         uint64_t qword108;
         uint32_t dword110;
         uint64_t qword118;

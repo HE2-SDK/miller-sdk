@@ -36,7 +36,7 @@ namespace hh::animeff {
         template<typename T>
         struct BoundCollection {
             struct BoundItem {
-                uint16_t unk1;
+                uint16_t stateSequenceNr;
                 uint16_t unk2;
                 uint8_t unk3;
                 uint64_t unk4;
@@ -70,7 +70,7 @@ namespace hh::animeff {
 		virtual void UpdateAsync(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo, void* unkParam) override;
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;
         virtual void TransitionEndedCallback(anim::AnimationStateMachine* animationStateMachine, int stateId) override;
-        virtual void EventCallback(const hh::anim::TriggerListener::Trigger& trigger) override;
+        virtual void EventCallback(const hh::anim::Trigger& trigger) override;
 
         void Setup(const SetupInfo& setupInfo);
 

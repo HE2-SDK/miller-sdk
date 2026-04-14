@@ -122,20 +122,51 @@ namespace csl::geom {
 
 namespace csl::math {
 	Vector3 Vector3Cross(const Vector3& x, const Vector3& y);
+	Vector3 Vector3NormalBetween(const Vector3& x, const Vector3& y);
+	Vector3 Vector3Rotate(const Quaternion& rotation, const Vector3& vec);
+	Vector3 Vector3MulAdd(const Vector3 x, const Vector3 y, float scale);
+	Vector3 Vector3Sub(const Vector3& lhs, const Vector3& rhs);
+	Vector3 Vector3Scale(const Vector3& vec, float scalar);
 	float Vector3Distance(const Vector3& x, const Vector3& y);
 	float Vector3DistanceSq(const Vector3& x, const Vector3& y);
 	float Vector3DistanceNormalized(const Vector3& x, const Vector3& y);
 	float Vector3Dot(const Vector3& x, const Vector3& y);
-	Vector3 Vector3NormalBetween(const Vector3& x, const Vector3& y);
+	float Vector3Length(const Vector3& x);
+	float Vector3LengthSq(const Vector3& x);
+	bool Vector3DistanceLessThan(const Vector3& x, const Vector3& y, float threshold);
+	void Vector3Normalize(const Vector3& vec, Vector3* result);
+	bool Vector3NearZero(const Vector3& vec);
+	
+	Quaternion QuaternionRotationBetweenNormals(const Vector3& from, const Vector3& to);
+	Quaternion QuaternionRotationBetweenNormalsAxis(const Vector3& from, const Vector3& to, const Vector3& axis);
+	Quaternion QuaternionRotationAxis(const Vector3& position, const Vector3& lookAt, const Vector3& axis);
+	void QuaternionToEulerAngleZXY(const Quaternion& quat, Vector3* result);
 
-	Matrix34 CreateViewMatrix(const Vector3& position, const Vector3& up, const Vector3& target);
-	Matrix44 CreateOrthogonalProjectionMatrix(float top, float bottom, float left, float right, float nearClip, float farClip);
-	Matrix44 CreatePerspectiveProjectionMatrix(float fov, float aspectRatio, float nearClip, float farClip);
+	bool QuaternionsCloserThan(const Quaternion& quat1, const Quaternion& quat2, float distance);
 
+	Matrix34 Matrix34Transpose(const Matrix34& mat);
+	Matrix34 Matrix34Inverse(const Matrix34& mat, Vector3* maybeDeterminant);
+	bool Matrix34Inverse(const Matrix34& mat, Matrix34* result);
+	Matrix34 Matrix34LookAt(const Vector3& position, const Vector3& up, const Vector3& target);
 	Matrix34 Matrix34Multiply(const Matrix34& x, const Matrix34& y);
 	Matrix34 Matrix34AffineTransformation(const Vector3& position, const Quaternion& rotation);
-	void Matrix34Scale(const Matrix34& mat, const Vector3& scale, Matrix34* result);
 	Matrix34 Matrix34Rotation(const Quaternion& rotation);
+	Matrix34 Matrix34Scaling(float scale);
+	Matrix34 Matrix34Scaling(float x, float y, float z);
+	void Matrix34Scale(const Matrix34& mat, const Vector3& scale, Matrix34* result);
+	void Matrix34Rotate(const Matrix34& mat, const Quaternion& rotation, Matrix34* result);
+	void Matrix34RotateX(const Matrix34& mat, float angle, Matrix34* result);
+	void Matrix34RotateY(const Matrix34& mat, float angle, Matrix34* result);
+	void Matrix34RotateZ(const Matrix34& mat, float angle, Matrix34* result);
+	void Matrix34RotationRollPitchYaw(Matrix34* mat, const Vector3& rotation);
+	void Matrix34ToEulerAngleZXY(const Matrix34& mat, Vector3* result);
+
+	Matrix44 Matrix44Convert(const Matrix34& mat);
+	Matrix44 Matrix44Perspective(float fov, float aspectRatio, float nearClip, float farClip);
+	Matrix44 Matrix44Orthogonal(float top, float bottom, float left, float right, float nearClip, float farClip);
+	Matrix44 Matrix44Scaling(float scale);
+	Matrix44 Matrix44Scaling(float x, float y, float z);
+	Matrix44 Matrix44Multiply(const Matrix44& x, const Matrix44& y);
 
 	bool Intersection(const geom::Line3& line, const Plane& plane, Vector3* intersectionPoint, float* unkParam);
 	bool Intersection(const geom::Ray3& line, const geom::Aabb& aabb, float* unkParam);

@@ -1,7 +1,7 @@
 #pragma once
 
 namespace csl::fnd {
-    class OptimizedFreeListHeapBase : public FreeListLikeHeapBase {
+    class OptimizedFreeListHeapBase : public FreeListHeapCommonBase {
         struct Unk1{
             uint64_t unk1;
             uint64_t unk2;
@@ -16,7 +16,6 @@ namespace csl::fnd {
             uint64_t unk3;
             uint64_t unk4;
             ut::LinkList<Unk1> list1;
-            uint64_t unk5;
             ut::LinkList<Unk2> list2;
 
             Unk2();
@@ -38,7 +37,6 @@ namespace csl::fnd {
         virtual void GetStatistics(HeapStatistics& statistics) const override;
         virtual unsigned int GetCurrentAllocateCount() const override;
         virtual unsigned int GetTotalAllocateCount() const override;
-        virtual int64_t UnkFunc13() override;
     };
 
     template<typename TLock>
@@ -51,7 +49,6 @@ namespace csl::fnd {
         virtual void* Alloc(size_t in_size, size_t in_alignment) override;
         virtual void* AllocBottom(size_t in_size, size_t in_alignment) override;
         virtual void Free(void* in_pMemory) override;
-        virtual int64_t UnkFunc13() override;
         virtual void Lock() override;
         virtual void Unlock() override;
     };

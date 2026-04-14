@@ -14,5 +14,10 @@ namespace hh::eff {
         virtual void Reload(void* data, size_t size) override {}
 
         MANAGED_RESOURCE_CLASS_DECLARATION(ResEffect)
+
+        Cyan::Resource::EffectParam* GetEffectParam() const;
+        ResEffect* GetChildEffect(const char* name) const;
+        hh::gfnd::ResTexture* GetTexture(const char* name) const;
+        hh::gfx::ResModel* GetModel() const;
     };
 }

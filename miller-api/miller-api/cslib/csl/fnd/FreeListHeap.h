@@ -1,7 +1,7 @@
 #pragma once
 
 namespace csl::fnd {
-    class FreeListHeapBase : public FreeListLikeHeapBase {
+    class FreeListHeapBase : public FreeListHeapCommonBase {
         bool initialized;
 
     public:
@@ -12,7 +12,6 @@ namespace csl::fnd {
         virtual void* AllocBottom(size_t in_size, size_t in_alignment) override;
         virtual void Free(void* in_pMemory) override;
         virtual const char* GetHeapTypeName() const override;
-        virtual int64_t UnkFunc13() override;
 
         void Initialize(void* unkParam1, void* unkParam2, size_t unkParam3);
     };
@@ -25,7 +24,6 @@ namespace csl::fnd {
         virtual void* Alloc(size_t in_size, size_t in_alignment) override;
         virtual void* AllocBottom(size_t in_size, size_t in_alignment) override;
         virtual void Free(void* in_pMemory) override;
-        virtual int64_t UnkFunc13() override;
         virtual void Lock() override;
         virtual void Unlock() override;
     };

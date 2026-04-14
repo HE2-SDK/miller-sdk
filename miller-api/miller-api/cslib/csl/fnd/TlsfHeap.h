@@ -37,10 +37,9 @@ namespace csl::fnd {
         virtual size_t GetBufferEnd() const override;
         virtual unsigned int GetCurrentAllocateCount() const override;
         virtual unsigned int GetTotalAllocateCount() const override;
-        virtual int64_t UnkFunc13() override;
         virtual bool ForEachAllocatedBlock(MemoryBlockFunction& func) override;
         virtual int GetBlockCount() const override;
-        virtual int64_t UnkFunc20() override;
+        virtual long long UnkFunc18() override;
     };
 
     template<typename TLock>
@@ -53,9 +52,8 @@ namespace csl::fnd {
 		virtual void* Alloc(size_t in_size, size_t in_alignment) override;
 		virtual void* AllocBottom(size_t in_size, size_t in_alignment) override;
 		virtual void Free(void* in_pMemory) override;
-        virtual int64_t UnkFunc13() override;
         virtual void Lock() override;
         virtual void Unlock() override;
-        virtual bool UnkFunc21() override { return true; }
+        // virtual bool UnkFunc21() override { return true; }
     };
 }

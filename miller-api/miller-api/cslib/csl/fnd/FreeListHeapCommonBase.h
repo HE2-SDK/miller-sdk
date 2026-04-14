@@ -1,7 +1,7 @@
 #pragma once
 
 namespace csl::fnd {
-    class FreeListLikeHeapBase : public HeapBase {
+    class FreeListHeapCommonBase : public HeapBase {
         size_t bufferStart;
         size_t bufferEnd;
         uint64_t unk103;
@@ -15,7 +15,7 @@ namespace csl::fnd {
         uint32_t unk110;
 
     public:
-        FreeListLikeHeapBase(const char* name);
+        FreeListHeapCommonBase(const char* name);
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual bool IsIn(void* ptr) const override;
@@ -27,6 +27,5 @@ namespace csl::fnd {
         virtual unsigned int GetTotalAllocateCount() const override;
         virtual bool ForEachAllocatedBlock(MemoryBlockFunction& func) override;
         virtual int GetBlockCount() const override;
-        virtual int64_t UnkFunc20() override;
     };
 }

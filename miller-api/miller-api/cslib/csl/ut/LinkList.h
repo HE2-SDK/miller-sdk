@@ -16,7 +16,7 @@ namespace csl::ut
             struct iterator
             {
                 LinkListNode* m_pCurNode{};
-                size_t m_NodeOffset{};
+                int m_NodeOffset{};
             };
 
         protected:

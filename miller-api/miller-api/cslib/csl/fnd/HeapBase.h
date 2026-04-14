@@ -29,27 +29,42 @@ namespace csl::fnd {
         virtual void operator()(void* ptr, size_t size) = 0;
     };
 
-    class alignas(8) HeapBase {
-        uint64_t unk0a;
-        uint64_t unk0b;
-        void* unk0;
-        csl::ut::LinkList<HeapBase> children;
-        
-        bool unk1;
-        char name[10];
-        uint64_t unk2;
+    class HeapBase {
+        struct Unk1 {
+            const char* name;
+            uint64_t unk5;
+            uint64_t unk6;
+            uint64_t unk7;
+        };
+
+        class SystemAllocator : public IAllocator {
+        public:
+            HeapBase* heap;
+
+            virtual void* Alloc(size_t size, size_t alignment) override;
+            virtual void Free(void* ptr) override;
+        };
+    
+        csl::ut::StaticLinkListNode linkListNode;
+        uint64_t unk0c;
+        char name[16];
         HeapBase* parent;
-        uint64_t unk8;
-        uint64_t unk9;
-        bool initialized;
-        uint32_t unk11;
-        uint16_t unk12;
-        bool debugFillOnAlloc;
-        bool debugFillOnFree;
-        bool debugUnk;
-        uint64_t unk14;
-        uint64_t unk15;
-        uint32_t unk16;
+        csl::ut::StaticLinkList<HeapBase, 8> children;
+        uint32_t unk0e;
+        bool unk1;
+        uint64_t unk2;
+        int64_t unk3;
+        uint32_t unk4;
+        Unk1 systemUnk;
+        Unk1 defaultUnk;
+        SystemAllocator systemAllocator;
+        SystemAllocator* pSystemAllocator;
+        uint64_t unk5;
+        uint64_t unk6;
+        csl::ut::MoveArray<Unk1> unk7;
+        csl::ut::MoveArray<void*> unk8;
+        csl::ut::MoveArray<void*> unk9;
+
     public:
         HeapBase(const char* name);
         virtual void* GetRuntimeTypeInfo() const;
@@ -67,19 +82,19 @@ namespace csl::fnd {
         virtual unsigned int GetTotalAllocateCount() const = 0;
         virtual bool UnkFunc11() { return true; }
         virtual void UnkFunc12() {}
-        virtual int64_t UnkFunc13() = 0;
-        virtual void SetDebugFillOnAlloc(bool enabled);
-        virtual void SetDebugFillOnFree(bool enabled);
-        virtual void SetDebugUnk(bool enabled);
-        virtual void UnkFunc17() {}
+        virtual bool UnkFunc13() { return false; }
+        virtual void UnkFunc14() {}
         virtual bool ForEachAllocatedBlock(MemoryBlockFunction& func) { return false; }
+        virtual bool ForEachUnkBlock(MemoryBlockFunction& func) { return false; }
         virtual int GetBlockCount() const;
-        virtual int64_t UnkFunc20();
-        virtual bool UnkFunc21() { return false; }
+        virtual long long UnkFunc18();
+        virtual bool UnkFunc19() { return false; }
         virtual void Lock() {}
         virtual void Unlock() {}
-        virtual bool UnkFunc24() { return false; }
-        virtual void UnkFunc25() {}
+        virtual void UnkFunc22() {}
+        virtual bool UnkFunc23() { return false; }
+        virtual unsigned int UnkFunc24();
+        virtual void UnkFunc25();
 
         void SetName(const char* name);
         inline const char* GetName() {
@@ -89,7 +104,7 @@ namespace csl::fnd {
             return parent;
         }
 
-        inline const csl::ut::LinkList<HeapBase>& GetChildren() {
+        inline const csl::ut::StaticLinkList<HeapBase, 8>& GetChildren() {
             return children;
         }
     };
