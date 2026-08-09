@@ -5,7 +5,9 @@ namespace app::player {
     public:
         csl::ut::MoveArray<hh::fnd::Reference<BlackboardContent>> contents;
 
+        void AddContent(BlackboardContent* content);
         BlackboardContent* GetContent(unsigned int nameHash);
+        void ClearContents();
 
         template<typename T>
         T* GetContent() {

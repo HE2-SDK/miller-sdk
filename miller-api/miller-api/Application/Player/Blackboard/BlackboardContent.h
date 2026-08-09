@@ -1,9 +1,11 @@
 #pragma once
 
 namespace app::player {
+    class Blackboard;
+
     class BlackboardContent : public hh::fnd::ReferencedObject {
     public:
-        void* unk1;
+        Blackboard* blackboard;
 
         virtual unsigned int GetNameHash() const;
 

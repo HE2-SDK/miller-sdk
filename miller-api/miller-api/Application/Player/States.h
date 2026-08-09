@@ -3,10 +3,16 @@
 namespace app::player {
     class PlayerStateActionBase : public PlayerStateBase {
     public:
+        PlayerStateActionBase(csl::fnd::IAllocator* allocator);
     };
     
     class StateJumpBase : public PlayerStateActionBase {
     public:
+        float addForceTimeTimer;
+        float dropDashCharge;
+        hh::snd::SoundHandle soundHandleJumpBase;
+        uint8_t byteEC;
+        uint8_t byteED;
     };
     
     class StateStandBase : public PlayerStateActionBase {
@@ -51,6 +57,10 @@ namespace app::player {
 
     class StateBounceJump : public StateJumpBase {
     public:
+        int bounces;
+        hh::snd::SoundHandle soundHandle;
+        uint8_t byteF8;
+
         virtual bool ProcessMessage(PlayerHsmContext& context, const hh::fnd::Message& message) override;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
@@ -476,6 +486,9 @@ namespace app::player {
 
     class StateDoubleJump : public StateJumpBase {
     public:
+        hh::snd::SoundHandle soundHandle;
+        uint8_t byteF4;
+        
         virtual bool ProcessMessage(PlayerHsmContext& context, const hh::fnd::Message& message) override;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
@@ -484,6 +497,9 @@ namespace app::player {
 
     class StateDrift : public PlayerStateActionBase {
     public:
+        hh::snd::SoundHandle soundHandle;
+        float airborneTime;
+        float zeroInputTime;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
         virtual bool StepPlayerState(PlayerHsmContext& context, float deltaTime) override;
@@ -502,6 +518,8 @@ namespace app::player {
 
     class StateDropDash : public PlayerStateActionBase {
     public:
+        hh::snd::SoundHandle soundHandle;
+        bool byteE4;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
         virtual bool StepPlayerState(PlayerHsmContext& context, float deltaTime) override;
@@ -639,6 +657,12 @@ namespace app::player {
 
     class StateHomingAttack : public PlayerStateActionBase {
     public:
+        float dwordE0;
+        uint32_t dwordE4;
+        hh::eff::EffectHandle effectHandle;
+        hh::snd::SoundHandle soundHandle;
+        uint8_t byteFC;
+
         virtual bool ProcessMessage(PlayerHsmContext& context, const hh::fnd::Message& message) override;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
@@ -656,6 +680,25 @@ namespace app::player {
 
     class StateHomingFinished : public PlayerStateActionBase {
     public:
+        class Parameter : public StateParameter {
+            uint8_t byte10;
+            csl::math::Vector4 vector20;
+            uint8_t byte30;
+            csl::math::Vector4 vector40;
+            uint32_t dword50;
+            uint8_t byte54;
+            uint8_t byte55;
+            uint8_t byte56;
+            uint8_t byte57;
+
+            Parameter(csl::fnd::IAllocator* allocator);
+        };
+
+        uint32_t dwordE0;
+        uint8_t byteE4;
+        uint8_t byteE5;
+        uint8_t byteE6;
+
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
         virtual bool StepPlayerState(PlayerHsmContext& context, float deltaTime) override;
@@ -679,6 +722,8 @@ namespace app::player {
 
     class StateJump : public StateJumpBase {
     public:
+        hh::snd::SoundHandle soundHandle;
+        uint8_t byteF4; // 0x40 fall, 1 ball
         virtual bool ProcessMessage(PlayerHsmContext& context, const hh::fnd::Message& message) override;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
@@ -687,6 +732,13 @@ namespace app::player {
 
     class StateJumpDash : public PlayerStateActionBase {
     public:
+        hh::snd::SoundHandle soundhandle;
+        uint32_t dwordE4;
+        float dropDashCharge;
+        uint8_t byteEC;
+        uint8_t byteED;
+        bool dropDash;
+
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
         virtual bool StepPlayerState(PlayerHsmContext& context, float deltaTime) override;
@@ -861,9 +913,16 @@ namespace app::player {
 
     class StateRun : public PlayerStateActionBase {
     public:
+        hh::snd::SoundHandle soundHandle;
+        uint8_t byteE4;
+        bool shift;
+        bool shiftSideLeft;
+        uint8_t byteE7;
+        
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
         virtual bool StepPlayerState(PlayerHsmContext& context, float deltaTime) override;
+        bool CheckShift(PlayerHsmContext& context); // L1/R1 slide
     };
 
     class StateRunOnWater : public PlayerStateActionBase {
@@ -987,6 +1046,11 @@ namespace app::player {
 
     class StateSpinAttack : public StateJumpBase {
     public:
+        uint8_t byteF0;
+        float addForceTime;
+        hh::snd::SoundHandle soundHandle;
+        uint8_t byteFC;
+
         virtual bool ProcessMessage(PlayerHsmContext& context, const hh::fnd::Message& message) override;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
@@ -1002,6 +1066,48 @@ namespace app::player {
 
     class StateSpringJump : public PlayerStateActionBase {
     public:
+        class Parameter : public StateParameter {
+            enum class Animation : int32_t {
+                JUMP_RAILCANYON = 0x1000000,
+                WATERFALL_JUMP = 0x1000,
+                GLASSBREAK_JUMP = 0x2000,
+                JUMP_ACT_CITY_START = 0x4000,
+                JUMP_CHAOSLAST = 0x8000,
+                DASHRING = 0x80,
+                POLESPIN_JUMP_START = 0x100,
+                SELECTJUMP_F_START = 0x200,
+                SELECTJUMP_U_START = 0x400,
+                SELECTJUMP_MISS_START = 0x800,
+                DSURF_TRICK = 0x10000,
+                SPRING = 0x20000000,
+                JUMP_LOOP = 0x20000,
+            };
+            
+            csl::math::Vector4 vector10;
+            csl::math::Vector4 vector20;
+            csl::math::Vector4 vector30;
+            uint32_t dword40;
+            uint32_t dword44;
+            uint32_t dword48;
+            uint32_t dword4C;
+            uint32_t dword50;
+            Animation requestAnimation;
+
+            Parameter(csl::fnd::IAllocator* allocator);
+        };
+    
+        uint32_t dwordE0;
+        app::ut::Timer timerE8;
+        app::ut::Timer timerF8;
+        app::ut::Timer timer108;
+        app::ut::Timer timer118;
+        app::ut::Timer timer128;
+        uint32_t dword138;
+        csl::math::Vector4 vector140;
+        csl::math::Vector4 vector150;
+        uint32_t dword160;
+        uint8_t byte164;
+
         virtual bool ProcessMessage(PlayerHsmContext& context, const hh::fnd::Message& message) override;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;
@@ -1080,6 +1186,10 @@ namespace app::player {
 
     class StateStompingLand : public PlayerStateActionBase {
     public:
+        int stompCount;
+        float dwordE4;
+        uint8_t byteE8;
+        
         virtual bool ProcessMessage(PlayerHsmContext& context, const hh::fnd::Message& message) override;
         virtual void EnterPlayerState(PlayerHsmContext& context, int previousState) override;
         virtual void LeavePlayerState(PlayerHsmContext& context, int nextState) override;

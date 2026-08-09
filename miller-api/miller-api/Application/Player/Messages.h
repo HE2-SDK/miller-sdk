@@ -31,4 +31,12 @@ namespace app::player {
 
         MsgDead() : fnd::AppMessage<MsgDead>{ hh::fnd::MessageID::DEAD } {}
     };
+
+    class MsgHitDamage : fnd::AppMessage<MsgHitDamage> {
+    public:
+        uint8_t byte20;
+        uint64_t qword28;
+        uint64_t qword30;
+        uint8_t byte38;
+    };
 }

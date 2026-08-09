@@ -113,6 +113,6 @@ namespace hh::fnd
 			}
 		}
 
-		inline void Free();
+		void Free();
 	};
 }

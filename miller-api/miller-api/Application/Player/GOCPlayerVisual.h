@@ -48,6 +48,9 @@ namespace app::player {
 
         bool SwitchPlayerVisual(char id, bool unkParam1);
         void TriggerSwitchPlayerVisual(char id, bool unkParam1);
+        void SetAnimationState(const char* animationState, uint8_t unk);
+        void SetAnimationStateWithoutTransition(const char* animationState);
+        bool SetAnimationVariableFloat(const char* variableName, float value);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerVisual)
     };

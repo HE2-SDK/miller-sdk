@@ -3,16 +3,20 @@
 namespace app::player {
     class GOCPlayerKinematicParams : public hh::game::GOComponent {
     public:
-        struct Unk1 {
-            csl::math::Vector4 unk1;
-            csl::math::Vector4 unk2;
-            uint64_t unk3;
-            uint32_t unk4;
-            uint32_t unk5;
-            int unk6;
-            uint16_t unk7;
+        struct JumpInfo {
+            csl::math::Vector3 unk1;
+            csl::math::Vector3 groundNormal;
+            float altitude;
+            uint32_t dword24; // bitset
+            uint32_t dword28;
+            hh::fnd::HandleBase dword2C;
+            uint32_t dword30;
+            uint8_t byte34;
+            bool HasGround : 1;
+            bool Grounded : 1;
+            bool : 6;
 
-            Unk1();
+            JumpInfo();
         };
         struct Unk2 {
             uint64_t unk1;
@@ -49,10 +53,10 @@ namespace app::player {
             Unk4();
         };
         struct Unk5 : Unk4 {
-            uint64_t unk101;
             csl::math::Vector4 unk102;
-            csl::math::Vector4 unk103;
-            csl::math::Matrix44 unk104;
+            csl::math::Matrix44 unk103;
+            csl::math::Vector4 unk104;
+            csl::math::Vector4 unk105;
             Unk5();
         };
         struct Unk6 {
@@ -73,6 +77,44 @@ namespace app::player {
             csl::math::Quaternion rotation;
             Unk8();
         };
+        // csl::math::Transform transform;
+        // hh::fnd::WorldPosition worldPosition;
+        // csl::math::Vector4 velocity;
+        // csl::math::Vector4 unk1;
+        // csl::math::Vector4 unk2;
+        // csl::math::Vector4 unk3;
+        // csl::math::Vector4 unk4;
+        // csl::math::Vector4 unk5;
+        // csl::math::Vector4 unk6;
+        // csl::math::Vector4 vector140;
+        // csl::math::Matrix44 unk7;
+        // uint64_t unk8;
+        // JumpInfo unk9;
+        // JumpInfo unk10;
+        // Unk2 unk11;
+        // Unk2 unk12;
+        // Unk2 unk12a;
+        // Unk5 unk13;
+        // Unk5 unk14;
+        // Unk6 unk15;
+        // GravityController* gravityController;
+        // csl::math::Vector4 vector500;
+        // Unk7 unk16;
+        // uint32_t dword530;
+        // uint32_t unk17;
+        // csl::math::Matrix44 matrix540;
+        // void *unk18;
+        // void *unk19;
+        // void *unk20;
+        // void *unk21;
+        // uint64_t qword5A0;
+        // csl::fnd::IAllocator *allocator;
+        // uint16_t unk22;
+        // uint8_t unk23;
+        // uint64_t unk24;
+        // uint32_t unk25;
+        // csl::math::Vector4 vector5D0;
+        // csl::math::Vector4 vector5E0;
         csl::math::Transform transform;
         hh::fnd::WorldPosition worldPosition;
         csl::math::Vector4 velocity;
@@ -81,32 +123,35 @@ namespace app::player {
         csl::math::Vector4 unk3;
         csl::math::Vector4 unk4;
         csl::math::Vector4 unk5;
-        csl::math::Vector4 unk6;
+        csl::math::Vector4 worldInput;
+        csl::math::Vector4 vector140;
         csl::math::Matrix44 unk7;
-        uint32_t unk8;
-        Unk1 unk9;
-        Unk1 unk10;
+        uint64_t unk8;
+        JumpInfo unk9;
+        JumpInfo unk10;
         Unk2 unk11;
         Unk2 unk12;
-        uint64_t unk12a;
-        Unk3 unk13;
+        Unk2 unk12a;
+        Unk5 unk13;
         Unk5 unk14;
-        Unk5 unk15;
-        Unk6 unk16;
-        GravityController* gravityController;
-        csl::math::Vector4 unk18;
-        Unk7 unk19;
-        uint32_t unk20;
-        csl::math::Matrix44 unk21;
-        void* unk22;
-        void* unk23;
-        void* unk24;
-        void* unk25;
+        Unk6 unk15;
+        app::player::GravityController *gravityController;
+        csl::math::Vector4 vector500;
+        Unk7 unk16;
+        uint32_t dword530;
+        csl::math::Matrix44 matrix540;
+        void *unk17;
+        void *unk18;
+        void *unk19;
+        void *unk20;
+        uint64_t qword5A0;
+        csl::fnd::IAllocator *allocator;
+        uint16_t unk24;
+        uint8_t unk25;
         uint64_t unk26;
-        csl::fnd::IAllocator* allocator;
-        uint16_t unk27;
-        uint8_t unk28;
-        Unk8 unk29;
+        uint32_t unk27;
+        csl::math::Vector4 vector5D0;
+        csl::math::Vector4 vector5E0;
 
 
 		virtual void* GetRuntimeTypeInfo() const override;
@@ -120,6 +165,7 @@ namespace app::player {
         void SetRotation(const csl::math::Quaternion& rotation);
         void SetVelocity(const csl::math::Vector4& velocity);
         void SetGravityScale(float gravityScale);
+        float GetSpeed() const;
 
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerKinematicParams)
     };

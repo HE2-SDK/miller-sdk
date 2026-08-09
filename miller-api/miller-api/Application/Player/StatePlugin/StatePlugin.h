@@ -12,6 +12,13 @@ namespace app::player {
         uint8_t unk2;
 
         StatePluginBase(csl::fnd::IAllocator* allocator) : hh::fnd::ReferencedObject{ allocator, true } {}
+        
+        virtual unsigned int GetNameHash() const = 0;
+        virtual unsigned int UnkFunc() const { return 0; }
+        virtual void AddCallback() {};
+        virtual void RemoveCallback() {};
+        virtual void Update(hh::fnd::UpdatingPhase phase, const float deltaTime) {};
+        virtual bool ProcessMessage(hh::fnd::Message& message) {};
     };
 
     template<typename Ctx>

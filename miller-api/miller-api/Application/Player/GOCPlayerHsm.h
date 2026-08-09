@@ -30,7 +30,7 @@ namespace app::player {
         hh::fnd::Reference<PlayerStateParameter> playerStateParameter;
         hh::fnd::Reference<StatePluginManager<PlayerHsmContext>> statePluginManager;
         uint32_t unk105;
-        uint32_t unk105b;
+        uint32_t nextState; // nextState
         uint32_t unk106;
         csl::ut::Bitset<Flag> flags;
         csl::ut::InplaceMoveArray<void*, 1> unk108;
@@ -44,8 +44,8 @@ namespace app::player {
 		virtual bool ProcessMessage(hh::fnd::Message& msg) override;
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
         void Setup(const SetupInfo& setupInfo);
-        void SetState(uint32_t stateId, uint32_t unkParam1);
-
+        void ChangeState(int32_t stateId, uint32_t priority);
+        int GetCurrentState() const;
         GOCOMPONENT_CLASS_DECLARATION(GOCPlayerHsm);
     };
 }
