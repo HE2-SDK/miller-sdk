@@ -35,5 +35,12 @@ namespace app::game {
 		T* GetService() {
 			return static_cast<T*>(GetService(T::GetClass()));
 		}
+    public:
+        GameModeExtension* GetExtension(unsigned int name) const;
+        template<typename T>
+        inline T* GetExtension() const {
+            return (T*)GetExtension(csl::ut::HashString(T::name));
+        }
+        void AddExtension(GameModeExtension* extension);
     };
 }

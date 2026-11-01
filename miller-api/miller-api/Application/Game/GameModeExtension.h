@@ -3,6 +3,8 @@
 namespace app::game {
     class GameModeExtension : public hh::fnd::BaseObject {
     public:
+        GameMode* owner;
+
         virtual unsigned int GetNameHash() = 0;
         virtual void Initialize() {}
         virtual void Destroy() {}

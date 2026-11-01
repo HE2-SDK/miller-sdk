@@ -39,5 +39,7 @@ namespace app::save {
         virtual void SL_UnkFunc2() override;
 
         GAMESERVICE_CLASS_DECLARATION(SaveManager);
+        
+        SystemAc GetSystemAccessor();
     };
 }

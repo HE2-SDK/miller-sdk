@@ -53,6 +53,7 @@ namespace hh::needle {
             virtual void Free(void* in_pMemory);
         };
     
+        intrusive_ptr<RenderManager> renderManager;
         uint32_t vertexShaderCount;
         void* vertexShaderData[128];
         size_t vertexShaderSizes[128];
@@ -78,7 +79,6 @@ namespace hh::needle {
         ShaderObject* zPrepassSimplePTShaderObject;
         ShaderListInfo* shaderListInfo;
         DisplaySwapDevice* swapDevice;
-        intrusive_ptr<RenderManager> renderManager;
         intrusive_ptr<PBRModelInstanceRenderer> modelInstanceRenderer;
         void* unk10_4;
         intrusive_ptr<ParameterValueObject> globalParameters;
@@ -130,6 +130,7 @@ namespace hh::needle {
         RenderingDeviceContext* GetRenderingContext2() const;
         RenderingContextManager* GetRenderingContextManager() const;
         RenderManager* GetRenderManager() const;
+        RenderTargetManager* GetRenderTargetManager() const;
         SceneContextManager* GetSceneContextManager(const char* name) const;
         SceneContextManager* GetSceneContextManager(const CNameIDObject* name) const;
         VertexShader* GetVertexShader(unsigned int idx) const;

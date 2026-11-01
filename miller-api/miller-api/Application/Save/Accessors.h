@@ -35,6 +35,7 @@ namespace app::save {
 
     class OptionAudioAc : public app::save::SaveDataAccessor<app::save::OptionAudioData> {
     public:
+        float GetMusicVolume() const;
     };
 
     class OptionCameraAc : public app::save::SaveDataAccessor<app::save::OptionCameraData> {
@@ -83,6 +84,7 @@ namespace app::save {
 
     class SystemAc : public app::save::SaveDataAccessor<app::save::SystemData> {
     public:
+        OptionAudioAc GetOptionAudioAc();
     };
 
     class WorldFlagAc : public app::save::SaveDataAccessor<app::save::WorldFlagData> {

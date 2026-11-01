@@ -3,17 +3,16 @@
 namespace hh::needle {
     class PostEffectRenderJob : public RenderJob {
     public:
-        void* qword50[10];
-        void* qword98[8];
-        RenderManager* renderManager;
+        Texture* renderTextures[10];
+        RenderTarget* renderTargets[8];
         RenderTargetReference renderTarget;
 
-        PostEffectRenderJob(RenderManager* renderManager);
+        PostEffectRenderJob();
         virtual void Start(const RenderJobContext& context) override;
         virtual void Stop() override;
-        virtual void UnkFunc20(unsigned int index, void* obj);
-        virtual void UnkFunc21(unsigned int index, void* obj);
-        virtual void UnkFunc22();
+        virtual void SetTexture(unsigned int index, Texture* texture);
+        virtual void SetRenderTarget(unsigned int index, RenderTarget* renderTarget);
+        virtual void Setup(const RenderJobContext& context);
         virtual void UnkFunc23();
         virtual void UnkFunc24();
     };

@@ -13,13 +13,14 @@ namespace hh::game {
     };
 
     class InputManager : public GameService, public GamePauseListener, public GameStepListener {
+    public:
         csl::ut::MoveArray<hid::InputMapSettings*> inputMapSettings;
         csl::ut::MoveArray<InputComponent*> inputComponents;
         csl::ut::MoveArray<InternalPlayerInput*> internalPlayerInputs;
         csl::ut::InplaceMoveArray<void*, 1> unk4; // Something being done with this in RegisterInputComponent
         char activeInternalPlayerInputs; // bitmask
         int32_t unk6;
-    public:
+
         struct SetupInfo {
             uint32_t internalPlayerInputCount;
             uint32_t inputMapSettingsCount;

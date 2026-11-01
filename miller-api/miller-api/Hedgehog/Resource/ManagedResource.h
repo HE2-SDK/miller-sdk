@@ -24,7 +24,7 @@ namespace hh::fnd {
     class ManagedResource : public ReferencedObject, private csl::ut::NonCopyable {
     public:
         void* ref2InnerData;
-        size_t unk1;
+        size_t ref2InnerDataSize;
         uint32_t ref2Hash;
         bool isRef2;
         csl::ut::VariableString unk5;

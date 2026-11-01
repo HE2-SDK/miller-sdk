@@ -17,7 +17,7 @@ namespace app::dv{
 
             enum class Flags : unsigned int {
                 CURVE_ENABLED,
-                ENABLED
+                USE_MESH
             };
 
             AuraNode node;

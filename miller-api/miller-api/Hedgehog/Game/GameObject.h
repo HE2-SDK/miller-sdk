@@ -211,9 +211,14 @@ namespace hh::game
 			SetComponentLengths(phase);
 		}
 		GOComponent* GetComponent(const GOComponentClass* componentClass);
+		GOComponent* GetComponent(unsigned int nameHash, const GOComponentClass* componentClass);
 		template<typename T>
 		T* GetComponent() {
 			return static_cast<T*>(GetComponent(T::GetClass()));
+		}
+		template<typename T>
+		T* GetComponent(unsigned int nameHash) {
+			return static_cast<T*>(GetComponent(nameHash, T::GetClass()));
 		}
 
 		void SetProperty(unsigned int id, fnd::PropertyValue value);

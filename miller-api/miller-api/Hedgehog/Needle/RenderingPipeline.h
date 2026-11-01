@@ -18,12 +18,12 @@ namespace hh::needle {
         uint32_t dword8;
         DrawPassInfo drawPassInfo;
         SupportFX::FxRenderParam renderParam;
-        SupportFXAll* supportFX;
+        CNameIDObject* renderUnitNameId;
         uint64_t qword138;
         GlobalParameterBuilder* globalParameterBuilder;
         RenderTarget* renderTarget;
         RenderingContextManager* renderingContextManager;
-        CNameIDObject* renderUnitNameId;
+        SupportFXAll* supportFX;
         CNameIDObject* sceneNameId;
         uint32_t cameraId;
         SceneParamContainer* sceneParamContainer;

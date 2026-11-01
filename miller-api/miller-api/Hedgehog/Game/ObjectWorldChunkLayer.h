@@ -22,7 +22,12 @@ namespace hh::game {
         void SetEnable(bool enabled);
         bool IsEnable() const;
 
-        // inline void AddObjectData(const hh::game::GameObjectClass& objClass, const char* name, )
+        inline void AddObjectData(ObjectData* objData, bool enabled) {
+            if (chunk)
+                chunk->AddWorldObjectStatus(this, objData, enabled);
+            if (resource)
+                resource->AddObject(objData);
+        }
 
         inline void RemoveObjectData(ObjectData* objData) {
             if (chunk)

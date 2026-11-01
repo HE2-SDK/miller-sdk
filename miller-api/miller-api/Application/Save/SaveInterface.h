@@ -34,6 +34,7 @@ namespace app::save {
         // ArcadeDataAc GetArcadeDataAccessor();
         // OptionAc GetOptionAccessor();
         // ChallengeDataAc GetChallengeDataAccessor();
+        SystemAc GetSystemAccessor();
     };
 
     GameDataAc GetGameDataAccessor(hh::game::GameManager* gameManager);
@@ -42,4 +43,5 @@ namespace app::save {
     // ChallengeDataAc GetChallengeDataAccessor(hh::game::GameManager* gameManager);
     GameDataAc GetGameDataAccessor(hh::game::GameObject* gameObject);
     // ChallengeDataAc GetChallengeDataAccessor(hh::game::GameObject* gameObject);
+    SystemAc GetSystemAccessor(hh::game::GameManager* gameManager);
 }
