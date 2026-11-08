@@ -37,14 +37,27 @@ namespace hh::animeff {
         struct BoundCollection {
             struct BoundItem {
                 uint16_t stateSequenceNr;
-                uint16_t unk2;
-                uint8_t unk3;
-                uint64_t unk4;
+                uint16_t id;
+                bool looping;
+                hh::animeff::Emitter* emitter;
                 T item;
             };
 
             csl::ut::MoveArray<BoundItem> boundItems;
             csl::fnd::IAllocator* allocator;
+        };
+
+        struct EmitterConfig {
+            union AnyEffectCreateInfo {
+                hh::eff::EffectTransNodeCreateInfo node;
+                hh::eff::EffectTransNodeAndFrameCreateInfo nodeAndFrame;
+                hh::eff::EffectTransNodePositionCreateInfo nodePosition;
+            };
+
+            hh::eff::EffectCreateInfo* effectCreateInfo;
+            AnyEffectCreateInfo anyEffectCreateInfo;
+            bool mirrored;
+            csl::math::Vector3 scale;
         };
 
         fnd::Reference<ResParticleLocation> resource;
@@ -76,6 +89,11 @@ namespace hh::animeff {
 
         void AddListener(ParticleLocatorListener* listener);
         void RemoveListener(ParticleLocatorListener* listener);
+
+        void AttachAnimator(anim::GOCAnimator* animator);
+        void DetachAnimator();
+
+        bool LoadEmitterConfig(Emitter* emitter, short clipIndex, EmitterConfig& config);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCParticleLocator);
     };

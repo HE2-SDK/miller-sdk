@@ -37,7 +37,7 @@ namespace hh::eff {
         void SetVisible(bool enabled);
         void SetWorldMatrix(const csl::math::Matrix34& matrix);
 
-        void Stop();
+        void Stop(bool immediate);
     };
 
     class EffectManager : public game::GameService, public game::GameStepListener, public game::GameUpdateListener {

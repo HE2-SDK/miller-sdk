@@ -65,14 +65,14 @@ namespace hh::eff {
     };
 
     struct EffectCreateInfo {
-        bool setFlag0{ true };
-        bool unk1a{ false };
-        bool setFlag1{ false };
+        bool unk1a{ true };
+        bool attached{ false };
+        bool ignoreStopAttachedEffectAll{ false };
         const char* resource;
         float scale{ 1.0f };
         int unk4a{ -1 };
         float unk5{ 0.0f };
-        float delay{ 0.0f };
+        float attachTime{ 0.0f };
         uint64_t unk6{ 0 };
         EffectTransType transType;
         fnd::WorldPosition additionalWorldPos{};
@@ -193,17 +193,17 @@ namespace hh::eff {
 
         struct EffectInfo {
             enum class Flag : unsigned char {
-                UNK0,
-                UNK1,
+                ATTACHED,
+                IGNORE_STOP_ATTACHED_EFFECT_ALL,
             };
 
             EffectHandle handle;
             csl::ut::Bitset<Flag> flags;
         };
 
-        struct NewEffectInfo : EffectInfo {
+        struct AttachedEffectInfo : EffectInfo {
             EffectTransInfo transInfo;
-            float delay;
+            float attachTime;
         };
 
         hh::eff::EffectManager* effectManager;
@@ -214,8 +214,8 @@ namespace hh::eff {
         float dword9C;
         uint32_t dwordA0;
         gfx::GOCVisualModel* model;
-        csl::ut::MoveArray<NewEffectInfo> newEffects;
-        csl::ut::MoveArray<EffectInfo> effects;
+        csl::ut::MoveArray<AttachedEffectInfo> attachedEffects;
+        csl::ut::MoveArray<EffectInfo> detachedEffects;
         csl::ut::InplaceMoveArray<Listener*, 1> listeners;
         uint32_t modelNameHash;
         float unk201;
@@ -236,8 +236,14 @@ namespace hh::eff {
         void CreateEffectLoopEx(const EffectCreateInfo& createInfo, EffectHandle* handle);
         void CreateEffectPlain(const char* resourceName, const csl::math::Matrix34& location);
         void CreateEffectWorld(const char* resourceName, const csl::math::Matrix34& location, EffectHandle* handle);
-        void StopEffect(EffectHandle handle, bool unkParam);
-        void StopEffectAll();
+        void ClearEffects();
+        void GetEffects(csl::ut::MoveArray<EffectHandle>& handles) const;
+        void SetAttachTime(EffectHandle* handle, float attachTime);
+        bool DetachEffect(EffectHandle handle);
+        bool StopAttachedEffect(EffectHandle handle, bool immediate);
+        void StopAttachedEffectAll(bool immediate);
+        bool StopEffect(EffectHandle handle, bool immediate);
+        void StopEffectAll(bool immediate);
 
         GOCOMPONENT_CLASS_DECLARATION(GOCEffect)
     };
